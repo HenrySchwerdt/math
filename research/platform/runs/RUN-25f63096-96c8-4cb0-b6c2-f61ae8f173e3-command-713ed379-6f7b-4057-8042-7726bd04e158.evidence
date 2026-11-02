@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "codex",
+    "--strict-config",
+    "-c",
+    "model=\"gpt-6.1-sol\"",
+    "-c",
+    "agents.enabled=true",
+    "-c",
+    "agents.max_concurrent_threads_per_session=3",
+    "-c",
+    "agents.default_subagent_model=\"gpt-6-luna\"",
+    "-c",
+    "agents.default_subagent_reasoning_effort=\"high\"",
+    "app-server",
+    "--print-startup-config"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-02T19:49:35.404820Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-02T19:49:35.444751Z",
+  "truncated": false,
+  "output": "{\"appServerVersion\":\"0.166.0-alpha.5.1\",\"configRequirements\":{\"supportsIndependentSpeedModes\":true,\"requirements\":null}}\n"
+}

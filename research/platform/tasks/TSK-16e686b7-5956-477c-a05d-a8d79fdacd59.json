@@ -1,0 +1,36 @@
+{
+  "id": "TSK-16e686b7-5956-477c-a05d-a8d79fdacd59",
+  "type": "TSK",
+  "title": "Bootstrap provider-independent research foundation",
+  "created_at": "2026-11-02T19:47:22.422661Z",
+  "status": "active",
+  "question": "Can Codex and Claude Code resume the same research task from Git alone with auditable evidence and safe task ownership?",
+  "rationale": "User explicitly requested a small inspectable quota-limited bootstrap and push, without expensive research agents.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Finish validation and review, commit implementation, then record final provenance and push.",
+  "notes": "Draft only; no execution or verification claimed.",
+  "success_criteria": [
+    "Valid provider adapters and shared methodology/handoff.",
+    "Portable ledger schema, reproducible evidence and safe remote task claims.",
+    "Validated tests and independent code review; commit and push completed work."
+  ],
+  "owned_files": [
+    ".codex/",
+    ".claude/",
+    "docs/",
+    "scripts/",
+    "tests/",
+    "research/",
+    "README.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    ".github/"
+  ],
+  "resource_limit": "Infrastructure bootstrap only; two bounded code reviewers, no research workers or model inference CLI smoke tests."
+}

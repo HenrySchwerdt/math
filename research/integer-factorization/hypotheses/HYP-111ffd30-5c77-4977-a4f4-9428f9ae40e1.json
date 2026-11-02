@@ -1,0 +1,22 @@
+{
+  "id": "HYP-111ffd30-5c77-4977-a4f4-9428f9ae40e1",
+  "type": "HYP",
+  "title": "Open target: deterministic classical complete factorization in O(n log n) bit operations",
+  "created_at": "2026-11-02T19:47:22.421604Z",
+  "status": "open",
+  "question": "Does a uniform deterministic classical algorithm completely factor every integer N >= 2, with multiplicities, in worst-case O(n log n) bit operations for n = ceil(log2 N)?",
+  "rationale": "User-defined aspirational ultimate research goal; not an established bound.",
+  "assumptions": [
+    "Uniform deterministic classical computation; no quantum resources or oracles.",
+    "General positive integers N >= 2; complete prime factors including multiplicities.",
+    "Explicit bit computation model, arithmetic and memory accounting required."
+  ],
+  "sources": [],
+  "refs": [],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "unproved",
+  "outcome": "unresolved",
+  "next_action": "Define computational model and review baseline literature before algorithm proposals.",
+  "notes": "Draft only; no execution or verification claimed."
+}

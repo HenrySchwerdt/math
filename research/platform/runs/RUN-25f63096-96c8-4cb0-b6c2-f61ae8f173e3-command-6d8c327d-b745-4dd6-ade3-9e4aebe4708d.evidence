@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "<local-path>",
+    "build"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-02T19:50:54.795296Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-02T19:50:55.202616Z",
+  "truncated": false,
+  "output": "\u2139 [2/4] Replayed MathResearch.Basic\ninfo: MathResearch/Basic.lean:10:0: 'MathResearch.identity' does not depend on any axioms\nBuild completed successfully (4 jobs).\n"
+}

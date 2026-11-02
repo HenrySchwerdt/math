@@ -1,0 +1,33 @@
+{
+  "id": "TSK-8f7279d1-072e-4b0a-b03d-576460acab89",
+  "type": "TSK",
+  "title": "Define cost model and establish a sourced baseline",
+  "created_at": "2026-11-02T19:47:22.422186Z",
+  "status": "open",
+  "question": "What exact computation model, input/output contract and verified literature baseline will be used to evaluate the open factorization goal?",
+  "rationale": "A precise baseline prevents timing results, special-case methods or randomized/conditional bounds from being mistaken for a general deterministic improvement.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-111ffd30-5c77-4977-a4f4-9428f9ae40e1"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "unresolved",
+  "next_action": "Create a RUN, acquire remote TSK claim, then read the goal HYP report and collect primary baseline sources.",
+  "notes": "Draft only; no execution or verification claimed.",
+  "success_criteria": [
+    "Specify uniform deterministic classical bit model, memory access/allocation cost, arithmetic cost and complete factorization output encoding including multiplicities.",
+    "Preserve n = ceil(log2 N), and explain relation to binary input length at powers of two.",
+    "Find primary sources for known general-purpose bounds; distinguish unconditional deterministic, conditional, randomized and heuristic results.",
+    "Propose fair reproducibility, C17 reference implementation and proof/review criteria without claiming the ultimate bound.",
+    "Record unresolved source/model issues and actionable next task; independent review before integrating baseline decisions."
+  ],
+  "owned_files": [
+    "research/integer-factorization/decisions/<new DEC-id>.*",
+    "research/integer-factorization/papers/<new PAP-id>.*",
+    "research/integer-factorization/runs/<own RUN-id>*"
+  ],
+  "resource_limit": "First research session: one investigator; literature/model scoping only; no parallel workers or long experiments until a budget is authorized."
+}

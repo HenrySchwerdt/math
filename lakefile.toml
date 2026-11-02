@@ -1,0 +1,7 @@
+name = "mathResearch"
+version = "0.1.0"
+moreLeanArgs = ["-DwarningAsError=true"]
+defaultTargets = ["MathResearch"]
+
+[[lean_lib]]
+name = "MathResearch"

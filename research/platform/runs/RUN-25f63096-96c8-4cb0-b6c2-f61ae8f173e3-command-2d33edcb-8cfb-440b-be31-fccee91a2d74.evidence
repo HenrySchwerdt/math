@@ -1,0 +1,17 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-02T19:49:34.606248Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-02T19:49:35.379337Z",
+  "truncated": false,
+  "output": "test_provider_role_parity (test_research.ConfigurationTests.test_provider_role_parity) ... ok\ntest_all_generated_drafts_validate (test_research.LedgerTests.test_all_generated_drafts_validate) ... ok\ntest_launch_failure_and_nonzero_exit_have_evidence (test_research.LedgerTests.test_launch_failure_and_nonzero_exit_have_evidence) ... ok\ntest_local_path_redaction (test_research.LedgerTests.test_local_path_redaction) ... ok\ntest_missing_reference_and_external_evidence_rejected (test_research.LedgerTests.test_missing_reference_and_external_evidence_rejected) ... ok\ntest_remote_claim_exclusion_and_completed_owner_release (test_research.LedgerTests.test_remote_claim_exclusion_and_completed_owner_release) ... To <temp>/tmppnoyt4w4/origin.git\n * [new branch]      3056deeffe09486359b7bef76c2d65334404e9ef -> claims/TSK-7c51e29e-caec-4720-bb12-d27c130f5c1d\nTo <temp>/tmppnoyt4w4/origin.git\n ! [rejected]        f998f586fe15b8fe9b7eb12f6403f52acdfebfa8 -> claims/TSK-7c51e29e-caec-4720-bb12-d27c130f5c1d (stale info)\nerror: failed to push some refs to '<temp>/tmppnoyt4w4/origin.git'\nFrom <temp>/tmppnoyt4w4/origin\n * branch            claims/TSK-7c51e29e-caec-4720-bb12-d27c130f5c1d -> FETCH_HEAD\nFrom <temp>/tmppnoyt4w4/origin\n * branch            claims/TSK-7c51e29e-caec-4720-bb12-d27c130f5c1d -> FETCH_HEAD\nTo <temp>/tmppnoyt4w4/origin.git\n - [deleted]         claims/TSK-7c51e29e-caec-4720-bb12-d27c130f5c1d\nok\ntest_timeout_is_preserved (test_research.LedgerTests.test_timeout_is_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.710s\n\nOK\n"
+}

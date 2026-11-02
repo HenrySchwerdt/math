@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "claude",
+    "doctor"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-02T19:49:35.470098Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-02T19:49:37.175190Z",
+  "truncated": false,
+  "output": "Claude Code doctor\n\nRunning: native (2.1.316)\nCommit: cd7ceb459c68\nPlatform: darwin-arm64\nPath: <local-path>\nConfig install method: native\nSearch: OK (bundled)\nAuto-updates: enabled\nAuto-update channel: latest\nLast update attempt: none recorded\nManaged settings (remote): not fetched \u2014 no usable credentials for the settings fetch\nOrganization policy: not fetched: no API key or claude.ai sign-in for the policy lookup (apiKeyHelper keys are not used for it)\n\nInvalid settings\n- <local-path> \u203a hooks.PostToolUse.0: Hook matcher \"hooks\" must be an array of hook entries; received undefined; matcher ignored.\n\nRemote Control\nRemote Control requires a claude.ai subscription. Run claude auth login to sign in with your claude.ai account.\n- Not signed in to claude.ai\n- claude.ai subscription auth not active\n- Sign-in is missing the user:profile scope\n\nNo installation issues found.\n\nFor a full setup checkup that can also fix issues, run /doctor in a Claude Code session.\n"
+}

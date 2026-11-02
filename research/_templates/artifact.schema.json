@@ -1,0 +1,499 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "type",
+    "title",
+    "created_at",
+    "status",
+    "question",
+    "rationale",
+    "assumptions",
+    "sources",
+    "refs",
+    "evidence",
+    "claims",
+    "proof_status",
+    "outcome",
+    "next_action",
+    "notes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(TSK|HYP|EXP|ALG|PRF|REV|RUN|DEC|PAP)-[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "type": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "TSK",
+        "HYP",
+        "EXP",
+        "ALG",
+        "PRF",
+        "REV",
+        "RUN",
+        "DEC",
+        "PAP"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1,
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "open",
+        "active",
+        "completed",
+        "blocked"
+      ]
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proof_status": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "not-applicable",
+        "unproved",
+        "experimental",
+        "proof-attempt",
+        "reviewed",
+        "formally-verified",
+        "refuted"
+      ]
+    },
+    "next_action": {
+      "type": "string",
+      "minLength": 1
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outcome": {
+      "enum": [
+        null,
+        "verified",
+        "refuted",
+        "unresolved",
+        "blocked",
+        "inconclusive"
+      ]
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "url",
+          "retrieved_at",
+          "locator"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "retrieved_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "locator": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "task": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "success_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "owned_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "resource_limit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "started_at",
+        "completed_at",
+        "provider",
+        "model",
+        "role",
+        "task",
+        "input_hypotheses",
+        "starting_commit",
+        "branch",
+        "worktree",
+        "commands",
+        "files_changed",
+        "resulting_commit",
+        "tests",
+        "benchmark",
+        "machine",
+        "reviews"
+      ],
+      "properties": {
+        "started_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "completed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "branch": {
+          "type": "string",
+          "minLength": 1
+        },
+        "worktree": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "starting_commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "resulting_commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "input_hypotheses": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "commands": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "files_changed": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "tests": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "benchmark": {
+          "type": "string",
+          "minLength": 1
+        },
+        "machine": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "run",
+        "target_commit",
+        "targets",
+        "decision",
+        "rationale",
+        "counterexamples",
+        "complexity",
+        "limitations",
+        "initial_packet"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "run": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "complexity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitations": {
+          "type": "string",
+          "minLength": 1
+        },
+        "initial_packet": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "counterexamples": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "decision": {
+          "enum": [
+            "accept",
+            "reject",
+            "revise"
+          ]
+        }
+      }
+    },
+    "formal": {
+      "type": "object",
+      "required": [
+        "lean_file",
+        "declaration",
+        "toolchain_file",
+        "build_evidence",
+        "source_commit"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "lean_file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "declaration": {
+          "type": "string",
+          "minLength": 1
+        },
+        "toolchain_file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "build_evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_commit": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "RUN"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "run"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "TSK"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "success_criteria",
+          "owned_files",
+          "resource_limit"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "REV"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "review"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "proof_status": {
+            "const": "formally-verified"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "formal"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "REV"
+          },
+          "status": {
+            "enum": [
+              "active",
+              "completed"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "review": {
+            "properties": {
+              "run": {
+                "type": "string",
+                "minLength": 1
+              },
+              "target_commit": {
+                "type": "string",
+                "minLength": 1
+              },
+              "targets": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
