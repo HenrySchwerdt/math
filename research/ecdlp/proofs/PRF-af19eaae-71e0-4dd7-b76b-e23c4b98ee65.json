@@ -1,0 +1,51 @@
+{
+  "id": "PRF-af19eaae-71e0-4dd7-b76b-e23c4b98ee65",
+  "type": "PRF",
+  "title": "Lean: exact DLP relation and homomorphic-transfer barrier lemmas",
+  "created_at": "2026-11-03T09:17:04.883552Z",
+  "status": "active",
+  "question": "Formal proofs of the abstract algebra in HYP-caa15771 (all parts) and HYP-49fb2746 (abstract part only), plus the exact DLP solution relation.",
+  "rationale": "Smallest useful formal layer: exact problem statement and transfer-correctness/barrier lemmas reused by later candidates.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-caa15771-f28a-4226-b2be-22fa3ba0e901",
+    "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e",
+    "TSK-899c645b-3ccf-4fcc-99a0-df147d16ee0f",
+    "TSK-9f6a9ba1-1a55-4111-b9be-ec9af0e4a5a4",
+    "RUN-3e3276e3-3fe6-4071-b325-38d810a3f633",
+    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-fabeefac-fd6b-42da-972e-97281b4f93dd.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-3caa4636-5f6a-47a5-bed9-0e085d93ba42.evidence",
+    "MathResearch/ECDLP/Basic.lean",
+    "MathResearch/ECDLP/Transfer.lean",
+    "research/ecdlp/proofs/checks/Round2Axioms.lean",
+    "lean-toolchain"
+  ],
+  "claims": [
+    "MathResearch.ECDLP.isSolution_iff_modEq",
+    "MathResearch.ECDLP.existsUnique_canonical_solution",
+    "MathResearch.ECDLP.modEq_of_map_solution",
+    "MathResearch.ECDLP.map_eq_zero_or_addOrderOf_eq",
+    "MathResearch.ECDLP.prime_dvd_natCard_of_map_ne_zero",
+    "MathResearch.ECDLP.map_eq_zero_of_coprime",
+    "MathResearch.ECDLP.modEq_prime_of_map_solution",
+    "MathResearch.ECDLP.isSolution_map_of_base_eq_zero",
+    "MathResearch.ECDLP.one_sub_smul_map_fixed",
+    "MathResearch.ECDLP.map_fixed_eq_zero_of_ne_one",
+    "MathResearch.ECDLP.prime_dvd_card_sub_one_of_map_ne_one"
+  ],
+  "proof_status": "formally-verified",
+  "outcome": "verified",
+  "next_action": "Independent correspondence review (independent-reviewer) of Lean statements vs HYP statements; then HYP-caa15771 may be marked formally verified. Geometric application of HYP-49fb2746 remains unformalized.",
+  "notes": "Source commit b43063bbfc2368022c3841d569629a055e2ca792; toolchain leanprover/lean4:v4.35.0; Mathlib 56a00585. Command: lake build (2073 jobs, exit 0, no warnings) and lake env lean research/ecdlp/proofs/checks/Round2Axioms.lean (only propext, Classical.choice, Quot.sound). These are elementary known facts, not new research results. Formal correctness only; no complexity claim. Independent correspondence review pending. Schema formal block names one primary declaration; all 11 verified declarations are listed in claims and covered by the same build/axiom evidence.",
+  "formal": {
+    "lean_file": "MathResearch/ECDLP/Transfer.lean",
+    "declaration": "MathResearch.ECDLP.map_eq_zero_or_addOrderOf_eq",
+    "toolchain_file": "lean-toolchain",
+    "build_evidence": "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-fabeefac-fd6b-42da-972e-97281b4f93dd.evidence",
+    "source_commit": "b43063bbfc2368022c3841d569629a055e2ca792"
+  }
+}
