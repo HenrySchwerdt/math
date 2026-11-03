@@ -1,0 +1,39 @@
+{
+  "id": "RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779",
+  "type": "RUN",
+  "title": "Round 16 / frontier G: automated algorithm discovery on tiny curves",
+  "created_at": "2026-11-03T12:59:51.124403Z",
+  "status": "active",
+  "question": "Can an automated search (program synthesis / evolutionary search over small instruction sets with group ops, comparisons and integer bit access) find DLP procedures on tiny prime-order curves whose measured cost scales with exponent below 1/2, and does any discovered procedure generalise across curves and sizes?",
+  "rationale": "Bounded run for TSK-e5cd23ce-c89d-41bd-b03c-9fe4eb9fd7b0",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-e5cd23ce-c89d-41bd-b03c-9fe4eb9fd7b0"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T12:59:51.125226Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "frontier-explorer",
+    "task": "TSK-e5cd23ce-c89d-41bd-b03c-9fe4eb9fd7b0",
+    "input_hypotheses": [],
+    "starting_commit": "2bd5fef7dc9d6b305387bbc9758ced868e324dec",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

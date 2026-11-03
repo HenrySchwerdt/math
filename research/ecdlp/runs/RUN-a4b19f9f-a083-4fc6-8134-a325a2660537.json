@@ -1,0 +1,39 @@
+{
+  "id": "RUN-a4b19f9f-a083-4fc6-8134-a325a2660537",
+  "type": "RUN",
+  "title": "Round 16 / inventor G: factor bases with excess group closure",
+  "created_at": "2026-11-03T12:59:51.217040Z",
+  "status": "active",
+  "question": "Is there an efficiently describable subset B of E(F_p) (beyond x-coordinate conditions) whose closure under S_3/S_4 relations exceeds the random prediction s^{m+1}/p by a growing factor, e.g. sets defined by bit patterns, sorted-order windows, images of low-height lattice points, or subsets found by search? Measure closure excess vs size; only an excess that grows with p can break the supply bound.",
+  "rationale": "Bounded run for TSK-bf135795-9b3f-4fb4-9128-65482cabdd65",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-bf135795-9b3f-4fb4-9128-65482cabdd65"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T12:59:51.217598Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor",
+    "task": "TSK-bf135795-9b3f-4fb4-9128-65482cabdd65",
+    "input_hypotheses": [],
+    "starting_commit": "2bd5fef7dc9d6b305387bbc9758ced868e324dec",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

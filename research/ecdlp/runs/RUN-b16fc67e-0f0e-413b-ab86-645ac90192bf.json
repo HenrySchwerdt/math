@@ -1,0 +1,39 @@
+{
+  "id": "RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf",
+  "type": "RUN",
+  "title": "Round 16 / inventor H: fixed-curve precomputation with comparisons and bits",
+  "created_at": "2026-11-03T12:59:51.265362Z",
+  "status": "active",
+  "question": "For one fixed curve, can precomputed advice of size S that uses integer order or bits of x-coordinates (not covered by generic S*T^2 >= N lower bounds or by our algebraic theorems) give online time T with S*T^2 << r? Design, prototype and measure against the generic S*T^2 ~ r curve on toy curves.",
+  "rationale": "Bounded run for TSK-4d881215-6e2d-4d8e-a3be-97d8467208b1",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-4d881215-6e2d-4d8e-a3be-97d8467208b1"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T12:59:51.265760Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor",
+    "task": "TSK-4d881215-6e2d-4d8e-a3be-97d8467208b1",
+    "input_hypotheses": [],
+    "starting_commit": "2bd5fef7dc9d6b305387bbc9758ced868e324dec",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}
