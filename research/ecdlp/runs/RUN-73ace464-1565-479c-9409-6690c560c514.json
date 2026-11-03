@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 7 / ECDLP-22: novelty settlement for Theorems A/B and fresh high-risk hypotheses",
   "created_at": "2026-11-03T10:20:57.605416Z",
-  "status": "active",
+  "status": "completed",
   "question": "(a) Retrieve and compare Lange\u2013Winterhof / Kiltz\u2013Winterhof / Shparlinski results on interpolation of the EC discrete logarithm with Theorems A/B (exact statements). (b) Independently generate 3-5 new, testable, high-risk hypotheses toward faster ECDLP that do NOT reduce to: homomorphic transfer, summation-polynomial index calculus, cover-based Jacobians, coordinate-predicate bias, or algebraic interpolation (all already investigated), each with mechanism, obligations, invalidators and cheapest decisive test; run the cheapest test for the most promising one.",
   "rationale": "Bounded subagent run for TSK-90871360-32b5-46df-bd35-f6d2ce60a52b",
   "assumptions": [],
@@ -106,7 +106,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round7-disc/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "662626b3c0edca36570be8c9e58499ec7bd69b58",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
