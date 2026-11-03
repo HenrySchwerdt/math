@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round19-frontier-i/e3_cost.py",
+    "SMALL",
+    "11",
+    "10,12,14,16",
+    "20"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T14:03:27.041667Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T14:03:31.827476Z",
+  "truncated": false,
+  "output": "{\"alg\": \"EXH\", \"bits\": 10, \"n\": 60, \"mean_r\": 991.0, \"mean_ops\": 1263.6, \"median_ops\": 811.0, \"sd\": 1417.5136119275892, \"mean_ops_over_sqrt_r\": 40.00269258079172, \"mean_ops_over_r\": 1.2664801014539897}\n{\"alg\": \"EXH\", \"bits\": 12, \"n\": 60, \"mean_r\": 4259.0, \"mean_ops\": 5258.033333333334, \"median_ops\": 4329.5, \"sd\": 4267.325340954865, \"mean_ops_over_sqrt_r\": 80.49144461329897, \"mean_ops_over_r\": 1.2336039905656488}\n{\"alg\": \"EXH\", \"bits\": 14, \"n\": 60, \"mean_r\": 15693.666666666666, \"mean_ops\": 21120.55, \"median_ops\": 16910.0, \"sd\": 18938.015016033227, \"mean_ops_over_sqrt_r\": 168.4483765766317, \"mean_ops_over_r\": 1.3441775567721213}\n{\"alg\": \"EXH\", \"bits\": 16, \"n\": 60, \"mean_r\": 69085.0, \"mean_ops\": 60942.916666666664, \"median_ops\": 43549.5, \"sd\": 57182.68920086791, \"mean_ops_over_sqrt_r\": 231.99461165004075, \"mean_ops_over_r\": 0.8834674821653562}\n{\"alg\": \"MITM\", \"bits\": 10, \"n\": 60, \"mean_r\": 991.0, \"mean_ops\": 333.65, \"median_ops\": 211.0, \"sd\": 250.54126905561887, \"mean_ops_over_sqrt_r\": 10.582073452190665, \"mean_ops_over_r\": 0.33564482553941044}\n{\"alg\": \"MITM\", \"bits\": 12, \"n\": 60, \"mean_r\": 4259.0, \"mean_ops\": 519.2666666666667, \"median_ops\": 426.0, \"sd\": 311.1239767181065, \"mean_ops_over_sqrt_r\": 7.992788819182466, \"mean_ops_over_r\": 0.12318684511999001}\n{\"alg\": \"MITM\", \"bits\": 14, \"n\": 60, \"mean_r\": 15693.666666666666, \"mean_ops\": 855.6166666666667, \"median_ops\": 697.0, \"sd\": 446.16477119507715, \"mean_ops_over_sqrt_r\": 6.845710039572552, \"mean_ops_over_r\": 0.054799209882588705}\n{\"alg\": \"MITM\", \"bits\": 16, \"n\": 60, \"mean_r\": 69085.0, \"mean_ops\": 1372.8333333333333, \"median_ops\": 1176.5, \"sd\": 585.2064070812015, \"mean_ops_over_sqrt_r\": 5.2212889872790065, \"mean_ops_over_r\": 0.01986544637790548}\n{\"alg\": \"RHO\", \"bits\": 10, \"n\": 60, \"mean_r\": 991.0, \"mean_ops\": 425.1333333333333, \"median_ops\": 417.0, \"sd\": 36.813705177404906, \"mean_ops_over_sqrt_r\": 13.507484281453054, \"mean_ops_over_r\": 0.4291910504632411}\n{\"alg\": \"RHO\", \"bits\": 12, \"n\": 60, \"mean_r\": 4259.0, \"mean_ops\": 582.7166666666667, \"median_ops\": 563.0, \"sd\": 78.25175006917665, \"mean_ops_over_sqrt_r\": 8.940014966911166, \"mean_ops_over_r\": 0.1373239285751125}\n{\"alg\": \"RHO\", \"bits\": 14, \"n\": 60, \"mean_r\": 15693.666666666666, \"mean_ops\": 795.3333333333334, \"median_ops\": 769.0, \"sd\": 135.61141381003134, \"mean_ops_over_sqrt_r\": 6.353211253532683, \"mean_ops_over_r\": 0.05077704665686265}\n{\"alg\": \"RHO\", \"bits\": 16, \"n\": 60, \"mean_r\": 69085.0, \"mean_ops\": 1124.6833333333334, \"median_ops\": 1076.5, \"sd\": 292.21376260463086, \"mean_ops_over_sqrt_r\": 4.276494948199686, \"mean_ops_over_r\": 0.016266862735730744}\nraw file <repo>/research/ecdlp/experiments/round19-frontier-i/raw_SMALL_11_10-12-14-16.jsonl rows 720\n"
+}

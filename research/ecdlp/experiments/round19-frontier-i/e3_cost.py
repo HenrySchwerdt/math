@@ -90,6 +90,22 @@ def rho(E, P, Q, r, rng, tw=16):
                 if E.mul(m, P) == Q: return ops, m
         # failure: restart
 
+RAW = []
+def emit(d): RAW.append(d)
+
+def finish(tag):
+    import statistics as st
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'raw_%s.jsonl' % tag)
+    with open(path, 'w') as f:
+        for d in RAW: f.write(json.dumps(d) + '\n')
+    keys = sorted({(d['alg'], d['bits']) for d in RAW})
+    for alg, bits in keys:
+        v = [d['ops'] for d in RAW if d['alg'] == alg and d['bits'] == bits]
+        rr = [d['r'] for d in RAW if d['alg'] == alg and d['bits'] == bits]
+        print(json.dumps(dict(alg=alg, bits=bits, n=len(v), mean_r=sum(rr) / len(rr), mean_ops=st.mean(v), median_ops=st.median(v), sd=st.pstdev(v),
+              mean_ops_over_sqrt_r=st.mean(o / x ** 0.5 for o, x in zip(v, rr)), mean_ops_over_r=st.mean(o / x for o, x in zip(v, rr)))))
+    print('raw file', path, 'rows', len(RAW))
+
 if __name__ == '__main__':
     which = sys.argv[1]; seed = int(sys.argv[2]); rng = random.Random(seed)
     if which in ('RHO', 'SMALL'):
@@ -101,13 +117,13 @@ if __name__ == '__main__':
                 for _ in range(ninst):
                     P, Q, m = random_instance(E, r, pts, rng)
                     ops, mm = rho(E, P, Q, r, rng)
-                    print(json.dumps(dict(alg='RHO', bits=bits, r=r, ops=ops, ok=(mm == m))))
+                    emit(dict(alg='RHO', bits=bits, r=r, ops=ops, ok=(mm == m)))
                     if which == 'SMALL':
                         n, l, c = pick_nl(r)
                         t, ps = exh(r, m, rng, n, l)
-                        print(json.dumps(dict(alg='EXH', bits=bits, r=r, n=n, l=l, C=c, ops=t, passes=ps)))
+                        emit(dict(alg='EXH', bits=bits, r=r, n=n, l=l, C=c, ops=t, passes=ps))
                         t, ps = mitm(r, m, rng)
-                        print(json.dumps(dict(alg='MITM', bits=bits, r=r, ops=t, passes=ps)))
+                        emit(dict(alg='MITM', bits=bits, r=r, ops=t, passes=ps))
     else:  # LOGMODEL: random prime r (no curve), alg in EXH/MITM
         bits_list = [int(x) for x in sys.argv[3].split(',')]; ninst = int(sys.argv[4])
         for bits in bits_list:
@@ -119,7 +135,8 @@ if __name__ == '__main__':
                 if which == 'LOGEXH':
                     n, l, c = pick_nl(r)
                     t, ps = exh(r, m, rng, n, l)
-                    print(json.dumps(dict(alg='EXH', bits=bits, r=r, n=n, l=l, C=c, ops=t, passes=ps)))
+                    emit(dict(alg='EXH', bits=bits, r=r, n=n, l=l, C=c, ops=t, passes=ps))
                 else:
                     t, ps = mitm(r, m, rng)
-                    print(json.dumps(dict(alg='MITM', bits=bits, r=r, ops=t, passes=ps)))
+                    emit(dict(alg='MITM', bits=bits, r=r, ops=t, passes=ps))
+    finish('%s_%s_%s' % (which, seed, sys.argv[3].replace(',', '-')))

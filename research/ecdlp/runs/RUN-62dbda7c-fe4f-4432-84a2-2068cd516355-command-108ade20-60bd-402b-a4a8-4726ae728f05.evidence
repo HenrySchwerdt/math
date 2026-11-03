@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round19-frontier-i/e4_isog.py",
+    "INV",
+    "7",
+    "150"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T14:07:59.250844Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T14:07:59.565561Z",
+  "truncated": false,
+  "output": "{\"mode\": \"INV\", \"isogeny_steps_tested\": 380, \"order_changed\": 0, \"dlog_transported_ok\": 380}\n"
+}
