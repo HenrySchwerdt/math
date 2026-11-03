@@ -1,0 +1,2 @@
+{"k": null, "adds": 3428038, "fops": 102037, "mulmods": 298611334, "s": 1123, "attempts": 8, "bits": 16, "seed": 1, "r": 54881, "true_k": 44101, "mode": "m3x", "correct": false}
+{"k": null, "adds": 3276152, "fops": 101543, "mulmods": 305534222, "s": 1098, "attempts": 8, "bits": 16, "seed": 2, "r": 52529, "true_k": 7554, "mode": "m3x", "correct": false}

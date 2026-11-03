@@ -17,7 +17,12 @@ for target in ('k2','k'):
     Nsub=Poly(Num.as_expr().subs(B,y**2-x**3-A*x),x,y,A,domain=ZZ)
     for p in primes:
         Av,xv,yv=np.meshgrid(np.arange(p),np.arange(p),np.arange(p),indexing='ij'); Av=Av.ravel().astype(np.int64);xv=xv.ravel().astype(np.int64);yv=yv.ravel().astype(np.int64)
-        def pw(v,e): return np.power(v,e)%p if False else (v**e)%p
+        def pw(v,e):
+            r=np.ones_like(v); b=v%p
+            while e:
+                if e&1: r=r*b%p
+                b=b*b%p; e>>=1
+            return r
         tot=np.zeros_like(Av)
         cache={}
         for (a,b,c),co in Nsub.terms():

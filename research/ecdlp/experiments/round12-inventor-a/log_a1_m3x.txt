@@ -18,3 +18,5 @@ Traceback (most recent call last):
     if u[0][0] == v[0][0]: continue
                   ~~~~^^^
 TypeError: 'NoneType' object is not subscriptable
+m3x 16 1 False 3428038 1123 0
+m3x 16 2 False 3276152 1098 0

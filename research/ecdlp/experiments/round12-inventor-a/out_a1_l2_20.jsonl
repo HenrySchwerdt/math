@@ -1,0 +1,7 @@
+{"k": 31850, "adds": 14990, "fops": 3080, "mulmods": 15948, "s": 101, "H": 13, "table": 10100, "rels": 94, "trel": 50, "attempts": 1, "secs": 0.11583733558654785, "bits": 20, "seed": 1, "r": 1037317, "true_k": 31850, "mode": "l2", "correct": true}
+{"k": 94397, "adds": 65137, "fops": 11260, "mulmods": 992738, "s": 158, "H": 16, "table": 24806, "rels": 534, "trel": 98, "attempts": 3, "secs": 0.36724042892456055, "bits": 20, "seed": 2, "r": 1026313, "true_k": 94397, "mode": "l2", "correct": true}
+{"k": null, "adds": 587720, "fops": 57205, "mulmods": 62753987, "s": 453, "attempts": 8, "bits": 20, "seed": 3, "r": 818101, "true_k": 119896, "mode": "l2", "correct": false}
+{"k": null, "adds": 587739, "fops": 56055, "mulmods": 55623800, "s": 453, "attempts": 8, "bits": 20, "seed": 4, "r": 812467, "true_k": 240052, "mode": "l2", "correct": false}
+{"k": 716285, "adds": 58130, "fops": 11145, "mulmods": 888360, "s": 147, "H": 16, "table": 21462, "rels": 501, "trel": 100, "attempts": 3, "secs": 0.4032776355743408, "bits": 20, "seed": 5, "r": 825661, "true_k": 716285, "mode": "l2", "correct": true}
+{"k": 743429, "adds": 61861, "fops": 11245, "mulmods": 939266, "s": 153, "H": 17, "table": 23256, "rels": 519, "trel": 104, "attempts": 3, "secs": 0.3398256301879883, "bits": 20, "seed": 6, "r": 919231, "true_k": 743429, "mode": "l2", "correct": true}
+{"k": null, "adds": 662539, "fops": 60035, "mulmods": 66488618, "s": 483, "attempts": 8, "bits": 20, "seed": 7, "r": 993893, "true_k": 627862, "mode": "l2", "correct": false}
