@@ -58,12 +58,14 @@ class LabOpsTests(unittest.TestCase):
     def test_fix_sources_normalizes_strings(self):
         p = r.new('example', 'RUN')
         d = json.loads(p.read_text())
-        d['sources'] = ['A. Author, Title, Venue 2000, https://doi.org/10.1/x.', 'Unverified recollection']
+        d['sources'] = ['A. Author, Title, Venue 2000, https://doi.org/10.1/x.', 'Unverified recollection',
+                        {'title': 'Memory cite', 'url': None, 'retrieved_at': None, 'locator': 'sec 2'}]
         r.write_json(p, d)
-        self.assertEqual(lab_ops.fix_sources(p), (1, 1))
+        self.assertEqual(lab_ops.fix_sources(p), (1, 2))
         d = json.loads(p.read_text())
         self.assertEqual(d['sources'][0]['url'], 'https://doi.org/10.1/x')
         self.assertIn('Unverified recollection', d['notes'])
+        self.assertIn('Memory cite (sec 2)', d['notes'])
 
 
 if __name__ == '__main__':

@@ -89,7 +89,10 @@ def fix_sources(path):
     kept, moved = [], []
     for s in d.get('sources', []):
         if isinstance(s, dict):
-            kept.append(s)
+            if s.get('url'):
+                kept.append(s)
+            else:
+                moved.append(f"{s.get('title', '')} ({s.get('locator') or 'no locator'})")
             continue
         m = URL.search(s)
         if m:

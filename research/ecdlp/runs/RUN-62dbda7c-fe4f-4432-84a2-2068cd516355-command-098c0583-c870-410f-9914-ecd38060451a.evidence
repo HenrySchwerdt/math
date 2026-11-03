@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round12-inventor-c && python3 posthoc_pooled.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:01:37.930694Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:01:38.647285Z",
+  "truncated": false,
+  "output": "sizes >= 24 bits, 88 paired trials: pooled ref/sqrt(n) = 1.370, C1b/sqrt(n) = 1.199, ratio = 1.143 (95% CI 0.992, 1.325); theory sqrt2 = 1.414\nsizes >= 28 bits, 72 paired trials: pooled ref/sqrt(n) = 1.264, C1b/sqrt(n) = 1.124, ratio = 1.125 (95% CI 0.945, 1.336); theory sqrt2 = 1.414\n"
+}
