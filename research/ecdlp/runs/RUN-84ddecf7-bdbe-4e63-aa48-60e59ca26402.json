@@ -1,0 +1,48 @@
+{
+  "id": "RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402",
+  "type": "RUN",
+  "title": "Round 2: adversarial counterexample attempts on round-1 candidates",
+  "created_at": "2026-11-03T09:13:31.304692Z",
+  "status": "active",
+  "question": "For each listed hypothesis, find a counterexample, a boundary case where the statement fails, a hidden assumption, or a flaw in the stated derivation; or record a reproducible failed attempt.",
+  "rationale": "Bounded subagent run for TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131",
+    "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e",
+    "HYP-eff2cfbb-053a-47e9-91de-a7210488b049",
+    "HYP-650069e0-5ad0-416b-980f-53064abdcccb",
+    "HYP-333ce3c5-b14f-4d72-aa84-cf917b1dd68a"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T09:14:19.099168Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "counterexample",
+    "task": "TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131",
+    "input_hypotheses": [
+      "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e",
+      "HYP-eff2cfbb-053a-47e9-91de-a7210488b049",
+      "HYP-650069e0-5ad0-416b-980f-53064abdcccb",
+      "HYP-333ce3c5-b14f-4d72-aa84-cf917b1dd68a"
+    ],
+    "starting_commit": "9091112dbed98568882fd2fc755829a5d1bde4ae",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e",
+  "type": "HYP",
+  "title": "Frobenius-equivariance obstruction for transfers",
+  "created_at": "2026-11-03T09:13:30.971914Z",
+  "status": "open",
+  "question": "Let r be prime, V an F_r-vector space with additive map F: V -> V, x0 in V with F(x0)=x0, M an F_r-module, c in F_r, and f: V -> M additive with f(F v) = c f(v) for all v. Then (1-c) f(x0) = 0, so f(x0) = 0 unless c = 1. Proposed application: F = q^j-power Frobenius on E[r], target mu_r with scalar c = q^j mod r, so nonzero equivariant transfers of a rational point require r | q^j - 1; for additive target c=1 but F_r-linear maps to F_p need r=p. Claimed to unify MOV/FR and the anomalous attack.",
+  "rationale": "Registered by PI from sealed round-1 submissions before cross-agent synthesis or review.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-fec2442f-7d58-41e5-a4d0-ee0dbd2a8d88",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [
+    "Let r be prime, V an F_r-vector space with additive map F: V -> V, x0 in V with F(x0)=x0, M an F_r-module, c in F_r, and f: V -> M additive with f(F v) = c f(v) for all v. Then (1-c) f(x0) = 0, so f(x0) = 0 unless c = 1. Proposed application: F = q^j-power Frobenius on E[r], target mu_r with scalar c = q^j mod r, so nonzero equivariant transfers of a rational point require r | q^j - 1; for additive target c=1 but F_r-linear maps to F_p need r=p. Claimed to unify MOV/FR and the anomalous attack."
+  ],
+  "proof_status": "unproved",
+  "outcome": "unresolved",
+  "next_action": "Independent counterexample attempt (ECDLP-5) and, where feasible, Lean obligation (ECDLP-6).",
+  "notes": "Origin: B6 (RUN-fec2442f). The abstract algebra statement and the claimed application/unification are distinct claims; the application (which Frobenius, which maps count as equivariant, pairings with auxiliary point R) is unverified."
+}

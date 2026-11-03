@@ -1,0 +1,26 @@
+{
+  "id": "EVT-ae271f2e-055d-421a-aefc-502c4bfefb4b",
+  "kind": "task-status-change",
+  "task": "TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131",
+  "task_key": "ECDLP-5",
+  "timestamp": "2026-11-03T09:14:19.322171Z",
+  "run": "RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "counterexample"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute bounded round-2 run."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-2 run."
+  },
+  "reason": "Round-2 bounded subagent launched by PI",
+  "before_sha256": "615b1c7d9e9d2121ee01aa7a145b76c5546557c9d61995bea583511737a66a60",
+  "after_sha256": "3f8fd45e155ac7283cf0e08207d3c1209f7e7fbb1e3b04a287ea187b73f43aa7"
+}

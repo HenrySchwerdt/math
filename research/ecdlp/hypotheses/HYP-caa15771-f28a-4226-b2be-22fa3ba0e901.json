@@ -1,0 +1,24 @@
+{
+  "id": "HYP-caa15771-f28a-4226-b2be-22fa3ba0e901",
+  "type": "HYP",
+  "title": "Homomorphic transfer is all-or-nothing on prime-order subgroups",
+  "created_at": "2026-11-03T09:13:30.933949Z",
+  "status": "open",
+  "question": "Let G be an additive group, P in G with addOrderOf P = r prime, and phi: G -> H an additive group homomorphism. Then phi(P) = 0 or addOrderOf(phi P) = r. If H is finite and phi(P) != 0 then r | |H|. If gcd(addOrderOf P, |H|) = 1 then phi(P) = 0.",
+  "rationale": "Registered by PI from sealed round-1 submissions before cross-agent synthesis or review.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-fec2442f-7d58-41e5-a4d0-ee0dbd2a8d88",
+    "RUN-b0ccd1bd-6bbc-4f34-b347-0ade0bde13b7",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [
+    "Let G be an additive group, P in G with addOrderOf P = r prime, and phi: G -> H an additive group homomorphism. Then phi(P) = 0 or addOrderOf(phi P) = r. If H is finite and phi(P) != 0 then r | |H|. If gcd(addOrderOf P, |H|) = 1 then phi(P) = 0."
+  ],
+  "proof_status": "unproved",
+  "outcome": "unresolved",
+  "next_action": "Independent counterexample attempt (ECDLP-5) and, where feasible, Lean obligation (ECDLP-6).",
+  "notes": "Origin: B1/B2 (RUN-fec2442f) and A2/L2 (RUN-b0ccd1bd), proposed independently. Elementary; not claimed novel."
+}
