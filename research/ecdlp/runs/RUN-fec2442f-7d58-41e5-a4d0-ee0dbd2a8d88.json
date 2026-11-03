@@ -1,0 +1,84 @@
+{
+  "id": "RUN-fec2442f-7d58-41e5-a4d0-ee0dbd2a8d88",
+  "type": "RUN",
+  "title": "Round 1 sealed investigation:  universal transformations of ECDLP instances",
+  "created_at": "2026-11-03T09:05:52.390637Z",
+  "status": "active",
+  "question": "Can an arbitrary ECDLP instance (E/F_q, P, Q=[k]P) be transformed, in time polynomial (ideally quasi-linear) in input length, into an equivalent instance of a problem with additional exploitable structure, with efficient solution recovery? Characterize the requirements on such a transformation and explain precisely why known restricted-case transfers (MOV/FR pairings, anomalous/SSSA lifts, GHS Weil descent, summation-polynomial index calculus, isogeny walks) do not generalize.",
+  "rationale": "Bounded independent subagent run for TSK-30c839fa-0520-4fd6-a552-a243b2987d5e",
+  "assumptions": [],
+  "sources": [
+    {
+      "title": "I. A. Semaev, Evaluation of discrete logarithms in a group of p-torsion points of an elliptic curve in characteristic p, Math. Comp. 67 (1998) 353-356, , retrieved 2026-11-03",
+      "url": "https://www.ams.org/journals/mcom/1998-67-221/S0025-5718-98-00887-4",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Jacobson, Koblitz, Silverman, Stein, Teske, Analysis of the xedni calculus attack, Designs, Codes and Cryptography 20 (2000) 41-64, , retrieved 2026-11-03",
+      "url": "https://doi.org/10.1023/A:1008312401197",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Galbraith, Hess, Smart, Extending the GHS Weil descent attack, EUROCRYPT 2002 (LNCS 2332), , retrieved 2026-11-03",
+      "url": "https://eprint.iacr.org/2001/054",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Jao, Miller, Venkatesan, Expander graphs based on GRH with an application to elliptic curve cryptography, J. Number Theory 129 (2009) 1491-1504, , retrieved 2026-11-03",
+      "url": "https://arxiv.org/abs/0811.0647",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Petit, Quisquater, On polynomial systems arising from a Weil descent, ASIACRYPT 2012, , retrieved 2026-11-03",
+      "url": "https://eprint.iacr.org/2012/146",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    }
+  ],
+  "refs": [
+    "TSK-30c839fa-0520-4fd6-a552-a243b2987d5e",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [
+    "B1 (elementary): hom from prime-order cyclic group is trivial or injective; nontrivial hom into finite T forces r | |T|; into F_Q^* iff r | Q-1; into (F_Q,+) iff r=p; torsion-free targets trivial.",
+    "B2 (elementary): Pohlig-Hellman-style smooth-order targets cannot receive a nontrivial image of an order-r group with r larger than the smoothness bound.",
+    "B3 (elementary proof, finite check only): at most M(M+1) Frobenius traces t give #E with a prime factor r>4*sqrt(q) and ord_r(q)<=M; numerical check for p up to 80021 found 1-3 such traces for M=6.",
+    "B4: for r != p, the r-torsion lifts uniquely into E(Q_p)[r], where additive p-adic maps vanish; the anomalous attack uses r=p essentially (standard facts, not re-derived).",
+    "B5: every algebraic morphism from an elliptic curve to an affine algebraic group is constant (proper vs affine).",
+    "B6: Frobenius-equivariant maps from an F-fixed point P into a character twist c force (1-c)f(P)=0; unifies MOV (c=q^k), anomalous (r=p).",
+    "B7: isogeny classes share #E (Tate), so isogeny transfers cannot repair MOV or anomalous obstructions.",
+    "B8-B11 are conjectures/open requirements (cover genus regime, approximate characters, factor-base definability for prime fields); no proof.",
+    "Experiments: 1498 curves over p in [1000,3000), mean ord_r(p)/r = 0.58 (non-anomalous); hom-count check gcd(r,q-1) had 0 mismatches; Lean sketches uncompiled.",
+    "Nothing here proves or refutes the universal O(n log n) ECDLP objective."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "PI collection and adversarial falsification: compile Lean lemmas L1/L2/L5 in the pinned project; verify unverified citations; run T1-T6 (CAS needed for T3/T5/T6); decide on B3 weighted fraction proof.",
+  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents is not exposed to the PI, so identity is configured+self-reported, not runtime-verified. Submission model self-report: Sonnet 5.5 (model ID claude-sonnet-5-5), from the agent's own system prompt; not runtime-verified. | Sources without URL (not schema sources; verification status as stated by agent): Unverified recollection (not checked this run): Menezes-Okamoto-Vanstone 1993; Frey-Ruck 1994; Smart 1999; Satoh-Araki 1998; Gaudry 2009; Diem 2011; Semaev ePrint 2004/031; Tate 1966; Shoup 1997; Balasubramanian-Koblitz 1998; Enge-Gaudry 2002; Gaudry-Thome-Theriault-Diem 2007; Boneh-Venkatesan 1996; Rubin-Silverberg 2003",
+  "run": {
+    "started_at": "2026-11-03T09:06:21.721521Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "algebraic-geometry",
+    "task": "TSK-30c839fa-0520-4fd6-a552-a243b2987d5e",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    ],
+    "starting_commit": "e562779d50e079ea380c598a2550021a13e26b89",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of this RUN report/json only",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable: literature/theory investigation",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

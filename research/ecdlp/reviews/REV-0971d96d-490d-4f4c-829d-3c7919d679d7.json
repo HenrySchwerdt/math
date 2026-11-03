@@ -1,0 +1,48 @@
+{
+  "id": "REV-0971d96d-490d-4f4c-829d-3c7919d679d7",
+  "type": "REV",
+  "title": "Independent correspondence review of Barriers.lean (PRF-613be647)",
+  "created_at": "2026-11-03T09:40:39.293078Z",
+  "status": "completed",
+  "question": "Do slpEval_mem_bound, exists_unreachable_of_addOrderOf, MBad, trace_unique_of_dvd, card_primes_lt, MBad_finite and card_MBad_le at eb81a7e build without sorry/nonstandard axioms and faithfully express HYP-57d71f43 (S1) and HYP-eff2cfbb (S2)?",
+  "rationale": "Independent review required by docs/REVIEW.md before integration of PRF-613be647.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "PRF-613be647-23ea-4372-b53c-e020c43ba999",
+    "HYP-57d71f43-70ad-45f9-a8d3-6f095fd8d5f3",
+    "HYP-eff2cfbb-053a-47e9-91de-a7210488b049"
+  ],
+  "evidence": [],
+  "claims": [
+    "lake build at eb81a7e (lean4 v4.35.0) re-run by reviewer: exit 0, no warnings in MathResearch.ECDLP.Barriers.",
+    "Round4Axioms.lean re-run: all Part A/B declarations depend only on propext, Classical.choice, Quot.sound; no sorry/admit/axiom/unsafe/native_decide/implemented_by in Barriers.lean or Basic.lean.",
+    "SLP model: out-of-range indices reading 0 enlarges the program class; every S1 program is representable, so A1/A2 are at least as strong as S1. A1 states the uniform bound 2^length, not the per-index 2^i (recoverable via prefixes, not formalized).",
+    "MBad encoding is exact: t^2<=4q <=> |t|<=2sqrt(q); r^2>16q <=> r>4sqrt(q); ord<=M <=> exists m in [1,M], r | q^m-1 (truncation harmless for q>=1); q>=2 generalizes prime powers soundly; r∤q is redundant and unused in the proof.",
+    "Brute-force sanity check (q in [2,1200), M in [1,8]): 0 encoding mismatches vs real-valued definition, 0 bound violations, max ratio 0.5."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "PI integration review may cite this REV; optionally add the per-index SLP bound corollary and note the out-of-range convention and r∤q redundancy in PRF-613be647.",
+  "notes": "Self-reported model identity: Claude Opus 5.5 (claude-opus-5-5) in Claude Code; not externally verified. Same provider as PI; independence limited to blind packet. Scratch probes kept in session scratchpad only (not committed).",
+  "review": {
+    "run": "RUN-914ce257-1df1-4392-ab6a-071f16b3ace4",
+    "target_commit": "eb81a7e",
+    "targets": [
+      "PRF-613be647-23ea-4372-b53c-e020c43ba999"
+    ],
+    "decision": "accept",
+    "rationale": "Build and axiom audit reproduce; each informal condition of S1/S2 is encoded exactly or by a strictly stronger/more general statement (larger SLP class, all intermediate values, any q>=2); finiteness lemma rules out ncard junk value; MBad shown satisfiable. Only literal gap: A1 gives uniform 2^L rather than per-index 2^i, immaterial to A2.",
+    "counterexamples": [
+      "Out-of-range operand programs: enlarge class only; no S1 program missing.",
+      "Vacuity via infinite order or unsatisfiable MBad: ruled out (hypothesis forces finite r; MBad 3 6 (-3) proved).",
+      "ncard junk value on infinite set: ruled out by MBad_finite.",
+      "Truncated subtraction q^m-1: degenerate only at q=0, excluded by q>=2.",
+      "Integer vs real thresholds: algebraically equivalent; 9584 brute-force cases with 0 mismatches and 0 bound violations.",
+      "No divergence found."
+    ],
+    "complexity": "Not applicable: formal correctness only",
+    "limitations": "Reviewed files: MathResearch/ECDLP/Barriers.lean and research/ecdlp/proofs/checks/Round4Axioms.lean at eb81a7e (targets field holds artifact IDs only). Self-reported model identity, same provider as PI; brute force finite; Basic.lean only checked by grep/axioms; compared against blind-packet S1/S2, not HYP files directly; significance is low (elementary lemmas, not ECDLP lower bounds).",
+    "initial_packet": "Blind packet: target commit eb81a7e, Barriers.lean, Round4Axioms.lean, informal S1 (HYP-57d71f43) and S2 (HYP-eff2cfbb), claimed clean build and standard axioms. PRF .md read only after initial findings."
+  }
+}

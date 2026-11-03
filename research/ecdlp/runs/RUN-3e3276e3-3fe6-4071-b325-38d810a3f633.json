@@ -1,0 +1,48 @@
+{
+  "id": "RUN-3e3276e3-3fe6-4071-b325-38d810a3f633",
+  "type": "RUN",
+  "title": "Round 2: Lean obligation for homomorphic-transfer barrier lemmas",
+  "created_at": "2026-11-03T09:13:31.339701Z",
+  "status": "completed",
+  "question": "State and prove in Lean 4/Mathlib (pinned) the exact statements of the listed hypotheses (abstract algebra parts), building on MathResearch/ECDLP/Basic.lean, without sorry/admit/axioms; record compiler output and correspondence notes.",
+  "rationale": "Bounded subagent run for TSK-899c645b-3ccf-4fcc-99a0-df147d16ee0f",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-899c645b-3ccf-4fcc-99a0-df147d16ee0f",
+    "HYP-caa15771-f28a-4226-b2be-22fa3ba0e901",
+    "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e"
+  ],
+  "evidence": [],
+  "claims": [
+    "Lean (no sorry/axioms beyond propext, Classical.choice, Quot.sound): MathResearch.ECDLP.map_eq_zero_or_addOrderOf_eq, prime_dvd_natCard_of_map_ne_zero, map_eq_zero_of_coprime (HYP-caa15771); modEq_prime_of_map_solution, isSolution_map_of_base_eq_zero (connection to Basic.lean); one_sub_smul_map_fixed, map_fixed_eq_zero_of_ne_one (abstract part of HYP-49fb2746; Frobenius application not formalized); prime_dvd_card_sub_one_of_map_ne_one (finite-field corollary). Build succeeded locally."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "PI: add `import MathResearch.ECDLP.Transfer` to MathResearch.lean, run lake build in CI, independent review of correspondence, then update HYP statuses (abstract parts only).",
+  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents not exposed to PI. Self-reported model identity of formalization agent: Sonnet 5.5, model ID claude-sonnet-5-5.",
+  "run": {
+    "started_at": "2026-11-03T09:14:19.099168Z",
+    "completed_at": "2026-11-03T09:21:11.612013Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization",
+    "task": "TSK-899c645b-3ccf-4fcc-99a0-df147d16ee0f",
+    "input_hypotheses": [
+      "HYP-caa15771-f28a-4226-b2be-22fa3ba0e901",
+      "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e"
+    ],
+    "starting_commit": "9091112dbed98568882fd2fc755829a5d1bde4ae",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [
+      "MathResearch/ECDLP/Transfer.lean"
+    ],
+    "resulting_commit": "b43063bbfc2368022c3841d569629a055e2ca792",
+    "tests": [],
+    "benchmark": "Not applicable",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

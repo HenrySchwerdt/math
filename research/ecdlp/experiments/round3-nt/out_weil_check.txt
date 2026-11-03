@@ -1,0 +1,6 @@
+g=x        D=2  max_c |F+eps|/sqrt(p) = 1.999  OK
+g=x+1      D=2  max_c |F+eps|/sqrt(p) = 1.998  OK
+g=2x       D=2  max_c |F+eps|/sqrt(p) = 1.999  OK
+g=x^2+x+1  D=4  max_c |F+eps|/sqrt(p) = 3.628  OK
+g=y        D=4  max_c |F+eps|/sqrt(p) = 2.000  OK
+g=xy       D=6  max_c |F+eps|/sqrt(p) = 4.354  OK

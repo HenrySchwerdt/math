@@ -1,0 +1,24 @@
+{
+  "id": "HYP-650069e0-5ad0-416b-980f-53064abdcccb",
+  "type": "HYP",
+  "title": "Straight-line group-operation certificates need about log r / (2 log log r) operations",
+  "created_at": "2026-11-03T09:13:31.048408Z",
+  "status": "completed",
+  "question": "Let G=<P> have order r. A straight-line program of length L is a_0=P, a_i = e1 a_j + e2 a_l with j,l < i and e1,e2 in {+1,-1}. At most 4^L (L!)^2 elements are outputs of such programs, so if 4^L (L!)^2 < r some Q in G has no SLP of length <= L. Consequently, if each group operation costs at least c*b bit operations (b = field bit length), verifying a worst-case instance by any SLP costs Omega(b^2/log b) bit operations, which is omega(n log n).",
+  "rationale": "Registered by PI from sealed round-1 submissions before cross-agent synthesis or review.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-9eae1ad9-fe23-4821-9647-ff2ed060014e",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402"
+  ],
+  "evidence": [],
+  "claims": [
+    "Let G=<P> have order r. A straight-line program of length L is a_0=P, a_i = e1 a_j + e2 a_l with j,l < i and e1,e2 in {+1,-1}. At most 4^L (L!)^2 elements are outputs of such programs, so if 4^L (L!)^2 < r some Q in G has no SLP of length <= L. Consequently, if each group operation costs at least c*b bit operations (b = field bit length), verifying a worst-case instance by any SLP costs Omega(b^2/log b) bit operations, which is omega(n log n)."
+  ],
+  "proof_status": "refuted",
+  "outcome": "refuted",
+  "next_action": "Superseded by HYP-57d71f43.",
+  "notes": "Origin: C2 (RUN-9eae1ad9). Restricted model only (SLP verifier); not a Turing-machine lower bound. | ECDLP-5: flaw found. 4^L(L!)^2 counts programs of length exactly L, while the claim is about length <= L (fixable: sum over i). The counting bound is strictly weaker than the trivial coefficient bound |n_i| <= 2^i (HYP-57d71f43). The consequence omega(n log n) bit cost depends on an unjustified per-operation cost assumption and holds only in a black-box SLP model; it is not a Turing-machine statement. Counting numerics L0(2^256)=29, L0(2^521)=50 reproduced."
+}

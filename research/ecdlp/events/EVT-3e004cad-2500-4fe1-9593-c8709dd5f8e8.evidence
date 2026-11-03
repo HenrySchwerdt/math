@@ -1,0 +1,26 @@
+{
+  "id": "EVT-3e004cad-2500-4fe1-9593-c8709dd5f8e8",
+  "kind": "task-status-change",
+  "task": "TSK-db0e4159-ba4a-4577-821b-b29f8e46ed2c",
+  "task_key": "ECDLP-12",
+  "timestamp": "2026-11-03T09:36:50.950191Z",
+  "run": "RUN-597fcdfe-7b4f-4a9a-a0be-a9ee84390a34",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "experimenter"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute bounded round-4 run."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-4 run."
+  },
+  "reason": "Round-4 bounded subagent launched",
+  "before_sha256": "db23e288b163da3706f7f0f9dd501b250c5aedf00e1a4eab259459a8a1214c91",
+  "after_sha256": "3904cb7647f9ac07e15671b088034fc0ab26c72bcd504d77bbb132c508e69596"
+}

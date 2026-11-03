@@ -1,0 +1,26 @@
+{
+  "id": "EVT-9d4a5640-543c-474d-907b-95214de02cd8",
+  "kind": "task-status-change",
+  "task": "TSK-19085a69-6fc1-440f-b7a1-ac2182eea490",
+  "task_key": "ECDLP-2",
+  "timestamp": "2026-11-03T09:06:26.541412Z",
+  "run": "RUN-b0ccd1bd-6bbc-4f34-b347-0ade0bde13b7",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "discovery"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute sealed round-1 investigation, then PI collection and adversarial falsification."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute sealed round-1 investigation, then PI collection and adversarial falsification."
+  },
+  "reason": "Bounded sealed round-1 subagent launched by PI",
+  "before_sha256": "d5f2020ee678a89cffab5ad784fe9334b0ff22fe3f32b6ebbd271dda8d096f6e",
+  "after_sha256": "cc4da9d523957541e4820689ce7b73247554ae6d64f238869dfc805a5d4fd5cb"
+}

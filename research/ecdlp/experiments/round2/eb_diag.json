@@ -1,0 +1,74 @@
+{
+ "chi(x)": {
+  "mean_periodogram_var": 0.6609578521999343,
+  "sd_of_that_across_curves": 0.036801813592374985,
+  "var_of_lag1_z(expect 1)": 0.4600743081981733,
+  "n_curves": 40
+ },
+ "chi(y)": {
+  "mean_periodogram_var": 0.6645512242831754,
+  "sd_of_that_across_curves": 0.03422787419983535,
+  "var_of_lag1_z(expect 1)": 0.4115383760181972,
+  "n_curves": 40
+ },
+ "chi(x+1)": {
+  "mean_periodogram_var": 0.6605285429324033,
+  "sd_of_that_across_curves": 0.038275892070925854,
+  "var_of_lag1_z(expect 1)": 0.5925124819645348,
+  "n_curves": 40
+ },
+ "chi(2x)": {
+  "mean_periodogram_var": 0.661169986480383,
+  "sd_of_that_across_curves": 0.037248243094563704,
+  "var_of_lag1_z(expect 1)": 0.4544403955256837,
+  "n_curves": 40
+ },
+ "chi(x^2+x+1)": {
+  "mean_periodogram_var": 1.0099921549766413,
+  "sd_of_that_across_curves": 0.06670176113657704,
+  "var_of_lag1_z(expect 1)": 0.8726459841516506,
+  "n_curves": 40
+ },
+ "parity(x)": {
+  "mean_periodogram_var": 1.0124287191453234,
+  "sd_of_that_across_curves": 0.08466360992271146,
+  "var_of_lag1_z(expect 1)": 0.6958483002149048,
+  "n_curves": 40
+ },
+ "parity(y)": {
+  "mean_periodogram_var": 0.9973633163152151,
+  "sd_of_that_across_curves": 0.06869656668475456,
+  "var_of_lag1_z(expect 1)": 1.1539082898019217,
+  "n_curves": 40
+ },
+ "x<p/2": {
+  "mean_periodogram_var": 1.0077429247431444,
+  "sd_of_that_across_curves": 0.0861642773515503,
+  "var_of_lag1_z(expect 1)": 1.060391140491807,
+  "n_curves": 40
+ },
+ "sha256(x) bit": {
+  "mean_periodogram_var": 1.0091155873799813,
+  "sd_of_that_across_curves": 0.0738896745907428,
+  "var_of_lag1_z(expect 1)": 1.0350005547611103,
+  "n_curves": 40
+ },
+ "chi(x*y)": {
+  "mean_periodogram_var": 1.0107710716845404,
+  "sd_of_that_across_curves": 0.06755305479347079,
+  "var_of_lag1_z(expect 1)": 1.0483076840087946,
+  "n_curves": 40
+ },
+ "chi(x) order-shuffled": {
+  "mean_periodogram_var": 1.012663937997147,
+  "sd_of_that_across_curves": 0.09567971217273663,
+  "var_of_lag1_z(expect 1)": 1.549352809374471,
+  "n_curves": 40
+ },
+ "iid": {
+  "mean_periodogram_var": 0.9945337086992379,
+  "sd_of_that_across_curves": 0.06179186670198753,
+  "var_of_lag1_z(expect 1)": 0.9498093164597968,
+  "n_curves": 40
+ }
+}

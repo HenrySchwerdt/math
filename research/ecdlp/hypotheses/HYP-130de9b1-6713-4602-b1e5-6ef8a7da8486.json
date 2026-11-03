@@ -1,0 +1,23 @@
+{
+  "id": "HYP-130de9b1-6713-4602-b1e5-6ef8a7da8486",
+  "type": "HYP",
+  "title": "No efficiently computable nonconstant approximate character on a prime-order EC subgroup from low-complexity coordinate functions",
+  "created_at": "2026-11-03T09:13:31.156403Z",
+  "status": "open",
+  "question": "For a prime-order subgroup G of E(F_p) and functions f: G -> R/Z from a small explicit family of coordinate functions (e.g. x/p, y/p, fractional parts of low-degree polynomials in x,y over p), the defect max_{a,b in G} |f(a+b)-f(a)-f(b)| (distance in R/Z) is near its random-function value, i.e. no member is a near-character. (A near-character would give approximate bits of the discrete log and a lattice/HNP transfer.)",
+  "rationale": "Registered by PI from sealed round-1 submissions before cross-agent synthesis or review.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-fec2442f-7d58-41e5-a4d0-ee0dbd2a8d88",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [
+    "For a prime-order subgroup G of E(F_p) and functions f: G -> R/Z from a small explicit family of coordinate functions (e.g. x/p, y/p, fractional parts of low-degree polynomials in x,y over p), the defect max_{a,b in G} |f(a+b)-f(a)-f(b)| (distance in R/Z) is near its random-function value, i.e. no member is a near-character. (A near-character would give approximate bits of the discrete log and a lattice/HNP transfer.)"
+  ],
+  "proof_status": "experimental",
+  "outcome": "unresolved",
+  "next_action": "Re-run with a pre-registered symmetry-aware null on fresh seeds and larger function family.",
+  "notes": "Origin: B9 (RUN-fec2442f), labeled conjecture; unconventional high-risk direction; cheap finite test proposed (T4). | ECDLP-7 E-A (12 curves x 40 functions x 2 seeds): min defect ~0.499 (random level 0.5), positive controls detected; pre-registered Fourier threshold flagged 5 odd functions due to a mis-specified null (real coefficients); post-hoc symmetry-aware null gives 0 rejections (post-hoc, not a clean pass)."
+}

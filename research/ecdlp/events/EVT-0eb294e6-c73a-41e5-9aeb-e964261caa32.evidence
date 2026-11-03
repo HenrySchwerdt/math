@@ -1,0 +1,26 @@
+{
+  "id": "EVT-0eb294e6-c73a-41e5-9aeb-e964261caa32",
+  "kind": "task-status-change",
+  "task": "TSK-db0e4159-ba4a-4577-821b-b29f8e46ed2c",
+  "task_key": "ECDLP-12",
+  "timestamp": "2026-11-03T09:44:06.077620Z",
+  "run": "RUN-597fcdfe-7b4f-4a9a-a0be-a9ee84390a34",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "experimenter"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-4 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Literature verification of prime-field summation-polynomial results; alternative factor-base definitions"
+  },
+  "reason": "Pre-registered relation-yield experiment executed and PI-reproduced; no (m,B) beats sqrt(p) at toy sizes; end-to-end toy index calculus correct",
+  "before_sha256": "3904cb7647f9ac07e15671b088034fc0ab26c72bcd504d77bbb132c508e69596",
+  "after_sha256": "621f9e9d42f310bb8b5c5464894743c4ab3c8abc8a76b3f673e69ca00a79f6c2"
+}

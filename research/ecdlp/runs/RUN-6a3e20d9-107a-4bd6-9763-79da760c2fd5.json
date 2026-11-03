@@ -1,0 +1,42 @@
+{
+  "id": "RUN-6a3e20d9-107a-4bd6-9763-79da760c2fd5",
+  "type": "RUN",
+  "title": "Round 5 / ECDLP-15: cover-based transfers \u2014 genus/dimension trade-off (high-risk)",
+  "created_at": "2026-11-03T09:47:33.825341Z",
+  "status": "active",
+  "question": "For E/F_p (p prime) and covers pi: C -> E of genus g with efficiently computable pullback pi^*: E(F_p) -> J_C(F_p), is there any regime of g (as a function of log p) where known Jacobian index-calculus complexities (Gaudry, Gaudry\u2013Thom\u00e9\u2013Th\u00e9riault\u2013Diem, Enge\u2013Gaudry, Diem) applied to J_C beat sqrt(p)? Make the regime analysis rigorous from the published complexity statements (with exact hypotheses), and identify the precise missing ingredient; test the smallest case numerically if feasible.",
+  "rationale": "Bounded subagent run for TSK-70af651a-696e-4564-8c53-85dd0320a211",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-70af651a-696e-4564-8c53-85dd0320a211",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T09:47:55.527662Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "algebraic-geometry",
+    "task": "TSK-70af651a-696e-4564-8c53-85dd0320a211",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    ],
+    "starting_commit": "b7ade5646f7146a04bf46f0e461033573e465a7e",
+    "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #2 head)",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "HYP-333ce3c5-b14f-4d72-aa84-cf917b1dd68a",
+  "type": "HYP",
+  "title": "Arbitrary p-adic lifts carry no discrete-log information when #E(F_p) != p",
+  "created_at": "2026-11-03T09:13:31.084161Z",
+  "status": "completed",
+  "question": "For E/F_p with prime-order subgroup <P> of order r != p, the Smart-style quantity psi(P~) = (-x/y)([#E]P~)/p mod p computed from arbitrary lifts P~, Q~ in E~(Q_p) does not satisfy psi(Q~) = k psi(P~) mod p beyond chance, i.e. it carries no information about k.",
+  "rationale": "Registered by PI from sealed round-1 submissions before cross-agent synthesis or review.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-b0ccd1bd-6bbc-4f34-b347-0ade0bde13b7",
+    "RUN-fec2442f-7d58-41e5-a4d0-ee0dbd2a8d88",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402"
+  ],
+  "evidence": [],
+  "claims": [
+    "For E/F_p with prime-order subgroup <P> of order r != p, the Smart-style quantity psi(P~) = (-x/y)([#E]P~)/p mod p computed from arbitrary lifts P~, Q~ in E~(Q_p) does not satisfy psi(Q~) = k psi(P~) mod p beyond chance, i.e. it carries no information about k."
+  ],
+  "proof_status": "refuted",
+  "outcome": "refuted",
+  "next_action": "Superseded by HYP-f85d20a1.",
+  "notes": "Origin: A4 + E3 control (RUN-b0ccd1bd), B4 (RUN-fec2442f). Agent A reported its own prediction for the control was falsified (nonzero lift-dependent values) and reinterpreted; needs independent test. | ECDLP-5: ill-posed quantifier. Under the universal reading (\"arbitrary lifts\" includes consistent lifts Q~=[k]P~) the statement is false: psi(Q~)=k psi(P~) exactly. Under the independent-random-lift reading it holds exactly (uniform on F_p^2; HYP-f85d20a1). Anomalous control 504/504 recoveries."
+}

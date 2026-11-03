@@ -1,5 +1,17 @@
 name: Validate research ledger
-on: [push, pull_request]
+# Run only for pull requests into main and for merges/pushes to main, not on every branch push.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# A newer push to the same PR/branch supersedes an in-flight run.
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -18,4 +30,6 @@ jobs:
           curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o "$RUNNER_TEMP/elan-init.sh"
           sh "$RUNNER_TEMP/elan-init.sh" -y --default-toolchain none --no-modify-path
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      # Download prebuilt Mathlib oleans for the pinned revision instead of compiling Mathlib.
+      - run: lake exe cache get
       - run: lake build

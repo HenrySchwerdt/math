@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "-I",
+    "research/ecdlp/experiments/round1/agentC/check.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:12:34.605167Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:12:34.970500Z",
+  "truncated": false,
+  "output": "ECDLP solution-set = k0 + r*Z tests: 172 failures: 0\nbits 64 min L with 4^L (L!)^2 >= 2^bits: 11 ; vs bits/ (2*log2 bits)= 5.3\nbits 128 min L with 4^L (L!)^2 >= 2^bits: 17 ; vs bits/ (2*log2 bits)= 9.1\nbits 160 min L with 4^L (L!)^2 >= 2^bits: 20 ; vs bits/ (2*log2 bits)= 10.9\nbits 256 min L with 4^L (L!)^2 >= 2^bits: 29 ; vs bits/ (2*log2 bits)= 16.0\nbits 384 min L with 4^L (L!)^2 >= 2^bits: 39 ; vs bits/ (2*log2 bits)= 22.4\nbits 521 min L with 4^L (L!)^2 >= 2^bits: 50 ; vs bits/ (2*log2 bits)= 28.9\nworst-case double-and-add ops for 160 bit k: 318\nworst-case double-and-add ops for 256 bit k: 510\n"
+}

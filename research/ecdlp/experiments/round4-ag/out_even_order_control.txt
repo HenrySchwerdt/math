@@ -1,0 +1,2 @@
+{"chi_minusB": 1, "curves": 26, "max_abs_Y": 2.824565, "mean_m2": 1.9968, "mean_m4": 7.9784}
+{"chi_minusB": -1, "curves": 22, "max_abs_Y": 0.0, "mean_m2": 0.0, "mean_m4": 0.0}

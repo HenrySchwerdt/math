@@ -1,0 +1,18 @@
+prime powers tested: 2328 q range 2.. 20000
+violations of M(M+1): []
+M= 1 bound M(M+1)=  2 max #bad t=1 at q=32 t=[2]
+M= 2 bound M(M+1)=  6 max #bad t=2 at q=653 t=[0, 2]
+M= 3 bound M(M+1)= 12 max #bad t=3 at q=587 t=[-43, 2, 41]
+M= 4 bound M(M+1)= 20 max #bad t=4 at q=787 t=[0, 2, 17, 33]
+M= 5 bound M(M+1)= 30 max #bad t=5 at q=6353 t=[0, 2, 44, 65, 68]
+M= 6 bound M(M+1)= 42 max #bad t=5 at q=773 t=[-28, -11, 2, 21, 50]
+M= 7 bound M(M+1)= 56 max #bad t=6 at q=13043 t=[-89, -73, 0, 2, 82, 161]
+M= 8 bound M(M+1)= 72 max #bad t=7 at q=13043 t=[-89, -73, 0, 2, 82, 161, 189]
+M= 9 bound M(M+1)= 90 max #bad t=7 at q=3083 t=[-92, -54, -42, -38, 0, 40, 52]
+M=10 bound M(M+1)=110 max #bad t=7 at q=421 t=[-31, 0, 11, 18, 21, 34, 40]
+M=11 bound M(M+1)=132 max #bad t=7 at q=421 t=[-31, 0, 11, 18, 21, 34, 40]
+M=12 bound M(M+1)=156 max #bad t=8 at q=4259 t=[-94, 2, 8, 34, 70, 111, 117, 125]
+
+real	0m3.273s
+user	0m3.217s
+sys	0m0.004s

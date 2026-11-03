@@ -1,0 +1,26 @@
+{
+  "id": "EVT-56f525df-6bbd-434d-addb-e11e2e7b62df",
+  "kind": "task-status-change",
+  "task": "TSK-9f6a9ba1-1a55-4111-b9be-ec9af0e4a5a4",
+  "task_key": "ECDLP-1",
+  "timestamp": "2026-11-03T09:06:26.500966Z",
+  "run": "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "role": "principal-investigator"
+  },
+  "before": {
+    "status": "open",
+    "outcome": "unresolved",
+    "next_action": "Start at docs/CLAUDE_START.md, create a RUN and remote task claim, then implement the first vertical slice. Subsequent phases remain in docs/LAB_MISSION.md."
+  },
+  "after": {
+    "status": "active",
+    "outcome": "unresolved",
+    "next_action": "Start at docs/CLAUDE_START.md, create a RUN and remote task claim, then implement the first vertical slice. Subsequent phases remain in docs/LAB_MISSION.md."
+  },
+  "reason": "PI session started round-1 research lifecycle (independent agents, falsification, Lean obligation)",
+  "before_sha256": "c0f5ef325d3f06b7a282a7ab832e4dee81604f86c8594db9f6d2eb9c95a3113f",
+  "after_sha256": "13158f99696b1125d65c2ed4e605e9e00255a7990edaf5172fe55982d895a4b7"
+}

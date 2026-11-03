@@ -1,0 +1,19 @@
+seed 1 curves 40 p range 1013 2917
+g                     meanI       varI         M4    M4_corr       maxF maxF_plus1 half_meanI  half_varIhalfr_meanI halfr_varI
+chi(x)               1.0001     1.0072     2.0074     2.0074     1.9948     1.9811     1.0006     0.6810     1.0004     0.6765
+chi(y)               1.0002     0.9971     1.9974     1.9974     1.9786     1.9869     1.0003     0.6733     1.0000     0.6674
+chi(x+1)             1.0001     1.0076     2.0079     2.0079     1.9920     1.9808     1.0009     0.6724     1.0004     0.6690
+chi(2x)              1.0001     1.0072     2.0074     2.0074     1.9948     2.0014     1.0006     0.6810     1.0004     0.6765
+chi(x^2+x+1)         1.0002     2.0274     3.0279     3.0279     3.1270     3.1295     1.0007     1.0117     1.0004     1.0181
+chi(xy)              0.9996     2.0100     3.0093     3.0093     3.3410     3.3453     0.9996     1.0175     0.9999     0.9947
+parity(x)            1.0001     1.9825     2.9828        nan     3.3336        nan     1.0010     1.0063        nan        nan
+hashbit(x)           1.0001     1.9773     2.9774        nan     3.3796        nan     1.0007     0.9856        nan        nan
+worst-case (max over curves) maxF/sqrt(p) and maxF_plus1:
+chi(x)           deg=2 max maxF=2.022 max |F+1|/sqrt p=1.998
+chi(y)           deg=3 max maxF=1.999 max |F+1|/sqrt p=2.020
+chi(x+1)         deg=2 max maxF=2.021 max |F+1|/sqrt p=1.998
+chi(2x)          deg=2 max maxF=2.022 max |F+1|/sqrt p=2.048
+chi(x^2+x+1)     deg=4 max maxF=3.511 max |F+1|/sqrt p=3.492
+chi(xy)          deg=5 max maxF=4.649 max |F+1|/sqrt p=4.674
+parity(x)        deg=None max maxF=4.574 max |F+1|/sqrt p=nan
+hashbit(x)       deg=None max maxF=3.964 max |F+1|/sqrt p=nan

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/root/.elan/bin/lake",
+    "build"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:17:00.341997Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:17:02.014483Z",
+  "truncated": false,
+  "output": "\u2139 [1/296] Replayed MathResearch.Basic\ninfo: MathResearch/Basic.lean:10:0: 'MathResearch.identity' does not depend on any axioms\n\u2139 [2060/2073] Replayed MathResearch.MathlibCheck\ninfo: MathResearch/MathlibCheck.lean:10:0: WeierstrassCurve.Affine.Point.{r} {R : Type r} [CommRing R] (W' : WeierstrassCurve.Affine R) : Type r\ninfo: MathResearch/MathlibCheck.lean:11:0: addOrderOf.{u_1} {G : Type u_1} [AddMonoid G] (x : G) : \u2115\nBuild completed successfully (2073 jobs).\n"
+}

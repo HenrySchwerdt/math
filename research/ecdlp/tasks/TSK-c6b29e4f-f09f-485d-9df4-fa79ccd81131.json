@@ -1,0 +1,39 @@
+{
+  "id": "TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131",
+  "type": "TSK",
+  "title": "Round 2: adversarial counterexample attempts on round-1 candidates",
+  "created_at": "2026-11-03T09:13:31.191349Z",
+  "status": "completed",
+  "question": "For each listed hypothesis, find a counterexample, a boundary case where the statement fails, a hidden assumption, or a flaw in the stated derivation; or record a reproducible failed attempt.",
+  "rationale": "Round-2 adversarial/formal/experimental follow-up selected by PI from round-1 synthesis.",
+  "assumptions": [
+    "Agents receive neutral claim packets only (no author confidence or recommendation)."
+  ],
+  "sources": [],
+  "refs": [
+    "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e",
+    "HYP-eff2cfbb-053a-47e9-91de-a7210488b049",
+    "HYP-650069e0-5ad0-416b-980f-53064abdcccb",
+    "HYP-333ce3c5-b14f-4d72-aa84-cf917b1dd68a",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-ae271f2e-055d-421a-aefc-502c4bfefb4b.evidence",
+    "research/ecdlp/events/EVT-9480e61d-aadd-4cd0-94c8-d8ff624e8707.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Formalize N3 (HYP-57d71f43) and B3/N2 trace bounds in Lean",
+  "notes": "Created by PI RUN-62dbda7c-fe4f-4432-84a2-2068cd516355.",
+  "success_criteria": [
+    "Report per hypothesis: verdict (counterexample found / flaw found / survived attempt / inconclusive) with reproducible evidence.",
+    "Never repair a statement silently: a corrected variant is a new statement linked to the original."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402.md",
+    "research/ecdlp/runs/RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402.json (claims/sources/notes/next_action)",
+    "research/ecdlp/experiments/round2-cx/"
+  ],
+  "resource_limit": "One bounded subagent; no recursive spawning; no single computation over 5 minutes; no commits/pushes; ~60 minutes."
+}

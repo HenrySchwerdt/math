@@ -1,0 +1,26 @@
+{
+  "id": "HYP-4bd8d89a-e1b4-49e0-8b3d-b322c2cebeb8",
+  "type": "HYP",
+  "title": "Sharper embedding-degree trace bound (N2)",
+  "created_at": "2026-11-03T09:35:04.929629Z",
+  "status": "open",
+  "question": "For every prime power q and M >= 1, the number of M-bad traces t (as in HYP-eff2cfbb) is at most 2*sum_{m<=M} phi(m) - M.",
+  "rationale": "Corrected variant produced by the ECDLP-5 counterexample run; recorded separately, original kept.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-eff2cfbb-053a-47e9-91de-a7210488b049",
+    "RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402",
+    "TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round2-cx/h2_output_150000.txt"
+  ],
+  "claims": [
+    "For every prime power q and M >= 1, the number of M-bad traces t (as in HYP-eff2cfbb) is at most 2*sum_{m<=M} phi(m) - M."
+  ],
+  "proof_status": "proof-attempt",
+  "outcome": "unresolved",
+  "next_action": "Independent proof write-up and review; Lean formalization where feasible.",
+  "notes": "Proposed by counterexample agent as provable and tight for M=1,2; proof not yet written or reviewed. Candidate Lean obligation (cyclotomic factorization q^m-1 = prod_{d|m} Phi_d(q))."
+}

@@ -1,0 +1,26 @@
+{
+  "id": "EVT-2591b89c-e426-4d88-8526-b1fd9c5d7ab6",
+  "kind": "task-status-change",
+  "task": "TSK-e4099001-23bb-4242-b896-341c8af8919e",
+  "task_key": "ECDLP-8",
+  "timestamp": "2026-11-03T09:36:14.382142Z",
+  "run": "RUN-60986daa-f9ba-459a-bb6a-fb38509188ec",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "number-theory"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-3 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Prove the rank-2 (Prym) mechanism for g=x and explain g=y anomaly (HYP-80158648)"
+  },
+  "reason": "Weil-type bound derived and sourced (partially verified); Parseval/4th-moment formula; SU(2)/semicircle moment prediction matches observed 0.66 half-range variance; no DL information",
+  "before_sha256": "eaa3bc4f1d2397c6a8e3f31ac3a2625540d366474c2f716982dfdf54a981a783",
+  "after_sha256": "e84205d7447dd568165e5821e3c9867dd2928891b9a31059c5c0854033ef19e5"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "EVT-52443708-a6bc-40d0-bb1f-85221429fc75",
+  "kind": "task-status-change",
+  "task": "TSK-10348c5c-c9f0-44ca-b569-9ba3fa55debc",
+  "task_key": "ECDLP-11",
+  "timestamp": "2026-11-03T09:43:28.663620Z",
+  "run": "RUN-314e5405-60ca-4be4-9ca8-1c2f239ff2f9",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "algebraic-geometry"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-4 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Reviewed proof for g=x bound; prove E[2] reduction for g=y"
+  },
+  "reason": "Geometric mechanism identified: g=x rank-2 Prym piece (exact checks 120/120, det=p); g=y Heisenberg E[2] reduction (derivation sketch, exact S3 identity on 24 curves); PI reproduced key checks",
+  "before_sha256": "6b669161f431307e00d19f6d51e7fac7344a7bc34bd7e8bd924dbaddf8873639",
+  "after_sha256": "c610c173dbb182a0ea1efab9e3cab016069184af60f3af467dd3f646bd4afe54"
+}

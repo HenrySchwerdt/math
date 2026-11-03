@@ -1,0 +1,81 @@
+{
+  "id": "RUN-314e5405-60ca-4be4-9ca8-1c2f239ff2f9",
+  "type": "RUN",
+  "title": "Round 4 / ECDLP-11: geometric mechanism of the Sato\u2013Tate law for twisted Legendre sums",
+  "created_at": "2026-11-03T09:36:23.441038Z",
+  "status": "completed",
+  "question": "Identify the geometric object whose Frobenius traces are the psi-twisted sums sum_Q psi(Q) chi(g(Q)) for g = x and g = y on E/F_p, explain the observed SU(2)-like law for both (including the D=4 case g = y), and give the cheapest decisive numerical check.",
+  "rationale": "Bounded subagent run for TSK-10348c5c-c9f0-44ca-b569-9ba3fa55debc",
+  "assumptions": [],
+  "sources": [
+    {
+      "title": "Forey, Fresan, Kowalski - Arithmetic Fourier transforms over finite fields: generic vanishing, convolution, and equidistribution (Asterisque, in press)",
+      "url": "https://arxiv.org/abs/2109.11961",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract; applicability to E(F_q) twists not checked"
+    },
+    {
+      "title": "Deligne - La conjecture de Weil II, Publ. Math. IHES 52 (1980) 137-252",
+      "url": "https://doi.org/10.1007/BF02684780",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "bibliographic metadata only"
+    },
+    {
+      "title": "Katz - Convolution and equidistribution: Sato-Tate theorems for finite-field Mellin transforms, Ann. Math. Studies 180, 2012",
+      "url": "https://blackwells.co.uk/bookshop/KM/product/Convolution-and-Equidistribution-by-Nicholas-M-Katz/9780691153315",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "catalog description only"
+    },
+    {
+      "title": "Katz - Twisted L-functions and monodromy, Ann. Math. Studies 150, 2002",
+      "url": "https://collaborate.princeton.edu/en/publications/twisted-l-functions-and-monodromy/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "catalog description only"
+    },
+    {
+      "title": "Lang - Algebraic groups over finite fields, Amer. J. Math. 78 (1956) 555-563",
+      "url": "https://doi.org/10.2307/2372673",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "DOI seen only in a citing paper's reference list; not confirmed at journal"
+    }
+  ],
+  "refs": [
+    "TSK-10348c5c-c9f0-44ca-b569-9ba3fa55debc",
+    "HYP-80158648-c3d1-41b2-87a9-351463a4d4e2"
+  ],
+  "evidence": [],
+  "claims": [
+    "Derivation+theorem: sum_Q psi(Q)chi(g(Q)) = -tr(F|H^1) of rank D = #(odd-valuation support) (D=2 for x, D=4 for y), weight 1; |S|<=D sqrt(p).",
+    "Derivation, numerically verified (14 curves, F_p..F_p^3): for g=x the sum is the trace on the rank-2 H^1(D,pi^*L_psi), D: w^2=x(Q) genus 2, Jac D ~ E x E'' with E'': Y^2=X^3+aX^2+b^2; psi trivial gives -a(E'')-1 exactly (120/120); Newton rank-2 relation and det=p exactly, i.e. SU(2).",
+    "Derivation (verified): g=y satisfies S(psi)=chi(-1)conj S(psi): Y real for p=1 mod 4, imaginary for p=3 mod 4; max|Y|<=1.9997 on 120 curves.",
+    "Derivation sketch / conjecture: for g=y, H^1 (dim 4)= W(x)M with W the Heisenberg rep of E[2]; Frobenius cycles the T_i so tr_W has modulus 1, giving SU(2)-like law despite D=4. Test S3=A^3-3AB, |A^2-B|/2=p holds exactly on 24 curves (S1..S3 only; not a proof). Control: #E=2r, chi(-B)=-1 gives sums exactly 0 (22/22), chi(-B)=+1 gives max|Y|=2.82.",
+    "Conjecture (open): semicircle equidistribution over psi as p->infinity; no verified theorem covers it (FFK framework is the candidate; big-monodromy not verified). No information on discrete logarithms."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "PI: review; optionally compute S_4 over F_{p^4} (p~13-19) to confirm the full char polynomial of the g=y 4-dim Frobenius, prove nondegeneracy of the E[2] commutator (Weil pairing), and check whether FFK (arXiv:2109.11961) theorems apply to L_psi (x) L_chi(g) on E for big monodromy. Update HYP-80158648 next_action.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. | Self-reported model identity: Sonnet 5.5 (claude-sonnet-5-5); not verified by runtime metadata. Unverified recollection (no URL): Raynaud, Seminaire Bourbaki 1964/65, Euler-Poincare characteristic (Grothendieck-Ogg-Shafarevich). | PI reproduced check_x_prym, x_rank2_test, even_order_control via research.py exec; outputs identical.",
+  "run": {
+    "started_at": "2026-11-03T09:36:50.564261Z",
+    "completed_at": "2026-11-03T09:43:28.397384Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "algebraic-geometry",
+    "task": "TSK-10348c5c-c9f0-44ca-b569-9ba3fa55debc",
+    "input_hypotheses": [
+      "HYP-80158648-c3d1-41b2-87a9-351463a4d4e2"
+    ],
+    "starting_commit": "d860d3fb0961237c7d9be2735484049a8da7ed39",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round4-ag/"
+    ],
+    "resulting_commit": "b0df784c3429f1e4ca118ee3b5db4ef15209a68f",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

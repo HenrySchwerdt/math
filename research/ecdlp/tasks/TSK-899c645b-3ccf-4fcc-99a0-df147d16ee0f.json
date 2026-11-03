@@ -1,0 +1,37 @@
+{
+  "id": "TSK-899c645b-3ccf-4fcc-99a0-df147d16ee0f",
+  "type": "TSK",
+  "title": "Round 2: Lean obligation for homomorphic-transfer barrier lemmas",
+  "created_at": "2026-11-03T09:13:31.230581Z",
+  "status": "completed",
+  "question": "State and prove in Lean 4/Mathlib (pinned) the exact statements of the listed hypotheses (abstract algebra parts), building on MathResearch/ECDLP/Basic.lean, without sorry/admit/axioms; record compiler output and correspondence notes.",
+  "rationale": "Round-2 adversarial/formal/experimental follow-up selected by PI from round-1 synthesis.",
+  "assumptions": [
+    "Agents receive neutral claim packets only (no author confidence or recommendation)."
+  ],
+  "sources": [],
+  "refs": [
+    "HYP-caa15771-f28a-4226-b2be-22fa3ba0e901",
+    "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-048dc9c4-19c3-4e80-8c06-6e80ae85b99c.evidence",
+    "research/ecdlp/events/EVT-27502ac1-0933-4237-af5e-f6e7c2345f1a.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "None; geometric application of HYP-49fb2746 is a separate open obligation",
+  "notes": "Created by PI RUN-62dbda7c-fe4f-4432-84a2-2068cd516355.",
+  "success_criteria": [
+    "Report per hypothesis: verdict (counterexample found / flaw found / survived attempt / inconclusive) with reproducible evidence.",
+    "Never repair a statement silently: a corrected variant is a new statement linked to the original."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-3e3276e3-3fe6-4071-b325-38d810a3f633.md",
+    "research/ecdlp/runs/RUN-3e3276e3-3fe6-4071-b325-38d810a3f633.json (claims/sources/notes/next_action)",
+    "MathResearch/ECDLP/Transfer.lean"
+  ],
+  "resource_limit": "One bounded subagent; no recursive spawning; no single computation over 5 minutes; no commits/pushes; ~60 minutes."
+}

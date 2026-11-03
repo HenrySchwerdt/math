@@ -1,0 +1,26 @@
+{
+  "id": "DEC-b38432b9-3eba-4819-ae96-27dd20962e91",
+  "type": "DEC",
+  "title": "Round-1 coordination: remote claim refs not pushed; exclusive file ownership in one PI session",
+  "created_at": "2026-11-03T09:08:47.534170Z",
+  "status": "active",
+  "question": "How are ECDLP-1..4 claimed when this Claude Code cloud session is authorized to push only to branch claude/exciting-mccarthy-yljzor?",
+  "rationale": "docs/CONCURRENCY.md requires refs/heads/claims/TSK on origin. The session git policy forbids pushing other branches without explicit user permission, so remote claim refs were NOT created. All round-1 work runs inside one PI session; subagents own disjoint files (their own RUN json/md) and do not commit. Independence between subagents is instructed (do not read sibling RUN reports) but not technically enforced, since they share one checkout.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-9f6a9ba1-1a55-4111-b9be-ec9af0e4a5a4",
+    "TSK-19085a69-6fc1-440f-b7a1-ac2182eea490",
+    "TSK-30c839fa-0520-4fd6-a552-a243b2987d5e",
+    "TSK-3323598e-fe3f-42c0-8336-507107420679",
+    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355"
+  ],
+  "evidence": [],
+  "claims": [
+    "No cross-clone exclusivity guarantee exists for ECDLP-1..4 in this session; a concurrent Codex session could duplicate work."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "unresolved",
+  "next_action": "User may authorize pushing claims/* refs; otherwise a future session with that permission should claim open tasks before execution. Check for duplicate work on merge.",
+  "notes": "Recorded by PI RUN-62dbda7c. Branch named in the session instructions (claude/exciting-mccarthy-yljzor) supersedes CLAUDE.md branch name codex/ecdlp-research-laboratory for this session."
+}

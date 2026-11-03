@@ -1,0 +1,52 @@
+{
+  "id": "RUN-6fce1db8-c165-4d1e-abc5-e31a36c4d45e",
+  "type": "RUN",
+  "title": "Round 2: experiments on approximate characters and coordinate-predicate bias",
+  "created_at": "2026-11-03T09:13:31.374128Z",
+  "status": "completed",
+  "question": "Run pre-registered, seeded, reproducible experiments on toy curves testing the listed hypotheses with an explicit multiple-testing protocol; report all results including null results.",
+  "rationale": "Bounded subagent run for TSK-76b6d820-82e8-46c6-aea4-e25d7d0e95ba",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-76b6d820-82e8-46c6-aea4-e25d7d0e95ba",
+    "HYP-130de9b1-6713-4602-b1e5-6ef8a7da8486",
+    "HYP-e1959734-9325-4a54-9d99-d4535c58a11c"
+  ],
+  "evidence": [],
+  "claims": [
+    "E-A (empirical, toy domain only): in 24 random prime-order curves (p 547..4481, two seeds) none of 40 low-degree coordinate functions is near-character (min defect 0.499, random level 0.5); positive controls (exact/noisy characters, mixtures >= ~0.1-0.2) are detected.",
+    "E-A Fourier: the pre-registered threshold flagged 4 (seed 1) + 1 (seed 2) odd functions (max F/T 1.08, 1.01) because the pre-registered null ignored the symmetry f(-Q)=-f(Q) (real coefficients); a post-hoc symmetry-aware null (verified against matched simulations) gives 0 rejections in both seeds. This is a deviation, not a clean pass.",
+    "E-B (empirical, toy domain only): 0 of 2520 tests per seed (2 seeds, 120 curves each, p 1e3..1e5) reject at the Bonferroni level; chi-square tests of independence from k mod m are consistent with uniform p-values.",
+    "E-B anomaly, reproduced in both seeds: p-value distributions of DFT-max and lag-1 tests for the Legendre predicates chi(x), chi(y) are far from uniform (pooled KS p ~1e-12), the sequences have a flatter spectrum than random (periodogram variance ~0.66 vs 1) for chi of linear functions of x and for chi(y), not for parity, hash bits, chi(x^2+x+1), chi(xy); order-shuffled controls are fine. Cause unestablished; possible artifact not excluded. Not a finding until independently confirmed.",
+    "No proof or formal result; proof_status not-applicable. No statement about cryptographic sizes."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "inconclusive",
+  "next_action": "PI: decide on E-A post-hoc symmetric null (clean option: third fresh seed with corrected pre-registered null); investigate the E-B Legendre-predicate spectral flatness (exact periodogram variance, independent group-law implementation, full-period sequences with symmetry in the null) before it is reported as a finding.",
+  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents not exposed to PI. Self-reported model identity by the experimenter agent: Claude Sonnet 5.5 (claude-sonnet-5-5); not independently verified from runtime metadata. Post-hoc analyses (ea_posthoc.py, eb_diag.py) are labelled as not pre-registered in the report. | PI: an in-progress version of ea.py was accidentally included in commit by PI git add before this run finished; superseded by final files. PI reproduced eb.py seed 20261104 bit-identically (summary equal; evidence in PI RUN commands).",
+  "run": {
+    "started_at": "2026-11-03T09:14:19.099168Z",
+    "completed_at": "2026-11-03T09:26:47.231022Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "experimenter",
+    "task": "TSK-76b6d820-82e8-46c6-aea4-e25d7d0e95ba",
+    "input_hypotheses": [
+      "HYP-130de9b1-6713-4602-b1e5-6ef8a7da8486",
+      "HYP-e1959734-9325-4a54-9d99-d4535c58a11c"
+    ],
+    "starting_commit": "9091112dbed98568882fd2fc755829a5d1bde4ae",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round2/"
+    ],
+    "resulting_commit": "4f1d443f403a1b2a75418ac77b05c5e80f8f9c04",
+    "tests": [],
+    "benchmark": "Not a timing benchmark. Methodology: pre-registered seeded statistical protocol (PROTOCOL.md, sha256 296eddcb...), Bonferroni FWER 0.01, positive/null controls, two master seeds each for E-A and E-B; wall time 1.1 min per E-A seed, 8-13 s per E-B seed on 4 vCPU.",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

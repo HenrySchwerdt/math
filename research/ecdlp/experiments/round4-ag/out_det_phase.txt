@@ -1,0 +1,8 @@
+{"p": 13, "r": 19, "x_det_over_p_distinct": [1.0], "x_det_imag_max": 0.0, "y_det_phase_sample": null}
+{"p": 13, "r": 7, "x_det_over_p_distinct": [1.0], "x_det_imag_max": 0.0, "y_det_phase_sample": null}
+{"p": 19, "r": 13, "x_det_over_p_distinct": [1.0], "x_det_imag_max": 0.0, "y_det_phase_sample": null}
+{"p": 19, "r": 19, "x_det_over_p_distinct": [1.0], "x_det_imag_max": 0.0, "y_det_phase_sample": null}
+{"p": 23, "r": 19, "x_det_over_p_distinct": [1.0], "x_det_imag_max": 0.0, "y_det_phase_sample": null}
+{"p": 23, "r": 31, "x_det_over_p_distinct": [1.0], "x_det_imag_max": 0.0, "y_det_phase_sample": null}
+{"p": 29, "r": 37, "x_det_over_p_distinct": [1.0], "x_det_imag_max": 0.0, "y_det_phase_sample": null}
+{"p": 29, "r": 29, "x_det_over_p_distinct": [1.0], "x_det_imag_max": 0.0, "y_det_phase_sample": null}

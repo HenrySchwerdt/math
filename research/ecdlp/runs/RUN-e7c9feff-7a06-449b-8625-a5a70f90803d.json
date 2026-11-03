@@ -1,0 +1,44 @@
+{
+  "id": "RUN-e7c9feff-7a06-449b-8625-a5a70f90803d",
+  "type": "RUN",
+  "title": "Round 5 / ECDLP-14: well-posed intermediate targets with attached lower bounds",
+  "created_at": "2026-11-03T09:47:33.748808Z",
+  "status": "active",
+  "question": "Formulate precise intermediate targets between the known Theta(sqrt r) generic bound and the O(n log n) universal target (exact models: generic/black-box group ops, algebraic straight-line programs over F_q, multitape TM bit complexity; worst-case vs average; with/without preprocessing; restricted families), and for each state the best known lower and upper bounds with verified sources, identifying which targets are (a) known impossible in their model, (b) open, (c) cheaply falsifiable.",
+  "rationale": "Bounded subagent run for TSK-2d4e5fc7-9e3b-4c7f-bdec-3e37eabcba98",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-2d4e5fc7-9e3b-4c7f-bdec-3e37eabcba98",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "HYP-57d71f43-70ad-45f9-a8d3-6f095fd8d5f3"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T09:47:55.527662Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "complexity-theory",
+    "task": "TSK-2d4e5fc7-9e3b-4c7f-bdec-3e37eabcba98",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+      "HYP-57d71f43-70ad-45f9-a8d3-6f095fd8d5f3"
+    ],
+    "starting_commit": "b7ade5646f7146a04bf46f0e461033573e465a7e",
+    "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #2 head)",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

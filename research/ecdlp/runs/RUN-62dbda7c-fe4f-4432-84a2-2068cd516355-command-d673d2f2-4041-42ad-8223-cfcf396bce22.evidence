@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "-I",
+    "research/ecdlp/experiments/round1/agentB/emb.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:12:33.636828Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:12:34.453486Z",
+  "truncated": false,
+  "output": "curves 1498 anomalous 12 embdeg<=6: 239\nmean k/r (nonanomalous): 0.5801783480996002 min k/r 0\nhom count mismatches 0\n"
+}

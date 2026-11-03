@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round4-ag/x_rank2_test.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:42:57.582538Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:43:01.827107Z",
+  "truncated": false,
+  "output": "{\"p\": 11, \"a\": 1, \"b\": 6, \"r\": 13, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 11, \"a\": 3, \"b\": 2, \"r\": 13, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 13, \"a\": 5, \"b\": 9, \"r\": 17, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 13, \"a\": 4, \"b\": 12, \"r\": 19, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 17, \"a\": 9, \"b\": 5, \"r\": 11, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 17, \"a\": 2, \"b\": 15, \"r\": 19, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 19, \"a\": 8, \"b\": 15, \"r\": 17, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 19, \"a\": 12, \"b\": 15, \"r\": 17, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 23, \"a\": 9, \"b\": 7, \"r\": 19, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 23, \"a\": 18, \"b\": 22, \"r\": 19, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 29, \"a\": 21, \"b\": 14, \"r\": 29, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 29, \"a\": 13, \"b\": 6, \"r\": 37, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 31, \"a\": 15, \"b\": 18, \"r\": 37, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n{\"p\": 31, \"a\": 24, \"b\": 7, \"r\": 31, \"newton_resid_max\": 0.0, \"weight_dev_max\": 0.0}\n"
+}

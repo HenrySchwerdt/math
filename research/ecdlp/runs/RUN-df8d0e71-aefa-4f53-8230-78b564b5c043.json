@@ -1,0 +1,48 @@
+{
+  "id": "RUN-df8d0e71-aefa-4f53-8230-78b564b5c043",
+  "type": "RUN",
+  "title": "Round 3 / ECDLP-9: decisive scaling test of the flat-spectrum explanation",
+  "created_at": "2026-11-03T09:27:03.926248Z",
+  "status": "completed",
+  "question": "Do full-range normalized twisted sums X_c for chi(g([k]P)) stay bounded relative to sqrt(p/r) as p grows (Weil-type), with a non-Exp(1) periodogram law, for low-degree g, and approach random-like behaviour for higher-degree g or non-algebraic predicates?",
+  "rationale": "Bounded subagent run for TSK-bd3c9a6f-baa4-4e7c-815e-7a6198a978f7",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-bd3c9a6f-baa4-4e7c-815e-7a6198a978f7",
+    "HYP-242da418-4c1a-45b1-8132-8a2f00574272"
+  ],
+  "evidence": [],
+  "claims": [
+    "Experimental (toy, p<=1.28e5, 2 seeds): for g=x, x+1, y the full-range |X_c|^2 satisfy max about 4 p/r (does not grow with ln r; slope CI about 0) with 3rd moment 5.0 and KS distance about 0.012 to the Sato-Tate law of (2cos t)^2, supporting a bounded Weil-type behaviour; 2nd moment is 2.00, so the pre-registered rule B (2nd moment != 2) was non-discriminating and the literal verdict is inconclusive.",
+    "Experimental: for g=x^2+x+1, x*y, x^3+2 and non-algebraic controls max |X_c|^2 grows like ln r (slope about 0.8-1.7) with real-Gaussian-like 2nd/3rd moments (3, 15); H is refuted for these g at tested sizes. Random +-1 control behaves as Exp(1) (2nd moment 2.0, slope 0.9).",
+    "Experimental: no evidence of predicting k mod 2 or k mod 3 from coordinate predicates (bucket 1); no discrete-log leak claimed. Proof status not-applicable/unproved; finite experiments only."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "PI review: decide whether Sato-Tate/SU(2) identification for g in {x,x+1,y} merits a literature check (Katz-type equidistribution for twisted sums) and a proof attempt; test additional g (e.g. 2x, x^2, x^2+1, y+x, higher degrees) and larger p to locate the degree threshold; extend leak sanity to larger moduli. Update HYP-242da418 status.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Experimenter self-reported model identity: Sonnet 5.5, model ID claude-sonnet-5-5 (from session system prompt; not independently verified). Independent replication; other run reports and round2 not read. Post-hoc additions (Sato-Tate statistics) are labelled in the report. | PI reproduced seed 20261106 bit-identically (432 rows) via research.py exec (PI RUN evidence).",
+  "run": {
+    "started_at": "2026-11-03T09:27:21.297919Z",
+    "completed_at": "2026-11-03T09:31:34.647045Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "experimenter",
+    "task": "TSK-bd3c9a6f-baa4-4e7c-815e-7a6198a978f7",
+    "input_hypotheses": [
+      "HYP-242da418-4c1a-45b1-8132-8a2f00574272"
+    ],
+    "starting_commit": "9194a8aecca3e112fead04ced3a6d55af347109a",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round3/"
+    ],
+    "resulting_commit": "5ea31e670a2fe2ce5fc5474b7e47adf311873037",
+    "tests": [],
+    "benchmark": "Not a timing benchmark. Methodology: random.Random seeded curve sampling (4 p-buckets x 12), full-range FFT (numpy 2.5.3, Python 3.13.18) of +-1/0 sequences, ~4 s per seed on a 4 vCPU Linux container; statistics per (curve,predicate); OLS slope of max on ln r with 99% t-CI; oracle direct O(r) recomputation (40 values, max diff 1.4e-15); replication seed 20261106; pre-registration hash in PROTOCOL.md.",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

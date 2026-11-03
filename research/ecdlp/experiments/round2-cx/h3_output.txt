@@ -1,0 +1,17 @@
+r=2^256: largest L with 4^L(L!)^2 < r is 28; so SLP length >= 29 for some Q (claimed 29/50).
+   log2 r/(2 log2 log2 r) = 16.00; trivial bound (|a_i|<=2^i) gives length >= 255: some Q needs >= log2(r-1)-1 = 255.0
+r=2^521: largest L with 4^L(L!)^2 < r is 49; so SLP length >= 50 for some Q (claimed 29/50).
+   log2 r/(2 log2 log2 r) = 28.86; trivial bound (|a_i|<=2^i) gives length >= 520: some Q needs >= log2(r-1)-1 = 520.0
+
+L | 4^L(L!)^2 | #programs enumerated | distinct a_L (exact length L) | distinct values appearing in any program of length<=L | 2^(L+1)+1 | sum_{i<=L}4^i(i!)^2
+0 1 1 1 1 3 1
+1 4 4 3 4 5 5
+2 64 64 9 9 9 69
+3 2304 2304 15 15 17 2373
+4 147456 147456 25 25 33 149829
+L=1: largest r for which every residue mod r has an SLP of length<=1: 3; claimed-bound threshold 4^L(L!)^2=4
+L=2: largest r for which every residue mod r has an SLP of length<=2: 9; claimed-bound threshold 4^L(L!)^2=64
+L=3: largest r for which every residue mod r has an SLP of length<=3: 15; claimed-bound threshold 4^L(L!)^2=2304
+L=4: largest r for which every residue mod r has an SLP of length<=4: 23; claimed-bound threshold 4^L(L!)^2=147456
+
+exact length 0 outputs [1]  exact length 1 outputs [-2, 0, 2]  => S_0 not subset of S_1 (P itself has no length-1 SLP)

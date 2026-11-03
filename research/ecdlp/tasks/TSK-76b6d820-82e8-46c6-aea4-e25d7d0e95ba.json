@@ -1,0 +1,37 @@
+{
+  "id": "TSK-76b6d820-82e8-46c6-aea4-e25d7d0e95ba",
+  "type": "TSK",
+  "title": "Round 2: experiments on approximate characters and coordinate-predicate bias",
+  "created_at": "2026-11-03T09:13:31.267621Z",
+  "status": "completed",
+  "question": "Run pre-registered, seeded, reproducible experiments on toy curves testing the listed hypotheses with an explicit multiple-testing protocol; report all results including null results.",
+  "rationale": "Round-2 adversarial/formal/experimental follow-up selected by PI from round-1 synthesis.",
+  "assumptions": [
+    "Agents receive neutral claim packets only (no author confidence or recommendation)."
+  ],
+  "sources": [],
+  "refs": [
+    "HYP-130de9b1-6713-4602-b1e5-6ef8a7da8486",
+    "HYP-e1959734-9325-4a54-9d99-d4535c58a11c",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-4167035b-8d1c-42ae-9c11-7f2a72eafa48.evidence",
+    "research/ecdlp/events/EVT-1edc027f-bae5-4f1c-8fc3-d3cd82f91cf4.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "inconclusive",
+  "next_action": "Test Weil/Katz character-sum explanation of the E-B flat spectrum (new HYP); re-run E-A with symmetry-aware pre-registered null",
+  "notes": "Created by PI RUN-62dbda7c-fe4f-4432-84a2-2068cd516355.",
+  "success_criteria": [
+    "Report per hypothesis: verdict (counterexample found / flaw found / survived attempt / inconclusive) with reproducible evidence.",
+    "Never repair a statement silently: a corrected variant is a new statement linked to the original."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-6fce1db8-c165-4d1e-abc5-e31a36c4d45e.md",
+    "research/ecdlp/runs/RUN-6fce1db8-c165-4d1e-abc5-e31a36c4d45e.json (claims/sources/notes/next_action)",
+    "research/ecdlp/experiments/round2/"
+  ],
+  "resource_limit": "One bounded subagent; no recursive spawning; no single computation over 5 minutes; no commits/pushes; ~60 minutes."
+}

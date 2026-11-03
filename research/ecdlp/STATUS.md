@@ -1,17 +1,64 @@
 # ECDLP — primary project
 
-Primary mission: `docs/LAB_MISSION.md`. Open target: `HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61`.
-Universal classical ECDLP over arbitrary finite-field elliptic curves in worst-case
-O(n log n), where n is total encoded input length. No existence assumption.
+Primary mission: `docs/LAB_MISSION.md`. Open target: `HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61`
+(universal classical ECDLP, worst-case O(n log n) bit operations, n = total input length).
+Status of the target: **open, unproved; no evidence for or against existence.** Nothing below
+improves on known ECDLP complexity.
 
-## Claude handoff
+## Laboratory state (session 2026-11-03, Claude PI, branch claude/exciting-mccarthy-yljzor)
 
-Start with `docs/CLAUDE_START.md`. First task: `TSK-9f6a9ba1-1a55-4111-b9be-ec9af0e4a5a4`.
-Existing framework: shared ledger, native adapters, task claims, command capture,
-7 regression tests, Lean 4 smoke module. Full research laboratory is NOT implemented.
-Read the mission's 23 sections; do not interpret this handoff as reducing scope.
+Research cycle executed with real bounded subagents (Claude Code Agent tool; adapters select
+claude-sonnet-5-5, independent reviewer claude-opus-5-5; identities are configured +
+self-reported, not runtime-verified). PI log: `runs/RUN-62dbda7c-…`. Remote claim refs were
+not pushed (session push scope) — see `decisions/DEC-b38432b9-…`.
 
-No ECDLP experiment, independent hypothesis generation, blind review, SQLite
-memory, C17 harness or major formal theorem has been completed. Mathlib dependency
-setup status is recorded in the platform handoff. Factorization remains preserved
-under research/integer-factorization as a separate secondary project.
+Lean: `lake build` passes (pinned Lean 4.35.0 / Mathlib 56a00585, no warnings).
+`MathResearch/ECDLP/Basic.lean` (exact DLP relation), `Transfer.lean` (transfer barriers;
+PRF-af19eaae, REV-16b2db9b accept), `Barriers.lean` (SLP and trace bounds; PRF-613be647,
+REV-0971d96d accept). Reviewers are same-provider (Opus): independence is partial.
+
+## Findings by evidence level
+
+Formally verified (Lean + independent correspondence review; all elementary, not novel):
+- HYP-caa15771 — homomorphic transfer of a prime-order subgroup is all-or-nothing; nonzero
+  image forces r | |target|; coprime target gives zero. Guardrail for all transfer ideas.
+- HYP-57d71f43 — addition/subtraction SLP values are n•P with |n| ≤ 2^length; some Q needs
+  length ≳ log₂ r (Barriers.lean; PRF-613be647, REV-0971d96d). Black-box model only.
+- HYP-eff2cfbb — at most M(M+1) traces t have a prime r > 4√q | q+1−t with embedding degree
+  ≤ M (any q ≥ 2; trace-level only, no curve-count weighting).
+
+Refuted / flawed (kept permanently, with corrected variants recorded separately):
+- HYP-49fb2746 — "Frobenius-equivariance unifies MOV and anomalous attacks": abstract lemma
+  true but trivial; the application is vacuous (pairing functionals with non-rational R are not
+  q-Galois-equivariant; toy computations). ECDLP-5.
+- HYP-650069e0 — SLP counting barrier: exact-vs-≤ length gap; strictly weaker than the trivial
+  coefficient bound (HYP-57d71f43); bit-cost corollary model-dependent.
+- HYP-333ce3c5 — "arbitrary lifts carry no information": ill-posed quantifier; exact variant
+  HYP-f85d20a1 (uniform on F_p^2 for independent lifts).
+
+Survived falsification (unproved): sharper trace bound HYP-4bd8d89a; prime-field small-x
+factor bases do not beat √p at toy sizes 2^12..2^18 (HYP-db508348, ECDLP-12; best 15.7·√p;
+end-to-end toy index calculus correct but 40–52·√p).
+
+Reproducible experimental findings (toy sizes, two seeds + PI bit-identical reruns):
+- No near-character among 40 low-complexity coordinate functions (HYP-130de9b1; Fourier
+  null was mis-specified, post-hoc correction → 0 rejections).
+- Legendre predicates χ(x([k]P)), χ(y([k]P)) show no dependence on k mod m, but a
+  non-random spectral law (HYP-e1959734 not supported as stated). Explained: twisted sums
+  over E(F_p) are Weil-bounded with Sato–Tate-like moments (1, 2, 5) for g = x, x+1, y and
+  Gaussian-like for higher-degree g (HYP-242da418 → sharpened HYP-80158648). Equidistribution
+  behaviour, **not** a discrete-log leak. Mechanism (ECDLP-11, exact
+  toy checks): for g = x the sums are Frobenius traces on the rank-2 Prym piece
+  E'': Y² = X³ + aX² + b² of the genus-2 cover w² = x (det = p exactly ⇒ |Y| ≤ 2); for g = y an
+  E[2]-Heisenberg reduction gives an effective rank 2 (derivation sketch, unproved step).
+  Equidistribution as p → ∞ remains conjectural.
+
+Barrier context (literature-level, agents' reports RUN-9eae1ad9, RUN-fec2442f, RUN-b0ccd1bd):
+O(n log n) is below the best-known cost O(n² log n) of verifying a candidate by scalar
+multiplication (not a lower bound). Generic bounds (Shoup/Maurer/Nechaev) constrain only
+encoding-blind algorithms; every known non-generic transfer needs a family-specific arithmetic
+coincidence (embedding degree, #E = p, extension-field descent).
+
+## Next
+
+See BACKLOG.md. Factorization remains a separate preserved project.

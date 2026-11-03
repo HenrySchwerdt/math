@@ -1,0 +1,4 @@
+10007 traces 401 traces with prime factor r>4sqrt(p), ord_r(p)<=6: 1 bound M(M+1)= 42
+20011 traces 565 traces with prime factor r>4sqrt(p), ord_r(p)<=6: 1 bound M(M+1)= 42
+40009 traces 801 traces with prime factor r>4sqrt(p), ord_r(p)<=6: 2 bound M(M+1)= 42
+80021 traces 1129 traces with prime factor r>4sqrt(p), ord_r(p)<=6: 3 bound M(M+1)= 42

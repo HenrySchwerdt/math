@@ -1,0 +1,108 @@
+----------------------------------------------------------------------
+  label: supersingular y^2=x^3+x
+  p: 103
+  curve: (1, 0)
+  #E(F_p): 104
+  trace t: 0
+  r: 13
+  p mod r: 12
+  ss?: True
+  P: (32, 47)
+  R-: ((20+0i), (0+23i))
+  e(P,R-): (90+55i)
+  e(P,R-)^r: (1+0i)
+  sanity e(piX,piY)==e(X,Y)^p: True
+  f(X)=e(P+R-,R-): (90+55i)
+  f(piX): (90+55i)
+  f(X)^p  (Galois-equivariance would need f(piX)=f(X)^p): (90+48i)
+  f(piX)==f(X)  (c=1 eigen-equivariance): True
+  f(piX)==f(X)^p  (c=p Galois-equivariance): False
+  zeta^2==1 ?: False
+  R+ = R0+pi R0 is rational and equals alpha*P, alpha: 8
+  => e(P,R+) = e(P,P)^alpha = 1 (Weil alternating); the pi-fixed auxiliary point gives the trivial functional: True
+  Tate t(P,R-): (40+96i)
+  Tate: t(piX,R-)==t(X,R-): True
+  Tate: t(piX,R-)==t(X,R-)^p: False
+  Tate bilinear check t(P+P,R-)==t(P,R-)^2: True
+  pi^2 = id on E[r] (pi^2 R0 = R0): True
+----------------------------------------------------------------------
+  label: supersingular y^2=x^3+x
+  p: 131
+  curve: (1, 0)
+  #E(F_p): 132
+  trace t: 0
+  r: 11
+  p mod r: 10
+  ss?: True
+  P: (60, 33)
+  R-: ((10+0i), (0+13i))
+  e(P,R-): (126+32i)
+  e(P,R-)^r: (1+0i)
+  sanity e(piX,piY)==e(X,Y)^p: True
+  f(X)=e(P+R-,R-): (126+32i)
+  f(piX): (126+32i)
+  f(X)^p  (Galois-equivariance would need f(piX)=f(X)^p): (126+99i)
+  f(piX)==f(X)  (c=1 eigen-equivariance): True
+  f(piX)==f(X)^p  (c=p Galois-equivariance): False
+  zeta^2==1 ?: False
+  R+ = R0+pi R0 is rational and equals alpha*P, alpha: 3
+  => e(P,R+) = e(P,P)^alpha = 1 (Weil alternating); the pi-fixed auxiliary point gives the trivial functional: True
+  Tate t(P,R-): (126+99i)
+  Tate: t(piX,R-)==t(X,R-): True
+  Tate: t(piX,R-)==t(X,R-)^p: False
+  Tate bilinear check t(P+P,R-)==t(P,R-)^2: True
+  pi^2 = id on E[r] (pi^2 R0 = R0): True
+----------------------------------------------------------------------
+  label: ordinary, k=2
+  p: 103
+  curve: (1, 28)
+  #E(F_p): 91
+  trace t: 13
+  r: 13
+  p mod r: 12
+  ss?: False
+  P: (62, 30)
+  R-: ((45+0i), (0+67i))
+  e(P,R-): (90+55i)
+  e(P,R-)^r: (1+0i)
+  sanity e(piX,piY)==e(X,Y)^p: True
+  f(X)=e(P+R-,R-): (90+55i)
+  f(piX): (90+55i)
+  f(X)^p  (Galois-equivariance would need f(piX)=f(X)^p): (90+48i)
+  f(piX)==f(X)  (c=1 eigen-equivariance): True
+  f(piX)==f(X)^p  (c=p Galois-equivariance): False
+  zeta^2==1 ?: False
+  R+ = R0+pi R0 is rational and equals alpha*P, alpha: 1
+  => e(P,R+) = e(P,P)^alpha = 1 (Weil alternating); the pi-fixed auxiliary point gives the trivial functional: True
+  Tate t(P,R-): (22+54i)
+  Tate: t(piX,R-)==t(X,R-): True
+  Tate: t(piX,R-)==t(X,R-)^p: False
+  Tate bilinear check t(P+P,R-)==t(P,R-)^2: True
+  pi^2 = id on E[r] (pi^2 R0 = R0): True
+----------------------------------------------------------------------
+  label: ordinary, k=2
+  p: 131
+  curve: (1, 39)
+  #E(F_p): 121
+  trace t: 11
+  r: 11
+  p mod r: 10
+  ss?: False
+  P: (8, 64)
+  R-: ((16+0i), (0+98i))
+  e(P,R-): (126+32i)
+  e(P,R-)^r: (1+0i)
+  sanity e(piX,piY)==e(X,Y)^p: True
+  f(X)=e(P+R-,R-): (126+32i)
+  f(piX): (126+32i)
+  f(X)^p  (Galois-equivariance would need f(piX)=f(X)^p): (126+99i)
+  f(piX)==f(X)  (c=1 eigen-equivariance): True
+  f(piX)==f(X)^p  (c=p Galois-equivariance): False
+  zeta^2==1 ?: False
+  R+ = R0+pi R0 is rational and equals alpha*P, alpha: 10
+  => e(P,R+) = e(P,P)^alpha = 1 (Weil alternating); the pi-fixed auxiliary point gives the trivial functional: True
+  Tate t(P,R-): (49+58i)
+  Tate: t(piX,R-)==t(X,R-): True
+  Tate: t(piX,R-)==t(X,R-)^p: False
+  Tate bilinear check t(P+P,R-)==t(P,R-)^2: True
+  pi^2 = id on E[r] (pi^2 R0 = R0): True

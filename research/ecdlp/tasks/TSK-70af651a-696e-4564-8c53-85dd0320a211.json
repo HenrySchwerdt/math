@@ -1,0 +1,31 @@
+{
+  "id": "TSK-70af651a-696e-4564-8c53-85dd0320a211",
+  "type": "TSK",
+  "title": "Round 5 / ECDLP-15: cover-based transfers \u2014 genus/dimension trade-off (high-risk)",
+  "created_at": "2026-11-03T09:47:33.788035Z",
+  "status": "active",
+  "question": "For E/F_p (p prime) and covers pi: C -> E of genus g with efficiently computable pullback pi^*: E(F_p) -> J_C(F_p), is there any regime of g (as a function of log p) where known Jacobian index-calculus complexities (Gaudry, Gaudry\u2013Thom\u00e9\u2013Th\u00e9riault\u2013Diem, Enge\u2013Gaudry, Diem) applied to J_C beat sqrt(p)? Make the regime analysis rigorous from the published complexity statements (with exact hypotheses), and identify the precise missing ingredient; test the smallest case numerically if feasible.",
+  "rationale": "Round-5 selection by PI from BACKLOG priorities 1, 5 and 3 (high-risk).",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-ac83d2fb-b23a-4332-bcf0-14300079f31e.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute bounded round-5 run.",
+  "notes": "Created by PI RUN-62dbda7c. Started on a local branch while PR #2 CI runs (user instruction).",
+  "success_criteria": [
+    "Exact statements; verified sources or explicit unverified marks; reproducible evidence; speculative proposals give property, mechanism, obligations, invalidators, cheapest test, relevant results."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-6a3e20d9-107a-4bd6-9763-79da760c2fd5.md",
+    "research/ecdlp/runs/RUN-6a3e20d9-107a-4bd6-9763-79da760c2fd5.json (claims/sources/notes/next_action)",
+    "research/ecdlp/experiments/round5-cover/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; \u226420 web lookups; computations < 5 min; no commits; ~60 min."
+}

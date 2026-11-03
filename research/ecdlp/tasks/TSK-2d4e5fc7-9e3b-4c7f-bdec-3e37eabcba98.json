@@ -1,0 +1,32 @@
+{
+  "id": "TSK-2d4e5fc7-9e3b-4c7f-bdec-3e37eabcba98",
+  "type": "TSK",
+  "title": "Round 5 / ECDLP-14: well-posed intermediate targets with attached lower bounds",
+  "created_at": "2026-11-03T09:47:33.704457Z",
+  "status": "active",
+  "question": "Formulate precise intermediate targets between the known Theta(sqrt r) generic bound and the O(n log n) universal target (exact models: generic/black-box group ops, algebraic straight-line programs over F_q, multitape TM bit complexity; worst-case vs average; with/without preprocessing; restricted families), and for each state the best known lower and upper bounds with verified sources, identifying which targets are (a) known impossible in their model, (b) open, (c) cheaply falsifiable.",
+  "rationale": "Round-5 selection by PI from BACKLOG priorities 1, 5 and 3 (high-risk).",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "HYP-57d71f43-70ad-45f9-a8d3-6f095fd8d5f3"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-e9a2caef-437b-47b7-88d1-c39664018b13.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute bounded round-5 run.",
+  "notes": "Created by PI RUN-62dbda7c. Started on a local branch while PR #2 CI runs (user instruction).",
+  "success_criteria": [
+    "Exact statements; verified sources or explicit unverified marks; reproducible evidence; speculative proposals give property, mechanism, obligations, invalidators, cheapest test, relevant results."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-e7c9feff-7a06-449b-8625-a5a70f90803d.md",
+    "research/ecdlp/runs/RUN-e7c9feff-7a06-449b-8625-a5a70f90803d.json (claims/sources/notes/next_action)",
+    "research/ecdlp/experiments/round5-ct/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; \u226420 web lookups; computations < 5 min; no commits; ~60 min."
+}

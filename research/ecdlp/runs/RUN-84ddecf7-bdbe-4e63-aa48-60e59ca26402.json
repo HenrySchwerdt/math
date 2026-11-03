@@ -1,0 +1,62 @@
+{
+  "id": "RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402",
+  "type": "RUN",
+  "title": "Round 2: adversarial counterexample attempts on round-1 candidates",
+  "created_at": "2026-11-03T09:13:31.304692Z",
+  "status": "completed",
+  "question": "For each listed hypothesis, find a counterexample, a boundary case where the statement fails, a hidden assumption, or a flaw in the stated derivation; or record a reproducible failed attempt.",
+  "rationale": "Bounded subagent run for TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131",
+    "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e",
+    "HYP-eff2cfbb-053a-47e9-91de-a7210488b049",
+    "HYP-650069e0-5ad0-416b-980f-53064abdcccb",
+    "HYP-333ce3c5-b14f-4d72-aa84-cf917b1dd68a"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round2-cx/h1_output.txt",
+    "research/ecdlp/experiments/round2-cx/h2_output.txt",
+    "research/ecdlp/experiments/round2-cx/h2_output_150000.txt",
+    "research/ecdlp/experiments/round2-cx/h2_output_sampled.txt",
+    "research/ecdlp/experiments/round2-cx/h3_output.txt",
+    "research/ecdlp/experiments/round2-cx/h4_output.txt"
+  ],
+  "claims": [
+    "H1: abstract lemma is correct but uses only F(x0)=x0 and f(Fx0)=c f(x0); the claimed application misdescribes pairings: e(.,R) with non-rational R is not Galois-equivariant for c=q (toy k=2 curves: f(pi X)=f(X) != f(X)^p), the r | q^j-1 condition is the embedding-degree definition, and the anomalous map is a group hom on E(F_p) with trivial Frobenius action; 'unification' is vacuous (cyclic Hom counting). Experimental/proof-attempt only.",
+    "H2: no violation of M(M+1) for all prime powers q<=150000 (and 400 samples to 1e6), M<=12; proof checked with no gap; provable sharper bound 2*sum phi(m) - M (tight at M=1,2). Survived attack.",
+    "H3: count 4^L(L!)^2 correct for exactly-L programs but the 'length <= L' inference has a gap (needs sum_{i<=L}); counting bound is vastly weaker than the trivial 2^{L+1}+1 bound (L>=log2 r -1); L0(2^256)=29 and L0(2^521)=50 reproduced as length lower bounds; per-op bit-cost assumption unjustified, final omega(n log n) holds only in the black-box SLP model.",
+    "H4: psi is a homomorphism on E~(Z_p), so consistent lifts Q~=[k]P~ give psi(Q~)=k psi(P~) with probability 1 (statement false under the universal 'arbitrary lifts' reading); for independent uniform lifts (psi(P~),psi(Q~)) is exactly uniform on F_p^2 (exhaustive enumeration on 30 curves), randomized rates match 1/p; p | #E with r != p only possible for p=5 (#E=10) among p>=5."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "PI: route corrected statements N1-N4 (RUN report) to independent review; attempt Lean obligations for N2 and N3 (finite counting); re-verify literature sources (Smart, Semaev, Satoh-Araki, MOV, Frey-Ruck, Balasubramanian-Koblitz), unretrieved here; retest H4 for p=3,5 with a complete law valid for even order.",
+  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents not exposed to PI. Self-reported identity of executing agent: Sonnet 5.5 (model ID claude-sonnet-5-5); not verified against runtime metadata. No web source could be retrieved (Springer redirected to auth), so sources is empty; literature named in the report is unverified recall. Commands were run manually (not via research.py exec), so run.commands is empty; they are listed in the report and outputs saved as evidence files. | PI reproduced h1/h3/h4/h2(q<=20000) via research.py exec; h3,h4 output identical; h1 numeric values differ because the F_{p^2} square-root routine uses unseeded global random (eigenvector/sign choice), all boolean conclusions identical; minor reproducibility defect.",
+  "run": {
+    "started_at": "2026-11-03T09:14:19.099168Z",
+    "completed_at": "2026-11-03T09:35:39.171773Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "counterexample",
+    "task": "TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131",
+    "input_hypotheses": [
+      "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e",
+      "HYP-eff2cfbb-053a-47e9-91de-a7210488b049",
+      "HYP-650069e0-5ad0-416b-980f-53064abdcccb",
+      "HYP-333ce3c5-b14f-4d72-aa84-cf917b1dd68a"
+    ],
+    "starting_commit": "9091112dbed98568882fd2fc755829a5d1bde4ae",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round2-cx/"
+    ],
+    "resulting_commit": "5359aed0483aade41f0b463d5e02c46274f4b6f2",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

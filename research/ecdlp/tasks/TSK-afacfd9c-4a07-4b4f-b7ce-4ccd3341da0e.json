@@ -1,0 +1,34 @@
+{
+  "id": "TSK-afacfd9c-4a07-4b4f-b7ce-4ccd3341da0e",
+  "type": "TSK",
+  "title": "Round 4 / ECDLP-10: Lean proofs of SLP coefficient bound (N3) and embedding-degree trace bound (B3)",
+  "created_at": "2026-11-03T09:36:23.328176Z",
+  "status": "completed",
+  "question": "Prove in Lean 4/Mathlib: (a) HYP-57d71f43 coefficient bound for addition/subtraction straight-line programs and its corollary; (b) HYP-eff2cfbb trace bound (or the strongest provable sub-statement), with exact statements and correspondence notes.",
+  "rationale": "Round-4 selection by PI after integrating rounds 1-3.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-57d71f43-70ad-45f9-a8d3-6f095fd8d5f3",
+    "HYP-eff2cfbb-053a-47e9-91de-a7210488b049",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-6f66db5f-ffdb-4130-9d40-424f885e74bc.evidence",
+    "research/ecdlp/events/EVT-f5d18c98-c36b-4d1c-86be-4c551b8510e2.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "None",
+  "notes": "Created by PI RUN-62dbda7c.",
+  "success_criteria": [
+    "Exact statements; reproducible evidence; no sorry; failures recorded; corrected variants stated separately."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-d0b4df5c-47cc-43e7-a7bb-449926187a0b.md",
+    "research/ecdlp/runs/RUN-d0b4df5c-47cc-43e7-a7bb-449926187a0b.json (claims/sources/notes/next_action)",
+    "MathResearch/ECDLP/Barriers.lean"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; computations < 5 min; no commits; ~60 min."
+}
