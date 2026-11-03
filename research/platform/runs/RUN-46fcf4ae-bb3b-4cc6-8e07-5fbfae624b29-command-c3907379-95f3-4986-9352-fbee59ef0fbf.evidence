@@ -1,0 +1,17 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T07:07:24.628921Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T07:07:25.399775Z",
+  "truncated": false,
+  "output": "test_provider_role_parity (test_research.ConfigurationTests.test_provider_role_parity) ... ok\ntest_all_generated_drafts_validate (test_research.LedgerTests.test_all_generated_drafts_validate) ... ok\ntest_launch_failure_and_nonzero_exit_have_evidence (test_research.LedgerTests.test_launch_failure_and_nonzero_exit_have_evidence) ... ok\ntest_local_path_redaction (test_research.LedgerTests.test_local_path_redaction) ... ok\ntest_missing_reference_and_external_evidence_rejected (test_research.LedgerTests.test_missing_reference_and_external_evidence_rejected) ... ok\ntest_remote_claim_exclusion_and_completed_owner_release (test_research.LedgerTests.test_remote_claim_exclusion_and_completed_owner_release) ... To <temp>/tmpduvaxs69/origin.git\n * [new branch]      bb74814f2460c11c30d23e2e0cc038c76b370be0 -> claims/TSK-2b114d73-21c0-4b09-af08-4efa86feba76\nTo <temp>/tmpduvaxs69/origin.git\n ! [rejected]        37308115bb15ad0e1ad698b476419e4fc6073fd4 -> claims/TSK-2b114d73-21c0-4b09-af08-4efa86feba76 (stale info)\nerror: failed to push some refs to '<temp>/tmpduvaxs69/origin.git'\nFrom <temp>/tmpduvaxs69/origin\n * branch            claims/TSK-2b114d73-21c0-4b09-af08-4efa86feba76 -> FETCH_HEAD\nFrom <temp>/tmpduvaxs69/origin\n * branch            claims/TSK-2b114d73-21c0-4b09-af08-4efa86feba76 -> FETCH_HEAD\nTo <temp>/tmpduvaxs69/origin.git\n - [deleted]         claims/TSK-2b114d73-21c0-4b09-af08-4efa86feba76\nok\ntest_timeout_is_preserved (test_research.LedgerTests.test_timeout_is_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.692s\n\nOK\n"
+}

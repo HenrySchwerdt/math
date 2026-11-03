@@ -28,3 +28,13 @@ Do not commit credentials, personal paths or unbounded transcripts.
 Finish with an actionable handoff and ledger updates. Commit and push when
 explicitly authorized; the initial bootstrap request authorizes its own push.
 No public forum posting is part of research task execution unless separately requested.
+
+## Current mission and Claude handoff
+
+The primary project is ECDLP. Read docs/CLAUDE_START.md, docs/LAB_MISSION.md
+(the full current user mission) and docs/LAB_PROTOCOL.md before choosing work.
+Preserve research/integer-factorization as a separate project. Bootstrap is
+complete enough for handoff; the full laboratory remains to be implemented.
+Use all current scientific roles from docs/ROLES.md with bounded native agents
+when available, otherwise explicitly record sequential fallback and missing
+independence. Never infer live integration, proof or approval from config files.

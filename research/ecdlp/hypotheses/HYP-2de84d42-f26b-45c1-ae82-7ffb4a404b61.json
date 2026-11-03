@@ -1,0 +1,22 @@
+{
+  "id": "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+  "type": "HYP",
+  "title": "Open universal classical ECDLP target",
+  "created_at": "2026-11-03T07:05:33.403143Z",
+  "status": "open",
+  "question": "Is there a universal uniform classical algorithm solving ECDLP over arbitrary elliptic curves over finite fields in worst-case O(n log n) bit operations, with n the total encoded input length?",
+  "rationale": "Primary mission supplied by the user; aspirational open target, not a known achievable bound.",
+  "assumptions": [
+    "Classical uniform computation; arbitrary finite fields and elliptic curves.",
+    "n is total encoded input length, including representations and problem parameters.",
+    "Do not assume a polynomial-time or near-linear algorithm exists."
+  ],
+  "sources": [],
+  "refs": [],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "unproved",
+  "outcome": "unresolved",
+  "next_action": "Specify the exact ECDLP input/output promise, field encoding, subgroup assumptions and bit/memory model before proposing general bounds.",
+  "notes": "Goal only. No theorem, algorithm, experimental support or independent validation established."
+}

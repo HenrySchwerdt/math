@@ -1,3 +1,5 @@
 # Platform backlog
 
-- Active: TSK-16e686b7-5956-477c-a05d-a8d79fdacd59 — infrastructure bootstrap.
+- Delivered: bootstrap implementation bef6840; exact-commit independent review pending.
+- Open: ECDLP laboratory migration from docs/CLAUDE_START.md and docs/LAB_MISSION.md.
+- Local prerequisite: configure Claude credentials; inspect pre-existing user hook warning.

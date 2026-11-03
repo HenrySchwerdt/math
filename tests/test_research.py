@@ -130,7 +130,7 @@ class ConfigurationTests(unittest.TestCase):
         for role in (SOURCE / 'docs/roles').glob('*.md'):
             codex = tomllib.loads((SOURCE / '.codex/agents' / (role.stem + '.toml')).read_text())
             claude = (SOURCE / '.claude/agents' / (role.stem + '.md')).read_text()
-            expected = 'gpt-6.1-sol' if role.stem in ('principal-investigator', 'final-reviewer') else 'gpt-6-luna'
+            expected = 'gpt-6.1-sol' if role.stem in ('principal-investigator', 'final-reviewer', 'independent-reviewer') else 'gpt-6-luna'
             self.assertEqual(codex['model'], expected)
             self.assertIn(f'docs/roles/{role.name}', codex['developer_instructions'])
             self.assertIn(f'docs/roles/{role.name}', claude)

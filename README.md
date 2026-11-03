@@ -1,8 +1,13 @@
-# Auditable mathematical research
+# Mathematical research laboratory — Claude handoff
+
+Start with [the Claude handoff](docs/CLAUDE_START.md) and the
+[full implementation mission](docs/LAB_MISSION.md). The primary project is ECDLP;
+integer-factorization is preserved separately. The full laboratory is pending;
+this repository currently supplies the tested bootstrap and clear starting tasks.
 
 A small provider-independent foundation for mathematical projects. Codex and
 Claude Code share task definitions, evidence, reviews and Git-versioned state.
-The first project is `research/integer-factorization`; no mathematical findings
+The earlier project is `research/integer-factorization`; no mathematical findings
 or performance claims have been established during bootstrap.
 
 Start with [the bootstrap guide](docs/BOOTSTRAP.md). Read the
