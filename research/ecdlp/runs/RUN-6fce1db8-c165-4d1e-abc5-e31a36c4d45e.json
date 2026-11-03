@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 2: experiments on approximate characters and coordinate-predicate bias",
   "created_at": "2026-11-03T09:13:31.374128Z",
-  "status": "active",
+  "status": "completed",
   "question": "Run pre-registered, seeded, reproducible experiments on toy curves testing the listed hypotheses with an explicit multiple-testing protocol; report all results including null results.",
   "rationale": "Bounded subagent run for TSK-76b6d820-82e8-46c6-aea4-e25d7d0e95ba",
   "assumptions": [],
@@ -43,7 +43,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round2/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "4f1d443f403a1b2a75418ac77b05c5e80f8f9c04",
     "tests": [],
     "benchmark": "Not a timing benchmark. Methodology: pre-registered seeded statistical protocol (PROTOCOL.md, sha256 296eddcb...), Bonferroni FWER 0.01, positive/null controls, two master seeds each for E-A and E-B; wall time 1.1 min per E-A seed, 8-13 s per E-B seed on 4 vCPU.",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
