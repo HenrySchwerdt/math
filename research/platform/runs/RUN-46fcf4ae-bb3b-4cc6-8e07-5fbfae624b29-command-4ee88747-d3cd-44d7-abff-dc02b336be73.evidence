@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "<local-path>",
+    "build"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T07:08:02.680415Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T07:08:16.877768Z",
+  "truncated": false,
+  "output": "\u2139 [1/575] Replayed MathResearch.Basic\ninfo: MathResearch/Basic.lean:10:0: 'MathResearch.identity' does not depend on any axioms\n\u26a0 [2060/2062] Built MathResearch.MathlibCheck (9.6s)\nwarning: MathResearch/MathlibCheck.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file\nwarning: MathResearch/MathlibCheck.lean: imports `Mathlib.GroupTheory.OrderOfElement` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file\ninfo: MathResearch/MathlibCheck.lean:8:0: WeierstrassCurve.Affine.Point.{r} {R : Type r} [CommRing R] (W' : WeierstrassCurve.Affine R) : Type r\ninfo: MathResearch/MathlibCheck.lean:9:0: addOrderOf.{u_1} {G : Type u_1} [AddMonoid G] (x : G) : \u2115\n\u2714 [2061/2062] Built MathResearch (1.0s)\nBuild completed successfully (2062 jobs).\n"
+}

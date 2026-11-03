@@ -1,0 +1,33 @@
+{
+  "id": "TSK-9f6a9ba1-1a55-4111-b9be-ec9af0e4a5a4",
+  "type": "TSK",
+  "title": "First vertical slice: auditable ECDLP toy research lifecycle",
+  "created_at": "2026-11-03T07:05:33.403572Z",
+  "status": "open",
+  "question": "Can the shared laboratory execute and persist a small honest research lifecycle from independent candidate generation through falsification, blind review and an exact Lean proof obligation?",
+  "rationale": "Immediate first vertical slice required by the full laboratory mission; implementation precedes broad research.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "unresolved",
+  "next_action": "Start at docs/CLAUDE_START.md, create a RUN and remote task claim, then implement the first vertical slice. Subsequent phases remain in docs/LAB_MISSION.md.",
+  "notes": "Draft only; no execution or verification claimed.",
+  "success_criteria": [
+    "Read and preserve existing work; implement shared extended schemas/lifecycle and durable SQLite memory with append-only versioned events.",
+    "Register distinct exact, speculative toy hypotheses without sharing preliminary conclusions; search prior hypotheses/failures before new work.",
+    "Execute a reproducible counterexample attempt and persist observed command/exit/output evidence; retain failures.",
+    "Create a neutral blind-review packet; record actual independent reviewer identity/model when available, or blocked status when unavailable.",
+    "Formalize the smallest useful exact statement in Lean 4/Mathlib; record proof obligations, real compiler feedback and theorem correspondence without weakening.",
+    "Persist result, evidence hashes, task checkpoints and next actions; keep correctness/complexity/experiment/review states separate.",
+    "Run relevant tests and ledger validation; commit verified progress on codex/ecdlp-research-laboratory. Do not claim both-provider live integration unless actually executed."
+  ],
+  "owned_files": [
+    "Dedicated Git worktrees or exclusive file ownership assigned by Claude PI; preserve existing ledger."
+  ],
+  "resource_limit": "Begin with two bounded independent discovery contexts only if native spawning and quota permit. Otherwise prepare isolated sealed submissions sequentially and explicitly mark independence unestablished. No recursive spawning; define token/time/process limits before launch."
+}

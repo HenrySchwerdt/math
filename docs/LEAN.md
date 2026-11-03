@@ -16,9 +16,11 @@ lake build
 
 Elan reads the pinned toolchain and downloads it on first use. If installed
 without changing shell PATH, invoke `$HOME/.elan/bin/lake` or add that directory
-to PATH. No Mathlib dependency is needed for the bootstrap smoke check. Add
-Mathlib at a compatible pinned revision with its manifest when a proof needs it;
-record this dependency change in a DEC and review it before integration.
+to PATH. The upgrade handoff pins Mathlib 4.35.0 at commit
+56a005855ea17e0b0958f73ec801ae140b0a1679, matching Lean 4.35.0. The current
+smoke module does not yet import Mathlib or verify ECDLP mathematics. Claude
+must implement the serious framework requested in docs/LAB_MISSION.md; review
+dependency additions and exact statements before accepting research results.
 
 Keep generic definitions in MathResearch; add project-specific modules under
 MathResearch/<Project> and import them from MathResearch.lean so `lake build`
@@ -35,3 +37,10 @@ the research target's current unproved status.
 
 Sources checked 2026-11-02: [Lake reference](https://lean-lang.org/doc/reference/latest/Build-Tools-and-Distribution/Lake/),
 [Lean 4.35.0 release](https://github.com/leanprover/lean4/releases/tag/v4.35.0).
+
+## Mathlib dependency readiness
+
+MathResearch/MathlibCheck.lean imports the pinned elliptic-curve affine-point
+and element-order modules and checks their existing definitions. It is included
+in the root library build. This verifies usable dependency imports, not a new
+ECDLP theorem. The full reusable framework remains Claude's implementation task.

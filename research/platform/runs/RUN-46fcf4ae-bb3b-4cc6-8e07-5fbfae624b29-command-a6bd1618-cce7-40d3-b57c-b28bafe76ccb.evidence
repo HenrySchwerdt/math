@@ -1,0 +1,13 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/research.py",
+    "check"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T07:07:29.287597Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T07:07:29.419978Z",
+  "truncated": false,
+  "output": "Validated 9 research records\n"
+}

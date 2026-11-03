@@ -11,3 +11,12 @@ the task ID, exact question, inputs, success criteria, owned files/worktree,
 run ID and resource limit. Independent critics receive neutral claim/evidence
 packets rather than the author's confidence assessment. PI/final reviewer
 integrates only after a separate review. Bootstrap is infrastructure only.
+
+## Scientific laboratory roles
+
+Shared role files and native adapters now also define discovery,
+algebraic-geometry, group-theory, number-theory, complexity-theory,
+algorithm-engineering, counterexample, independent-reviewer and formalization.
+All routine roles use Luna/Sonnet; independent-reviewer uses Sol/Opus.
+Adapters contain references, not duplicated scientific policy. Actual live
+spawning/independence remains to be demonstrated in the first vertical slice.

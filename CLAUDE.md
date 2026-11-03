@@ -2,7 +2,8 @@
 
 @AGENTS.md
 
-Read and follow the shared instructions in AGENTS.md and docs/METHODOLOGY.md.
-All tasks, results, reviews, run metadata and evidence live in the same ledger
-used by Codex. Use .claude/agents only as role adapters; docs/ROLES.md defines
-provider-independent responsibilities. No private auto-memory is authoritative.
+Start by reading docs/CLAUDE_START.md and the full docs/LAB_MISSION.md.
+Implement the ECDLP laboratory on codex/ecdlp-research-laboratory, preserving
+existing factorization work. Shared task/result/evidence/review state lives in
+Git under research; native agents are thin adapters to docs/roles.
+No private conversation or auto-memory is authoritative.

@@ -1,5 +1,8 @@
 # Start with either provider
 
+For the current ECDLP mission, read docs/CLAUDE_START.md first. The older
+factorization bootstrap example below remains available for that separate project.
+
 Requires Python 3.11+, Git, Elan/Lean 4 (see LEAN.md), and the selected authenticated CLI. From repository root:
 
 ```sh
