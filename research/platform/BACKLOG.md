@@ -5,3 +5,5 @@
 - Local prerequisite: configure Claude credentials; inspect pre-existing user hook warning.
 
 - Completed: public VitePress research notebook with tested generator, 16 tests and successful GitHub Pages deployment.
+
+- Completed LAB-3: project task board, recorded execution/status history and direct Python CLI reporting.

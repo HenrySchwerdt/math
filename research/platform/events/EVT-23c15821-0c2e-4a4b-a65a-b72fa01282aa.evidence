@@ -1,0 +1,26 @@
+{
+  "id": "EVT-23c15821-0c2e-4a4b-a65a-b72fa01282aa",
+  "kind": "task-status-change",
+  "task": "TSK-4b23a091-2797-4b5f-b737-7d3ff26b75e2",
+  "task_key": "LAB-3",
+  "timestamp": "2026-11-03T07:42:08.589139Z",
+  "run": "RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0",
+  "actor": {
+    "provider": "openai",
+    "model": "unknown-runtime-id-not-exposed",
+    "role": "task-board-implementer"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Complete independent review and publish the CLI-backed task history."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Research agents use new, task and exec; commit ledger updates to main for automatic publication."
+  },
+  "reason": "Project board, persistent task keys and direct CLI reporting deployed. All 25 tests passed; independent reviews accepted; live board showed the actual CLI transition event.",
+  "before_sha256": "7dbef9d01b0e034a6f7ff7ed646c403503ba4b8643f07c1734493dc1b128c920",
+  "after_sha256": "3ffcddb7adeb111504064a64e605542a99235e91b254f5b2bca94933ae7cf03d"
+}

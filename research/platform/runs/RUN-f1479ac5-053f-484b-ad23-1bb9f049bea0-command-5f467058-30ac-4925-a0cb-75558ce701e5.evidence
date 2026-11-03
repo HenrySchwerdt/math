@@ -1,0 +1,25 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/research.py",
+    "task",
+    "platform",
+    "LAB-3",
+    "--run",
+    "RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0",
+    "--status",
+    "completed",
+    "--outcome",
+    "verified",
+    "--reason",
+    "Project board, persistent task keys and direct CLI reporting deployed. All 25 tests passed; independent reviews accepted; live board showed the actual CLI transition event.",
+    "--next-action",
+    "Research agents use new, task and exec; commit ledger updates to main for automatic publication."
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T07:42:08.565167Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T07:42:08.611739Z",
+  "truncated": false,
+  "output": "{\n  \"task\": \"TSK-4b23a091-2797-4b5f-b737-7d3ff26b75e2\",\n  \"task_key\": \"LAB-3\",\n  \"changed\": true,\n  \"event\": \"research/platform/events/EVT-23c15821-0c2e-4a4b-a65a-b72fa01282aa.evidence\"\n}\n"
+}

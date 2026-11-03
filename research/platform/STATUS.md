@@ -18,3 +18,9 @@ automatically publish via `.github/workflows/pages.yml`. Read docs/WEBSITE.md.
 Independent website Python/integration reviews accepted candidate d116b7c.
 Earlier quota-blocked bootstrap runs remain historical records. The full ECDLP
 laboratory implementation remains open; website delivery is infrastructure only.
+
+Task board and CLI integration complete: LAB-3. Project-scoped keys are persisted
+in TASKS.json. `research.py task` records status/outcome/reason/history; `exec`
+records command steps; main commits automatically regenerate the public site.
+The homepage now uses task status columns and factual copy. 25 tests, independent
+Python/Vue reviews and production deployment passed. No research proof claimed.

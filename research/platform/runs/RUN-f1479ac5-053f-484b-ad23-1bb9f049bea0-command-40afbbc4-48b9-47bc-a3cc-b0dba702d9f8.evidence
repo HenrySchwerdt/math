@@ -1,0 +1,17 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/research.py",
+    "release",
+    "platform",
+    "TSK-3b0320e8-17b1-447f-80e5-d9f0f2770613",
+    "RUN-f4484379-ebc8-4fc1-8546-cb0358be8729",
+    "ca5f6ead5e18718d9e5fc3b6313d8c24cb0425e0"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T07:40:25.884202Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T07:40:29.481461Z",
+  "truncated": false,
+  "output": "From github.com:HenrySchwerdt/math\n * branch            claims/TSK-3b0320e8-17b1-447f-80e5-d9f0f2770613 -> FETCH_HEAD\nTo github.com:HenrySchwerdt/math.git\n - [deleted]         claims/TSK-3b0320e8-17b1-447f-80e5-d9f0f2770613\n"
+}
