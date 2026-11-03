@@ -1,0 +1,27 @@
+{
+  "id": "HYP-4d77b7e0-09f3-4510-a0c2-1cda2ebda0de",
+  "type": "HYP",
+  "title": "Classification of weak ECDLP families and the D3 norm lemma",
+  "created_at": "2026-11-03T10:35:29.599010Z",
+  "status": "open",
+  "question": "Weak-family map (known results, sourced at abstract level in RUN-7f221667) + D3 lemma. Asymptotically faster than generic: anomalous (#E = p, poly time); small embedding degree k (pairing transfer; agent-derived threshold k <~ (log q)^2 up to polylogs, unsourced); GHS Weil descent for special curves over composite extension fields; Gaudry\u2013Diem O~(q^{2-2/n}) on E(F_{q^n}) for fixed n >= 3 and Diem subexponential for some growing-n sequences. Constant/amortized only: Pohlig\u2013Hellman (none for prime order), negation sqrt 2, extra automorphisms <= sqrt 6, Frobenius classes (constant for fixed n; sqrt(2m) on Koblitz curves), multi-instance sqrt(m) amortized, preprocessing r^{1/3} online with r^{2/3} precomputation. Isogeny-class invariant: anomalous and embedding-degree conditions (depend on t only); curve-dependent: Weil-descent weakness, extra automorphisms (disc End(E) in {-3,-4}), Frobenius classes. D3 lemma (proved): every non-scalar element a + b*pi (b != 0) of Z[pi] has norm a^2 + t a b + p b^2 >= |t^2 - 4p|/4. Residual hard class: prime-order, non-anomalous curves over prime fields with large embedding degree \u2014 no known algorithm faster than O(sqrt p) group operations (known-results statement; only generic-model lower bounds are proved).",
+  "rationale": "From ECDLP-24; consolidates the lab barrier map; absorbs D3 from ECDLP-22.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-7f221667-7800-4572-9a2d-0bc8fbe896bc",
+    "TSK-c3a23866-bbe0-40c6-8e4f-b44260aea5ae",
+    "HYP-60e5da5b-27a5-4d60-b428-5e6172b9fb1d",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round8-weak/out_d3.txt"
+  ],
+  "claims": [
+    "Weak-family map (known results, sourced at abstract level in RUN-7f221667) + D3 lemma. Asymptotically faster than generic: anomalous (#E = p, poly time); small embedding degree k (pairing transfer; agent-derived threshold k <~ (log q)^2 up to polylogs, unsourced); GHS Weil descent for special curves over composite extension fields; Gaudry\u2013Diem O~(q^{2-2/n}) on E(F_{q^n}) for fixed n >= 3 and Diem subexponential for some growing-n sequences. Constant/amortized only: Pohlig\u2013Hellman (none for prime order), negation sqrt 2, extra automorphisms <= sqrt 6, Frobenius classes (constant for fixed n; sqrt(2m) on Koblitz curves), multi-instance sqrt(m) amortized, preprocessing r^{1/3} online with r^{2/3} precomputation. Isogeny-class invariant: anomalous and embedding-degree conditions (depend on t only); curve-dependent: Weil-descent weakness, extra automorphisms (disc End(E) in {-3,-4}), Frobenius classes. D3 lemma (proved): every non-scalar element a + b*pi (b != 0) of Z[pi] has norm a^2 + t a b + p b^2 >= |t^2 - 4p|/4. Residual hard class: prime-order, non-anomalous curves over prime fields with large embedding degree \u2014 no known algorithm faster than O(sqrt p) group operations (known-results statement; only generic-model lower bounds are proved)."
+  ],
+  "proof_status": "reviewed",
+  "outcome": "verified",
+  "next_action": "D3 lemma is a one-line identity (4N = (2a+tb)^2 + (4p - t^2) b^2) \u2014 trivially Lean-formalizable; the classification is a literature map (abstract-level verification only).",
+  "notes": "PI checked the D3 lemma identity by hand and reproduced d3_norms.py (identical output; 58,840 ordinary (p,t) pairs, p < 3000, bound attained within 0.1%). D3 phrasing corrected by agent: large |t^2-4p| does not exclude extra automorphisms since End(E) may be a larger order; they require disc End(E) in {-3,-4}. \"reviewed\" = PI review only; sources at abstract/metadata level."
+}

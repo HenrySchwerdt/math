@@ -1,0 +1,7 @@
+# HYP-4d77b7e0-09f3-4510-a0c2-1cda2ebda0de — Weak ECDLP families and D3 lemma
+
+## Statement
+Weak-family map (known results, sourced at abstract level in RUN-7f221667) + D3 lemma. Asymptotically faster than generic: anomalous (#E = p, poly time); small embedding degree k (pairing transfer; agent-derived threshold k <~ (log q)^2 up to polylogs, unsourced); GHS Weil descent for special curves over composite extension fields; Gaudry–Diem O~(q^{2-2/n}) on E(F_{q^n}) for fixed n >= 3 and Diem subexponential for some growing-n sequences. Constant/amortized only: Pohlig–Hellman (none for prime order), negation sqrt 2, extra automorphisms <= sqrt 6, Frobenius classes (constant for fixed n; sqrt(2m) on Koblitz curves), multi-instance sqrt(m) amortized, preprocessing r^{1/3} online with r^{2/3} precomputation. Isogeny-class invariant: anomalous and embedding-degree conditions (depend on t only); curve-dependent: Weil-descent weakness, extra automorphisms (disc End(E) in {-3,-4}), Frobenius classes. D3 lemma (proved): every non-scalar element a + b*pi (b != 0) of Z[pi] has norm a^2 + t a b + p b^2 >= |t^2 - 4p|/4. Residual hard class: prime-order, non-anomalous curves over prime fields with large embedding degree — no known algorithm faster than O(sqrt p) group operations (known-results statement; only generic-model lower bounds are proved).
+
+## Status
+Literature map (abstract-level sources) + elementary lemma checked by PI.
