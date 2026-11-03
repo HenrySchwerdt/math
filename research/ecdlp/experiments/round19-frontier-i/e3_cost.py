@@ -11,22 +11,17 @@ from math import comb, log2, isqrt
 from ecL import *
 
 def pick_nl(r):
-    best = None
-    for n in range(1, 40):
-        for l in range(3, 200):
-            N = 3 * n + l
-            c = comb(N, l)
-            if c > 4 * r: break
-            score = abs(log2(c) - log2(r))
-            if best is None or score < best[0]: best = (score, n, l, c)
-    return best[1:]
+    """paper regime l = 3n' (N = 2l): largest n' with C(6n',3n') <= r (n'=1 minimum)."""
+    n = 1
+    while comb(6 * (n + 1), 3 * (n + 1)) <= r: n += 1
+    return n, 3 * n, comb(6 * n, 3 * n)
 
 def exh(r, m, rng, n, l):
     """returns (tests, passes, ok)"""
     N = 3 * n + l; tests = 0; passes = 0
     kP = N // 2; kQ = N - kP
     while True:
-        passes += 1
+        passes += 1; tests += int(N * 1.5 * log2(r))  # point generation (group ops) counted too
         I = rng.sample(range(1, r), kP) if r > kP + 2 else list(range(1, kP + 1))
         J = rng.sample(range(1, r), kQ)
         logs = [s % r for s in I] + [(-m * s) % r for s in J]
@@ -43,7 +38,7 @@ def mitm(r, m, rng, extra=1):
     while 2 ** N < extra * r: N += 1
     ops = 0; passes = 0
     while True:
-        passes += 1
+        passes += 1; ops += int(N * 1.5 * log2(r))
         kP = N // 2
         I = rng.sample(range(1, r), kP); J = rng.sample(range(1, r), N - kP)
         logs = [s % r for s in I] + [(-m * s) % r for s in J]
@@ -66,14 +61,14 @@ def mitm(r, m, rng, extra=1):
                 if B and A * pow(B, -1, r) % r == m: return ops, passes
         if passes > 60: return ops, passes
 
-def rho(E, P, Q, r, rng, tw=32):
+def rho(E, P, Q, r, rng, tw=16):
     """r-adding walk, Brent cycle detection, restart on failure. returns (ops, m)"""
     ops = 0
     tab = []
     for _ in range(tw):
         a, b = rng.randrange(r), rng.randrange(r)
         tab.append((E.add(E.mul(a, P), E.mul(b, Q)), a, b)); 
-    ops += tw * 2 * 20  # table setup, generous
+    ops += tw * 3 * int(1.5 * log2(r)) // 2  # table setup: each entry ~ two short scalar mults, honest-ish
     def step(R, a, b):
         if R is None: h = 0
         else: h = (R[0] * 2654435761 + R[1]) % tw
@@ -81,7 +76,7 @@ def rho(E, P, Q, r, rng, tw=32):
         return E.add(R, T), (a + ta) % r, (b + tb) % r
     while True:
         a, b = rng.randrange(r), rng.randrange(r)
-        R = E.add(E.mul(a, P), E.mul(b, Q)); ops += 40
+        R = E.add(E.mul(a, P), E.mul(b, Q)); ops += int(3 * log2(r))
         pw = lam = 1; X = (R, a, b); Y = step(*X); ops += 1
         while X[0] != Y[0]:
             if pw == lam: X = Y; pw *= 2; lam = 0
