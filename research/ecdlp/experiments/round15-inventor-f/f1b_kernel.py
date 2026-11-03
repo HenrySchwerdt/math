@@ -48,7 +48,8 @@ while i0 < nz:
             if len(q) == 4: coll += 1; quads.add(frozenset(q))
     i0 = i1
 labs = [lab[int(x)] for x in xs]
+raw4c = sum(1 for q in quads if len({labs[i] for i in q}) == 4)   # POST-HOC refinement: raw closed quadruples on 4 distinct cosets
 cq = {frozenset(labs[i] for i in q) for q in quads}
 pred = 8 * math.comb(s, 4) / N
 print(json.dumps(dict(exp='kernel', bits=bits, ell=ell, seed=seed, p=p, N=N, s=s, N4=coll / 3, pred=pred, ratio=(coll / 3) / pred,
-      distinct_quads=len(quads), distinct_coset_quads=len(cq), coset_quads_with_4_distinct_cosets=sum(1 for c in cq if len(c) == 4))), flush=True)
+      distinct_quads=len(quads), distinct_coset_quads=len(cq), raw_N4_four_distinct_cosets=raw4c, pred_quotient=8*math.comb(len(set(labs)),4)/(N/ell), coset_quads_with_4_distinct_cosets=sum(1 for c in cq if len(c) == 4))), flush=True)

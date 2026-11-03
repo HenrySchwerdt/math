@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round15-inventor-f && timeout 250 python3 f3_groebner.py 10 1 > out_gb2_10.jsonl 2> err_gb2_10.txt || echo TIMEOUT_OR_FAIL D=10 >> out_gb2_10.jsonl"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:46:46.562310Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:50:56.623755Z",
+  "truncated": false,
+  "output": ""
+}

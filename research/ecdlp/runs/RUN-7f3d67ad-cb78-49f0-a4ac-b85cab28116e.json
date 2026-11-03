@@ -16,7 +16,10 @@
   "evidence": [
     "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-213aa0d3-814c-4818-b37f-f6d5b6a686d0.evidence",
     "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-8a10598b-487d-49f6-b2d6-f51ea44cd7f6.evidence",
-    "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-9d978926-9113-4bfe-993e-ac7e11f39692.evidence"
+    "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-9d978926-9113-4bfe-993e-ac7e11f39692.evidence",
+    "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-ea129225-3799-4a69-9204-c730bda48a57.evidence",
+    "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-f18c722a-cf49-4f66-843d-f4170c6e885d.evidence",
+    "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-e06ca4df-0c82-41b6-ad5a-871304bfe016.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
@@ -40,7 +43,10 @@
     "commands": [
       "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-213aa0d3-814c-4818-b37f-f6d5b6a686d0.evidence",
       "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-8a10598b-487d-49f6-b2d6-f51ea44cd7f6.evidence",
-      "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-9d978926-9113-4bfe-993e-ac7e11f39692.evidence"
+      "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-9d978926-9113-4bfe-993e-ac7e11f39692.evidence",
+      "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-ea129225-3799-4a69-9204-c730bda48a57.evidence",
+      "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-f18c722a-cf49-4f66-843d-f4170c6e885d.evidence",
+      "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-e06ca4df-0c82-41b6-ad5a-871304bfe016.evidence"
     ],
     "files_changed": [],
     "resulting_commit": null,

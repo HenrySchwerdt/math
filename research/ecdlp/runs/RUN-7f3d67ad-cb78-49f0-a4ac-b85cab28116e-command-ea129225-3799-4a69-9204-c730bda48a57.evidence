@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round15-inventor-f && for b in 20 24 28; do for s in 1 2; do for k in RND SX; do python3 f2_run.py $b $s $k; done; done; done > out_e2_ctl.jsonl 2> err_e2_ctl.txt"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:44:39.471638Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:44:43.015744Z",
+  "truncated": false,
+  "output": ""
+}

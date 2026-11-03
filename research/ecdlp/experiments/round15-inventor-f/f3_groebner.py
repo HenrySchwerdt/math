@@ -17,6 +17,8 @@ a2, a1, a0 = [A.coeff_monomial(X ** k) for k in (2, 1, 0)]; b2, b1, b0 = [B.coef
 S4 = expand((a2 * b0 - a0 * b2) ** 2 - (a2 * b1 - a1 * b2) * (a1 * b0 - a0 * b1))
 rng2 = random.Random(seed)
 V = base_coset(p, a, b, D, rng2); xs = sorted(V)
+while len(xs) < 4:   # need >= 4 base points (3 summands, distinct choices)
+    rng2 = random.Random(rng2.random()); V = base_coset(p, a, b, D, rng2); xs = sorted(V)
 # pick target as an actual sum of three base points so that a solution exists
 E = Curve(a, b, p); pts = [(x, V[x]) for x in xs]
 u = rng2.sample(pts, 3); T = E.add(E.add(u[0], u[1]), u[2])
