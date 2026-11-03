@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Revision 1 of technical report PAP-ef6e2010",
   "created_at": "2026-11-03T11:05:19.772437Z",
-  "status": "active",
+  "status": "completed",
   "question": "Address blocking B1 and non-blocking findings of REV-15104e72 (adversarial) and REV-2b383b9b (manuscript).",
   "rationale": "docs/PAPERS.md review loop.",
   "assumptions": [],
@@ -14,12 +14,13 @@
     "REV-2b383b9b-7029-4706-95fe-ae74ee44a7ce"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-70173882-3abe-4a3b-8f33-376f732c09ab.evidence"
+    "research/ecdlp/events/EVT-70173882-3abe-4a3b-8f33-376f732c09ab.evidence",
+    "research/ecdlp/events/EVT-cfea7e9e-3b51-47e7-9ec2-97ca8fdc38ff.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "verified",
+  "next_action": "Re-review",
   "notes": "Created by PI RUN-62dbda7c.",
   "success_criteria": [
     "B1 fixed (per-theorem axiom evidence files); all non-blocking items addressed or explicitly declined with reason in a response table; clean latexmk build."

@@ -1,0 +1,26 @@
+{
+  "id": "EVT-f0e4be6b-08bb-40cb-bf4e-8e72a00b6f6c",
+  "kind": "task-status-change",
+  "task": "TSK-8e2e3b22-2d89-45b1-babc-4bdedc1cc138",
+  "task_key": "ECDLP-39",
+  "timestamp": "2026-11-03T11:20:49.875674Z",
+  "run": "RUN-3386b45f-b989-447d-b212-6e1f3fab5527",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "complexity-theory"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "ECDLP-40 review and formalization"
+  },
+  "reason": "Decision-tree barrier N <= 9*2^L-1 (paper proof, PI-checked, reproduced); review and Lean launched",
+  "before_sha256": "62323183bfbd4fed0e46f7210f98e27348b1818b88d4a7faa940f69867ea76f4",
+  "after_sha256": "8850e22e3bbc59cdd2be1265415234bf668bc4db73e3250006c3fc75d4db4ba2"
+}

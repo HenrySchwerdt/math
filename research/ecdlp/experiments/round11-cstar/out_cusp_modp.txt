@@ -1,0 +1,5 @@
+pairs (p,N), 3<=N<=(p-1)/2, p<400: 6751  with c_{N-1}(0)=0 mod p (target k): 33
+fraction 0.004888164716338321  (random model sum 1/p ~ 0.005174995114394485 )
+bad pairs with N<=12: [(11, 3), (19, 6), (31, 10), (151, 4)]
+bad pairs with N=(p-1)/2: []
+target k^2: c_j(0) != 0 mod p for all j < N, all pairs: True (asserted)

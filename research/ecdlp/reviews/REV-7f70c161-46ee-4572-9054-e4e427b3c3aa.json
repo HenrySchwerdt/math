@@ -1,0 +1,52 @@
+{
+  "id": "REV-7f70c161-46ee-4572-9054-e4e427b3c3aa",
+  "type": "REV",
+  "title": "Independent review of x-only SLP barriers (SLPBound, RationalSLP) at c12381d",
+  "created_at": "2026-11-03T11:12:01.621888Z",
+  "status": "completed",
+  "question": "Do SLPBound.length_bound_linear_short_weierstrass / length_bound_sq_short_weierstrass and RationalSLP.length_bound_rational_slp / degree_bound_rational_short_weierstrass at c12381d build with standard axioms only, faithfully formalize the informal SLP barrier claims (semantics, conventions, degree invariant, nonvanishing argument), have non-vacuous hypotheses, and what do they (not) imply for ECDLP algorithms?",
+  "rationale": "docs/REVIEW.md requires independent review before PI integration of PRF claims (TSK-8e2e3b22).",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "PRF-58cf340e-e9ff-4f06-980b-09cec3d52ee7",
+    "PRF-9586acb8-9b42-489b-83bc-9bbbbd9519ba",
+    "HYP-92a9b4d9-827b-45fc-b881-1e7cf3b3443b",
+    "HYP-6aef8c30-2942-4079-8d0a-fc2ae8b6c200",
+    "RUN-d101240f-afa0-4ce0-91ad-7ca23d4927ad"
+  ],
+  "evidence": [],
+  "claims": [
+    "At c12381d: lake build succeeds (3167 jobs, cached); fresh `lake env lean` of SLPBound.lean and RationalSLP.lean exit 0 with no output; Round10Axioms/Round11Axioms report only propext, Classical.choice, Quot.sound for all five declarations; no sorry/admit/axiom/unsafe/native_decide/implemented_by/opaque/extern in SLPBound, RationalSLP, LinearInterp, CurveX.",
+    "SLPBound.length_bound_linear_short_weierstrass, length_bound_sq_short_weierstrass, RationalSLP.length_bound_rational_slp and degree_bound_rational_short_weierstrass match the informal claims; nonsingularity of W, primality of r and distinctness of k in F are not assumed (statements are at least as general as claimed).",
+    "Semantics are faithful: total division x/0=0 is never observed because Defined requires every division (including dead ones) to have a nonzero divisor at every node; out-of-range operand reads (0 or (0,1)) and an arbitrary output index only enlarge the program class; arbitrary constants are allowed and each counts one step; degree invariant (const 0, var 1, add/mul doubling) gives degree <= 2^L, slack factor 2.",
+    "Hypotheses are non-vacuous: on y^2=x^3+2x+3/F_97, P of order 50, N=24, a division-free Horner program (L=71) and a one-division program (L=77, A/B degrees <=12, Defined at all nodes) output k at x(kP), 1<=k<=24.",
+    "Rational interpolation bound 3d+2 is attained at d=1: p=11, y^2=x^3+1, P=(9,2), r=12, A=1+u, B=3+2u gives A(x(kP))=k B(x(kP)), B nonzero, k=1..5. Exhaustive search p<=43: poly deg<=1 max N=4 (bound 5); rational deg<=2 max N found 7 (bound 8, randomized). No counterexample.",
+    "RationalSLP nonvanishing argument (gcd reduction in F[X], orbit propagation via coprimality up to k=r-1, x((r-j)P)=x(jP) forcing 2=0) has no hidden assumptions beyond 2!=0, 2N<r.",
+    "Significance: only L >= log2((N-2)/3) field operations (Omega(log r), polynomial in input size) for branch-free algebraic x-only SLPs outputting k as a field element; no bit-complexity, no superpolynomial bound, nothing about branching/comparison/hashing/bit-access/generic-group algorithms (rho, BSGS, index calculus) or algorithms taking P as input."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "PI integration review of PRF-58cf340e and PRF-9586acb8 at c12381d; carry the significance limits into any summary/HYP update; keep PRF-9586acb8's 'constant nearer 2' remark labelled unproved (3d+2 is attained at d=1); optional: expand the stub PRF .md files with model/scope text.",
+  "notes": "Reviewer self-reported model identity: Claude Opus 5.5 (claude-opus-5-5) from session system metadata; not externally verified. Initial findings written before reading PRF .md files; no runs/*.md read. Scratch evidence (toy.py, toy.out, build/fresh/axiom logs) kept outside the repository in the session scratchpad and not committed. No literature search performed.",
+  "review": {
+    "run": "RUN-d101240f-afa0-4ce0-91ad-7ca23d4927ad",
+    "target_commit": "c12381d",
+    "targets": [
+      "PRF-58cf340e-e9ff-4f06-980b-09cec3d52ee7",
+      "PRF-9586acb8-9b42-489b-83bc-9bbbbd9519ba",
+      "HYP-92a9b4d9-827b-45fc-b881-1e7cf3b3443b",
+      "HYP-6aef8c30-2942-4079-8d0a-fc2ae8b6c200"
+    ],
+    "decision": "accept",
+    "rationale": "Build, fresh elaboration and axiom checks pass with standard axioms only; statements faithfully and in places more generally express the informal claims; conventions only strengthen statements or are excluded by explicit hypotheses (Defined, 2!=0, 2N<r); hypotheses jointly satisfiable on concrete curves; nonvanishing argument sound. Source files are unchanged between the PRF source commits (bff5e14c, 3ecf1f47) and c12381d. Acceptance is for formal correctness only and is conditional on summaries stating the significance limits.",
+    "counterexamples": [
+      "Exhaustive extremal search, all short Weierstrass curves p<=43: polynomial deg<=1 max N=4 (bound 5); rational deg<=1 max N=5 (bound 5, attained); rational deg<=2 max N found 7 (bound 8, randomized null-space sampling). No violation.",
+      "Convention probes (out-of-range reads, arbitrary output index, total division, singular W, non-prime r, small characteristic): none weakens the theorem.",
+      "Not attempted: search for short SLPs against 3*2^L+2 directly; behaviour of the total-division model without Defined."
+    ],
+    "complexity": "Not applicable: formal correctness only",
+    "limitations": "Dependencies replayed from cached oleans; only the two target files re-elaborated fresh; proofs of LinearInterp/CurveX lemmas not re-reviewed (statements only). Searches limited to p<=43, d<=2. No literature/novelty check. Model identity self-reported.",
+    "initial_packet": "Blind packet from PI: target commit c12381d; Lean files SLPBound.lean and RationalSLP.lean; axiom checks Round10Axioms.lean and Round11Axioms.lean; informal claims (1) division-free bound N<=3*2^L+2 and k^2 variant, (2) division bound with Defined at nodes and rational interpolation lemma N<=3d+2; tasks: build/grep, correspondence, nonvanishing argument, initial findings before PRF reading, significance."
+  }
+}

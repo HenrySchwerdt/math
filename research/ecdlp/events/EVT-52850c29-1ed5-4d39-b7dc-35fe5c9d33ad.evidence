@@ -1,0 +1,26 @@
+{
+  "id": "EVT-52850c29-1ed5-4d39-b7dc-35fe5c9d33ad",
+  "kind": "task-status-change",
+  "task": "TSK-6e4546c7-fd04-4a4b-a655-7a65af37802b",
+  "task_key": "ECDLP-35",
+  "timestamp": "2026-11-03T11:26:00.194399Z",
+  "run": "RUN-53c590b6-897b-438f-ae77-87309aa8d23a",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "frontier-explorer"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Comparison/bit-access models"
+  },
+  "reason": "Barrier inversion map; C1 lattice and C3 spectra killed (PI-reproduced); integer structure identified as only unconstrained resource",
+  "before_sha256": "4e99a80c9ee164c72297ac6485a2a5fa60ba8e933287add5207329de186292de",
+  "after_sha256": "06aefd5fcf33e3843ee32101fd737c1c99deb09e88e35a30c61d402ba8efafa9"
+}

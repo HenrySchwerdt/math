@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/root/.elan/bin/lake",
+    "env",
+    "lean",
+    "research/ecdlp/proofs/checks/Round11Axioms.lean"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:10:36.885908Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:10:40.754192Z",
+  "truncated": false,
+  "output": "'MathResearch.ECDLP.RationalSLP.length_bound_rational_slp' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.RationalSLP.degree_bound_rational_short_weierstrass' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+}

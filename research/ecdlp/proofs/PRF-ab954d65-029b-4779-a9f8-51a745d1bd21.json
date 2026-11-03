@@ -1,0 +1,39 @@
+{
+  "id": "PRF-ab954d65-029b-4779-a9f8-51a745d1bd21",
+  "type": "PRF",
+  "title": "Lean: decision-tree (equality-branching) barrier N <= 9*2^L - 1",
+  "created_at": "2026-11-03T11:27:44.233688Z",
+  "status": "completed",
+  "question": "Formal proof of Theorem DT (HYP-dbe79a50).",
+  "rationale": "ECDLP-40.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-dbe79a50-030e-41b9-944b-271f2bd37042",
+    "TSK-8d699b9a-e05b-4eac-9970-37a0857cb6ce",
+    "RUN-038b1cc8-f156-456a-ab1c-736446d72183",
+    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355",
+    "REV-d7bc5940-5046-46b6-824b-7d8342744534"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-9ccbf89a-509f-496d-b41f-a352be9c57c5.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-c8fc5d7e-6598-4dbb-81dc-f3bc94eeb0f2.evidence",
+    "MathResearch/ECDLP/DecisionTree.lean",
+    "lean-toolchain"
+  ],
+  "claims": [
+    "MathResearch.ECDLP.DecisionTree.Tree.length_bound",
+    "MathResearch.ECDLP.DecisionTree.degree_bound_partial_short_weierstrass"
+  ],
+  "proof_status": "formally-verified",
+  "outcome": "verified",
+  "next_action": "Accepted.",
+  "notes": "Source commit b699c3e8ac3ba3d96b1f6b6bc0fcf7b3eea34cbd; lake build 3168 jobs, 0 warnings; standard axioms. Model: trees with arith nodes (const/var/+/\u2212/\u00d7/\u00f7, each counted, constants counted), tests \"register = 0\" (not counted), input u = x(Q) free; exec = none if an executed division has zero divisor. Formalization REPAIRED a gap in the paper proof of Lemma A (upward-only propagation; fixed by two-sided propagation from one adjacent pair). Lemma A holds for arbitrary Finset G (no G \u2286 [1,N] needed). Theorem P / Corollaries P1, P2 not formalized. | Blind adversarial review REV-d7bc5940-5046-46b6-824b-7d8342744534 confirms Theorem DT on paper and independently identified the Lemma A gap that the Lean proof repairs.",
+  "formal": {
+    "lean_file": "MathResearch/ECDLP/DecisionTree.lean",
+    "declaration": "MathResearch.ECDLP.DecisionTree.Tree.length_bound",
+    "toolchain_file": "lean-toolchain",
+    "build_evidence": "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-9ccbf89a-509f-496d-b41f-a352be9c57c5.evidence",
+    "source_commit": "b699c3e8ac3ba3d96b1f6b6bc0fcf7b3eea34cbd"
+  }
+}

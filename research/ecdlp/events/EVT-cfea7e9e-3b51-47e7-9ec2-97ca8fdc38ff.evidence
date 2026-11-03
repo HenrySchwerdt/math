@@ -1,0 +1,26 @@
+{
+  "id": "EVT-cfea7e9e-3b51-47e7-9ec2-97ca8fdc38ff",
+  "kind": "task-status-change",
+  "task": "TSK-befee0fc-1eb0-4d11-8632-310df4112388",
+  "task_key": "ECDLP-36",
+  "timestamp": "2026-11-03T11:09:00.925894Z",
+  "run": "RUN-2da5ef89-b7a3-4b01-8dfd-addc3e28d488",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "research-worker"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Re-review"
+  },
+  "reason": "Revision 1 addresses blocking B1 and non-blocking items; PI rebuilt PDF via exec",
+  "before_sha256": "33be31286a972027a1db2e52de1d98abb4bd7e12f4292ca05671e24061c77958",
+  "after_sha256": "3c03ee0414148378fa8b58538a8b344d7cb1435815fc9c2ae998fe17fb4a99f4"
+}

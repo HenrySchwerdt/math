@@ -1,0 +1,51 @@
+S3 sanity: 20/20 pairs satisfy S3=0 (some skipped)
+analytic max alpha_HG over D<=40: 0.1585 at D=40 m=21
+  D=2 m=D//2: alpha_HG=0.0556
+  D=3 m=D//2: alpha_HG=0.0833
+  D=4 m=D//2: alpha_HG=0.1000
+  D=5 m=D//2: alpha_HG=0.1111
+  D=8 m=D//2: alpha_HG=0.1296
+  D=12 m=D//2: alpha_HG=0.1410
+  D=20 m=D//2: alpha_HG=0.1508
+  D=40 m=D//2: alpha_HG=0.1585
+p = 1174146646898508319
+D=2 m=1 alpha=0.05 B=2^3.0 success 5/5  negctrl 1/5
+D=2 m=1 alpha=0.10 B=2^6.0 success 1/5  negctrl 0/5
+D=2 m=1 alpha=0.15 B=2^9.0 success 0/5  negctrl 0/5
+D=2 m=1 alpha=0.20 B=2^12.0 success 0/5  negctrl 0/5
+D=2 m=1 alpha=0.25 B=2^15.0 success 0/5  negctrl 0/5
+D=2 m=1 alpha=0.30 B=2^18.0 success 0/5  negctrl 0/5
+D=2 m=1 alpha=0.35 B=2^21.0 success 0/5  negctrl 0/5
+D=2 m=1 alpha=0.40 B=2^24.0 success 0/5  negctrl 0/5
+D=2 m=1 alpha=0.45 B=2^27.0 success 0/5  negctrl 0/5
+D=2 m=1 alpha=0.50 B=2^30.0 success 0/5  negctrl 0/5
+D=3 m=1 alpha=0.05 B=2^3.0 success 5/5  negctrl 1/5
+D=3 m=1 alpha=0.10 B=2^6.0 success 5/5  negctrl 0/5
+D=3 m=1 alpha=0.15 B=2^9.0 success 0/5  negctrl 0/5
+D=3 m=1 alpha=0.20 B=2^12.0 success 0/5  negctrl 0/5
+D=3 m=1 alpha=0.25 B=2^15.0 success 0/5  negctrl 0/5
+D=3 m=1 alpha=0.30 B=2^18.0 success 0/5  negctrl 0/5
+D=3 m=1 alpha=0.35 B=2^21.0 success 0/5  negctrl 0/5
+D=3 m=1 alpha=0.40 B=2^24.0 success 0/5  negctrl 0/5
+D=3 m=1 alpha=0.45 B=2^27.0 success 0/5  negctrl 0/5
+D=3 m=1 alpha=0.50 B=2^30.0 success 0/5  negctrl 0/5
+D=4 m=2 alpha=0.05 B=2^3.0 success 1/5  negctrl 0/5
+D=4 m=2 alpha=0.10 B=2^6.0 success 0/5  negctrl 0/5
+D=4 m=2 alpha=0.15 B=2^9.0 success 0/5  negctrl 0/5
+D=4 m=2 alpha=0.20 B=2^12.0 success 0/5  negctrl 0/5
+D=4 m=2 alpha=0.25 B=2^15.0 success 0/5  negctrl 0/5
+D=4 m=2 alpha=0.30 B=2^18.0 success 0/5  negctrl 0/5
+D=4 m=2 alpha=0.35 B=2^21.0 success 0/5  negctrl 0/5
+D=4 m=2 alpha=0.40 B=2^24.0 success 0/5  negctrl 0/5
+D=4 m=2 alpha=0.45 B=2^27.0 success 0/5  negctrl 0/5
+D=4 m=2 alpha=0.50 B=2^30.0 success 0/5  negctrl 0/5
+D=5 m=2 alpha=0.05 B=2^3.0 success 1/5  negctrl 0/5
+D=5 m=2 alpha=0.10 B=2^6.0 success 0/5  negctrl 0/5
+D=5 m=2 alpha=0.15 B=2^9.0 success 0/5  negctrl 0/5
+D=5 m=2 alpha=0.20 B=2^12.0 success 0/5  negctrl 0/5
+D=5 m=2 alpha=0.25 B=2^15.0 success 0/5  negctrl 0/5
+D=5 m=2 alpha=0.30 B=2^18.0 success 0/5  negctrl 0/5
+D=5 m=2 alpha=0.35 B=2^21.0 success 0/5  negctrl 0/5
+D=5 m=2 alpha=0.40 B=2^24.0 success 0/5  negctrl 0/5
+D=5 m=2 alpha=0.45 B=2^27.0 success 0/5  negctrl 0/5
+D=5 m=2 alpha=0.50 B=2^30.0 success 0/5  negctrl 0/5

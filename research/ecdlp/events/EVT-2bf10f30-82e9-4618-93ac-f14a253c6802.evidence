@@ -1,0 +1,26 @@
+{
+  "id": "EVT-2bf10f30-82e9-4618-93ac-f14a253c6802",
+  "kind": "task-status-change",
+  "task": "TSK-a482f006-a0c3-406f-8f1c-52c7bcb63fc0",
+  "task_key": "ECDLP-34",
+  "timestamp": "2026-11-03T11:11:02.586537Z",
+  "run": "RUN-ce6e9aee-1730-443f-86c6-48b9dd3ba467",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Branching model; batched review"
+  },
+  "reason": "SLP barrier with division proved in Lean (N <= 3*2^L+2); PI verified build and axioms",
+  "before_sha256": "7e7b9c1cc113c22f6a9d9184b6eeff405a91bc4c112ffc22237cbd9871179bb8",
+  "after_sha256": "cceb881a60c56873a5321c9130156d9b348d9959a57b088dab60b4719310e274"
+}

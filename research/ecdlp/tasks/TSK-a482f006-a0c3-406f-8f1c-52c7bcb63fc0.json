@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 10 / ECDLP-34: rational (with division) x-only interpolation bound and SLP barrier in Lean",
   "created_at": "2026-11-03T11:00:36.677728Z",
-  "status": "active",
+  "status": "completed",
   "question": "SLP barrier with division (x-only): over a field F (2 != 0), W short Weierstrass, P of order r, 2N < r. Any straight-line program over F with +, \u2212, \u00d7, \u00f7 and constants, single input u = x(Q), in which every division is defined (nonzero divisor) at every u = x(kP), 1 <= k <= N, and whose output equals k at u = x(kP), has length L >= log2((N \u2212 c)/c') for explicit constants (expected: the output is a rational function g = A/B of degree max(deg A, deg B) <= 2^L, and a rational analogue of Theorem C gives N <= 3\u00b7deg + O(1) or similar).",
   "rationale": "Per DEC resource allocation: lower bounds in richer algebraic models; next step after HYP-92a9b4d9.",
   "assumptions": [],
@@ -14,12 +14,13 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-5e050194-8c0c-4782-af2e-f304c04df188.evidence"
+    "research/ecdlp/events/EVT-5e050194-8c0c-4782-af2e-f304c04df188.evidence",
+    "research/ecdlp/events/EVT-2bf10f30-82e9-4618-93ac-f14a253c6802.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "verified",
+  "next_action": "Branching model; batched review",
   "notes": "Created by PI RUN-62dbda7c.",
   "success_criteria": [
     "Exact statements; no sorry; reproducible; obstruction recorded if not provable."

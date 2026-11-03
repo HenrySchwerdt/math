@@ -1,0 +1,26 @@
+{
+  "id": "EVT-6b50d8a7-d2da-443a-abfd-dda15cbf19a1",
+  "kind": "task-status-change",
+  "task": "TSK-84f6d4c2-dcaa-4541-9d41-d6f21e61b2f6",
+  "task_key": "ECDLP-43",
+  "timestamp": "2026-11-03T11:34:46.116239Z",
+  "run": "RUN-58dee679-198d-45aa-8a53-36bba92d67f9",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Bounded algorithm-inventor run started",
+  "before_sha256": "e58986e7e17e5126249de64ba96413629037abc0347dae9c2579db0c25669f39",
+  "after_sha256": "140ec51bd4c797769bca6c85a3659c3818d13555405f4003687f40b9ceb28459"
+}

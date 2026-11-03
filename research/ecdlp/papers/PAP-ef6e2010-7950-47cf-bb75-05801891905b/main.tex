@@ -8,14 +8,15 @@
 \lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,frame=single,
   keepspaces=true,showstringspaces=false}
 \lstset{literate={•}{{$\bullet$}}1 {₁}{{$_1$}}1 {₂}{{$_2$}}1 {₃}{{$_3$}}1 {ℕ}{{$\mathbb N$}}1 {→}{{$\to$}}1 {∀}{{$\forall$}}1 {∈}{{$\in$}}1 {∧}{{$\wedge$}}1 {∨}{{$\vee$}}1 {≠}{{$\neq$}}1 {≤}{{$\le$}}1}
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{thmB}{Theorem B}
+\newtheorem*{thmC}{Theorem C}
+\newtheorem*{thmD}{Theorem D}
 \theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remark}{Remark}
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\lc}{\operatorname{lc}}
 \title{Machine-checked degree lower bounds for interpolating the elliptic curve discrete logarithm from $x$-coordinates}
-\author{ECDLP research laboratory (AI-generated internal technical report,\\ task ECDLP-31, paper record PAP-ef6e2010-7950-47cf-bb75-05801891905b)}
+\author{ECDLP research laboratory (AI-generated internal technical report,\\ tasks ECDLP-31 and ECDLP-36 (revision~1), paper record\\ PAP-ef6e2010-7950-47cf-bb75-05801891905b)}
 \date{3 November 2026 --- draft, not human-verified}
 \emergencystretch=4em
 \Urlmuskip=0mu plus 2mu
@@ -26,43 +27,53 @@
 \begin{abstract}
 We record three degree lower bounds for polynomials that interpolate functions of the discrete logarithm
 from the $x$-coordinates of multiples $kP$ of a point on a short Weierstrass curve, and we give Lean~4
-formalizations of them. (B) If $g(x(kP))=k^2$ for $1\le k\le (r-1)/2$, where $P$ has order $r$, then
-$r\le 6\deg g+5$. (C) If $g(x(kP))=k$ for $1\le k\le N$ and $2N<r$, then $N\le 3\deg g+2$. (D) If the
+formalizations of them. (B) If $g(x(kP))=k^2$ for $1\le k\le (r-1)/2$, where $P$ has odd order $r$ on a short Weierstrass curve over a
+field $F$ with $2\ne0$ and $3\ne0$, then $r\le 6\deg g+5$. (C) If $g(x(kP))=k$ for $1\le k\le N$ and $2N<r$, then $N\le 3\deg g+2$. (D) If the
 interpolation $g(x(kP))=k^2$ is required only on a set $A\subseteq[1,N]$, $2N<r$, then for each $j\ge1$ at most
 $3\deg g$ elements $k\in A$ have $k-j,k+j\in A$ (under an explicit extra hypothesis). All three
-are proved by one device, a cleared second-difference polynomial of exact degree $3\deg g$. The statements are
-verified by Lean against a pinned Mathlib; the Lean statements are quoted verbatim. Closely related
-degree bounds are due to Lange--Winterhof and Satoh; we could not access their exact statements, so our bounds may
+are proved by one device, a cleared second-difference polynomial of exact degree $3\deg g$ (constant $g$ is treated separately). The statements are
+verified by Lean against a pinned Mathlib; the Lean statements are quoted verbatim. Interpolation degree bounds of this kind are
+due to Coppersmith--Shparlinski, Lange--Winterhof and Satoh; we could not access their exact statements, so our bounds may
 be known or weaker. The contribution claimed is the machine-checked formalization and the precise
 hypotheses. The results concern polynomial degree in a restricted model and have no bit-complexity consequence.
+A clearly marked addendum (Section~\ref{sec:addendum}) records a formally verified consequence for division-free
+straight-line programs and a method barrier (a proof attempt, not reviewed).
 \end{abstract}
 
 \section{Introduction}
 The elliptic curve discrete logarithm problem (ECDLP) asks, given $P$ and $Q=kP$ in a group of order $r$,
 for $k$ modulo $r$. A natural question about restricted classes of algorithms is whether the map
 $x(kP)\mapsto k$ (or a quantity such as $k^2$, which is the natural $x$-only invariant because
-$x(kP)=x(-kP)$) can be given by a low-degree polynomial. A lower bound on the degree of any interpolating
+$x(kP)=x(-kP)$) can be given by a low-degree polynomial. Here $k$ is a positive integer representative with
+$k\le (r-1)/2$, and the target $k^2$ (or $k$) is its image in the field $F$; it is not a function of $k$ modulo $r$ in general
+(over $\F_p$ with $p\ge5$ and $k\le(r-1)/2<p$ no wrap-around occurs, but over extension fields $k$ may exceed the characteristic). A lower bound on the degree of any interpolating
 polynomial shows that no \emph{low-degree-polynomial formula} computes the logarithm; it is a barrier for one
 restricted model, in the spirit of the interpolation results cited in Section~\ref{sec:prior}.
 
 What such a bound does \emph{not} say should be stated plainly. It says nothing about algorithms that use
-other operations (comparisons, branching, group operations, index calculus), nothing about the existence of an
-interpolating polynomial, and nothing about bit complexity: a polynomial of degree $d$ over $\F_p$ can be
-evaluated with a number of field operations that is not controlled by $d$ in general, and we make no
-statement relating $d$ to running time. The open target of the laboratory
+other operations (comparisons, branching, group operations, index calculus), nothing about
+\emph{lower} bounds on the cost of evaluating it, and nothing about bit complexity. Degree and evaluation cost are related only weakly:
+Horner's rule evaluates a degree-$d$ polynomial with at most $d$ multiplications, so degree is an upper bound for cost in that model;
+conversely a division-free straight-line program with $s$ multiplications computes a polynomial of degree at most $2^s$, so
+a degree lower bound yields only a \emph{logarithmic} lower bound on the number of multiplications (see Section~\ref{sec:addendum} for the formalized form),
+and no statement about bit operations. A high-degree polynomial such as $X^{p-2}$ can be cheap to evaluate. The open target of the laboratory
 (a universal classical ECDLP algorithm with worst-case $O(n\log n)$ bit operations)
 is unaffected by this report.
 
 \paragraph{Contents.} Section~\ref{sec:setting} fixes notation; Section~\ref{sec:main} states the three
 results; Section~\ref{sec:proofs} gives the proofs; Section~\ref{sec:lean} quotes the Lean statements and the
-trust base; Section~\ref{sec:prior} discusses prior work and novelty; Section~\ref{sec:limits} lists limitations.
+trust base; Section~\ref{sec:prior} discusses prior work and novelty; Section~\ref{sec:limits} lists limitations; Section~\ref{sec:addendum} is a marked addendum of two later laboratory results.
+
+Existence is not at issue: the nodes $x(kP)$, $1\le k\le N$, $2N<r$, are pairwise distinct (Section~\ref{sec:setting}), so Lagrange interpolation always gives
+$g$ with $\deg g\le N-1$ for the prescribed values; for Theorem~B this is $\deg g\le (r-3)/2$. Theorems~B--D therefore determine the minimal
+interpolation degree up to a constant factor (about~$3$), and the bounds are linear in $r$.
 
 \section{Setting and notation}\label{sec:setting}
 Let $F$ be a field and $W: y^2=x^3+ax+b$ a short Weierstrass cubic over $F$ ($a_1=a_2=a_3=0$, $a=a_4$,
 $b=a_6$). The principal case is $F=\F_p$ and $W$ an elliptic curve with a point $P$ of prime order $r$. For a
 nonzero affine point $Q$ we write $x(Q)$ for its $x$-coordinate, and we write $r=\operatorname{ord}(P)$ for the additive order
 of $P$. For a polynomial $g\in F[X]$ we write $m=\deg g$ and $\lc(g)$ for its leading coefficient. Throughout
-we assume $2\ne0$ in $F$.
+we assume $2\ne0$ in $F$ (written $2\neq0$; Theorem~B also uses $3\neq0$).
 
 Two facts are used. First, if $2N<r$ then $k\mapsto x(kP)$ is injective on $\{1,\dots,N\}$: $x(kP)=x(lP)$ forces
 $kP=\pm lP$, i.e.\ $k\equiv\pm l \pmod r$, and $2\le k+l\le 2N<r$ rules out $k\equiv -l$, so $k\equiv l$, hence $k=l$. Second, the $x$-addition identities: for $Q=(u,v)$, $P=(x_0,y_0)$ affine points with
@@ -77,55 +88,55 @@ $(u+x_0)(u-x_0)^2=u^3-u^2x_0-ux_0^2+x_0^3$; \eqref{eq:prod} is a similar computa
 formalized algebraic core, Section~\ref{sec:lean}).
 
 \section{Main results}\label{sec:main}
-\begin{theorem}[B, $k^2$-interpolation]\label{thm:B}
-Let $W$ be a short Weierstrass curve over a field $F$ with $2\ne0\ne3$ in $F$, and $P$ a point of odd order $r$.
+\begin{thmB}[$k^2$-interpolation]\label{thm:B}
+Let $W$ be a short Weierstrass curve over a field $F$ with $2\ne0$ and $3\ne0$ in $F$, and $P$ a point of odd order $r$.
 If $g\in F[X]$ satisfies $g(x(kP))=k^2$ for $1\le k\le (r-1)/2$, then $r\le 6\deg g+5$; that is, $\deg g\ge (r-5)/6$.
-\end{theorem}
+\end{thmB}
 For an elliptic curve over $\F_p$ and $P$ of prime order $r>2$ this is the statement recorded as
-HYP-eda6732a (the ledger statement assumes $r$ prime; the blind review REV-83ec2fc9 notes that ``$r$ prime'' can
-be weakened to ``$r$ odd'', which is the formalized form).
+\mbox{HYP-eda6732a} (the ledger statement assumes $r$ prime; the blind review \mbox{REV-83ec2fc9} notes that ``$r$ prime'' can
+be weakened to ``$r$ odd'', which is the formalized form). The hypothesis $3\ne0$ is formalized but, according to \mbox{REV-15104e72}, not needed mathematically (see Section~\ref{sec:proofs}).
 
-\begin{theorem}[C, linear interpolation]\label{thm:C}
+\begin{thmC}[linear interpolation]\label{thm:C}
 Let $W$ be short Weierstrass over $F$ with $2\ne0$, $P$ a point with $\operatorname{ord}(P)=r$, and $2N<r$.
 If $g\in F[X]$ satisfies $g(x(kP))=k$ in $F$ for $1\le k\le N$, then $N\le 3\deg g+2$. In particular, for $N=(r-1)/2$ ($r$ odd), $r\le 6\deg g+5$.
-\end{theorem}
-(HYP-42f91290.) The assumption $3\neq 0$ is not needed.
+\end{thmC}
+(\mbox{HYP-42f91290}.) The assumption $3\neq 0$ is not needed.
 
-\begin{theorem}[D, partial agreement]\label{thm:D}
-Let $W$ be short Weierstrass over $F$ with $2\ne0$, $\operatorname{ord}(P)=r$, $2N<r$ (equivalently $N\le (r-1)/2$ for $r$ odd),
+\begin{thmD}[partial agreement]\label{thm:D}
+Let $W$ be short Weierstrass over $F$ with $2\ne0$, $\operatorname{ord}(P)=r$, $2N<r$ (for $r$ odd, equivalently $N\le (r-1)/2$),
 $A\subseteq\{1,\dots,N\}$, and $g\in F[X]$ with $g(x(kP))=k^2$ for all $k\in A$. For $j\ge1$ let
 $S_j=\#\{k\in A: k-j\in A,\ k+j\in A\}$ (the $k$ with $j<k$ automatically). If $\deg g\ge1$ or $j\neq0$ in $F$, then
 $S_j\le 3\deg g$.
-\end{theorem}
-(HYP-a1dd5501, part (2); the main inequality only.) The side condition is needed over general fields: if
-$g$ is constant and $j=0$ in $F$ then $g(x(kP))=k^2$ on $A$ with $k\pm j\in A$ can hold with $\deg g=0$ and $S_j>0$.
+\end{thmD}
+(\mbox{HYP-a1dd5501}, part (2); the main inequality only.) The side condition is needed over general fields. An instance found by the adversarial review \mbox{REV-15104e72} (checked there by computer, not by us and not in Lean): over $\F_{27}=\F_3[t]/(t^3-t+1)$ the curve $y^2=x^3+t^2x$ has a point $P$ of order $28$; with $N=7$ (so $2N=14<28$), $A=\{1,4,7\}$, $g=1$ and $j=3$ one has $g(x(kP))=k^2$ on $A$ ($k^2\in\{1,16,49\}=\{1\}$ in characteristic $3$), $\deg g=0$ and $S_3=1>0$. This instance needs $r>4p+2$, which is impossible over $\F_p$ by the Hasse argument below; that argument does not extend to $\F_q$.
 Over $\F_p$ the condition excludes only constant $g$ with $p\mid j$, and then $S_j=0$ for the following reason
 (\emph{not} formalized in Lean): $S_j\ge1$ requires $k-j\ge1$ and $k+j\le N$, so $N\ge 2j+1\ge 2p+1$, whence $r>2N\ge 4p+2$,
 contradicting the Hasse bound $r\le \#E(\F_p)\le p+1+2\sqrt p$. Hence over $\F_p$ the unconditional
 informal statement $S_j\le3\deg g$ holds. (One must not argue $j\le N<p$; that is false in general, e.g.\ $y^2=x^3+2x+1$ over $\F_3$ with $r=7$, $N=3$.)
 
 \begin{remark}[Hypotheses and the refuted transcription]
-The hypothesis $2N<r$ in Theorem~\ref{thm:D} cannot be dropped. The ledger record HYP-5da6025e (status:
+The hypothesis $2N<r$ in Theorem~D cannot be dropped. The ledger record \mbox{HYP-5da6025e} (status:
 refuted) contains a transcription of part (2) with $N<\min(p,r)$ in place of $N\le(r-1)/2$; the blind review
-REV-ac47cc67 produced the counterexample $y^2=x^3+5$ over $\F_7$, $P=(3,2)$ of order $7=p$, $A=\{1,\dots,6\}$,
+\mbox{REV-ac47cc67} produced the counterexample $y^2=x^3+5$ over $\F_7$, $P=(3,2)$ of order $7=p$, $A=\{1,\dots,6\}$,
 $g=5X$, which satisfies $g(x(kP))=k^2$ for $k=1,\dots,6$ with $\deg g=1<S_1/3=4/3$. The hypothesis
 $N\le(r-1)/2$ had been present in the original agent report and was lost in a transcription error by the
-principal investigator; the corrected statement is HYP-a1dd5501 and is what is formalized here.
-Ledger parts of HYP-a1dd5501 not covered here: part (1) for rational functions on $E$ (reviewed, not formalized),
+principal investigator; the corrected statement is \mbox{HYP-a1dd5501} and is what is formalized here.
+Ledger parts of \mbox{HYP-a1dd5501} not covered here: part (1) for rational functions on $E$ (reviewed, not formalized),
 and the density corollary $\deg g\ge((3\delta-2)N-2)/3$ for $\delta>2/3$ (reviewed, not formalized).
 \end{remark}
 
 \begin{remark}[Background: Theorem A]
-The ledger also records (HYP-adb581ff, status \emph{open}, reviewed, not formalized) a result for rational
+The ledger also records (\mbox{HYP-adb581ff}, status \emph{open}, reviewed, not formalized) a result for rational
 functions $f$ on $E$ with $f(kP)=k$ for $1\le k\le N\le r-1$: the pole-divisor degree is at least $(N-1)/2$, and
 polynomial total degree at least $(N-1)/6$. It is recorded as known in kind (Section~\ref{sec:prior}) and is cited only as background.
 \end{remark}
 
 \section{Proofs}\label{sec:proofs}
-Assume $m=\deg g\ge1$ for the moment; constant $g$ is treated at the end. Fix an affine point $P_0=(x_0,y_0)$ ($P_0=P$ in Theorems~B, C; $P_0=jP$ in Theorem~D) and put $d=u-x_0$.
+Assume $m=\deg g\ge1$ for the moment; constant $g$ is not covered by the exact-degree argument and is treated separately at the end of each case. Fix an affine point $P_0=(x_0,y_0)$ ($P_0=P$ in Theorems~B, C; $P_0=jP$ in Theorem~D) and put $d=u-x_0$.
 
 \paragraph{The cleared second-difference polynomial.} For a variable $u$ let $s_\pm$ be the (formal) roots of $z^2-e_1z+e_2$ where
-$e_1=(s_++s_-)$ and $e_2=s_+s_-$ are the rational functions in $u$ given by \eqref{eq:sum} and \eqref{eq:prod}:
+$e_1=s_++s_-$ and $e_2=s_+s_-$ are the rational functions in $u$ given by \eqref{eq:sum} and \eqref{eq:prod}
+(so $g(s_+)+g(s_-)$ is \emph{defined} as the symmetric expression $\sum_ic_ip_i(e_1,e_2)$ below, and is evaluated at $u=x(Q)$ only after clearing denominators):
 $e_1=n_1/d^2$, $e_2=n_2/d^2$ with $n_1,n_2$ polynomials of degree $\le2$. Write $g=\sum_{i\le m}c_iX^i$.
 Then $g(s_+)+g(s_-)=\sum_i c_ip_i$ with $p_i=s_+^i+s_-^i$ a polynomial with integer coefficients in $e_1,e_2$ whose monomials $e_1^\alpha e_2^\beta$ satisfy $\alpha+2\beta=i$
 (Newton--Girard). Multiplying a monomial by $d^{2m}$ gives $n_1^\alpha n_2^\beta d^{2(m-\alpha-\beta)}$,
@@ -133,20 +144,20 @@ a polynomial of degree $\le 2(\alpha+\beta)+2(m-\alpha-\beta)=2m$, because $\alp
 \[
 G_{c}(u)=d^{2m}\bigl[g(s_+)+g(s_-)\bigr]-2d^{2m}g(u)-c\,d^{2m}\in F[u],
 \]
-for a constant $c$. The first term has degree $\le2m$, the third degree $2m$, and $-2d^{2m}g(u)$ has degree exactly
+for a constant $c$. The first term has degree $\le2m$, the third degree $\le 2m$ (and $0$ when $c=0$), and $-2d^{2m}g(u)$ has degree exactly
 $3m$ with leading coefficient $-2\lc(g)\neq0$ (here $2\ne0$ is used). Since $2m<3m$ for $m\ge1$:
 \begin{equation}\label{eq:deg}
 \deg G_c=3m\quad\text{for every constant }c,\ \text{ in particular }G_c\neq0.
 \end{equation}
 
-\paragraph{Roots.} Suppose $Q=kP\ne P_0$ in $x$-coordinate, $x(Q)\ne x_0$, with $Q\pm P_0$ affine. Then evaluating at $u=x(Q)$,
+\paragraph{Roots.} Suppose $Q=kP$ is affine with $x(Q)\ne x_0$ and $Q\pm P_0$ affine. Then evaluating at $u=x(Q)$,
 the quantities $s_\pm$ are $x(Q\pm P_0)$ by the identities of Section~\ref{sec:setting}, so
 $G_c(x(Q))=d^{2m}\,[g(x(Q+P_0))+g(x(Q-P_0))-2g(x(Q))-c]$ with $d\ne0$.
 
 \emph{Theorem~B.} Take $P_0=P$, $c=2$. For $2\le k\le (r-3)/2$ we have $1\le k-1$ and $k+1\le(r-1)/2$, so all three values of $g$ are
 prescribed and the bracket equals $(k+1)^2+(k-1)^2-2k^2-2=0$. The values $x(kP)$, $2\le k\le (r-3)/2$, are pairwise distinct (injectivity) and
 differ from $x(P)$ (since $k\ge2$), so $G_2$ has at least $(r-5)/2$ distinct roots. By~\eqref{eq:deg}, $(r-5)/2\le3m$, i.e.\ $r\le6m+5$.
-Constant $g=c_0$: then $g(x(P))=1$ and $g(x(2P))=4$ force $3=0$ if $(r-1)/2\ge2$, excluded by $3\ne0$; and $r\le 5$ is trivial. Hence the bound holds.
+Constant $g=c_0$: if $r\le5$ the bound is trivial; if $r\ge7$ then $(r-1)/2\ge3$ and $g(x(P))=1$, $g(x(2P))=4$ force $3=0$, which $3\ne0$ excludes. (According to \mbox{REV-15104e72}, $3\ne0$ is superfluous: in characteristic $3$ and $r\ge7$, $k=3$ gives $9=0\ne1=g$. We keep it because it is the formalized hypothesis.) Hence the bound holds.
 
 \emph{Theorem~C.} Take $P_0=P$, $c=0$. For $2\le k\le N-1$ the bracket is $(k+1)+(k-1)-2k=0$, giving $N-2$ distinct roots
 (injectivity as $2N<r$), so $N-2\le3m$. If $g$ is constant and $N\ge2$, then $g(x(P))=1\neq2=g(x(2P))$, contradiction; so $N\le1\le 3m+2$.
@@ -157,21 +168,24 @@ so $|C_j|\le3m$ by~\eqref{eq:deg}. If $g=c_0$ is constant, the bracket is $-2j^2
 and $C_j=\emptyset$.\qed
 
 \paragraph{Exact degree.} The computation above shows that, for the second-difference identity, the cleared polynomial has degree exactly $3\deg g$
-and leading coefficient $-2\lc(g)$; for Theorem~C this is recorded in HYP-42f91290 and agrees with the numerical checks of the ledger.
+and leading coefficient $-2\lc(g)$; for Theorem~C this is recorded in \mbox{HYP-42f91290} and agrees with the numerical checks of the ledger.
 
 \section{Formal verification}\label{sec:lean}
+\begingroup\sloppy
 \paragraph{Environment.} Toolchain \texttt{leanprover/lean4:v4.35.0} (file \texttt{lean-toolchain}); Mathlib revision
 \path{56a005855ea17e0b0958f73ec801ae140b0a1679} (\texttt{lakefile.toml}, with \texttt{-DwarningAsError=true}). Source commits
 recorded in the proof records:
-Theorem~B, PRF-34538f75, commit \path{cc8dc791a0bd74f89b6cd614898a5773abdc500a} (\texttt{lake build}: 3163 jobs, 0 warnings);
-Theorem~C, PRF-35d1387a, commit \path{8191c0f69398b632fc2c7c7efbfdcdb9e2634b7b} (3164 jobs, 0 warnings);
-Theorem~D, PRF-5357b698, commit \path{84ddbad82b2f1412e851cf1ab6012b6650bba544} (3165 jobs, 0 warnings).
+Theorem~B, \mbox{PRF-34538f75}, commit \path{cc8dc791a0bd74f89b6cd614898a5773abdc500a} (\texttt{lake build}: 3163 jobs, 0 warnings);
+Theorem~C, \mbox{PRF-35d1387a}, commit \path{8191c0f69398b632fc2c7c7efbfdcdb9e2634b7b} (3164 jobs, 0 warnings);
+Theorem~D, \mbox{PRF-5357b698}, commit \path{84ddbad82b2f1412e851cf1ab6012b6650bba544} (3165 jobs, 0 warnings).
 Files: \path{MathResearch/ECDLP/Interpolation.lean} (generic polynomial core), \texttt{CurveX.lean},
 \texttt{LinearInterp.lean}, \texttt{PartialAgreement.lean}. All three proofs use Mathlib's
 \texttt{WeierstrassCurve.Affine.Point}; the curve-specific input is the $x$-addition identities
 (\texttt{CurveX.sum\_prod\_identity}, \texttt{CurveX.smul\_relations}) and injectivity of $k\mapsto x(kP)$.
 
-\paragraph{Statements (verbatim from the repository).} Here \texttt{xCoord} is the $x$-coordinate function on \texttt{W.Point} and \texttt{F} a field.
+\paragraph{Statements (verbatim from the repository).} Here \texttt{xCoord} is the $x$-coordinate function on \texttt{W.Point}, defined to be $0$ at the point at infinity (harmless here, since every point evaluated is $kP$ with $1\le k<r$, which is affine). The binders \texttt{\{F : Type*\} [Field F] [DecidableEq F]} come from \texttt{variable} lines of the files; \texttt{Affine} is \texttt{WeierstrassCurve.Affine} (via \texttt{open WeierstrassCurve}) and \texttt{F[X]} is \texttt{Polynomial F}.
+
+The declarations live in the Lean namespace\\ \path{MathResearch.ECDLP.CurveX}, in these files: Theorem~B in \texttt{CurveX.lean}, Theorem~C in \texttt{LinearInterp.lean}, Theorem~D in \texttt{PartialAgreement.lean}.
 \begin{lstlisting}
 theorem degree_bound_short_weierstrass {W : Affine F} (h1 : W.a₁ = 0) (h2 : W.a₂ = 0)
     (h3 : W.a₃ = 0) (h2' : (2 : F) ≠ 0) (h3' : (3 : F) ≠ 0) (P : W.Point) (r : ℕ)
@@ -197,50 +211,95 @@ theorem partial_agreement_degree_bound {W : Affine F} (h1 : W.a₁ = 0) (h2 : W.
 The full names are \path{MathResearch.ECDLP.CurveX.degree_bound_short_weierstrass}, \path{MathResearch.ECDLP.CurveX.degree_bound_linear_short_weierstrass} and \path{MathResearch.ECDLP.CurveX.partial_agreement_degree_bound}.
 
 \paragraph{Correspondence to the informal statements.}
-(i) The formal statements are for an arbitrary field $F$, not only $\F_p$, and for any point $P$ of the given additive order; $r$ need not be prime. Theorem~B needs $r$ odd, $2\ne0\ne3$;
-Theorems~C and D need neither $3\ne0$ nor $r$ odd (the condition $2N<r$ is equivalent to $N\le(r-1)/2$ for $r$ odd). (ii) Since \texttt{W : Affine F} is not assumed nonsingular, the review REV-1f44f52b notes
+(i) The formal statements are for an arbitrary field $F$, not only $\F_p$, and for any point $P$ of the given additive order; $r$ need not be prime. Theorem~B needs $r$ odd, $2\ne0$ and $3\ne0$;
+Theorems~C and D need neither $3\ne0$ nor $r$ odd (the condition $2N<r$ is equivalent to $N\le(r-1)/2$ for $r$ odd). (ii) Since \texttt{W : Affine F} is not assumed nonsingular, the review \mbox{REV-1f44f52b} notes
 that the results also cover nonsingular points of singular cubics. (iii) Theorem~D carries the extra hypothesis \texttt{hjg}; the Hasse-bound argument that removes it over $\F_p$ (Section~\ref{sec:main}) is \emph{not} formalized.
-(iv) The formal statements are degree bounds only; they assert no existence of $g$ and no complexity. REV-1f44f52b and REV-6c9bfbc1 accepted the correspondence of B and C; the independent review REV-685408b5 (formal correctness only; no complexity or novelty verification) verified the correspondence for D.
+(iv) The formal statements are degree bounds only; they assert no existence of $g$ and no complexity. \mbox{REV-1f44f52b} and \mbox{REV-6c9bfbc1} accepted the correspondence of B and C; the independent review \mbox{REV-685408b5} (formal correctness only; no complexity or novelty verification) verified the correspondence for D.
 
-\paragraph{Trust base.} \texttt{\#print axioms} on all three declarations (and on \texttt{smul\_relations},
-\texttt{sum\_prod\_identity}) reports exactly \texttt{[propext, Classical.choice, Quot.sound]}
-(evidence: \path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b585f279-fd16-4cca-b3a1-c2484d545078.evidence}).
+\paragraph{Trust base.} \texttt{\#print axioms} on each of the three declarations reports exactly \texttt{[propext, Classical.choice, Quot.sound]}.
+The evidence is per theorem (we verified that each file contains the corresponding \texttt{\#print axioms} line):
+Theorem~B, \path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b585f279-fd16-4cca-b3a1-c2484d545078.evidence}
+(\texttt{degree\_bound\_short\_weierstrass}, together with \texttt{sum\_prod\_identity} and \texttt{smul\_relations});
+Theorem~C, \path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5da55f17-bbac-4f82-9271-da5f30d66b80.evidence}
+(\texttt{degree\_bound\_linear\_short\_weierstrass});
+Theorem~D, \path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-ca0a1a26-2ee3-4da0-be6c-96a56ffa6cc6.evidence}
+(\texttt{partial\_agreement\_degree\_bound}).
 Trust therefore rests on the Lean kernel, Mathlib at the pinned revision, and the faithfulness of the statements to the informal ones (reviewed by AI agents of the same provider; independence is partial).
 
 \paragraph{Reproduction.} At a checkout of the repository: \texttt{lake build} (pinned toolchain and Mathlib), followed by
 \verb|#print axioms MathResearch.ECDLP.CurveX.degree_bound_short_weierstrass| and likewise for the other two names
 (see \path{research/ecdlp/proofs/checks/Round8Axioms.lean} for the pattern).
 
+
 \paragraph{Empirical sanity checks (not part of the proof).} The ledger records toy-size numerical checks: the $x$-addition identity 2519 times with no failure
-(Theorem~B record); 208 toy cases without violation (REV-83ec2fc9); for Theorem~C 533 curves with $p\le211$, then 12{,}459 cases including extension fields (REV-6c9bfbc1);
-1242 toy points for B (REV-1f44f52b); 739{,}847 pairs $(A,j)$ for D (a weak check). These tests do not constitute proofs and are not needed given the Lean proofs; they
+(Theorem~B record); 208 toy cases without violation (\mbox{REV-83ec2fc9}); for Theorem~C 533 curves with $p\le211$, then 12{,}459 cases including extension fields (\mbox{REV-6c9bfbc1});
+1242 toy points for B (\mbox{REV-1f44f52b}); 739{,}847 pairs $(A,j)$ for D (a weak check). These tests do not constitute proofs and are not needed given the Lean proofs; they
 indicate the bounds are far from tight in tests.
 
+\endgroup
 \section{Relation to prior work and novelty status}\label{sec:prior}
-Lange and Winterhof (COCOON 2002, LNCS 2387, 137--143 \cite{LW02}; AAECC-15 2003, LNCS 2643, 51--60 \cite{LW03})
-and Satoh (WCC 2005, LNCS 3969 \cite{Sat05}) prove degree lower bounds for polynomial interpolation of
+Coppersmith and Shparlinski \cite{CS00} studied polynomial approximation of the discrete logarithm and the Diffie--Hellman mapping (title of \cite{CS00}); we did not access the text.
+Lange and Winterhof (COCOON 2002 \cite{LW02}; AAECC-15 2003 \cite{LW03})
+and Satoh (WCC 2005, published 2006 \cite{Sat05}) prove degree lower bounds for polynomial interpolation of
 the elliptic curve discrete logarithm and related maps. \textbf{The exact statements of these results were not accessible
 to the laboratory}: only bibliographic records and abstracts were seen, and full texts were not accessed. We therefore cannot compare constants or hypotheses.
 Our bounds may be known or weaker. Theorem~A is recorded in the ledger as known in kind; the laboratory's novelty checks
 (ECDLP-22) found no result of the form of Theorems~B--D in the accessible material, but this is absence of evidence, not a novelty claim.
-The review of Theorem~C judges it probably not novel. Novelty of all three is \emph{unsettled}.
+The laboratory's ledger record for Theorem~C (\mbox{HYP-42f91290}) says it is ``likely implied by / weaker than Lange--Winterhof-type results'' and is \emph{not} claimed novel. Novelty of all three is \emph{unsettled}.
 
 \textbf{Claimed contribution:} a machine-checked formalization (Lean 4, Mathlib, standard axioms only) of the three degree bounds, with explicit,
-reviewed hypotheses (including the corrected hypothesis $2N<r$ of Theorem~D and its generality over arbitrary fields). Bibliographic entries above carry only
-the data present in the ledger (author surnames, venue, volume, pages); the publication year of \cite{Sat05} is not recorded in the ledger and is entered as unverified.
+reviewed hypotheses (including the corrected hypothesis $2N<r$ of Theorem~D and its generality over arbitrary fields). Bibliographic metadata (first names, venue, pages, year, DOI) of the cited entries were checked against Crossref records (by \mbox{REV-2b383b9b} for \cite{LW02}, and in this revision for \cite{LW03}, \cite{Sat05} and \cite{CS00}); in particular the year of \cite{Sat05} is 2006. Full texts were still not accessed.
+
+\section{Addendum: later laboratory results (not part of Theorems B--D)}\label{sec:addendum}
+This section was added in revision~1 and is clearly separate from the results above. Its two items carry the statuses stated here.
+
+\paragraph{(i) Division-free straight-line programs: formally verified.}
+Ledger record \mbox{PRF-58cf340e} (derived from \mbox{HYP-92a9b4d9}; status \emph{formally verified}; independent review pending, not yet reviewed).
+In \path{MathResearch/ECDLP/SLPBound.lean} a \emph{program} over a commutative ring $F$ is a list of operations with a single input variable
+$x$; each operation appends a constant of $F$ (free), the input, or the sum, difference or product of two earlier values.
+There are no divisions, comparisons or branching. A program of length $L$ computes a polynomial of degree at most $2^L$ in $x$.
+Combined with Theorem~C this gives, in Lean (source commit \path{bff5e14c0f187719fb79c07f7768a2856f20604a}, \texttt{lake build} 3166 jobs, 0 warnings;
+build evidence \path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-94bd6bd6-9c44-47e7-9743-cd567e803d9f.evidence};
+axioms \texttt{[propext, Classical.choice, Quot.sound]} in \path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-aeddfabd-5935-4ad5-9911-2c48a87063dc.evidence}):
+\begin{lstlisting}
+theorem length_bound_linear_short_weierstrass {W : Affine F} (h1 : W.a₁ = 0) (h2 : W.a₂ = 0)
+    (h3 : W.a₃ = 0) (h2' : (2 : F) ≠ 0) (P : W.Point) (r : ℕ) (hr : addOrderOf P = r)
+    (N : ℕ) (hN : 2 * N < r) (prog : List (Op F)) (i : ℕ)
+    (hprog : ∀ k : ℕ, 1 ≤ k → k ≤ N → (evalAt prog (xCoord (k • P))).getD i 0 = (k : F)) :
+    N ≤ 3 * 2 ^ prog.length + 2
+\end{lstlisting}
+(namespace \texttt{MathResearch.ECDLP.SLPBound}; \texttt{evalAt} evaluates the program on the input, and out-of-range indices read $0$.)
+Thus a program of length $L$ that outputs $k$ at $x(kP)$ for $1\le k\le N$, $2N<r$, needs $L\ge\log_2((N-2)/3)$. This answers directly the
+distinction between polynomial degree and program length raised in review \mbox{REV-15104e72} (N1): the bound is on the number of ring operations
+in this restricted model, logarithmic in $N$. The cost-model consequence recorded in the ledger (if each field operation costs $\Omega(\log p)$ bit operations,
+then $\Omega(n^2)$ bit operations are needed in this model) is a remark, \emph{not formalized}, and concerns only this restricted model; it says nothing about the open
+$O(n\log n)$ target for general algorithms.
+
+\paragraph{(ii) Method barrier L2: proof attempt, PI-checked, not reviewed.}
+Ledger record \mbox{HYP-0d4f14da} (status \emph{open}, proof status \emph{proof attempt}; the principal investigator checked the proof steps and reproduced the
+supporting numerical scripts; not formalized, not independently reviewed). The claim: for a ``translation annihilator''
+$D=\sum_{i\in S}c_iG(Q+iP)$ with $\sum c_i=\sum ic_i=0$ ($|S|=s$, width $w$), $G=g\circ x$, $\deg g=d\ge1$, $2N<r$, one has $N\le ds+w$, minimized at $s=3$, $w=2$,
+which is Theorem~C. Hence zero-counting arguments with translates cannot improve the constant $1/3$; any sharper bound must use information beyond the pole structure and the values $G(kP)=f(k)$.
+We state this only as recorded; it has no proof in this report.
+
+\paragraph{(iii) Empirical conjecture (not proved).}
+Ledger record \mbox{HYP-a8d1f541} (``Conjecture C$^*$'', status \emph{open}, experimental): outside structured families (for example anomalous CM $j=0$ curves),
+the minimal degree of an interpolating $g$ is $N-1-O(1)$. The ledger records 154{,}288 toy cases over prime fields with $p\le997$ and a maximal observed deficit of~$3$.
+This is an observation at toy sizes, not evidence for large parameters. If true it would show that the factor $3$ between the bounds above and the trivial Lagrange upper bound is a limitation of the method, not of the problem.
 
 \section{Limitations}\label{sec:limits}
 \begin{itemize}
 \item Degree is not time. A lower bound on $\deg g$ for polynomials in one variable $x(kP)$ does not bound the running time of any algorithm, and we draw no bit-complexity consequence.
 \item The results concern interpolation from $x$-coordinates only, with exact agreement on a range (B, C) or a subset (D); they say nothing about approximate or probabilistic computation or about other coordinates.
-\item No existence statement: we do not claim that interpolating polynomials exist, nor give a matching upper bound or tightness result.
+\item Existence and tightness: interpolating polynomials of degree $\le N-1$ exist by Lagrange interpolation, so the bounds are tight up to a constant factor; we prove no exact value of the minimal degree (see the conjectural remark in Section~\ref{sec:addendum}).
 \item The ledger's rational-function versions (Theorem~A, part~(1) of the partial-agreement hypothesis) and the density corollary are not formalized.
 \item Theorem~D's extra hypothesis is removed over $\F_p$ only by an informal Hasse-bound argument.
+\item The straight-line-program bound of Section~\ref{sec:addendum} is for a restricted, division-free, single-input model; its bit-cost corollary is not formalized, and the method-barrier and conjecture items there are unreviewed and unproved respectively.
 \item The universal $O(n\log n)$ ECDLP target remains open; nothing here improves on any known ECDLP complexity.
 \item Novelty is unsettled (Section~\ref{sec:prior}); no human has verified the mathematics, the Lean-to-statement correspondence, or the bibliography.
 \end{itemize}
 
-\paragraph{Provenance note.} This report was produced by an AI research laboratory (this draft by a worker agent reporting model identity Sonnet~5.5, \texttt{claude-sonnet-5-5}, not verifiable from runtime metadata) and reviewed by AI agents; no human verification has yet taken place.
+\paragraph{Provenance note.} This report was produced by an AI research laboratory (this draft and its revision~1 by worker agents reporting model identity Sonnet~5.5, \texttt{claude-sonnet-5-5}, not verifiable from runtime metadata) and reviewed by AI agents; no human verification has yet taken place.
 It is an internal technical report and not a submission.
 
 \bibliographystyle{plain}

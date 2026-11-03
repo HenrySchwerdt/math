@@ -1,0 +1,42 @@
+{
+  "id": "RUN-aabd43b1-96bd-4e16-a970-54985f8d3a09",
+  "type": "RUN",
+  "title": "Round 12 / algorithm inventor C",
+  "created_at": "2026-11-03T11:34:46.251707Z",
+  "status": "active",
+  "question": "Collision and search algorithms beyond plain rho: invent algorithms that change the search space or the collision structure (equivalence classes, multi-dimensional walks, structured iteration functions using integer properties of coordinates, batch/preprocessing tradeoffs, adaptive restarts) aiming at a better exponent or constant than Pollard rho on prime-order curves; prototype and benchmark with counted operations.",
+  "rationale": "Bounded run for TSK-34d8b79f-89be-4448-9330-141909e9f729",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-34d8b79f-89be-4448-9330-141909e9f729",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T11:34:46.252105Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor",
+    "task": "TSK-34d8b79f-89be-4448-9330-141909e9f729",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    ],
+    "starting_commit": "9e14f8f9ae8f3abf1adabd10b842d39c0722edba",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

@@ -8,3 +8,5 @@ import MathResearch.ECDLP.CurveX
 import MathResearch.ECDLP.LinearInterp
 import MathResearch.ECDLP.PartialAgreement
 import MathResearch.ECDLP.SLPBound
+import MathResearch.ECDLP.RationalSLP
+import MathResearch.ECDLP.DecisionTree

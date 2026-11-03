@@ -1,0 +1,42 @@
+{
+  "id": "RUN-ff67c875-4a95-4924-8722-a8402394bf8e",
+  "type": "RUN",
+  "title": "Round 12 / algorithm inventor A",
+  "created_at": "2026-11-03T11:34:46.019613Z",
+  "status": "active",
+  "question": "Lifted-relation algorithms: invent ECDLP algorithms that use the integer structure of coordinates in [0,p) (small lifts to Z, integer smoothness, lattice reduction / LLL on relations among lifted multiples, carries) to find relations a*P + b*Q = O faster than collisions; prototype and benchmark against Pollard rho.",
+  "rationale": "Bounded run for TSK-ac21ba6a-1187-4aa2-8992-8a9d53ba966c",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-ac21ba6a-1187-4aa2-8992-8a9d53ba966c",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T11:34:46.020000Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor",
+    "task": "TSK-ac21ba6a-1187-4aa2-8992-8a9d53ba966c",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    ],
+    "starting_commit": "9e14f8f9ae8f3abf1adabd10b842d39c0722edba",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

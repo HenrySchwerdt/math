@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/root/.elan/bin/lake",
+    "env",
+    "lean",
+    "research/ecdlp/proofs/checks/Round12Axioms.lean"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:27:20.403726Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:27:23.687881Z",
+  "truncated": false,
+  "output": "'MathResearch.ECDLP.DecisionTree.Tree.length_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.DecisionTree.degree_bound_partial_short_weierstrass' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+}

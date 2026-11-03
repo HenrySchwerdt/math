@@ -1,0 +1,7 @@
+{"n": 5, "p": 109, "r": 31, "solver": "glucose4", "xor": false, "vars": 24907, "clauses": 81839, "xors": 0, "enc_s": 0.06, "rho_ops": 7.0, "sat": null, "secs": 120.07, "conflicts": 766561, "key_ok": null, "censored": true}
+{"n": 5, "p": 127, "r": 31, "solver": "glucose4", "xor": false, "vars": 28759, "clauses": 94689, "xors": 0, "enc_s": 0.03, "rho_ops": 7.0, "sat": null, "secs": 120.34, "conflicts": 706416, "key_ok": null, "censored": true}
+{"n": 6, "p": 211, "r": 47, "solver": "glucose4", "xor": false, "vars": 36414, "clauses": 119799, "xors": 0, "enc_s": 0.12, "rho_ops": 8.6, "sat": null, "secs": 120.24, "conflicts": 684924, "key_ok": null, "censored": true}
+{"n": 5, "p": 89, "r": 19, "solver": "glucose4", "xor": false, "vars": 22941, "clauses": 75278, "xors": 0, "enc_s": 0.06, "rho_ops": 5.5, "sat": null, "secs": 120.6, "conflicts": 758836, "key_ok": null, "censored": true}
+{"n": 6, "p": 223, "r": 53, "solver": "glucose4", "xor": false, "vars": 42064, "clauses": 138717, "xors": 0, "enc_s": 0.25, "rho_ops": 9.1, "sat": null, "secs": 120.42, "conflicts": 431554, "key_ok": null, "censored": true}
+{"n": 6, "p": 251, "r": 59, "solver": "glucose4", "xor": false, "vars": 42533, "clauses": 140307, "xors": 0, "enc_s": 0.26, "rho_ops": 9.6, "sat": null, "secs": 120.38, "conflicts": 482975, "key_ok": null, "censored": true}
+{"n": 7, "p": 383, "r": 101, "solver": "glucose4", "xor": false, "vars": 62638, "clauses": 207037, "xors": 0, "enc_s": 0.37, "rho_ops": 12.6, "sat": null, "secs": 120.36, "conflicts": 473891, "key_ok": null, "censored": true}

@@ -1,0 +1,26 @@
+{
+  "id": "DEC-c4507e30-a257-49d5-8a77-9bbe29bb62dd",
+  "type": "DEC",
+  "title": "Strategic correction: prioritize algorithm discovery over lower-bound research",
+  "created_at": "2026-11-03T11:34:16.680992Z",
+  "status": "completed",
+  "question": "How should capacity be allocated to maximize the chance of a working faster ECDLP algorithm?",
+  "rationale": "User directive (2026-11-03): the lab drifted toward proving barriers; the primary mission is a universal classical algorithm beating generic square-root complexity. Supersedes the round-10 allocation DEC. Existing results and formal proofs are retained.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "DEC-cbbd6529-479b-44c4-93b2-0e15cff1e25e",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [
+    "Allocation: 60% constructive algorithm discovery and implementation (algorithm-inventor role), 20% experimental falsification and scaling benchmarks vs Pollard rho, 10% directly relevant mathematical proofs, 10% literature review and publication.",
+    "Every algorithmic candidate must give: mechanism revealing information about k; pseudocode and prototype; correctness argument; explicit complexity model incl. preprocessing and memory; measured scaling vs Pollard rho; exact obstacle if unsuccessful.",
+    "No further interpolation lower-bound variants unless they unblock an active algorithmic candidate. Running ECDLP-38 (conjecture C*) is allowed to finish but receives no follow-up.",
+    "Success criterion: a working faster algorithm \u2014 not the number of theorems, PRs or papers. No speedup is claimed without measured evidence; no positive results are manufactured."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Launch algorithm-inventor round (ECDLP-42+).",
+  "notes": "Recorded by PI RUN-62dbda7c on user instruction."
+}

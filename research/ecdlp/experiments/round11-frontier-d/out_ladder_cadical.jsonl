@@ -1,0 +1,9 @@
+{"n": 5, "p": 89, "r": 19, "solver": "cadical195", "xor": false, "vars": 22941, "clauses": 75278, "xors": 0, "enc_s": 0.28, "rho_ops": 5.5, "sat": true, "secs": 10.56, "conflicts": 36109, "key_ok": true}
+{"n": 5, "p": 127, "r": 31, "solver": "cadical195", "xor": false, "vars": 28759, "clauses": 94689, "xors": 0, "enc_s": 0.32, "rho_ops": 7.0, "sat": true, "secs": 71.06, "conflicts": 238664, "key_ok": true}
+{"n": 5, "p": 109, "r": 31, "solver": "cadical195", "xor": false, "vars": 24907, "clauses": 81839, "xors": 0, "enc_s": 0.23, "rho_ops": 7.0, "sat": true, "secs": 125.31, "conflicts": 410283, "key_ok": true}
+{"n": 6, "p": 211, "r": 47, "solver": "cadical195", "xor": false, "sat": null, "secs": 130.13, "conflicts": null, "key_ok": null, "rho_ops": 8.6, "censored": true}
+{"n": 6, "p": 223, "r": 53, "solver": "cadical195", "xor": false, "sat": null, "secs": 130.08, "conflicts": null, "key_ok": null, "rho_ops": 9.1, "censored": true}
+{"n": 6, "p": 251, "r": 59, "solver": "cadical195", "xor": false, "sat": null, "secs": 130.15, "conflicts": null, "key_ok": null, "rho_ops": 9.6, "censored": true}
+{"n": 7, "p": 373, "r": 89, "solver": "cadical195", "xor": false, "vars": 54098, "clauses": 178328, "xors": 0, "enc_s": 0.28, "rho_ops": 11.8, "sat": true, "secs": 120.72, "conflicts": 965389, "key_ok": true}
+{"n": 7, "p": 383, "r": 101, "solver": "cadical195", "xor": false, "sat": null, "secs": 130.09, "conflicts": null, "key_ok": null, "rho_ops": 12.6, "censored": true}
+{"n": 7, "p": 461, "r": 113, "solver": "cadical195", "xor": false, "sat": null, "secs": 130.07, "conflicts": null, "key_ok": null, "rho_ops": 13.3, "censored": true}

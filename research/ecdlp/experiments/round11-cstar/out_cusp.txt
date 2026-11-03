@@ -1,0 +1,24 @@
+== E1: cusp nodes y_k=1/k^2, value k: c_j and prime support ==
+0 sign(-1)^j ok num/den (2j+1)-smooth: True
+1 sign(-1)^j ok num/den (2j+1)-smooth: True
+2 sign(-1)^j ok num/den (2j+1)-smooth: False
+3 sign(-1)^j ok num/den (2j+1)-smooth: False
+4 sign(-1)^j ok num/den (2j+1)-smooth: False
+5 sign(-1)^j ok num/den (2j+1)-smooth: False
+6 sign(-1)^j ok num/den (2j+1)-smooth: False
+7 sign(-1)^j ok num/den (2j+1)-smooth: False
+8 sign(-1)^j ok num/den (2j+1)-smooth: False
+9 sign(-1)^j ok num/den (2j+1)-smooth: False
+10 sign(-1)^j ok num/den (2j+1)-smooth: False
+11 sign(-1)^j ok num/den (2j+1)-smooth: False
+12 sign(-1)^j ok num/den (2j+1)-smooth: False
+13 sign(-1)^j ok num/den (2j+1)-smooth: False
+14 sign(-1)^j ok num/den (2j+1)-smooth: False
+15 sign(-1)^j ok num/den (2j+1)-smooth: False
+E1 all c_j nonzero, alternating sign, primes <= 2j+1: False
+== k^2 target: c_j = (-1)^j prod k^2 ==
+True [True, True, True, True, True, True]
+c_j/((-1)^j (j+1)!^2) = [Fraction(1, 1), Fraction(1, 3), Fraction(11, 60), Fraction(151, 1260), Fraction(15619, 181440), Fraction(655177, 9979200), Fraction(27085381, 518918400), Fraction(2330931341, 54486432000)]
+== E2: epsilon-lift over Q: y^2=x^3+eps*a*x+B, P=(1,1) ==
+eps 1/1000000000 ratios c_j(eps)/c_j(0): [1.0000002510727792, 1.0000945527931133, 1.0073916556019502]
+eps 1/1000000000000000000 ratios c_j(eps)/c_j(0): [1.0000000000000002, 1.0000000000000946, 1.000000000007374]

@@ -1,0 +1,29 @@
+{
+  "id": "HYP-94059e14-928e-4de0-8b51-4ceda5159d9e",
+  "type": "HYP",
+  "title": "Frontier exploration C: barrier inversion map; integer structure is the only unconstrained resource",
+  "created_at": "2026-11-03T11:26:00.135782Z",
+  "status": "completed",
+  "question": "Frontier C (barrier inversion): barrier map of 11 lab barriers with exact assumptions; the only resource none constrains is integer structure of coordinate representatives (order, bits, size, factorization). Transplanted mechanisms (NFS, FFS, quasi-polynomial small-characteristic, class groups, BKW/lattice) all need a size function or computable quotient chain compatible with the group law, or an algebraic factor base with fast decomposition; E(F_p) has neither. Tests: (C1) lattice decomposition of Semaev S_3 reaches alpha ~ 0.05-0.10 (analytic limit -> 1/6) vs alpha >= 1/2 needed \u2014 killed; (C3) smoothness-type predicate spectra null in two seeds with controls. C2 (Miller orbit cocycle) and C4 (xedni) killed by derivation/literature; C5 (comparison-augmented decision trees) open.",
+  "rationale": "High-risk exploration per DEC.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-53c590b6-897b-438f-ae77-87309aa8d23a",
+    "TSK-6e4546c7-fd04-4a4b-a655-7a65af37802b",
+    "HYP-dbe79a50-030e-41b9-944b-271f2bd37042",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round10-frontier-c/out_t1.txt",
+    "research/ecdlp/experiments/round10-frontier-c/out_t2_seed2_amended.txt",
+    "research/ecdlp/experiments/round10-frontier-c/PROTOCOL.md"
+  ],
+  "claims": [
+    "Frontier C (barrier inversion): barrier map of 11 lab barriers with exact assumptions; the only resource none constrains is integer structure of coordinate representatives (order, bits, size, factorization). Transplanted mechanisms (NFS, FFS, quasi-polynomial small-characteristic, class groups, BKW/lattice) all need a size function or computable quotient chain compatible with the group law, or an algebraic factor base with fast decomposition; E(F_p) has neither. Tests: (C1) lattice decomposition of Semaev S_3 reaches alpha ~ 0.05-0.10 (analytic limit -> 1/6) vs alpha >= 1/2 needed \u2014 killed; (C3) smoothness-type predicate spectra null in two seeds with controls. C2 (Miller orbit cocycle) and C4 (xedni) killed by derivation/literature; C5 (comparison-augmented decision trees) open."
+  ],
+  "proof_status": "experimental",
+  "outcome": "refuted",
+  "next_action": "Next frontier: comparison / bit-access models (C5) \u2014 the only unconstrained resource.",
+  "notes": "PI reproduced t2_spectrum_amended.py seed 2 via exec (identical). T2 predicate was amended post hoc (labelled AMENDED in the report). outcome=refuted refers to the tested speedup candidates."
+}

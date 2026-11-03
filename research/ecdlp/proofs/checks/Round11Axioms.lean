@@ -1,0 +1,4 @@
+import MathResearch
+open MathResearch.ECDLP
+#print axioms RationalSLP.length_bound_rational_slp
+#print axioms RationalSLP.degree_bound_rational_short_weierstrass
