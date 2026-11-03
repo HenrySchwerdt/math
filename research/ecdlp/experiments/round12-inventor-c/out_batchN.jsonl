@@ -49,3 +49,6 @@
 {"mode": "batchN", "bits": 40, "n": 701298629047, "M": 16, "trial": 0, "ops": 5338241, "per_instance": 333640.0625, "ok": true, "dps": 318, "sec": 8.807}
 {"mode": "batchN", "bits": 40, "n": 701298629047, "M": 16, "trial": 1, "ops": 5803903, "per_instance": 362743.9375, "ok": true, "dps": 325, "sec": 9.983}
 {"mode": "batchN", "bits": 40, "n": 701298629047, "M": 16, "trial": 2, "ops": 5688352, "per_instance": 355522.0, "ok": true, "dps": 300, "sec": 11.862}
+{"mode": "batchN", "bits": 40, "n": 701298629047, "M": 16, "trial": 3, "ops": 8037940, "per_instance": 502371.25, "ok": true, "dps": 400, "sec": 13.331}
+{"mode": "batchN", "bits": 40, "n": 701298629047, "M": 16, "trial": 4, "ops": 6450763, "per_instance": 403172.6875, "ok": true, "dps": 364, "sec": 12.76}
+{"mode": "batchN", "bits": 40, "n": 701298629047, "M": 16, "trial": 5, "ops": 5528050, "per_instance": 345503.125, "ok": true, "dps": 308, "sec": 18.96}

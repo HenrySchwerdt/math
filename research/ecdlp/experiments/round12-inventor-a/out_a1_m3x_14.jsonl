@@ -1,0 +1,3 @@
+{"k": 967, "adds": 16855, "fops": 2286, "mulmods": 1968160, "s": 114, "H": 230, "table": 12996, "rels": 403, "trel": 1908, "attempts": 1, "secs": 0.14483022689819336, "bits": 14, "seed": 1, "r": 13291, "true_k": 967, "mode": "m3x", "correct": true}
+{"k": 9000, "adds": 20042, "fops": 2591, "mulmods": 1981459, "s": 127, "H": 271, "table": 16129, "rels": 441, "trel": 1962, "attempts": 1, "secs": 0.1435544490814209, "bits": 14, "seed": 2, "r": 16183, "true_k": 9000, "mode": "m3x", "correct": true}
+{"k": null, "adds": 911579, "fops": 47333, "mulmods": 89730449, "s": 573, "attempts": 8, "bits": 14, "seed": 3, "r": 13933, "true_k": 12631, "mode": "m3x", "correct": false}

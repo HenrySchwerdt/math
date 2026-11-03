@@ -1,0 +1,3 @@
+{"a": 16, "rbits": 31, "r": 1819919977, "p": 7279807321, "seed": 0, "none": {"ok": true, "ops": 394024}, "neg": {"ok": true, "ops": 37343}, "b2": {"ok": true, "rho_ops": 30711, "steps": 16, "iso": 616, "cyc": 22, "sec": 0.58}}
+{"a": 16, "rbits": 31, "r": 1819919977, "p": 7279807321, "seed": 1, "none": {"ok": true, "ops": 84080}, "neg": {"ok": true, "ops": 34452}, "b2": {"ok": true, "rho_ops": 8341, "steps": 16, "iso": 614, "cyc": 11, "sec": 0.46}}
+{"a": 16, "rbits": 31, "r": 1819919977, "p": 7279807321, "seed": 2, "none": {"ok": true, "ops": 108680}, "neg": {"ok": true, "ops": 48162}, "b2": {"ok": true, "rho_ops": 111145, "steps": 16, "iso": 620, "cyc": 21, "sec": 0.71}}

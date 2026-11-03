@@ -1,0 +1,73 @@
+l2 12 1 True 3876 14 0.0
+l2 12 2 True 3924 15 0.0
+l2 12 3 False 45673 78 0
+l2 12 4 True 3901 15 0.0
+l2 12 5 False 43500 74 0
+l2 12 6 False 43572 74 0
+l2 12 7 False 45465 78 0
+l2 12 8 False 43654 74 0
+l2 12 9 False 43605 74 0
+l2 12 10 True 3938 15 0.0
+l3 12 1 True 3974 8 0.0
+l3 12 2 True 3994 8 0.0
+l3 12 3 False 158727 47 0
+l3 12 4 True 3971 8 0.0
+l3 12 5 False 158086 47 0
+l3 12 6 False 158158 47 0
+l3 12 7 False 158519 47 0
+l3 12 8 False 158240 47 0
+l3 12 9 False 158191 47 0
+l3 12 10 True 4008 8 0.0
+l2 14 1 True 4479 23 0.0
+l2 14 2 True 4640 25 0.0
+l2 14 3 False 71543 123 0
+Traceback (most recent call last):
+  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 198, in <module>
+    res = run(inst, mode); res.update(bits=b, seed=inst['seed'], r=inst['r'], true_k=inst['k'], mode=mode)
+  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 165, in run
+    if u[0][0] == v[0][0]: continue
+                  ~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+l3 14 1 True 4253 8 0.0
+l3 14 2 True 4320 8 0.0
+l3 14 3 False 160637 47 0
+Traceback (most recent call last):
+  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 198, in <module>
+    res = run(inst, mode); res.update(bits=b, seed=inst['seed'], r=inst['r'], true_k=inst['k'], mode=mode)
+  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 165, in run
+    if u[0][0] == v[0][0]: continue
+                  ~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+l2 16 1 False 123776 184 0
+l2 16 2 False 123630 184 0
+l2 16 3 False 131489 192 0
+Traceback (most recent call last):
+  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 198, in <module>
+    res = run(inst, mode); res.update(bits=b, seed=inst['seed'], r=inst['r'], true_k=inst['k'], mode=mode)
+  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 165, in run
+    if u[0][0] == v[0][0]: continue
+                  ~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+l3 16 1 False 162906 47 0
+l3 16 2 False 162760 47 0
+l3 16 3 False 163023 47 0
+Traceback (most recent call last):
+  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 198, in <module>
+    res = run(inst, mode); res.update(bits=b, seed=inst['seed'], r=inst['r'], true_k=inst['k'], mode=mode)
+  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 165, in run
+    if u[0][0] == v[0][0]: continue
+                  ~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+l2 18 1 False 274581 299 0
+l2 18 2 False 281356 303 0
+l2 18 3 False 278920 302 0
+l2 18 4 False 258954 289 0
+l2 18 5 False 289131 308 0
+l2 18 6 False 278867 302 0
+l2 18 7 True 8462 63 0.0
+l2 18 8 False 278945 302 0
+l2 18 9 False 274615 299 0
+l2 18 10 False 278829 302 0
+l3 18 1 False 298363 59 0
+l3 18 2 False 298498 59 0
+l3 18 3 False 298552 59 0

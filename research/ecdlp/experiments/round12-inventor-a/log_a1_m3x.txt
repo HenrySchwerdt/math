@@ -1,0 +1,20 @@
+m3x 12 1 True 6886 57 0.1
+m3x 12 2 True 7020 58 0.1
+m3x 12 3 False 282265 308 0
+m3x 12 4 True 6997 58 0.1
+m3x 12 5 False 239552 281 0
+m3x 12 6 False 239624 281 0
+m3x 12 7 False 282057 308 0
+m3x 12 8 False 239706 281 0
+m3x 12 9 False 239657 281 0
+m3x 12 10 True 7388 61 0.1
+m3x 14 1 True 16855 114 0.1
+m3x 14 2 True 20042 127 0.1
+m3x 14 3 False 911579 573 0
+Traceback (most recent call last):
+  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 198, in <module>
+    res = run(inst, mode); res.update(bits=b, seed=inst['seed'], r=inst['r'], true_k=inst['k'], mode=mode)
+  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 165, in run
+    if u[0][0] == v[0][0]: continue
+                  ~~~~^^^
+TypeError: 'NoneType' object is not subscriptable

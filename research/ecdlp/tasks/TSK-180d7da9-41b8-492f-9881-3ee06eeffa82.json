@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 11 / ECDLP-41: frontier exploration E \u2014 integer-structure / bit-access mechanisms",
   "created_at": "2026-11-03T11:26:18.750018Z",
-  "status": "active",
+  "status": "completed",
   "question": "Integer-structure frontier: design and cheaply test ECDLP mechanisms that exploit exactly what all lab barriers leave unconstrained \u2014 order, bits, size and factorization of integer representatives of coordinates (comparisons, bit extraction, Legendre/power-residue tests, small-height lifts, carries) \u2014 and determine which known results (hard-core bits of ECDH, Boneh\u2013Venkatesan HNP, comparison-tree lower bounds, Pollard-kangaroo/distinguished points) already constrain them.",
   "rationale": "Barrier map (frontier C, decision-tree barrier) identifies integer structure as the only unconstrained resource.",
   "assumptions": [],
@@ -13,12 +13,13 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-db1854e2-a2da-4dea-ae63-b76aeb9c1d03.evidence"
+    "research/ecdlp/events/EVT-db1854e2-a2da-4dea-ae63-b76aeb9c1d03.evidence",
+    "research/ecdlp/events/EVT-f1bf141a-0017-4931-97d6-45dff65ca62c.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "refuted",
+  "next_action": "Review E0/E3 remarks",
   "notes": "Created by PI RUN-62dbda7c.",
   "success_criteria": [
     "Mechanisms with role-required fields; at least one pre-registered cheapest test executed; negatives reported."

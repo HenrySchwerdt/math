@@ -1,0 +1,3 @@
+{"k": null, "adds": 298363, "fops": 6904, "mulmods": 2221741, "s": 59, "attempts": 8, "bits": 18, "seed": 1, "r": 216551, "true_k": 37813, "mode": "l3", "correct": false}
+{"k": null, "adds": 298498, "fops": 6394, "mulmods": 1999846, "s": 59, "attempts": 8, "bits": 18, "seed": 2, "r": 244381, "true_k": 19060, "mode": "l3", "correct": false}
+{"k": null, "adds": 298552, "fops": 6489, "mulmods": 2076096, "s": 59, "attempts": 8, "bits": 18, "seed": 3, "r": 235751, "true_k": 34707, "mode": "l3", "correct": false}

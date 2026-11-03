@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round12-review-thmE/symnum.py",
+    "3",
+    "4"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:45:23.118959Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:45:48.128538Z",
+  "truncated": false,
+  "output": "N=3 target=k2: summand weights [[46], [46], [46]] Num weights [46] expected 46\n   w_N=23 total degree of Num (after B-subst) = 22  (claimed bound 23); #terms 43\n   Num(tau0)=4320, W(tau0)=120, ratio=36\n   Num == W*c_(N-1) mod 1000003 at 5 random points: OK\nN=3 target=k: summand weights [[46], [46], [46]] Num weights [46] expected 46\n   w_N=23 total degree of Num (after B-subst) = 22  (claimed bound 23); #terms 43\n   Num(tau0)=792, W(tau0)=120, ratio=33/5\n   Num == W*c_(N-1) mod 1000003 at 5 random points: OK\nN=4 target=k2: summand weights [[162], [162], [162], [162]] Num weights [162] expected 162\n   w_N=81 total degree of Num (after B-subst) = 78  (claimed bound 81); #terms 466\n   Num(tau0)=-87091200, W(tau0)=151200, ratio=-576\n   Num == W*c_(N-1) mod 1000003 at 5 random points: OK\nN=4 target=k: summand weights [[162], [162], [162], [162]] Num weights [162] expected 162\n   w_N=81 total degree of Num (after B-subst) = 78  (claimed bound 81); #terms 466\n   Num(tau0)=-10437120, W(tau0)=151200, ratio=-2416/35\n   Num == W*c_(N-1) mod 1000003 at 5 random points: OK\n"
+}

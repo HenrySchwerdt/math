@@ -1,10 +1,10 @@
 {
   "id": "RUN-7112aed9-8b0d-4900-a44c-40ff35fc3549",
   "type": "RUN",
-  "title": "Round 11 / ECDLP-41: frontier exploration E — integer-structure / bit-access mechanisms",
+  "title": "Round 11 / ECDLP-41: frontier exploration E \u2014 integer-structure / bit-access mechanisms",
   "created_at": "2026-11-03T11:26:18.806668Z",
-  "status": "active",
-  "question": "Integer-structure frontier: design and cheaply test ECDLP mechanisms that exploit exactly what all lab barriers leave unconstrained — order, bits, size and factorization of integer representatives of coordinates (comparisons, bit extraction, Legendre/power-residue tests, small-height lifts, carries) — and determine which known results (hard-core bits of ECDH, Boneh–Venkatesan HNP, comparison-tree lower bounds, Pollard-kangaroo/distinguished points) already constrain them.",
+  "status": "completed",
+  "question": "Integer-structure frontier: design and cheaply test ECDLP mechanisms that exploit exactly what all lab barriers leave unconstrained \u2014 order, bits, size and factorization of integer representatives of coordinates (comparisons, bit extraction, Legendre/power-residue tests, small-height lifts, carries) \u2014 and determine which known results (hard-core bits of ECDH, Boneh\u2013Venkatesan HNP, comparison-tree lower bounds, Pollard-kangaroo/distinguished points) already constrain them.",
   "rationale": "Bounded subagent run for TSK-180d7da9-41b8-492f-9881-3ee06eeffa82",
   "assumptions": [],
   "sources": [
@@ -15,55 +15,55 @@
       "locator": "citation and model description only via search results; paper text not read"
     },
     {
-      "title": "Boneh–Shparlinski, On the Unpredictability of Bits of the Elliptic Curve Diffie–Hellman Scheme (CRYPTO 2001)",
+      "title": "Boneh\u2013Shparlinski, On the Unpredictability of Bits of the Elliptic Curve Diffie\u2013Hellman Scheme (CRYPTO 2001)",
       "url": "https://crypto.stanford.edu/~dabo/abstracts/ecdhbits.html",
       "retrieved_at": "2026-11-03T00:00:00Z",
       "locator": "abstract"
     },
     {
-      "title": "Jetchev–Venkatesan, Bits Security of the Elliptic Curve Diffie–Hellman Secret Keys (CRYPTO 2008)",
+      "title": "Jetchev\u2013Venkatesan, Bits Security of the Elliptic Curve Diffie\u2013Hellman Secret Keys (CRYPTO 2008)",
       "url": "https://iacr.org/archive/crypto2008/51570075/51570075.pdf",
       "retrieved_at": "2026-11-03T00:00:00Z",
       "locator": "abstract level via search result; GRH dependence per Shani PKC 2017 summary"
     },
     {
-      "title": "Boneh–Venkatesan, Hardness of Computing the Most Significant Bits of Secret Keys in Diffie-Hellman and Related Schemes (CRYPTO 1996)",
+      "title": "Boneh\u2013Venkatesan, Hardness of Computing the Most Significant Bits of Secret Keys in Diffie-Hellman and Related Schemes (CRYPTO 1996)",
       "url": "https://crypto.stanford.edu/~dabo/abstracts/dhmsb.html",
       "retrieved_at": "2026-11-03T00:00:00Z",
       "locator": "abstract"
     },
     {
-      "title": "Corrigan-Gibbs–Kogan, The Discrete-Logarithm Problem with Preprocessing (EUROCRYPT 2018)",
+      "title": "Corrigan-Gibbs\u2013Kogan, The Discrete-Logarithm Problem with Preprocessing (EUROCRYPT 2018)",
       "url": "https://eprint.iacr.org/2017/1113",
       "retrieved_at": "2026-11-03T00:00:00Z",
       "locator": "abstract: S*T^2 = Omega(eps*N) generic"
     },
     {
-      "title": "Silverman–Suzuki, Elliptic Curve Discrete Logarithms and the Index Calculus (ASIACRYPT 1998)",
+      "title": "Silverman\u2013Suzuki, Elliptic Curve Discrete Logarithms and the Index Calculus (ASIACRYPT 1998)",
       "url": "https://dx.doi.org/10.1007/3-540-49649-1_10",
       "retrieved_at": "2026-11-03T00:00:00Z",
       "locator": "abstract via search result"
     },
     {
-      "title": "Kohel–Shparlinski, On Exponential Sums and Group Generators for Elliptic Curves over Finite Fields (2000)",
+      "title": "Kohel\u2013Shparlinski, On Exponential Sums and Group Generators for Elliptic Curves over Finite Fields (2000)",
       "url": "https://www.i2m.univ-amu.fr/perso/david.kohel/pub/character.pdf",
       "retrieved_at": "2026-11-03T00:00:00Z",
       "locator": "abstract level; exact bound NOT verified"
     },
     {
-      "title": "van Oorschot–Wiener, Parallel Collision Search with Cryptanalytic Applications (J. Cryptology 1999)",
+      "title": "van Oorschot\u2013Wiener, Parallel Collision Search with Cryptanalytic Applications (J. Cryptology 1999)",
       "url": "https://people.scs.carleton.ca/%7Epaulv/papers/JoC97.pdf",
       "retrieved_at": "2026-11-03T00:00:00Z",
       "locator": "abstract level via search result"
     },
     {
-      "title": "Borodin et al. / Yao / Beame–Clifford–Machmouchi, comparison and branching-program time-space bounds (sorting, element distinctness)",
+      "title": "Borodin et al. / Yao / Beame\u2013Clifford\u2013Machmouchi, comparison and branching-program time-space bounds (sorting, element distinctness)",
       "url": "https://arxiv.org/pdf/cs/0608085",
       "retrieved_at": "2026-11-03T00:00:00Z",
       "locator": "search-result summaries only; exponent for element distinctness garbled, verify before use"
     },
     {
-      "title": "Quanta Magazine, New Elliptic Curve Breaks 18-Year-Old Record (Elkies–Klagsbrun rank >= 29)",
+      "title": "Quanta Magazine, New Elliptic Curve Breaks 18-Year-Old Record (Elkies\u2013Klagsbrun rank >= 29)",
       "url": "https://www.quantamagazine.org/new-elliptic-curve-breaks-18-year-old-record-20241111/",
       "retrieved_at": "2026-11-03T00:00:00Z",
       "locator": "news summary, not primary"
@@ -95,12 +95,12 @@
     "With comparisons and free constants, a binary-search tree over sorted x(kP) has 0 arithmetic nodes: the arithmetic-length measure of Theorem DT (HYP-dbe79a50) is vacuous unless tree size is charged (own observation, unreviewed). Nothing here changes the status of HYP-2de84d42."
   ],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "refuted",
   "next_action": "Independent review of the E0 derivation (order is free in Shoup's model) and the size-accounting remark on Theorem DT; optional <=30 min window/learned distinguisher probe; include the map in the barrier-map write-up; close E4/E5.",
   "notes": "Native frontier-explorer adapter (claude-sonnet-5-5 configured); runtime identity not exposed to PI. Model identity (self-reported, not runtime-verified): claude-sonnet-5-5, role frontier-explorer. 13 of 15 web lookups used (abstract/search-result level). Experiments in research/ecdlp/experiments/round11-frontier-e/ (PROTOCOL.md sha256 9b875a08..., amendment sha256 8e32107b..., HASHES.txt). Deviation: E1 n_null reduced to 60/20 after a timeout (first launch produced no observed output).",
   "run": {
     "started_at": "2026-11-03T11:26:18.840548Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T11:46:30.453140Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "frontier-explorer",
@@ -112,8 +112,10 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; owns round11-frontier-e/",
     "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round11-frontier-e/"
+    ],
+    "resulting_commit": "8580ce3792b22b136a3f92b09b381d6609d17338",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container",
