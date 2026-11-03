@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 11 / ECDLP-37: frontier exploration D \u2014 follow-ups of the best-ranked round-10 ideas",
   "created_at": "2026-11-03T11:06:13.165898Z",
-  "status": "active",
+  "status": "completed",
   "question": "Run the top-ranked cheap follow-ups from frontier A and B: (1) structure-aware SAT encodings (x-only Montgomery ladder, XOR-aware solving, cardinality constraints) and their scaling vs rho; (2) explicit cocycle / higher p-adic digit structure of the homomorphic Hensel section; plus at most one new idea that combines them.",
   "rationale": "Bounded subagent run for TSK-c33128ec-7eb3-4aca-99a1-b0130c0e7512",
   "assumptions": [],
@@ -34,12 +34,12 @@
     "D4 (experimental negative, Idea 3): the lift-variation g_L-g_0 is exactly affine in the lift parameters (rank of {1,k,g_L} = 5 for 8 lifts), not a degree<=20 polynomial in (x,y), no k structure; unknown count (4) exceeds equation count (3), idea killed at tested sizes. Evidence: out_t2b.jsonl."
   ],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "refuted",
   "next_action": "Record D1-D4 as negative results; close raw-ECDLP SAT and Hensel-section follow-ups; optional analytic question: is the Birkhoff sum of eta an algebraic coboundary; use symmetry-respecting nulls for future spectral tests. PI review needed before any status change.",
   "notes": "Adapter frontier-explorer (claude-sonnet-5-5 configured); runtime identity not exposed to PI. Executed by frontier-explorer adapter, self-reported model identity claude-sonnet-5-5 (not runtime-verified). Commands run manually (not via research.py exec); protocol sha256 d17d09df...4fe1 in experiments/round11-frontier-d/PROTOCOL.sha256; pycryptosat 5.17.0 pip-installed in the sandbox. | Not reproduced by PI (runtime).",
   "run": {
     "started_at": "2026-11-03T11:06:13.279633Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T11:40:38.259626Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "frontier-explorer",
@@ -52,8 +52,10 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round11-frontier-d/"
+    ],
+    "resulting_commit": "56453178525402417145ad30bf293b12e9ad5474",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container",

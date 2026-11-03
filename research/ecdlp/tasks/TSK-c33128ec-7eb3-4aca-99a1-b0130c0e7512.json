@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 11 / ECDLP-37: frontier exploration D \u2014 follow-ups of the best-ranked round-10 ideas",
   "created_at": "2026-11-03T11:06:13.115775Z",
-  "status": "active",
+  "status": "completed",
   "question": "Run the top-ranked cheap follow-ups from frontier A and B: (1) structure-aware SAT encodings (x-only Montgomery ladder, XOR-aware solving, cardinality constraints) and their scaling vs rho; (2) explicit cocycle / higher p-adic digit structure of the homomorphic Hensel section; plus at most one new idea that combines them.",
   "rationale": "DEC allocation (frontier / strongest open math).",
   "assumptions": [],
@@ -13,12 +13,13 @@
     "HYP-a913419f-f6d2-4829-a181-11ef8cbd57d4"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-6ef2b116-e7b1-48e7-b924-d6479242d7c6.evidence"
+    "research/ecdlp/events/EVT-6ef2b116-e7b1-48e7-b924-d6479242d7c6.evidence",
+    "research/ecdlp/events/EVT-294846d6-1900-4f9f-8d92-9d332b7af330.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "refuted",
+  "next_action": "Closed",
   "notes": "Created by PI RUN-62dbda7c.",
   "success_criteria": [
     "Exact statements; pre-registered tests; reproducible evidence; honest negatives."

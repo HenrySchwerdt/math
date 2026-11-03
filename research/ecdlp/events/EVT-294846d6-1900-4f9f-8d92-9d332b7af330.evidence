@@ -1,0 +1,26 @@
+{
+  "id": "EVT-294846d6-1900-4f9f-8d92-9d332b7af330",
+  "kind": "task-status-change",
+  "task": "TSK-c33128ec-7eb3-4aca-99a1-b0130c0e7512",
+  "task_key": "ECDLP-37",
+  "timestamp": "2026-11-03T11:40:38.256807Z",
+  "run": "RUN-29c93068-9ed2-4117-b500-cd135b674c07",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "frontier-explorer"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "SAT, cocycle and lift-variation follow-ups all null",
+  "before_sha256": "59a740a6c148ad9969b1b6c218b75a6d9da0e503ef5f2d6bb50c91cf4ca706ae",
+  "after_sha256": "d266cc989cef9ca60f1e6c4ad10e0265c33bfa5c62c8efce06bbaa71229a979d"
+}
