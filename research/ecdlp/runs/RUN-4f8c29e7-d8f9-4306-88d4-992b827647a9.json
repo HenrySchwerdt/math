@@ -1,0 +1,40 @@
+{
+  "id": "RUN-4f8c29e7-d8f9-4306-88d4-992b827647a9",
+  "type": "RUN",
+  "title": "Blind adversarial review of PAP-ef6e2010 mathematics",
+  "created_at": "2026-11-03T10:58:02.471178Z",
+  "status": "active",
+  "question": "Blind adversarial review of PAP-ef6e2010 mathematics",
+  "rationale": "docs/PAPERS.md review step.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-f4cd6596-e37f-4552-a4d7-51acc1efe0c2",
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter adversarial-critic (claude-sonnet-5-5 configured); runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T10:58:02.527810Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "adversarial-critic",
+    "task": "TSK-f4cd6596-e37f-4552-a4d7-51acc1efe0c2",
+    "input_hypotheses": [],
+    "starting_commit": "41c172876f3101809c40884eab1928eeda985388",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; owns its REV and RUN only",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}
