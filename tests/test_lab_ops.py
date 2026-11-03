@@ -43,6 +43,14 @@ class LabOpsTests(unittest.TestCase):
         self.assertEqual(d['run']['role'], 'experimenter')
         self.assertEqual(d['run']['input_hypotheses'], ['HYP-00000000-0000-0000-0000-000000000000'])
 
+    def test_start_expands_short_refs(self):
+        hyp = r.new('example', 'HYP').stem
+        _, _, run = lab_ops.start('example', 'T', 'Q', 'r', 'm', refs=[hyp[:12]])
+        d = json.loads((self.root / f'research/example/runs/{run}.json').read_text())
+        self.assertEqual(d['run']['input_hypotheses'], [hyp])
+        with self.assertRaisesRegex(ValueError, 'matches 0'):
+            lab_ops.start('example', 'T', 'Q', 'r', 'm', refs=['HYP-ffffffff'])
+
     def test_finish_completes_task_and_closes_run(self):
         key, tsk, run = lab_ops.start('example', 'T', 'Q', 'r', 'm')
         lab_ops.finish('example', run, 'verified', 'Done', 'Next', files=['f.txt'])
