@@ -1,0 +1,39 @@
+{
+  "id": "RUN-809bfa01-7748-4e0d-a2a7-636fad6ef8b2",
+  "type": "RUN",
+  "title": "Round 20 / inventor J: estimate-then-search (MSB oracle + self-reduction + kangaroo)",
+  "created_at": "2026-11-03T16:06:08.640726Z",
+  "status": "active",
+  "question": "User idea 2026-11-03: estimate k very precisely, then binary-search. Build the strongest feasible estimator of the most significant bit (or an interval) of k from Q=kP (features from x(Q), x(Q+-jP), bits, comparisons, learned models trained across curves), measure its advantage over 1/2 with CI across sizes, and quantify what advantage the hard-core-bit self-reduction and an interval+kangaroo pipeline would need to beat rho. Does any estimator show non-vanishing advantage out of sample?",
+  "rationale": "Bounded run for TSK-9fcffa94-ec93-4873-9b24-1cd78f09e562",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-9fcffa94-ec93-4873-9b24-1cd78f09e562"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T16:06:08.694194Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor",
+    "task": "TSK-9fcffa94-ec93-4873-9b24-1cd78f09e562",
+    "input_hypotheses": [],
+    "starting_commit": "001bbc6df9572ff026e5645e177f292659cec251",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}
