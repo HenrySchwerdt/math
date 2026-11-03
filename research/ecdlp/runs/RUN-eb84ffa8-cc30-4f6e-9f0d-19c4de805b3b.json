@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 7 / ECDLP-21: partial-agreement lower bounds for the EC discrete-log map",
   "created_at": "2026-11-03T10:20:57.511114Z",
-  "status": "active",
+  "status": "completed",
   "question": "If a polynomial or low-degree rational function f on E agrees with the discrete-log map k (mod p) on a delta-fraction of {kP : 1 <= k <= N}, what lower bound on deg f follows (curve analogue of Coppersmith\u2013Shparlinski / Lange\u2013Winterhof partial-agreement results)? Give exact statements, proofs or proof attempts, literature status, and toy-curve checks.",
   "rationale": "Bounded subagent run for TSK-a826d13f-73ab-462d-8e03-d6094b6d08d7",
   "assumptions": [],
@@ -79,7 +79,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round7-approx/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "791487c4317186fc7731555a7e8bca0384cd45f0",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
