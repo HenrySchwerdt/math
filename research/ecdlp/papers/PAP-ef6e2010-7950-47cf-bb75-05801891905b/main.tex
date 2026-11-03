@@ -365,7 +365,62 @@ the review lists, e.g., $\mathrm{Bad}_3=\{11\}$ and $\mathrm{Bad}_4=\{151\}$); $
 \emph{Scope.} The theorem concerns fixed small $N$: the bound $w_Np^2$ is non-vacuous only for $p$ large compared with $N$ (the review notes $N\lesssim(3p)^{1/4}$ for non-vacuity); in the exhaustive tests it was genuinely tested only for $N=3$, $p\in\{29,\dots,47\}$. The ledger records that it does not prove
 Conjecture~C$^*$ beyond the regime $N<p^{1/4}$, that it is not an algorithm, and that it gives no complexity claim.
 
-@@BENCH@@
+\section{Benchmarked algorithm candidates}\label{sec:bench}
+This section is \emph{not} a theorem section. It summarizes the ledger records of rounds~11--13 of the laboratory whose recorded outcome is \emph{refuted} (here: the candidate was tested and found not to beat Pollard rho, or the tested signal was null).
+Every row is an \emph{experiment} at toy sizes (prime-field curves of at most about 44 bits, one case of $p=524309$), with a toy Python implementation; the ledger notes for each of these records that no independent review was done
+(\mbox{HYP-6da71353} additionally contains two unreviewed derivations, discussed in Section~\ref{sec:addendum}(iii)). Each record is proof status \emph{experimental}. None of these is a proof that no better algorithm exists, and none establishes any property for large parameters.
+All numbers below are copied from the ledger records named in the first column; we have not recomputed them. ``rho'' is Pollard rho on the same toy instances unless noted. \textbf{No improvement over Pollard rho is claimed, and none was found.}
+
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{4.2cm}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{4.1cm}@{}}
+\toprule
+Record & Mechanism & Measured scaling / cost ratio vs rho & Exact obstacle \\
+\midrule\endfirsthead
+\toprule
+Record & Mechanism & Measured scaling / cost ratio vs rho & Exact obstacle \\
+\midrule\endhead
+\bottomrule\endfoot
+\mbox{HYP-23351e75} Inventor A (ECDLP-42, lifted relations) &
+A1: Farey-height factor-base index calculus with meet-in-the-middle relation search; A2: LLL (Coppersmith-style) decomposition into two Farey points; A3: lift to $E(\mathbb Q)$ on $y^2=x^3-2$. &
+A1: 66/66 correct (12--24 bits); cost vs rho at 24 bits $42.7\times$ (4-term), $28.9\times$ (6-term); 3-term control $\sim260\times$ at 20 bits; measured exponents $0.82$/$0.71$ vs model $0.667$/$0.60$ (rough); pre-registered verdict NO-ADVANTAGE. A2: 0 of 124/77/61 existing decompositions found at 16/20/24 bits. A3: planted 50/50, random 0/300 (coverage $10^{-3}$ to $4\times10^{-7}$). &
+A1: with $s$ unknown logs, hashing needs $\sim\sqrt{ps}$ additions $>\sqrt p$. A2: rank-one structure is not a lattice condition. A3: random coverage $10^{-3}$ to $4\times10^{-7}$. \\
+\addlinespace
+\mbox{HYP-d6cc9bce} Inventor B (ECDLP-43, representation change) &
+B1: automorphism-orbit rho ($j=0$, $|\mathrm{Aut}|=6$; $j=1728$, $|\mathrm{Aut}|=4$); B2: $2$-isogeny volcano ascent to $j=0$ then B1. &
+B1: $450/450$ runs, $r\le2^{36}$; fitted exponents $0.44$--$0.49$ (CIs contain or nearly contain $0.5$); pooled rho/orbit ratio $1.45$ [$1.14,1.88$] ($j=0$, below the pre-registered $1.15$ threshold as recorded) and $2.62$ [$2.15,3.17$] ($j=1728$, inflated by a heavy-tailed rho baseline $2$--$3\times$ above textbook). B2: $150/150$; isogeny evaluations $\sim a^{1.86}$ (polylog); the pre-registered rule printed ``asymptotic improvement'' but this is a false positive from additive overhead shrinking $60\%\to3\%$; medians indicate exponent $1/2$, constant $\sim2$--$2.5$. &
+Known technique (constant $\sqrt{|\mathrm{Aut}|}$). B2 applies only to curves isogenous to $j=0$ (fraction $\sim p^{-0.47}$ [$-0.58,-0.38$]); equivalent in kind to Jao--Miller--Venkatesan / Galbraith volcano climbing. Isogeny-pooled, twist-pooled and other curve models rejected on paper (they preserve $r$ and group structure). \\
+\addlinespace
+\mbox{HYP-d913fa61} Inventor C (ECDLP-44, beyond-rho search) &
+C1: negation-class rho; C2: preprocessed fixed-walk table; C3: multi-instance shared distinguished-point (DP) search. &
+Reference DP rho ($31$-way) exponent $0.486$ ($0.467,0.506$), $20$--$44$-bit toy curves. C1 (frozen) failed: undetected fruitless cycles (period $\ge6$), $\sim11.8\sqrt n$ at 40 bits, exponent $0.687$, 44-bit censored; post-hoc C1b exponent $0.482$, pooled gain $\sim1.13$ (CI $\sim0.95$--$1.33$) $<\sqrt2$, constant-factor rule not met. C2: online exponent $0.344$ ($0.317,0.371$), preprocessing $\sim n^{0.62}$, $ST^2/n\sim4$, break-even $15$--$71$ queries. C3: per-instance cost $\sim M^{-0.57}$ ($-0.63,-0.50$), $\sqrt M$ law; $n$-exponent unchanged $0.465$; gain $1.7$--$3.1\times$ at $M=16$. &
+No single-instance exponent below $1/2$. C2 lies on the generic $ST^2\sim N$ tradeoff curve, not beyond it. C3 gain is the known $\sqrt M$ law. Ledger: all known techniques, no novelty. \\
+\addlinespace
+\mbox{HYP-720e359e} Inventor D (ECDLP-47, algebraic relation finder) &
+Index calculus with $S_3$ decomposition over a Petit--Kosters--Messeng multiplicative-coset factor base ($x\in g\mu_d$, $d=2^n\mid p-1$), relation finding by Gr\"obner/enumeration. &
+$65/65$ runs recovered $k$ ($1581$ sampled relations verified; sympy Gr\"obner matches exhaustive search for $p$ up to $17921$); total cost exponent $\sim1$ ($0.99$ [$0.92,1.06$]) vs rho $\sim0.5$; D2a/rho $=11$ (16 bits), $94$ (20), $633$ (24), $2533$ (28, post hoc); D2b ($d\sim p^{1/3}$) exponent $1.075$; linear algebra $<0.1\%$. &
+Per-target finder cost $\sim|V|$, relation $\sim2p/d$ additions, total $\sim p$ independent of $d$. Hash/enumeration finders cost $\ge p^{1/2-1/(2m)}$ per relation while the accounting needs $T<p^{1/2-1/m}$; Gr\"obner/resultant collapses to a degree-$|V|$ univariate problem (time $\sim d^{2.1}$--$d^{3}$); no subfield over $\mathbb F_p$ for Weil restriction. \\
+\addlinespace
+\mbox{HYP-32e353ac} ETH-technique transfer (ECDLP-46; source ``openai/math family 378'', external, not peer reviewed) &
+Transfer of an ETH-refutation technique to ECDLP: direct CNF (SAT) route; summation-polynomial decomposition; predicates on $x$ alone; output bits of $x(kP)$. &
+Negative on every route, no prototype (decision gate not met). Direct CNF: affine encoding $\sim48\,\ell^{2.83}$ variables, ladder $\sim503\,\ell^{2.41}$; paper parameters (Lemma 4.8, $\beta=1$) only become non-vacuous at $\log_2 n\sim10^{10}$; summation-polynomial route costs $p^{2/(m+1)}$ total even with a free oracle; $S_3$ test encoding $\sim45.5(\log_2p)^2$ variables; ANF density of output bits $\sim0.5$ up to degree $\ell$. &
+Time $2^{Cn/\sqrt{\ln n}}$ beats rho only if $n/\ell<\sqrt{\ln n}/(2C)$, impossible for $n=c\,\ell^{a}$, $a>1$ (extrapolation from $\ell\le16$ is crude, but the ledger records the crossover inequality as exact); predicates on $x$ alone are $Q$-independent; no sparse ANF form. Parameter thresholds depend on the agent's reading of Sections~3--5 of the source (unreviewed). \\
+\addlinespace
+\mbox{HYP-93fbd7d0} Frontier exploration D (ECDLP-37, follow-ups) &
+(1) Structure-aware SAT encodings (x-only Montgomery ladder; native XOR via CryptoMiniSat); (2) Hensel-section cocycle $g(kP)=k\,g(P)-N S_k$ with Birkhoff sum $S_k$; (3) lift-variation idea. &
+No cost ratio vs rho is recorded. (1) Affine conflict exponents $1.27$ (Glucose4), $1.47$ (CaDiCaL); the ladder was unsolved within $120$ s at $n=5$--$7$. (2) Identity verified on $8$ curves ($p\le30011$); no low linear complexity, P-recursive or low-degree relation and no $k\bmod m$ dependence in the $p^2/p^3$ digits (the spectral flag was a null-model artefact; symmetry-respecting null $|z|\le2.6$, post hoc). All NULL. &
+(1) Structure-aware encodings are worse than the affine encoding. (2) The identity holds but the digits show no exploitable structure. (3) Killed: $4$ unknowns vs $3$ equations; the lift-dependent part is not low-degree. Not reproduced by the PI (long SAT runs); CryptoMiniSat \texttt{key\_ok} flags invalid in some rows (indexing bug fixed, $9$ instances re-validated by the agent). \\
+\addlinespace
+\mbox{HYP-6da71353} Frontier exploration E (ECDLP-41, integer structure) &
+Distinguishers on integer structure of $x(Q)$ at $p=524309$ (two prime-order curves, seeds $1,2$): E1 local carry/bit/order/difference correlations of $x(Q)$ vs $x(Q+jP)$; E2 index differences of integer-sorted neighbours; E6 three-term carry $c_k=[x_{k+1}+x_{k-1}\ge p]$; E4 HNP-lattice; E5 lifting smoothness. &
+No cost ratio vs rho or scaling exponent is recorded. E1 null (a $2\%$ planted signal was detected, $z=28$--$760$); E2 null; E6 fails the pre-registered two-seed rule ($p_T=0.025$, $0.050$ at different $h$; positive control $p_T=0.005$); E4 and E5 killed by derivation/literature. &
+E5: $\sim2^{18}$-bit numerators at rank $29$ for a 256-bit $p$. Toy size only; absence of signal is not absence of structure. E1 null draws were reduced ($60/20$) after a timeout (recorded in an amendment). \\
+\end{longtable}
+}
+
+\paragraph{Reading the table.} Rows A--D and ETH measure cost against rho and find none below it (the ratios above are all $>1$ except the constant-factor effects of known techniques in rows B and C, which the ledger records as known and as constant factors).
+Rows Frontier~D and Frontier~E are null results of structure searches, with no cost comparison. The ledger outcome \emph{refuted} refers to the hypothesis that the candidate beats rho (or carries a usable signal), at the tested sizes.
+This table is the laboratory's measurement record, not a survey of the literature on ECDLP algorithms, and it makes no novelty claim for the known techniques it re-measured.
+
 \section{Limitations}\label{sec:limits}
 \begin{itemize}
 \item Degree is not time. A lower bound on $\deg g$ for polynomials in one variable $x(kP)$ does not bound the running time of any algorithm, and we draw no bit-complexity consequence.
