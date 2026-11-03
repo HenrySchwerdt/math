@@ -1,0 +1,28 @@
+{
+  "id": "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd",
+  "type": "HYP",
+  "title": "Corrected Theorem A / A' (interpolation and algebraic-SLP lower bounds)",
+  "created_at": "2026-11-03T10:08:42.333676Z",
+  "status": "open",
+  "question": "Theorem A (corrected, generalized): Let E/F_p be short Weierstrass and P in E(F_p) of order r >= 3 (no condition r != p). If a rational function f on E is defined at kP and satisfies f(kP) = k mod p for 1 <= k <= N <= r-1, then deg(f) (pole divisor degree) >= (N-1)/2, and a polynomial f in X, Y has total degree >= (N-1)/6. Proof: h = f\u2218\u03c4_P \u2212 f \u2212 1 has the N\u22121 distinct zeros kP (1 <= k <= N\u22121) and deg h <= 2 deg f; if h \u2261 0 then the pole set of f is invariant under translation by P, so it is a union of <P>-orbits of size r, giving deg f >= r > (N\u22121)/2 (f is nonconstant since f(P) != f(2P) when N >= 2). Theorem A' (corrected constant, explicit model): in the algebraic SLP model over F_q with +, \u2212, \u00d7, \u00f7 where every division is defined at every kP (no comparisons, no x/0 convention), computing k mod p for all kP, 1 <= k <= N, requires length >= log2((N\u22121)/6). The \u03a9(n^2) bit-cost statement holds only under the extra charge of \u03a9(log q) bit operations per field operation; it is not a bit-complexity lower bound for ECDLP.",
+  "rationale": "Corrected variant from blind adversarial review ECDLP-17; original HYP-5a550ab6 kept with its flawed proof step recorded.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-5a550ab6-75ad-4e6b-a08c-af2a066c69c7",
+    "RUN-4b283c25-b43d-4720-994d-3c285789a273",
+    "TSK-868a3543-c6d2-4607-8540-72b78e2969be",
+    "REV-83ec2fc9-e871-4434-a5da-49db92c61a55",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round6-review/out_review_checks.txt"
+  ],
+  "claims": [
+    "Theorem A (corrected, generalized): Let E/F_p be short Weierstrass and P in E(F_p) of order r >= 3 (no condition r != p). If a rational function f on E is defined at kP and satisfies f(kP) = k mod p for 1 <= k <= N <= r-1, then deg(f) (pole divisor degree) >= (N-1)/2, and a polynomial f in X, Y has total degree >= (N-1)/6. Proof: h = f\u2218\u03c4_P \u2212 f \u2212 1 has the N\u22121 distinct zeros kP (1 <= k <= N\u22121) and deg h <= 2 deg f; if h \u2261 0 then the pole set of f is invariant under translation by P, so it is a union of <P>-orbits of size r, giving deg f >= r > (N\u22121)/2 (f is nonconstant since f(P) != f(2P) when N >= 2). Theorem A' (corrected constant, explicit model): in the algebraic SLP model over F_q with +, \u2212, \u00d7, \u00f7 where every division is defined at every kP (no comparisons, no x/0 convention), computing k mod p for all kP, 1 <= k <= N, requires length >= log2((N\u22121)/6). The \u03a9(n^2) bit-cost statement holds only under the extra charge of \u03a9(log q) bit operations per field operation; it is not a bit-complexity lower bound for ECDLP."
+  ],
+  "proof_status": "reviewed",
+  "outcome": "unresolved",
+  "next_action": "Lean formalization is hard (rational functions on Weierstrass curves); prioritize Theorem B. Retrieve Lange\u2013Winterhof full text to settle novelty.",
+  "notes": "Reviewer: adversarial-critic (Sonnet, configured); PI checked the p|r example (p=5, E: y^2=x^3+3x, P=(2,2) of order 10) with the toy oracle. Rational interpolants with deg ~ (N+1)/2 exist, so the constant 1/2 is nearly sharp for rational f. Novelty not found / not settled."
+}

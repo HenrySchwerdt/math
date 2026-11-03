@@ -1,0 +1,54 @@
+{
+ "seed": 20261108,
+ "checks": {
+  "p4001": {
+   "a": 2910,
+   "b": 3424,
+   "order": 3922,
+   "S3_tuples": 600,
+   "S3_bad": 0,
+   "S4_tuples": 600,
+   "S4_bad": 0
+  },
+  "p15791": {
+   "a": 973,
+   "b": 11594,
+   "order": 15589,
+   "S3_tuples": 600,
+   "S3_bad": 0,
+   "S4_tuples": 600,
+   "S4_bad": 0
+  },
+  "p65537": {
+   "a": 35855,
+   "b": 3893,
+   "order": 65848,
+   "S3_tuples": 600,
+   "S3_bad": 0,
+   "S4_tuples": 600,
+   "S4_bad": 0
+  },
+  "p1000003": {
+   "a": 351992,
+   "b": 525934,
+   "order": 999200,
+   "S3_tuples": 600,
+   "S3_bad": 0,
+   "S4_tuples": 600,
+   "S4_bad": 0
+  }
+ },
+ "total_S3_tuples": 2400,
+ "total_S4_tuples": 2400,
+ "completeness_p4001": {
+  "tuples": 300,
+  "root_set_equals_expected": 300,
+  "not_equal": 0,
+  "reasons": {}
+ },
+ "negative_control": {
+  "random_x4": 2098,
+  "spurious_zero": 0,
+  "note": "random x4 outside expected set with S_4=0: genuinely rare only if roots==expected (see not_equal)"
+ }
+}
