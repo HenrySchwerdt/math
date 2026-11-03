@@ -1,0 +1,31 @@
+{
+  "id": "TSK-1bb330e5-131f-4df3-8496-c3f2800911ad",
+  "type": "TSK",
+  "title": "Round 10 / ECDLP-29: frontier exploration B (computation models, problem reformulations, learning)",
+  "created_at": "2026-11-03T10:50:39.564173Z",
+  "status": "active",
+  "question": "Propose and cheaply test deliberately unconventional but sensible ideas toward faster ECDLP from computation models, reformulations of the problem statement, and data-driven/learning approaches not yet investigated by the lab.",
+  "rationale": "Round-10 selection by PI; user requested a standing agent for unconventional research.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-42d8ddff-f100-41da-ba60-56e02ca8e1fd.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute.",
+  "notes": "Created by PI RUN-62dbda7c. Executed via the discovery adapter (claude-sonnet-5-5) following docs/roles/frontier-explorer.md, because this session's agent registry predates the new frontier-explorer adapter.",
+  "success_criteria": [
+    "Every idea states property, escaped barrier assumption, obligations, killers, cheapest test, prior work; at least one cheapest test executed with pre-registered protocol; negative results reported."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-071d1da9-2aeb-4e6d-8980-bf03cd153ee3.md",
+    "research/ecdlp/runs/RUN-071d1da9-2aeb-4e6d-8980-bf03cd153ee3.json",
+    "research/ecdlp/experiments/round10-frontier-b/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; computations < 5 min; \u2264 15 web lookups; no commits; ~75 min."
+}

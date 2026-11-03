@@ -1,0 +1,42 @@
+{
+  "id": "RUN-d97ea396-7973-41b4-83c1-53d4666de611",
+  "type": "RUN",
+  "title": "Round 10 / ECDLP-28: frontier exploration A (mathematics and physics analogies)",
+  "created_at": "2026-11-03T10:50:39.529089Z",
+  "status": "active",
+  "question": "Propose and cheaply test deliberately unconventional but sensible ideas toward faster ECDLP drawn from mathematics/physics analogies not yet investigated by the lab.",
+  "rationale": "Bounded subagent run for TSK-325a6b5b-bce9-454a-b1cd-32489fc044a6",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-325a6b5b-bce9-454a-b1cd-32489fc044a6",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Executed via the discovery adapter (claude-sonnet-5-5) following docs/roles/frontier-explorer.md, because this session's agent registry predates the new frontier-explorer adapter. Runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T10:50:57.579959Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "frontier-explorer",
+    "task": "TSK-325a6b5b-bce9-454a-b1cd-32489fc044a6",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    ],
+    "starting_commit": "3d6849aa2d2739ac03464e94fc5a1fb3171d5e55",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}

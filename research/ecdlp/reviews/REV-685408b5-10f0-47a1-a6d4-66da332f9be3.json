@@ -1,0 +1,31 @@
+{
+  "id": "REV-685408b5-10f0-47a1-a6d4-66da332f9be3",
+  "type": "REV",
+  "title": "Draft \u2014 define before work",
+  "created_at": "2026-11-03T10:50:39.705855Z",
+  "status": "open",
+  "question": "Unassigned; define exact question",
+  "rationale": "Unassigned; record why selected",
+  "assumptions": [],
+  "sources": [],
+  "refs": [],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Draft only; no execution or verification claimed.",
+  "review": {
+    "run": null,
+    "target_commit": null,
+    "targets": [],
+    "decision": "revise",
+    "rationale": "Review not performed",
+    "counterexamples": [
+      "Not attempted"
+    ],
+    "complexity": "Not reviewed",
+    "limitations": "Draft review, not an assessment",
+    "initial_packet": "Not supplied"
+  }
+}
