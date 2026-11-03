@@ -16,7 +16,8 @@
     "RUN-eb84ffa8-cc30-4f6e-9f0d-19c4de805b3b",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
     "PRF-5357b698-39ee-4eee-b27c-b4f1345c06f6",
-    "RUN-ac3107bf-b5bd-44a0-ae47-8413aed2f895"
+    "RUN-ac3107bf-b5bd-44a0-ae47-8413aed2f895",
+    "REV-685408b5-10f0-47a1-a6d4-66da332f9be3"
   ],
   "evidence": [
     "research/ecdlp/experiments/round8-review/crit_check.py",
@@ -29,5 +30,5 @@
   "proof_status": "reviewed",
   "outcome": "verified",
   "next_action": "Lean formalization of (2) is feasible by extending Interpolation/CurveX (subset version of the root count); (1) needs function-field degree theory.",
-  "notes": "Reviewed by adversarial-critic (blind): (1),(1a),(1b),(1d) correct (1 with the dichotomy wording); (2) correct only with N <= (r-1)/2 (or r != p). 0 violations in toy tests for the corrected statements. \"N < p is necessary\" in the original overstated: N <= min(p,r) suffices. Novelty unsettled. | Part (2) main inequality formally verified (PRF-5357b698-39ee-4eee-b27c-b4f1345c06f6) over general fields with the extra hypothesis (deg g >= 1 or (j:F) != 0), which is automatic over F_p in this range. Part (1) not formalized."
+  "notes": "Reviewed by adversarial-critic (blind): (1),(1a),(1b),(1d) correct (1 with the dichotomy wording); (2) correct only with N <= (r-1)/2 (or r != p). 0 violations in toy tests for the corrected statements. \"N < p is necessary\" in the original overstated: N <= min(p,r) suffices. Novelty unsettled. | Part (2) main inequality formally verified (PRF-5357b698-39ee-4eee-b27c-b4f1345c06f6) over general fields with the extra hypothesis (deg g >= 1 or (j:F) != 0), which is automatic over F_p in this range. Part (1) not formalized. | Part (2) Lean proof accepted by REV-685408b5-10f0-47a1-a6d4-66da332f9be3 (5,489,316 toy cases, no violations). PI justification of the extra hypothesis corrected (see PRF-5357b698-39ee-4eee-b27c-b4f1345c06f6)."
 }
