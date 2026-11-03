@@ -1,0 +1,60 @@
+{
+  "id": "RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e",
+  "type": "RUN",
+  "title": "Round 15 / inventor F: m=3 index calculus under the relation-supply criterion",
+  "created_at": "2026-11-03T12:36:43.757643Z",
+  "status": "completed",
+  "question": "Inventor E proved relation supply forces >= 1.22 sqrt p for m=2. For m=3 (S_4) the supply floor is s >= p^{1/3}, so beating rho needs a decomposition finder costing < p^{1/6} per relation on a base of size ~p^{1/3}. Is there a structured base (multiplicative subgroup, image of a low-degree map, isogeny kernel coset) on which the S_4 decomposition is that cheap? Measure finder cost exponents at toy sizes.",
+  "rationale": "Bounded run for TSK-f66a723c-a07f-4fbb-aec1-d86113dce60d",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-f66a723c-a07f-4fbb-aec1-d86113dce60d",
+    "HYP-720e359e-db30-43a5-bf3a-f5b5c33964b6",
+    "HYP-23351e75-1cf5-4f17-8a78-2ff0f89b51ff"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-213aa0d3-814c-4818-b37f-f6d5b6a686d0.evidence",
+    "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-8a10598b-487d-49f6-b2d6-f51ea44cd7f6.evidence",
+    "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-9d978926-9113-4bfe-993e-ac7e11f39692.evidence",
+    "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-ea129225-3799-4a69-9204-c730bda48a57.evidence",
+    "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-f18c722a-cf49-4f66-843d-f4170c6e885d.evidence",
+    "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-e06ca4df-0c82-41b6-ad5a-871304bfe016.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "refuted",
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T12:36:43.769359Z",
+    "completed_at": "2026-11-03T12:52:50.149949Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor",
+    "task": "TSK-f66a723c-a07f-4fbb-aec1-d86113dce60d",
+    "input_hypotheses": [
+      "HYP-720e359e-db30-43a5-bf3a-f5b5c33964b6",
+      "HYP-23351e75-1cf5-4f17-8a78-2ff0f89b51ff"
+    ],
+    "starting_commit": "06b3d011fc7c3430e5e76208824f92d158bfc32a",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [
+      "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-213aa0d3-814c-4818-b37f-f6d5b6a686d0.evidence",
+      "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-8a10598b-487d-49f6-b2d6-f51ea44cd7f6.evidence",
+      "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-9d978926-9113-4bfe-993e-ac7e11f39692.evidence",
+      "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-ea129225-3799-4a69-9204-c730bda48a57.evidence",
+      "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-f18c722a-cf49-4f66-843d-f4170c6e885d.evidence",
+      "research/ecdlp/runs/RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e-command-e06ca4df-0c82-41b6-ad5a-871304bfe016.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/experiments/round15-inventor-f/"
+    ],
+    "resulting_commit": "232aed68de63813795e276462e3af2cbfc997299",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

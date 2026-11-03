@@ -1,0 +1,31 @@
+{
+  "id": "DEC-4eb32573-4d72-481d-9fe2-2bcdf824dc3e",
+  "type": "DEC",
+  "title": "Checkpoint after round 15: index calculus closed on generic prime-field curves at toy scale",
+  "created_at": "2026-11-03T12:53:05.431067Z",
+  "status": "completed",
+  "question": "Where should capacity go after rounds 11-15 (all constructive candidates negative)?",
+  "rationale": "Rounds 11-15 ran 9 benchmarked constructive candidates and 2 frontier explorations under the 60/20/10/10 allocation; every one reproduced sqrt(r) or worse. Inventor E (m=2 supply bound), inventor F (m=3 ~ r^{2/3}) and frontier F (ambient groups only lose relations) close the index-calculus family for generic prime-order prime-field curves at toy scale.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "DEC-c4507e30-a257-49d5-8a77-9bbe29bb62dd",
+    "HYP-23351e75-1cf5-4f17-8a78-2ff0f89b51ff",
+    "HYP-720e359e-db30-43a5-bf3a-f5b5c33964b6",
+    "HYP-3c665e7b-e7e5-41d2-9c9d-b687c750700c",
+    "HYP-d6cc9bce-05d5-4d2b-92f8-e4baf3b986e0",
+    "HYP-d913fa61-f707-46da-8a84-906b06948f42",
+    "HYP-32e353ac-ce65-4da1-bb42-44d7b6851f15",
+    "HYP-6da71353-1963-4cfd-824e-0ae14e063417"
+  ],
+  "evidence": [],
+  "claims": [
+    "Index calculus (m=2,3), ambient-group transfers, representation changes, lifted relations, precomputation/batching, integer-structure distinguishers and the ETH technique are closed as routes to sub-sqrt(r) on generic curves at toy scale (experimental evidence, not proofs).",
+    "Remaining open questions with a nonzero prior: (1) structured factor bases with more-than-random closure in the group (none found; x-structure is not group structure); (2) finders for m>=4 below s^{ceil(m/2)} together with subquadratic sparse linear algebra; (3) fixed-curve non-generic precomputation using comparisons/bits (not covered by Shoup or by our algebraic theorems).",
+    "Allocation going forward: keep 60% constructive but only on genuinely new mechanisms with a written kill criterion derived from the supply/finder accounting; stop re-testing closed families; report to the user that further rounds have low expected yield."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Package round 15; next constructive round only for ideas that pass the supply/finder accounting on paper first.",
+  "notes": "Recorded by PI RUN-62dbda7c. No improvement over Pollard rho exists in the ledger; none is claimed."
+}

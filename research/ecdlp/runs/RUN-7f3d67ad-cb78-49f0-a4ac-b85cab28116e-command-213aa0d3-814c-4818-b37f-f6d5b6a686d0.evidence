@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round15-inventor-f && sha256sum PROTOCOL.md && python3 t_smoke.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:41:51.302726Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:41:51.471964Z",
+  "truncated": false,
+  "output": "10c14b98512616d777ce4d7c66f14357ee5cacbfe9edd56c30d2a40eecfb340d  PROTOCOL.md\np 53633 r 53381 d 64 s 27\ndecompositions 633 bad 0\n{'k': 33699, 'ok': True, 's': 27, 'targets': 43, 'relations': 25, 'build_adds': 378, 'finder_adds': 1161, 'gen_adds': 43, 'la_mults': 402} 0.005404949188232422\n"
+}

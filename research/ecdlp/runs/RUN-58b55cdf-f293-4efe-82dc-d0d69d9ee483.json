@@ -1,0 +1,68 @@
+{
+  "id": "RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483",
+  "type": "RUN",
+  "title": "Round 15 / frontier F: relation-supply calculus across ambient groups",
+  "created_at": "2026-11-03T12:36:43.850305Z",
+  "status": "completed",
+  "question": "Using the supply criterion (relations available vs unknowns), can embedding E(F_p) into a larger group G (E(F_{p^n}) by base change, Weil restriction, Jacobians J(C) of covers C->E, products E x E' glued along torsion) raise relation supply faster than the number of unknown logs, so that index calculus in G pushes down to a sub-sqrt algorithm on E(F_p)? Derive the supply/unknowns ratio for each ambient group and find the exact obstruction or a candidate.",
+  "rationale": "Bounded run for TSK-5646c167-f70d-4ba3-9ea7-962d6cc87db0",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-5646c167-f70d-4ba3-9ea7-962d6cc87db0",
+    "HYP-3c665e7b-e7e5-41d2-9c9d-b687c750700c"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-a3b41adc-492e-4e79-b3d9-226e1990133b.evidence",
+    "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-27495107-63ec-4c49-88a0-e9a9e090e9e5.evidence",
+    "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-5558cfe4-b99a-4e95-9ffa-39a7d9d5dd0b.evidence",
+    "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-bfd427c1-bdb7-408a-9096-4247e5e13963.evidence",
+    "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-2fe232a6-937d-40e7-b39f-e2f68a5745c4.evidence",
+    "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-78eb5d79-1dee-4d4a-913e-66031151d460.evidence",
+    "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-1a16a8bf-8bff-4cbe-8bda-b1090a78d4c7.evidence",
+    "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-31639d9a-8ca0-4c47-a461-693e493d9767.evidence",
+    "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-bd6ff199-5ed1-4c9a-b61e-94ccd383feae.evidence",
+    "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-b5b041ac-cbbb-4d29-9c90-44c982c007b8.evidence",
+    "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-d99cf5a2-1fa2-4c09-9979-68db524ff1ec.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "refuted",
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T12:36:43.850680Z",
+    "completed_at": "2026-11-03T12:43:21.780838Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "frontier-explorer",
+    "task": "TSK-5646c167-f70d-4ba3-9ea7-962d6cc87db0",
+    "input_hypotheses": [
+      "HYP-3c665e7b-e7e5-41d2-9c9d-b687c750700c"
+    ],
+    "starting_commit": "06b3d011fc7c3430e5e76208824f92d158bfc32a",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [
+      "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-a3b41adc-492e-4e79-b3d9-226e1990133b.evidence",
+      "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-27495107-63ec-4c49-88a0-e9a9e090e9e5.evidence",
+      "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-5558cfe4-b99a-4e95-9ffa-39a7d9d5dd0b.evidence",
+      "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-bfd427c1-bdb7-408a-9096-4247e5e13963.evidence",
+      "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-2fe232a6-937d-40e7-b39f-e2f68a5745c4.evidence",
+      "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-78eb5d79-1dee-4d4a-913e-66031151d460.evidence",
+      "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-1a16a8bf-8bff-4cbe-8bda-b1090a78d4c7.evidence",
+      "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-31639d9a-8ca0-4c47-a461-693e493d9767.evidence",
+      "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-bd6ff199-5ed1-4c9a-b61e-94ccd383feae.evidence",
+      "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-b5b041ac-cbbb-4d29-9c90-44c982c007b8.evidence",
+      "research/ecdlp/runs/RUN-58b55cdf-f293-4efe-82dc-d0d69d9ee483-command-d99cf5a2-1fa2-4c09-9979-68db524ff1ec.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/experiments/round15-frontier-f/"
+    ],
+    "resulting_commit": "03134a2d89d27ae832d847bfd6c8cd1e618a349d",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

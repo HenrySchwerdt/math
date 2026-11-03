@@ -1,0 +1,28 @@
+{
+  "id": "HYP-be407930-600e-4b96-a63e-1cc58fa06947",
+  "type": "HYP",
+  "title": "Inventor F: m=3 index calculus needs ~r^{2/3}; structured bases give no excess closure",
+  "created_at": "2026-11-03T12:52:49.399178Z",
+  "status": "completed",
+  "question": "Inventor F (ECDLP-52, m=3 index calculus under the supply criterion): negative. Supply: closed S_4 quadruples among s base points ~ 8 C(s,4)/r ~ s^4/(3r), so s >= (3r)^{1/3}; observed/predicted 0.991-1.005 on six base families (multiplicative coset, small-x, random-x, quadratic/cubic images, g t^3) at 18-27 bits: structure on x gives no excess closure. Best finder (2+1 split hash with pair-sum table): 24/24 coset instances solved end to end (16-30 bits), controls 12/12 within 0.91-1.06; total ~1.5 r^{2/3}, fitted exponent 0.651 [0.642,0.661] vs 0.5; 8.6x rho at 16 bits, 36x at 30 bits; per-relation cost ~ r^{1/3} (37 to 920 additions) vs required r^{1/6}. Obstacles: supply floor for any finder; linear algebra ~4 s^2 (model) already exceeds sqrt r; hash finders >= min_s (s^2 + r/s) ~ r^{2/3}; Groebner degrades to enumeration (sympy D=6: 29 s, D=8: 216 s, D>=10 timeout); x-structure is not group structure, group-compatible structure (kernel cosets, endomorphism orbits) empty/trivial in prime order.",
+  "rationale": "Exact quantitative gap left open by inventors D and E.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-7f3d67ad-cb78-49f0-a4ac-b85cab28116e",
+    "HYP-3c665e7b-e7e5-41d2-9c9d-b687c750700c",
+    "HYP-720e359e-db30-43a5-bf3a-f5b5c33964b6"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round15-inventor-f/analysis.txt",
+    "research/ecdlp/experiments/round15-inventor-f/PROTOCOL.md",
+    "research/ecdlp/experiments/round15-inventor-f/SHA256SUMS"
+  ],
+  "claims": [
+    "Inventor F (ECDLP-52, m=3 index calculus under the supply criterion): negative. Supply: closed S_4 quadruples among s base points ~ 8 C(s,4)/r ~ s^4/(3r), so s >= (3r)^{1/3}; observed/predicted 0.991-1.005 on six base families (multiplicative coset, small-x, random-x, quadratic/cubic images, g t^3) at 18-27 bits: structure on x gives no excess closure. Best finder (2+1 split hash with pair-sum table): 24/24 coset instances solved end to end (16-30 bits), controls 12/12 within 0.91-1.06; total ~1.5 r^{2/3}, fitted exponent 0.651 [0.642,0.661] vs 0.5; 8.6x rho at 16 bits, 36x at 30 bits; per-relation cost ~ r^{1/3} (37 to 920 additions) vs required r^{1/6}. Obstacles: supply floor for any finder; linear algebra ~4 s^2 (model) already exceeds sqrt r; hash finders >= min_s (s^2 + r/s) ~ r^{2/3}; Groebner degrades to enumeration (sympy D=6: 29 s, D=8: 216 s, D>=10 timeout); x-structure is not group structure, group-compatible structure (kernel cosets, endomorphism orbits) empty/trivial in prime order."
+  ],
+  "proof_status": "experimental",
+  "outcome": "refuted",
+  "next_action": "Closed. Index calculus on generic prime-order prime-field curves is closed for m=2 (supply) and m=3 (finder + linear algebra) at toy scale.",
+  "notes": "PI re-ran analyze.py via exec: identical; PROTOCOL.md hash verifies. Kernel-coset 4-distinct refinement post hoc (labelled). Linear-algebra cost is a model, not a proved bound. No external sources retrieved (PKM/Semaev second-hand). Toy sizes 16-30 bits; 8 sizes x 3 seeds. No independent review."
+}

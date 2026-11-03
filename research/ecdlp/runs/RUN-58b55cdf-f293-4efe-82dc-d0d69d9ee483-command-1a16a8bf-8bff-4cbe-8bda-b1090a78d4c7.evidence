@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round15-frontier-f/f2_bielliptic.py",
+    "1009",
+    "1",
+    "8"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:40:39.755296Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:40:39.970291Z",
+  "truncated": false,
+  "output": "{'p': 1009, 'r': 1013, 'r2': 1027, 'places': 1028, 's': 444, 'pushed_down_closed': 42740, 'full_J_closed': 42, 'ratio': 1017.6190476190476, 'predicted_ratio_if_random': 1027}\n"
+}

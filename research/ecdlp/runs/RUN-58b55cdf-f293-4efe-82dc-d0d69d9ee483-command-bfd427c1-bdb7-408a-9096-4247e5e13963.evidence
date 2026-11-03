@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round15-frontier-f/f1_fp2_split.py",
+    "1009",
+    "1",
+    "3"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:40:19.769260Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:40:19.833815Z",
+  "truncated": false,
+  "output": "{'p': 1009, 'order': 1013, 'twist_order': 1007, 'order_Fp2': 1020091, 's': 93, 'nE_x': 51, 'nT_x': 42, 'closed': {'TTT': 256, 'EEE': 510}}\n"
+}

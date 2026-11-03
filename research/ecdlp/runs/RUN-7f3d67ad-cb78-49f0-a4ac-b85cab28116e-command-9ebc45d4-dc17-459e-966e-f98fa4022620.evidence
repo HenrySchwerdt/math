@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round15-inventor-f && for d in 16 20; do timeout 130 python3 f3_groebner.py $d 1; done > out_gb_b.jsonl 2> err_gb_b.txt"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:44:39.471452Z",
+  "exit_code": 124,
+  "completed_at": "2026-11-03T12:48:59.514566Z",
+  "truncated": false,
+  "output": ""
+}
