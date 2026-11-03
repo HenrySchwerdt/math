@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round21-tournament-b && timeout 270 python3 expA_supply.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:19:24.935395Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T18:19:25.303151Z",
+  "truncated": false,
+  "output": "d=2 s=40  mean obs/pred over 4 curves x5 draws = 0.903 (min 0.884 max 0.947)\nd=2 s=80  mean obs/pred over 4 curves x5 draws = 0.940 (min 0.919 max 0.955)\nd=2 s=160  mean obs/pred over 4 curves x5 draws = 0.974 (min 0.973 max 0.975)\nd=3 s=12  mean obs/pred over 4 curves x5 draws = 0.901 (min 0.475 max 1.183)\nd=3 s=24  mean obs/pred over 4 curves x5 draws = 0.954 (min 0.924 max 0.993)\nd=3 s=40  mean obs/pred over 4 curves x5 draws = 0.996 (min 0.974 max 1.025)\n"
+}
