@@ -1,0 +1,40 @@
+{
+  "id": "RUN-2a8442e2-9a37-4104-b9e8-95d3f7798297",
+  "type": "RUN",
+  "title": "Technical report v2: barrier map and negative algorithm map (rounds 1-13)",
+  "created_at": "2026-11-03T12:13:39.352684Z",
+  "status": "active",
+  "question": "Revise internal technical report PAP-ef6e2010 to v2: apply review items R1-R5, add RationalSLP, Theorem DT (with E3 scope), corrected Theorem E, and a section mapping all benchmarked algorithm candidates vs rho.",
+  "rationale": "Bounded run for TSK-ba0a414f-db1d-4e40-bfb4-a680e7d7e5d4",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-ba0a414f-db1d-4e40-bfb4-a680e7d7e5d4",
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T12:13:39.353038Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "research-worker",
+    "task": "TSK-ba0a414f-db1d-4e40-bfb4-a680e7d7e5d4",
+    "input_hypotheses": [],
+    "starting_commit": "2d5f3e20409a03edfd0d929271d80ad866a3741e",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}
