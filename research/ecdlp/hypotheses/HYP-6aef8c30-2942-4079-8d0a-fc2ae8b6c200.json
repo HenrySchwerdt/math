@@ -3,7 +3,7 @@
   "type": "HYP",
   "title": "SLP barrier with division (rational x-only analogue of Theorem C)",
   "created_at": "2026-11-03T11:00:36.751937Z",
-  "status": "open",
+  "status": "completed",
   "question": "SLP barrier with division (x-only): over a field F (2 != 0), W short Weierstrass, P of order r, 2N < r. Any straight-line program over F with +, \u2212, \u00d7, \u00f7 and constants, single input u = x(Q), in which every division is defined (nonzero divisor) at every u = x(kP), 1 <= k <= N, and whose output equals k at u = x(kP), has length L >= log2((N \u2212 c)/c') for explicit constants (expected: the output is a rational function g = A/B of degree max(deg A, deg B) <= 2^L, and a rational analogue of Theorem C gives N <= 3\u00b7deg + O(1) or similar).",
   "rationale": "Per DEC resource allocation: lower bounds in richer algebraic models; next step after HYP-92a9b4d9.",
   "assumptions": [],
@@ -14,7 +14,8 @@
     "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
     "PRF-9586acb8-9b42-489b-83bc-9bbbbd9519ba",
-    "RUN-ce6e9aee-1730-443f-86c6-48b9dd3ba467"
+    "RUN-ce6e9aee-1730-443f-86c6-48b9dd3ba467",
+    "REV-7f70c161-46ee-4572-9054-e4e427b3c3aa"
   ],
   "evidence": [],
   "claims": [
@@ -23,7 +24,7 @@
   "proof_status": "formally-verified",
   "outcome": "verified",
   "next_action": "Next model: branching / comparisons (algebraic decision trees) \u2014 the remaining assumption of the algebraic barrier.",
-  "notes": "PI-derived. | Formally verified (PRF-9586acb8-9b42-489b-83bc-9bbbbd9519ba) with explicit constants N <= 3*2^L + 2 (same as division-free). Independent review pending.",
+  "notes": "PI-derived. | Formally verified (PRF-9586acb8-9b42-489b-83bc-9bbbbd9519ba) with explicit constants N <= 3*2^L + 2 (same as division-free). Independent review pending. | Reviewed (REV-7f70c161-46ee-4572-9054-e4e427b3c3aa): accept.",
   "formal": {
     "lean_file": "MathResearch/ECDLP/RationalSLP.lean",
     "declaration": "MathResearch.ECDLP.RationalSLP.length_bound_rational_slp",

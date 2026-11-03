@@ -3,7 +3,7 @@
   "type": "PRF",
   "title": "Lean: division-free algebraic SLP length bound for x-only DL computation",
   "created_at": "2026-11-03T11:00:36.641695Z",
-  "status": "active",
+  "status": "completed",
   "question": "Formal proof of HYP-92a9b4d9 (program-length part).",
   "rationale": "ECDLP-32; corollary of Theorems B/C.",
   "assumptions": [],
@@ -11,7 +11,8 @@
   "refs": [
     "HYP-92a9b4d9-827b-45fc-b881-1e7cf3b3443b",
     "TSK-af4a7113-a8c4-49df-9099-2b7d7f648846",
-    "RUN-e44599c2-9911-4297-898b-8950066b8adf"
+    "RUN-e44599c2-9911-4297-898b-8950066b8adf",
+    "REV-7f70c161-46ee-4572-9054-e4e427b3c3aa"
   ],
   "evidence": [
     "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-94bd6bd6-9c44-47e7-9743-cd567e803d9f.evidence",
@@ -26,8 +27,8 @@
   ],
   "proof_status": "formally-verified",
   "outcome": "verified",
-  "next_action": "Batched independent review with the next formal result.",
-  "notes": "Source commit bff5e14c0f187719fb79c07f7768a2856f20604a; lake build 3166 jobs, 0 warnings; standard axioms. Model: division-free SLP over a comm. ring, single input x(Q), constants free, out-of-range indices read 0; no branching/comparisons. Bit-cost consequence NOT formalized.",
+  "next_action": "Accepted.",
+  "notes": "Source commit bff5e14c0f187719fb79c07f7768a2856f20604a; lake build 3166 jobs, 0 warnings; standard axioms. Model: division-free SLP over a comm. ring, single input x(Q), constants free, out-of-range indices read 0; no branching/comparisons. Bit-cost consequence NOT formalized. | Independent batched review REV-7f70c161-46ee-4572-9054-e4e427b3c3aa: accept (formal correctness only; no branching/comparison/bit access/P-as-input; degree invariant loose by factor 2).",
   "formal": {
     "lean_file": "MathResearch/ECDLP/SLPBound.lean",
     "declaration": "MathResearch.ECDLP.SLPBound.length_bound_linear_short_weierstrass",
