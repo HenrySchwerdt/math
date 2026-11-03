@@ -9,11 +9,13 @@
   "assumptions": [],
   "sources": [],
   "refs": [],
-  "evidence": [],
+  "evidence": [
+    "research/platform/events/EVT-42633d6b-3c0a-4e13-a253-5a4bfdc92b01.evidence"
+  ],
   "claims": [],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Implement the task-centric board and verify its execution timeline.",
+  "next_action": "Complete independent review and publish the CLI-backed task history.",
   "notes": "Draft only; no execution or verification claimed.",
   "success_criteria": [
     "Persist readable project-scoped task aliases while preserving canonical UUIDs.",

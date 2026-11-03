@@ -66,6 +66,21 @@ def task_activity(root, task, rows, repo, commit):
     """Only timestamped observations; no inferred research milestones."""
     events = [dict(kind='created', time=task['created_at'], title='Task created',
                    detail=task['rationale'], record=task['id'])]
+    for evidence in task.get('evidence', []):
+        if 'private' in Path(evidence).parts:
+            continue
+        path = (root / evidence).resolve()
+        if not path.is_relative_to(root.resolve()) or not path.is_file():
+            raise ValueError('Missing or nonportable task evidence')
+        if path.suffix == '.evidence':
+            entry = json.loads(path.read_text())
+            if isinstance(entry, dict) and entry.get('kind') == 'task-status-change':
+                if entry['task'] != task['id']:
+                    raise ValueError('Task transition evidence belongs to another task')
+                title = (f"Status: {entry['before']['status']} → {entry['after']['status']}"
+                         if entry['before']['status'] != entry['after']['status'] else 'Task updated')
+                events.append(dict(kind='status', time=entry['timestamp'], title=title,
+                                   detail=entry['reason'], record=task['id'], evidence=f"{repo}/blob/{commit}/{quote(evidence, safe='/')}"))
     for d in rows:
         run = d.get('run', {})
         if d['type'] == 'RUN' and run.get('task') == task['id']:

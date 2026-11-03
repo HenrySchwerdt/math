@@ -70,3 +70,32 @@ ownership. Workers use their assigned task; they must not concurrently allocate
 numbers in separate worktrees. If two task-index edits conflict, reconcile before
 integration; validation rejects duplicate aliases. Site generation is read-only
 and never changes IDs or research status.
+
+## Updating tasks through the CLI
+
+Agents never edit website pages to report progress. They create/update shared
+records and record command evidence; the generator projects those records into
+the board, documentation and history. Publish their committed changes to main.
+
+```sh
+# A new task receives its project key automatically.
+.venv/bin/python scripts/research.py new ecdlp TSK
+# Explicit progress update from the task's active RUN:
+.venv/bin/python scripts/research.py task ecdlp ECDLP-1 \
+  --run RUN-<actual-assigned-run-id> --status active \
+  --reason 'Beginning the assigned toy lifecycle' \
+  --next-action 'Run the bounded counterexample test'
+```
+
+Use status `blocked` with a concrete reason when blocked. To complete a task,
+set `--status completed --outcome verified` (or another observed outcome), with
+a reason and next action. Task completion never changes mathematical proof status.
+`exec` automatically links timestamped command evidence to the assigned RUN.
+
+Each status command atomically updates the task and links a new immutable event
+under `research/<project>/events/`. The board reads these linked events directly.
+Only linked events count as applied; an interruption before the atomic task
+replace may leave an unreferenced event file. A per-task local lock prevents
+concurrent writers in one checkout; remote task claims and worktree ownership
+remain required across clones. Inspect an interrupted run before removing a stale
+local lock. Commit both the task and event files with the evidence.

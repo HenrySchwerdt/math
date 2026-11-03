@@ -11,3 +11,4 @@ website/.vitepress/cache/
 website/.vitepress/dist/
 website/.vitepress/ledger.json
 website/research/
+research/**/*.lock

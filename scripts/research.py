@@ -258,6 +258,14 @@ def main():
     key_parser = sub.add_parser('task-keys', help='Assign missing readable task keys (PI/integration only)')
     key_parser.add_argument('project')
     key_parser.add_argument('--prefix')
+    task_parser = sub.add_parser('task', help='Update task status and record the transition')
+    task_parser.add_argument('project')
+    task_parser.add_argument('task')
+    task_parser.add_argument('--run', required=True)
+    task_parser.add_argument('--status', required=True, choices=['open', 'active', 'blocked', 'completed'])
+    task_parser.add_argument('--reason', required=True)
+    task_parser.add_argument('--outcome', choices=['verified', 'refuted', 'unresolved', 'blocked', 'inconclusive'])
+    task_parser.add_argument('--next-action')
     for cmd in ('init', 'new', 'audit', 'claim', 'release', 'exec'):
         p = sub.add_parser(cmd)
         p.add_argument('project')
@@ -276,6 +284,9 @@ def main():
     a = parser.parse_args()
     if a.command == 'check':
         validate()
+    elif a.command == 'task':
+        from task_state import update
+        print(json.dumps(update(project(a.project), a.task, a.run, a.status, a.reason, a.outcome, a.next_action), indent=2))
     elif a.command == 'task-keys':
         from task_keys import register
         print(json.dumps(register(project(a.project), a.prefix), indent=2))
