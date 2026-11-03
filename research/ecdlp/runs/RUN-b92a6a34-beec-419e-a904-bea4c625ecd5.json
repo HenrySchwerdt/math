@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Independent correspondence review of PRF-af19eaae",
   "created_at": "2026-11-03T09:17:47.513051Z",
-  "status": "active",
+  "status": "completed",
   "question": "Do the Lean declarations in PRF-af19eaae correctly and fully express the stated HYP claims they are linked to?",
   "rationale": "REVIEW.md: independent review before acceptance.",
   "assumptions": [],
@@ -37,8 +37,11 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; owns REV-16b2db9b json/md and this RUN json/md",
     "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/reviews/REV-16b2db9b-7ec3-44be-a4af-bce61bd09baf.json",
+      "research/ecdlp/reviews/REV-16b2db9b-7ec3-44be-a4af-bce61bd09baf.md"
+    ],
+    "resulting_commit": "201c89e1c81207745fa87192f6c751a382a5e791",
     "tests": [],
     "benchmark": "Not applicable",
     "machine": "Claude Code remote Linux container",
