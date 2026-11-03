@@ -1,0 +1,42 @@
+{
+  "id": "RUN-7f221667-7800-4572-9a2d-0bc8fbe896bc",
+  "type": "RUN",
+  "title": "Round 8 / ECDLP-24: sourced classification of weak ECDLP curve families",
+  "created_at": "2026-11-03T10:29:51.219072Z",
+  "status": "active",
+  "question": "Which families of elliptic curves over finite fields admit ECDLP algorithms asymptotically faster than generic (beyond constant factors), with exact conditions, costs and verified sources; which are class-invariant vs endomorphism-dependent (incl. D3: small-norm elements of Z[pi]); and what is provably NOT a weak family for prime-order curves over prime fields with large embedding degree?",
+  "rationale": "Bounded subagent run for TSK-c3a23866-bbe0-40c6-8e4f-b44260aea5ae",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-c3a23866-bbe0-40c6-8e4f-b44260aea5ae",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T10:30:28.352567Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "group-theory",
+    "task": "TSK-c3a23866-bbe0-40c6-8e4f-b44260aea5ae",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    ],
+    "starting_commit": "30956cc3b89cdee0a6320c6121936fe3297123cd",
+    "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #5)",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}

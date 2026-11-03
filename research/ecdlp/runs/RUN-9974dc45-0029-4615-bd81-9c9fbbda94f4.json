@@ -1,0 +1,44 @@
+{
+  "id": "RUN-9974dc45-0029-4615-bd81-9c9fbbda94f4",
+  "type": "RUN",
+  "title": "Round 8 / ECDLP-25: Lean x-only interpolation bound for k (linear) on short Weierstrass curves",
+  "created_at": "2026-11-03T10:29:51.299881Z",
+  "status": "active",
+  "question": "Using the CurveX/Interpolation infrastructure, determine and formally prove the best degree lower bound for g in F[X] with g(x(kP)) = k for 1 <= k <= N < r/2 (x-only interpolation of the discrete log itself), or record why the second-difference argument degenerates.",
+  "rationale": "Bounded subagent run for TSK-78a350cd-9590-487e-ac4f-b018215eb7c2",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-78a350cd-9590-487e-ac4f-b018215eb7c2",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+    "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T10:30:28.352567Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization",
+    "task": "TSK-78a350cd-9590-487e-ac4f-b018215eb7c2",
+    "input_hypotheses": [
+      "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+      "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd"
+    ],
+    "starting_commit": "30956cc3b89cdee0a6320c6121936fe3297123cd",
+    "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #5)",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}

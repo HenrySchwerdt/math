@@ -1,0 +1,42 @@
+{
+  "id": "RUN-48ba5570-86dd-4069-83c7-6c613f689ffd",
+  "type": "RUN",
+  "title": "Round 8 / ECDLP-23: blind adversarial review of partial-agreement bounds",
+  "created_at": "2026-11-03T10:29:51.140396Z",
+  "status": "active",
+  "question": "Are the partial-agreement lower bounds in HYP-5da6025e correct as stated (hypotheses, constants, the h_j nonvanishing argument, the progression bound for x-only k^2)?",
+  "rationale": "Bounded subagent run for TSK-ac839694-d262-4a77-b4b6-20aae8662514",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-ac839694-d262-4a77-b4b6-20aae8662514",
+    "HYP-5da6025e-c665-473f-a06a-3f02a267fe8c"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T10:30:28.352567Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "adversarial-critic",
+    "task": "TSK-ac839694-d262-4a77-b4b6-20aae8662514",
+    "input_hypotheses": [
+      "HYP-5da6025e-c665-473f-a06a-3f02a267fe8c"
+    ],
+    "starting_commit": "30956cc3b89cdee0a6320c6121936fe3297123cd",
+    "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #5)",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}
