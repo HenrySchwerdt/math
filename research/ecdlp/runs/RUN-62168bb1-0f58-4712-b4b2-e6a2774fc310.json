@@ -1,0 +1,42 @@
+{
+  "id": "RUN-62168bb1-0f58-4712-b4b2-e6a2774fc310",
+  "type": "RUN",
+  "title": "Round 5 / ECDLP-13: prime-field factor-base frontier \u2014 literature and alternative factor-base definitions",
+  "created_at": "2026-11-03T09:47:33.667983Z",
+  "status": "active",
+  "question": "What exactly is proven/conjectured about index calculus on E(F_p), p prime (Semaev 2004, Petit\u2013Kosters\u2013Messeng 2016, Amadori\u2013Pintore\u2013Sala, Huang\u2013Kosters\u2013Yeo, Diem, Galbraith\u2013Gaudry survey), and are there algebraically defined factor bases on prime fields other than small-x (e.g. x in a multiplicative subgroup, images of small-degree maps/isogenies, points with small-height lifts) whose relation yield or decomposition cost can be tested cheaply at toy sizes?",
+  "rationale": "Bounded subagent run for TSK-01756ffe-3050-4b36-a549-b0fe8f44e1af",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-01756ffe-3050-4b36-a549-b0fe8f44e1af",
+    "HYP-db508348-69da-451b-ba37-d4d4f472c121"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T09:47:55.527662Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "discovery",
+    "task": "TSK-01756ffe-3050-4b36-a549-b0fe8f44e1af",
+    "input_hypotheses": [
+      "HYP-db508348-69da-451b-ba37-d4d4f472c121"
+    ],
+    "starting_commit": "b7ade5646f7146a04bf46f0e461033573e465a7e",
+    "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #2 head)",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

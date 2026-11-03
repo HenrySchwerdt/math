@@ -1,0 +1,26 @@
+{
+  "id": "EVT-e9a2caef-437b-47b7-88d1-c39664018b13",
+  "kind": "task-status-change",
+  "task": "TSK-2d4e5fc7-9e3b-4c7f-bdec-3e37eabcba98",
+  "task_key": "ECDLP-14",
+  "timestamp": "2026-11-03T09:47:55.882382Z",
+  "run": "RUN-e7c9feff-7a06-449b-8625-a5a70f90803d",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "complexity-theory"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute bounded round-5 run."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-5 run."
+  },
+  "reason": "Round-5 bounded subagent launched",
+  "before_sha256": "3a7327056b3c79ac9a8f8570f88daf4dce5b36c9160c155d9e1237f57d65b347",
+  "after_sha256": "1fc6090efb45626217f795e0ad2e689ff55eca89d31e5dc61b76107461ac25e6"
+}
