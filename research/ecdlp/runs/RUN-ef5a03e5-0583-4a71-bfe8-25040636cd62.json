@@ -1,0 +1,39 @@
+{
+  "id": "RUN-ef5a03e5-0583-4a71-bfe8-25040636cd62",
+  "type": "RUN",
+  "title": "Round 18 / inventor I: m=4 decomposition test below p^{1/10}",
+  "created_at": "2026-11-03T13:36:57.102586Z",
+  "status": "active",
+  "question": "With randomised targets R=aP+bQ and base size s=p^{1/5}, index calculus with m=4 beats rho only if deciding whether R is a sum of 4 base points (and finding them) costs T_test < p^{1/10}. Is there any finder (algebraic on S_5 with a structured base, e.g. PKM coset x^d=c, Weil-like descent through x->x^d, resultant towers, or a non-Groebner method) whose measured cost exponent per target is below 1/10 at toy sizes, with linear algebra and total cost accounted?",
+  "rationale": "Bounded run for TSK-187b6af4-9fc1-4a7f-9c42-bf0cc2b16ae5",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-187b6af4-9fc1-4a7f-9c42-bf0cc2b16ae5"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T13:36:57.102956Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor",
+    "task": "TSK-187b6af4-9fc1-4a7f-9c42-bf0cc2b16ae5",
+    "input_hypotheses": [],
+    "starting_commit": "338e0a11ae289ada58f48f89cd98cfbe71e2cfdf",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}
