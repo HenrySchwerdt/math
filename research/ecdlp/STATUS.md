@@ -66,6 +66,19 @@ Round 5 (package 2; proof attempts and negative results, unreviewed unless state
   on toy curves; the open quantity is the relation-system solving cost at m ≥ 3.
 - Target statement needs a fixed output convention (least k vs any k) — noted on HYP-2de84d42.
 
+Round 6 (package 3):
+- Theorem A (HYP-5a550ab6): blind adversarial review found a proof gap (p | r, e.g. p = 5, r = 10;
+  PI-verified); bounds survive with corrected proof via pole-set invariance — HYP-adb581ff (reviewed).
+- Theorem B (HYP-eda6732a): reviewed correct; CONDITIONAL Lean proof (Interpolation.lean,
+  PRF-a6cf1e66, REV-08014e33 accept): r ≤ 6·deg g + 5 given the x-addition identities and
+  injectivity as hypotheses (not yet derived from Mathlib's curve group law).
+- Prime-field summation-polynomial index calculus at m = 3 (ECDLP-16): per-relation cost
+  T < p^{1/6} not achieved; linear algebra 3p^{2/3} already exceeds √p for |V| = p^{1/3}.
+  Small-x, PKM-coset and random bases indistinguishable. Route deprioritized (toy evidence).
+- Genus-2 cover index calculus (ECDLP-18): implemented end to end (12/12 correct) but costs
+  ~p^{2.5} total (~p Cantor operations), far above √p; pullback-only relations carry no
+  information. HYP-ad5bc0e3 survives on p ≤ 2^14.
+
 Barrier context (literature-level, agents' reports RUN-9eae1ad9, RUN-fec2442f, RUN-b0ccd1bd):
 O(n log n) is below the best-known cost O(n² log n) of verifying a candidate by scalar
 multiplication (not a lower bound). Generic bounds (Shoup/Maurer/Nechaev) constrain only
