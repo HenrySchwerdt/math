@@ -25,7 +25,7 @@
   "notes": "Reviewer model self-reported Claude Sonnet 5.5 (configured), not runtime-verified. No fresh lake build by reviewer.",
   "review": {
     "run": "RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a",
-    "target_commit": "HEAD at v2 draft commit",
+    "target_commit": "25a9589",
     "targets": [
       "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
     ],
