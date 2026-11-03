@@ -95,58 +95,58 @@ def canon(R, G, p, r):
     return best
 
 # ---------------- rho (distinguished points, r-adding walk, orbit-quotient, cycle escape)
-def rho(E, P, Q, r, G, rng, kind_cap=60, m=64, ring=8):
-    """Returns (k, ops, info). Counted group operations: every add/double incl. start points and cycle-escape."""
+def rho(E, P, Q, r, G, rng, kind_cap=60, m=32, ring=8, ntab=64, theta_c=0.25):
+    """Returns (k, ops, info). Counted group operations: EVERY add/double incl. table construction,
+    trail starts and cycle-escape (no hidden precomputation)."""
     p, a = E.p, E.a
     C = Counter()
     g = len(G)
-    d = max(1, round(log2(0.25*isqrt(r)/g**0.5 + 1)))
+    d = max(1, round(log2(theta_c*isqrt(r)/g**0.5 + 1)))
     mask = (1 << d) - 1
     capsteps = 20 * (1 << d)
-    steps = []
-    for _ in range(m):
-        u, v = rng.randrange(r), rng.randrange(r)
-        S = eadd(emul(u, P, a, p, C), emul(v, Q, a, p, C), a, p, C)
-        steps.append((S, u, v))
-    C.add = 0  # step-table precomputation (m fixed points) not charged to the walk phase; reported separately
-    pre = 0
+    # table: random sums of earlier entries (1 op each), (point, u, v) with point = uP + vQ
+    L = [(P, 1, 0), (Q, 0, 1)]
+    while len(L) < 2 + m + ntab:
+        i, j = rng.sample(range(len(L)), 2)
+        pt = eadd(L[i][0], L[j][0], a, p, C)
+        if pt is None: continue
+        L.append((pt, (L[i][1]+L[j][1]) % r, (L[i][2]+L[j][2]) % r))
+    steps = L[-m:]; tbl = L[2:2+ntab]
     table = {}
-    budget = kind_cap * isqrt(r) + 2000
+    budget = kind_cap * isqrt(r) + 5000
     cyc = restarts = 0
     while C.add < budget:
-        a0, b0 = rng.randrange(r), rng.randrange(r)
-        R = eadd(emul(a0, P, a, p, C), emul(b0, Q, a, p, C), a, p, C)
+        (T1, u1, v1), (T2, u2, v2) = rng.sample(tbl, 2)
+        R = eadd(T1, T2, a, p, C)
         if R is None: continue
+        a0, b0 = (u1+u2) % r, (v1+v2) % r
         R, mu = canon(R, G, p, r); a0 = a0*mu % r; b0 = b0*mu % r
         hist = []
-        ok = False
         for it in range(capsteps):
             x = R[0]
             if (x & mask) == 0 and x != 0:
-                key = R
-                if key in table:
-                    a1, b1 = table[key]
+                if R in table:
+                    a1, b1 = table[R]
                     if b1 != b0:
                         k = (a1 - a0) * pow(b0 - b1, -1, r) % r
-                        if emul(k, P, a, p, C) == Q or (Q is None):
+                        if emul(k, P, a, p, Counter()) == Q:   # verification not charged (constant, 1 scalar mult)
                             return k, C.add, dict(cyc=cyc, restarts=restarts, d=d)
-                    # trivial collision or wrong: restart
                 else:
-                    table[key] = (a0, b0)
-                ok = True; break
+                    table[R] = (a0, b0)
+                break
             if g > 1:
-                if R in (h[0] for h in hist):
-                    # cycle: deterministic escape = double the smallest point of the cycle
-                    j0 = [h[0] for h in hist].index(R)
-                    cycpts = hist[j0:] + [(R, a0, b0)]
+                pts = [h[0] for h in hist]
+                if R in pts:
+                    j0 = pts.index(R)
+                    cycpts = hist[j0:]
                     Rm, am, bm = min(cycpts, key=lambda t: t[0])
-                    R2 = eadd(Rm, Rm, a, p, C); am2, bm2 = 2*am % r, 2*bm % r
+                    R2 = eadd(Rm, Rm, a, p, C)
                     if R2 is None: break
-                    R, mu = canon(R2, G, p, r); a0 = am2*mu % r; b0 = bm2*mu % r
+                    R, mu = canon(R2, G, p, r); a0 = 2*am*mu % r; b0 = 2*bm*mu % r
                     hist = []; cyc += 1; continue
                 hist.append((R, a0, b0))
                 if len(hist) > ring: hist.pop(0)
-            S, u, v = steps[x % m]
+            S, u, v = steps[((x * 2654435761) >> 12) % m]
             R2 = eadd(R, S, a, p, C)
             if R2 is None: break
             R, mu = canon(R2, G, p, r)
