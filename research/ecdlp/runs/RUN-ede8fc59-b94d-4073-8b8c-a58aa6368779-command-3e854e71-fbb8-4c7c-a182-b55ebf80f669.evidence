@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "timeout",
+    "270",
+    "python3",
+    "research/ecdlp/experiments/round16-frontier-g/supp.py",
+    "random_s1"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:19:11.315419Z",
+  "exit_code": 124,
+  "completed_at": "2026-11-03T13:23:41.335719Z",
+  "truncated": false,
+  "output": "bsgs 13 8263 1.841 succ 1.0\nrho_dp 13 8263 3.29 succ 0.99\nrandom_s1 13 8263 3.312 succ 1.0\nbsgs 14 16087 1.811 succ 1.0\nrho_dp 14 16087 2.836 succ 1.0\nrandom_s1 14 16087 2.851 succ 1.0\nbsgs 15 31567 1.689 succ 1.0\nrho_dp 15 31567 2.525 succ 1.0\nrandom_s1 15 31567 2.454 succ 1.0\nbsgs 16 61717 1.642 succ 1.0\nrho_dp 16 61717 2.325 succ 1.0\nrandom_s1 16 61717 2.342 succ 1.0\n"
+}
