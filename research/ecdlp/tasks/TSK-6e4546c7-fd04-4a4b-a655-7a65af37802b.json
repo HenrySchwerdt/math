@@ -1,0 +1,31 @@
+{
+  "id": "TSK-6e4546c7-fd04-4a4b-a655-7a65af37802b",
+  "type": "TSK",
+  "title": "Round 10 / ECDLP-35: frontier exploration C \u2014 barrier inversion",
+  "created_at": "2026-11-03T11:02:53.327252Z",
+  "status": "active",
+  "question": "Barrier inversion: enumerate every barrier the lab has proven or cataloged (generic-group, SLP/algebraic degree, transfer homomorphism, factor-base/index-calculus, cover, equidistribution), state each one's exact assumptions, characterize algorithm classes that violate ALL of them simultaneously, and propose + cheaply test the most concrete such class.",
+  "rationale": "DEC allocation: high-risk exploration; uses the lab's accumulated barrier map.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-0503ffa3-a534-4c45-8f38-5b5f08741789.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute.",
+  "notes": "Created by PI RUN-62dbda7c; first run using the native frontier-explorer adapter.",
+  "success_criteria": [
+    "Barrier table with exact assumptions; candidate classes escaping all; at least one pre-registered cheapest test executed; negative results reported."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-53c590b6-897b-438f-ae77-87309aa8d23a.md",
+    "research/ecdlp/runs/RUN-53c590b6-897b-438f-ae77-87309aa8d23a.json",
+    "research/ecdlp/experiments/round10-frontier-c/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; \u2264 15 web lookups; computations < 5 min; no commits; ~75 min."
+}
