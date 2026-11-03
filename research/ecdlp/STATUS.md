@@ -157,6 +157,15 @@ Round 15 (package 11):
 - Checkpoint DEC: index calculus closed on generic prime-order prime-field curves at toy scale;
   further constructive rounds only for mechanisms passing the supply/finder accounting on paper.
 
+Round 16 (package 12, user directive "give everything"):
+- Frontier G (ECDLP-54): automated evolutionary discovery (19-op DSL with comparisons, bits, hash
+  table) rediscovers rho; the champion fits 1.77√r + 136, identical to hand rho; its apparent
+  exponent 0.32–0.38 is setup amortisation. Lesson: fit α√r + γ, never naive log-log at r ≤ 2^16.
+- Inventor G (ECDLP-55): excess group closure exists only for unions of lines (rank ≈ s/6, PI
+  derivation) and log-space progressions (need logs).
+- Inventor H (ECDLP-56): fixed-curve precomputation with sorted tables, comparison trees or tuned
+  walks stays on S·T² ≈ r; comparison features predict k at chance level (planted leak detected).
+
 ## Next
 
 Every generic-model route tested reproduces √r. Remaining levers are non-generic structure
