@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round10-tight && python3 cm_anomalous.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:03:52.609308Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:03:54.278482Z",
+  "truncated": false,
+  "output": "anomalous j=0 cases 207 support-lemma holds 207\n(s, deficit N-1-mindeg) -> count [((1, 1), 207)]\n"
+}

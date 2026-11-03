@@ -11,7 +11,10 @@
   "refs": [
     "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
     "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
-    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "RUN-43398e3b-6162-4e45-bd6d-0873519b7062",
+    "HYP-0d4f14da-d669-43e4-9ba2-2d83a5cdb75c",
+    "HYP-a8d1f541-ea3a-4804-8ee2-064de21d06d3"
   ],
   "evidence": [],
   "claims": [
@@ -19,6 +22,6 @@
   ],
   "proof_status": "unproved",
   "outcome": "unresolved",
-  "next_action": "Round-10 follow-up task.",
-  "notes": "PI-derived follow-up from proven theorems."
+  "next_action": "New technique needed (e.g. using the divided-difference/Newton structure or algebraic relations among the nodes).",
+  "notes": "PI-derived follow-up from proven theorems. | ECDLP-33: gap not closed; L2 shows the translation-annihilator method cannot beat N/3 (HYP-0d4f14da-d669-43e4-9ba2-2d83a5cdb75c); experiments support N\u22121\u2212O(1) generically (HYP-a8d1f541-ea3a-4804-8ee2-064de21d06d3); structured CM family with constant deficit (L3)."
 }

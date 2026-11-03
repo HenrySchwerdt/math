@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 10 / ECDLP-33: tightness of x-only interpolation degree bounds",
   "created_at": "2026-11-03T10:56:40.013276Z",
-  "status": "active",
+  "status": "completed",
   "question": "Tightness conjecture for x-only interpolation: for E/F_p, P of prime order r and 2N < r, every g in F_p[X] with g(x(kP)) = k (resp. k^2) for 1 <= k <= N has deg g >= N \u2212 c for an absolute constant c (generic curves), improving the proven bound (N \u2212 2)/3; or else there exist families with substantially lower-degree interpolants.",
   "rationale": "PI follow-up derived from proven Theorems B/C (user asked to resume building on proven results).",
   "assumptions": [],
@@ -15,12 +15,13 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-f1d41fce-40ff-468b-af8d-9670610690a7.evidence"
+    "research/ecdlp/events/EVT-f1d41fce-40ff-468b-af8d-9670610690a7.evidence",
+    "research/ecdlp/events/EVT-370af344-0190-4208-86c5-49406562c0f3.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "inconclusive",
+  "next_action": "New technique for tight bound; deficit statistics at larger p",
   "notes": "Created by PI RUN-62dbda7c.",
   "success_criteria": [
     "Exact statements; no sorry; reproducible evidence; corrected variants separate; honest negative results."

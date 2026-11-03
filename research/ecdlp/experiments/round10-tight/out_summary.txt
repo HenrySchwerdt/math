@@ -1,0 +1,19 @@
+all                    zk  cases=154288 (case,N)= 3195979  D>=1: obs 15592 exp 15320.0 | D>=2: obs 144 exp  134.2 | D>=3: obs 18 exp  2.56 | maxD (3, (19, 4, 8, 19, 9))
+all                    zk2 cases=154288 (case,N)= 3195979  D>=1: obs 15849 exp 15320.0 | D>=2: obs  84 exp  134.2 | D>=3: obs  2 exp  2.56 | maxD (3, (31, 7, 28, 37, 18))
+non-anomalous          zk  cases=151513 (case,N)= 2986577  D>=1: obs 14316 exp 14077.7 | D>=2: obs 103 exp  117.9 | D>=3: obs  6 exp  2.11 | maxD (3, (31, 23, 7, 17, 7))
+non-anomalous          zk2 cases=151513 (case,N)= 2986577  D>=1: obs 14108 exp 14077.7 | D>=2: obs  78 exp  117.9 | D>=3: obs  2 exp  2.11 | maxD (3, (31, 7, 28, 37, 18))
+anomalous, j!=0        zk  cases=  2349 (case,N)=  174245  D>=1: obs  1118 exp  1054.6 | D>=2: obs  41 exp   13.6 | D>=3: obs 12 exp  0.36 | maxD (3, (19, 4, 8, 19, 9))
+anomalous, j!=0        zk2 cases=  2349 (case,N)=  174245  D>=1: obs  1107 exp  1054.6 | D>=2: obs   6 exp   13.6 | D>=3: obs  0 exp  0.36 | maxD (2, (79, 36, 34, 79, 33))
+anomalous, j=0         zk  cases=   426 (case,N)=   35157  D>=1: obs   158 exp   187.8 | D>=2: obs   0 exp    2.7 | D>=3: obs  0 exp  0.09 | maxD (1, (37, 0, 32, 37, 17))
+anomalous, j=0         zk2 cases=   426 (case,N)=   35157  D>=1: obs   634 exp   187.8 | D>=2: obs   0 exp    2.7 | D>=3: obs  0 exp  0.09 | maxD (1, (19, 0, 13, 19, 9))
+j=0 non-anomalous      zk  cases= 18811 (case,N)=  332513  D>=1: obs  1600 exp  1555.4 | D>=2: obs  13 exp   11.9 | D>=3: obs  0 exp  0.18 | maxD (2, (379, 0, 13, 409, 101))
+j=0 non-anomalous      zk2 cases= 18811 (case,N)=  332513  D>=1: obs  1491 exp  1555.4 | D>=2: obs   0 exp   11.9 | D>=3: obs  0 exp  0.18 | maxD (1, (31, 0, 24, 43, 15))
+j=1728                 zk  cases= 16109 (case,N)=  229767  D>=1: obs  1074 exp  1080.3 | D>=2: obs   0 exp    9.4 | D>=3: obs  0 exp  0.19 | maxD (1, (17, 14, 0, 13, 4))
+j=1728                 zk2 cases= 16109 (case,N)=  229767  D>=1: obs  1162 exp  1080.3 | D>=2: obs   0 exp    9.4 | D>=3: obs  0 exp  0.19 | maxD (1, (17, 14, 0, 13, 6))
+N=(r-1)/2 only zk non-anomalous cases 151513 deficit>=1 obs 1271 exp 1110.6
+N=(r-1)/2 only zk anomalous j!=0 cases 2349 deficit>=1 obs 50 exp 34.3
+N=(r-1)/2 only zk anomalous j=0 cases 426 deficit>=1 obs 0 exp 7.2
+N=(r-1)/2 only zk2 non-anomalous cases 151513 deficit>=1 obs 1105 exp 1110.6
+N=(r-1)/2 only zk2 anomalous j!=0 cases 2349 deficit>=1 obs 95 exp 34.3
+N=(r-1)/2 only zk2 anomalous j=0 cases 426 deficit>=1 obs 426 exp 7.2
+total curve/point cases 154288 distinct primes 162 p range 17 997
