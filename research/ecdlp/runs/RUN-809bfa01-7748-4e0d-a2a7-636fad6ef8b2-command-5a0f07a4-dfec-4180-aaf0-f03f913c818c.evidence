@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round20-inventor-j && timeout 275 python3 run_other.py p4b > out/log_p4b.txt 2>&1"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T16:25:44.701173Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T16:26:08.201397Z",
+  "truncated": false,
+  "output": ""
+}

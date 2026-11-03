@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "OMP_NUM_THREADS=1 timeout 275 python3 research/ecdlp/experiments/round20-inventor-j/learn.py 16 regress 1 > research/ecdlp/experiments/round20-inventor-j/out/16_regress_1.json",
+    "16",
+    "regress",
+    "1"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T16:22:08.378250Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T16:22:26.267976Z",
+  "truncated": false,
+  "output": ""
+}

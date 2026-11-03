@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round20-inventor-j/gencurves.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T16:10:56.409222Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T16:10:57.076623Z",
+  "truncated": false,
+  "output": "12\n16\n20\n24\n28\n"
+}

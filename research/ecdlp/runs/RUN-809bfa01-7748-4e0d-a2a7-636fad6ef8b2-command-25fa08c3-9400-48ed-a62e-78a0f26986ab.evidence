@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "timeout 270 python3 research/ecdlp/experiments/round20-inventor-j/learn.py 16 close16 0 > research/ecdlp/experiments/round20-inventor-j/out/16_close16_0.json",
+    "16",
+    "close16",
+    "0"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T16:16:20.220642Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T16:16:50.647851Z",
+  "truncated": false,
+  "output": ""
+}

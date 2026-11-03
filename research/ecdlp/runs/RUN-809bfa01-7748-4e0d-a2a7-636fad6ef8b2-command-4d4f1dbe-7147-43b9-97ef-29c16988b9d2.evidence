@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round20-inventor-j && timeout 275 python3 run_p1.py main 2 2 0.2 > out/log_run_p1.py_main_2_2.txt 2>&1"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T16:19:32.251596Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T16:19:35.049046Z",
+  "truncated": false,
+  "output": ""
+}

@@ -1,0 +1,30 @@
+{
+  "id": "TSK-9fcffa94-ec93-4873-9b24-1cd78f09e562",
+  "type": "TSK",
+  "title": "Round 20 / inventor J: estimate-then-search (MSB oracle + self-reduction + kangaroo)",
+  "created_at": "2026-11-03T16:06:04.091743Z",
+  "status": "completed",
+  "question": "User idea 2026-11-03: estimate k very precisely, then binary-search. Build the strongest feasible estimator of the most significant bit (or an interval) of k from Q=kP (features from x(Q), x(Q+-jP), bits, comparisons, learned models trained across curves), measure its advantage over 1/2 with CI across sizes, and quantify what advantage the hard-core-bit self-reduction and an interval+kangaroo pipeline would need to beat rho. Does any estimator show non-vanishing advantage out of sample?",
+  "rationale": "Direct user idea; tests the one oracle that would make binary search work.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [],
+  "evidence": [
+    "research/ecdlp/events/EVT-b48e05ac-73e4-4c11-815a-f68aa2a71ee4.evidence",
+    "research/ecdlp/events/EVT-badf1884-7e00-43d6-afb1-e1c386caf577.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "refuted",
+  "next_action": "Closed",
+  "notes": "Created via research.py start.",
+  "success_criteria": [
+    "Exact statements; reproducible evidence; honest negatives."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-809bfa01-7748-4e0d-a2a7-636fad6ef8b2.md",
+    "research/ecdlp/runs/RUN-809bfa01-7748-4e0d-a2a7-636fad6ef8b2.json",
+    "research/ecdlp/experiments/round20-inventor-j/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; no commits."
+}
