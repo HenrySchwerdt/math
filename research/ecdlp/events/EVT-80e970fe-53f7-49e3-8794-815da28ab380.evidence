@@ -1,0 +1,26 @@
+{
+  "id": "EVT-80e970fe-53f7-49e3-8794-815da28ab380",
+  "kind": "task-status-change",
+  "task": "TSK-c3a23866-bbe0-40c6-8e4f-b44260aea5ae",
+  "task_key": "ECDLP-24",
+  "timestamp": "2026-11-03T10:30:28.750076Z",
+  "run": "RUN-7f221667-7800-4572-9a2d-0bc8fbe896bc",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "group-theory"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute bounded round-8 run."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-8 run."
+  },
+  "reason": "Round-8 bounded subagent launched",
+  "before_sha256": "aa6b1465192e3c6dbc3ec602b37f6c6ced7834ef85635ca1efbd9c215f99fad4",
+  "after_sha256": "9f8a862560833ff836cadf01deda413f432acfb11e783c54795832a2d5757b63"
+}

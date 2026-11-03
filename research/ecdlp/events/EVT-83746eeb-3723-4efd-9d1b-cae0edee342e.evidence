@@ -1,0 +1,26 @@
+{
+  "id": "EVT-83746eeb-3723-4efd-9d1b-cae0edee342e",
+  "kind": "task-status-change",
+  "task": "TSK-ac839694-d262-4a77-b4b6-20aae8662514",
+  "task_key": "ECDLP-23",
+  "timestamp": "2026-11-03T10:37:47.159806Z",
+  "run": "RUN-48ba5570-86dd-4069-83c7-6c613f689ffd",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "adversarial-critic"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-8 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Formalize corrected (2)"
+  },
+  "reason": "Blind review: parts (1) correct; part (2) false as PI-transcribed (missing N<=(r-1)/2), counterexample verified by PI; corrected HYP registered",
+  "before_sha256": "eb86b35984faebad55363cca08a0fc6cc2c996790d1b5de24543d37bc7d82c4d",
+  "after_sha256": "1c671d39114d3898858144a3f8cb9ccd20db8f71bd120c73349386c0ba34bef0"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "EVT-9dff3f28-f526-4f5f-9c20-aa8610ab9790",
+  "kind": "task-status-change",
+  "task": "TSK-c3a23866-bbe0-40c6-8e4f-b44260aea5ae",
+  "task_key": "ECDLP-24",
+  "timestamp": "2026-11-03T10:35:29.969517Z",
+  "run": "RUN-7f221667-7800-4572-9a2d-0bc8fbe896bc",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "group-theory"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-8 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Use as barrier map; formalize D3 lemma optionally"
+  },
+  "reason": "Sourced weak-family classification and D3 norm lemma (PI-checked, reproduced)",
+  "before_sha256": "9f8a862560833ff836cadf01deda413f432acfb11e783c54795832a2d5757b63",
+  "after_sha256": "347e357c15d5bb94ddcc1d8f8a272eac1d6356fdee724953d030333396855124"
+}

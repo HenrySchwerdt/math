@@ -1,0 +1,48 @@
+{
+  "id": "RUN-9974dc45-0029-4615-bd81-9c9fbbda94f4",
+  "type": "RUN",
+  "title": "Round 8 / ECDLP-25: Lean x-only interpolation bound for k (linear) on short Weierstrass curves",
+  "created_at": "2026-11-03T10:29:51.299881Z",
+  "status": "completed",
+  "question": "Using the CurveX/Interpolation infrastructure, determine and formally prove the best degree lower bound for g in F[X] with g(x(kP)) = k for 1 <= k <= N < r/2 (x-only interpolation of the discrete log itself), or record why the second-difference argument degenerates.",
+  "rationale": "Bounded subagent run for TSK-78a350cd-9590-487e-ac4f-b018215eb7c2",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-78a350cd-9590-487e-ac4f-b018215eb7c2",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+    "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd"
+  ],
+  "evidence": [],
+  "claims": [
+    "Lean-verified (mathlib pinned, no extra axioms): if g in F[X] satisfies g(x(kP)) = k for 1<=k<=N, 2N<r, P of order r on short Weierstrass with 2!=0, then N <= 3 deg g + 2; for odd r and N=(r-1)/2, r <= 6 deg g + 5. Declarations in MathResearch/ECDLP/LinearInterp.lean. The cleared second-difference polynomial N0 has degree exactly 3 deg g (leading coeff -2 lc g), so it never degenerates; 3 != 0 not needed. Bound not shown tight (numerics: interpolant has deg g = N-1). Polynomial degree only; says nothing about bit complexity or existence of g. Independent review pending."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "PI: add 'import MathResearch.ECDLP.LinearInterp' to MathResearch.lean, run independent review (docs/REVIEW.md), then update ledger; optional: seek tighter bound using higher-order differences.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Formalization agent self-reported model identity: claude-sonnet-5-5 (Sonnet 5.5); not independently verifiable.",
+  "run": {
+    "started_at": "2026-11-03T10:30:28.352567Z",
+    "completed_at": "2026-11-03T10:34:28.005151Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization",
+    "task": "TSK-78a350cd-9590-487e-ac4f-b018215eb7c2",
+    "input_hypotheses": [
+      "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+      "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd"
+    ],
+    "starting_commit": "30956cc3b89cdee0a6320c6121936fe3297123cd",
+    "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #5)",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [
+      "MathResearch/ECDLP/LinearInterp.lean"
+    ],
+    "resulting_commit": "8191c0f69398b632fc2c7c7efbfdcdb9e2634b7b",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}

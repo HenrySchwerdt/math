@@ -1,0 +1,32 @@
+{
+  "id": "TSK-c3a23866-bbe0-40c6-8e4f-b44260aea5ae",
+  "type": "TSK",
+  "title": "Round 8 / ECDLP-24: sourced classification of weak ECDLP curve families",
+  "created_at": "2026-11-03T10:29:51.178520Z",
+  "status": "completed",
+  "question": "Which families of elliptic curves over finite fields admit ECDLP algorithms asymptotically faster than generic (beyond constant factors), with exact conditions, costs and verified sources; which are class-invariant vs endomorphism-dependent (incl. D3: small-norm elements of Z[pi]); and what is provably NOT a weak family for prime-order curves over prime fields with large embedding degree?",
+  "rationale": "Round-8 selection by PI (autonomous); D2/D3 from ECDLP-22 judged weak as stated, D3 absorbed into ECDLP-24.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-80e970fe-53f7-49e3-8794-815da28ab380.evidence",
+    "research/ecdlp/events/EVT-9dff3f28-f526-4f5f-9c20-aa8610ab9790.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Use as barrier map; formalize D3 lemma optionally",
+  "notes": "Created by PI RUN-62dbda7c (autonomous).",
+  "success_criteria": [
+    "Exact statements; verified sources or explicit unverified marks; reproducible evidence; no sorry; corrected variants separate."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-7f221667-7800-4572-9a2d-0bc8fbe896bc.md",
+    "research/ecdlp/runs/RUN-7f221667-7800-4572-9a2d-0bc8fbe896bc.json (claims/sources/notes/next_action)",
+    "research/ecdlp/experiments/round8-weak/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; computations < 5 min; no commits; ~75 min."
+}

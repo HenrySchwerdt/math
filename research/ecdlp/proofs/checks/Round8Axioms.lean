@@ -1,0 +1,4 @@
+import MathResearch
+open MathResearch.ECDLP
+#print axioms LinearInterp.degree_bound_of_x_relations_linear
+#print axioms CurveX.degree_bound_linear_short_weierstrass

@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/root/.elan/bin/lake",
+    "env",
+    "lean",
+    "research/ecdlp/proofs/checks/Round8Axioms.lean"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T10:33:57.063754Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T10:34:00.086641Z",
+  "truncated": false,
+  "output": "'MathResearch.ECDLP.LinearInterp.degree_bound_of_x_relations_linear' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'MathResearch.ECDLP.CurveX.degree_bound_linear_short_weierstrass' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+}

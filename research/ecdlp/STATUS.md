@@ -88,6 +88,16 @@ Round 7 (package 4):
   forces deg f ≥ δ²N/4 (rational f); unreviewed.
 - New speculative hypotheses D1–D5 (RUN-73ace464); D1 (no low-degree x-orbit invariants) null.
 
+Round 8 (package 5):
+- Theorem C (formally verified, LinearInterp.lean): x-only g with g(x(kP)) = k for 1 ≤ k ≤ N,
+  2N < r, has N ≤ 3·deg g + 2. Independent review pending; not claimed novel.
+- Partial-agreement bounds: blind review found the PI's transcription of part (2) false
+  (dropped N ≤ (r−1)/2; counterexample y² = x³ + 5 over F₇, PI-verified). Original kept as refuted;
+  corrected statement HYP (reviewed). PI process error recorded.
+- Weak-family map (ECDLP-24): sourced classification; residual hard class = prime-order,
+  non-anomalous, large-embedding-degree curves over prime fields (no known o(√p) algorithm).
+  D3 lemma: non-scalar elements of Z[π] have norm ≥ |t²−4p|/4.
+
 Barrier context (literature-level, agents' reports RUN-9eae1ad9, RUN-fec2442f, RUN-b0ccd1bd):
 O(n log n) is below the best-known cost O(n² log n) of verifying a candidate by scalar
 multiplication (not a lower bound). Generic bounds (Shoup/Maurer/Nechaev) constrain only

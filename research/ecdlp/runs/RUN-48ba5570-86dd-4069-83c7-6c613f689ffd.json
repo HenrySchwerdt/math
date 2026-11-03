@@ -1,0 +1,51 @@
+{
+  "id": "RUN-48ba5570-86dd-4069-83c7-6c613f689ffd",
+  "type": "RUN",
+  "title": "Round 8 / ECDLP-23: blind adversarial review of partial-agreement bounds",
+  "created_at": "2026-11-03T10:29:51.140396Z",
+  "status": "completed",
+  "question": "Are the partial-agreement lower bounds in HYP-5da6025e correct as stated (hypotheses, constants, the h_j nonvanishing argument, the progression bound for x-only k^2)?",
+  "rationale": "Bounded subagent run for TSK-ac839694-d262-4a77-b4b6-20aae8662514",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-ac839694-d262-4a77-b4b6-20aae8662514",
+    "HYP-5da6025e-c665-473f-a06a-3f02a267fe8c"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round8-review/crit_check.py",
+    "research/ecdlp/experiments/round8-review/crit_check2.py",
+    "research/ecdlp/experiments/round8-review/crit_check3.py"
+  ],
+  "claims": [
+    "HYP-5da6025e (1),(1a),(1b),(1d) verified correct; (1) needs wording fix (h_j==0 dichotomy; N<=min(p,r) suffices, so 'N<p necessary' is overstated; p=5,r=7,N=6 example genuine).",
+    "(2) as transcribed in the HYP is FALSE when r=p and N>(r-1)/2: counterexample p=r=7, y^2=x^3+5, P=(3,2), A={1..6}, g=5X (deg 1 < S_1/3=4/3). Correct under author's hypothesis N<=(r-1)/2, or r!=p, or with +/- class counting. Toy search p<=47: 0 violations otherwise."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "PI: amend HYP-5da6025e (2) to add N <= (r-1)/2 (or r != p), reword (1) nonvanishing and the N<p remark, then re-review; no REV recorded by this run.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Self-reported model identity (critic): Sonnet 5.5, model ID claude-sonnet-5-5; not independently verifiable.",
+  "run": {
+    "started_at": "2026-11-03T10:30:28.352567Z",
+    "completed_at": "2026-11-03T10:37:46.761898Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "adversarial-critic",
+    "task": "TSK-ac839694-d262-4a77-b4b6-20aae8662514",
+    "input_hypotheses": [
+      "HYP-5da6025e-c665-473f-a06a-3f02a267fe8c"
+    ],
+    "starting_commit": "30956cc3b89cdee0a6320c6121936fe3297123cd",
+    "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #5)",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round8-review/"
+    ],
+    "resulting_commit": "fad17b72146df421b0a5b04cc40bb1a18622f2f6",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}
