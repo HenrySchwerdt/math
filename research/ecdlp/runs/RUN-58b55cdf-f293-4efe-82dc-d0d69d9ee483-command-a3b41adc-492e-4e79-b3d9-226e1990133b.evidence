@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round15-frontier-f/f1_fp2_split.py",
+    "1009",
+    "1",
+    "3"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:40:12.209427Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T12:40:12.273580Z",
+  "truncated": false,
+  "output": "Traceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round15-frontier-f/f1_fp2_split.py\", line 7, in <module>\n    from toyec import Curve, is_prime\nModuleNotFoundError: No module named 'toyec'\n"
+}
