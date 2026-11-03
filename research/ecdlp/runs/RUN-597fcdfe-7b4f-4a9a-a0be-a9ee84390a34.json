@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 4 / ECDLP-12: relation yield of small-x factor bases on prime-field curves",
   "created_at": "2026-11-03T09:36:23.519598Z",
-  "status": "active",
+  "status": "completed",
   "question": "Measure, at toy sizes, decomposition probabilities and relation-collection cost for small-x factor bases on E(F_p) (m = 2, 3), compared with sqrt(p) and heuristic predictions.",
   "rationale": "Bounded subagent run for TSK-db0e4159-ba4a-4577-821b-b29f8e46ed2c",
   "assumptions": [],
@@ -40,7 +40,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round4/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "4f4bc504b3de559a11bf65067c164c7e48b7ce8a",
     "tests": [],
     "benchmark": "Counted-operation cost model (group op = hash lookup = root solve = 1 unit), not wall time. Machine: 4 vCPU Intel Xeon 2.30 GHz, Linux 6.18, Python 3.13.18, numpy 2.5.3, single process. Inputs/seed 20261107, 12 curves (3 per bucket 2^12..2^18), m in {2,3}, beta in {0.5,1,2}, exact enumeration. Baselines: instrumented BSGS (10 random Q, 1 curve/bucket) and Brent rho (20 runs, 1 curve/bucket), plus formula sqrt(pi r/2). Single execution of the final run (4.1 s wall; plus an earlier development run), no timing statistic is claimed. Toy sizes; asymptotics not established.",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
