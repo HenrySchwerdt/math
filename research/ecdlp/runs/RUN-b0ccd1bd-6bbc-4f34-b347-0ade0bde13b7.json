@@ -1,0 +1,42 @@
+{
+  "id": "RUN-b0ccd1bd-6bbc-4f34-b347-0ade0bde13b7",
+  "type": "RUN",
+  "title": "Round 1 sealed investigation:  non-generic algebraic information in EC coordinate representations",
+  "created_at": "2026-11-03T09:05:52.355777Z",
+  "status": "active",
+  "question": "Do standard coordinate representations of points on E(F_q) expose efficiently computable mathematical information (invariants, relations, maps) that is not available to a generic-group algorithm, and could any such information plausibly reduce ECDLP cost? Identify precise candidate invariants/relations and classify each as known-and-exploited, known-and-useless, or conjectural.",
+  "rationale": "Bounded independent subagent run for TSK-19085a69-6fc1-440f-b7a1-ac2182eea490",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-19085a69-6fc1-440f-b7a1-ac2182eea490",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents is not exposed to the PI, so identity is configured+self-reported, not runtime-verified.",
+  "run": {
+    "started_at": "2026-11-03T09:06:21.721521Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "discovery",
+    "task": "TSK-19085a69-6fc1-440f-b7a1-ac2182eea490",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    ],
+    "starting_commit": "e562779d50e079ea380c598a2550021a13e26b89",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of this RUN report/json only",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable: literature/theory investigation",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

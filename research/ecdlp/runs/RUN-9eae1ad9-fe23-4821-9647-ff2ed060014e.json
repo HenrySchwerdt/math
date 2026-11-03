@@ -1,0 +1,42 @@
+{
+  "id": "RUN-9eae1ad9-fe23-4821-9647-ff2ed060014e",
+  "type": "RUN",
+  "title": "Round 1 sealed investigation:  complexity barriers to universal near-linear ECDLP",
+  "created_at": "2026-11-03T09:05:52.426801Z",
+  "status": "active",
+  "question": "What are the precise theoretical barriers to a universal classical ECDLP algorithm in worst-case O(n log n) bit operations (n = total input length)? Examine the exact hypotheses of generic-group lower bounds, of known non-generic approaches, input-reading/arithmetic bit costs, and any conditional hardness implications; state precisely which assumptions a faster algorithm would have to escape.",
+  "rationale": "Bounded independent subagent run for TSK-3323598e-fe3f-42c0-8336-507107420679",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-3323598e-fe3f-42c0-8336-507107420679",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents is not exposed to the PI, so identity is configured+self-reported, not runtime-verified.",
+  "run": {
+    "started_at": "2026-11-03T09:06:21.721521Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "complexity-theory",
+    "task": "TSK-3323598e-fe3f-42c0-8336-507107420679",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    ],
+    "starting_commit": "e562779d50e079ea380c598a2550021a13e26b89",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of this RUN report/json only",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable: literature/theory investigation",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}
