@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 11 / ECDLP-40: review and Lean formalization of the decision-tree barrier",
   "created_at": "2026-11-03T11:20:37.220985Z",
-  "status": "active",
+  "status": "completed",
   "question": "Is Theorem DT correct, and can it be formalized on top of RationalSLP.lean?",
   "rationale": "Mandatory review + formal verification of a barrier-central, possibly new result.",
   "assumptions": [],
@@ -13,12 +13,13 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-729fd8ee-cd0e-4fb9-9c55-4b48479828f0.evidence"
+    "research/ecdlp/events/EVT-729fd8ee-cd0e-4fb9-9c55-4b48479828f0.evidence",
+    "research/ecdlp/events/EVT-85d8b67b-7f34-47f8-ab2c-8614f0826086.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "verified",
+  "next_action": "None",
   "notes": "Created by PI RUN-62dbda7c.",
   "success_criteria": [
     "Blind adversarial verdict; Lean proof without sorry or exact obstruction."
