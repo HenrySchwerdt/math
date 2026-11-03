@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 8 / ECDLP-24: sourced classification of weak ECDLP curve families",
   "created_at": "2026-11-03T10:29:51.219072Z",
-  "status": "active",
+  "status": "completed",
   "question": "Which families of elliptic curves over finite fields admit ECDLP algorithms asymptotically faster than generic (beyond constant factors), with exact conditions, costs and verified sources; which are class-invariant vs endomorphism-dependent (incl. D3: small-norm elements of Z[pi]); and what is provably NOT a weak family for prime-order curves over prime fields with large embedding degree?",
   "rationale": "Bounded subagent run for TSK-c3a23866-bbe0-40c6-8e4f-b44260aea5ae",
   "assumptions": [
@@ -122,7 +122,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round8-weak/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "b049a958a993869f18ac03c00ce85da82c2b6e9d",
     "tests": [],
     "benchmark": "Not applicable: no timing claims; d3_norms.py ran ~1 s (single run, indicative only).",
     "machine": "Claude Code remote Linux container",
