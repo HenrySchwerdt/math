@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Re-review technical report v2",
   "created_at": "2026-11-03T12:18:36.604366Z",
-  "status": "active",
+  "status": "completed",
   "question": "Are the v2 changes to PAP-ef6e2010 (R1-R5, Sections on RationalSLP, Theorem DT scope, Theorem E, benchmark table) faithful to the ledger/Lean sources and correctly labelled by evidence level?",
   "rationale": "Selected by the PI.",
   "assumptions": [],
@@ -12,12 +12,13 @@
     "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-63928811-29f9-4281-8a2a-d22d02df7223.evidence"
+    "research/ecdlp/events/EVT-63928811-29f9-4281-8a2a-d22d02df7223.evidence",
+    "research/ecdlp/events/EVT-2091990e-6d42-45f8-9701-2f4501de9fbc.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "verified",
+  "next_action": "Closed",
   "notes": "Created via research.py start.",
   "success_criteria": [
     "Exact statements; reproducible evidence; honest negatives."
