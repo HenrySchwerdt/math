@@ -130,6 +130,16 @@ Rounds 11–12 (package 8, algorithms-first allocation per strategic-correction 
   valid triples (w_N ~ N⁴/3); blind review REV-3b9427bd: bound holds, statement corrected
   (HYP-a4caa1de, reviewed, not formalized).
 
+Round 13 (package 9):
+- Inventor D (ECDLP-47): algebraic relation finding (S_3 decomposition over a PKM multiplicative-coset
+  factor base, Gröbner cross-check) is correct (65/65) but total cost ~p (exponent 0.99), 633× rho at
+  24 bits. Obstacle: finder cost ≥ p^{1/2−1/(2m)} per relation vs required < p^{1/2−1/m}.
+- E0/E3 review (ECDLP-48, REV): both remarks hold only in narrower form; Theorem DT (equality-only,
+  charged constants) unaffected; with order comparisons only size/depth matter; E0 corollary is a
+  restatement of non-genericity.
+- Framework: `research.py render-md` fills template reports from JSON (also run by `finish`);
+  `start` expands short IDs.
+
 ## Next
 
 Every generic-model route tested reproduces √r. Remaining levers are non-generic structure
