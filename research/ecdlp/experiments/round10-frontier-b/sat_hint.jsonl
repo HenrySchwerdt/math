@@ -1,0 +1,9 @@
+{"t_unknown": 4, "m": 10, "p": 739, "r": 769, "n": 10, "vars": 32537, "clauses": 106772, "res": true, "secs": 21.997, "conflicts": 319359, "correct": true, "rho_ops": 34.8}
+{"t_unknown": 4, "m": 10, "p": 953, "r": 929, "n": 10, "vars": 34535, "clauses": 113437, "res": true, "secs": 13.914, "conflicts": 247644, "correct": true, "rho_ops": 38.2}
+{"t_unknown": 4, "m": 10, "p": 743, "r": 773, "n": 10, "vars": 34537, "clauses": 113443, "res": true, "secs": 6.242, "conflicts": 152901, "correct": true, "rho_ops": 34.8}
+{"t_unknown": 6, "m": 10, "p": 739, "r": 769, "n": 10, "vars": 32537, "clauses": 106770, "res": true, "secs": 19.329, "conflicts": 313940, "correct": true, "rho_ops": 34.8}
+{"t_unknown": 6, "m": 10, "p": 953, "r": 929, "n": 10, "vars": 34535, "clauses": 113435, "res": true, "secs": 40.181, "conflicts": 519117, "correct": true, "rho_ops": 38.2}
+{"t_unknown": 6, "m": 10, "p": 743, "r": 773, "n": 10, "vars": 34537, "clauses": 113441, "res": true, "secs": 5.748, "conflicts": 125464, "correct": true, "rho_ops": 34.8}
+{"t_unknown": 8, "m": 10, "p": 739, "r": 769, "n": 10, "vars": 32537, "clauses": 106768, "res": true, "secs": 40.88, "conflicts": 430924, "correct": true, "rho_ops": 34.8}
+{"t_unknown": 8, "m": 10, "p": 953, "r": 929, "n": 10, "vars": 34535, "clauses": 113433, "res": true, "secs": 75.641, "conflicts": 750093, "correct": true, "rho_ops": 38.2}
+{"t_unknown": 8, "m": 10, "p": 743, "r": 773, "n": 10, "vars": 34537, "clauses": 113439, "res": true, "secs": 42.484, "conflicts": 346328, "correct": true, "rho_ops": 34.8}

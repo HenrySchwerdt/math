@@ -1,0 +1,29 @@
+{
+  "id": "HYP-4041cd8d-fdaa-4c4c-afe7-b6caec1a30ed",
+  "type": "HYP",
+  "title": "Frontier exploration B: SAT and learning null results",
+  "created_at": "2026-11-03T11:05:19.727598Z",
+  "status": "completed",
+  "question": "Frontier B (ECDLP-29), NULL at toy sizes: (F-B1) SAT encoding of [k]P = Q (double-and-add, mod-p multiplier circuits, Glucose4) solves n = 5..10-bit instances but conflicts scale ~ r^1.2 (worse than brute force r^1.0 and rho r^0.5), with a key-independent floor from inverting modular multiplication; (F-B2) logistic regression and 1-hidden-layer MLP on coordinate features predict no bit/residue of k beyond the pre-registered 4-sigma rule (0/174 tests; identity and x-parity positive controls fire 165/174 and 12/12; detection floor ~0.045-0.12 advantage); (F-B3) learn-then-decode (HNP/list decoding) would need an eps-advantage oracle that F-B2 does not find. 11 further ideas killed by argument (lattice/CVP circular, batching, advice).",
+  "rationale": "High-risk exploration per DEC.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-071d1da9-2aeb-4e6d-8980-bf03cd153ee3",
+    "TSK-1bb330e5-131f-4df3-8496-c3f2800911ad",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round10-frontier-b/learn_out.jsonl",
+    "research/ecdlp/experiments/round10-frontier-b/learn_summary.txt",
+    "research/ecdlp/experiments/round10-frontier-b/sat_summary.txt",
+    "research/ecdlp/experiments/round10-frontier-b/PROTOCOL.md"
+  ],
+  "claims": [
+    "Frontier B (ECDLP-29), NULL at toy sizes: (F-B1) SAT encoding of [k]P = Q (double-and-add, mod-p multiplier circuits, Glucose4) solves n = 5..10-bit instances but conflicts scale ~ r^1.2 (worse than brute force r^1.0 and rho r^0.5), with a key-independent floor from inverting modular multiplication; (F-B2) logistic regression and 1-hidden-layer MLP on coordinate features predict no bit/residue of k beyond the pre-registered 4-sigma rule (0/174 tests; identity and x-parity positive controls fire 165/174 and 12/12; detection floor ~0.045-0.12 advantage); (F-B3) learn-then-decode (HNP/list decoding) would need an eps-advantage oracle that F-B2 does not find. 11 further ideas killed by argument (lattice/CVP circular, batching, advice)."
+  ],
+  "proof_status": "experimental",
+  "outcome": "refuted",
+  "next_action": "Optional: structure-aware SAT (x-only ladder, XOR-aware) and larger-group learning with planted-leak calibration.",
+  "notes": "PI reproduced learn_k.py seed 1, m = 10 bit-identically via exec. SAT results not reproduced by PI (python-sat installed ad hoc by the agent; environment dependency)."
+}

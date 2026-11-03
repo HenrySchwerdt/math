@@ -1,0 +1,13 @@
+n  runs  r_med  conflicts(med)  secs(med)  rho_ops(med)  conflicts/rho  solved
+5 1 31 18802 0.5 7.0 2686 1 all correct
+6 3 53 25858 0.7 9.1 2842 3 all correct
+7 1 71 58957 2.1 10.6 5562 1 all correct
+8 4 155.0 174352 10.4 15.6 11176 4 all correct
+9 3 347 511289 72.3 23.3 21944 3 all correct
+10 3 887 859655 120.3 37.3 23047 3 all correct
+log-log slope conflicts vs r: 1.23 (rho: 0.5, brute: 1.0)
+per-instance slope: 1.27
+hint runs
+t 4 runs 3 median conflicts 247644 secs 13.9 solved 3 2^(t/2)= 4.0 2^t= 16
+t 6 runs 3 median conflicts 313940 secs 19.3 solved 3 2^(t/2)= 8.0 2^t= 64
+t 8 runs 3 median conflicts 430924 secs 42.5 solved 3 2^(t/2)= 16.0 2^t= 256

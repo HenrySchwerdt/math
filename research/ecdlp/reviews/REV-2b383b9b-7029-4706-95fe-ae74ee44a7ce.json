@@ -1,31 +1,46 @@
 {
   "id": "REV-2b383b9b-7029-4706-95fe-ae74ee44a7ce",
   "type": "REV",
-  "title": "Draft \u2014 define before work",
+  "title": "Independent manuscript review of PAP-ef6e2010 (correspondence, overclaiming, citations)",
   "created_at": "2026-11-03T10:58:02.436231Z",
-  "status": "open",
-  "question": "Unassigned; define exact question",
-  "rationale": "Unassigned; record why selected",
+  "status": "completed",
+  "question": "Does PAP-ef6e2010 main.tex/refs.bib/main.pdf at 81b8a86 quote the Lean statements exactly, report toolchain/commits/axioms correctly, separate informal from formal claims, avoid overclaiming (novelty, complexity, provenance), cite real publications with correct data, and build cleanly?",
+  "rationale": "docs/PAPERS.md step 3 requires an independent manuscript review; assigned via RUN-907ba4ec.",
   "assumptions": [],
   "sources": [],
-  "refs": [],
-  "evidence": [],
-  "claims": [],
+  "refs": [
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
+  "evidence": [
+    "research/ecdlp/reviews/REV-2b383b9b-7029-4706-95fe-ae74ee44a7ce.md"
+  ],
+  "claims": [
+    "The three lstlisting Lean statements (main.tex l.175-196) match CurveX.lean l.205, LinearInterp.lean l.142, PartialAgreement.lean l.145 verbatim; the declarations are unchanged since source commits cc8dc791/8191c0f6/84ddbad8.",
+    "Toolchain v4.35.0, Mathlib 56a00585..., source commits and job counts match lean-toolchain, lakefile.toml and the PRF records; reviewer rerun: lake build succeeded (3166 jobs, tree with one untracked extra file) and #print axioms gives [propext, Classical.choice, Quot.sound] for all three declarations.",
+    "Blocking: main.tex l.205-207 cites the single evidence file b585f279 (Round7Axioms) for the axioms of all three theorems, but it covers only Theorem B; the axiom runs for C and D are 5da55f17 and ca0a1a26.",
+    "All three bib entries (LW02, LW03, Sat05) were verified via Crossref and the author's page as correct in title, venue, volume, pages and year (Sat05 2006 is correct); first names and DOIs are missing; relevant ledger prior work (Coppersmith-Shparlinski 2000, Kiltz-Winterhof) is omitted.",
+    "The novelty-unsettled, no-bit-complexity, open-universal-target and AI-provenance statements are present and accurate; the Hasse step for Theorem D is correctly marked as not formalized.",
+    "The LaTeX rebuild is clean (exit 0, 6 pages, no warnings, 3 underfull hboxes), and its text is identical to the committed PDF."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Draft only; no execution or verification claimed.",
+  "outcome": "unresolved",
+  "next_action": "Author: fix B1 (cite the per-theorem axiom evidence or a new exec-recorded #print axioms run of all three declarations); address N1-N3 and N5-N6 (implicit binders and xCoord convention, Lagrange upper bound, degree-vs-cost wording, bib first names/DOIs, Coppersmith-Shparlinski and Kiltz-Winterhof); rebuild via research.py exec; limited re-review of the changed passages.",
+  "notes": "Decision revise (minor): 1 blocking finding (axiom evidence misattributed for C and D), 10 non-blocking. Reviewer self-reported model identity: Claude Opus 5.5 (claude-opus-5-5), Claude Code remote session; not runtime-verifiable. Initial findings were written before reading RUN-665c4a65. 7 web lookups (2 unusable). Same provider as the authors, so independence is partial. No human check.",
   "review": {
-    "run": null,
-    "target_commit": null,
-    "targets": [],
-    "decision": "revise",
-    "rationale": "Review not performed",
-    "counterexamples": [
-      "Not attempted"
+    "run": "RUN-907ba4ec-5c8b-4b07-b38c-208fc3601cab",
+    "target_commit": "81b8a86",
+    "targets": [
+      "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
     ],
-    "complexity": "Not reviewed",
-    "limitations": "Draft review, not an assessment",
-    "initial_packet": "Not supplied"
+    "decision": "revise",
+    "rationale": "The formal correspondence is exact and the proofs check out; the honesty controls are present. One blocking evidence-citation error in the trust-base paragraph (B1), plus non-blocking framing issues (trivial Lagrange upper bound, degree-vs-cost wording), mixed theorem numbering, and bibliography/prior-work gaps.",
+    "counterexamples": [
+      "Checked the paper's counterexample y^2=x^3+5/F_7, P=(3,2), g=5X: order 7 and g(x(kP))=k^2 for k=1..6 confirmed",
+      "Checked y^2=x^3+2x+1/F_3 has 7 points (refutes j<=N<p)",
+      "Tried to break the Section 4 root counts, affine/distinctness conditions and constant-g cases for B, C and D: no error found"
+    ],
+    "complexity": "Not applicable",
+    "limitations": "Cited works' full texts were not read, so novelty remains unsettled. The Lean rebuild ran in the shared working tree with one untracked extra file, not a pristine checkout. Same-provider AI reviewer; no human check.",
+    "initial_packet": "Task message from the PI: target files at 81b8a86, Lean files, PRF-34538f75/35d1387a/5357b698, checklist; author notes RUN-665c4a65 withheld until after initial findings."
   }
 }

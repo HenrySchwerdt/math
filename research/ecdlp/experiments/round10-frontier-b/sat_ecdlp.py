@@ -123,7 +123,7 @@ def solve(C, kb, budget, tlimit):
     s.delete()
     return res, dt, st['conflicts'], model
 
-def run(ms, reps, seed, budget):
+def run(ms, reps, seed, budget, t=None):
     rng = random.Random(seed); out = []
     for m in ms:
         for rep in range(reps):
@@ -141,12 +141,14 @@ def run(ms, reps, seed, budget):
                 if ok: break
             n = N.bit_length()
             C, kb = encode(E, P, Q, S, n)
+            tt = n if t is None else min(t, n)
+            for i in range(tt, n): C.cl.append([kb[i] if (k >> i) & 1 else -kb[i]])  # known high bits
             res, dt, conf, model = solve(C, kb, budget, None)
             correct = None
             if res:
                 kk = sum((1 if model[abs(v) - 1] > 0 else 0) << i for i, v in enumerate(kb))
                 correct = (E.mul(kk, P) == Q)
-            out.append(dict(m=m, p=E.p, r=N, n=n, vars=C.n, clauses=len(C.cl), res=res, secs=round(dt, 3),
+            out.append(dict(t_unknown=tt, m=m, p=E.p, r=N, n=n, vars=C.n, clauses=len(C.cl), res=res, secs=round(dt, 3),
                             conflicts=conf, correct=correct, rho_ops=round(math.sqrt(math.pi * N / 2), 1)))
             print(json.dumps(out[-1]), flush=True)
     return out
@@ -156,4 +158,4 @@ if __name__ == '__main__':
         run([6, 7, 8], 2, 1, 10**6)
     else:
         ms = [int(a) for a in sys.argv[1].split(',')]
-        run(ms, int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]))
+        run(ms, int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]) if len(sys.argv) > 5 else None)

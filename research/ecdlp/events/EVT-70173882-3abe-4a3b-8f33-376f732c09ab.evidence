@@ -1,0 +1,26 @@
+{
+  "id": "EVT-70173882-3abe-4a3b-8f33-376f732c09ab",
+  "kind": "task-status-change",
+  "task": "TSK-befee0fc-1eb0-4d11-8632-310df4112388",
+  "task_key": "ECDLP-36",
+  "timestamp": "2026-11-03T11:05:31.614274Z",
+  "run": "RUN-2da5ef89-b7a3-4b01-8dfd-addc3e28d488",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "research-worker"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Paper revision 1 launched",
+  "before_sha256": "b5b7c392587c7c13bcc74b11bf682ce83661553f58a73117290771496808537a",
+  "after_sha256": "33be31286a972027a1db2e52de1d98abb4bd7e12f4292ca05671e24061c77958"
+}

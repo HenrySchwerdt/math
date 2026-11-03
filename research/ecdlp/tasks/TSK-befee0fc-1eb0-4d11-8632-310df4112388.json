@@ -1,0 +1,33 @@
+{
+  "id": "TSK-befee0fc-1eb0-4d11-8632-310df4112388",
+  "type": "TSK",
+  "title": "Revision 1 of technical report PAP-ef6e2010",
+  "created_at": "2026-11-03T11:05:19.772437Z",
+  "status": "active",
+  "question": "Address blocking B1 and non-blocking findings of REV-15104e72 (adversarial) and REV-2b383b9b (manuscript).",
+  "rationale": "docs/PAPERS.md review loop.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b",
+    "REV-15104e72-0b78-4895-8bd8-a4abcac85a25",
+    "REV-2b383b9b-7029-4706-95fe-ae74ee44a7ce"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-70173882-3abe-4a3b-8f33-376f732c09ab.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute.",
+  "notes": "Created by PI RUN-62dbda7c.",
+  "success_criteria": [
+    "B1 fixed (per-theorem axiom evidence files); all non-blocking items addressed or explicitly declined with reason in a response table; clean latexmk build."
+  ],
+  "owned_files": [
+    "research/ecdlp/papers/PAP-ef6e2010-7950-47cf-bb75-05801891905b/",
+    "research/ecdlp/runs/RUN-2da5ef89-b7a3-4b01-8dfd-addc3e28d488.md",
+    "research/ecdlp/runs/RUN-2da5ef89-b7a3-4b01-8dfd-addc3e28d488.json"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; \u2264 5 web lookups; no commits; ~60 min."
+}

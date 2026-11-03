@@ -1,0 +1,26 @@
+{
+  "id": "EVT-45518cd7-0ec3-4d1f-9fbf-f653eba723dd",
+  "kind": "task-status-change",
+  "task": "TSK-1bb330e5-131f-4df3-8496-c3f2800911ad",
+  "task_key": "ECDLP-29",
+  "timestamp": "2026-11-03T11:05:31.540476Z",
+  "run": "RUN-071d1da9-2aeb-4e6d-8980-bf03cd153ee3",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "frontier-explorer"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Optional structure-aware SAT"
+  },
+  "reason": "SAT (r^1.2 scaling) and learning (0/174, controls fire) null results; learning reproduced by PI",
+  "before_sha256": "f635d5c376cd9a075f16520d4b813b1c126c846932b70f3caffa46af42834241",
+  "after_sha256": "08474b69cd65bad941ccb2f3fba34fb399abb9d2f3a8246c5d1f77e4b6722319"
+}

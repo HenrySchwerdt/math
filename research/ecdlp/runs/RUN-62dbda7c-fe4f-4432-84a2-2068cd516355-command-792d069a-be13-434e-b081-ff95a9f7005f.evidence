@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round10-frontier-b && python3 learn_k.py 1 10 ecdlp,identity,xparity"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:04:43.233086Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T11:04:45.857366Z",
+  "truncated": false,
+  "output": "Traceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round10-frontier-b/learn_k.py\", line 89, in <module>\n    out[kind] = experiment(kind, E.p, E, P, r, seed)\n                ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<repo>/research/ecdlp/experiments/round10-frontier-b/learn_k.py\", line 56, in experiment\n    Ptr = [pts[int(k)] for k in tr]; Pte = [pts[int(k)] for k in te]\n           ^^^\nUnboundLocalError: cannot access local variable 'pts' where it is not associated with a value\n"
+}

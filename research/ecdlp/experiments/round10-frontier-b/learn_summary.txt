@@ -1,0 +1,7 @@
+ecdlp tests 174 flags 0 max(acc-baseline)=0.0698
+   []
+control_identity tests 174 flags 165 max(acc-baseline)=0.4992
+   flagged labels (first 6): [(1013, 1021, 'bit0', 'logreg', 0.9935, 0.5229), (1013, 1021, 'bit0', 'mlp', 0.9935, 0.5229), (1013, 1021, 'bit1', 'logreg', 0.9967, 0.5261), (1013, 1021, 'bit1', 'mlp', 0.9935, 0.5261), (1013, 1021, 'bit2', 'logreg', 0.9935, 0.5098), (1013, 1021, 'bit2', 'mlp', 0.9935, 0.5098)]
+control_xparity tests 12 flags 12 max(acc-baseline)=0.4909
+   flagged labels (first 6): [(1013, 1021, 'xbit0', 'logreg', 1.0, 0.5294), (1013, 1021, 'xbit0', 'mlp', 1.0, 0.5294), (5477, 5503, 'xbit0', 'logreg', 1.0, 0.5136), (5477, 5503, 'xbit0', 'mlp', 1.0, 0.5136), (881, 859, 'xbit0', 'logreg', 1.0, 0.5349), (881, 859, 'xbit0', 'mlp', 1.0, 0.5349)]
+[(1013, 1021), (5477, 5503), (881, 859), (6143, 6151), (907, 877), (6673, 6607)]
