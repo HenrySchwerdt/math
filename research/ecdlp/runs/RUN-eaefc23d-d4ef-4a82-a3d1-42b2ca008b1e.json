@@ -13,7 +13,7 @@
   ],
   "evidence": [
     "research/ecdlp/runs/RUN-eaefc23d-d4ef-4a82-a3d1-42b2ca008b1e-command-52318485-94a3-488c-a526-e59bd0935ef4.evidence",
-    "research/ecdlp/runs/RUN-eaefc23d-d4ef-4a82-a3d1-42b2ca008b1e-command-2400a594-fd04-4d19-a60e-449bb171c6a7.evidence"
+    "research/ecdlp/runs/RUN-eaefc23d-d4ef-4a82-a3d1-42b2ca008b1e-command-f7ed59e4-7a51-4dbd-a741-3ac83b9ce461.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
@@ -33,7 +33,7 @@
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [
       "research/ecdlp/runs/RUN-eaefc23d-d4ef-4a82-a3d1-42b2ca008b1e-command-52318485-94a3-488c-a526-e59bd0935ef4.evidence",
-      "research/ecdlp/runs/RUN-eaefc23d-d4ef-4a82-a3d1-42b2ca008b1e-command-2400a594-fd04-4d19-a60e-449bb171c6a7.evidence"
+      "research/ecdlp/runs/RUN-eaefc23d-d4ef-4a82-a3d1-42b2ca008b1e-command-f7ed59e4-7a51-4dbd-a741-3ac83b9ce461.evidence"
     ],
     "files_changed": [],
     "resulting_commit": null,
