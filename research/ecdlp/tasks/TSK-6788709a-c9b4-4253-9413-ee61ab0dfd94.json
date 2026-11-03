@@ -1,0 +1,31 @@
+{
+  "id": "TSK-6788709a-c9b4-4253-9413-ee61ab0dfd94",
+  "type": "TSK",
+  "title": "Round 13 / inventor D: algebraic relation finder vs birthday search",
+  "created_at": "2026-11-03T12:03:21.985064Z",
+  "status": "active",
+  "question": "Can a Groebner/resultant (or other algebraic) relation finder over a structured factor base produce index-calculus relations on prime-field curves at lower cost per relation than birthday search, giving total cost below sqrt(r)? Measure cost per relation and total vs rho.",
+  "rationale": "Only constructive thread left open by inventor A; 60% algorithm allocation.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-23351e75-1cf5-4f17-8a78-2ff0f89b51ff"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-06b7fb3d-3bcc-41d1-87ae-107a71773b46.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute.",
+  "notes": "Created via research.py start.",
+  "success_criteria": [
+    "Exact statements; reproducible evidence; honest negatives."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8.md",
+    "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8.json",
+    "research/ecdlp/experiments/round13-inventor-d/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; no commits."
+}
