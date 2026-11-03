@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round17-frontier-h/evaluate2.py",
+    "controls",
+    "r0",
+    "r1",
+    "s2",
+    "s3"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:40:03.057639Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T13:40:28.493955Z",
+  "truncated": false,
+  "output": "bsgs succ {13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0} a,g cand 1.56 25 ctrl 1.80 130 \n   cost/rho [0.759, 0.713, 0.681, 0.784] slope 0.005 ci99 [-0.044,0.054] Q [1.009, 0.913, 0.847, 0.956] Q20 ci99 [0.789, 1.161] T1-4 True False False True COUNTS False\nrho_floyd succ {13: 0.99, 14: 0.98, 15: 1.0, 16: 0.99, 17: 1.0, 18: 0.97, 19: 0.95, 20: 0.96} a,g cand 5.33 -3 ctrl 1.80 130 \n   cost/rho [2.53, 2.622, 2.771, 2.965] slope 0.052 ci99 [0.013,0.092] Q [1.027, 1.012, 1.029, 1.073] Q20 ci99 [0.922, 1.24] T1-4 True False False False COUNTS False\nrho_dp_nb3 succ {13: 1.0, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0} a,g cand 3.03 48 ctrl 1.80 130 \n   cost/rho [1.466, 1.446, 1.472, 1.756] slope 0.055 ci99 [-0.010,0.119] Q [1.0, 0.95, 0.94, 1.099] Q20 ci99 [0.85, 1.402] T1-4 True False False False COUNTS False\nrho_dp_nb5 succ {13: 0.99, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0, 20: 1.0} a,g cand 2.02 125 ctrl 1.80 130 \n   cost/rho [1.058, 1.08, 1.071, 1.146] slope 0.023 ci99 [-0.002,0.051] Q [0.964, 0.978, 0.966, 1.03] Q20 ci99 [0.894, 1.182] T1-4 True False False False COUNTS False\nr0 succ {13: 0.96, 14: 0.95, 15: 0.93, 16: 0.95, 17: 0.95, 18: 0.95, 19: 0.92, 20: 0.82} a,g cand 2.47 25 ctrl 1.80 130 \n   cost/rho [1.157, 1.119, 1.248, 2.007] slope 0.173 ci99 [0.061,0.285] Q [0.983, 0.912, 0.985, 1.549] Q20 ci99 [1.04, 2.313] T1-4 False False False False COUNTS False\nTraceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round17-frontier-h/evaluate2.py\", line 91, in <module>\n    main()\n    ~~~~^^\n  File \"<repo>/research/ecdlp/experiments/round17-frontier-h/evaluate2.py\", line 85, in main\n    d = get(n, pr); a = analyse(d, ctrl, n); a['prog'] = pr; out[n] = a\n                        ~~~~~~~^^^^^^^^^^^^\n  File \"<repo>/research/ecdlp/experiments/round17-frontier-h/evaluate2.py\", line 46, in analyse\n    o, rr, slope, Q = stats(full, fullh)\n                      ~~~~~^^^^^^^^^^^^^\n  File \"<repo>/research/ecdlp/experiments/round17-frontier-h/evaluate2.py\", line 39, in stats\n    out[nm] = dict(alpha=a, gamma=g, obs=obs, ratio=[o / q for o, q in zip(obs, pred)])\n                                                     ~~^~~\nZeroDivisionError: float division by zero\n"
+}

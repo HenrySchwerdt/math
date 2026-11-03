@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "bash",
+    "research/ecdlp/experiments/round18-inventor-i/run_all_ttest.sh"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:41:40.946293Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T13:42:15.243328Z",
+  "truncated": false,
+  "output": ""
+}

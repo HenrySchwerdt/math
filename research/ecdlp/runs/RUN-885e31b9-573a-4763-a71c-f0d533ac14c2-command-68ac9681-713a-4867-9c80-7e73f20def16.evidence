@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round17-frontier-h/evaluate2.py",
+    "controls",
+    "r0",
+    "r1",
+    "s2",
+    "s3"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:39:56.220326Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T13:39:56.252598Z",
+  "truncated": false,
+  "output": "  File \"<repo>/research/ecdlp/experiments/round17-frontier-h/evaluate2.py\", line 67\n    T1_success=T1, T2_slope_upper99_lt0=T2, T3_Q2^20_upper99_lt1=T3 if False else None, T3=T3, T4_ratio_lt1=T4, counts=T1 and T2 and T3 and T4)\n                                                    ^\nSyntaxError: invalid decimal literal\n"
+}

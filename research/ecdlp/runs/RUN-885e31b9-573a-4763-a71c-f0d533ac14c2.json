@@ -12,7 +12,12 @@
     "TSK-a098a663-8881-49d6-a44d-609d0416f5de"
   ],
   "evidence": [
-    "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-8a282cdf-84e5-4dd0-80a9-b1878e5e8b76.evidence"
+    "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-8a282cdf-84e5-4dd0-80a9-b1878e5e8b76.evidence",
+    "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-68ac9681-713a-4867-9c80-7e73f20def16.evidence",
+    "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-96311aa1-43a1-42fa-875a-2b5c2e84b79d.evidence",
+    "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-ab7c4766-00c5-46ce-9e95-ac1065bbc1da.evidence",
+    "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-70bdc0a2-516b-47c9-b342-76f1aa20fc68.evidence",
+    "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-0ad06db0-9e20-45fe-9988-a05cdbf42463.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
@@ -31,7 +36,12 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [
-      "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-8a282cdf-84e5-4dd0-80a9-b1878e5e8b76.evidence"
+      "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-8a282cdf-84e5-4dd0-80a9-b1878e5e8b76.evidence",
+      "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-68ac9681-713a-4867-9c80-7e73f20def16.evidence",
+      "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-96311aa1-43a1-42fa-875a-2b5c2e84b79d.evidence",
+      "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-ab7c4766-00c5-46ce-9e95-ac1065bbc1da.evidence",
+      "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-70bdc0a2-516b-47c9-b342-76f1aa20fc68.evidence",
+      "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2-command-0ad06db0-9e20-45fe-9988-a05cdbf42463.evidence"
     ],
     "files_changed": [],
     "resulting_commit": null,
