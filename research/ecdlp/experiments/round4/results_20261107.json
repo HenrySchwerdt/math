@@ -2372,9 +2372,11 @@
    "bsgs_adds_mean": 111.4,
    "bsgs_lookups_mean": 98.4,
    "bsgs_units_mean": 209.8,
+   "rho_steps_mean": 124.45,
+   "rho_setup_mean": 1188.0,
    "rho_ops_mean": 1312.45,
-   "rho_ops_min": 1215,
-   "rho_ops_max": 1407,
+   "rho_ops_min": 27,
+   "rho_ops_max": 219,
    "rho_runs": 20
   },
   "14": {
@@ -2383,9 +2385,11 @@
    "bsgs_adds_mean": 210.1,
    "bsgs_lookups_mean": 197.1,
    "bsgs_units_mean": 407.2,
+   "rho_steps_mean": 290.15,
+   "rho_setup_mean": 1386.0,
    "rho_ops_mean": 1676.15,
-   "rho_ops_min": 1449,
-   "rho_ops_max": 1965,
+   "rho_ops_min": 63,
+   "rho_ops_max": 579,
    "rho_runs": 20
   },
   "16": {
@@ -2394,9 +2398,11 @@
    "bsgs_adds_mean": 426.1,
    "bsgs_lookups_mean": 409.1,
    "bsgs_units_mean": 835.2,
+   "rho_steps_mean": 489.9,
+   "rho_setup_mean": 1617.0,
    "rho_ops_mean": 2106.9,
-   "rho_ops_min": 1675,
-   "rho_ops_max": 2440,
+   "rho_ops_min": 58,
+   "rho_ops_max": 823,
    "rho_runs": 20
   },
   "18": {
@@ -2405,9 +2411,11 @@
    "bsgs_adds_mean": 755.0,
    "bsgs_lookups_mean": 738.0,
    "bsgs_units_mean": 1493.0,
+   "rho_steps_mean": 829.45,
+   "rho_setup_mean": 1782.0,
    "rho_ops_mean": 2611.45,
-   "rho_ops_min": 2105,
-   "rho_ops_max": 3902,
+   "rho_ops_min": 323,
+   "rho_ops_max": 2120,
    "rho_runs": 20
   }
  },
@@ -2946,5 +2954,5 @@
    "config": "14|3|1"
   }
  },
- "runtime_s": 4.208598852157593
+ "runtime_s": 3.9767777919769287
 }

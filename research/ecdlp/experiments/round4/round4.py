@@ -2,7 +2,9 @@
 import sys, json, math, random, time
 from math import isqrt, log, sqrt, pi as PI
 import numpy as np
-sys.path.insert(0, '../lib')
+import os
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(HERE, '..', 'lib'))
 from toyec import Curve, is_prime, dlog_bsgs
 
 SEED = 20261107
@@ -165,14 +167,14 @@ def bsgs_counted(E, P, Q, n):
     return None, adds, lookups
 
 def rho_counted(E, P, Q, r, rng):
-    ops = 0
+    ops = 0; setup = 0
     while True:
         M = []
         for _ in range(32):
             a, b = rng.randrange(r), rng.randrange(r)
-            M.append((a, b, E.add(E.mul(a, P), E.mul(b, Q)))); ops += int(3 * log(r, 2)) + 1
+            M.append((a, b, E.add(E.mul(a, P), E.mul(b, Q)))); setup += int(3 * log(r, 2)) + 1
         a0, b0 = rng.randrange(r), rng.randrange(r)
-        R = E.add(E.mul(a0, P), E.mul(b0, Q)); ops += int(3 * log(r, 2)) + 1
+        R = E.add(E.mul(a0, P), E.mul(b0, Q)); setup += int(3 * log(r, 2)) + 1
         st = (R, a0, b0)
         def step(s):
             R, a, b = s
@@ -189,7 +191,7 @@ def rho_counted(E, P, Q, r, rng):
             (_, a1, b1), (_, a2, b2) = found
             if (b1 - b2) % r:
                 k = (a2 - a1) * pow((b1 - b2) % r, -1, r) % r
-                if E.mul(k, P) == Q: return k, ops
+                if E.mul(k, P) == Q: return k, ops, setup
 
 # ---------- cost model ----------
 def cost_model(m, n, nx, pi_meas, sizes, r):
@@ -229,17 +231,17 @@ def run_bucket(k):
 def baselines(curve, rng, runs=20):
     p, a, b, r = curve
     E = Curve(a, b, p); P = random_point(E, rng)
-    bs = []; rh = []
+    bs = []; rh = []; rs = []
     for _ in range(10):
         k = rng.randrange(1, r); Q = E.mul(k, P)
         kk, ad, lk = bsgs_counted(E, P, Q, r); assert kk == k
         bs.append((ad, lk))
     for _ in range(runs):
         k = rng.randrange(1, r); Q = E.mul(k, P)
-        kk, ops = rho_counted(E, P, Q, r, rng); assert kk == k
-        rh.append(ops)
+        kk, ops, su = rho_counted(E, P, Q, r, rng); assert kk == k
+        rh.append(ops); rs.append(su)
     return dict(p=p, r=r, bsgs_adds_mean=sum(x[0] for x in bs) / len(bs), bsgs_lookups_mean=sum(x[1] for x in bs) / len(bs),
-                bsgs_units_mean=sum(x[0] + x[1] for x in bs) / len(bs), rho_ops_mean=sum(rh) / len(rh),
+                bsgs_units_mean=sum(x[0] + x[1] for x in bs) / len(bs), rho_steps_mean=sum(rh) / len(rh), rho_setup_mean=sum(rs) / len(rs), rho_ops_mean=(sum(rh) + sum(rs)) / len(rh),
                 rho_ops_min=min(rh), rho_ops_max=max(rh), rho_runs=runs)
 
 def semaev_consistency(curve, rng, beta=1.0, trials=300):
@@ -412,5 +414,5 @@ if __name__ == '__main__':
         print('e2e', k, {kk: v for kk, v in e2e[k].items()}, flush=True)
     out['e2e'] = e2e
     out['runtime_s'] = time.time() - t0
-    json.dump(out, open('results_20261107.json', 'w'), indent=1, default=str)
+    json.dump(out, open(os.path.join(HERE, 'results_20261107.json'), 'w'), indent=1, default=str)
     print('verdict', out['verdict'], 'runtime', out['runtime_s'])

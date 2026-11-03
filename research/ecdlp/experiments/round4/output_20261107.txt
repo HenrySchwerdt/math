@@ -1,0 +1,13 @@
+S3 oracle {'curves': [[1009, 595, 120], [4093, 2201, 2525]], 'positive_checks': 3983, 'positive_fail': 0, 'random_checks': 2000, 'random_fail': 0, 'quad_checks': 2000, 'quad_fail': 0, 'x1eqx2_checks': 3, 'x1eqx2_fail': 0}
+bucket 12 done 0.1
+bucket 14 done 0.2
+bucket 16 done 0.9
+bucket 18 done 3.9
+semaev {12: {'p': 4001, 'B': 63, 'trials': 300, 'agree': 300, 'disagree': 0, 'truth_decomposable': 126, 'units_per_attempt': 32.0, 'nx': 32}, 14: {'p': 15791, 'B': 125, 'trials': 300, 'agree': 300, 'disagree': 0, 'truth_decomposable': 128, 'units_per_attempt': 69.0, 'nx': 69}}
+e2e 12 {'ok': True, 'recovered': 1924, 'k_true': 1924, 'bsgs_oracle': 1924, 'match_oracle': True, 'm': 3, 'B': 15, 'n': 14, 'nx': 7, 'relations': 7, 'attempts': 70, 'pivots': 7, 'ops': {'build': 105, 'walk': 1258, 'subtract': 908, 'lookup': 908, 'la_mults': 93}, 'total_ops': 3272, 'curve': [4001, 617, 405, 4049], 'sqrt_p': 63.25345840347388, 'rho_formula': 79.7505757169974, 'reason': None, 'config': '12|3|1'}
+e2e 14 {'ok': True, 'recovered': 7232, 'k_true': 7232, 'bsgs_oracle': 7232, 'match_oracle': True, 'm': 3, 'B': 25, 'n': 28, 'nx': 14, 'relations': 13, 'attempts': 58, 'pivots': 13, 'ops': {'build': 406, 'walk': 1444, 'subtract': 1361, 'lookup': 1361, 'la_mults': 464}, 'total_ops': 5036, 'curve': [15791, 7886, 2912, 15919], 'sqrt_p': 125.66224572241258, 'rho_formula': 158.131295846989, 'reason': None, 'config': '14|3|1'}
+verdict SURVIVES (tested domain only) runtime 3.9767777919769287
+
+real	0m4.081s
+user	0m3.662s
+sys	0m0.631s

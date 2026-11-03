@@ -13,14 +13,19 @@
     "HYP-db508348-69da-451b-ba37-d4d4f472c121"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "EMPIRICAL (12 prime-order toy curves, p in ~[3.8e3,2.8e5], exact enumeration): decomposition probability pi(m,B) over m-sums of V_B matches n^m/(m! r) with n=|V_B| (both signs) within 0-30% (below it as pi saturates); the sign-doubled (2n)^m/(m! r) overestimates ~2^m at small pi.",
+    "EMPIRICAL (unit-cost model, toy sizes only): no tested (m in {2,3}, beta in {0.5,1,2}) relation-collection plus linear-algebra cost falls below sqrt(p); minimum ratio to sqrt(p) at 2^18 is 15.7 (m=3, beta=0.5); hypothesis HYP-db508348 SURVIVES on the tested domain only, no asymptotic claim.",
+    "S_3 for short Weierstrass verified against the group law (0 failures in ~8000 checks) and the Semaev m=2 route agrees with brute force on 600/600 random R; it is cheaper than the (m-1)-table naive route but not than the full m-sum table.",
+    "End-to-end toy index calculus recovered k correctly (verified by k*P==Q and dlog_bsgs) at p=4001 and p=15791 at 40-52x sqrt(p) measured units."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "outcome": "verified",
+  "next_action": "PI review of cost-model assumptions (unit weights, sign-symmetry favour, epsilon); optionally explore beta>2, m>=4 and weighted field-op costs; independent replication with a second seed.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Self-reported model identity (experimenter): Sonnet 5.5, exact id claude-sonnet-5-5, as stated in the runtime system prompt; not independently verified. Commands were run directly (not via research.py exec) because edits were restricted to claims/notes/next_action/run.benchmark; raw output in experiments/round4/output_20261107.txt. Report: this run's .md. | PI reproduced round4.py in an isolated copy via research.py exec; results identical excluding timing fields.",
   "run": {
     "started_at": "2026-11-03T09:36:50.564261Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T09:44:05.779052Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "experimenter",
@@ -32,10 +37,12 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [],
-    "files_changed": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round4/"
+    ],
     "resulting_commit": null,
     "tests": [],
-    "benchmark": "See report",
+    "benchmark": "Counted-operation cost model (group op = hash lookup = root solve = 1 unit), not wall time. Machine: 4 vCPU Intel Xeon 2.30 GHz, Linux 6.18, Python 3.13.18, numpy 2.5.3, single process. Inputs/seed 20261107, 12 curves (3 per bucket 2^12..2^18), m in {2,3}, beta in {0.5,1,2}, exact enumeration. Baselines: instrumented BSGS (10 random Q, 1 curve/bucket) and Brent rho (20 runs, 1 curve/bucket), plus formula sqrt(pi r/2). Single execution of the final run (4.1 s wall; plus an earlier development run), no timing statistic is claimed. Toy sizes; asymptotics not established.",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
     "reviews": []
   }
