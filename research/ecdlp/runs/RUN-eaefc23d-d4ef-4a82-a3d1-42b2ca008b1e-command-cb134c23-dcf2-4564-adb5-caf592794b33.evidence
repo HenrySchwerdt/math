@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round19-frontier-i/e3_cost.py",
+    "SMALL",
+    "16",
+    "11,13,15",
+    "20"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T14:03:27.056566Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T14:03:28.929902Z",
+  "truncated": false,
+  "output": "{\"alg\": \"EXH\", \"bits\": 11, \"n\": 60, \"mean_r\": 2008.3333333333333, \"mean_ops\": 2920.516666666667, \"median_ops\": 2149.0, \"sd\": 2775.4014573971494, \"mean_ops_over_sqrt_r\": 65.02114273483065, \"mean_ops_over_r\": 1.4501790726905681}\n{\"alg\": \"EXH\", \"bits\": 13, \"n\": 60, \"mean_r\": 8207.666666666666, \"mean_ops\": 11004.616666666667, \"median_ops\": 5934.0, \"sd\": 12913.164461240922, \"mean_ops_over_sqrt_r\": 121.72727778232951, \"mean_ops_over_r\": 1.346643926971148}\n{\"alg\": \"EXH\", \"bits\": 15, \"n\": 60, \"mean_r\": 34570.333333333336, \"mean_ops\": 40838.71666666667, \"median_ops\": 39661.0, \"sd\": 25265.378982639246, \"mean_ops_over_sqrt_r\": 219.77507499907978, \"mean_ops_over_r\": 1.182812331154512}\n{\"alg\": \"MITM\", \"bits\": 11, \"n\": 60, \"mean_r\": 2008.3333333333333, \"mean_ops\": 416.93333333333334, \"median_ops\": 326.0, \"sd\": 234.0240633401237, \"mean_ops_over_sqrt_r\": 9.353660841070738, \"mean_ops_over_r\": 0.2101762800701531}\n{\"alg\": \"MITM\", \"bits\": 13, \"n\": 60, \"mean_r\": 8207.666666666666, \"mean_ops\": 669.4666666666667, \"median_ops\": 527.0, \"sd\": 333.88887705675705, \"mean_ops_over_sqrt_r\": 7.391337330352568, \"mean_ops_over_r\": 0.08161476595545741}\n{\"alg\": \"MITM\", \"bits\": 15, \"n\": 60, \"mean_r\": 34570.333333333336, \"mean_ops\": 973, \"median_ops\": 871.0, \"sd\": 279.7834877186286, \"mean_ops_over_sqrt_r\": 5.232735946174825, \"mean_ops_over_r\": 0.028143475009263678}\n{\"alg\": \"RHO\", \"bits\": 11, \"n\": 60, \"mean_r\": 2008.3333333333333, \"mean_ops\": 502.51666666666665, \"median_ops\": 496.5, \"sd\": 52.751774588370225, \"mean_ops_over_sqrt_r\": 11.238872187597106, \"mean_ops_over_r\": 0.25175398173907093}\n{\"alg\": \"RHO\", \"bits\": 13, \"n\": 60, \"mean_r\": 8207.666666666666, \"mean_ops\": 700.85, \"median_ops\": 690.0, \"sd\": 119.65935330484338, \"mean_ops_over_sqrt_r\": 7.736251259016623, \"mean_ops_over_r\": 0.08540616482137836}\n{\"alg\": \"RHO\", \"bits\": 15, \"n\": 60, \"mean_r\": 34570.333333333336, \"mean_ops\": 933.25, \"median_ops\": 869.0, \"sd\": 261.6647744092939, \"mean_ops_over_sqrt_r\": 5.020598273038945, \"mean_ops_over_r\": 0.02701126863631807}\nraw file <repo>/research/ecdlp/experiments/round19-frontier-i/raw_SMALL_16_11-13-15.jsonl rows 540\n"
+}

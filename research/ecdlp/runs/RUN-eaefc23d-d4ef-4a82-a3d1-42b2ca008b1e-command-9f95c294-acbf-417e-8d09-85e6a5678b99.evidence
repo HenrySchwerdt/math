@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round19-frontier-i/e3_cost.py",
+    "SMALL",
+    "15",
+    "17",
+    "20"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T14:03:27.040046Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T14:03:39.748095Z",
+  "truncated": false,
+  "output": "{\"alg\": \"EXH\", \"bits\": 17, \"n\": 60, \"mean_r\": 129906.33333333333, \"mean_ops\": 140863.16666666666, \"median_ops\": 67165.5, \"sd\": 155700.7320113564, \"mean_ops_over_sqrt_r\": 388.8489501698333, \"mean_ops_over_r\": 1.0742129313979514}\n{\"alg\": \"MITM\", \"bits\": 17, \"n\": 60, \"mean_r\": 129906.33333333333, \"mean_ops\": 1905.6333333333334, \"median_ops\": 1483.0, \"sd\": 1120.9101059208788, \"mean_ops_over_sqrt_r\": 5.305690287321572, \"mean_ops_over_r\": 0.014781289726260605}\n{\"alg\": \"RHO\", \"bits\": 17, \"n\": 60, \"mean_r\": 129906.33333333333, \"mean_ops\": 1418.3, \"median_ops\": 1279.5, \"sd\": 517.9523240608155, \"mean_ops_over_sqrt_r\": 3.9434024462358868, \"mean_ops_over_r\": 0.01097076768566268}\nraw file <repo>/research/ecdlp/experiments/round19-frontier-i/raw_SMALL_15_17.jsonl rows 180\n"
+}

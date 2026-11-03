@@ -1,0 +1,180 @@
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1564, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 17883, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 1197, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 888, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 374418, "passes": 8}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 1197, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1063, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 100193, "passes": 3}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 2394, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 2590, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 8729, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 1197, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1185, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 268508, "passes": 6}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 4788, "passes": 4}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1300, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 49724, "passes": 2}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 1197, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 884, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 443912, "passes": 10}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 1197, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 976, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 76764, "passes": 2}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 7182, "passes": 6}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 2025, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 127596, "passes": 3}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 2394, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 3830, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 134311, "passes": 3}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 2394, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1058, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 31639, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 2394, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1134, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 594034, "passes": 13}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 2394, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1182, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 27238, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 2394, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 848, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 20580, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 2394, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1533, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 597, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 1197, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1094, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 328718, "passes": 7}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 1197, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1605, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 89580, "passes": 2}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 2394, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1052, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 8752, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 1197, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 1413, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 32553, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 2394, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 122743, "ops": 2247, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 122743, "n": 3, "l": 9, "C": 48620, "ops": 9588, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 122743, "ops": 1197, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1433, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 19738, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1072, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 55686, "passes": 2}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1596, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 596492, "passes": 13}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1068, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 271315, "passes": 6}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 2277, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 291206, "passes": 6}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1548, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 181524, "passes": 4}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1626, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 303697, "passes": 7}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1202, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 437493, "passes": 9}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1536, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 66878, "passes": 2}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1004, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 135658, "passes": 3}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1469, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 34982, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1086, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 11151, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1303, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 554260, "passes": 12}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1151, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 61267, "passes": 2}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1571, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 328103, "passes": 7}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 4449, "passes": 3}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1046, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 156817, "passes": 4}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 998, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 18740, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1249, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 247337, "passes": 6}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 1471, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 46185, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 2966, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 138587, "ops": 686, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 138587, "n": 3, "l": 9, "C": 48620, "ops": 299714, "passes": 7}
+{"alg": "MITM", "bits": 17, "r": 138587, "ops": 1483, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1230, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 15229, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 2396, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1259, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 44787, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1924, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 15005, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1234, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 13182, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 3594, "passes": 3}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1068, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 288551, "passes": 6}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 2396, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1011, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 24587, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 2396, "passes": 2}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1411, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 46785, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1472, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 38296, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1973, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 34938, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1413, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 18010, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1073, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 216969, "passes": 5}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 2220, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 20670, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1453, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 67453, "passes": 2}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1013, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 198723, "passes": 5}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1201, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 104726, "passes": 3}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1518, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 28462, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1209, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 73684, "passes": 2}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 2684, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 9662, "passes": 1}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 3594, "passes": 3}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1491, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 181361, "passes": 4}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 1198, "passes": 1}
+{"alg": "RHO", "bits": 17, "r": 128389, "ops": 1378, "ok": true}
+{"alg": "EXH", "bits": 17, "r": 128389, "n": 3, "l": 9, "C": 48620, "ops": 147150, "passes": 3}
+{"alg": "MITM", "bits": 17, "r": 128389, "ops": 4792, "passes": 4}
