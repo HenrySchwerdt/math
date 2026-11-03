@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Independent correspondence review of PRF-34538f75",
   "created_at": "2026-11-03T10:25:23.720584Z",
-  "status": "active",
+  "status": "completed",
   "question": "Does degree_bound_short_weierstrass faithfully state Theorem B for actual curve points?",
   "rationale": "REVIEW.md",
   "assumptions": [],
@@ -39,7 +39,7 @@
       "research/ecdlp/reviews/REV-1f44f52b-09e8-4dad-84f5-3fe181342de4.json",
       "research/ecdlp/reviews/REV-1f44f52b-09e8-4dad-84f5-3fe181342de4.md"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "e5a3524d9a06ae0632b2cd2447282a430e3ac12a",
     "tests": [],
     "benchmark": "Not applicable",
     "machine": "Claude Code remote Linux container",
