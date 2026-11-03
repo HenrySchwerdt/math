@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 3 / ECDLP-9: decisive scaling test of the flat-spectrum explanation",
   "created_at": "2026-11-03T09:27:03.926248Z",
-  "status": "active",
+  "status": "completed",
   "question": "Do full-range normalized twisted sums X_c for chi(g([k]P)) stay bounded relative to sqrt(p/r) as p grows (Weil-type), with a non-Exp(1) periodogram law, for low-degree g, and approach random-like behaviour for higher-degree g or non-algebraic predicates?",
   "rationale": "Bounded subagent run for TSK-bd3c9a6f-baa4-4e7c-815e-7a6198a978f7",
   "assumptions": [],
@@ -39,7 +39,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round3/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "5ea31e670a2fe2ce5fc5474b7e47adf311873037",
     "tests": [],
     "benchmark": "Not a timing benchmark. Methodology: random.Random seeded curve sampling (4 p-buckets x 12), full-range FFT (numpy 2.5.3, Python 3.13.18) of +-1/0 sequences, ~4 s per seed on a 4 vCPU Linux container; statistics per (curve,predicate); OLS slope of max on ln r with 99% t-CI; oracle direct O(r) recomputation (40 values, max diff 1.4e-15); replication seed 20261106; pre-registration hash in PROTOCOL.md.",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
