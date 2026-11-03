@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round20-inventor-j && python3 analyze_costs.py > out/analysis_costs_stdout.txt 2>&1 && python3 analyze_learn.py > out/analysis_learn_stdout.txt 2>&1; tail -n 9 out/analysis_costs_stdout.txt"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T16:29:18.574381Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T16:29:19.092420Z",
+  "truncated": false,
+  "output": "  r=2^64: delta_min=0.00045521095751206904 at w=2^59\n\nP1 fitted cost vs r on the planted control: ops = alpha sqrt(r) + gamma (per-instance data, bootstrap 95%), compare alpha_rho:\n  eps=0.2 core: alpha=0.0556 [0.0501,0.0625] gamma=1126 (n=100, successes only); alpha_rho=1.249\n  eps=0.2 +7/query: alpha=0.3326 [0.2964,0.3796] gamma=7879 (n=100, successes only); alpha_rho=1.249\n  eps=0.1 core: alpha=0.1476 [0.1329,0.1678] gamma=3761 (n=100, successes only); alpha_rho=1.249\n  eps=0.1 +7/query: alpha=1.0902 [0.9770,1.2462] gamma=29072 (n=100, successes only); alpha_rho=1.249\n  eps=0.05 core: alpha=0.8517 [0.7301,0.9932] gamma=13848 (n=39, successes only); alpha_rho=1.249\n  eps=0.05 +7/query: alpha=6.7226 [5.7625,7.8496] gamma=109916 (n=39, successes only); alpha_rho=1.249\n"
+}

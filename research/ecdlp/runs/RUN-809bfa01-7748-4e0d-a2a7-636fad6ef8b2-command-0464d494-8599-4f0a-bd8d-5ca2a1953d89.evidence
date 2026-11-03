@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round20-inventor-j && timeout 270 python3 run_p1.py calib"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T16:16:49.679127Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T16:19:09.093835Z",
+  "truncated": false,
+  "output": "{'kappa': 2.0, 'nu': 0.5, 'ok': 8, 'n': 30, 'mean_ops': 775.0}\n{'kappa': 2.0, 'nu': 1, 'ok': 24, 'n': 30, 'mean_ops': 2417.6666666666665}\n{'kappa': 2.0, 'nu': 1.5, 'ok': 29, 'n': 30, 'mean_ops': 3789.366666666667}\n{'kappa': 2.0, 'nu': 2, 'ok': 30, 'n': 30, 'mean_ops': 3747.0}\n{'kappa': 2.0, 'nu': 3, 'ok': 30, 'n': 30, 'mean_ops': 5755.466666666666}\n{'kappa': 2.0, 'nu': 4, 'ok': 30, 'n': 30, 'mean_ops': 7870.833333333333}\n{'kappa': 3.0, 'nu': 0.5, 'ok': 7, 'n': 30, 'mean_ops': 821.4666666666667}\n{'kappa': 3.0, 'nu': 1, 'ok': 25, 'n': 30, 'mean_ops': 2444.7}\n{'kappa': 3.0, 'nu': 1.5, 'ok': 29, 'n': 30, 'mean_ops': 3959.266666666667}\n{'kappa': 3.0, 'nu': 2, 'ok': 30, 'n': 30, 'mean_ops': 5527.066666666667}\n{'kappa': 3.0, 'nu': 3, 'ok': 30, 'n': 30, 'mean_ops': 5787.333333333333}\n{'kappa': 3.0, 'nu': 4, 'ok': 30, 'n': 30, 'mean_ops': 7882.033333333334}\n"
+}

@@ -1,0 +1,106 @@
+rho control (same Ops, 135 instances, r 2^12..2^27.3): ops = 1.249 sqrt(r) + 346.0; alpha 95% CI [0.898,1.580], gamma CI [-57,784]
+kangaroo control (270 instances, w 2^8..2^24, success 1.000): ops = 3.352 sqrt(w) + 424.2; alpha CI [2.802,3.868], gamma CI [134,781]
+interval bar: max w/r for kangaroo(w) < rho(r):
+  r=2^12: w*/r = 0.000244 (rho 426 ops)
+  r=2^16: w*/r = 0.0793 (rho 666 ops)
+  r=2^20: w*/r = 0.122 (rho 1.63e+03 ops)
+  r=2^24: w*/r = 0.135 (rho 5.46e+03 ops)
+  r=2^28: w*/r = 0.138 (rho 2.08e+04 ops)
+  r=2^32: w*/r = 0.139 (rho 8.22e+04 ops)
+  r=2^40: w*/r = 0.139 (rho 1.31e+06 ops)
+  r=2^64: w*/r = 0.139 (rho 5.37e+09 ops)
+  r=2^128: w*/r = 0.139 (rho 2.3e+19 ops)
+P1 stride-ML (planted MSB oracle, nu=2, kappa=2): eps | bits | r | ok/n | core ops | ops+7/query features | queries | model ops(+feat) | rho fit
+  0.20 | 12 | 2437 | 20/20 | 818 | 5928 | 730 | 5964 | 408
+  0.20 | 16 | 48571 | 20/20 | 995 | 6871 | 840 | 6003 | 621
+  0.20 | 20 | 951911 | 20/20 | 1291 | 8956 | 1095 | 9064 | 1565
+  0.20 | 24 | 14806999 | 20/20 | 1756 | 11976 | 1460 | 12167 | 5153
+  0.20 | 28 | 172227161 | 20/20 | 1836 | 12056 | 1460 | 12231 | 16741
+  0.10 | 12 | 2437 | 20/20 | 3020 | 23509 | 2927 | 14263 | 408
+  0.10 | 16 | 48571 | 20/20 | 3669 | 28505 | 3548 | 28553 | 621
+  0.10 | 20 | 951911 | 20/20 | 3744 | 28580 | 3548 | 28592 | 1565
+  0.10 | 24 | 14806999 | 20/20 | 5569 | 42823 | 5322 | 42948 | 5153
+  0.10 | 28 | 172227161 | 20/20 | 5641 | 42895 | 5322 | 42996 | 16741
+  0.05 | 12 | 2437 | 7/8 | 8389 | 59416 | 8331 | 66726 | 408
+  0.05 | 16 | 48571 | 8/8 | 16786 | 133420 | 16662 | 133482 | 621
+  0.05 | 20 | 951911 | 8/8 | 16821 | 133455 | 16662 | 133521 | 1565
+  0.05 | 24 | 14806999 | 8/8 | 16880 | 133514 | 16662 | 133556 | 5153
+  0.05 | 28 | 172227161 | 8/8 | 25280 | 200231 | 24993 | 200394 | 16741
+epsilon bar: smallest eps with modelled P1 cost (m_q=7 feature ops/query) < rho fit (and with m_q=0, m_q=50):
+  mq=0 r=2^12: eps_bar = 0.2986   (eps_bar*r^(1/4) = 2.39)
+  mq=0 r=2^16: eps_bar = 0.3064   (eps_bar*r^(1/4) = 4.9)
+  mq=0 r=2^20: eps_bar = 0.1856   (eps_bar*r^(1/4) = 5.94)
+  mq=0 r=2^24: eps_bar = 0.1021   (eps_bar*r^(1/4) = 6.54)
+  mq=0 r=2^28: eps_bar = 0.05485   (eps_bar*r^(1/4) = 7.02)
+  mq=0 r=2^32: eps_bar = 0.02918   (eps_bar*r^(1/4) = 7.47)
+  mq=0 r=2^40: eps_bar = 0.008115   (eps_bar*r^(1/4) = 8.31)
+  mq=0 r=2^64: eps_bar = 0.0001593   (eps_bar*r^(1/4) = 10.4)
+  mq=0 r=2^128: eps_bar = 1e-06   (eps_bar*r^(1/4) = 4.29e+03)
+  mq=7 r=2^12: no eps<=0.5 beats rho
+  mq=7 r=2^16: no eps<=0.5 beats rho
+  mq=7 r=2^20: no eps<=0.5 beats rho
+  mq=7 r=2^24: eps_bar = 0.3201   (eps_bar*r^(1/4) = 20.5)
+  mq=7 r=2^28: eps_bar = 0.1575   (eps_bar*r^(1/4) = 20.2)
+  mq=7 r=2^32: eps_bar = 0.08512   (eps_bar*r^(1/4) = 21.8)
+  mq=7 r=2^40: eps_bar = 0.02123   (eps_bar*r^(1/4) = 21.7)
+  mq=7 r=2^64: eps_bar = 0.0004294   (eps_bar*r^(1/4) = 28.1)
+  mq=7 r=2^128: eps_bar = 1e-06   (eps_bar*r^(1/4) = 4.29e+03)
+  mq=50 r=2^12: no eps<=0.5 beats rho
+  mq=50 r=2^16: no eps<=0.5 beats rho
+  mq=50 r=2^20: no eps<=0.5 beats rho
+  mq=50 r=2^24: no eps<=0.5 beats rho
+  mq=50 r=2^28: eps_bar = 0.4415   (eps_bar*r^(1/4) = 56.5)
+  mq=50 r=2^32: eps_bar = 0.2117   (eps_bar*r^(1/4) = 54.2)
+  mq=50 r=2^40: eps_bar = 0.05625   (eps_bar*r^(1/4) = 57.6)
+  mq=50 r=2^64: eps_bar = 0.001034   (eps_bar*r^(1/4) = 67.8)
+  mq=50 r=2^128: eps_bar = 1e-06   (eps_bar*r^(1/4) = 4.29e+03)
+
+closeness P4 measured (planted detector, nu_d=1,2,4; 12 inst/cell; ok = verified k):
+  delta=0.5 nu=1.0 bits=16: ok 12/12 core ops 2614, +7/query feats 5302, widths [24286, 1518, 95], rho fit 594
+  delta=0.5 nu=1.0 bits=20: ok 12/12 core ops 4176, +7/query feats 8208, widths [475956, 29748, 1860, 117], rho fit 1337
+  delta=0.5 nu=1.0 bits=24: ok 12/12 core ops 5219, +7/query feats 10595, widths [7403500, 462719, 28920, 1808, 113], rho fit 4310
+  delta=0.5 nu=1.0 bits=28: ok 12/12 core ops 6460, +7/query feats 13180, widths [86113581, 5382099, 336382, 21024, 1314, 83], rho fit 16201
+  delta=0.5 nu=4.0 bits=16: ok 12/12 core ops 4261, +7/query feats 14565, widths [24286, 1518, 95], rho fit 594
+  delta=0.5 nu=4.0 bits=20: ok 12/12 core ops 6682, +7/query feats 22138, widths [475956, 29748, 1860, 117], rho fit 1337
+  delta=0.5 nu=4.0 bits=24: ok 12/12 core ops 8918, +7/query feats 29526, widths [7403500, 462719, 28920, 1808, 113], rho fit 4310
+  delta=0.5 nu=4.0 bits=28: ok 12/12 core ops 11529, +7/query feats 37289, widths [86113581, 5382099, 336382, 21024, 1314, 83], rho fit 16201
+  delta=0.2 nu=1.0 bits=16: ok 12/12 core ops 5683, +7/query feats 21363, widths [24286, 1518, 95], rho fit 594
+  delta=0.2 nu=1.0 bits=20: ok 12/12 core ops 8674, +7/query feats 32194, widths [475956, 29748, 1860, 117], rho fit 1337
+  delta=0.2 nu=1.0 bits=24: ok 12/12 core ops 11598, +7/query feats 42958, widths [7403500, 462719, 28920, 1808, 113], rho fit 4310
+  delta=0.2 nu=1.0 bits=28: ok 12/12 core ops 15196, +7/query feats 54396, widths [86113581, 5382099, 336382, 21024, 1314, 83], rho fit 16201
+  delta=0.2 nu=4.0 bits=16: ok 12/12 core ops 15469, +7/query feats 77741, widths [24286, 1518, 95], rho fit 594
+  delta=0.2 nu=4.0 bits=20: ok 12/12 core ops 25181, +7/query feats 118589, widths [475956, 29748, 1860, 117], rho fit 1337
+  delta=0.2 nu=4.0 bits=24: ok 12/12 core ops 35422, +7/query feats 159966, widths [7403500, 462719, 28920, 1808, 113], rho fit 4310
+  delta=0.2 nu=4.0 bits=28: ok 12/12 core ops 47290, +7/query feats 202970, widths [86113581, 5382099, 336382, 21024, 1314, 83], rho fit 16201
+  delta=0.1 nu=1.0 bits=16: ok 12/12 core ops 15547, +7/query feats 77819, widths [24286, 1518, 95], rho fit 594
+  delta=0.1 nu=1.0 bits=20: ok 12/12 core ops 25224, +7/query feats 118632, widths [475956, 29748, 1860, 117], rho fit 1337
+  delta=0.1 nu=1.0 bits=24: ok 12/12 core ops 35496, +7/query feats 160040, widths [7403500, 462719, 28920, 1808, 113], rho fit 4310
+  delta=0.1 nu=1.0 bits=28: ok 11/12 core ops 46842, +7/query feats 189549, widths [86113581, 5382099, 336382, 21024, 1314, 83], rho fit 16201
+  delta=0.1 nu=4.0 bits=16: ok 12/12 core ops 55767, +7/query feats 304407, widths [24286, 1518, 95], rho fit 594
+  delta=0.1 nu=4.0 bits=20: ok 12/12 core ops 91072, +7/query feats 464032, widths [475956, 29748, 1860, 117], rho fit 1337
+  delta=0.1 nu=4.0 bits=24: ok 12/12 core ops 130572, +7/query feats 627852, widths [7403500, 462719, 28920, 1808, 113], rho fit 4310
+  delta=0.1 nu=4.0 bits=28: ok 12/12 core ops 175838, +7/query feats 797438, widths [86113581, 5382099, 336382, 21024, 1314, 83], rho fit 16201
+detector bar: smallest delta such that multi-level scan (nu_d=1, m_q=7 or 0 test ops) < rho fit(r) and < kangaroo(W=r) fit:
+  mq=0 r=2^20: no delta<=0.5 beats min(rho,kang)
+  mq=0 r=2^28: delta_bar = 0.1633  (delta_bar*r^(1/4) = 20.9)
+  mq=0 r=2^40: delta_bar = 0.02793  (delta_bar*r^(1/4) = 28.6)
+  mq=0 r=2^64: delta_bar = 0.0006804  (delta_bar*r^(1/4) = 44.6)
+  mq=0 r=2^128: delta_bar = 1e-06  (delta_bar*r^(1/4) = 4.29e+03)
+  mq=7 r=2^20: no delta<=0.5 beats min(rho,kang)
+  mq=7 r=2^28: delta_bar = 0.3266  (delta_bar*r^(1/4) = 41.8)
+  mq=7 r=2^40: delta_bar = 0.05178  (delta_bar*r^(1/4) = 53)
+  mq=7 r=2^64: delta_bar = 0.001128  (delta_bar*r^(1/4) = 73.9)
+  mq=7 r=2^128: delta_bar = 1e-06  (delta_bar*r^(1/4) = 4.29e+03)
+single-level scan over W=r, test window w, then kangaroo(2w): delta needed to beat rho fit (kangaroo on full W costs 2.7x rho, so rho is the relevant bar); nu_d=1, m_q=7
+  r=2^24: delta_min=0.48943993596604596 at w=2^19
+  r=2^28: delta_min=0.23186134445707235 at w=2^23
+  r=2^40: delta_min=0.029240177382128668 at w=2^35
+  r=2^64: delta_min=0.00045521095751206904 at w=2^59
+
+P1 fitted cost vs r on the planted control: ops = alpha sqrt(r) + gamma (per-instance data, bootstrap 95%), compare alpha_rho:
+  eps=0.2 core: alpha=0.0556 [0.0501,0.0625] gamma=1126 (n=100, successes only); alpha_rho=1.249
+  eps=0.2 +7/query: alpha=0.3326 [0.2964,0.3796] gamma=7879 (n=100, successes only); alpha_rho=1.249
+  eps=0.1 core: alpha=0.1476 [0.1329,0.1678] gamma=3761 (n=100, successes only); alpha_rho=1.249
+  eps=0.1 +7/query: alpha=1.0902 [0.9770,1.2462] gamma=29072 (n=100, successes only); alpha_rho=1.249
+  eps=0.05 core: alpha=0.8517 [0.7301,0.9932] gamma=13848 (n=39, successes only); alpha_rho=1.249
+  eps=0.05 +7/query: alpha=6.7226 [5.7625,7.8496] gamma=109916 (n=39, successes only); alpha_rho=1.249

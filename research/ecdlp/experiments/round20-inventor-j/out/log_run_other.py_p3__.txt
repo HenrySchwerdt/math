@@ -1,0 +1,24 @@
+{'bits': 16, 'rho_rel': 0.25, 'scale_aware': True, 'ok': 20, 'n': 30, 'mean_ops': 302.56666666666666, 'mean_ops_feat': 372.56666666666666, 'widths_example': [24286, 12144, 6073, 3038, 1520, 761, 382, 192, 97, 50, 26, 14, 8, 5, 4, 3]}
+{'bits': 16, 'rho_rel': 0.25, 'scale_aware': False, 'ok': 30, 'n': 30, 'mean_ops': 625.2333333333333, 'mean_ops_feat': 632.2333333333333, 'widths_example': [24286, 24286]}
+{'bits': 16, 'rho_rel': 0.1, 'scale_aware': True, 'ok': 25, 'n': 30, 'mean_ops': 180.93333333333334, 'mean_ops_feat': 217.33333333333334, 'widths_example': [24286, 4859, 973, 196, 41, 10, 3]}
+{'bits': 16, 'rho_rel': 0.1, 'scale_aware': False, 'ok': 29, 'n': 30, 'mean_ops': 643.9333333333333, 'mean_ops_feat': 657.4666666666667, 'widths_example': [24286, 9716, 9716]}
+{'bits': 16, 'rho_rel': 0.02, 'scale_aware': True, 'ok': 28, 'n': 30, 'mean_ops': 131.96666666666667, 'mean_ops_feat': 152.26666666666668, 'widths_example': [24286, 973, 40, 3]}
+{'bits': 16, 'rho_rel': 0.02, 'scale_aware': False, 'ok': 29, 'n': 30, 'mean_ops': 345.8333333333333, 'mean_ops_feat': 359.3666666666667, 'widths_example': [24286, 1944, 1944]}
+{'bits': 20, 'rho_rel': 0.25, 'scale_aware': True, 'ok': 18, 'n': 30, 'mean_ops': 433.7, 'mean_ops_feat': 513.5, 'widths_example': [475956, 237979, 118991, 59497, 29750, 14876, 7439, 3721, 1862, 932, 467, 235, 119, 61, 32, 17, 10, 6, 4, 3]}
+{'bits': 20, 'rho_rel': 0.25, 'scale_aware': False, 'ok': 30, 'n': 30, 'mean_ops': 2270.7, 'mean_ops_feat': 2277.7, 'widths_example': [475956, 475956]}
+{'bits': 20, 'rho_rel': 0.1, 'scale_aware': True, 'ok': 22, 'n': 30, 'mean_ops': 258.5, 'mean_ops_feat': 299.56666666666666, 'widths_example': [475956, 95193, 19040, 3809, 763, 154, 32, 8, 3]}
+{'bits': 20, 'rho_rel': 0.1, 'scale_aware': False, 'ok': 30, 'n': 30, 'mean_ops': 2295.8, 'mean_ops_feat': 2309.8, 'widths_example': [475956, 190384, 190384]}
+{'bits': 20, 'rho_rel': 0.02, 'scale_aware': True, 'ok': 26, 'n': 30, 'mean_ops': 187.06666666666666, 'mean_ops_feat': 211.33333333333334, 'widths_example': [475956, 19040, 763, 32, 3]}
+{'bits': 20, 'rho_rel': 0.02, 'scale_aware': False, 'ok': 29, 'n': 30, 'mean_ops': 1034.8333333333333, 'mean_ops_feat': 1048.3666666666666, 'widths_example': [475956, 38078, 38078]}
+{'bits': 24, 'rho_rel': 0.25, 'scale_aware': True, 'ok': 17, 'n': 30, 'mean_ops': 616.4, 'mean_ops_feat': 707.6333333333333, 'widths_example': [7403500, 3701751, 1850877, 925440, 462721, 231362, 115682, 57842, 28922, 14462, 7232, 3617, 1810, 906, 454, 228, 115, 59, 31, 17, 10, 6, 4, 3]}
+{'bits': 24, 'rho_rel': 0.25, 'scale_aware': False, 'ok': 30, 'n': 30, 'mean_ops': 7371.933333333333, 'mean_ops_feat': 7378.933333333333, 'widths_example': [7403500, 7403500]}
+{'bits': 24, 'rho_rel': 0.1, 'scale_aware': True, 'ok': 20, 'n': 30, 'mean_ops': 345.76666666666665, 'mean_ops_feat': 392.43333333333334, 'widths_example': [7403500, 1480701, 296142, 59230, 11847, 2371, 476, 97, 21, 6, 3]}
+{'bits': 24, 'rho_rel': 0.1, 'scale_aware': False, 'ok': 30, 'n': 30, 'mean_ops': 8348.866666666667, 'mean_ops_feat': 8362.866666666667, 'widths_example': [7403500, 2961401, 2961401]}
+{'bits': 24, 'rho_rel': 0.02, 'scale_aware': True, 'ok': 26, 'n': 30, 'mean_ops': 242.53333333333333, 'mean_ops_feat': 272.8666666666667, 'widths_example': [7403500, 296141, 11847, 475, 20, 2]}
+{'bits': 24, 'rho_rel': 0.02, 'scale_aware': False, 'ok': 29, 'n': 30, 'mean_ops': 3742.5666666666666, 'mean_ops_feat': 3756.1, 'widths_example': [7403500, 592281, 592281]}
+{'bits': 28, 'rho_rel': 0.25, 'scale_aware': True, 'ok': 14, 'n': 30, 'mean_ops': 781.8333333333334, 'mean_ops_feat': 870.0333333333333, 'widths_example': [86113581, 43056792, 21528397, 10764200, 5382101, 2691052, 1345527, 672765, 336384, 168193, 84098, 42050, 21026, 10514, 5258, 2630, 1316, 659, 331, 167, 85, 44, 23, 13, 8, 5, 4, 3]}
+{'bits': 28, 'rho_rel': 0.25, 'scale_aware': False, 'ok': 30, 'n': 30, 'mean_ops': 33527.9, 'mean_ops_feat': 33534.9, 'widths_example': [86113581, 86113581]}
+{'bits': 28, 'rho_rel': 0.1, 'scale_aware': True, 'ok': 18, 'n': 30, 'mean_ops': 434.1, 'mean_ops_feat': 484.03333333333336, 'widths_example': [86113581, 17222718, 3444545, 688910, 137783, 27558, 5513, 1104, 222, 46, 11, 4, 2]}
+{'bits': 28, 'rho_rel': 0.1, 'scale_aware': False, 'ok': 29, 'n': 30, 'mean_ops': 29081.033333333333, 'mean_ops_feat': 29094.566666666666, 'widths_example': [86113581, 34445434, 34445434]}
+{'bits': 28, 'rho_rel': 0.02, 'scale_aware': True, 'ok': 25, 'n': 30, 'mean_ops': 314.1, 'mean_ops_feat': 349.1, 'widths_example': [86113581, 3444545, 137783, 5513, 222, 10, 2]}
+{'bits': 28, 'rho_rel': 0.02, 'scale_aware': False, 'ok': 29, 'n': 30, 'mean_ops': 14144.1, 'mean_ops_feat': 14157.633333333333, 'widths_example': [86113581, 6889088, 6889088]}
