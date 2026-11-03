@@ -1,31 +1,44 @@
 {
   "id": "REV-d7bc5940-5046-46b6-824b-7d8342744534",
   "type": "REV",
-  "title": "Draft \u2014 define before work",
+  "title": "Blind adversarial review: decision-tree barrier (Theorem DT, Theorem P, Corollary P1)",
   "created_at": "2026-11-03T11:20:37.349881Z",
-  "status": "open",
-  "question": "Unassigned; define exact question",
+  "status": "completed",
+  "question": "Are Theorem DT (N <= 9*2^L - 1 for equality-branching trees), Lemma A, Theorem P and Corollary P1 (N <= 40*2^(2D+L)) of HYP-dbe79a50 correct as stated?",
   "rationale": "Unassigned; record why selected",
   "assumptions": [],
   "sources": [],
-  "refs": [],
-  "evidence": [],
-  "claims": [],
-  "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Draft only; no execution or verification claimed.",
+  "refs": [
+    "HYP-dbe79a50-030e-41b9-944b-271f2bd37042"
+  ],
+  "evidence": [
+    "research/ecdlp/reviews/REV-d7bc5940-5046-46b6-824b-7d8342744534.md"
+  ],
+  "claims": [
+    "Theorem DT: paper proof sound. Model (state per root path, free constants and tests, divisions only where executed), generic-path degree <= 2^t, deviating nodes <= 2^(L+1)-1 (only the <= L+1 registers of the generic path count, depth irrelevant) and final arithmetic N <= 3*2^L+2+3(2^(L+1)-1) = 9*2^L-1 all verified. Not Lean-checked.",
+    "Lemma A for arbitrary G is true but the author's proof is incomplete: forward-only propagation from one consecutive pair reaches x_(r-1), x_(r-2) but the closing contradiction needs A=B at x_1 and A=2B at x_2, which hold only if 1,2 in G. Repair: also propagate backward from the pair (identity at n, divide by B(x_n)B(x_(n+1)), coprimality gives B != 0) down to k=1,2. The Lean plan 'generalise base case of prop' is insufficient.",
+    "Theorem P is correct with corrections: exclude k=j (other conjugate is x(O)), 2j != 0 must hold in F, define A, R, j; nonvanishing also follows from Q -> -Q symmetry and evenness without irreducibility and for composite r.",
+    "Corollary P1 as stated in the HYP is INCORRECT: no characteristic hypothesis. Counterexample F=GF(3^7), y^2=x^3+x+b, a point of order 2188, N=1093 > 640 = 40*2^(2*2+0): partition by k mod 3 (3<=2^2 classes) with constant outputs (L=0). Correct with hypothesis char F = 0 or char F > N; constant 40 and exponent 2D+L then valid (derivation gives 11).",
+    "Empirical (finite toy evidence only): Lemma A search on toy curves never exceeded 3d centres (max found 2,3,5 for d=1,2,3); random trees L<=4: 0 violations of the deviation/generic-leaf claims; Theorem P polynomial degree<=4d, vanishing and nonvanishing held in 480 trials on prime and composite point orders."
+  ],
+  "proof_status": "proof-attempt",
+  "outcome": "unresolved",
+  "next_action": "Revise HYP-dbe79a50: add hypothesis char F > N (or 0) to Corollary P1, state the model explicitly, define A/R/j in Theorem P, repair Lemma A proof with backward propagation. Then formalize in Lean (tree datatype, generic path, bidirectional-propagation Lemma A, Theorem P) and obtain re-review of the revised statement.",
+  "notes": "Reviewer model (self-reported, not verified by runtime metadata): Claude Sonnet 5.5 (claude-sonnet-5-5). Author report read only after initial findings were written. No Lean build run; no files outside owned outputs edited. Scratch code in the session scratchpad dtreview/ directory.",
   "review": {
-    "run": null,
-    "target_commit": null,
-    "targets": [],
-    "decision": "revise",
-    "rationale": "Review not performed",
-    "counterexamples": [
-      "Not attempted"
+    "run": "RUN-89fccbd4-7e75-4871-8b10-ddb4d34174f6",
+    "target_commit": "2a8fbd7",
+    "targets": [
+      "HYP-dbe79a50-030e-41b9-944b-271f2bd37042"
     ],
-    "complexity": "Not reviewed",
-    "limitations": "Draft review, not an assessment",
-    "initial_packet": "Not supplied"
+    "decision": "revise",
+    "rationale": "Core mathematics of DT, Lemma A and Theorem P survives adversarial checking, but (1) Corollary P1 is false as stated (missing characteristic hypothesis, explicit counterexample) and (2) the proof of Lemma A for non-interval G has a gap (backward propagation missing) that also invalidates the stated Lean plan. Both are repairable without changing the headline bound.",
+    "counterexamples": [
+      "Corollary P1 over GF(3^7): E y^2=x^3+x+b with a point of order 2188, N=1093 > 640 = 40*2^(2D+L), D=2 (classes k mod 3), L=0 (constant output k mod 3); every pair k,k+j in a class has 3|j so 2j=0 and Theorem P does not apply.",
+      "Lemma A, toy search on F_p (p 31..47), d=1..3: no violation of centres <= 3d (max 2d-1..2d). Random trees (p=101, L<=4): no violation of generic-path claims."
+    ],
+    "complexity": "Counts only field operations (+,-,*,/) on a path; tests free. Bound N <= 9*2^L-1, i.e. L >= log2(N+1)-3.17; no bit-complexity, comparison, bit-extraction or Legendre-test claim. Experiments cost seconds each (stdlib Python).",
+    "limitations": "Paper-level review, nothing Lean-checked in this run; toy-curve experiments are finite evidence not proof; generalized Lemma A repair and Theorem P function-field argument are my own derivations, not machine-verified; GF(3^7) counterexample is logical plus numeric group order, not a full program execution; model identity self-reported.",
+    "initial_packet": "HYP-dbe79a50 statement (question/claims text) plus MathResearch/ECDLP/RationalSLP.lean; author report RUN-3386b45f withheld until initial findings were written."
   }
 }

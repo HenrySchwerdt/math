@@ -1,0 +1,25 @@
+{
+  "id": "HYP-8e55674a-647f-46c3-9b04-4d591cb70e62",
+  "type": "HYP",
+  "title": "Theorem P and Corollary P1 (corrected after review)",
+  "created_at": "2026-11-03T11:29:00.589409Z",
+  "status": "open",
+  "question": "Theorem P (corrected): for an x-only rational function of degree d agreeing with k on A \u2286 [1, N], 2N < r, and j with (2j : F) != 0, the norm over the conjugates x(Q \u00b1 jP) is a nonzero polynomial of degree <= 4d vanishing at x_k whenever k, k + j \u2208 A and k != j; nonvanishing follows from the Q -> \u2212Q symmetry and evenness (no irreducibility, any r). Corollary P1 (corrected): additionally assuming N < char F, any partition of [1, N] into 2^D classes with a length-L field program per class gives N <= 40\u00b72^{2D+L} (reviewer derivation gives constant 11).",
+  "rationale": "Corrected variant; the PI transcription of P1 in HYP-dbe79a50 dropped the hypothesis N < char F that the author report stated.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-dbe79a50-030e-41b9-944b-271f2bd37042",
+    "REV-d7bc5940-5046-46b6-824b-7d8342744534",
+    "RUN-89fccbd4-7e75-4871-8b10-ddb4d34174f6",
+    "RUN-3386b45f-b989-447d-b212-6e1f3fab5527"
+  ],
+  "evidence": [],
+  "claims": [
+    "Theorem P (corrected): for an x-only rational function of degree d agreeing with k on A \u2286 [1, N], 2N < r, and j with (2j : F) != 0, the norm over the conjugates x(Q \u00b1 jP) is a nonzero polynomial of degree <= 4d vanishing at x_k whenever k, k + j \u2208 A and k != j; nonvanishing follows from the Q -> \u2212Q symmetry and evenness (no irreducibility, any r). Corollary P1 (corrected): additionally assuming N < char F, any partition of [1, N] into 2^D classes with a length-L field program per class gives N <= 40\u00b72^{2D+L} (reviewer derivation gives constant 11)."
+  ],
+  "proof_status": "reviewed",
+  "outcome": "verified",
+  "next_action": "Optional Lean formalization (function-field argument needed).",
+  "notes": "Counterexample to the uncorrected P1: F = GF(3^7), point of order 2188, N = 1093 > 640, classify by k mod 3 (D = 2), constant outputs (L = 0)."
+}

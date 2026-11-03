@@ -1,0 +1,24 @@
+{
+  "id": "DEC-fcc1e32a-a9f2-4567-8fdf-3e4d9831cebb",
+  "type": "DEC",
+  "title": "PI process rule: copy hypotheses verbatim from agent reports",
+  "created_at": "2026-11-03T11:29:00.625211Z",
+  "status": "completed",
+  "question": "How to prevent the PI from dropping hypotheses when transcribing agent results into HYP records?",
+  "rationale": "Twice in this session the PI transcription dropped a hypothesis that the agent report stated (HYP-5da6025e part (2): N <= (r\u22121)/2; HYP-dbe79a50 Corollary P1: N < char F); both were caught by blind adversarial review.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-5da6025e-c665-473f-a06a-3f02a267fe8c",
+    "HYP-dbe79a50-030e-41b9-944b-271f2bd37042",
+    "REV-d7bc5940-5046-46b6-824b-7d8342744534"
+  ],
+  "evidence": [],
+  "claims": [
+    "HYP statements derived from agent reports must quote the hypotheses verbatim (or be checked line by line against the report) before registration; blind review remains mandatory."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Apply from now on.",
+  "notes": "PI self-correction."
+}
