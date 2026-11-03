@@ -15,14 +15,15 @@
     "HYP-e1959734-9325-4a54-9d99-d4535c58a11c",
     "RUN-6fce1db8-c165-4d1e-abc5-e31a36c4d45e",
     "TSK-76b6d820-82e8-46c6-aea4-e25d7d0e95ba",
-    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "HYP-80158648-c3d1-41b2-87a9-351463a4d4e2"
   ],
   "evidence": [],
   "claims": [
     "For E/F_p with #E(F_p)=r prime, generator P and a nonconstant rational function g on E of small degree d (e.g. g=x, x+1, 2x, y), the normalized twisted sums X_c = r^{-1/2} * sum_{k=1}^{r-1} chi(g([k]P)) e(ck/r), c=1..r-1, satisfy |X_c| <= C(d) * sqrt(p/r) = O_d(1) (Weil-type bound for mixed character sums over E(F_p), group characters of E times a multiplicative character of g), so the periodogram |X_c|^2 has a bounded, non-exponential law; as p grows its distribution approaches a fixed law determined by the monodromy of the associated sheaf (not Exp(1)). This explains the flat-spectrum anomaly observed in ECDLP-7 E-B for chi(x), chi(y) sequences, and implies no information about k beyond what the bound allows."
   ],
-  "proof_status": "unproved",
+  "proof_status": "experimental",
   "outcome": "unresolved",
-  "next_action": "Cheapest decisive test: on full-range sequences for curves with p in [10^3,10^5], compute max_c |X_c|*sqrt(r/p) (must stay bounded as p grows if true) and the empirical 2nd/4th moments of |X_c|^2 vs Exp(1) (1, 2) and vs a candidate monodromy law; also test the PI-predicted contrast g=x (degree 2) vs g=x^2+x+1, xy (higher degree). Rule out oracle bug by recomputing a few sums with an independent implementation.",
-  "notes": "Speculative explanation; NOT an exploitable leak claim. Distinguish: Weil bounds give deterministic square-root cancellation (less variance), which reduces, not increases, correlation with any fixed character."
+  "next_action": "Superseded for further work by HYP-80158648 (do not delete).",
+  "notes": "Speculative explanation; NOT an exploitable leak claim. Distinguish: Weil bounds give deterministic square-root cancellation (less variance), which reduces, not increases, correlation with any fixed character. | ECDLP-9: For g = x, x+1, y the bounded-maximum part is SUPPORTED (max |X_c|^2 \u2248 4p/r). For degree-4/5/3x-degree functions tested (x^2+x+1, xy, x^3+2) the claim \"|X_c| <= C(d) sqrt(p/r) with bounded non-Exp(1) law\" in the sense of a bounded max at these sizes is REFUTED as an empirical pattern (max grows ~ ln r, Gaussian-like moments), although no Weil envelope violation was shown. The original statement is kept unchanged; the sharpened variant is HYP-80158648."
 }

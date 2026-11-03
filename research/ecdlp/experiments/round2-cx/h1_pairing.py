@@ -116,11 +116,13 @@ def run(p, a, b, r, rnd, label):
     P = (F2(Pr[0]), F2(Pr[1]))
     n2 = n * (p + 1 + t)
     assert n2 % (r * r) == 0
+    m2 = n2
+    while m2 % r == 0: m2 //= r      # cofactor onto the r-Sylow subgroup of E(F_{p^2})
     while True:
         x = F2(rnd.randrange(p), rnd.randrange(p)); y = E.sqrt_point(x)
         if y is None: continue
-        R0 = E.mul(n2 // r, (x, y))
-        if R0 is None: continue
+        R0 = E.mul(m2, (x, y))
+        if R0 is None or E.mul(r, R0) is not None: continue   # need R0 in E[r]
         Rm = E.add(R0, E.neg(E.frob(R0)))        # R0 - pi R0 : pi-eigenvalue -1 = p mod r
         Rp = E.add(R0, E.frob(R0))               # R0 + pi R0 : pi-eigenvalue +1 (rational)
         if Rm is not None: break
@@ -145,7 +147,12 @@ def run(p, a, b, r, rnd, label):
     out['zeta^2==1 ?'] = (zeta * zeta) == F2(1)
     # rational auxiliary point R+ (pi-eigenvalue +1): then P, R+ both in the cyclic group E(F_p)[r]
     if Rp is not None:
-        out['e(P,R+) (R+ rational, eigenvalue +1)'] = _weil(E, P, Rp, r) if (E.add(Rp, E.neg(P)) is not None and Rp != P and E.add(Rp,P) is not None) else 'R+ in <P> (pairing undefined/trivial)'
+        assert E.frob(Rp) == Rp
+        al = next(a_ for a_ in range(r) if E.mul(a_, P) == Rp)
+        out['R+ = R0+pi R0 is rational and equals alpha*P, alpha'] = al
+        out['=> e(P,R+) = e(P,P)^alpha = 1 (Weil alternating); the pi-fixed auxiliary point gives the trivial functional'] = True
+    else:
+        out['R+ = O'] = True
     # reduced Tate, same tests
     tt = tate(E, P, Rm, r, p)
     tX = tate(E, X, Rm, r, p) if True else None

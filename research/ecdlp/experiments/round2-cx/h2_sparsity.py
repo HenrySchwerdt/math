@@ -30,11 +30,10 @@ def prime_power(q):
     return p if q == 1 else None
 
 def order(q, r):
-    x, k = q % r, 1
-    cur = x
-    while cur != 1:
-        cur = cur * x % r; k += 1
-    return k
+    o = r - 1
+    for f in pfactors(o):
+        while o % f == 0 and pow(q, o // f, r) == 1: o //= f
+    return o
 
 best = {}   # M -> (count, q, ts)
 MS = list(range(1, 13))

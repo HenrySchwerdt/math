@@ -1,0 +1,32 @@
+{
+  "id": "HYP-80158648-c3d1-41b2-87a9-351463a4d4e2",
+  "type": "HYP",
+  "title": "Sato\u2013Tate law for twisted Legendre sums of low-degree coordinates along [k]P",
+  "created_at": "2026-11-03T09:31:07.045586Z",
+  "status": "open",
+  "question": "Conjecture (Sato\u2013Tate law for twisted Legendre sums along a prime-order EC group). Let E/F_p have #E(F_p)=r prime, P a generator, g in {x, x+a (a in F_p), y}. For c in 1..r-1 let Y_c = p^{-1/2} * sum_{k=0}^{r-1} chi(g([k]P)) e(ck/r). Then |Y_c| <= 2 (+o(1)) for all c, and as p -> infinity (over random such curves) the empirical distribution of Y_c^2 (Y_c real for g = x+a) over c converges to that of (2 cos t)^2 with t Sato\u2013Tate distributed ((2/pi) sin^2 t dt). For g of higher degree (x^2+x+1, xy, x^3+2) the normalized sums are instead approximately Gaussian at these sizes (second moment of |X_c|^2 \u2248 3 for real sums) with max growing within the Weil envelope.",
+  "rationale": "Sharpened, separately recorded variant of HYP-242da418 after the ECDLP-9 decisive test (two seeds, PI bit-identical reproduction).",
+  "assumptions": [
+    "Toy sizes p <= 1.28e5, 48 curves per predicate per seed.",
+    "Sato\u2013Tate identification is by moments (2nd \u2248 2.00, 3rd \u2248 5.0) and KS \u2248 0.012, post-hoc relative to the pre-registered rule."
+  ],
+  "sources": [],
+  "refs": [
+    "HYP-242da418-4c1a-45b1-8132-8a2f00574272",
+    "RUN-df8d0e71-aefa-4f53-8230-78b564b5c043",
+    "TSK-bd3c9a6f-baa4-4e7c-815e-7a6198a978f7",
+    "HYP-e1959734-9325-4a54-9d99-d4535c58a11c"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round3/results_20261105.json",
+    "research/ecdlp/experiments/round3/results_20261106.json",
+    "research/ecdlp/experiments/round3/analysis_20261106.txt"
+  ],
+  "claims": [
+    "Conjecture (Sato\u2013Tate law for twisted Legendre sums along a prime-order EC group). Let E/F_p have #E(F_p)=r prime, P a generator, g in {x, x+a (a in F_p), y}. For c in 1..r-1 let Y_c = p^{-1/2} * sum_{k=0}^{r-1} chi(g([k]P)) e(ck/r). Then |Y_c| <= 2 (+o(1)) for all c, and as p -> infinity (over random such curves) the empirical distribution of Y_c^2 (Y_c real for g = x+a) over c converges to that of (2 cos t)^2 with t Sato\u2013Tate distributed ((2/pi) sin^2 t dt). For g of higher degree (x^2+x+1, xy, x^3+2) the normalized sums are instead approximately Gaussian at these sizes (second moment of |X_c|^2 \u2248 3 for real sums) with max growing within the Weil envelope."
+  ],
+  "proof_status": "experimental",
+  "outcome": "unresolved",
+  "next_action": "Literature: is this a known instance of Katz/Deligne equidistribution (e.g. traces of Frobenius on a rank-2 piece, possibly the Prym of the double cover w^2 = g on E)? PI heuristic: for g = x the cover w^2 = x(Q) of E is ramified at the two points with x = 0, so has genus 2 and its Jacobian is isogenous to E x E'; the psi-twisted sums would then be Frobenius traces on a rank-2 object, giving an SU(2) law. Verify or refute this heuristic before any claim. Not relevant to recovering k unless a non-equidistributed statistic is found.",
+  "notes": "Experimental finding on toy sizes; no proof; novelty unchecked (likely a known consequence of Deligne/Katz theory). Not a discrete-log leak: leak sanity test negative."
+}
