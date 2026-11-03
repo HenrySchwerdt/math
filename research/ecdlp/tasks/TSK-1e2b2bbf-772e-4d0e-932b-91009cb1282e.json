@@ -1,0 +1,31 @@
+{
+  "id": "TSK-1e2b2bbf-772e-4d0e-932b-91009cb1282e",
+  "type": "TSK",
+  "title": "Round 9 / ECDLP-27: Lean formalization of corrected partial-agreement part (2)",
+  "created_at": "2026-11-03T10:38:27.946905Z",
+  "status": "active",
+  "question": "Formalize: short Weierstrass W, P of odd order r, A \u2286 [1,N], N <= (r-1)/2, g with g(x(kP)) = k^2 on A => 3 natDegree g >= S_j(A) for each j (and the \u03b4 > 2/3 corollary), reusing CurveX/Interpolation.",
+  "rationale": "Round-9 selection by PI (autonomous).",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-a1dd5501-c137-492a-abc6-e9cda3765002"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-47e9b8cb-41cf-4006-bbc5-dbd2b792c42a.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute.",
+  "notes": "Created by PI RUN-62dbda7c.",
+  "success_criteria": [
+    "Exact statements; reproducible evidence; no sorry; corrected variants separate."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-ac3107bf-b5bd-44a0-ae47-8413aed2f895.md",
+    "research/ecdlp/runs/RUN-ac3107bf-b5bd-44a0-ae47-8413aed2f895.json",
+    "MathResearch/ECDLP/PartialAgreement.lean"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; no commits; ~60-90 min."
+}
