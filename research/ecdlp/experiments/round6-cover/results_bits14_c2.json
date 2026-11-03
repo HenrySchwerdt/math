@@ -1,0 +1,130 @@
+{
+ "meta": {
+  "master_seed": 20261109,
+  "python": "3.13.18",
+  "numpy": "2.5.3",
+  "argv": [
+   "--bits",
+   "14",
+   "--curves",
+   "1",
+   "--first",
+   "2",
+   "--variants",
+   "A,B",
+   "--out",
+   "research/ecdlp/experiments/round6-cover/results_bits14_c2.json"
+  ]
+ },
+ "curves": [
+  {
+   "bits": 14,
+   "idx": 2,
+   "p": 16381,
+   "a": 16178,
+   "b": 8909,
+   "r": 16451,
+   "c": 1,
+   "F": [
+    8707,
+    0,
+    16181,
+    0,
+    3,
+    0,
+    1
+   ],
+   "N1": 16450,
+   "m": 16381,
+   "tE": -69,
+   "tEp": 1,
+   "checks": {
+    "count_time_s": 0.0,
+    "assoc": 499,
+    "assoc_fail": 0,
+    "assoc_degenerate": 1,
+    "comm_fail": 0,
+    "inv_fail": 0,
+    "hom_fail": 0,
+    "hom_n": 100,
+    "order_fail": 0,
+    "order_n": 20,
+    "r_piP_is_zero": true,
+    "piP_nonzero": true
+   },
+   "setup_time_s": 0.24,
+   "bsgs": {
+    "k": 16429,
+    "ok": true,
+    "ec_adds": 266,
+    "time_s": 0.0002,
+    "sqrt_r": 128.3,
+    "rho_analytic": 160.8
+   },
+   "sqrt_p": 127.99,
+   "n_orbits": 8224,
+   "variants": {
+    "A": {
+     "variant": "A",
+     "relations": 24672,
+     "trials": 49282,
+     "attempts": 1,
+     "cantor": 0,
+     "ec": 50655,
+     "la": 30119695,
+     "rank": 4107,
+     "unknowns_active": 8212,
+     "deficiency": 4105,
+     "inconsistent": false,
+     "fb_orbits": 8224,
+     "core": [
+      22210,
+      3288
+     ],
+     "sparse_pivots": 2462,
+     "time_s": 8.52,
+     "k_determined": true,
+     "k_ic": 16429,
+     "k_correct": true,
+     "total": 30170350,
+     "dedup": {
+      "rows": 4105,
+      "rank": 4105,
+      "unknowns_active": 8212,
+      "k_determined": false,
+      "la": 14382
+     },
+     "first_collision_ec": 1464,
+     "first_collision_trial": 91,
+     "verify_k_piP_eq_piQ": true
+    },
+    "B": {
+     "variant": "B",
+     "relations": 8244,
+     "trials": 16411,
+     "attempts": 1,
+     "cantor": 16410,
+     "ec": 17738,
+     "la": 3863277575,
+     "rank": 8044,
+     "unknowns_active": 8066,
+     "deficiency": 22,
+     "inconsistent": false,
+     "fb_orbits": 8224,
+     "core": [
+      3100,
+      2900
+     ],
+     "sparse_pivots": 5144,
+     "time_s": 51.86,
+     "k_determined": true,
+     "k_ic": 16429,
+     "k_correct": true,
+     "total": 3863311723,
+     "verify_k_piP_eq_piQ": true
+    }
+   },
+   "wall_time_s": 60.65
+  }
+ ]
+}

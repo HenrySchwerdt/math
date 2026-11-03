@@ -1,0 +1,32 @@
+{
+  "id": "TSK-fe72aad1-aa67-4d7d-a0c9-3c8bc14a05ef",
+  "type": "TSK",
+  "title": "Round 6 / ECDLP-19: Lean formalization of Theorem B (x-only polynomial for k^2)",
+  "created_at": "2026-11-03T10:09:22.138197Z",
+  "status": "completed",
+  "question": "Formalize in Lean 4/Mathlib the reviewed Theorem B (HYP-eda6732a) or the strongest faithful sub-statement reachable within budget, via polynomial algebra (classical x-addition formulas and root counting).",
+  "rationale": "Theorem B accepted by blind review ECDLP-17; reusable restricted-model lower bound.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-27eb3a6e-3218-42d4-b146-9dd810db8205.evidence",
+    "research/ecdlp/events/EVT-69cc9a4a-7448-4b05-a709-d43735560149.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Discharge addition-law and injectivity hypotheses from Mathlib",
+  "notes": "Created by PI RUN-62dbda7c.",
+  "success_criteria": [
+    "No sorry/axioms; exact correspondence notes; omitted parts recorded with last compiler error."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-e5203fb5-9b4c-49e2-86e1-ea88971103fb.md",
+    "research/ecdlp/runs/RUN-e5203fb5-9b4c-49e2-86e1-ea88971103fb.json (claims/notes/next_action)",
+    "MathResearch/ECDLP/Interpolation.lean"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; no commits; ~75 min."
+}

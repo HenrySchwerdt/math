@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round6-cover/icj.py",
+    "--bits",
+    "8",
+    "--curves",
+    "3",
+    "--out",
+    "research/ecdlp/experiments/round6-cover/results_bits8.json"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T10:12:12.324706Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T10:12:12.892920Z",
+  "truncated": false,
+  "output": "8 0 A {\"relations\": 432, \"cantor\": 0, \"ec\": 1644, \"la\": 41383, \"total\": 43027, \"rank\": 74, \"unknowns_active\": 146, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 0.01}\n8 0 B {\"relations\": 164, \"cantor\": 292, \"ec\": 1046, \"la\": 160176, \"total\": 161514, \"rank\": 143, \"unknowns_active\": 143, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 0.02}\n8 1 A {\"relations\": 363, \"cantor\": 0, \"ec\": 1463, \"la\": 29524, \"total\": 30987, \"rank\": 63, \"unknowns_active\": 123, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 0.0}\n8 1 B {\"relations\": 141, \"cantor\": 324, \"ec\": 1046, \"la\": 98496, \"total\": 99866, \"rank\": 121, \"unknowns_active\": 121, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 0.02}\n8 2 A {\"relations\": 363, \"cantor\": 0, \"ec\": 1489, \"la\": 29546, \"total\": 31035, \"rank\": 63, \"unknowns_active\": 123, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 0.01}\n8 2 B {\"relations\": 141, \"cantor\": 252, \"ec\": 1004, \"la\": 93739, \"total\": 94995, \"rank\": 122, \"unknowns_active\": 122, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 0.02}\n"
+}

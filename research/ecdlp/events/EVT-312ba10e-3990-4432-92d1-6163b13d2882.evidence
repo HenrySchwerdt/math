@@ -1,0 +1,26 @@
+{
+  "id": "EVT-312ba10e-3990-4432-92d1-6163b13d2882",
+  "kind": "task-status-change",
+  "task": "TSK-868a3543-c6d2-4607-8540-72b78e2969be",
+  "task_key": "ECDLP-17",
+  "timestamp": "2026-11-03T10:09:14.401538Z",
+  "run": "RUN-4b283c25-b43d-4720-994d-3c285789a273",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "adversarial-critic"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-6 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Formalize Theorem B in Lean"
+  },
+  "reason": "Blind adversarial review: Theorem A proof gap (p|r) found and corrected; A' model/constant corrected; B correct; PI verified counterexample to proof step and reproduced checks",
+  "before_sha256": "e13e0dc7c5cc333dfe1cd5232a8a2579a38a1b71184a9f8a5ff329d6a25433c3",
+  "after_sha256": "f2ffbdccba9a75468368b5c2dcf854831fe68068e4b8d043193f7577f6fff586"
+}

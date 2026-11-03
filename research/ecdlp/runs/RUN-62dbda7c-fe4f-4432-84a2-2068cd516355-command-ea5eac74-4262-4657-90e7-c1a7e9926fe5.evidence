@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round6-review/review_checks.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T10:08:28.352242Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T10:08:28.416362Z",
+  "truncated": false,
+  "output": "Traceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round6-review/review_checks.py\", line 10, in <module>\n    from toyec import Curve, is_prime\nModuleNotFoundError: No module named 'toyec'\n"
+}

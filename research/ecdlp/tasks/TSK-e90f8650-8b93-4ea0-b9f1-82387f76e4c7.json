@@ -1,0 +1,33 @@
+{
+  "id": "TSK-e90f8650-8b93-4ea0-b9f1-82387f76e4c7",
+  "type": "TSK",
+  "title": "Round 6 / ECDLP-18: decisive genus-2 cover index-calculus test",
+  "created_at": "2026-11-03T10:01:26.486545Z",
+  "status": "completed",
+  "question": "For E/F_p and a genus-2 cover C -> E (e.g. the double cover w^2 = x(Q) - c), does index calculus in J_C(F_p) with a degree-1 factor base solve DLPs in pi^*(E(F_p)) at a measured cost below sqrt(p) at toy sizes (p up to ~2^16), or does it cost >= q as predicted by HYP-ad5bc0e3?",
+  "rationale": "Round-6 selection by PI from BACKLOG priorities 1, 1b, 1c.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-ad5bc0e3-30cc-4eb8-b823-4df42edd44a6",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-16ede3aa-1aa9-4884-bb60-61c276548eea.evidence",
+    "research/ecdlp/events/EVT-5fc609ce-5da2-4a5b-bdbb-f44e8fef1b40.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Close cover direction unless a structure-adapted factor base appears",
+  "notes": "Created by PI RUN-62dbda7c (autonomous continuation authorized by user).",
+  "success_criteria": [
+    "Pre-registered protocol where experimental; exact statements; reproducible code/seeds/outputs; failures and corrected variants recorded separately."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75.md",
+    "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75.json (claims/sources/notes/next_action)",
+    "research/ecdlp/experiments/round6-cover/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; computations < 5 min; no commits; ~60-75 min."
+}

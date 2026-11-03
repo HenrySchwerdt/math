@@ -1,0 +1,26 @@
+{
+  "id": "EVT-5fc609ce-5da2-4a5b-bdbb-f44e8fef1b40",
+  "kind": "task-status-change",
+  "task": "TSK-e90f8650-8b93-4ea0-b9f1-82387f76e4c7",
+  "task_key": "ECDLP-18",
+  "timestamp": "2026-11-03T10:20:16.660258Z",
+  "run": "RUN-9e957bce-b882-4389-860f-d3b1fed7ec75",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "experimenter"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-6 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Close cover direction unless a structure-adapted factor base appears"
+  },
+  "reason": "Genus-2 cover index calculus implemented and verified end-to-end; cost ~p^2.5 total (Cantor ~p), far above sqrt(p); prediction survives; PI-reproduced",
+  "before_sha256": "5520a8d0ac2748e0123550e8ab645d0cfab7b98261fd113765f66edce4ab6ec5",
+  "after_sha256": "05b0312771b54472471d1684700602dea6b5d395060912594b0e27026ec97baa"
+}

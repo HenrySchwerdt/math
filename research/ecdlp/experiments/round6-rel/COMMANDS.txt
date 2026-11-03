@@ -1,0 +1,8 @@
+# Commands actually executed (cwd = this directory; run directly in the shell, NOT via scripts/research.py exec; times UTC 2026-11-03 ~10:07-10:25)
+python3 round6.py verify                      # results_verify.json
+python3 round6.py run 12|14|16|18|20          # results_k{12,14,16,18,20}.json, out_run_k*.txt (14..20 ran concurrently)
+python3 round6.py m2 12 ; python3 round6.py m2 14   # results_m2_k*.json, out_m2_k*.txt (re-run once after fixing the R-in-V classification, see report)
+python3 round6.py sweep                       # results_sweep_k16.json
+python3 round6.py sweep-big                   # results_sweep_exploratory_posthoc_k14.json (post hoc, not pre-registered)
+python3 round6.py e2e                         # results_e2e.json, out_e2e_k12.txt
+python3 summarize.py                          # results_summary.json, out_summary.txt

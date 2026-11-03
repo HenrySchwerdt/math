@@ -1,0 +1,89 @@
+{
+  "id": "RUN-4b283c25-b43d-4720-994d-3c285789a273",
+  "type": "RUN",
+  "title": "Round 6 / ECDLP-17: blind adversarial review of Theorems A, A' and B",
+  "created_at": "2026-11-03T10:01:26.447982Z",
+  "status": "completed",
+  "question": "Are the restricted-model lower bounds HYP-5a550ab6 (Theorems A, A') and HYP-eda6732a (Theorem B) correct as stated, with correct hypotheses, and are they already known (Lange\u2013Winterhof, Satoh, Shparlinski et al.)?",
+  "rationale": "Bounded subagent run for TSK-868a3543-c6d2-4607-8540-72b78e2969be",
+  "assumptions": [],
+  "sources": [
+    {
+      "title": "Lange, Winterhof: Polynomial Interpolation of the Elliptic Curve and XTR Discrete Logarithm, COCOON 2002, LNCS 2387, pp. 137-143",
+      "url": "https://dl.acm.org/doi/10.5555/646720.702411",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract via search snippet only; full text not accessed (403)"
+    },
+    {
+      "title": "Satoh: On Degrees of Polynomial Interpolations Related to Elliptic Curve Cryptography, WCC 2005, LNCS 3969, pp. 155-163",
+      "url": "https://link.springer.com/chapter/10.1007/11779360_13",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract only (ECDL, endomorphism of degree 2 or 3); paywalled"
+    },
+    {
+      "title": "Kiltz, Winterhof: On the interpolation of bivariate polynomials related to the Diffie-Hellman mapping, Bull. Austral. Math. Soc. 69 (2004)",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/1F61ACA5EAD8E646D1D5BDBC56D0CCEA/S0004972700036042a.pdf/on-the-interpolation-of-bivariate-polynomials-related-to-the-diffie-hellman-mapping.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Section 5 (elliptic-curve Diffie-Hellman, not DL); PDF text read"
+    },
+    {
+      "title": "Isik, Winterhof: On the Index of the Diffie-Hellman Mapping, arXiv:2011.04245",
+      "url": "https://arxiv.org/pdf/2011.04245",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "introduction (bibliography of degree/sparsity bounds); not about ECDL"
+    },
+    {
+      "title": "Shparlinski: Cryptographic Applications of Analytic Number Theory, Birkhauser 2003",
+      "url": "https://link.springer.com/book/9783764366544",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "catalogue entry only; contents not seen"
+    },
+    {
+      "title": "Lange, Winterhof: Interpolation of the elliptic curve Diffie-Hellman mapping, AAECC-15, LNCS 2643 (2003)",
+      "url": "https://research.tue.nl/en/publications/interpolation-of-the-elliptic-curve-diffie-hellman-mapping/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "bibliographic record only"
+    }
+  ],
+  "refs": [
+    "TSK-868a3543-c6d2-4607-8540-72b78e2969be",
+    "HYP-5a550ab6-75ad-4e6b-a08c-af2a066c69c7",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+  ],
+  "evidence": [],
+  "claims": [
+    "Theorem A is correct with corrected hypotheses: the bounds (N-1)/2 (pole degree) and (N-1)/6 (polynomial total degree) hold for all r, p>3, 2<=N<=r-1; the proof step 'h=0 implies r=0 in F_p' is incomplete (p | r with r != p occurs: p=5, r=10, y^2=x^3+3x, P=(2,2)); repair: h=0 makes the pole set <P>-invariant so deg >= r. Hypothesis r != p is unnecessary.",
+    "Theorem A' is correct (SLP regular at every kP, constants arbitrary, no comparisons): length >= log2((N-1)/6), so the stated log2((N-1)/12) is valid but not sharp; the Omega(n^2) bit-cost conclusion holds only under the assumed per-operation charge Omega(log q) and is not a bit-complexity bound for ECDLP.",
+    "Theorem B is correct as stated; r prime can be weakened to r odd, r>=5 (p>3). Proof: H(Q)=F(Q+P)+F(Q-P)-2F(Q)-2 is even, has r-5 distinct zeros +-kP (2<=k<=(r-3)/2) and pole divisor of degree exactly 6 deg g.",
+    "Counterexample search (208 Theorem-B cases, 138 Theorem-A rows, p<=61) found no violation; rational interpolants with pole degree (N+1)/2 exist, so the constant 1/2 in A is essentially attained for rational f; the author's conjecture m*=r is false for rational f.",
+    "Novelty: not established; Lange-Winterhof (COCOON 2002), Satoh (WCC 2005), Kiltz-Winterhof (2006) concern ECDL interpolation lower bounds but their theorem statements were not accessible, so overlap is likely for the polynomial parts of A and B."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "PI: correct HYP-5a550ab6 statement/proof (drop r != p, use pole-orbit argument; A' constant 6 and model hypotheses; Theorem B r odd); obtain full texts of Lange-Winterhof 2002, Satoh 2005, Kiltz-Winterhof 2006 to settle novelty; then register REV and consider Lean formalization of Theorem B.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Reviewer self-reported identity: Claude Sonnet 5.5 (claude-sonnet-5-5), Claude Code remote session; blind packet; initial findings written before reading RUN-e7c9feff. Evidence files: research/ecdlp/experiments/round6-review/review_checks.py and out_review_checks.txt; report in the .md. Commands: python3 review_checks.py; 6 WebSearch + 3 WebFetch. | PI reproduced review_checks.py (from its directory) via research.py exec; output identical.",
+  "run": {
+    "started_at": "2026-11-03T10:01:45.541232Z",
+    "completed_at": "2026-11-03T10:09:14.072937Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "adversarial-critic",
+    "task": "TSK-868a3543-c6d2-4607-8540-72b78e2969be",
+    "input_hypotheses": [
+      "HYP-5a550ab6-75ad-4e6b-a08c-af2a066c69c7",
+      "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+    ],
+    "starting_commit": "9c3c162c098c91379e03d440b0b5bac8dcf3e666",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round6-review/"
+    ],
+    "resulting_commit": "38b0515d4b9c60fb3d29d486f90b09cc913a89f9",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}
