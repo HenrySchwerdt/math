@@ -1,31 +1,51 @@
 {
   "id": "REV-1f44f52b-09e8-4dad-84f5-3fe181342de4",
   "type": "REV",
-  "title": "Draft \u2014 define before work",
+  "title": "Independent correspondence review of PRF-34538f75 (unconditional Theorem B, Lean)",
   "created_at": "2026-11-03T10:25:23.682562Z",
-  "status": "open",
-  "question": "Unassigned; define exact question",
-  "rationale": "Unassigned; record why selected",
+  "status": "completed",
+  "question": "Does MathResearch.ECDLP.CurveX.degree_bound_short_weierstrass at commit 8058601 build with only standard axioms and state exactly Theorem B (short Weierstrass E over F, char != 2,3, P of odd order r, g(x(kP)) = k^2 for 1 <= k <= (r-1)/2 implies deg g >= (r-5)/6) for actual curve points, non-vacuously?",
+  "rationale": "docs/REVIEW.md requires independent review before a formal PRF is integrated; assigned under RUN-05a6367a.",
   "assumptions": [],
   "sources": [],
-  "refs": [],
-  "evidence": [],
-  "claims": [],
+  "refs": [
+    "PRF-34538f75-12fb-451c-aaa1-314450e49e87",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+  ],
+  "evidence": [
+    "MathResearch/ECDLP/CurveX.lean",
+    "MathResearch/ECDLP/Interpolation.lean",
+    "research/ecdlp/proofs/checks/Round7Axioms.lean"
+  ],
+  "claims": [
+    "lake build at 8058601 (Lean 4.35.0) completed successfully (3163 jobs, cached; 0 warnings in log); direct re-elaboration of MathResearch/ECDLP/Interpolation.lean and CurveX.lean via lake env lean exited 0.",
+    "#print axioms for degree_bound_short_weierstrass and the five supporting CurveX declarations reports only propext, Classical.choice, Quot.sound.",
+    "No sorry/admit/axiom/unsafe/native_decide/implemented_by/decide in CurveX.lean or Interpolation.lean.",
+    "The Lean statement corresponds to Theorem B for points of the affine short Weierstrass model y^2 = x^3 + a4 x + a6; xCoord at infinity is never evaluated in any hypothesis or proof step that matters (k*P != 0 for 1 <= k < r is proved, and x(0*P) is never used since the relations range over 2 <= k <= m-1).",
+    "No discriminant hypothesis is required: the statement holds for nonsingular points of any short Weierstrass cubic, so it is strictly more general than Theorem B, not vacuous.",
+    "Hypotheses are satisfiable: the Lagrange interpolant through distinct x(kP) exists for every odd-order P; numerically checked on 7 elliptic and 3 singular toy short Weierstrass curves (1078 elliptic + 164 singular odd-order points), 0 violations of r <= 6 deg g + 5 by the minimal-degree interpolant."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Draft only; no execution or verification claimed.",
+  "outcome": "verified",
+  "next_action": "PI integration review of PRF-34538f75 may proceed; record that the review covers formal correctness/correspondence only, not novelty versus Lange-Winterhof-type x-coordinate interpolation bounds, and not any complexity claim.",
+  "notes": "Reviewer self-reported model identity: Claude Opus 5.5 (claude-opus-5-5) per the session system prompt; runtime metadata not independently verified. Blind packet respected: PRF .md and research/ecdlp/runs/*.md were not read before initial findings. Same provider family as author; independence is role/session-level only.",
   "review": {
-    "run": null,
-    "target_commit": null,
-    "targets": [],
-    "decision": "revise",
-    "rationale": "Review not performed",
-    "counterexamples": [
-      "Not attempted"
+    "run": "RUN-05a6367a-41a2-4426-945d-3b325c60e467",
+    "target_commit": "805860147282fd91518542fdf53565082c719ea5",
+    "targets": [
+      "PRF-34538f75-12fb-451c-aaa1-314450e49e87",
+      "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
     ],
-    "complexity": "Not reviewed",
-    "limitations": "Draft review, not an assessment",
-    "initial_packet": "Not supplied"
+    "decision": "accept",
+    "rationale": "Build and axiom check reproduce; the statement faithfully formalizes Theorem B (Mathlib a1=a2=a3=0 model, a=a4, b=a6, (k:F)^2 is k^2 in F, odd r excludes infinite order addOrderOf=0); the xCoord-at-infinity convention never enters; degenerate r in {1,3,5} are trivially true as in the informal statement; no discriminant hypothesis makes the result more general, not vacuous; hypotheses are satisfiable; the proof is a genuine root-counting argument (N of degree exactly 3d via 2 != 0, constant case excluded via 3 != 0) with no suspicious shortcuts.",
+    "counterexamples": [
+      "Searched for a violation of r <= 6 deg g + 5 using minimal-degree (Lagrange) interpolants on y^2=x^3+ax+b over F_p for (p,a,b) in (101,2,3),(103,1,1),(211,5,7),(227,0,7),(241,3,0),(401,11,13),(1009,2,3): none found.",
+      "Same search on singular short Weierstrass cubics (cusp y^2=x^3 over F_101; node y^2=x^3-3x+2 over F_103, F_107) to test the no-discriminant generality: none found.",
+      "Checked whether xCoord(0)=0 could weaken or trivialize the statement: not used (k*P != 0 proved for 1 <= k < r; relations only for 2 <= k <= m-1).",
+      "Checked vacuity routes: infinite order excluded by r odd (addOrderOf=0 is even); constant g excluded only via 1 != 4 using 3 != 0, matching the char != 3 assumption; no contradictory hypotheses found."
+    ],
+    "complexity": "Not applicable: formal correctness only",
+    "limitations": "Build was an up-to-date (cached) lake build plus direct re-elaboration of the two source files, not a clean rebuild of Mathlib. Numeric checks are toy-sized sanity checks, not proof. Review does not assess novelty, tightness of the r/6 bound, or any computational/bit-complexity consequence. Reviewer shares provider family with the author.",
+    "initial_packet": "Blind packet from PI: target commit 8058601, Lean files CurveX.lean/Interpolation.lean, axiom check Round7Axioms.lean, informal Theorem B, claimed formalization summary; author PRF .md and run .md withheld until after initial findings."
   }
 }

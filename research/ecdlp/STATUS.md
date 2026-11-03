@@ -79,6 +79,15 @@ Round 6 (package 3):
   ~p^{2.5} total (~p Cantor operations), far above √p; pullback-only relations carry no
   information. HYP-ad5bc0e3 survives on p ≤ 2^14.
 
+Round 7 (package 4):
+- Theorem B is now UNCONDITIONALLY formally verified (CurveX.lean, PRF-34538f75, REV-1f44f52b accept):
+  for a short Weierstrass curve over a field with 2, 3 ≠ 0 and P of odd order r, any g with
+  g(x(kP)) = k² for 1 ≤ k ≤ (r−1)/2 has r ≤ 6·deg g + 5. Elementary; novelty unsettled.
+- Theorem A is known in kind (Lange–Winterhof COCOON 2002; Satoh WCC 2005) — not claimed new.
+- Partial-agreement bounds (HYP-5da6025e, proof attempt): agreement on a δ-fraction of k ≤ N
+  forces deg f ≥ δ²N/4 (rational f); unreviewed.
+- New speculative hypotheses D1–D5 (RUN-73ace464); D1 (no low-degree x-orbit invariants) null.
+
 Barrier context (literature-level, agents' reports RUN-9eae1ad9, RUN-fec2442f, RUN-b0ccd1bd):
 O(n log n) is below the best-known cost O(n² log n) of verifying a candidate by scalar
 multiplication (not a lower bound). Generic bounds (Shoup/Maurer/Nechaev) constrain only

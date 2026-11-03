@@ -19,15 +19,17 @@ Task keys via `research/ecdlp/TASKS.json`; status via `scripts/research.py task`
 - ECDLP-16 — m=3 relation-solving cost (negative).  ECDLP-17 — blind review of A/A′/B.
 - ECDLP-18 — genus-2 cover decisive test (negative).  ECDLP-19 — conditional Lean Theorem B.
 
+- ECDLP-20 — unconditional Lean Theorem B.  ECDLP-21 — partial-agreement bounds (proof attempt).
+- ECDLP-22 — novelty (A known in kind) and hypotheses D1–D5.
+
 ## Active
 - ECDLP-1 — umbrella vertical slice (lifecycle executed; SQLite/event memory, blind-packet
   tooling, C17 harness not implemented — deferred per user priority on research).
 
 ## Next candidates (prioritized by significance × falsifiability ÷ cost)
-1. Discharge Theorem B's hypotheses from Mathlib's WeierstrassCurve.Affine addition formulas
-   (unconditional formal theorem); retrieve Lange–Winterhof full text to settle novelty of A/B.
-2. Partial-agreement / approximation versions of A/B (curve analogue of Coppersmith–Shparlinski):
-   lower bounds for polynomials agreeing with the DL map on a δ-fraction of points.
+1. Blind review + Lean formalization of partial-agreement bounds (HYP-5da6025e); human/library
+   access needed to settle novelty vs Lange–Winterhof (LNCS 2387 pp. 137–143, LNCS 2643 pp. 51–60).
+2. D3 (endomorphism-class speedups via Z[π]) and D2 (diamond operators on X₁(r)) — cheapest tests.
 3. Unconventional: non-elimination decomposition (lattice / small-root) for structured factor
    bases; quantum-free "representation change" ideas — require a cheap decisive test first.
 (Done/negative: prime-field summation polynomials m ≤ 3; genus-2 covers.)

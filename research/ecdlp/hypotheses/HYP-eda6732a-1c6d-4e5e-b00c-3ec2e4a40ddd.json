@@ -3,7 +3,7 @@
   "type": "HYP",
   "title": "x-only polynomial lower bound for k^2 (Theorem B)",
   "created_at": "2026-11-03T09:55:25.157445Z",
-  "status": "open",
+  "status": "completed",
   "question": "Theorem B: Let E/F_p short Weierstrass, P of prime order r. If g in F_p[X] satisfies g(x(kP)) = k^2 mod p for 1 <= k <= (r-1)/2, then deg g >= (r-5)/6.",
   "rationale": "Registered by PI from round-5 runs after PI reproduction of numerics.",
   "assumptions": [],
@@ -16,7 +16,9 @@
     "REV-83ec2fc9-e871-4434-a5da-49db92c61a55",
     "PRF-a6cf1e66-4d14-4e4d-8ced-617e4c0abf5f",
     "REV-08014e33-0955-4907-b909-19fe23f94c5a",
-    "RUN-73ace464-1565-479c-9409-6690c560c514"
+    "RUN-73ace464-1565-479c-9409-6690c560c514",
+    "PRF-34538f75-12fb-451c-aaa1-314450e49e87",
+    "REV-1f44f52b-09e8-4dad-84f5-3fe181342de4"
   ],
   "evidence": [
     "research/ecdlp/experiments/round5-ct/out_check_theorem_b_identity.txt"
@@ -24,8 +26,15 @@
   "claims": [
     "Theorem B: Let E/F_p short Weierstrass, P of prime order r. If g in F_p[X] satisfies g(x(kP)) = k^2 mod p for 1 <= k <= (r-1)/2, then deg g >= (r-5)/6."
   ],
-  "proof_status": "reviewed",
-  "outcome": "unresolved",
-  "next_action": "Discharge the addition-law hypotheses from Mathlib; settle novelty.",
-  "notes": "Agent proof via polynomial algebra and addition formulas (k^2 is the natural x-only invariant since x(kP)=x(-kP)); identity checked 2519 times, 0 failures. Possibly duplicates Lange\u2013Winterhof; novelty not claimed. Lean candidate. | ECDLP-17 blind review: correct as stated; proof via H(Q) = F(Q+P) + F(Q\u2212P) \u2212 2F(Q) \u2212 2 (F = g\u2218x), even, with r\u22125 distinct zeros \u00b1kP and pole degree exactly 6 deg g; \"r prime\" can be weakened to r odd. 208 toy cases, no violation. Novelty not found (Lange\u2013Winterhof statements not accessible). | CONDITIONAL formal proof PRF-a6cf1e66-4d14-4e4d-8ced-617e4c0abf5f (accepted by REV-08014e33-0955-4907-b909-19fe23f94c5a): polynomial core verified in Lean with the x-addition identities and injectivity as hypotheses. The unconditional curve statement is NOT yet formally verified. | ECDLP-22 novelty: not found in accessible material (abstracts/records only); overlap with Lange\u2013Winterhof AAECC 2003 (LNCS 2643, pp. 51\u201360) plausible. Novelty unsettled."
+  "proof_status": "formally-verified",
+  "outcome": "verified",
+  "next_action": "Settle novelty with library access; extend formal layer to partial agreement (HYP-5da6025e).",
+  "notes": "Agent proof via polynomial algebra and addition formulas (k^2 is the natural x-only invariant since x(kP)=x(-kP)); identity checked 2519 times, 0 failures. Possibly duplicates Lange\u2013Winterhof; novelty not claimed. Lean candidate. | ECDLP-17 blind review: correct as stated; proof via H(Q) = F(Q+P) + F(Q\u2212P) \u2212 2F(Q) \u2212 2 (F = g\u2218x), even, with r\u22125 distinct zeros \u00b1kP and pole degree exactly 6 deg g; \"r prime\" can be weakened to r odd. 208 toy cases, no violation. Novelty not found (Lange\u2013Winterhof statements not accessible). | CONDITIONAL formal proof PRF-a6cf1e66-4d14-4e4d-8ced-617e4c0abf5f (accepted by REV-08014e33-0955-4907-b909-19fe23f94c5a): polynomial core verified in Lean with the x-addition identities and injectivity as hypotheses. The unconditional curve statement is NOT yet formally verified. | ECDLP-22 novelty: not found in accessible material (abstracts/records only); overlap with Lange\u2013Winterhof AAECC 2003 (LNCS 2643, pp. 51\u201360) plausible. Novelty unsettled. | UNCONDITIONAL formal proof for short Weierstrass curves over fields with 2,3 != 0 (PRF-34538f75-12fb-451c-aaa1-314450e49e87; review REV-1f44f52b-09e8-4dad-84f5-3fe181342de4 accept). Novelty unsettled (possible overlap with Lange\u2013Winterhof AAECC 2003).",
+  "formal": {
+    "lean_file": "MathResearch/ECDLP/CurveX.lean",
+    "declaration": "MathResearch.ECDLP.CurveX.degree_bound_short_weierstrass",
+    "toolchain_file": "lean-toolchain",
+    "build_evidence": "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5187015a-890d-416a-a8ad-2bcce7672ff8.evidence",
+    "source_commit": "cc8dc791a0bd74f89b6cd614898a5773abdc500a"
+  }
 }
