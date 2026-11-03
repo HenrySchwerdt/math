@@ -1,0 +1,25 @@
+{
+  "id": "HYP-23351e75-1cf5-4f17-8a78-2ff0f89b51ff",
+  "type": "HYP",
+  "title": "Inventor A: lifted relations (Farey index calculus, LLL decomposition, Mordell lift) do not beat rho",
+  "created_at": "2026-11-03T11:59:59.459810Z",
+  "status": "completed",
+  "question": "Inventor A (ECDLP-42, lifted relations): no candidate beats Pollard rho. A1 Farey-height factor-base index calculus with meet-in-the-middle relation search: 66/66 correct (12-24 bits); cost vs rho at 24 bits 42.7x (4-term), 28.9x (6-term); 3-term control ~260x at 20 bits; pre-registered verdict NO-ADVANTAGE; obstacle: with s unknown logs, hashing needs ~sqrt(p s) additions > sqrt(p); measured exponents 0.82/0.71 vs model 0.667/0.60 (rough). A2 LLL (Coppersmith-style) decomposition into two Farey points: 0 of 124/77/61 existing decompositions found at 16/20/24 bits (rank-one structure is not a lattice condition). A3 lift to E(Q) on y^2=x^3-2: planted 50/50, random 0/300 (coverage 1e-3 to 4e-7).",
+  "rationale": "Strategic correction: constructive algorithm candidates.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-ff67c875-4a95-4924-8722-a8402394bf8e"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round12-inventor-a/analysis.txt",
+    "research/ecdlp/experiments/round12-inventor-a/PROTOCOL.md"
+  ],
+  "claims": [
+    "Inventor A (ECDLP-42, lifted relations): no candidate beats Pollard rho. A1 Farey-height factor-base index calculus with meet-in-the-middle relation search: 66/66 correct (12-24 bits); cost vs rho at 24 bits 42.7x (4-term), 28.9x (6-term); 3-term control ~260x at 20 bits; pre-registered verdict NO-ADVANTAGE; obstacle: with s unknown logs, hashing needs ~sqrt(p s) additions > sqrt(p); measured exponents 0.82/0.71 vs model 0.667/0.60 (rough). A2 LLL (Coppersmith-style) decomposition into two Farey points: 0 of 124/77/61 existing decompositions found at 16/20/24 bits (rank-one structure is not a lattice condition). A3 lift to E(Q) on y^2=x^3-2: planted 50/50, random 0/300 (coverage 1e-3 to 4e-7)."
+  ],
+  "proof_status": "experimental",
+  "outcome": "refuted",
+  "next_action": "Closed. Possible follow-up (low prior): Groebner/resultant relation finder on structured factor base vs birthday search per relation.",
+  "notes": "PI re-ran analyze.py (stdout identical) and posthoc.py (regenerated out_rho_split.json byte-identical) via exec. count_points bug found and fixed by agent before final runs; A2 sweeps and post-hoc fits outside protocol, labelled. No independent review."
+}

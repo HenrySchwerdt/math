@@ -7,17 +7,42 @@
   "question": "Lifted-relation algorithms: invent ECDLP algorithms that use the integer structure of coordinates in [0,p) (small lifts to Z, integer smoothness, lattice reduction / LLL on relations among lifted multiples, carries) to find relations a*P + b*Q = O faster than collisions; prototype and benchmark against Pollard rho.",
   "rationale": "Bounded run for TSK-ac21ba6a-1187-4aa2-8992-8a9d53ba966c",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Jacobson, Koblitz, Silverman, Stein, Teske, Analysis of the Xedni Calculus Attack, Designs, Codes and Cryptography 20, 41-64 (2000)",
+      "url": "https://doi.org/10.1023/A:1008312401197",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract only (via web search result); experiments show odds against a suitable lifting are prohibitively high"
+    },
+    {
+      "title": "Petit, Kosters, Messeng, Algebraic approaches for the elliptic curve discrete logarithm problem over prime fields, PKC 2016 (LNCS, pp. 3-18)",
+      "url": "https://christophe.petit.web.ulb.be/files/16PKC_primeECDLP.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract/summary via search result; factor bases of the form {(x,y): L(x)=0}; full text not read"
+    },
+    {
+      "title": "V. S. Miller, Use of Elliptic Curves in Cryptography (CRYPTO 1985/86 record; year ambiguous in bibliographies)",
+      "url": "https://link.springer.com/doi/10.1007/3-540-45539-6_2",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "bibliographic record only; the height-based reading of Miller's argument was NOT confirmed"
+    }
+  ],
   "refs": [
     "TSK-ac21ba6a-1187-4aa2-8992-8a9d53ba966c",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "A1 (Farey-height factor base, MITM index calculus, l=2/l=3 and m=3 control) recovers k on 66/66 (50/50 for m=3) toy instances, 12..24 bits, but is slower than DP rho at every size (U1 ratio 42.7x and 28.9x at 24 bits; pre-registered verdict NO-ADVANTAGE; experimental, tested domain only).",
+    "Structural cost bound for hash-based index calculus: U1 >~ sqrt(p*s) > sqrt(p) with s unknown logs; measured U1/sqrt(p s) = 4-8 at 18-24 bits (heuristic model, experimental).",
+    "A2 (Veronese-tensor LLL decomposition of a target as two Farey points) failed: LLL success 0 of 124/77/61 existing decompositions at 16/20/24 bits; not viable (experimental).",
+    "A3 (lift to E(Q), y^2=x^3-2): correct on planted instances (50/50) but random-instance success 0/300 at 12..24 bits, coverage 1e-3..4e-7 (Miller coverage, experimental).",
+    "No speedup over Pollard rho is claimed or observed; HYP-2de84d42 status unchanged."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "next_action": "PI review of round-12 inventor A: all three candidates negative. Only remaining lever in this territory is a non-generic relation finder cheaper than a sqrt(p*s) birthday search on a lifted/structured factor base; test per-relation solver exponent at m>=3 (Groebner/resultant) on Farey/PKM bases, or CM-orbit structure. No commits made.",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI. Self-reported model identity (inventor run): Sonnet 5.5 (claude-sonnet-5-5), not runtime-verified. Executed via algorithm-engineering adapter following algorithm-inventor role. Protocol sha256 0b0b85672fae6c05e9ed9619032980765289189cff2de3cce147bf30c66723af. A bug in count_points was found and fixed before the valid benchmark; invalid first-launch outputs discarded.",
   "run": {
     "started_at": "2026-11-03T11:34:46.020000Z",
     "completed_at": null,

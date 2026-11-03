@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round12-inventor-a && python3 posthoc.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:59:37.751347Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:59:38.120207Z",
+  "truncated": false,
+  "output": "rho: size, mean total, setup, starts, walk adds\n12 1814 957 772 86\n14 2160 1148 861 150\n16 2529 1340 866 323\n18 2819 1535 728 555\n20 3743 1734 938 1072\n22 6190 1914 1304 2973\n24 7932 2103 1208 4620\nrho alpha total 0.16827123934373645 0.14245465508622945 0.19408782360124344\nrho alpha walk-only 0.4790036702964721 0.42828242887911855 0.5297249117138257\nrho alpha total-minus-setup 0.22159684303132202 0.16892679975350705 0.274266886309137\nlocal fits, sizes >= 18 bits (l2,l3) / >=16 (m3) / rho total-minus-setup >=18\nl2 0.82 +- 0.045 [np.float64(0.73), np.float64(0.911)] 36\nl3 0.712 +- 0.042 [np.float64(0.627), np.float64(0.797)] 36\nm3 0.976 +- 0.002 [np.float64(0.973), np.float64(0.98)] 30\nrho(total-setup)>=18 0.405 +- 0.066 [np.float64(0.272), np.float64(0.537)]\nrho(total)>=18 0.254 +- 0.034 [np.float64(0.184), np.float64(0.323)]\n"
+}
