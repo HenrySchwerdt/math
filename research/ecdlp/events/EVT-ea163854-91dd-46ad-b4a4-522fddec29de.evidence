@@ -1,0 +1,26 @@
+{
+  "id": "EVT-ea163854-91dd-46ad-b4a4-522fddec29de",
+  "kind": "task-status-change",
+  "task": "TSK-63e9a1ad-4da3-4b7e-87f9-8d0cc4518f40",
+  "task_key": "ECDLP-58",
+  "timestamp": "2026-11-03T13:30:52.932685Z",
+  "run": "RUN-3ff460e2-d5c9-4264-9bae-473c117a0c3d",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "research-worker"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Bounded research-worker run started",
+  "before_sha256": "2ec3135d24ee1af5fce2cb582c42892fd83a683896898495ed50e48a1ed1b820",
+  "after_sha256": "b202ea507e8fe9fdc6c30e453de4fd9951074e4b9fbbcc2fcc37961956c716ed"
+}
