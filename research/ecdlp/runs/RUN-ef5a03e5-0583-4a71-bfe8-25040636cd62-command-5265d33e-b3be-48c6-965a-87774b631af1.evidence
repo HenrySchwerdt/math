@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "bash",
+    "research/ecdlp/experiments/round18-inventor-i/run_gb_sing.sh"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:49:57.494651Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T13:53:06.388065Z",
+  "truncated": false,
+  "output": ""
+}

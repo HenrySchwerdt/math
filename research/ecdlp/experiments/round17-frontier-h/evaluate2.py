@@ -25,6 +25,12 @@ def means(res, idx=None):
             [sum((res[s][i] if idx is None else res[s][idx[s][j]])[0] for j, i in enumerate(range(len(res[s])))) / len(res[s]) for s in sz])
 def analyse(cand, ctrl, tag_c):
     """cand/ctrl = dict(fit=res, held=res). Joint bootstrap over instance indices (same instances for both programs)."""
+    succ0 = [sum(t[1] for t in d[s]) / len(d[s]) for d in (cand['fit'], cand['held']) for s in sorted(d)]
+    if min(succ0) < 0.9:   # T1 fails: no further statistics (cost-ratio CIs are meaningless for non-solvers)
+        mcost = {s: sum(t[0] for t in d[s]) / len(d[s]) for d in (cand['fit'], cand['held']) for s in sorted(d)}
+        return dict(tag=tag_c, success=dict(zip(sorted(cand['fit']) + sorted(cand['held']), succ0)), mean_cost=mcost, T1_success=False, counts=False,
+                    note='T1 failed; T2-T4 not evaluated', alpha_gamma_cand=[0, 0], alpha_gamma_ctrl=[0, 0], cost_ratio_to_rho_held=[0] * 4,
+                    logratio_slope_per_log2r=0, slope_ci99=[0, 0], Q_double_ratio=[0] * 4, Q_ci99=[[0, 0]] * 4, T2_slope_upper99_lt0=False, T3=False, T4_ratio_lt1=False)
     rng = random.Random(12345)
     sf, sh = sorted(cand['fit']), sorted(cand['held'])
     rf = [sum(t[2] for t in cand['fit'][s]) / len(cand['fit'][s]) for s in sf]
@@ -36,7 +42,7 @@ def analyse(cand, ctrl, tag_c):
             a, g = fit_ab(rf, [mc(P['fit'], s, idx_f[s]) for s in sf])
             obs = [mc(P['held'], s, idx_h[s]) for s in sh]
             pred = [a * math.sqrt(r) + g for r in rh]
-            out[nm] = dict(alpha=a, gamma=g, obs=obs, ratio=[o / q for o, q in zip(obs, pred)])
+            out[nm] = dict(alpha=a, gamma=g, obs=obs, ratio=[o / q if q else float("inf") for o, q in zip(obs, pred)])
         rr = [out['cand']['obs'][i] / out['ctrl']['obs'][i] for i in range(4)]
         xs = [math.log2(r) for r in rh]; ys = [math.log(v) for v in rr]; mx, my = sum(xs) / 4, sum(ys) / 4
         slope = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / sum((x - mx) ** 2 for x in xs)
@@ -64,7 +70,7 @@ def analyse(cand, ctrl, tag_c):
                 cost_ratio_to_rho_held=rr, cost_ratio_ci99=[[q(bR[i], .005), q(bR[i], .995)] for i in range(4)],
                 logratio_slope_per_log2r=slope, slope_ci99=[q(bs, .005), q(bs, .995)],
                 Q_double_ratio=Q, Q_ci99=[[q(bQ[i], .005), q(bQ[i], .995)] for i in range(4)],
-                T1_success=T1, T2_slope_upper99_lt0=T2, T3_Q2^20_upper99_lt1=T3 if False else None, T3=T3, T4_ratio_lt1=T4, counts=T1 and T2 and T3 and T4)
+                T1_success=T1, T2_slope_upper99_lt0=T2, T3=T3, T4_ratio_lt1=T4, counts=T1 and T2 and T3 and T4)
 def main():
     h = hashlib.sha256(open(os.path.join(HERE, 'PROTOCOL.md'), 'rb').read()).hexdigest()
     assert h == open(os.path.join(HERE, 'PROTOCOL.sha256')).read().split()[0]
@@ -76,7 +82,7 @@ def main():
     ctrl = get('rho_dp', prog_rho_dp())
     for tag in sys.argv[1:]:
         if tag == 'controls':
-            progs = {'bsgs': prog_bsgs(), 'rho_floyd': prog_rho_floyd_restart(), 'rho_dp_nb3': prog_rho_dp(3, 2), 'rho_dp_nb5': prog_rho_dp(4, 3), 'ic_ms_cap12': prog_ic_ms()}
+            progs = {'bsgs': prog_bsgs(), 'rho_floyd': prog_rho_floyd_restart(), 'rho_dp_nb3': prog_rho_dp(3, 2), 'rho_dp_nb5': prog_rho_dp(4, 3)}
         else:
             ch = json.load(open(os.path.join(HERE, f'out_evolve_{tag}.json')))['champions'][0]['prog']
             progs = {tag: ([tuple(x) for x in ch[0]], [tuple(x) for x in ch[1]])}

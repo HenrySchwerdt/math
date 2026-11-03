@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "research/ecdlp/experiments/round18-inventor-i/run_gb.sh"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:43:52.584855Z",
+  "exit_code": null,
+  "error": "Timed out after 300 seconds",
+  "completed_at": "2026-11-03T13:48:52.586010Z",
+  "truncated": false,
+  "output": ""
+}

@@ -1,0 +1,42 @@
+bits  p  s  npairsums  | per-target means
+bits [20, 24, 28, 32, 36, 40, 44]
+MITM counted EC adds (deterministic ~ 2*#pairsums): beta=0.405 CI95 [0.37,0.45] alpha=0.447 gamma=-1.42 relres=0.118 (naive loglog slope 0.404, warning only)
+   T vs s: naive slope 1.982 => in p: 0.396 (s = p^(1/5))
+MITM wall seconds (pure Python): beta=0.475 CI95 [0.44,0.52] alpha=1.08e-07 gamma=1.13e-05 relres=0.166 (naive loglog slope 0.466, warning only)
+   T vs s: naive slope 2.290 => in p: 0.458 (s = p^(1/5))
+TOWER wall seconds (flint poly product tree + gcd): beta=0.585 CI95 [0.55,0.64] alpha=1.33e-08 gamma=3.27e-05 relres=0.196 (naive loglog slope 0.554, warning only)
+   T vs s: naive slope 2.721 => in p: 0.544 (s = p^(1/5))
+20 p=9.62e+05 s=15 M=57 adds=113 mitm_s=0.0001 tower_s=0.0001 tower/mitm=0.85 pre_mitm=0.000 pre_tower=0.000 succ_rand=0.000 planted_all_found=True all_verified=True
+24 p=1.59e+07 s=30 M=238 adds=475 mitm_s=0.0004 tower_s=0.0004 tower/mitm=0.99 pre_mitm=0.000 pre_tower=0.000 succ_rand=0.000 planted_all_found=True all_verified=True
+28 p=2.43e+08 s=43 M=471 adds=943 mitm_s=0.0008 tower_s=0.0009 tower/mitm=1.04 pre_mitm=0.001 pre_tower=0.000 succ_rand=0.000 planted_all_found=True all_verified=True
+32 p=3.46e+09 s=82 M=1683 adds=3366 mitm_s=0.0044 tower_s=0.0060 tower/mitm=1.35 pre_mitm=0.003 pre_tower=0.001 succ_rand=0.000 planted_all_found=True all_verified=True
+36 p=5.75e+10 s=148 M=5495 adds=10989 mitm_s=0.0175 tower_s=0.0331 tower/mitm=1.90 pre_mitm=0.011 pre_tower=0.005 succ_rand=0.000 planted_all_found=True all_verified=True
+40 p=1.03e+12 s=248 M=15395 adds=30789 mitm_s=0.0516 tower_s=0.1289 tower/mitm=2.50 pre_mitm=0.030 pre_tower=0.015 succ_rand=0.000 planted_all_found=True all_verified=True
+44 p=1.61e+13 s=457 M=52313 adds=104626 mitm_s=0.1986 tower_s=0.7127 tower/mitm=3.59 pre_mitm=0.108 pre_tower=0.067 succ_rand=0.000 planted_all_found=True all_verified=True
+bits kappa  N  hits  rate  [Wilson95]  model(16C(c,4)/p)  s^4/(24p)  (|B| avg)
+20 1.0 4500 13 0.0029 [0.0017,0.0049] model 0.0011 s4/24p 0.0026
+20 2.0 4500 115 0.0256 [0.0213,0.0306] model 0.0181 s4/24p 0.0287
+20 3.0 4500 1226 0.2724 [0.2596,0.2856] model 0.2141 s4/24p 0.3101
+20 4.0 4500 2546 0.5658 [0.5512,0.5802] model 0.5013 s4/24p 0.9475
+24 1.0 4500 13 0.0029 [0.0017,0.0049] model 0.0019 s4/24p 0.0028
+24 2.0 4500 249 0.0553 [0.0490,0.0624] model 0.0431 s4/24p 0.0534
+24 3.0 4500 799 0.1776 [0.1667,0.1890] model 0.1599 s4/24p 0.2016
+24 4.0 4500 1892 0.4204 [0.4061,0.4349] model 0.3837 s4/24p 0.5385
+28 1.0 2100 1 0.0005 [0.0001,0.0027] model 0.0005 s4/24p 0.0007
+28 2.0 2100 41 0.0195 [0.0144,0.0264] model 0.0189 s4/24p 0.0215
+28 3.0 2100 114 0.0543 [0.0454,0.0648] model 0.0506 s4/24p 0.0568
+28 4.0 2100 471 0.2243 [0.2070,0.2426] model 0.2201 s4/24p 0.2647
+Singular std, grevlex, S_3-tower system: m, d, p, time_ms, vdim
+ m=2  d=4:1ms/vdim1  d=6:0ms/vdim1  d=8:0ms/vdim2  d=10:1ms/vdim1  d=12:0ms/vdim2  d=14:0ms/vdim2  d=16:0ms/vdim2  d=20:1ms/vdim2  d=24:1ms/vdim2  d=28:1ms/vdim2  d=32:1ms/vdim2  d=40:3ms/vdim2
+ m=3  d=4:3ms/vdim1  d=6:33ms/vdim3  d=8:204ms/vdim6  d=10:764ms/vdim1  d=12:1853ms/vdim6  d=14:4163ms/vdim6  d=16:8474ms/vdim6  d=20:27220ms/vdim3  d=24:TO  d=28:TO  d=32:TO  d=40:TO
+ m=4  d=4:96ms/vdim1  d=6:4301ms/vdim4  d=8:TO  d=10:TO  d=12:TO  d=14:TO  d=16:TO  d=20:TO  d=24:TO  d=28:TO  d=32:TO  d=40:TO
+m=3: points>=50ms [(8, 204), (10, 764), (12, 1853), (14, 4163), (16, 8474), (20, 27220)]  log-log slope in d (rough, not a fit-with-CI): 5.29
+m=4: points>=50ms [(4, 96), (6, 4301)]  log-log slope in d (rough, not a fit-with-CI): 9.38
+MITM 3+1 (table of triple sums): bits s ntriples adds_pre(avg) T_test adds(avg) T_test wall(avg s) planted_found
+20 14.666666666666666 313.3333333333333 911 15 1.17e-05 True
+24 30.0 2630.0 7830 30 2.80e-05 True
+28 42.666666666666664 7222.666666666667 21583 43 8.92e-05 True
+32 82.0 46167.333333333336 138338 82 2.50e-04 True
+36 148.0 272975.3333333333 818640 148 3.13e-04 True
+40 248.0 1275842.0 3827040 248 4.72e-04 True
+naive slopes (deterministic counts): T_test 0.20262764896739066  precompute 0.5953414105083167

@@ -1,0 +1,26 @@
+{
+  "id": "EVT-7fcdc7d7-44a2-410b-b2ae-f81538114e20",
+  "kind": "task-status-change",
+  "task": "TSK-a098a663-8881-49d6-a44d-609d0416f5de",
+  "task_key": "ECDLP-57",
+  "timestamp": "2026-11-03T13:55:04.608844Z",
+  "run": "RUN-885e31b9-573a-4763-a71c-f0d533ac14c2",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "frontier-explorer"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "All champions fail pre-registered rule; field-op instructions unused; hand index calculus loses to rho",
+  "before_sha256": "b6a4936ac5f731ff1c1dd62330f879cf56781a03c2ba5aca53eadf0f88185513",
+  "after_sha256": "e54d1df99279e4c82962cabb48f5559939c2244c9230679e7a26d5203dfda7d4"
+}

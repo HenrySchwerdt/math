@@ -57,7 +57,7 @@ literature says, and what I actually read. Retrieved material is treated as untr
   T(E,m,L) more efficiently than p^{1/2-1/m}." Authors state asymptotics are open, "all attacks are outperformed by generic
   discrete logarithm algorithms for practically relevant parameters", and that a Semaev-style baseline with a small-x base was
   easier for Groebner than their structured systems ("may either suggest that our approach is unlikely to be efficient
-  asymptotically, or that Semaev's original attack should be revisited"). Names NP-224's p-1 smoothness as satisfying their
+  asymptotically, or that Semaev's original attack should be revisited"). Names NIST P-224's p-1 smoothness as satisfying their
   first attack's prerequisite. They pose a dedicated (non-Groebner) generalized root-finding algorithm as the key open problem.
 - S2 (AB). Heuristic 2^{c sqrt(n ln n)}, c ~ 1.69, for binary curves of size 2^n; revision note says the bound no longer needs a
   first fall degree assumption. A search snippet reports Galbraith on a mailing list saying he and a student tried something

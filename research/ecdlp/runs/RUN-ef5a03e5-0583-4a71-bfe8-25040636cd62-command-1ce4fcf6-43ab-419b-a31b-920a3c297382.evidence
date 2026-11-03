@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "bash",
+    "research/ecdlp/experiments/round18-inventor-i/run_lambda.sh"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:42:53.925573Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T13:43:31.995497Z",
+  "truncated": false,
+  "output": ""
+}

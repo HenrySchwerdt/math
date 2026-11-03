@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round18-inventor-i && python3 analyze.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:55:13.279207Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T13:55:29.145563Z",
+  "truncated": false,
+  "output": "bits  p  s  npairsums  | per-target means\nbits [20, 24, 28, 32, 36, 40, 44]\nMITM counted EC adds (deterministic ~ 2*#pairsums): beta=0.405 CI95 [0.37,0.45] alpha=0.447 gamma=-1.42 relres=0.118 (naive loglog slope 0.404, warning only)\n   T vs s: naive slope 1.982 => in p: 0.396 (s = p^(1/5))\nMITM wall seconds (pure Python): beta=0.475 CI95 [0.44,0.52] alpha=1.08e-07 gamma=1.13e-05 relres=0.166 (naive loglog slope 0.466, warning only)\n   T vs s: naive slope 2.290 => in p: 0.458 (s = p^(1/5))\nTOWER wall seconds (flint poly product tree + gcd): beta=0.585 CI95 [0.55,0.64] alpha=1.33e-08 gamma=3.27e-05 relres=0.196 (naive loglog slope 0.554, warning only)\n   T vs s: naive slope 2.721 => in p: 0.544 (s = p^(1/5))\n20 p=9.62e+05 s=15 M=57 adds=113 mitm_s=0.0001 tower_s=0.0001 tower/mitm=0.85 pre_mitm=0.000 pre_tower=0.000 succ_rand=0.000 planted_all_found=True all_verified=True\n24 p=1.59e+07 s=30 M=238 adds=475 mitm_s=0.0004 tower_s=0.0004 tower/mitm=0.99 pre_mitm=0.000 pre_tower=0.000 succ_rand=0.000 planted_all_found=True all_verified=True\n28 p=2.43e+08 s=43 M=471 adds=943 mitm_s=0.0008 tower_s=0.0009 tower/mitm=1.04 pre_mitm=0.001 pre_tower=0.000 succ_rand=0.000 planted_all_found=True all_verified=True\n32 p=3.46e+09 s=82 M=1683 adds=3366 mitm_s=0.0044 tower_s=0.0060 tower/mitm=1.35 pre_mitm=0.003 pre_tower=0.001 succ_rand=0.000 planted_all_found=True all_verified=True\n36 p=5.75e+10 s=148 M=5495 adds=10989 mitm_s=0.0175 tower_s=0.0331 tower/mitm=1.90 pre_mitm=0.011 pre_tower=0.005 succ_rand=0.000 planted_all_found=True all_verified=True\n40 p=1.03e+12 s=248 M=15395 adds=30789 mitm_s=0.0516 tower_s=0.1289 tower/mitm=2.50 pre_mitm=0.030 pre_tower=0.015 succ_rand=0.000 planted_all_found=True all_verified=True\n44 p=1.61e+13 s=457 M=52313 adds=104626 mitm_s=0.1986 tower_s=0.7127 tower/mitm=3.59 pre_mitm=0.108 pre_tower=0.067 succ_rand=0.000 planted_all_found=True all_verified=True\n"
+}

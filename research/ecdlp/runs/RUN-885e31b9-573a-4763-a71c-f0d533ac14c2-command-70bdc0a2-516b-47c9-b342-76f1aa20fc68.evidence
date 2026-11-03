@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round17-frontier-h/evaluate2.py",
+    "r1",
+    "s2",
+    "s3"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:47:44.869338Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T13:47:45.047669Z",
+  "truncated": false,
+  "output": "Traceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round17-frontier-h/evaluate2.py\", line 91, in <module>\n    main()\n    ~~~~^^\n  File \"<repo>/research/ecdlp/experiments/round17-frontier-h/evaluate2.py\", line 85, in main\n    d = get(n, pr); a = analyse(d, ctrl, n); a['prog'] = pr; out[n] = a\n                        ~~~~~~~^^^^^^^^^^^^\n  File \"<repo>/research/ecdlp/experiments/round17-frontier-h/evaluate2.py\", line 46, in analyse\n    o, rr, slope, Q = stats(full, fullh)\n                      ~~~~~^^^^^^^^^^^^^\n  File \"<repo>/research/ecdlp/experiments/round17-frontier-h/evaluate2.py\", line 41, in stats\n    xs = [math.log2(r) for r in rh]; ys = [math.log(v) for v in rr]; mx, my = sum(xs) / 4, sum(ys) / 4\n                                           ~~~~~~~~^^^\nValueError: math domain error\n"
+}

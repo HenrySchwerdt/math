@@ -1,0 +1,26 @@
+{
+  "id": "EVT-786d1f6e-d8f0-472b-adf8-4f9f0a590c75",
+  "kind": "task-status-change",
+  "task": "TSK-63e9a1ad-4da3-4b7e-87f9-8d0cc4518f40",
+  "task_key": "ECDLP-58",
+  "timestamp": "2026-11-03T13:36:57.027540Z",
+  "run": "RUN-3ff460e2-d5c9-4264-9bae-473c117a0c3d",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "research-worker"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "m=4 finder task"
+  },
+  "reason": "No surviving sub-sqrt claim; m>=4 finder is the only open index-calculus route",
+  "before_sha256": "b202ea507e8fe9fdc6c30e453de4fd9951074e4b9fbbcc2fcc37961956c716ed",
+  "after_sha256": "472a4ab37a099ff865a9e76e1a6e3cbba319b6b969cf31ade7d5a9b93c94af46"
+}

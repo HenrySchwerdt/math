@@ -1,0 +1,26 @@
+{
+  "id": "HYP-4825a5fb-2d16-437f-9e0b-9b7e47ebcad7",
+  "type": "HYP",
+  "title": "Inventor I: m=4 decomposition test costs >= p^{2/5}, far above the p^{1/10} needed",
+  "created_at": "2026-11-03T13:55:48.543148Z",
+  "status": "completed",
+  "question": "Inventor I (ECDLP-59, m=4 decomposition test vs the p^{1/10} target): negative, no finder reaches T_test < p^{1/10} (pre-registered: beta 95% CI upper < 0.10), so no pipeline was built. 7 sizes (20-44 bits, s=15..457), 3 curves x 20 random + 5 planted targets; all finders decompose 105/105 planted targets (point-verified); MITM and resultant tower agree on every random target. Fits alpha p^beta + gamma: 2+2 hash MITM counted additions beta 0.405 [0.37,0.45] (2/5 by construction), wall time 0.475 [0.44,0.52]; resultant tower / S_3 chaining (python-flint) 0.585 [0.55,0.64]; 3+1 triple-sum table T_test slope 0.203 but precompute 0.595 (total > sqrt p). Groebner (Singular 4.4.1 via passagemath wheel in scratchpad, protocol deviation): m=4 4.3 s at d=6, timeout for d >= 8; m=3 ~d^5.3. Success per target ~ s^4/(24p) (matches within 0-60%, converging by 28 bits). Obstacle: chaining finders must handle s^2/4 pair sums (degree-s^2 polynomial without closed form on the coset base), so T_test >= s^2 = p^{2/5}; j-sum table splits give best total p^{m/(2m-1)} > sqrt p for every m (analytic, unreviewed); base is multiplicative in x while the group law is additive in logs (no character-sum shortcut without logs); Coppersmith-type small-root bound ~p^{1/80} vs p^{1/5} needed (derivation only).",
+  "rationale": "Only index-calculus route left open by the round-17 literature survey and PI derivation.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-ef5a03e5-0583-4a71-bfe8-25040636cd62"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round18-inventor-i/analysis.txt",
+    "research/ecdlp/experiments/round18-inventor-i/PROTOCOL.md",
+    "research/ecdlp/experiments/round18-inventor-i/SHA256SUMS"
+  ],
+  "claims": [
+    "Inventor I (ECDLP-59, m=4 decomposition test vs the p^{1/10} target): negative, no finder reaches T_test < p^{1/10} (pre-registered: beta 95% CI upper < 0.10), so no pipeline was built. 7 sizes (20-44 bits, s=15..457), 3 curves x 20 random + 5 planted targets; all finders decompose 105/105 planted targets (point-verified); MITM and resultant tower agree on every random target. Fits alpha p^beta + gamma: 2+2 hash MITM counted additions beta 0.405 [0.37,0.45] (2/5 by construction), wall time 0.475 [0.44,0.52]; resultant tower / S_3 chaining (python-flint) 0.585 [0.55,0.64]; 3+1 triple-sum table T_test slope 0.203 but precompute 0.595 (total > sqrt p). Groebner (Singular 4.4.1 via passagemath wheel in scratchpad, protocol deviation): m=4 4.3 s at d=6, timeout for d >= 8; m=3 ~d^5.3. Success per target ~ s^4/(24p) (matches within 0-60%, converging by 28 bits). Obstacle: chaining finders must handle s^2/4 pair sums (degree-s^2 polynomial without closed form on the coset base), so T_test >= s^2 = p^{2/5}; j-sum table splits give best total p^{m/(2m-1)} > sqrt p for every m (analytic, unreviewed); base is multiplicative in x while the group law is additive in logs (no character-sum shortcut without logs); Coppersmith-type small-root bound ~p^{1/80} vs p^{1/5} needed (derivation only)."
+  ],
+  "proof_status": "experimental",
+  "outcome": "refuted",
+  "next_action": "Index calculus closed for m=2,3,4 on generic prime-order prime-field curves at toy scale. p^{m/(2m-1)} table bound needs review before any general claim.",
+  "notes": "PI re-ran analyze.py via exec: its output is contained verbatim in analysis.txt (which also holds analyze_extra/analyze_lambda output). PROTOCOL.md hash verifies. Singular installed in scratchpad, not in repo. Groebner data from single curves (no CI). Python toy sizes. No independent review."
+}

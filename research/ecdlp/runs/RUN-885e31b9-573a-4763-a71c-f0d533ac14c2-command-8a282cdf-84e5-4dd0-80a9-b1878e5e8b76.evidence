@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "bash",
+    "research/ecdlp/experiments/round17-frontier-h/run_slice.sh"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:35:56.676873Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T13:38:00.479580Z",
+  "truncated": false,
+  "output": "==> log_r0.txt <==\nr0 {'gen': 119, 'best': 0.6420690340839792, 'best_succ': 1.0, 'median': 0.8156001220588429, 't': 94.7}\nchampion r0 0.6407480236631878 0.95\n\n==> log_r1.txt <==\nr1 {'gen': 119, 'best': 99.0, 'best_succ': 0.0, 'median': 99.006, 't': 98.9}\nchampion r1 3.7142245331463686 0.0\n\n==> log_s2.txt <==\ns2 {'gen': 119, 'best': 0.5187719168497601, 'best_succ': 1.0, 'median': 3.854952836438678, 't': 95.8}\nchampion s2 0.46384896094058264 1.0\n\n==> log_s3.txt <==\ns3 {'gen': 119, 'best': -0.10005050056460899, 'best_succ': 0.8333333333333334, 'median': 99.018, 't': 121.2}\nchampion s3 0.5035244980385944 1.0\n"
+}

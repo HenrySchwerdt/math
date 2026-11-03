@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round17-frontier-h/ic_scaling.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:42:16.634230Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T13:42:23.121418Z",
+  "truncated": false,
+  "output": "10 {'rho_dp': {'cost_over_sqrt_r': 5.514042859421239, 'success': 0.9833333333333333}, 'ic_ms': {'cost_over_sqrt_r': 188.71029619430388, 'success': 0.6333333333333333}}\n11 {'rho_dp': {'cost_over_sqrt_r': 4.513454439056825, 'success': 1.0}, 'ic_ms': {'cost_over_sqrt_r': 127.22077048722194, 'success': 0.95}}\n12 {'rho_dp': {'cost_over_sqrt_r': 3.642841031033011, 'success': 1.0}, 'ic_ms': {'cost_over_sqrt_r': 162.2835158285157, 'success': 0.9}}\n13 {'rho_dp': {'cost_over_sqrt_r': 3.390518694841303, 'success': 0.9833333333333333}, 'ic_ms': {'cost_over_sqrt_r': 179.56376556878405, 'success': 0.8833333333333333}}\n14 {'rho_dp': {'cost_over_sqrt_r': 2.7804266661230272, 'success': 1.0}, 'ic_ms': {'cost_over_sqrt_r': 265.7397037924735, 'success': 0.7333333333333333}}\n"
+}
