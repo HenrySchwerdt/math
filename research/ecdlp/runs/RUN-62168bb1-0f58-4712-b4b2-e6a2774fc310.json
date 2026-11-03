@@ -3,24 +3,71 @@
   "type": "RUN",
   "title": "Round 5 / ECDLP-13: prime-field factor-base frontier \u2014 literature and alternative factor-base definitions",
   "created_at": "2026-11-03T09:47:33.667983Z",
-  "status": "active",
+  "status": "completed",
   "question": "What exactly is proven/conjectured about index calculus on E(F_p), p prime (Semaev 2004, Petit\u2013Kosters\u2013Messeng 2016, Amadori\u2013Pintore\u2013Sala, Huang\u2013Kosters\u2013Yeo, Diem, Galbraith\u2013Gaudry survey), and are there algebraically defined factor bases on prime fields other than small-x (e.g. x in a multiplicative subgroup, images of small-degree maps/isogenies, points with small-height lifts) whose relation yield or decomposition cost can be tested cheaply at toy sizes?",
   "rationale": "Bounded subagent run for TSK-01756ffe-3050-4b36-a549-b0fe8f44e1af",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Semaev, Summation polynomials and the discrete logarithm problem on elliptic curves (ePrint 2004/031)",
+      "url": "https://eprint.iacr.org/2004/031",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract page"
+    },
+    {
+      "title": "Petit, Kosters, Messeng, Algebraic approaches for the ECDLP over prime fields (PKC 2016)",
+      "url": "http://christophe.petit.web.ulb.be/files/16PKC_primeECDLP.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "full text: Sec. 1, 3.1-3.4"
+    },
+    {
+      "title": "Amadori, Pintore, Sala, On the discrete logarithm problem for prime-field elliptic curves (ePrint 2017/609)",
+      "url": "https://eprint.iacr.org/2017/609",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract page"
+    },
+    {
+      "title": "Galbraith, Gaudry, Recent progress on the ECDLP (ePrint 2015/1022)",
+      "url": "https://eprint.iacr.org/2015/1022",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract page"
+    },
+    {
+      "title": "Kosters, Yeo, Notes on summation polynomials (arXiv 1503.08001)",
+      "url": "https://arxiv.org/abs/1503.08001",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract (search result)"
+    },
+    {
+      "title": "Diem, On the discrete logarithm problem in elliptic curves (Compositio 2011)",
+      "url": "https://www.cambridge.org/core/journals/compositio-mathematica/article/on-the-discrete-logarithm-problem-in-elliptic-curves/59B877810708C90F6287972486A5BF0C",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract/search snippet"
+    },
+    {
+      "title": "Hu, Implementation analysis of index calculus method on elliptic curves over prime finite fields (ePrint 2024/1923, unrefereed)",
+      "url": "https://eprint.iacr.org/2024/1923",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract page"
+    }
+  ],
   "refs": [
     "TSK-01756ffe-3050-4b36-a549-b0fe8f44e1af",
     "HYP-db508348-69da-451b-ba37-d4d4f472c121"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Literature (verified at abstract level; PKM full text read): no proven or established sub-sqrt(p) prime-field ECDLP index calculus; PKM 2016 factor bases (coset of smooth-order subgroup of F_p^*, or isogeny-coset on auxiliary curve) are already the 'x in multiplicative subgroup' proposal; complexity open (Groebner step not analysable).",
+    "Experimental (toy, m=2, p<=2^18, 24 curves, seed 20261103): sum-set coverage and additive energy of x in aH, x=t^2, x=1/t equal those of small-x and random sets of equal size within ~1% at 2^18; no coset concentration of sums.",
+    "Experimental: scanning decomposition of random R costs ~34 n field multiplications at 2^18 (linear in n=|V|); no sub-scan decomposition method found; this does not prove none exists."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "outcome": "verified",
+  "next_action": "PI: decide whether to run a PKM-style resultant/Groebner experiment (m=3, smooth h, p~2^20) measuring T and a Coppersmith-style small-root test for F3; review literature claims marked unverified (HKY content, Momonari-Kudo, McGuire-Mueller).",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. | Self-reported model identity: Sonnet 5.5 (claude-sonnet-5-5), discovery role. Unverified items: Huang-Kosters-Yeo contents, Momonari-Kudo 2018, McGuire-Mueller 2017/1262 details, Coppersmith bounds, Semaev symmetrized polynomials. Experiment files: research/ecdlp/experiments/round5-fb/. Toy runs executed by agent via direct python3 invocation (not scripts/research.py exec). | PI reproduced round5.py in isolation via research.py exec; results identical excluding timing.",
   "run": {
     "started_at": "2026-11-03T09:47:55.527662Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T09:53:53.701670Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "discovery",
@@ -32,8 +79,10 @@
     "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #2 head)",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round5-fb/"
+    ],
+    "resulting_commit": "dba68ffdcf012f93e2b4a4da920a89cd24ed078f",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",

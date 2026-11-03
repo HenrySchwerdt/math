@@ -3,24 +3,82 @@
   "type": "RUN",
   "title": "Round 5 / ECDLP-15: cover-based transfers \u2014 genus/dimension trade-off (high-risk)",
   "created_at": "2026-11-03T09:47:33.825341Z",
-  "status": "active",
+  "status": "completed",
   "question": "For E/F_p (p prime) and covers pi: C -> E of genus g with efficiently computable pullback pi^*: E(F_p) -> J_C(F_p), is there any regime of g (as a function of log p) where known Jacobian index-calculus complexities (Gaudry, Gaudry\u2013Thom\u00e9\u2013Th\u00e9riault\u2013Diem, Enge\u2013Gaudry, Diem) applied to J_C beat sqrt(p)? Make the regime analysis rigorous from the published complexity statements (with exact hypotheses), and identify the precise missing ingredient; test the smallest case numerically if feasible.",
   "rationale": "Bounded subagent run for TSK-70af651a-696e-4564-8c53-85dd0320a211",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Diem, Index calculus with double large prime variation for curves of small genus with cyclic class group",
+      "url": "https://arxiv.org/abs/math/0606607",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Abstract, Theorem: fixed g>=2, O~(q^{2-2/g}), plane model bounded degree, cyclic/known structure"
+    },
+    {
+      "title": "Diem, On the discrete logarithm problem for plane curves, JTNB 24 (2012)",
+      "url": "https://www.numdam.org/articles/10.5802/jtnb.815/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Abstract: d>=4, O~(q^{2-2/(d-2)}), line splitting into distinct rational points"
+    },
+    {
+      "title": "Diem, On the discrete logarithm problem in class groups of curves, Math. Comp. 80 (2011)",
+      "url": "https://www.ams.org/mcom/2011-80-273/S0025-5718-2010-02281-1/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Abstract (via search summary): fixed g>=2; E over F_{q^n} exponent unverified"
+    },
+    {
+      "title": "Enge-Gaudry-Thome, An L(1/3) discrete logarithm algorithm for low degree curves, J. Cryptology 24 (2011)",
+      "url": "https://arxiv.org/abs/0905.2177",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Abstract and Introduction: g>=(log q)^2, heuristic L(1/3), summary of L(1/2) results"
+    },
+    {
+      "title": "Gaudry-Thome-Theriault-Diem, A double large prime variation for small genus hyperelliptic index calculus, Math. Comp. 76 (2007)",
+      "url": "https://eprint.iacr.org/2004/153",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Abstract; exponent verified only via Diem's introduction"
+    },
+    {
+      "title": "Enge-Gaudry, A general framework for subexponential discrete logarithm algorithms, Acta Arith. 102 (2002)",
+      "url": "https://doi.org/10.4064/aa102-1-6",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Bibliographic data only; regime g>=delta log q is unverified recollection"
+    },
+    {
+      "title": "Gaudry, Index calculus for abelian varieties and the ECDLP (JSC 2009)",
+      "url": "https://eprint.iacr.org/2004/073",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Abstract: E over GF(q^3) in O(q^{10/7})"
+    },
+    {
+      "title": "Gaudry-Hess-Smart, Constructive and destructive facets of Weil descent on elliptic curves, J. Cryptology 15 (2002)",
+      "url": "https://research-information.bris.ac.uk/en/publications/constructive-and-destructive-facets-of-weil-descent-on-elliptic-c/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Abstract: composite-degree extension fields only"
+    }
+  ],
   "refs": [
     "TSK-70af651a-696e-4564-8c53-85dd0320a211",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
-  "evidence": [],
-  "claims": [],
+  "evidence": [
+    "research/ecdlp/runs/RUN-6a3e20d9-107a-4bd6-9763-79da760c2fd5-command-905ca631-34f2-4f47-b6f9-adaeed237823.evidence"
+  ],
+  "claims": [
+    "Proposition A (proved from cited statements): for fixed g>=2 or fixed plane degree d>=4 the cited index-calculus bounds on J_C(F_p) have exponent >=1 in q=p, hence exceed sqrt(p) for large p; no fixed-genus cover beats rho in the order-r subgroup.",
+    "Proposition B (proved from cited regimes; S6 regime is unverified recollection, S7 is heuristic): for g>=delta*log q the L_{q^g}(1/2,c) cost exceeds sqrt(q) for all large q; for g>=(log q)^2 the L_{q^g}(1/3,c) cost exceeds sqrt(q) for large q.",
+    "Proposition C (heuristic, derived): generic degree-1 factor-base index calculus on a genus-g Jacobian costs >= about q/20 for 1<=g<=sqrt(q), so the L-formulas are not applicable below their validity regimes.",
+    "Lemma D (elementary): pull-back relations pi^*(P)=sum of fibre places have disjoint supports over distinct P and determine no individual factor-base logarithm; toy numerics show the relation/unknown ratio is about 1/d.",
+    "Prime fields have no Weil descent; the GHS/Gaudry/Diem gains for E/F_{q^n} (n>=2) come from the smaller base field and do not transfer. Cover E x_{P^1} P^1 by t->t^d has genus (3d-1)/2 (d odd) or (3d-2)/2 (d even); generic h gives 2d-1.",
+    "Missing ingredient: a structure-adapted factor base of size <=p^{1/2-eps} with fast decomposition of elements of pi^*(E(F_p)) in J_C; none known."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "outcome": "verified",
+  "next_action": "PI to review Propositions A-C and the unverified items (Gaudry 2000 exponent, Enge-Gaudry regime). Optional T2: run genus-2 index calculus on J_C = E x E_2 for p~2^20 to confirm cost >= p vs rho 2^10 on E. Close this direction unless a structure-adapted factor base (4.2 item II-III) is proposed.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. | Self-reported model identity: Claude Sonnet 5.5 (claude-sonnet-5-5), algebraic-geometry role. Web lookups: 20 (cap). Unverified recollections (no retrievable text): Gaudry 2000 exponent O~(q^2); Enge-Gaudry/Enge regime g>=delta*log q; Diem 2011 and Gaudry 2009 exponent 2-2/n for E/F_{q^n}. No-URL items: none. Exec evidence: RUN-6a3e20d9-107a-4bd6-9763-79da760c2fd5-command-905ca631-34f2-4f47-b6f9-adaeed237823.evidence. Files: research/ecdlp/experiments/round5-cover/cover_toy.py | PI reproduced numerics via research.py exec; outputs identical.",
   "run": {
     "started_at": "2026-11-03T09:47:55.527662Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T09:56:02.160334Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "algebraic-geometry",
@@ -31,9 +89,13 @@
     "starting_commit": "b7ade5646f7146a04bf46f0e461033573e465a7e",
     "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #2 head)",
     "worktree": "shared checkout; exclusive ownership of listed files",
-    "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "commands": [
+      "research/ecdlp/runs/RUN-6a3e20d9-107a-4bd6-9763-79da760c2fd5-command-905ca631-34f2-4f47-b6f9-adaeed237823.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/experiments/round5-cover/"
+    ],
+    "resulting_commit": "d8d43a8e59cf4347a2bac6e23bd9739fa941f488",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",

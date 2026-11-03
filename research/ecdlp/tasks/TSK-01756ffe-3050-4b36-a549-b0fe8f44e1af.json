@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 5 / ECDLP-13: prime-field factor-base frontier \u2014 literature and alternative factor-base definitions",
   "created_at": "2026-11-03T09:47:33.630156Z",
-  "status": "active",
+  "status": "completed",
   "question": "What exactly is proven/conjectured about index calculus on E(F_p), p prime (Semaev 2004, Petit\u2013Kosters\u2013Messeng 2016, Amadori\u2013Pintore\u2013Sala, Huang\u2013Kosters\u2013Yeo, Diem, Galbraith\u2013Gaudry survey), and are there algebraically defined factor bases on prime fields other than small-x (e.g. x in a multiplicative subgroup, images of small-degree maps/isogenies, points with small-height lifts) whose relation yield or decomposition cost can be tested cheaply at toy sizes?",
   "rationale": "Round-5 selection by PI from BACKLOG priorities 1, 5 and 3 (high-risk).",
   "assumptions": [],
@@ -12,12 +12,13 @@
     "HYP-db508348-69da-451b-ba37-d4d4f472c121"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-1f27e0ec-b496-4ce1-a048-7aa009af6c4c.evidence"
+    "research/ecdlp/events/EVT-1f27e0ec-b496-4ce1-a048-7aa009af6c4c.evidence",
+    "research/ecdlp/events/EVT-00eb582e-eebf-46d3-8893-5952442f469f.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute bounded round-5 run.",
+  "outcome": "verified",
+  "next_action": "Measure relation-finding cost for PKM-type systems at m=3",
   "notes": "Created by PI RUN-62dbda7c. Started on a local branch while PR #2 CI runs (user instruction).",
   "success_criteria": [
     "Exact statements; verified sources or explicit unverified marks; reproducible evidence; speculative proposals give property, mechanism, obligations, invalidators, cheapest test, relevant results."

@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 5 / ECDLP-14: well-posed intermediate targets with attached lower bounds",
   "created_at": "2026-11-03T09:47:33.704457Z",
-  "status": "active",
+  "status": "completed",
   "question": "Formulate precise intermediate targets between the known Theta(sqrt r) generic bound and the O(n log n) universal target (exact models: generic/black-box group ops, algebraic straight-line programs over F_q, multitape TM bit complexity; worst-case vs average; with/without preprocessing; restricted families), and for each state the best known lower and upper bounds with verified sources, identifying which targets are (a) known impossible in their model, (b) open, (c) cheaply falsifiable.",
   "rationale": "Round-5 selection by PI from BACKLOG priorities 1, 5 and 3 (high-risk).",
   "assumptions": [],
@@ -13,12 +13,13 @@
     "HYP-57d71f43-70ad-45f9-a8d3-6f095fd8d5f3"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-e9a2caef-437b-47b7-88d1-c39664018b13.evidence"
+    "research/ecdlp/events/EVT-e9a2caef-437b-47b7-88d1-c39664018b13.evidence",
+    "research/ecdlp/events/EVT-bf912f85-7d33-4e08-b00f-6b54f8002dd4.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute bounded round-5 run.",
+  "outcome": "verified",
+  "next_action": "Independent review and Lean formalization of Theorem B / A",
   "notes": "Created by PI RUN-62dbda7c. Started on a local branch while PR #2 CI runs (user instruction).",
   "success_criteria": [
     "Exact statements; verified sources or explicit unverified marks; reproducible evidence; speculative proposals give property, mechanism, obligations, invalidators, cheapest test, relevant results."

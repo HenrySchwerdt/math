@@ -12,11 +12,15 @@
     "Do not assume a polynomial-time or near-linear algorithm exists."
   ],
   "sources": [],
-  "refs": [],
+  "refs": [
+    "HYP-5a550ab6-75ad-4e6b-a08c-af2a066c69c7",
+    "HYP-ad5bc0e3-30cc-4eb8-b823-4df42edd44a6",
+    "RUN-e7c9feff-7a06-449b-8625-a5a70f90803d"
+  ],
   "evidence": [],
   "claims": [],
   "proof_status": "unproved",
   "outcome": "unresolved",
   "next_action": "Specify the exact ECDLP input/output promise, field encoding, subgroup assumptions and bit/memory model before proposing general bounds.",
-  "notes": "Goal only. No theorem, algorithm, experimental support or independent validation established."
+  "notes": "Goal only. No theorem, algorithm, experimental support or independent validation established. | ECDLP-14: output convention must be fixed: \"any k with kP = Q\" vs \"least k in [0, ord P)\" differ in edge cases (e.g. Q = -P gives ord(P) - 1; least-positive conventions can yield ord(P) for Q = O). Lean Basic.lean uses existence of a solution and canonical k < addOrderOf P. Restricted-model barrier: algebraic SLPs over F_q need Omega(log N) field ops (HYP-5a550ab6, proof attempt)."
 }

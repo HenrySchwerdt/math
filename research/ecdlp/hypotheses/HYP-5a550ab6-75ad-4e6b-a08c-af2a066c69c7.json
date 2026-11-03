@@ -1,0 +1,26 @@
+{
+  "id": "HYP-5a550ab6-75ad-4e6b-a08c-af2a066c69c7",
+  "type": "HYP",
+  "title": "Interpolation and algebraic-SLP lower bounds for the EC discrete-log map (Theorems A, A')",
+  "created_at": "2026-11-03T09:55:25.111068Z",
+  "status": "open",
+  "question": "Theorem A: Let E/F_p (short Weierstrass), P of order r with r != p, 2 <= N <= r-1. If a rational function f on E satisfies f(kP) = k mod p for 1 <= k <= N, then f has pole order (divisor degree) >= (N-1)/2; if f is a polynomial in X, Y then its total degree is >= (N-1)/6. Proof: h(Q) = f(Q+P) - f(Q) - 1 vanishes at kP, 1<=k<=N-1; h != 0 since otherwise iterating r times gives r = 0 in F_p; pole order of h <= 2 * pole order of f. Theorem A': any straight-line program over F_q using +, -, *, / on the coordinates of Q and constants that computes k mod p for all Q = kP, 1<=k<=N, has length >= log2((N-1)/12); charging >= c log q bit operations per field operation gives Omega(n^2) bit cost in this algebraic model (no comparisons/bit extraction).",
+  "rationale": "Registered by PI from round-5 runs after PI reproduction of numerics.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-e7c9feff-7a06-449b-8625-a5a70f90803d",
+    "TSK-2d4e5fc7-9e3b-4c7f-bdec-3e37eabcba98",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round5-ct/out_ec_dl_interp_degree.txt"
+  ],
+  "claims": [
+    "Theorem A: Let E/F_p (short Weierstrass), P of order r with r != p, 2 <= N <= r-1. If a rational function f on E satisfies f(kP) = k mod p for 1 <= k <= N, then f has pole order (divisor degree) >= (N-1)/2; if f is a polynomial in X, Y then its total degree is >= (N-1)/6. Proof: h(Q) = f(Q+P) - f(Q) - 1 vanishes at kP, 1<=k<=N-1; h != 0 since otherwise iterating r times gives r = 0 in F_p; pole order of h <= 2 * pole order of f. Theorem A': any straight-line program over F_q using +, -, *, / on the coordinates of Q and constants that computes k mod p for all Q = kP, 1<=k<=N, has length >= log2((N-1)/12); charging >= c log q bit operations per field operation gives Omega(n^2) bit cost in this algebraic model (no comparisons/bit extraction)."
+  ],
+  "proof_status": "proof-attempt",
+  "outcome": "unresolved",
+  "next_action": "Independent review of A/A' proofs; literature retrieval of Lange\u2013Winterhof (EC DL interpolation) to settle novelty; Lean formalization of the translation argument is feasible (rational functions on W.Point is hard in Mathlib; consider stating via the function field).",
+  "notes": "Agent proof attempt; PI checked the core of A (translation argument). Likely overlaps Lange\u2013Winterhof / Satoh (statements not retrieved): novelty NOT claimed. Toy check: minimal pole order exactly r on 40 curves. A' is a restricted-model statement only."
+}

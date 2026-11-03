@@ -12,13 +12,20 @@ Task keys via `research/ecdlp/TASKS.json`; status via `scripts/research.py task`
 - ECDLP-10 — Lean SLP/trace bounds (PRF-613be647; REV-0971d96d accept).
 - ECDLP-11 — geometric mechanism (Prym / E[2]-Heisenberg).  ECDLP-12 — prime-field factor bases.
 
+- ECDLP-13 — factor-base frontier (PKM 2016 precedence; no m=2 advantage).
+- ECDLP-14 — intermediate-target ladder; Theorems A/A′/B (proof attempts).
+- ECDLP-15 — cover-transfer regime analysis (negative, with missing ingredient).
+
 ## Active
 - ECDLP-1 — umbrella vertical slice (lifecycle executed; SQLite/event memory, blind-packet
   tooling, C17 harness not implemented — deferred per user priority on research).
 
 ## Next candidates (prioritized by significance × falsifiability ÷ cost)
-1. Prime-field factor bases (HYP-db508348): extend whatever ECDLP-12 finds; literature check of
-   Semaev/Petit–Kosters–Messeng prime-field results (sources not yet verified).
+1. Relation-system solving cost for PKM-type factor bases at m = 3 (own resultant/Gröbner code
+   at toy p) vs p^{1/2−1/m} — the single quantity that decides prime-field index calculus.
+1b. Independent review + Lean formalization of Theorem B (HYP-eda6732a) and Theorem A
+   (HYP-5a550ab6); retrieve Lange–Winterhof to settle novelty.
+1c. Genus-2 cover index-calculus decisive test T2 (HYP-ad5bc0e3).
 2. Formal/proof: HYP-4bd8d89a sharper trace bound; HYP-f85d20a1 lift uniformity; reviewed proof of
    |Y| ≤ 2 for g = x and the E[2] reduction for g = y (HYP-80158648).
 3. Cover-based transfers (B8 genus/dimension trade-off): make the heuristic regime analysis rigorous.

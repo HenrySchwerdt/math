@@ -1,0 +1,26 @@
+{
+  "id": "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+  "type": "HYP",
+  "title": "x-only polynomial lower bound for k^2 (Theorem B)",
+  "created_at": "2026-11-03T09:55:25.157445Z",
+  "status": "open",
+  "question": "Theorem B: Let E/F_p short Weierstrass, P of prime order r. If g in F_p[X] satisfies g(x(kP)) = k^2 mod p for 1 <= k <= (r-1)/2, then deg g >= (r-5)/6.",
+  "rationale": "Registered by PI from round-5 runs after PI reproduction of numerics.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-e7c9feff-7a06-449b-8625-a5a70f90803d",
+    "TSK-2d4e5fc7-9e3b-4c7f-bdec-3e37eabcba98",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round5-ct/out_check_theorem_b_identity.txt"
+  ],
+  "claims": [
+    "Theorem B: Let E/F_p short Weierstrass, P of prime order r. If g in F_p[X] satisfies g(x(kP)) = k^2 mod p for 1 <= k <= (r-1)/2, then deg g >= (r-5)/6."
+  ],
+  "proof_status": "proof-attempt",
+  "outcome": "unresolved",
+  "next_action": "Independent review; Lean formalization (polynomial-level statement).",
+  "notes": "Agent proof via polynomial algebra and addition formulas (k^2 is the natural x-only invariant since x(kP)=x(-kP)); identity checked 2519 times, 0 failures. Possibly duplicates Lange\u2013Winterhof; novelty not claimed. Lean candidate."
+}

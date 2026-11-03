@@ -53,6 +53,19 @@ Reproducible experimental findings (toy sizes, two seeds + PI bit-identical reru
   E[2]-Heisenberg reduction gives an effective rank 2 (derivation sketch, unproved step).
   Equidistribution as p → ∞ remains conjectural.
 
+Round 5 (package 2; proof attempts and negative results, unreviewed unless stated):
+- Restricted-model lower bounds (HYP-5a550ab6, HYP-eda6732a; proof attempts, PI checked the
+  core argument of A; novelty vs Lange–Winterhof unchecked): any rational function f on E with
+  f(kP) = k mod p for k ≤ N has pole order ≥ (N−1)/2; algebraic straight-line programs over F_q
+  computing k need ≥ log₂((N−1)/12) field operations; x-only polynomial for k² has degree ≥ (r−5)/6.
+- Cover transfers (HYP-ad5bc0e3): with known Jacobian index-calculus algorithms no genus regime
+  beats √p for prime-field E (fixed-g part proved from cited theorems; large-g part conditional;
+  intermediate regime heuristic). Missing ingredient: a √p-small factor base adapted to π*E(F_p).
+- Prime-field factor bases (HYP-db508348): Petit–Kosters–Messeng 2016 already proposes
+  structured (multiplicative-coset, isogeny-coset) bases; at m = 2 they give no yield advantage
+  on toy curves; the open quantity is the relation-system solving cost at m ≥ 3.
+- Target statement needs a fixed output convention (least k vs any k) — noted on HYP-2de84d42.
+
 Barrier context (literature-level, agents' reports RUN-9eae1ad9, RUN-fec2442f, RUN-b0ccd1bd):
 O(n log n) is below the best-known cost O(n² log n) of verifying a candidate by scalar
 multiplication (not a lower bound). Generic bounds (Shoup/Maurer/Nechaev) constrain only

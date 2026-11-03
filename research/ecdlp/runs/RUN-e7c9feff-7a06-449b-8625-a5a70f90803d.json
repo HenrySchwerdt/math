@@ -3,25 +3,104 @@
   "type": "RUN",
   "title": "Round 5 / ECDLP-14: well-posed intermediate targets with attached lower bounds",
   "created_at": "2026-11-03T09:47:33.748808Z",
-  "status": "active",
+  "status": "completed",
   "question": "Formulate precise intermediate targets between the known Theta(sqrt r) generic bound and the O(n log n) universal target (exact models: generic/black-box group ops, algebraic straight-line programs over F_q, multitape TM bit complexity; worst-case vs average; with/without preprocessing; restricted families), and for each state the best known lower and upper bounds with verified sources, identifying which targets are (a) known impossible in their model, (b) open, (c) cheaply falsifiable.",
   "rationale": "Bounded subagent run for TSK-2d4e5fc7-9e3b-4c7f-bdec-3e37eabcba98",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Shoup, Lower bounds for discrete logarithms and related problems (EUROCRYPT 1997)",
+      "url": "https://www.doi.org/10.1007/3-540-69053-0_18",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract; success prob <= T^2/N restated in arXiv 2505.00894"
+    },
+    {
+      "title": "Maurer, Abstract Models of Computation in Cryptography (2005)",
+      "url": "https://link.springer.com/chapter/10.1007/11586821_1",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract only"
+    },
+    {
+      "title": "Corrigan-Gibbs, Kogan, The Discrete-Logarithm Problem with Preprocessing (EUROCRYPT 2018)",
+      "url": "https://eprint.iacr.org/2017/1113",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract: S T^2 = Omega~(eps N), tight up to logs"
+    },
+    {
+      "title": "Bernstein, Lange, Non-uniform cracks in the concrete (ASIACRYPT 2013)",
+      "url": "https://eprint.iacr.org/2012/318",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract"
+    },
+    {
+      "title": "Bernstein, Lange, Computing small discrete logarithms faster (INDOCRYPT 2012)",
+      "url": "https://eprint.iacr.org/2012/458",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract: 1.77 l^(1/3) online, 1.24 l^(2/3) precomp (summary)"
+    },
+    {
+      "title": "Coppersmith, Shparlinski, On polynomial approximation of the discrete logarithm and the Diffie-Hellman mapping (J. Cryptology 13, 2000)",
+      "url": "https://research.ibm.com/publications/on-polynomial-approximation-of-the-discrete-logarithm-and-the-diffie-hellman-mapping-don-coppersmith",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "IBM abstract record; sqrt(2Dp) bound via Kopparty et al."
+    },
+    {
+      "title": "Kopparty, Kothary, Shankar, Bounds on polynomial approximations of the discrete logarithm function (ePrint 2026/2621)",
+      "url": "https://eprint.iacr.org/2026/2621",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract page; unrefereed"
+    },
+    {
+      "title": "Lange, Winterhof, Interpolation of the elliptic-curve Diffie-Hellman mapping (AAECC 2003); COCOON 2002 paper listed on publications page",
+      "url": "https://research.tue.nl/en/publications/interpolation-of-the-elliptic-curve-diffie-hellman-mapping/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "bibliographic only; theorem statements not seen"
+    },
+    {
+      "title": "Tanja Lange publications (Lange-Winterhof COCOON 2002 LNCS 2387 pp 137-143)",
+      "url": "https://www.hyperelliptic.org/tanja/publications.html",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "bibliographic entry"
+    },
+    {
+      "title": "Gaudry, Hess, Smart, Constructive and destructive facets of Weil descent on elliptic curves (J. Cryptology 15, 2002)",
+      "url": "https://research-information.bris.ac.uk/en/publications/constructive-and-destructive-facets-of-weil-descent-on-elliptic-c/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "record"
+    },
+    {
+      "title": "Semaev, New algorithm for the discrete logarithm problem on elliptic curves (arXiv 1504.01175)",
+      "url": "https://ar5iv.arxiv.org/html/1504.01175",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "search listing; mentions anomalous/supersingular easy cases"
+    },
+    {
+      "title": "MOV attack notes (Menezes-Okamoto-Vanstone 1993; Frey-Ruck 1994) secondary",
+      "url": "https://crypto.stanford.edu/pbc/notes/elliptic/movattack.html",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "secondary summary only"
+    }
+  ],
   "refs": [
     "TSK-2d4e5fc7-9e3b-4c7f-bdec-3e37eabcba98",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
     "HYP-57d71f43-70ad-45f9-a8d3-6f095fd8d5f3"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Ladder T1..T6 of intermediate ECDLP targets with exact models; T1 (Shoup/Maurer generic) and T2 (S T^2 = Omega~(eps N), Corrigan-Gibbs-Kogan) known in their models; T4, T5, restricted-family T6 for prime fields with large embedding degree open. Status: unproved/literature survey; sources partly secondary.",
+    "Proof attempt (unreviewed, unformalized): Theorem A: f in F_q[X,Y] with f(kP)=k for 1<=k<=N<=r-1 has pole order >= (N-1)/2 and total degree >= (N-1)/6; rational version A' gives SLP length >= log2((N-1)/12). Likely duplicates Lange-Winterhof/Satoh (statements not seen).",
+    "Proof attempt, Lean candidate: Theorem B: g in F_p[X] with g(x(kP))=k^2 mod p for 1<=k<=(r-1)/2 has degree >= (r-5)/6 (elementary, no divisors).",
+    "Experimental (finite): 40 toy curves p<=109: minimal interpolation pole order = r and x-only minimal degree = (r-3)/2; 2519 identity checks for Theorem B with 0 failures. Supports only the tested domain.",
+    "O(n log n) target is below the double-and-add verification cost O(n^2 log n); algebraic F_q-SLPs computing k mod p need Omega(n) ops, Omega(n^2) bit ops under per-op charging Omega(log q) (model assumption)."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "outcome": "verified",
+  "next_action": "PI to assign independent review of Theorems A, A', B (research/ecdlp/runs report); Lean-formalize Theorem B; retrieve Lange-Winterhof and Satoh primary texts to resolve duplication; fix output convention (R) vs (M) in HYP-2de84d42.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. | Self-reported model identity at runtime: Claude Sonnet 5.5 (claude-sonnet-5-5); not independently verifiable. Unverified recollections (no URL): Nechaev 1994 deterministic generic bound; Mihalcik NPS thesis 2010; Shparlinski 1999 book; Schoof/SEA; Shor and Proos-Zalka; Harvey-van der Hoeven 2021 M(n)=O(n log n); Gaudry 2009 and Diem 2011 index calculus; NFS L(1/3); Smart/Semaev/Satoh-Araki venues. 18 of 20 lookups used; no primary full texts read. Experiments: research/ecdlp/experiments/round5-ct/ (ec_dl_interp_degree.py, check_theorem_b_identity.py and out_*.txt). Report: runs/RUN-e7c9feff-...md. | PI reproduced numerics via research.py exec; outputs identical.",
   "run": {
     "started_at": "2026-11-03T09:47:55.527662Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T09:56:02.160334Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "complexity-theory",
@@ -34,8 +113,10 @@
     "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #2 head)",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round5-ct/"
+    ],
+    "resulting_commit": "d8d43a8e59cf4347a2bac6e23bd9739fa941f488",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",

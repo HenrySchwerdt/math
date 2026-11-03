@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round5-ct/ec_dl_interp_degree.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:55:18.481138Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:55:21.204613Z",
+  "truncated": false,
+  "output": "p a b | N=#E r | m*_A bound(r-2)/2 ok | D*_B bound(r-1)/8 ok\n79 43 8 | 76 19 | 19 8.5 True | 8 2.25 True \n109 26 10 | 91 13 | 13 5.5 True | 5 1.5 True \n73 1 23 | 58 29 | 29 13.5 True | 13 3.5 True \n53 2 16 | 44 11 | 11 4.5 True | 3 1.25 True \n71 66 33 | 66 11 | 11 4.5 True | 4 1.25 True \n79 24 39 | 82 41 | 41 19.5 True | 19 5.0 True \n109 52 45 | 106 53 | 53 25.5 True | 25 6.5 True \n29 17 14 | 35 7 | 7 2.5 True | 2 0.75 True \n103 18 98 | 116 29 | 29 13.5 True | 13 3.5 True \n61 21 28 | 58 29 | 29 13.5 True | 13 3.5 True \n89 51 33 | 78 13 | 13 5.5 True | 5 1.5 True \n109 44 67 | 99 11 | 11 4.5 True | 4 1.25 True \n103 96 22 | 117 13 | 13 5.5 True | 5 1.5 True \n53 19 13 | 59 59 | 59 28.5 True | 28 7.25 True  r>p\n83 38 26 | 98 7 | 7 2.5 True | 2 0.75 True \n53 31 32 | 46 23 | 23 10.5 True | 10 2.75 True \n107 85 94 | 93 31 | 31 14.5 True | 14 3.75 True \n67 7 50 | 65 13 | 13 5.5 True | 5 1.5 True \n83 72 3 | 78 13 | 13 5.5 True | 5 1.5 True \n97 35 34 | 105 7 | 7 2.5 True | 2 0.75 True \n43 41 29 | 42 7 | 7 2.5 True | 2 0.75 True \n109 48 28 | 92 23 | 23 10.5 True | 10 2.75 True \n97 30 8 | 110 11 | 11 4.5 True | 4 1.25 True \n71 54 44 | 67 67 | 67 32.5 True | 32 8.25 True \n89 16 76 | 87 29 | 29 13.5 True | 13 3.5 True \n89 39 48 | 95 19 | 19 8.5 True | 8 2.25 True \n59 9 25 | 70 7 | 7 2.5 True | 2 0.75 True \n59 36 30 | 69 23 | 23 10.5 True | 10 2.75 True \n103 52 26 | 103 103 | 103 50.5 True | 50 12.75 True  ANOMALOUS(r=p)\n71 57 20 | 70 7 | 7 2.5 True | 2 0.75 True \n53 14 18 | 56 7 | 7 2.5 True | 2 0.75 True \n109 83 99 | 102 17 | 17 7.5 True | 7 2.0 True \n89 73 87 | 84 7 | 7 2.5 True | 2 0.75 True \n107 20 92 | 102 17 | 17 7.5 True | 7 2.0 True \n109 24 81 | 98 7 | 7 2.5 True | 2 0.75 True \n73 27 53 | 82 41 | 41 19.5 True | 19 5.0 True \n73 59 71 | 63 7 | 7 2.5 True | 2 0.75 True \n101 99 56 | 110 11 | 11 4.5 True | 4 1.25 True \n101 67 89 | 102 17 | 17 7.5 True | 7 2.0 True \n101 65 68 | 112 7 | 7 2.5 True | 2 0.75 True \n"
+}
