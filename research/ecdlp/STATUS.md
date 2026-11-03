@@ -177,6 +177,12 @@ Rounds 17–18 (package 13):
   under a corrected fitness finds only rho/BSGS variants; a hand index-calculus program in the DSL
   loses to rho by a growing factor (34 → 96).
 
+Round 19 (package 14):
+- Frontier I (ECDLP-60): Mahalanobis–Mallick Problem L is exactly a zero-sum-subset search
+  (verified on 50,488 subsets), Las Vegas cost ~2.4 r; weaknesses (order, trace, embedding degree,
+  anomalous) are isogeny-invariant (380 Vélu steps), j=0/1728 reachable only for a ~2.5/√p fraction
+  with at most a √6 gain. All routes named by the 2015–2026 literature survey are now tested.
+
 ## Next
 
 Every generic-model route tested reproduces √r. Remaining levers are non-generic structure
