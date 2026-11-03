@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round11-cstar && python3 cusp_modp.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:41:21.038215Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:41:32.497854Z",
+  "truncated": false,
+  "output": "pairs (p,N), 3<=N<=(p-1)/2, p<400: 6751  with c_{N-1}(0)=0 mod p (target k): 33\nfraction 0.004888164716338321  (random model sum 1/p ~ 0.005174995114394485 )\nbad pairs with N<=12: [(11, 3), (19, 6), (31, 10), (151, 4)]\nbad pairs with N=(p-1)/2: []\ntarget k^2: c_j(0) != 0 mod p for all j < N, all pairs: True (asserted)\n"
+}

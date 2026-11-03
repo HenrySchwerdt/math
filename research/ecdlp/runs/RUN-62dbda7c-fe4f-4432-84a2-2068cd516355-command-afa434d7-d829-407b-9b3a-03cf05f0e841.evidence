@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round11-cstar && python3 divpoly_check.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:42:39.169305Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:42:39.201565Z",
+  "truncated": false,
+  "output": "identities (i),(ii) checked: 1080 assertions OK\ncusp psi_m(x=y=1) == m (mod p) for m<=20: True\nN 2 weight 6 deg<= 3 N^4/3 = 5\nN 3 weight 46 deg<= 23 N^4/3 = 27\nN 4 weight 162 deg<= 81 N^4/3 = 85\nN 8 weight 2786 deg<= 1393 N^4/3 = 1365\nN 16 weight 44610 deg<= 22305 N^4/3 = 21845\nN 100 weight 66983202 deg<= 33491601 N^4/3 = 33333333\n"
+}

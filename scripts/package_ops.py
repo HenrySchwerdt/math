@@ -90,7 +90,7 @@ def snapshot(message, push=True, paths=('research',)):
     _git('add', '-A', *paths)
     if not _git('diff', '--cached', '--name-only'):
         return None
-    trailer = os.environ.get('RESEARCH_COMMIT_TRAILER', '').replace('\\n', '\n')
+    trailer = _trailer()
     body = f'WIP snapshot: {message}\n\nUnreviewed in-progress work; superseded when the owning runs finish.'
     _git('commit', '-q', '-m', body + (f'\n\n{trailer}' if trailer else ''))
     head = _git('rev-parse', '--short', 'HEAD')
@@ -103,5 +103,11 @@ def snapshot(message, push=True, paths=('research',)):
 def sync(base_branch='main'):
     """Fetch and merge the base branch into the current branch (merge commit, never rebase)."""
     _git('fetch', '-q', 'origin', base_branch)
-    _git('merge', '-q', '--no-edit', f'origin/{base_branch}')
+    msg = f"Merge origin/{base_branch} into {_git('rev-parse', '--abbrev-ref', 'HEAD')}"
+    trailer = _trailer()
+    _git('merge', '-q', '--no-edit', '-m', msg + (f'\n\n{trailer}' if trailer else ''), f'origin/{base_branch}')
     return _git('rev-parse', '--short', 'HEAD')
+
+
+def _trailer():
+    return os.environ.get('RESEARCH_COMMIT_TRAILER', '').replace('\\n', '\n')
