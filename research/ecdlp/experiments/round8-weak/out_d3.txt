@@ -1,0 +1,17 @@
+SEED 20261103 PMAX 3000
+ordinary (p,t) pairs enumerated: 58840
+violations of [|D|>=p => min nonscalar norm in Z[pi] >= p/4]: 0
+closed-form vs brute-force cross-checks passed: 295
+pairs with fundamental disc dK in {-3,-4}: 2086 (3.5452% of pairs)
+  of which |D| >= p (i.e. conductor large; End(E) may be the big order j=0/1728 curve): 1392
+pairs where Z[pi] itself has a nonscalar unit (D in {-3,-4}): 60
+c=0.1: min over pairs with |D|>=c*p of normZpi/p = 0.0251  (lemma bound c/4 = 0.0250)
+c=0.5: min over pairs with |D|>=c*p of normZpi/p = 0.1252  (lemma bound c/4 = 0.1250)
+c=1.0: min over pairs with |D|>=c*p of normZpi/p = 0.2503  (lemma bound c/4 = 0.2500)
+c=2.0: min over pairs with |D|>=c*p of normZpi/p = 0.5002  (lemma bound c/4 = 0.5000)
+p=101: <=2 of 101 j-invariants have Aut>2: fraction <= 0.01980
+p=1009: <=2 of 1009 j-invariants have Aut>2: fraction <= 0.00198
+p=2999: <=2 of 2999 j-invariants have Aut>2: fraction <= 0.00067
+p=101: ordinary traces 40, with dK in {-3,-4}: 4
+p=1009: ordinary traces 126, with dK in {-3,-4}: 10
+p=2999: ordinary traces 218, with dK in {-3,-4}: 0
