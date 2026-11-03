@@ -1,0 +1,44 @@
+{
+  "id": "RUN-29c93068-9ed2-4117-b500-cd135b674c07",
+  "type": "RUN",
+  "title": "Round 11 / ECDLP-37: frontier exploration D \u2014 follow-ups of the best-ranked round-10 ideas",
+  "created_at": "2026-11-03T11:06:13.165898Z",
+  "status": "active",
+  "question": "Run the top-ranked cheap follow-ups from frontier A and B: (1) structure-aware SAT encodings (x-only Montgomery ladder, XOR-aware solving, cardinality constraints) and their scaling vs rho; (2) explicit cocycle / higher p-adic digit structure of the homomorphic Hensel section; plus at most one new idea that combines them.",
+  "rationale": "Bounded subagent run for TSK-c33128ec-7eb3-4aca-99a1-b0130c0e7512",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-c33128ec-7eb3-4aca-99a1-b0130c0e7512",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "HYP-a913419f-f6d2-4829-a181-11ef8cbd57d4"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontier-explorer (claude-sonnet-5-5 configured); runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T11:06:13.279633Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "frontier-explorer",
+    "task": "TSK-c33128ec-7eb3-4aca-99a1-b0130c0e7512",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+      "HYP-a913419f-f6d2-4829-a181-11ef8cbd57d4"
+    ],
+    "starting_commit": "e11176d0092c9fc3ec6e086aafe1a5e741710348",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}
