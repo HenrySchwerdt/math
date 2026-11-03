@@ -117,6 +117,8 @@ def main(p0, seed, full_u3):
     seq = {'d1': d1[1:N], 'd2': d2[1:N], 'S': [s % p for s in S3[1:N]], 'g': [v % p for v in g3[1:N]],
            'u2': [lam * pts[k][1] * (g3[k] % p) % p for k in range(1, N)]}
     if full_u3: seq['u3'] = [u3d[k] for k in range(1, N)]
+    import os
+    if os.environ.get('DUMP'): np.savez('dump_p%d_s%d.npz' % (p, seed), d1=np.array(seq['d1']), S=np.array(seq['S']), g=np.array(seq['g']), p=p, N=N)
     rng = np.random.default_rng(5); rr = random.Random(5)
     ctrl = {'random': [rr.randrange(p) for _ in range(n)], 'shuf_d1': rr.sample(seq['d1'], n),
             'pos_lin': [(3 * k + 5) % p for k in range(1, N)], 'pos_kgk': [k * pow(7, k, p) % p for k in range(1, N)]}

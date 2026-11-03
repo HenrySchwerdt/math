@@ -18,3 +18,23 @@ elapsed 5.0
 real	0m5.154s
 user	0m4.828s
 sys	0m0.043s
+elapsed 11.5
+
+real	0m11.613s
+user	0m10.260s
+sys	0m0.297s
+elapsed 10.8
+
+real	0m10.903s
+user	0m10.188s
+sys	0m0.280s
+elapsed 13.6
+
+real	0m13.783s
+user	0m12.365s
+sys	0m0.742s
+elapsed 16.5
+
+real	0m16.609s
+user	0m12.104s
+sys	0m0.616s

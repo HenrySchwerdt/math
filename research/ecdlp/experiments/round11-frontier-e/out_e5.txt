@@ -1,0 +1,22 @@
+Miller-height arithmetic: need T >= p^(2/rho) (natural-log canonical height), numerator bits ~ T/ln2
+heuristic count of E(Q) points with height<=T taken as T^(rho/2) (regulator/torsion constants set to 1)
+rho  | log2 p | log2 T needed | numerator bits = 2^(.) | ratio bits/log2(p)
+  1  |     64 |        128.0  | 2^     128.5        | 2^122.5
+  2  |     64 |         64.0  | 2^      64.5        | 2^58.5
+  5  |     64 |         25.6  | 2^      26.1        | 2^20.1
+ 10  |     64 |         12.8  | 2^      13.3        | 2^7.3
+ 18  |     64 |          7.1  | 2^       7.6        | 2^1.6
+ 29  |     64 |          4.4  | 2^       4.9        | 2^-1.1
+  1  |    160 |        320.0  | 2^     320.5        | 2^313.2
+  2  |    160 |        160.0  | 2^     160.5        | 2^153.2
+  5  |    160 |         64.0  | 2^      64.5        | 2^57.2
+ 10  |    160 |         32.0  | 2^      32.5        | 2^25.2
+ 18  |    160 |         17.8  | 2^      18.3        | 2^11.0
+ 29  |    160 |         11.0  | 2^      11.6        | 2^4.2
+  1  |    256 |        512.0  | 2^     512.5        | 2^504.5
+  2  |    256 |        256.0  | 2^     256.5        | 2^248.5
+  5  |    256 |        102.4  | 2^     102.9        | 2^94.9
+ 10  |    256 |         51.2  | 2^      51.7        | 2^43.7
+ 18  |    256 |         28.4  | 2^      29.0        | 2^21.0
+ 29  |    256 |         17.7  | 2^      18.2        | 2^10.2
+Interpretation: rho=1 (e.g. multiples nP): T=p^2, numerators of 2^(2*lp) bits? (n~p => height n^2 h, bits ~ p^2)

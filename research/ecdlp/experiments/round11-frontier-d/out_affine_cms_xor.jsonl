@@ -1,0 +1,9 @@
+{"n": 5, "p": 19, "r": 17, "solver": "cms", "xor": true, "vars": 4515, "clauses": 9321, "xors": 1323, "rho_ops": 5.2, "sat": true, "secs": 0.5, "conflicts": null, "key_ok": false}
+{"n": 5, "p": 19, "r": 17, "solver": "cms", "xor": true, "vars": 4491, "clauses": 9282, "xors": 1312, "rho_ops": 5.2, "sat": true, "secs": 0.79, "conflicts": null, "key_ok": false}
+{"n": 5, "p": 31, "r": 29, "solver": "cms", "xor": true, "vars": 5716, "clauses": 11847, "xors": 1682, "rho_ops": 6.7, "sat": true, "secs": 1.45, "conflicts": null, "key_ok": false}
+{"n": 6, "p": 47, "r": 53, "solver": "cms", "xor": true, "vars": 8740, "clauses": 17935, "xors": 2634, "rho_ops": 9.1, "sat": true, "secs": 5.21, "conflicts": null, "key_ok": false}
+{"n": 6, "p": 43, "r": 47, "solver": "cms", "xor": true, "vars": 7919, "clauses": 16240, "xors": 2378, "rho_ops": 8.6, "sat": true, "secs": 5.85, "conflicts": null, "key_ok": false}
+{"n": 6, "p": 47, "r": 53, "solver": "cms", "xor": true, "vars": 8716, "clauses": 17899, "xors": 2622, "rho_ops": 9.1, "sat": true, "secs": 6.56, "conflicts": null, "key_ok": false}
+{"n": 7, "p": 97, "r": 83, "solver": "cms", "xor": true, "vars": 10483, "clauses": 21390, "xors": 3174, "rho_ops": 11.4, "sat": true, "secs": 8.83, "conflicts": null, "key_ok": false}
+{"n": 7, "p": 101, "r": 109, "solver": "cms", "xor": true, "vars": 11565, "clauses": 23586, "xors": 3524, "rho_ops": 13.1, "sat": true, "secs": 11.56, "conflicts": null, "key_ok": false}
+{"n": 7, "p": 109, "r": 127, "solver": "cms", "xor": true, "vars": 12588, "clauses": 25659, "xors": 3856, "rho_ops": 14.1, "sat": true, "secs": 21.7, "conflicts": null, "key_ok": false}
