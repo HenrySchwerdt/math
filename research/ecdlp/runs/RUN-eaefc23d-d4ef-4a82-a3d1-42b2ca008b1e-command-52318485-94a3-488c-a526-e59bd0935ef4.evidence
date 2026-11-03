@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round19-frontier-i/e1_equiv.py",
+    "1"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:59:07.898095Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T13:59:12.930271Z",
+  "truncated": false,
+  "output": "{\"seed\": 1, \"n_prime\": 1, \"l\": 3, \"N\": 6, \"q\": 79, \"r\": 73, \"D\": 3, \"rank_M\": 3, \"kernel_dim\": 3, \"subsets\": 20, \"agree\": 20, \"disagree\": 0, \"zero_sum_subsets\": 0}\n{\"seed\": 1, \"n_prime\": 2, \"l\": 6, \"N\": 12, \"q\": 673, \"r\": 691, \"D\": 6, \"rank_M\": 6, \"kernel_dim\": 6, \"subsets\": 924, \"agree\": 924, \"disagree\": 0, \"zero_sum_subsets\": 2}\n{\"seed\": 1, \"n_prime\": 2, \"l\": 6, \"N\": 12, \"q\": 2311, \"r\": 2251, \"D\": 6, \"rank_M\": 6, \"kernel_dim\": 6, \"subsets\": 924, \"agree\": 924, \"disagree\": 0, \"zero_sum_subsets\": 1}\n{\"seed\": 1, \"n_prime\": 3, \"l\": 9, \"N\": 18, \"q\": 3709, \"r\": 3701, \"D\": 10, \"rank_M\": 9, \"kernel_dim\": 9, \"subsets\": 48620, \"agree\": 48620, \"disagree\": 0, \"zero_sum_subsets\": 7}\n"
+}

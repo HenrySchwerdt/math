@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "bash",
+    "research/ecdlp/experiments/round19-frontier-i/run_e2.sh",
+    "2",
+    "1500",
+    "2500",
+    "4000",
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:59:45.465886Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T13:59:50.048598Z",
+  "truncated": false,
+  "output": "{\"n_prime\": 2, \"l\": 6, \"N\": 12, \"q\": 1873, \"r\": 1861, \"C\": 924, \"passes\": 4000, \"alg2_hit_passes\": 181, \"alg2_useful\": 169, \"wrong\": 0, \"exhaustive_hit_passes\": null, \"candidates_per_pass\": 23.547, \"seed\": 1, \"secs\": 1.2}\n{\"n_prime\": 2, \"l\": 6, \"N\": 12, \"q\": 2131, \"r\": 2081, \"C\": 924, \"passes\": 4000, \"alg2_hit_passes\": 165, \"alg2_useful\": 153, \"wrong\": 0, \"exhaustive_hit_passes\": null, \"candidates_per_pass\": 23.547, \"seed\": 2, \"secs\": 1.0}\n{\"n_prime\": 2, \"l\": 6, \"N\": 12, \"q\": 2087, \"r\": 1999, \"C\": 924, \"passes\": 4000, \"alg2_hit_passes\": 172, \"alg2_useful\": 165, \"wrong\": 0, \"exhaustive_hit_passes\": null, \"candidates_per_pass\": 23.577, \"seed\": 3, \"secs\": 1.1}\n{\"n_prime\": 2, \"l\": 6, \"N\": 12, \"q\": 1951, \"r\": 2027, \"C\": 924, \"passes\": 4000, \"alg2_hit_passes\": 200, \"alg2_useful\": 192, \"wrong\": 0, \"exhaustive_hit_passes\": null, \"candidates_per_pass\": 23.487, \"seed\": 4, \"secs\": 1.1}\n"
+}
