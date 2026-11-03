@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 12 / algorithm inventor C",
   "created_at": "2026-11-03T11:34:46.244288Z",
-  "status": "active",
+  "status": "completed",
   "question": "Collision and search algorithms beyond plain rho: invent algorithms that change the search space or the collision structure (equivalence classes, multi-dimensional walks, structured iteration functions using integer properties of coordinates, batch/preprocessing tradeoffs, adaptive restarts) aiming at a better exponent or constant than Pollard rho on prime-order curves; prototype and benchmark with counted operations.",
   "rationale": "Strategic correction DEC: 60% algorithm invention.",
   "assumptions": [],
@@ -12,12 +12,13 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-ff8ee4b5-67bb-44d2-95df-bd6624311fdd.evidence"
+    "research/ecdlp/events/EVT-ff8ee4b5-67bb-44d2-95df-bd6624311fdd.evidence",
+    "research/ecdlp/events/EVT-5263bc88-52af-4c6d-814b-4f330e1464e5.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "refuted",
+  "next_action": "Closed",
   "notes": "Created via research.py start.",
   "success_criteria": [
     "Exact statements; reproducible evidence; honest negatives."
