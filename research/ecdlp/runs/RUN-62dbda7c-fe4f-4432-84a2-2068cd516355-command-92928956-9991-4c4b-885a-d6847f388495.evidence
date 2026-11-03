@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round5-ct/check_theorem_b_identity.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:55:18.196067Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:55:18.414188Z",
+  "truncated": false,
+  "output": "pointwise identity checks: 2519 failures: 0\n"
+}

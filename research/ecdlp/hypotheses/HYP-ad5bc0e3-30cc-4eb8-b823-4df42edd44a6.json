@@ -1,0 +1,26 @@
+{
+  "id": "HYP-ad5bc0e3-30cc-4eb8-b823-4df42edd44a6",
+  "type": "HYP",
+  "title": "Cover-based Jacobian index calculus does not beat sqrt(p) for prime-field curves (known algorithms)",
+  "created_at": "2026-11-03T09:54:58.783926Z",
+  "status": "open",
+  "question": "Let E/F_p, p prime, #E = r prime, and pi: C -> E a cover of genus g with computable pullback. (A) For fixed g >= 2 (Diem/GTTD, O~(q^{2-2/g})) or plane degree d >= 4 (Diem, O~(q^{2-2/(d-2)})) the cost exponent is >= 1 > 1/2. (B) For g >= delta log q the L_{q^g}(1/2) cost (Enge\u2013Gaudry) is q^{omega(1)}; for g >= (log q)^2 the L(1/3) cost (Enge\u2013Gaudry\u2013Thom\u00e9) exceeds sqrt(q) for large q. (C, heuristic) generic degree-1 factor-base index calculus on J_C costs >= ~q/20; formulas dip below sqrt(q) only for g = O(log q / log log q) where no theorem applies. (D) Pullback relations have disjoint supports and determine no individual factor-base logarithm. Missing ingredient: a factor base of size <= p^{1/2-eps} adapted to pi^*(E(F_p)) with fast decomposition.",
+  "rationale": "Registered by PI from round-5 runs after PI reproduction of numerics.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-6a3e20d9-107a-4bd6-9763-79da760c2fd5",
+    "TSK-70af651a-696e-4564-8c53-85dd0320a211",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round5-cover/cover_toy.py"
+  ],
+  "claims": [
+    "Let E/F_p, p prime, #E = r prime, and pi: C -> E a cover of genus g with computable pullback. (A) For fixed g >= 2 (Diem/GTTD, O~(q^{2-2/g})) or plane degree d >= 4 (Diem, O~(q^{2-2/(d-2)})) the cost exponent is >= 1 > 1/2. (B) For g >= delta log q the L_{q^g}(1/2) cost (Enge\u2013Gaudry) is q^{omega(1)}; for g >= (log q)^2 the L(1/3) cost (Enge\u2013Gaudry\u2013Thom\u00e9) exceeds sqrt(q) for large q. (C, heuristic) generic degree-1 factor-base index calculus on J_C costs >= ~q/20; formulas dip below sqrt(q) only for g = O(log q / log log q) where no theorem applies. (D) Pullback relations have disjoint supports and determine no individual factor-base logarithm. Missing ingredient: a factor base of size <= p^{1/2-eps} adapted to pi^*(E(F_p)) with fast decomposition."
+  ],
+  "proof_status": "proof-attempt",
+  "outcome": "unresolved",
+  "next_action": "Decisive test T2 (genus-2 index calculus on J_C at p ~ 2^20) not run; literature-verify Gaudry 2000 and Enge\u2013Gaudry regime; resolve EGT sentence.",
+  "notes": "A proved from cited statements (Diem arXiv math/0606607, Diem JTNB verified; Gaudry 2000 and Enge\u2013Gaudry regime unverified recollection); B conditional on regimes; C heuristic; D elementary. One sentence in Enge\u2013Gaudry\u2013Thom\u00e9 intro read literally conflicts with C (treated as loose; unresolved). Cover t->t^d genus (3d-1)/2 (d odd), (3d-2)/2 (d even), generic h: 2d-1 (toy-checked)."
+}

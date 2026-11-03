@@ -1,0 +1,26 @@
+{
+  "id": "EVT-bf912f85-7d33-4e08-b00f-6b54f8002dd4",
+  "kind": "task-status-change",
+  "task": "TSK-2d4e5fc7-9e3b-4c7f-bdec-3e37eabcba98",
+  "task_key": "ECDLP-14",
+  "timestamp": "2026-11-03T09:56:02.512598Z",
+  "run": "RUN-e7c9feff-7a06-449b-8625-a5a70f90803d",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "complexity-theory"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-5 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Independent review and Lean formalization of Theorem B / A"
+  },
+  "reason": "Intermediate-target ladder with verified sources; new restricted-model lower bounds (Theorems A, A', B) as proof attempts; PI-reproduced numerics",
+  "before_sha256": "1fc6090efb45626217f795e0ad2e689ff55eca89d31e5dc61b76107461ac25e6",
+  "after_sha256": "4c54ab97e13bbc02280e90b3d2e3bac7b9b83581eea526b2e35215c8bbfc467b"
+}
