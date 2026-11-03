@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 18 / inventor I: m=4 decomposition test below p^{1/10}",
   "created_at": "2026-11-03T13:36:57.102586Z",
-  "status": "active",
+  "status": "completed",
   "question": "With randomised targets R=aP+bQ and base size s=p^{1/5}, index calculus with m=4 beats rho only if deciding whether R is a sum of 4 base points (and finding them) costs T_test < p^{1/10}. Is there any finder (algebraic on S_5 with a structured base, e.g. PKM coset x^d=c, Weil-like descent through x->x^d, resultant towers, or a non-Groebner method) whose measured cost exponent per target is below 1/10 at toy sizes, with linear algebra and total cost accounted?",
   "rationale": "Bounded run for TSK-187b6af4-9fc1-4a7f-9c42-bf0cc2b16ae5",
   "assumptions": [],
@@ -20,12 +20,12 @@
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "refuted",
   "next_action": "Fill draft metadata and report before execution",
   "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
   "run": {
     "started_at": "2026-11-03T13:36:57.102956Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T13:55:49.339668Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured)",
     "role": "algorithm-inventor",
@@ -41,8 +41,10 @@
       "research/ecdlp/runs/RUN-ef5a03e5-0583-4a71-bfe8-25040636cd62-command-02fd8975-dd71-4a96-810b-62a20d9884e7.evidence",
       "research/ecdlp/runs/RUN-ef5a03e5-0583-4a71-bfe8-25040636cd62-command-61d2f128-8d17-4586-9e73-d017784ea4fc.evidence"
     ],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round18-inventor-i/"
+    ],
+    "resulting_commit": "9bc7ff4596c325960ab0544cdff27b7b5eb7cae1",
     "tests": [],
     "benchmark": "See report",
     "machine": "See report",
