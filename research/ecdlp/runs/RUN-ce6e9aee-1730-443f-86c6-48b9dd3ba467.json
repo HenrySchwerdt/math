@@ -13,11 +13,14 @@
     "HYP-6aef8c30-2942-4079-8d0a-fc2ae8b6c200"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Formal (Lean, axioms propext/Classical.choice/Quot.sound only): for division SLPs over a field F (2 != 0) on a short Weierstrass curve, P of order r, 2N<r, if every division is defined at each x(kP) and output = k there for 1<=k<=N then N <= 3*2^L + 2 (MathResearch.ECDLP.RationalSLP.length_bound_rational_slp).",
+    "Formal rational analogue of Theorem C: A,B in F[X] of degree <= d, B(x_k)!=0, A(x_k)=k B(x_k) for 1<=k<=N, 2N<r imply N <= 3d+2; nonvanishing of the cleared polynomial proved by orbit propagation (no extra hypothesis). Empirical toy-curve checks only for identities and minimal degrees (~N/2). Not a bit-complexity or hardness claim."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter formalization (claude-sonnet-5-5 configured); runtime identity not exposed to PI.",
+  "next_action": "PI: add `import MathResearch.ECDLP.RationalSLP` to MathResearch.lean, independent review of statements, commit; optionally tighten c=3 toward 2 or extend to programs reading y.",
+  "notes": "Adapter formalization (claude-sonnet-5-5 configured); runtime identity not exposed to PI. Self-reported identity: claude-sonnet-5-5 (Sonnet 5.5) formalization agent, Claude Code; runtime identity not independently verified. Lean file MathResearch/ECDLP/RationalSLP.lean (uncommitted, root import pending PI); report in the RUN .md.",
   "run": {
     "started_at": "2026-11-03T11:00:36.778234Z",
     "completed_at": null,
