@@ -90,6 +90,7 @@ def finish(project, run_id, outcome, reason, next_action=None, files=(), commit=
     if files:
         d['run']['files_changed'] = sorted(set(d['run']['files_changed']) | set(files))
     r.write_json(path, d)
+    render_untouched(project)
     return result
 
 
@@ -117,3 +118,43 @@ def fix_sources(path):
         d['notes'] = (d.get('notes') or '') + ' | Sources without URL (not schema sources): ' + ' || '.join(moved)
     r.write_json(path, d)
     return len(kept), len(moved)
+
+
+TEMPLATE_MARKER = 'Exact question; task ID; sources and assumptions'
+
+
+def _bullets(items):
+    return '\n'.join(f'- {x}' for x in items) if items else '- none'
+
+
+def render_md(d):
+    """Markdown report generated from a JSON record (used when the .md was never written)."""
+    lines = [f"# {d['id']} — {d['title']}", '',
+             f"Status: {d['status']}; proof status: {d['proof_status']}; outcome: {d.get('outcome')}.",
+             '', '## Question, selection rationale and inputs', d['question'], '', d['rationale'], '',
+             'Assumptions:', _bullets(d.get('assumptions')), '', 'References:', _bullets(d.get('refs')), '',
+             'Sources:', _bullets([f"{s.get('title')} <{s.get('url')}>" for s in d.get('sources', [])]), '',
+             '## Claims and verification', _bullets(d.get('claims') if isinstance(d.get('claims'), list) else [d.get('claims')]),
+             '', 'Evidence:', _bullets(d.get('evidence'))]
+    rev = d.get('review')
+    if isinstance(rev, dict):
+        lines += ['', '## Review', f"Decision: {rev.get('decision')}; run {rev.get('run')}; target commit {rev.get('target_commit')}.",
+                  '', str(rev.get('rationale')), '', 'Counterexamples:', _bullets(rev.get('counterexamples')),
+                  '', f"Complexity: {rev.get('complexity')}", '', f"Limitations: {rev.get('limitations')}"]
+    lines += ['', '## Outcome, limitations and next action', f"Next action: {d['next_action']}", '',
+              f"Notes: {d['notes']}", '', '_Generated from the JSON record by `research.py render-md`; the JSON is authoritative._', '']
+    return '\n'.join(lines)
+
+
+def render_untouched(project):
+    """Replace every still-template .md in the project with a rendering of its JSON. Returns paths."""
+    done = []
+    for md in sorted(r.project(project).rglob('*.md')):
+        js = md.with_suffix('.json')
+        if js.is_file() and TEMPLATE_MARKER in md.read_text():
+            d = json.loads(js.read_text())
+            if d.get('status') == 'active':
+                continue  # an agent may still be writing this report
+            md.write_text(render_md(d))
+            done.append(md)
+    return done
