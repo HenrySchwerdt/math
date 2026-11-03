@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 10 / ECDLP-33: tightness of x-only interpolation degree bounds",
   "created_at": "2026-11-03T10:56:40.050027Z",
-  "status": "active",
+  "status": "completed",
   "question": "Tightness conjecture for x-only interpolation: for E/F_p, P of prime order r and 2N < r, every g in F_p[X] with g(x(kP)) = k (resp. k^2) for 1 <= k <= N has deg g >= N \u2212 c for an absolute constant c (generic curves), improving the proven bound (N \u2212 2)/3; or else there exist families with substantially lower-degree interpolants.",
   "rationale": "Bounded subagent run for TSK-15871df8-8e14-4958-a868-0a09a9e90d3f",
   "assumptions": [],
@@ -44,7 +44,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round10-tight/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "959293d05fdce61dac56df1c3778d8f7e5ff3181",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container",
