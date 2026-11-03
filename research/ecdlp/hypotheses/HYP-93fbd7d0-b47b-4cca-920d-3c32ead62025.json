@@ -1,0 +1,26 @@
+{
+  "id": "HYP-93fbd7d0-b47b-4cca-920d-3c32ead62025",
+  "type": "HYP",
+  "title": "Frontier exploration D: SAT and Hensel-cocycle follow-ups null",
+  "created_at": "2026-11-03T11:40:38.100338Z",
+  "status": "completed",
+  "question": "Frontier D (ECDLP-37) follow-ups, all NULL: (1) structure-aware SAT encodings (x-only Montgomery ladder, native XOR via CryptoMiniSat) are worse than the affine encoding (affine conflict exponents 1.27 Glucose4, 1.47 CaDiCaL; ladder unsolved within 120 s at n = 5-7); (2) Hensel-section cocycle: exact identity g(kP) = k g(P) \u2212 N S_k with Birkhoff sum S_k verified on 8 curves (p <= 30011), but p^2/p^3 digits show no low linear complexity, no P-recursive or low-degree relation, no k mod m dependence (spectral flag was a null-model artefact; symmetry-respecting null |z| <= 2.6, post hoc); (3) lift-variation idea killed (4 unknowns vs 3 equations; lift-dependent part not low-degree).",
+  "rationale": "Follow-ups of top-ranked round-10 ideas.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-29c93068-9ed2-4117-b500-cd135b674c07",
+    "TSK-c33128ec-7eb3-4aca-99a1-b0130c0e7512",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round11-frontier-d/PROTOCOL.md"
+  ],
+  "claims": [
+    "Frontier D (ECDLP-37) follow-ups, all NULL: (1) structure-aware SAT encodings (x-only Montgomery ladder, native XOR via CryptoMiniSat) are worse than the affine encoding (affine conflict exponents 1.27 Glucose4, 1.47 CaDiCaL; ladder unsolved within 120 s at n = 5-7); (2) Hensel-section cocycle: exact identity g(kP) = k g(P) \u2212 N S_k with Birkhoff sum S_k verified on 8 curves (p <= 30011), but p^2/p^3 digits show no low linear complexity, no P-recursive or low-degree relation, no k mod m dependence (spectral flag was a null-model artefact; symmetry-respecting null |z| <= 2.6, post hoc); (3) lift-variation idea killed (4 unknowns vs 3 equations; lift-dependent part not low-degree)."
+  ],
+  "proof_status": "experimental",
+  "outcome": "refuted",
+  "next_action": "None (closed).",
+  "notes": "Not reproduced by PI (long SAT runs, up to 120 s each); pre-registered with dated amendments; CryptoMiniSat key_ok flags invalid in out_*cms* rows (indexing bug fixed and 9 instances re-validated by the agent)."
+}

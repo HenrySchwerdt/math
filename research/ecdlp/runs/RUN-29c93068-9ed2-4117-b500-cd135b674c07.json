@@ -7,18 +7,36 @@
   "question": "Run the top-ranked cheap follow-ups from frontier A and B: (1) structure-aware SAT encodings (x-only Montgomery ladder, XOR-aware solving, cardinality constraints) and their scaling vs rho; (2) explicit cocycle / higher p-adic digit structure of the homomorphic Hensel section; plus at most one new idea that combines them.",
   "rationale": "Bounded subagent run for TSK-c33128ec-7eb3-4aca-99a1-b0130c0e7512",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Soos, Nohl, Castelluccia: Extending SAT Solvers to Cryptographic Problems (SAT 2009, LNCS 5584)",
+      "url": "https://github.com/msoos/cryptominisat/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "search snippets only (paper slides: 2n-1 clauses per n-long XOR; repo: Gauss-Jordan since 5.8); full text not read"
+    },
+    {
+      "title": "Montgomery: Speeding the Pollard and elliptic curve methods of factorization, Math. Comp. 48 (1987) 243-264",
+      "url": "https://www.ams.org/mcom/1987-48-177/S0025-5718-1987-0866113-7/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract and search snippet; ladder formulas taken from Costello-Smith survey arXiv:1703.01863 snippet, validated numerically here"
+    }
+  ],
   "refs": [
     "TSK-c33128ec-7eb3-4aca-99a1-b0130c0e7512",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
     "HYP-a913419f-f6d2-4829-a181-11ef8cbd57d4"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "D1 (experimental negative, toy sizes): An x-only Montgomery-ladder bit-level SAT encoding of [k]P=Q is far larger and harder than the round-10 affine encoding (n=5: 23-29k vs 4.5-5.7k variables; Glucose4 unsolved in 120 s at n=5..7, CaDiCaL 10-125 s at n=5 vs 0.03-0.2 s), native-XOR CryptoMiniSat is slower still, and no pre-registered 'promising' criterion (upper CI exponent < 0.5) is met; affine conflicts exponent 1.27 (Glucose4) and 1.47 (CaDiCaL), n=5..10. Ladder exponent fits are censoring artefacts. Evidence: experiments/round11-frontier-d/out_*.jsonl, analyze_t1.py.",
+    "D2 (exact numerical identities, elementary, not proved): for the Hensel set-theoretic lift, g(kP)=k g(P)-N S_k with S_k the Birkhoff sum of the cocycle d1, N S_N=N g(P) mod p^2, u2=lambda*y*g with lambda=-2/N mod p, and g odd (S_{N-k}=g(P)-S_k), verified on 8 curves p<=30011. Evidence: out_t2.jsonl.",
+    "D3 (experimental negative): no low linear complexity, no P-recursive relation (order,degree<=4), no degree<=12 polynomial in (x,y), no k-mod-m dependence (analytic ANOVA, Bonferroni) and no spectral structure in d1, d2 (the p^3 digit), S, g, u2, u3 along [k]P at p up to 30011 with positive and random controls. A registered spectral flag on S and g was a null-model artefact (g odd); a symmetry-respecting null gives |z|<=2.6 (post-hoc, t2c/t2d).",
+    "D4 (experimental negative, Idea 3): the lift-variation g_L-g_0 is exactly affine in the lift parameters (rank of {1,k,g_L} = 5 for 8 lifts), not a degree<=20 polynomial in (x,y), no k structure; unknown count (4) exceeds equation count (3), idea killed at tested sizes. Evidence: out_t2b.jsonl."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontier-explorer (claude-sonnet-5-5 configured); runtime identity not exposed to PI.",
+  "next_action": "Record D1-D4 as negative results; close raw-ECDLP SAT and Hensel-section follow-ups; optional analytic question: is the Birkhoff sum of eta an algebraic coboundary; use symmetry-respecting nulls for future spectral tests. PI review needed before any status change.",
+  "notes": "Adapter frontier-explorer (claude-sonnet-5-5 configured); runtime identity not exposed to PI. Executed by frontier-explorer adapter, self-reported model identity claude-sonnet-5-5 (not runtime-verified). Commands run manually (not via research.py exec); protocol sha256 d17d09df...4fe1 in experiments/round11-frontier-d/PROTOCOL.sha256; pycryptosat 5.17.0 pip-installed in the sandbox. | Not reproduced by PI (runtime).",
   "run": {
     "started_at": "2026-11-03T11:06:13.279633Z",
     "completed_at": null,
