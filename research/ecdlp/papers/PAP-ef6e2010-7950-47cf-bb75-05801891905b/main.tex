@@ -4,6 +4,7 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{listings}
+\usepackage{longtable,array,booktabs}
 \usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
 \lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,frame=single,
   keepspaces=true,showstringspaces=false}
@@ -16,8 +17,8 @@
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\lc}{\operatorname{lc}}
 \title{Machine-checked degree lower bounds for interpolating the elliptic curve discrete logarithm from $x$-coordinates}
-\author{ECDLP research laboratory (AI-generated internal technical report,\\ tasks ECDLP-31 and ECDLP-36 (revision~1), paper record\\ PAP-ef6e2010-7950-47cf-bb75-05801891905b)}
-\date{3 November 2026 --- draft, not human-verified}
+\author{ECDLP research laboratory (AI-generated internal technical report,\\ tasks ECDLP-31, ECDLP-36 (revision~1) and revision~2 (run RUN-2a8442e2-9a37-4104-b9e8-95d3f7798297), paper record\\ PAP-ef6e2010-7950-47cf-bb75-05801891905b)}
+\date{3 November 2026 --- version 2 (draft, not human-verified; internal, not submitted)}
 \emergencystretch=4em
 \Urlmuskip=0mu plus 2mu
 \def\UrlBreaks{\do\/\do\-\do\_\do\.\do0\do1\do2\do3\do4\do5\do6\do7\do8\do9\do a\do b\do c\do d\do e\do f}
@@ -36,9 +37,18 @@ verified by Lean against a pinned Mathlib; the Lean statements are quoted verbat
 due to Coppersmith--Shparlinski, Lange--Winterhof and Satoh; we could not access their exact statements, so our bounds may
 be known or weaker. The contribution claimed is the machine-checked formalization and the precise
 hypotheses. The results concern polynomial degree in a restricted model and have no bit-complexity consequence.
-A clearly marked addendum (Section~\ref{sec:addendum}) records a formally verified consequence for division-free
-straight-line programs and a method barrier (a proof attempt, not reviewed).
+A clearly marked later part (Section~\ref{sec:addendum}) records, with their evidence levels kept separate, six further items:
+three formally verified barriers for restricted algebraic models (division-free straight-line programs; straight-line programs with division;
+computation trees with equality tests, Theorem~DT, stated with its scope), a method barrier (a proof attempt, not reviewed), an experimental conjecture, and a
+proof-reviewed but \emph{not formalized} bound (Theorem~E). Section~\ref{sec:bench} tabulates the laboratory's benchmarked algorithm
+candidates, all of which were negative. \textbf{No improvement over Pollard rho is claimed anywhere in this report.}
 \end{abstract}
+
+\paragraph{Evidence levels used in this report.} We keep four levels apart and name the level of every item.
+\emph{Formally verified (Lean)}: a Lean~4 declaration checked against the pinned Mathlib, with the statement quoted.
+\emph{Reviewed proof}: a paper proof that an independent AI reviewer examined, not formalized.
+\emph{Experiment}: a measurement at toy sizes; it proves nothing about large parameters.
+\emph{Conjecture}: an unproved statement. Review by AI agents of the same provider is only partially independent; no human has verified anything here.
 
 \section{Introduction}
 The elliptic curve discrete logarithm problem (ECDLP) asks, given $P$ and $Q=kP$ in a group of order $r$,
@@ -52,7 +62,7 @@ restricted model, in the spirit of the interpolation results cited in Section~\r
 
 What such a bound does \emph{not} say should be stated plainly. It says nothing about algorithms that use
 other operations (comparisons, branching, group operations, index calculus), nothing about
-\emph{lower} bounds on the cost of evaluating it, and nothing about bit complexity. Degree and evaluation cost are related only weakly:
+lower bounds on the cost of evaluating it beyond the logarithmic one noted next, and nothing about bit complexity. Degree and evaluation cost are related only weakly:
 Horner's rule evaluates a degree-$d$ polynomial with at most $d$ multiplications, so degree is an upper bound for cost in that model;
 conversely a division-free straight-line program with $s$ multiplications computes a polynomial of degree at most $2^s$, so
 a degree lower bound yields only a \emph{logarithmic} lower bound on the number of multiplications (see Section~\ref{sec:addendum} for the formalized form),
@@ -62,11 +72,13 @@ is unaffected by this report.
 
 \paragraph{Contents.} Section~\ref{sec:setting} fixes notation; Section~\ref{sec:main} states the three
 results; Section~\ref{sec:proofs} gives the proofs; Section~\ref{sec:lean} quotes the Lean statements and the
-trust base; Section~\ref{sec:prior} discusses prior work and novelty; Section~\ref{sec:limits} lists limitations; Section~\ref{sec:addendum} is a marked addendum of two later laboratory results.
+trust base; Section~\ref{sec:prior} discusses prior work and novelty; Section~\ref{sec:addendum} is a marked part with six later laboratory items (i)--(vi)
+(it contains the division-SLP barrier, Theorem~DT and Theorem~E); Section~\ref{sec:bench} tabulates benchmarked algorithm candidates; Section~\ref{sec:limits} lists limitations.
 
 Existence is not at issue: the nodes $x(kP)$, $1\le k\le N$, $2N<r$, are pairwise distinct (Section~\ref{sec:setting}), so Lagrange interpolation always gives
-$g$ with $\deg g\le N-1$ for the prescribed values; for Theorem~B this is $\deg g\le (r-3)/2$. Theorems~B--D therefore determine the minimal
-interpolation degree up to a constant factor (about~$3$), and the bounds are linear in $r$.
+$g$ with $\deg g\le N-1$ for the prescribed values; for Theorem~B this is $\deg g\le (r-3)/2$. Theorems~B and~C therefore determine the minimal
+interpolation degree on a full range up to a constant factor (about~$3$), and the bounds are linear in $r$. Theorem~D is a partial-agreement count,
+not a minimal-degree statement on a range, and is not covered by this sentence.
 
 \section{Setting and notation}\label{sec:setting}
 Let $F$ be a field and $W: y^2=x^3+ax+b$ a short Weierstrass cubic over $F$ ($a_1=a_2=a_3=0$, $a=a_4$,
@@ -250,13 +262,14 @@ The laboratory's ledger record for Theorem~C (\mbox{HYP-42f91290}) says it is ``
 \textbf{Claimed contribution:} a machine-checked formalization (Lean 4, Mathlib, standard axioms only) of the three degree bounds, with explicit,
 reviewed hypotheses (including the corrected hypothesis $2N<r$ of Theorem~D and its generality over arbitrary fields). Bibliographic metadata (first names, venue, pages, year, DOI) of the cited entries were checked against Crossref records (by \mbox{REV-2b383b9b} for \cite{LW02}, and in this revision for \cite{LW03}, \cite{Sat05} and \cite{CS00}); in particular the year of \cite{Sat05} is 2006. Full texts were still not accessed.
 
-\section{Addendum: later laboratory results (not part of Theorems B--D)}\label{sec:addendum}
-This section was added in revision~1 and is clearly separate from the results above. Its two items carry the statuses stated here.
+\section{Later laboratory results (not part of Theorems B--D)}\label{sec:addendum}
+This section was added in revision~1 and extended in revision~2. It is clearly separate from the results above. Its six items (i)--(vi) carry the statuses stated in the
+headings; the statuses are those recorded in the laboratory ledger and are not upgraded here.
 
-\paragraph{(i) Division-free straight-line programs: formally verified.}
-Ledger record \mbox{PRF-58cf340e} (derived from \mbox{HYP-92a9b4d9}; status \emph{formally verified}; independent review pending, not yet reviewed).
+\paragraph{(i) Division-free straight-line programs: formally verified; independently reviewed for formal correctness.}
+Ledger record \mbox{PRF-58cf340e} (derived from \mbox{HYP-92a9b4d9}; status \emph{formally verified}; the independent batched review \mbox{REV-7f70c161} (decision \emph{accept}, formal correctness only) targets it. Revision~1 of this report said this review was pending; the ledger now records it, so the statement is updated here).
 In \path{MathResearch/ECDLP/SLPBound.lean} a \emph{program} over a commutative ring $F$ is a list of operations with a single input variable
-$x$; each operation appends a constant of $F$ (free), the input, or the sum, difference or product of two earlier values.
+$x$; each operation appends an arbitrary constant of $F$, the input, or the sum, difference or product of two earlier values; every operation, including \texttt{const} and \texttt{var}, counts one step toward the length~$L$ (the Lean docstring calls constants ``free'' only in the sense that any element of $F$ may appear; the \texttt{const} operation itself is counted, as \mbox{REV-7f70c161} also records).
 There are no divisions, comparisons or branching. A program of length $L$ computes a polynomial of degree at most $2^L$ in $x$.
 Combined with Theorem~C this gives, in Lean (source commit \path{bff5e14c0f187719fb79c07f7768a2856f20604a}, \texttt{lake build} 3166 jobs, 0 warnings;
 build evidence \path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-94bd6bd6-9c44-47e7-9743-cd567e803d9f.evidence};
@@ -275,18 +288,84 @@ in this restricted model, logarithmic in $N$. The cost-model consequence recorde
 then $\Omega(n^2)$ bit operations are needed in this model) is a remark, \emph{not formalized}, and concerns only this restricted model; it says nothing about the open
 $O(n\log n)$ target for general algorithms.
 
-\paragraph{(ii) Method barrier L2: proof attempt, PI-checked, not reviewed.}
-Ledger record \mbox{HYP-0d4f14da} (status \emph{open}, proof status \emph{proof attempt}; the principal investigator checked the proof steps and reproduced the
-supporting numerical scripts; not formalized, not independently reviewed). The claim: for a ``translation annihilator''
-$D=\sum_{i\in S}c_iG(Q+iP)$ with $\sum c_i=\sum ic_i=0$ ($|S|=s$, width $w$), $G=g\circ x$, $\deg g=d\ge1$, $2N<r$, one has $N\le ds+w$, minimized at $s=3$, $w=2$,
-which is Theorem~C. Hence zero-counting arguments with translates cannot improve the constant $1/3$; any sharper bound must use information beyond the pole structure and the values $G(kP)=f(k)$.
-We state this only as recorded; it has no proof in this report.
+\paragraph{(ii) Straight-line programs with division: formally verified; independently reviewed for formal correctness.}
+Ledger records \mbox{HYP-6aef8c30} (status \emph{completed}, outcome \emph{verified}, proof status \emph{formally verified}) and \mbox{PRF-9586acb8}; the independent batched review
+\mbox{REV-7f70c161} (decision \emph{accept}) covers formal correctness only. Source commit \path{3ecf1f474ae3868e877727d1061c444c5307271f}, \texttt{lake build} 3167 jobs, 0 warnings
+(build evidence \path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-3aa1a646-4c3d-4ffa-b511-6c3b1ba10f31.evidence});
+axioms \texttt{[propext, Classical.choice, Quot.sound]} (\path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-ec79161e-5786-4124-9252-7d36a4adcc4e.evidence}).
+In \path{MathResearch/ECDLP/RationalSLP.lean} the operation type \texttt{Op} additionally has a division \texttt{div i j}; values are evaluated in $F$ (with Lean's total convention $x/0=0$),
+and \texttt{Defined prog u} says that \emph{every} division of \texttt{prog} (including dead ones) has a nonzero divisor value at $u$. The statement, verbatim from the repository
+(namespace \texttt{MathResearch.ECDLP.RationalSLP}; the binders \texttt{\{F : Type*\} [Field F] [DecidableEq F]} come from a \texttt{variable} line):
+\begin{lstlisting}
+theorem length_bound_rational_slp {W : Affine F} (h1 : W.a₁ = 0) (h2 : W.a₂ = 0)
+    (h3 : W.a₃ = 0) (h2' : (2 : F) ≠ 0) (P : W.Point) (r : ℕ) (hr : addOrderOf P = r)
+    (N : ℕ) (hN : 2 * N < r) (prog : List (Op F)) (i : ℕ)
+    (hdef : ∀ k : ℕ, 1 ≤ k → k ≤ N → Defined prog (xCoord (k • P)))
+    (hprog : ∀ k : ℕ, 1 ≤ k → k ≤ N → (evalAt prog (xCoord (k • P))).getD i 0 = (k : F)) :
+    N ≤ 3 * 2 ^ prog.length + 2
+\end{lstlisting}
+In words: for a straight-line program over $F$ with $+,-,\times,\div$ and constants and a single input $u$, if every division has a nonzero divisor at $u=x(kP)$ and the $i$-th output equals $k$
+there for all $1\le k\le N$, $2N<r$, then $N\le 3\cdot2^{L}+2$ where $L$ is the program length (so $L\ge\log_2((N-2)/3)$). The constant is the same as in the division-free case (i).
+The proof (as recorded) obtains from the program a pair of polynomials $(A,B)$ of degree $\le 2^L$ with $A(x(kP))=k\,B(x(kP))$ and $B(x(kP))\ne0$, and applies a rational analogue of Theorem~C
+(\texttt{degree\_bound\_rational\_short\_weierstrass}: $N\le 3d+2$ for $\max(\deg A,\deg B)\le d$, no coprimality hypothesis assumed); the non-vanishing of the cleared polynomial uses orbit propagation, which forces $2=0$ in $F$. The review \mbox{REV-7f70c161}
+records that the bound $3d+2$ is attained at $d=1$ ($p=11$, $y^2=x^3+1$, $P=(9,2)$, $A=1+u$, $B=3+2u$, $N=5$). The Lean statement for odd $r$ in the form $r\le 6\cdot2^{L}+5$ is \texttt{length\_bound\_rational\_slp\_order} in the same file (not separately recorded in the ledger records we consulted).
+\emph{Scope.} The model has no branching or comparison, no bit access, and does not take $P$ as input; it counts field operations only and makes no bit-complexity claim. It does not apply to rho, baby-step giant-step or index calculus.
+The ledger's earlier remark that the true constant might be nearer~$2$ is refuted as a uniform claim by the attained instance above.
 
-\paragraph{(iii) Empirical conjecture (not proved).}
+\paragraph{(iii) Theorem DT: algebraic computation trees with equality tests; formally verified, proof reviewed.}
+Ledger record \mbox{HYP-dbe79a50} (status \emph{open}, proof status \emph{formally verified}, outcome \emph{verified}), Lean record \mbox{PRF-ab954d65}; the blind adversarial review \mbox{REV-d7bc5940}
+confirmed the paper proof of Theorem~DT and independently found the gap in the paper proof of its Lemma~A that the Lean proof repairs (propagation from one adjacent pair in both directions). Source commit \path{b699c3e8ac3ba3d96b1f6b6bc0fcf7b3eea34cbd}, \texttt{lake build} 3168 jobs, 0 warnings
+(build evidence \path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-9ccbf89a-509f-496d-b41f-a352be9c57c5.evidence});
+axioms \texttt{[propext, Classical.choice, Quot.sound]} (\path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-c8fc5d7e-6598-4dbb-81dc-f3bc94eeb0f2.evidence}).
+Lean source \path{MathResearch/ECDLP/DecisionTree.lean}. The Lean statement, verbatim (namespace \texttt{MathResearch.ECDLP.DecisionTree}; same binders as above):
+\begin{lstlisting}
+theorem Tree.length_bound {W : Affine F} (h1 : W.a₁ = 0) (h2 : W.a₂ = 0)
+    (h3 : W.a₃ = 0) (h2' : (2 : F) ≠ 0) (P : W.Point) (r : ℕ) (hr : addOrderOf P = r)
+    (N : ℕ) (hN : 2 * N < r) (T : Tree F) (L : ℕ) (hL : T.arithDepth ≤ L)
+    (hrun : ∀ k : ℕ, 1 ≤ k → k ≤ N → T.exec (xCoord (k • P)) = some (k : F)) :
+    N ≤ 9 * 2 ^ L - 1
+\end{lstlisting}
+The informal statement recorded in the ledger (verbatim from the HYP record): \emph{Theorem DT (algebraic decision trees with equality tests): over a field $F$ with $2\ne0$, $W$ short Weierstrass,
+$P$ of order $r$, $2N<r$. Any algebraic computation tree with single input $u=x(Q)$, arithmetic nodes $+,-,\times,\div$ (divisions defined where executed) and branching only on ``register $=0$?'', in which every root-to-leaf path has at most $L$ arithmetic nodes, and which outputs $k$ at $u=x(kP)$ for all $1\le k\le N$, satisfies $N\le 9\cdot 2^L-1$ regardless of depth.}
+The formal model: a \texttt{Tree} is a leaf (outputting a register), an arithmetic node (an \texttt{Op}: \texttt{const}, \texttt{var}, \texttt{add}, \texttt{sub}, \texttt{mul}, \texttt{div}), or a test ``register $=0$?'' with two subtrees;
+register~$0$ is the input; \texttt{arithDepth} is the maximal number of arithmetic nodes on a root-to-leaf path and tests are not counted; \texttt{exec} returns \texttt{none} if an executed division has a zero divisor.
+
+\emph{Scope (after the complexity review \mbox{REV-6c73a098} of remarks E0 and E3).}
+Theorem~DT is a statement about \emph{equality branching only}: the only tests are ``register $=0$''. \emph{Constants are charged}: in the formal model every \texttt{const} node is an arithmetic node and counts toward $L$ (the informal text above does not say this; the ledger note and the review do).
+With \emph{order comparisons} the arithmetic length becomes vacuous: the review records that a binary-search tree over the sorted values has $0$ arithmetic nodes (toy $N=300$: depth $9$, $300$ leaves), so in a model with comparisons only tree size and depth matter,
+and no size--depth lower bound is proved. Theorem~DT therefore does \emph{not} bound algorithms that compare integers or inspect bits of field elements, and it bounds arithmetic nodes, not tree size, depth or running time. The remarks about Shoup's generic group model recorded with Frontier~E (E0) are reviewed only as heuristics and are not used here.
+The ledger also records Theorem~P and Corollary~P1 for this model; they are \emph{not} formalized, Corollary~P1 was false as transcribed (missing hypothesis $\operatorname{char}F=0$ or $\operatorname{char}F>N$; counterexample over $\mathbb F_{3^7}$) and is superseded by \mbox{HYP-8e55674a}; we do not state them. Novelty of Theorem~DT is unchecked (the ledger notes Ben-Or/Strassen-type degree arguments and Lange--Winterhof as possibly related).
+
+\paragraph{(iv) Method barrier L2: proof attempt, PI-checked, not reviewed.}
+Ledger record \mbox{HYP-0d4f14da} (status \emph{open}, proof status \emph{proof attempt}; the principal investigator checked the proof steps and reproduced the
+supporting numerical scripts; not formalized, not independently reviewed). The claim, as recorded: for a ``translation annihilator''
+$D=\sum_{i\in S}c_iG(Q+iP)$ with $\sum c_i=\sum ic_i=0$ ($|S|=s$, width $w$), $G=g\circ x$, $\deg g=d\ge1$, $2N<r$, if $D\not\equiv0$ then $D$ has pole degree exactly $2ds$ and at least $2(N-w)$ zeros, so $N\le ds+w$, minimized at $s=3$, $w=2$,
+which is Theorem~C. The zeros arise at the points $Q=kP$ where all translates are in the prescribed range: there $D(kP)=\sum_ic_if(k+i)=0$ because the prescribed values $f(k)=k$ have degree $\le1$ and $\sum c_i=\sum ic_i=0$ (we spell this out; the ledger states only the zero count).
+Hence zero-counting arguments with translates cannot improve the constant $1/3$; any sharper bound must use information beyond the pole structure and the values $G(kP)=f(k)$.
+We state this only as recorded; it has no proof in this report. The same record contains a claim L3 on anomalous $j=0$ curves which we do not use.
+
+\paragraph{(v) Empirical conjecture C$^*$ (not proved).}
 Ledger record \mbox{HYP-a8d1f541} (``Conjecture C$^*$'', status \emph{open}, experimental): outside structured families (for example anomalous CM $j=0$ curves),
 the minimal degree of an interpolating $g$ is $N-1-O(1)$. The ledger records 154{,}288 toy cases over prime fields with $p\le997$ and a maximal observed deficit of~$3$.
 This is an observation at toy sizes, not evidence for large parameters. If true it would show that the factor $3$ between the bounds above and the trivial Lagrange upper bound is a limitation of the method, not of the problem.
 
+\paragraph{(vi) Theorem E (cusp-degeneration bound): reviewed proof, \emph{not formalized, not formally verified}.}
+Ledger record \mbox{HYP-a4caa1de} (``Theorem~E (corrected after review)'', status \emph{completed}, proof status \emph{reviewed}, outcome \emph{verified}; it supersedes \mbox{HYP-38005bec}, where the same statement appeared under the label ``Theorem~D''). One blind review, \mbox{REV-3b9427bd} (decision: revise, i.e.\ accept with three statement corrections; the corrected statement is the one below),
+examined it by symbolic recomputation for $N=3,4$ and exhaustive small-$p$ tests; the proof is a paper proof using the Schwartz--Zippel lemma (listed in the ledger as an assumption) and the standard theory of division polynomials, taken as standard and not re-proved. No Lean formalization exists, no human has checked it,
+and it is \emph{not} a formally verified result. The ledger claim, verbatim from the record:
+\begin{quote}\small
+(Theorem D, corrected) Let $N\ge3$, $p>2N$ prime, $V:=\{\tau\in\mathbb F_p^3: 4A^3+27B^2\ne0,\ W(\tau)\ne0\}$ (the valid triples, on which $\mathrm{mindeg}_N$ is defined and equals $\deg$ of the interpolant), $Z:=\{\tau\in V: c_{N-1}(\tau)=0\}$.
+If $p$ does not divide $\mathrm{Num}(\tau_0)$ (always true for target $k^2$; for target $k$ iff $p\notin\mathrm{Bad}_N$), then $|Z|\le w_Np^2$, hence $\mathrm{mindeg}(N)=N-1$ for all $\tau\in V\setminus Z$.
+[$|\mathbb F_p^3\setminus V|$ is separately bounded by $(6+\deg W)p^2$ and is not covered by this theorem.]
+\end{quote}
+Notation (from the review report \path{research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297.md}, which also gives the corrected statement): $\tau=(A,x_0,y_0)$ with $B:=y_0^2-x_0^3-Ax_0$ (the curve is $y^2=x^3+Ax+B$ and the point is $(x_0,y_0)$);
+$\psi_m$ are the division polynomials; $W:=\prod_{1\le a<b\le N}\psi_{a+b}\psi_{b-a}$; $c_{N-1}(\tau)$ is the divided difference of order $N-1$ of the target function ($k^2$ or $k$) at the nodes $x(kP)$, $1\le k\le N$, so that $c_{N-1}$ is the leading coefficient of the interpolant;
+$\mathrm{Num}:=W\,c_{N-1}$ as an explicit polynomial; $\tau_0=(A,x_0,y_0)=(0,1,1)$ is the cuspidal point; $\mathrm{Bad}_N:=\{p>2N \text{ prime}: p\mid \mathrm{Num}(\tau_0)\}$ (a finite set of primes, the primes $>2N$ dividing the numerator of $c_{N-1}(0)$ for target $k$;
+the review lists, e.g., $\mathrm{Bad}_3=\{11\}$ and $\mathrm{Bad}_4=\{151\}$); $w_N$ is half the weighted degree of $\mathrm{Num}$ (a bound for its total degree after substituting $B$). The review's values are $w_3=23$ and $w_4=81$.
+\emph{Scope.} The theorem concerns fixed small $N$: the bound $w_Np^2$ is non-vacuous only for $p$ large compared with $N$ (the review notes $N\lesssim(3p)^{1/4}$ for non-vacuity); in the exhaustive tests it was genuinely tested only for $N=3$, $p\in\{29,\dots,47\}$. The ledger records that it does not prove
+Conjecture~C$^*$ beyond the regime $N<p^{1/4}$, that it is not an algorithm, and that it gives no complexity claim.
+
+@@BENCH@@
 \section{Limitations}\label{sec:limits}
 \begin{itemize}
 \item Degree is not time. A lower bound on $\deg g$ for polynomials in one variable $x(kP)$ does not bound the running time of any algorithm, and we draw no bit-complexity consequence.
