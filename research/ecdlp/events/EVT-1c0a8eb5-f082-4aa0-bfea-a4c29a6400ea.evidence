@@ -1,0 +1,26 @@
+{
+  "id": "EVT-1c0a8eb5-f082-4aa0-bfea-a4c29a6400ea",
+  "kind": "task-status-change",
+  "task": "TSK-b934062e-fbf0-4cb1-a706-1343b8101857",
+  "task_key": "ECDLP-64",
+  "timestamp": "2026-11-03T18:18:53.037567Z",
+  "run": "RUN-9fe2318a-a1ca-40bb-a683-8b39d8521d6d",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "frontier-explorer"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "8 mechanisms; 7 killed on paper, Koopman spectrum null",
+  "before_sha256": "e59e7bc9f13e840bfcaee4f37a532e7cc0ad0e917f0cc6f7b04e314c39d1810f",
+  "after_sha256": "c5bf7ff0eb29aa7d115f7bf8bcea12d2e1c8f5042848dc6b47d8bf44e81d4574"
+}
