@@ -1,0 +1,42 @@
+{
+  "id": "RUN-e5203fb5-9b4c-49e2-86e1-ea88971103fb",
+  "type": "RUN",
+  "title": "Round 6 / ECDLP-19: Lean formalization of Theorem B (x-only polynomial for k^2)",
+  "created_at": "2026-11-03T10:09:22.181548Z",
+  "status": "active",
+  "question": "Formalize in Lean 4/Mathlib the reviewed Theorem B (HYP-eda6732a) or the strongest faithful sub-statement reachable within budget, via polynomial algebra (classical x-addition formulas and root counting).",
+  "rationale": "Bounded subagent run for TSK-fe72aad1-aa67-4d7d-a0c9-3c8bc14a05ef",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-fe72aad1-aa67-4d7d-a0c9-3c8bc14a05ef",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T10:09:32.835579Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization",
+    "task": "TSK-fe72aad1-aa67-4d7d-a0c9-3c8bc14a05ef",
+    "input_hypotheses": [
+      "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+    ],
+    "starting_commit": "6d9d0aa4c30dc8376537c63895bcc1b6fac08fcc",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; owns Interpolation.lean",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}

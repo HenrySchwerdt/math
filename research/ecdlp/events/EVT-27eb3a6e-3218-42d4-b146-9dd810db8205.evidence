@@ -1,0 +1,26 @@
+{
+  "id": "EVT-27eb3a6e-3218-42d4-b146-9dd810db8205",
+  "kind": "task-status-change",
+  "task": "TSK-fe72aad1-aa67-4d7d-a0c9-3c8bc14a05ef",
+  "task_key": "ECDLP-19",
+  "timestamp": "2026-11-03T10:09:33.157574Z",
+  "run": "RUN-e5203fb5-9b4c-49e2-86e1-ea88971103fb",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Formalization subagent launched",
+  "before_sha256": "2bb8617339a2b28e4116600eabb8126a3709250021523ba2eb9a5ea304106dc6",
+  "after_sha256": "1d7fa4defc458aca5a6c4452735c2672179ad28de3aacd526b00cde9767c2f0f"
+}

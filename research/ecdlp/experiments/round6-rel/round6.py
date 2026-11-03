@@ -359,14 +359,14 @@ def run_m2(k, nsamp=40, ncurves=2):
     json.dump(out, open(os.path.join(HERE, f'results_m2_k{k}.json'), 'w'), indent=1)
 
 # ---------------------------------------------------------------- sweep of |V| (M1, small-x)
-def run_sweep(k=16, curves=2):
+def run_sweep(k=16, curves=2, cfs=(0.5, 0.75, 1.0, 1.5, 2.0), tag=''):
     p, hA, hB = find_prime(k); out = dict(k=k, p=p, rows=[]); c0 = p ** (1 / 3)
     for ci in range(curves):
         r = rng(f"sweep-{k}-{ci}"); E = rand_curve(r, p); pts = E.points(); ymap = valid_xs(E); allx = sorted(ymap)
-        for cf in (0.5, 0.75, 1.0, 1.5, 2.0):
+        for cf in cfs:
             n = int(round(cf * c0)); d = eval_set(E, pts, ymap, allx[:n], rng(f"sw-{k}-{ci}-{cf}"), 100)
             d.update(c=cf, curve=ci, sqrtp=math.sqrt(p)); out['rows'].append(d); print(cf, {a: (round(b, 3) if isinstance(b, float) else b) for a, b in d.items()}, flush=True)
-    json.dump(out, open(os.path.join(HERE, f'results_sweep_k{k}.json'), 'w'), indent=1)
+    json.dump(out, open(os.path.join(HERE, f'results_sweep{tag}_k{k}.json'), 'w'), indent=1)
 
 # ---------------------------------------------------------------- end to end
 def solve_mod(rows, rhs, N, ncols):
@@ -428,4 +428,5 @@ if __name__ == '__main__':
     elif cmd == 'run': run_k(int(sys.argv[2]))
     elif cmd == 'm2': run_m2(int(sys.argv[2]))
     elif cmd == 'sweep': run_sweep()
+    elif cmd == 'sweep-big': run_sweep(14, 1, (2.0, 3.0, 4.0, 6.0), '_exploratory_posthoc')
     elif cmd == 'e2e': run_e2e()
