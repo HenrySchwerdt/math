@@ -1,0 +1,34 @@
+{
+  "id": "TSK-15871df8-8e14-4958-a868-0a09a9e90d3f",
+  "type": "TSK",
+  "title": "Round 10 / ECDLP-33: tightness of x-only interpolation degree bounds",
+  "created_at": "2026-11-03T10:56:40.013276Z",
+  "status": "active",
+  "question": "Tightness conjecture for x-only interpolation: for E/F_p, P of prime order r and 2N < r, every g in F_p[X] with g(x(kP)) = k (resp. k^2) for 1 <= k <= N has deg g >= N \u2212 c for an absolute constant c (generic curves), improving the proven bound (N \u2212 2)/3; or else there exist families with substantially lower-degree interpolants.",
+  "rationale": "PI follow-up derived from proven Theorems B/C (user asked to resume building on proven results).",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-4c2d330a-de1e-43e2-8e21-7ba3e8ec6219",
+    "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-f1d41fce-40ff-468b-af8d-9670610690a7.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute.",
+  "notes": "Created by PI RUN-62dbda7c.",
+  "success_criteria": [
+    "Exact statements; no sorry; reproducible evidence; corrected variants separate; honest negative results."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-43398e3b-6162-4e45-bd6d-0873519b7062.md",
+    "research/ecdlp/runs/RUN-43398e3b-6162-4e45-bd6d-0873519b7062.json",
+    "research/ecdlp/experiments/round10-tight/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; computations < 5 min; no commits; ~90 min."
+}

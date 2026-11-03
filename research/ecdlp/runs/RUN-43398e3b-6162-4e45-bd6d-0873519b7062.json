@@ -1,0 +1,46 @@
+{
+  "id": "RUN-43398e3b-6162-4e45-bd6d-0873519b7062",
+  "type": "RUN",
+  "title": "Round 10 / ECDLP-33: tightness of x-only interpolation degree bounds",
+  "created_at": "2026-11-03T10:56:40.050027Z",
+  "status": "active",
+  "question": "Tightness conjecture for x-only interpolation: for E/F_p, P of prime order r and 2N < r, every g in F_p[X] with g(x(kP)) = k (resp. k^2) for 1 <= k <= N has deg g >= N \u2212 c for an absolute constant c (generic curves), improving the proven bound (N \u2212 2)/3; or else there exist families with substantially lower-degree interpolants.",
+  "rationale": "Bounded subagent run for TSK-15871df8-8e14-4958-a868-0a09a9e90d3f",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-15871df8-8e14-4958-a868-0a09a9e90d3f",
+    "HYP-4c2d330a-de1e-43e2-8e21-7ba3e8ec6219",
+    "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T10:57:01.925803Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "algebraic-geometry",
+    "task": "TSK-15871df8-8e14-4958-a868-0a09a9e90d3f",
+    "input_hypotheses": [
+      "HYP-4c2d330a-de1e-43e2-8e21-7ba3e8ec6219",
+      "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
+      "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+    ],
+    "starting_commit": "ecc9384eea857fc620270e8c8295c9661f727028",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "HYP-4c2d330a-de1e-43e2-8e21-7ba3e8ec6219",
+  "type": "HYP",
+  "title": "Tightness of x-only interpolation degree bounds",
+  "created_at": "2026-11-03T10:56:40.145155Z",
+  "status": "open",
+  "question": "Tightness conjecture for x-only interpolation: for E/F_p, P of prime order r and 2N < r, every g in F_p[X] with g(x(kP)) = k (resp. k^2) for 1 <= k <= N has deg g >= N \u2212 c for an absolute constant c (generic curves), improving the proven bound (N \u2212 2)/3; or else there exist families with substantially lower-degree interpolants.",
+  "rationale": "Derived by PI from the observed gap (proven ~N/3, observed N\u22121) in ECDLP-25/26 toy data.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [
+    "Tightness conjecture for x-only interpolation: for E/F_p, P of prime order r and 2N < r, every g in F_p[X] with g(x(kP)) = k (resp. k^2) for 1 <= k <= N has deg g >= N \u2212 c for an absolute constant c (generic curves), improving the proven bound (N \u2212 2)/3; or else there exist families with substantially lower-degree interpolants."
+  ],
+  "proof_status": "unproved",
+  "outcome": "unresolved",
+  "next_action": "Round-10 follow-up task.",
+  "notes": "PI-derived follow-up from proven theorems."
+}
