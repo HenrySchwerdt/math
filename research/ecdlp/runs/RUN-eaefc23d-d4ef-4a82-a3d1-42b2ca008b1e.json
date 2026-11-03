@@ -1,0 +1,39 @@
+{
+  "id": "RUN-eaefc23d-d4ef-4a82-a3d1-42b2ca008b1e",
+  "type": "RUN",
+  "title": "Round 19 / frontier I: last literature long shots (Mahalanobis-Mallick Problem L, isogeny distance to structured curves)",
+  "created_at": "2026-11-03T13:56:29.990139Z",
+  "status": "active",
+  "question": "(1) Does the Mahalanobis-Mallick linear-algebra formulation of ECDLP ('Problem L', and their 2026 zero-minor follow-up) admit any solver below sqrt(p), or does it reduce to known exponential costs? (2) For a generic prime-order curve, what is the cost of walking an isogeny path to a curve with exploitable structure (j=0/1728, small embedding degree, anomalous), and is any such target reachable in less than sqrt(p)?",
+  "rationale": "Bounded run for TSK-9a54da92-9afe-4d8a-b907-20336f7adb0a",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-9a54da92-9afe-4d8a-b907-20336f7adb0a"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T13:56:29.990477Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "frontier-explorer",
+    "task": "TSK-9a54da92-9afe-4d8a-b907-20336f7adb0a",
+    "input_hypotheses": [],
+    "starting_commit": "51c07a2c190103b4d385274df764c2734f2889a9",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}
