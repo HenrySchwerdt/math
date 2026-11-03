@@ -1,0 +1,26 @@
+{
+  "id": "EVT-e6290e61-7e29-4ab5-bf4e-40403defe269",
+  "kind": "task-status-change",
+  "task": "TSK-e5cd23ce-c89d-41bd-b03c-9fe4eb9fd7b0",
+  "task_key": "ECDLP-54",
+  "timestamp": "2026-11-03T13:29:48.876746Z",
+  "run": "RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "frontier-explorer"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "Evolved champion equals rho (1.77 sqrt(r)+136); low exponent was setup amortisation",
+  "before_sha256": "d0b922dba7f82048ecc9d33456d22ae0cf4005bd5b1307bb97c007823e8c49c0",
+  "after_sha256": "657be730ac68ec4e496af7acb1438e86b43576116025830c6385a93b57579fb9"
+}
