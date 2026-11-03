@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Independent correspondence review of PRF-613be647",
   "created_at": "2026-11-03T09:40:39.336316Z",
-  "status": "active",
+  "status": "completed",
   "question": "Do the Lean declarations in Barriers.lean correctly express HYP-57d71f43 and HYP-eff2cfbb?",
   "rationale": "REVIEW.md independent review.",
   "assumptions": [],
@@ -36,8 +36,11 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; owns REV-0971d96d and this RUN",
     "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/reviews/REV-0971d96d-490d-4f4c-829d-3c7919d679d7.json",
+      "research/ecdlp/reviews/REV-0971d96d-490d-4f4c-829d-3c7919d679d7.md"
+    ],
+    "resulting_commit": "ea0f1d4408a9ee45007fe9d3a7fc7b00b2416ab8",
     "tests": [],
     "benchmark": "Not applicable",
     "machine": "Claude Code remote Linux container",
