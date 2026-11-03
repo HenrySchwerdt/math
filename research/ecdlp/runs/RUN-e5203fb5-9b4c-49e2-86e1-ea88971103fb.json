@@ -13,11 +13,13 @@
     "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Lean (axioms: propext, Classical.choice, Quot.sound only) proves, in MathResearch/ECDLP/Interpolation.lean, the conditional polynomial form of HYP-eda6732a: for a field with 2,3 != 0 and a sequence xs satisfying injectivity on 1..(r-1)/2 and the cleared x-addition relations, any g with g(xs k)=k^2 has r <= 6*deg g + 5. The link xs k = x(kP) on an actual curve is a hypothesis, not proved. Addition formulas checked numerically (36177212 cases, 0 mismatches)."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "next_action": "PI: add root import of MathResearch.ECDLP.Interpolation; assign follow-up to discharge hS/hT/hinj from Mathlib WeierstrassCurve.Affine (addX, slope, neg) for ZMod p; independent review of correspondence.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Self-reported model identity by the executing agent: Sonnet 5.5, model ID claude-sonnet-5-5.",
   "run": {
     "started_at": "2026-11-03T10:09:32.835579Z",
     "completed_at": null,

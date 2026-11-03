@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/root/.elan/bin/lake",
+    "env",
+    "lean",
+    "research/ecdlp/proofs/checks/Round6Axioms.lean"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T10:14:59.944761Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T10:15:03.884791Z",
+  "truncated": false,
+  "output": "'MathResearch.ECDLP.Interp.degree_bound_of_x_relations' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.Interp.degree_bound_of_x_relations_order' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.Interp.counting' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+}
