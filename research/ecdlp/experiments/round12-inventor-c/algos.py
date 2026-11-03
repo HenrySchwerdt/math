@@ -13,10 +13,16 @@ def _steps(ops, P, Q, n, rng, withQ=True):
         S.append((pt, a, b))
     return S
 
+def setup_steps(ops, P, Q, n, rng, withQ=True):
+    c = ops.count
+    S = _steps(ops, P, Q, n, rng, withQ)
+    ops.setup = ops.count - c; ops.count = c      # one-time O(r log n) setup reported separately
+    return S
+
 # ---------------------------------------------------------------- reference: Pollard rho (DP, r-adding)
 def rho_ref(ops, P, Q, n, rng, L, maxfac=20):
     p = ops.p
-    S = _steps(ops, P, Q, n, rng)
+    S = setup_steps(ops, P, Q, n, rng)
     mask, table, wid = dp_mask_for(L), {}, 0
     cap = maxfac * (mask+1)
     while True:
@@ -27,8 +33,8 @@ def rho_ref(ops, P, Q, n, rng, L, maxfac=20):
             if R is None: break
             x = R[0]
             if (x & mask) == 0:
-                prev = table.get(x)
-                if prev is None: table[x] = (a, b, wid)
+                prev = table.get(R)
+                if prev is None: table[R] = (a, b, wid)
                 elif prev[2] != wid and prev[1] != b:
                     return (prev[0]-a) * pow(b-prev[1], -1, n) % n, ops.count, len(table)
                 break
@@ -39,7 +45,7 @@ def rho_ref(ops, P, Q, n, rng, L, maxfac=20):
 # ---------------------------------------------------------------- C1: negation-class rho with cycle escape
 def rho_neg(ops, P, Q, n, rng, L, maxfac=20):
     p, half = ops.p, ops.p >> 1
-    S = _steps(ops, P, Q, n, rng)
+    S = setup_steps(ops, P, Q, n, rng)
     mask, table, wid = dp_mask_for(L), {}, 0
     cap = maxfac * (mask+1)
     stats = {'cycle2': 0, 'cycle4': 0, 'capped': 0}
@@ -84,7 +90,7 @@ class PreTable:
     """Point-only walk f (no dependence on Q); table of DPs reached from m chains started at s_i P."""
     def __init__(self, ops, P, n, rng, m, L, maxfac=20):
         self.ops, self.P, self.n, self.L = ops, P, n, L
-        self.S = _steps(ops, P, None, n, rng, withQ=False)
+        self.S = setup_steps(ops, P, None, n, rng, withQ=False)
         self.mask = dp_mask_for(L); self.cap = maxfac*(self.mask+1)
         self.table, self.chains = {}, 0
         c0 = ops.count
@@ -93,7 +99,7 @@ class PreTable:
             R = ops.mul(s, P); a = s
             r = self.walk_to_dp(R, a)
             self.chains += 1
-            if r is not None: self.table.setdefault(r[0][0], r[1])
+            if r is not None: self.table.setdefault(r[0], r[1])
         self.pre_ops = ops.count - c0
     def walk_to_dp(self, R, a):
         ops, n, mask, S = self.ops, self.n, self.mask, self.S
@@ -114,8 +120,8 @@ class PreTable:
         while True:
             t += 1
             r = self.walk_to_dp(R0, t)
-            if r is not None and r[0][0] in T:
-                return (T[r[0][0]] - r[1]) % n, ops.count - c0, t
+            if r is not None and r[0] in T:
+                return (T[r[0]] - r[1]) % n, ops.count - c0, t
             R0 = ops.add(R0, self.P)   # next start Q + (t+1)P  (1 op)
             if t > max_restarts: return None, ops.count - c0, t
 
@@ -126,7 +132,7 @@ def batch_rho(ops, P, Qs, n, rng, L, maxfac=20):
     off[v] = k_v - k_root(v) (mod n)."""
     M = len(Qs)
     pts = [None] + list(Qs)            # node 0 = identity => walk from cP
-    S = _steps(ops, P, None, n, rng, withQ=False)
+    S = setup_steps(ops, P, None, n, rng, withQ=False)
     mask, table, wid = dp_mask_for(L), {}, 0
     cap = maxfac*(mask+1)
     parent, off = list(range(M+1)), [0]*(M+1)
@@ -181,8 +187,8 @@ def batch_rho(ops, P, Qs, n, rng, L, maxfac=20):
             if R is None: break
             x = R[0]
             if (x & mask) == 0:
-                prev = table.get(x)
-                if prev is None: table[x] = (j, c, wid)
+                prev = table.get(R)
+                if prev is None: table[R] = (j, c, wid)
                 elif prev[2] != wid:
                     pj, pc, _ = prev
                     if pj != j:

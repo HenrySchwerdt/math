@@ -6,3 +6,9 @@ orbit built 1.1s; distinct=262049==262049
  j=3 G: z=  0.01 p=1.0000  B: z=  1.08 p=0.3279  D: z=  0.03 p=0.9836  S: z=  1.41 p=0.1148
  j=5 G: z=  0.99 p=0.3607  B: z=  0.57 p=0.5574  D: z=  0.55 p=0.6885  S: z=  0.57 p=0.6393
  DETECTED cells (REAL): []
+--- POSITIVE CONTROL (planted)  (min attainable p=0.0476)
+ j=1 G: z= 72.30 p=0.0476  B: z= 27.59 p=0.0476  D: z=763.43 p=0.0476  S: z=304.68 p=0.0476
+ j=2 G: z=  0.44 p=0.7619  B: z=  0.97 p=0.2857  D: z=  1.44 p=0.1905  S: z=  0.36 p=0.7143
+ j=3 G: z=  0.92 p=0.3333  B: z=  0.92 p=0.2857  D: z=  1.05 p=0.3810  S: z=  1.28 p=0.2381
+ j=5 G: z=  1.70 p=0.0952  B: z=  0.28 p=0.7143  D: z=  0.30 p=0.8571  S: z=  0.56 p=0.4762
+ DETECTED cells (POSITIVE CONTROL (planted)): ['G1', 'B1', 'D1', 'S1']
