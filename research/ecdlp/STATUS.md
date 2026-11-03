@@ -189,6 +189,19 @@ Round 20 (package 16, user idea "estimate, then binary search / refine the resid
   leak detected and a residual-refinement decoder recovers k end to end on it. Bar to beat rho:
   advantage ε ≳ C·r^{−1/4} (≈0.055 at 2^28, ≈1.6e-4 at 2^64).
 
+Round 21 (package 17, idea tournament, user directive "be innovative, do original research"):
+- 25 new mechanisms from three directions, each gated on paper against the obstruction map, survivors
+  tested with pre-registered protocols and same-implementation rho controls: all closed.
+  A (ECDLP-64, dynamics/physics, 8 ideas): Koopman orbit spectrum null (linear complexity = random,
+  prediction worse than the mean). B (ECDLP-65, algebraic geometry, 9 ideas): Miller-function
+  character into F_p* reduces to a tangent line (no leak, advantage ≤ 0.019 vs bar ~0.2); Riemann–Roch
+  divisors give no extra supply. C (ECDLP-66, computation models, 8 ideas): multiplicative-character
+  leak in (Z/r)* null (≤ 0.0055), linear complexity = r, tensor ranks full; Reed–Solomon list
+  decoding at d ≥ 2 formally open (low prior).
+- Common obstruction (tournament A): group operations are bijections with known coefficients; every
+  non-injective ingredient so far is an equidistributed hash of x. Design target: a computable
+  non-injective map on E(F_p) with non-uniform collisions.
+
 ## Next
 
 Every generic-model route tested reproduces √r. Remaining levers are non-generic structure
