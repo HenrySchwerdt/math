@@ -1,2 +1,2 @@
 seed=1 p=524309 a=215466 b=446788 r=523949 prime-order, r!=p
-orbit built 1.1s; distinct=261974==261974
+orbit built 2.2s; distinct=261974==261974

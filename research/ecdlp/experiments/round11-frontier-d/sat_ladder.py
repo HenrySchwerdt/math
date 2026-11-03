@@ -123,7 +123,7 @@ def solve_one(inst, solver, tlimit, native_xor, q):
                 if l < 0: par = not par
             S.add_xor_clause([abs(l) for l in lits], par)
         ok, model = S.solve(); dt = time.time() - t0; conf = None
-        model = list(model) if ok else None; sat = ok
+        model = list(model)[1:] if ok else None; sat = ok
     else:
         from pysat.solvers import Solver
         import threading
