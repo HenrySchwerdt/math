@@ -1,0 +1,26 @@
+{
+  "id": "EVT-e507c29f-5a9a-4e5e-9534-712a12eb6737",
+  "kind": "task-status-change",
+  "task": "TSK-c3e4bd30-835c-4cf7-90f7-eb905fade4d5",
+  "task_key": "ECDLP-16",
+  "timestamp": "2026-11-03T10:12:03.502838Z",
+  "run": "RUN-6cc3ff88-5ba0-4f61-b733-be953a11876b",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "algorithm-engineering"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-6 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Deprioritize summation-polynomial prime-field route"
+  },
+  "reason": "m=3 relation-solving cost measured (pre-registered, PI-reproduced): T < p^(1/6) not achieved; linear algebra alone exceeds sqrt(p) for |V|=p^(1/3)",
+  "before_sha256": "7726f5325df3e01ab2a759ebebc46a96ef0c955e1637c0fa64c23deecd2e5306",
+  "after_sha256": "b4b00683eb1616baf77b9d9923a9b01575bbd36be0b062037247798a323cbea9"
+}

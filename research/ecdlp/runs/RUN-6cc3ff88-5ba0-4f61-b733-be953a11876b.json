@@ -13,14 +13,22 @@
     "HYP-db508348-69da-451b-ba37-d4d4f472c121"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Semaev S_3 and S_4 (closed-form resultant) verified against toyec group law: 2400 S_3 and 2400 S_4 random tuples, 0 failures; at p=4001 the root set in x4 equals {x(+-P1+-P2+-P3)} for 300/300 triples (experimental, finite).",
+    "At m=3 on toy prime-field curves (p=4129..1061413, 2-4 curves each) no implemented method achieves per-relation cost T < p^{1/6} with |V| ~ p^{1/3}: best (M1 table) has T about 54-320 counted mults vs p^{1/6} 4-10, per-attempt exponent about 0.33; T exponent fits 0.22-0.30 (4-5 points), not < 1/6 (experimental, toy sizes, unit cost model).",
+    "PKM subgroup-coset, small-x and random factor bases of equal size have indistinguishable yield pi and cost T at m=3 on the tested domain.",
+    "Total relation-collection cost for M1 is 44-83 sqrt(p) (9-17x the analytic rho model) with fitted exponent about 0.61; linear algebra alone (model 3|V|^2 = 3p^{2/3}) exceeds sqrt(p) for |V|=p^{1/3}, so m=3 cannot beat sqrt(p) in this cost model even with T=O(1) (analytic, model-dependent).",
+    "S_4 pair-scan with root test (evaluation or gcd with X^h-c) costs about 2n^3 / n^2 log n per attempt, 300-800x above M1 at k=12,14; analytic degree bounds (>= h, h^2) for elimination (M3) were derived but not implemented or reviewed.",
+    "T below p^{1/6} occurs only for oversized |V| >= ~4p^{1/3} (T floor of one 5-unit step; post hoc, one prime) at total cost >= 450 sqrt(p).",
+    "End-to-end index calculus at p=4129 (prime-order curve) recovered k=3318, matching dlog_bsgs (about 21.7 sqrt(p) counted units, dense elimination uncounted)."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "outcome": "verified",
+  "next_action": "Independent review of the S_4 oracle and M1 counting; record that at m=3 the linear-algebra term 3|V|^2=p^{2/3} alone exceeds sqrt(p); frontier only at m>=5 with a real Groebner/resultant tool (none available) or an FFT-over-mu_h test of the S_4 slice.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. | Self-reported model identity: Sonnet 5.5 (claude-sonnet-5-5), per system prompt; not independently verified. Commands run directly in shell, not via scripts/research.py exec (see experiments/round6-rel/COMMANDS.txt). Protocol sha256 d9debd5c2c8d6076ac40ddbbfa71b6e7fe7fd8069a315eab880b694caa282f46. No web lookups; no commits. | PI reproduced verify, run 16, e2e in isolation via research.py exec; identical except wall-clock timing fields.",
   "run": {
     "started_at": "2026-11-03T10:01:45.541232Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T10:12:03.152089Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "algorithm-engineering",
@@ -32,10 +40,12 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [],
-    "files_changed": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round6-rel/"
+    ],
     "resulting_commit": null,
     "tests": [],
-    "benchmark": "See report",
+    "benchmark": "Operation-count benchmark (field mults, w_I=1 headline, w_I=10 stored): exact pi by full enumeration; M1 on 200 random R per set; M2 on 40 R x 2 curves at k=12,14; 4 curves per p (2 at 2^20), p=4129..1061413; master seed 20261108; equal treatment of PKM/small-x/random sets; rho baseline analytic. Python 3.13.18, Xeon 2.3GHz, 4 vCPU. No wall-clock benchmark claimed. See research/ecdlp/experiments/round6-rel/ (SHA256SUMS).",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
     "reviews": []
   }

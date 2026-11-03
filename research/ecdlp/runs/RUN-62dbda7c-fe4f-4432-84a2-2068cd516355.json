@@ -46,7 +46,10 @@
     "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-92928956-9991-4c4b-885a-d6847f388495.evidence",
     "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-a8e988fa-0e3a-4ede-a3ca-14637b9e581d.evidence",
     "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-ea5eac74-4262-4657-90e7-c1a7e9926fe5.evidence",
-    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5cdea696-0104-433a-a0fa-353da2d90bec.evidence"
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5cdea696-0104-433a-a0fa-353da2d90bec.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-9ea176ef-bb77-40ae-acb2-65a34840d986.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-a728b634-e648-492c-b62e-8611829dddcf.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-034aeff5-04fa-4e99-aaf2-b62e9b4659f5.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
@@ -97,7 +100,10 @@
       "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-92928956-9991-4c4b-885a-d6847f388495.evidence",
       "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-a8e988fa-0e3a-4ede-a3ca-14637b9e581d.evidence",
       "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-ea5eac74-4262-4657-90e7-c1a7e9926fe5.evidence",
-      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5cdea696-0104-433a-a0fa-353da2d90bec.evidence"
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5cdea696-0104-433a-a0fa-353da2d90bec.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-9ea176ef-bb77-40ae-acb2-65a34840d986.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-a728b634-e648-492c-b62e-8611829dddcf.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-034aeff5-04fa-4e99-aaf2-b62e9b4659f5.evidence"
     ],
     "files_changed": [],
     "resulting_commit": null,

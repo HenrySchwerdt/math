@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "<temp>/claude-0/-home-user-math/1a63ece5-8e90-57cd-878a-b7d0d1d0ee6f/scratchpad/r6rel/round6.py",
+    "verify"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T10:11:35.833751Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T10:11:37.756720Z",
+  "truncated": false,
+  "output": "{\n \"seed\": 20261108,\n \"checks\": {\n  \"p4001\": {\n   \"a\": 2910,\n   \"b\": 3424,\n   \"order\": 3922,\n   \"S3_tuples\": 600,\n   \"S3_bad\": 0,\n   \"S4_tuples\": 600,\n   \"S4_bad\": 0\n  },\n  \"p15791\": {\n   \"a\": 973,\n   \"b\": 11594,\n   \"order\": 15589,\n   \"S3_tuples\": 600,\n   \"S3_bad\": 0,\n   \"S4_tuples\": 600,\n   \"S4_bad\": 0\n  },\n  \"p65537\": {\n   \"a\": 35855,\n   \"b\": 3893,\n   \"order\": 65848,\n   \"S3_tuples\": 600,\n   \"S3_bad\": 0,\n   \"S4_tuples\": 600,\n   \"S4_bad\": 0\n  },\n  \"p1000003\": {\n   \"a\": 351992,\n   \"b\": 525934,\n   \"order\": 999200,\n   \"S3_tuples\": 600,\n   \"S3_bad\": 0,\n   \"S4_tuples\": 600,\n   \"S4_bad\": 0\n  }\n },\n \"total_S3_tuples\": 2400,\n \"total_S4_tuples\": 2400,\n \"completeness_p4001\": {\n  \"tuples\": 300,\n  \"root_set_equals_expected\": 300,\n  \"not_equal\": 0,\n  \"reasons\": {}\n },\n \"negative_control\": {\n  \"random_x4\": 2098,\n  \"spurious_zero\": 0,\n  \"note\": \"random x4 outside expected set with S_4=0: genuinely rare only if roots==expected (see not_equal)\"\n }\n}\n"
+}
