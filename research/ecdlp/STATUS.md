@@ -183,6 +183,12 @@ Round 19 (package 14):
   anomalous) are isogeny-invariant (380 Vélu steps), j=0/1728 reachable only for a ~2.5/√p fraction
   with at most a √6 gain. All routes named by the 2015–2026 literature survey are now tested.
 
+Round 20 (package 16, user idea "estimate, then binary search / refine the residual"):
+- Inventor J (ECDLP-63): MSB(k), regression of k and a closeness detector on the residual (k−g)P
+  show no out-of-sample signal on real curves (99% CI upper bound ≤ 0.0045 at 2^28); planted 0.05
+  leak detected and a residual-refinement decoder recovers k end to end on it. Bar to beat rho:
+  advantage ε ≳ C·r^{−1/4} (≈0.055 at 2^28, ≈1.6e-4 at 2^64).
+
 ## Next
 
 Every generic-model route tested reproduces √r. Remaining levers are non-generic structure
