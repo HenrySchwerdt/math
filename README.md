@@ -29,3 +29,8 @@ VitePress, with Markdown documentation, local search, open tasks, results and
 evidence. Generate it from the shared ledger with
 `.venv/bin/python scripts/research.py site`. See [website instructions](docs/WEBSITE.md).
 GitHub Actions publishes updates committed to main.
+
+Task progress is connected directly to the CLI: `research.py new` assigns a key,
+`research.py task` updates status and records its reason, and `research.py exec`
+records commands. The public task board and history are regenerated automatically
+on main; agents do not edit website pages to report progress.

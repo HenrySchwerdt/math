@@ -38,3 +38,12 @@ complete enough for handoff; the full laboratory remains to be implemented.
 Use all current scientific roles from docs/ROLES.md with bounded native agents
 when available, otherwise explicitly record sequential fallback and missing
 independence. Never infer live integration, proof or approval from config files.
+
+## CLI-driven task reporting
+
+Task keys are persisted per project (e.g. ECDLP-1); canonical UUIDs remain unchanged.
+Use `scripts/research.py task PROJECT KEY --run RUN-ID --status STATUS --reason REASON`
+for progress updates and `exec` for recorded command steps. These feed the public
+board and task history directly. Do not maintain a second status list in website
+files. Commits to main automatically regenerate and deploy the public notebook.
+Task status and outcomes never change mathematical proof status automatically.

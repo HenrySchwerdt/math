@@ -18,7 +18,8 @@
     "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-1a4acbb8-f8eb-4f01-b2ff-3f12bc891c4b.evidence",
     "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-48f41634-b50d-40c7-8faf-834c88c1e32b.evidence",
     "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-8708561a-d88b-4452-a32e-56d1ab565c54.evidence",
-    "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-943adf0a-ea97-4c8d-84e5-168469240c93.evidence"
+    "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-943adf0a-ea97-4c8d-84e5-168469240c93.evidence",
+    "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-b6a91c77-3742-4d2d-9d57-b30c00e25030.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
@@ -43,7 +44,8 @@
       "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-1a4acbb8-f8eb-4f01-b2ff-3f12bc891c4b.evidence",
       "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-48f41634-b50d-40c7-8faf-834c88c1e32b.evidence",
       "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-8708561a-d88b-4452-a32e-56d1ab565c54.evidence",
-      "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-943adf0a-ea97-4c8d-84e5-168469240c93.evidence"
+      "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-943adf0a-ea97-4c8d-84e5-168469240c93.evidence",
+      "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-b6a91c77-3742-4d2d-9d57-b30c00e25030.evidence"
     ],
     "files_changed": [],
     "resulting_commit": null,
@@ -52,7 +54,8 @@
     "machine": "darwin-arm64; existing Python/Node environment",
     "reviews": [
       "REV-693fc37e-a22f-4e0c-81c7-363f5cbab2d7",
-      "REV-9f04c6d8-adb2-480d-9e07-657b25c9e8bf"
+      "REV-9f04c6d8-adb2-480d-9e07-657b25c9e8bf",
+      "REV-3020ee02-c9e2-446c-b0bc-6ca95da2dad7"
     ]
   }
 }

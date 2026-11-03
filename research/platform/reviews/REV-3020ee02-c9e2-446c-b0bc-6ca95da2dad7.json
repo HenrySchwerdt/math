@@ -1,0 +1,38 @@
+{
+  "id": "REV-3020ee02-c9e2-446c-b0bc-6ca95da2dad7",
+  "type": "REV",
+  "title": "Accept CLI-driven task state and board history",
+  "created_at": "2026-11-03T07:40:06.292732Z",
+  "status": "completed",
+  "question": "Do explicit CLI status updates produce faithful task history while preserving proof state?",
+  "rationale": "Independent review of the direct CLI integration requested by user.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-4b23a091-2797-4b5f-b737-7d3ff26b75e2"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Publish reviewed CLI integration.",
+  "notes": "Code review only; proof status is not promoted by task completion.",
+  "review": {
+    "run": "RUN-acc2b3ec-8ef9-47e4-809a-943ec4d82bb1",
+    "target_commit": "83d0e11a6dec77639cf959b5c5bf7f03ecfd87e7",
+    "targets": [
+      "TSK-4b23a091-2797-4b5f-b737-7d3ff26b75e2"
+    ],
+    "decision": "accept",
+    "rationale": "25 independent tests passed and no remaining concrete blocker found.",
+    "counterexamples": [
+      "Wrong or inactive run",
+      "Concurrent update lock",
+      "Completion without outcome",
+      "No-op updates and orphan events"
+    ],
+    "complexity": "Administrative CLI only; no mathematical algorithm or asymptotic claim.",
+    "limitations": "Build/browser/real transition checks performed separately by integrator.",
+    "initial_packet": "Exact source and regression tests; no persuasive mathematical narrative."
+  }
+}

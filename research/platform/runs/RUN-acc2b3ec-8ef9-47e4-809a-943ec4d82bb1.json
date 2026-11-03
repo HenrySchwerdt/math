@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Review CLI task transitions and board history",
   "created_at": "2026-11-03T07:37:55.066800Z",
-  "status": "active",
+  "status": "completed",
   "question": "Do explicit CLI task updates preserve proof status and produce safe evidence-backed history?",
   "rationale": "User asked that task board and progress updates be directly connected to the Python CLI.",
   "assumptions": [],
@@ -14,12 +14,12 @@
   "evidence": [],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Review the exact CLI status-update candidate and tests.",
+  "outcome": "verified",
+  "next_action": "Publish CLI-backed progress updates with the board.",
   "notes": "Read-only final code review; earlier board reviews remain separately recorded. Runtime model ID unavailable.",
   "run": {
     "started_at": "2026-11-03T07:37:55.067311Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T07:40:06.291945Z",
     "provider": "openai",
     "model": "unknown-runtime-id-not-exposed",
     "role": "task-cli-reviewer",
@@ -30,8 +30,11 @@
     "worktree": "shared checkout; read-only reviewer",
     "commands": [],
     "files_changed": [],
-    "resulting_commit": null,
-    "tests": [],
+    "resulting_commit": "83d0e11a6dec77639cf959b5c5bf7f03ecfd87e7",
+    "tests": [
+      "Reviewer independently ran 25 tests successfully on exact 83d0e11.",
+      "Inspected CLI active-run/task ownership, local locking, immutable event linking and unchanged proof status."
+    ],
     "benchmark": "Not applicable: CLI state update review.",
     "machine": "Existing local checkout",
     "reviews": []
