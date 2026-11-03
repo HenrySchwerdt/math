@@ -166,6 +166,17 @@ Round 16 (package 12, user directive "give everything"):
 - Inventor H (ECDLP-56): fixed-curve precomputation with sorted tables, comparison trees or tuned
   walks stays on S·T² ≈ r; comparison features predict k at chance level (planted leak detected).
 
+Rounds 17–18 (package 13):
+- Literature survey 2015–2026 (ECDLP-58): no surviving sub-√p claim for generic prime-field curves.
+  PI derivation (unreviewed): with randomised targets total ≥ (p/s^{m−1})·T_test + LA(s); m=2,3 tie
+  rho at best; m=4 needs T_test < p^{1/10} at s = p^{1/5}.
+- Inventor I (ECDLP-59): m=4 finders measured: MITM p^0.405, resultant tower p^0.585, Singular
+  Gröbner times out at d ≥ 8; T_test ≥ s² = p^{2/5} for chaining finders. Index calculus closed for
+  m = 2, 3, 4 at toy scale.
+- Frontier H (ECDLP-57): automated discovery with field arithmetic, S_3, lifting and linear algebra
+  under a corrected fitness finds only rho/BSGS variants; a hand index-calculus program in the DSL
+  loses to rho by a growing factor (34 → 96).
+
 ## Next
 
 Every generic-model route tested reproduces √r. Remaining levers are non-generic structure
