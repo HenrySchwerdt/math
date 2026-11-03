@@ -1,0 +1,32 @@
+{
+  "id": "TSK-c63259bc-552d-4a5f-8923-facb297a671a",
+  "type": "TSK",
+  "title": "Technical report v3: complete obstruction map (rounds 1-19)",
+  "created_at": "2026-11-03T14:12:43.565382Z",
+  "status": "completed",
+  "question": "Extend internal report PAP-ef6e2010 to v3 with a section mapping every tested route to its quantified obstruction (index calculus m=2,3,4 incl. supply/finder accounting, ambient groups, isogenies, Problem L, precomputation, automated discovery, integer structure), all numbers copied from ledger HYPs, evidence levels kept distinct.",
+  "rationale": "PI proposal after round 19 (option 1): consolidate negative results; internal only.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-623609d1-828d-438f-9704-583b68f4f076.evidence",
+    "research/ecdlp/events/EVT-3a1f1c23-e445-4012-ae76-db60bc83c93e.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Independent manuscript review vs ledger",
+  "notes": "Created via research.py start.",
+  "success_criteria": [
+    "Exact statements; reproducible evidence; honest negatives."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-8fac7ff6-c53c-4464-8c70-128549e16c8a.md",
+    "research/ecdlp/runs/RUN-8fac7ff6-c53c-4464-8c70-128549e16c8a.json",
+    "research/ecdlp/papers/PAP-ef6e2010-7950-47cf-bb75-05801891905b/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; no commits."
+}

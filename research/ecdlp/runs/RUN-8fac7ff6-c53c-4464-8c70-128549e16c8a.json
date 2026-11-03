@@ -1,0 +1,48 @@
+{
+  "id": "RUN-8fac7ff6-c53c-4464-8c70-128549e16c8a",
+  "type": "RUN",
+  "title": "Technical report v3: complete obstruction map (rounds 1-19)",
+  "created_at": "2026-11-03T14:12:43.568669Z",
+  "status": "completed",
+  "question": "Extend internal report PAP-ef6e2010 to v3 with a section mapping every tested route to its quantified obstruction (index calculus m=2,3,4 incl. supply/finder accounting, ambient groups, isogenies, Problem L, precomputation, automated discovery, integer structure), all numbers copied from ledger HYPs, evidence levels kept distinct.",
+  "rationale": "Bounded run for TSK-c63259bc-552d-4a5f-8923-facb297a671a",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-c63259bc-552d-4a5f-8923-facb297a671a",
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-8fac7ff6-c53c-4464-8c70-128549e16c8a-command-7e63623c-4b07-4b65-8098-1c812fbb1006.evidence",
+    "research/ecdlp/runs/RUN-8fac7ff6-c53c-4464-8c70-128549e16c8a-command-8933097c-43c6-442f-85bb-e72bd47c8d45.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T14:12:43.569162Z",
+    "completed_at": "2026-11-03T14:16:34.350904Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "research-worker",
+    "task": "TSK-c63259bc-552d-4a5f-8923-facb297a671a",
+    "input_hypotheses": [],
+    "starting_commit": "72448b48f1d4c6b9aabe221dc085d5ff3750b905",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [
+      "research/ecdlp/runs/RUN-8fac7ff6-c53c-4464-8c70-128549e16c8a-command-7e63623c-4b07-4b65-8098-1c812fbb1006.evidence",
+      "research/ecdlp/runs/RUN-8fac7ff6-c53c-4464-8c70-128549e16c8a-command-8933097c-43c6-442f-85bb-e72bd47c8d45.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/papers/PAP-ef6e2010-7950-47cf-bb75-05801891905b/"
+    ],
+    "resulting_commit": "a3810fefd657edf0fca40fd0f79c0fda91af2e38",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

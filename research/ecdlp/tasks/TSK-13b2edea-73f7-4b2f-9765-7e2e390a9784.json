@@ -1,0 +1,32 @@
+{
+  "id": "TSK-13b2edea-73f7-4b2f-9765-7e2e390a9784",
+  "type": "TSK",
+  "title": "Review technical report v3 against the ledger",
+  "created_at": "2026-11-03T14:16:34.427998Z",
+  "status": "completed",
+  "question": "Is every number, cost, obstacle and evidence label in the v3 obstruction map faithful to the ledger HYP/REV records, with no overclaim?",
+  "rationale": "Selected by the PI.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-16205da4-8128-4418-bae0-e45d78912b9d.evidence",
+    "research/ecdlp/events/EVT-b89cee77-adbc-4375-9680-98a9929f6ef4.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Closed",
+  "notes": "Created via research.py start.",
+  "success_criteria": [
+    "Exact statements; reproducible evidence; honest negatives."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-04100a6e-df14-4bef-9888-5384c49f8600.md",
+    "research/ecdlp/runs/RUN-04100a6e-df14-4bef-9888-5384c49f8600.json",
+    "research/ecdlp/experiments/round19-review-pap-v3/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; no commits."
+}

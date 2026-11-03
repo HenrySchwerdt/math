@@ -1,0 +1,26 @@
+{
+  "id": "EVT-3a1f1c23-e445-4012-ae76-db60bc83c93e",
+  "kind": "task-status-change",
+  "task": "TSK-c63259bc-552d-4a5f-8923-facb297a671a",
+  "task_key": "ECDLP-61",
+  "timestamp": "2026-11-03T14:16:34.346902Z",
+  "run": "RUN-8fac7ff6-c53c-4464-8c70-128549e16c8a",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "research-worker"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Independent manuscript review vs ledger"
+  },
+  "reason": "v3 draft builds (20 pages, 0 undefined refs); review pending",
+  "before_sha256": "8ad5e13c56148d4b1e1bf3bfdb5a7f5c3a93f5ea035a12ae939e3eec4194c879",
+  "after_sha256": "4de21e051b6489c5d5f7ed684303c337b8c5c9dd45cf7465775e7515b747252c"
+}

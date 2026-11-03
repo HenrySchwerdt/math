@@ -1,0 +1,48 @@
+{
+  "id": "RUN-04100a6e-df14-4bef-9888-5384c49f8600",
+  "type": "RUN",
+  "title": "Review technical report v3 against the ledger",
+  "created_at": "2026-11-03T14:16:34.433988Z",
+  "status": "completed",
+  "question": "Is every number, cost, obstacle and evidence label in the v3 obstruction map faithful to the ledger HYP/REV records, with no overclaim?",
+  "rationale": "Bounded run for TSK-13b2edea-73f7-4b2f-9765-7e2e390a9784",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-13b2edea-73f7-4b2f-9765-7e2e390a9784",
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-04100a6e-df14-4bef-9888-5384c49f8600-command-4153a619-c518-4b61-8699-6f227bde5c97.evidence",
+    "research/ecdlp/runs/RUN-04100a6e-df14-4bef-9888-5384c49f8600-command-eda8788c-97d0-453a-8558-4fb4d7b77574.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T14:16:34.434429Z",
+    "completed_at": "2026-11-03T14:20:56.912322Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "independent-reviewer",
+    "task": "TSK-13b2edea-73f7-4b2f-9765-7e2e390a9784",
+    "input_hypotheses": [],
+    "starting_commit": "a3810fefd657edf0fca40fd0f79c0fda91af2e38",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [
+      "research/ecdlp/runs/RUN-04100a6e-df14-4bef-9888-5384c49f8600-command-4153a619-c518-4b61-8699-6f227bde5c97.evidence",
+      "research/ecdlp/runs/RUN-04100a6e-df14-4bef-9888-5384c49f8600-command-eda8788c-97d0-453a-8558-4fb4d7b77574.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/experiments/round19-review-pap-v3/"
+    ],
+    "resulting_commit": "949d92ed9be1f0b671458601ab6ff7533c6a6a2b",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}
