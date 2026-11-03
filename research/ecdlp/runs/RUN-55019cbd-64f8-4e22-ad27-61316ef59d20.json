@@ -1,7 +1,7 @@
 {
   "id": "RUN-55019cbd-64f8-4e22-ad27-61316ef59d20",
   "type": "RUN",
-  "title": "Round 7 / ECDLP-20: unconditional Lean Theorem B \u2014 derive x-addition identities from Mathlib",
+  "title": "Round 7 / ECDLP-20: unconditional Lean Theorem B — derive x-addition identities from Mathlib",
   "created_at": "2026-11-03T10:20:57.431719Z",
   "status": "active",
   "question": "Prove in Lean from Mathlib WeierstrassCurve.Affine (short Weierstrass a1=a2=a3=0) that for affine points Q, P with x(Q) != x(P): x(Q+P)+x(Q-P) and x(Q+P)x(Q-P) satisfy the cleared identities used by degree_bound_of_x_relations, and derive injectivity of k -> x(kP) on 1..(r-1)/2 from addOrderOf P = r odd; then state the unconditional Theorem B for points of W.Point.",
@@ -14,11 +14,13 @@
     "PRF-a6cf1e66-4d14-4e4d-8ced-617e4c0abf5f"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Lean (MathResearch/ECDLP/CurveX.lean, Lean 4.35.0, Mathlib 56a0058) proves unconditionally, with axioms only propext/Classical.choice/Quot.sound: for short Weierstrass W (a1=a2=a3=0) over a field, P : W.Point of odd order r with 2,3 != 0 in the field, any polynomial g with g(x(kP)) = k^2 for 1<=k<=(r-1)/2 has r <= 6*natDegree g + 5 (degree_bound_short_weierstrass). Hypotheses hinj, hS, hT of Interp.degree_bound_of_x_relations_order are discharged. Formal proof of a degree statement only; no bit-complexity or existence-of-g claim."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "next_action": "PI: add 'import MathResearch.ECDLP.CurveX' to MathResearch.lean, run lake build, independent review of statement correspondence; then use the theorem to retire the hypothesis-form caveat of Theorem B / HYP-eda6732a.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Self-reported by the formalization agent: Sonnet 5.5 (model ID claude-sonnet-5-5); not independently verified from runtime metadata. Not independently reviewed yet.",
   "run": {
     "started_at": "2026-11-03T10:21:19.301089Z",
     "completed_at": null,

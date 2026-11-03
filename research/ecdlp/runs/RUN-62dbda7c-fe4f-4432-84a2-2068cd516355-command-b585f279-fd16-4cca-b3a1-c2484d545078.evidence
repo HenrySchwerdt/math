@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/root/.elan/bin/lake",
+    "env",
+    "lean",
+    "research/ecdlp/proofs/checks/Round7Axioms.lean"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T10:25:14.282607Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T10:25:17.861877Z",
+  "truncated": false,
+  "output": "'MathResearch.ECDLP.CurveX.degree_bound_short_weierstrass' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.CurveX.sum_prod_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.CurveX.xCoord_add_sub' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.CurveX.xCoord_relations' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.CurveX.xCoord_smul_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.CurveX.smul_relations' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+}
