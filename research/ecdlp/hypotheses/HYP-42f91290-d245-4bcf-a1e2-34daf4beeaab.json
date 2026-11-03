@@ -3,7 +3,7 @@
   "type": "HYP",
   "title": "Theorem C: x-only interpolation degree bound for the discrete log",
   "created_at": "2026-11-03T10:34:27.939006Z",
-  "status": "open",
+  "status": "completed",
   "question": "Theorem C (x-only interpolation of k): Let W be short Weierstrass over a field F with 2 != 0, P a point with addOrderOf P = r, and 2N < r. If g in F[X] satisfies g(x(kP)) = k for 1 <= k <= N, then N <= 3 deg g + 2 (so r <= 6 deg g + 5 for N = (r-1)/2). Proof: the cleared second-difference polynomial N0(u) has degree exactly 3 deg g (leading coefficient -2 lc(g)), vanishes at x(kP) for 2 <= k <= N-1.",
   "rationale": "From ECDLP-25; linear analogue of Theorem B.",
   "assumptions": [],
@@ -13,7 +13,8 @@
     "TSK-78a350cd-9590-487e-ac4f-b018215eb7c2",
     "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
-    "PRF-35d1387a-9bd3-40b7-8985-4d589f1dd287"
+    "PRF-35d1387a-9bd3-40b7-8985-4d589f1dd287",
+    "REV-6c9bfbc1-282f-486a-912d-4037682368cf"
   ],
   "evidence": [
     "research/ecdlp/proofs/checks/Round8Axioms.lean"
@@ -23,8 +24,8 @@
   ],
   "proof_status": "formally-verified",
   "outcome": "verified",
-  "next_action": "Independent correspondence review; tightness (Lagrange interpolants have degree N-1 in all toy tests) is open.",
-  "notes": "Agent numerical check: 533 toy curves (p <= 211): bound, deg N0 = 3d, lc N0 = -2 lc g all held. Bound far from tight in tests. Likely implied by / weaker than Lange\u2013Winterhof-type results (Theorem A is known in kind): NOT claimed novel. Elementary.",
+  "next_action": "None.",
+  "notes": "Agent numerical check: 533 toy curves (p <= 211): bound, deg N0 = 3d, lc N0 = -2 lc g all held. Bound far from tight in tests. Likely implied by / weaker than Lange\u2013Winterhof-type results (Theorem A is known in kind): NOT claimed novel. Elementary. | Independent review REV-6c9bfbc1-282f-486a-912d-4037682368cf: accept (12,459 toy cases incl. extension fields; no bound violation). Probably not novel (Lange\u2013Winterhof\u2013Shparlinski-type results).",
   "formal": {
     "lean_file": "MathResearch/ECDLP/LinearInterp.lean",
     "declaration": "MathResearch.ECDLP.CurveX.degree_bound_linear_short_weierstrass",

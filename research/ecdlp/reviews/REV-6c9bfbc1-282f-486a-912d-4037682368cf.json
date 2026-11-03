@@ -1,31 +1,49 @@
 {
   "id": "REV-6c9bfbc1-282f-486a-912d-4037682368cf",
   "type": "REV",
-  "title": "Draft \u2014 define before work",
+  "title": "Independent correspondence review: Theorem C formalization (LinearInterp.lean)",
   "created_at": "2026-11-03T10:38:28.025982Z",
-  "status": "open",
-  "question": "Unassigned; define exact question",
+  "status": "completed",
+  "question": "Does MathResearch.ECDLP.CurveX.degree_bound_linear_short_weierstrass (and LinearInterp.degree_bound_of_x_relations_linear) at commit 9996995 build with standard axioms and faithfully, non-vacuously state Theorem C?",
   "rationale": "Unassigned; record why selected",
   "assumptions": [],
   "sources": [],
-  "refs": [],
+  "refs": [
+    "PRF-35d1387a-9bd3-40b7-8985-4d589f1dd287",
+    "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab"
+  ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "lake build at 9996995 (Lean v4.35.0) succeeded (3164 jobs, cached); direct re-elaboration of MathResearch/ECDLP/LinearInterp.lean via lake env lean exited 0 with no output.",
+    "Round8Axioms.lean: both degree_bound_of_x_relations_linear and degree_bound_linear_short_weierstrass depend only on propext, Classical.choice, Quot.sound.",
+    "No sorry/admit/axiom/unsafe/native_decide/implemented_by/decide in LinearInterp.lean, Interpolation.lean, CurveX.lean.",
+    "The curve statement matches Theorem C: a1=a2=a3=0, (2:F)!=0, addOrderOf P = r, 2N<r, g(x(kP)) = (k:F) (k mod char) for 1<=k<=N implies N <= 3 natDegree g + 2; xCoord junk value at infinity is never used (kP != 0 and injectivity are proved).",
+    "Scope: r = 0 (infinite order) makes 2N<r unsatisfiable, so the Lean theorem covers only finite-order P; irrelevant over finite fields. No discriminant hypothesis needed, so the statement is at least as general as Theorem C. Docstring says 'odd order' but oddness is not assumed.",
+    "Hypotheses are jointly satisfiable: toy instance y^2=x^3+x+6 over F_7, P=(4,2) of order 11, N=4, g=4X+6 (checked in Python, not in Lean).",
+    "Numeric check (reviewer scratch script, toyec.py cross-checked): 12459 (curve,P,N) cases over F_3, primes 5..109, F_9, F_27, F_81, F_25, F_125, F_49, F_121, 0 violations of N <= 3 d + 2 for the minimal-degree interpolant; minimal slack 1; 1592 extension-field cases with N > p (k mod p wraps) all within bound."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Draft only; no execution or verification claimed.",
+  "outcome": "verified",
+  "next_action": "PI integration review of PRF-35d1387a/HYP-42f91290; optionally add 'finite order' to the informal Theorem C wording and drop 'odd' from the degree_bound_linear_short_weierstrass docstring (no re-review needed for docstring-only change).",
+  "notes": "Reviewer self-reported model identity: Claude Opus 5.5 (claude-opus-5-5) per the session system prompt; runtime metadata not independently verified. Blind packet respected: initial findings written before reading PRF-35d1387a .md; research/ecdlp/runs/*.md not read. Scratch scripts/outputs (check_thmC.py, toy_instance.out) kept outside the repository and not committed. Novelty remarks are from unverified recollection.",
   "review": {
-    "run": null,
-    "target_commit": null,
-    "targets": [],
-    "decision": "revise",
-    "rationale": "Review not performed",
-    "counterexamples": [
-      "Not attempted"
+    "run": "RUN-f981fdcd-2f59-45af-a842-42c0e093c095",
+    "target_commit": "9996995c8a879e160ee14abbe938633043c8648e",
+    "targets": [
+      "PRF-35d1387a-9bd3-40b7-8985-4d589f1dd287",
+      "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab"
     ],
-    "complexity": "Not reviewed",
-    "limitations": "Draft review, not an assessment",
-    "initial_packet": "Not supplied"
+    "decision": "accept",
+    "rationale": "Builds at the target commit (Lean sources identical to PRF source commit 8191c0f) with only standard axioms; no forbidden constructs; statement faithfully encodes Theorem C for finite-order points on short Weierstrass curves in char != 2, with (k:F) = k mod char as intended; curve facts (x-addition relations, nonvanishing of kP, injectivity of k -> x(kP)) are proved from Mathlib, not assumed; proof is the expected degree-3d cleared second-difference polynomial argument with no shortcuts; hypotheses satisfiable; 12459 numeric cases consistent.",
+    "counterexamples": [
+      "Junk xCoord at infinity: blocked by proved kP != 0 for 1<=k<r and proved injectivity.",
+      "Vacuity: r=0 (infinite order) vacuous by design; otherwise satisfiable (F_7 toy instance).",
+      "Characteristic 3 and extension fields with N > p (targets k mod p repeat): 0 violations.",
+      "Minimal interpolant degree below N-1 (182 cases): all within bound.",
+      "Constant-g branch: needs only 1 != 2 in a field, no extra hypothesis."
+    ],
+    "complexity": "Not applicable: formal correctness only",
+    "limitations": "lake build cached; only LinearInterp.lean forcibly re-elaborated. No Lean-level example instance. Numeric sampling small (q <= 125) and random. Novelty assessment from recollection, sources unverified. Reviewer may share model family with author; independence limited to blind-packet procedure.",
+    "initial_packet": "Target commit 9996995; LinearInterp.lean (with Interpolation.lean, CurveX.lean); Round8Axioms.lean; informal Theorem C; claimed declarations CurveX.degree_bound_linear_short_weierstrass and LinearInterp.degree_bound_of_x_relations_linear; toyec.py. No author confidence or recommendation included."
   }
 }

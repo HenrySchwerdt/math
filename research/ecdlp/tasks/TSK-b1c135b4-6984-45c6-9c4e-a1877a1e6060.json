@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 9 / ECDLP-26: independent correspondence review of Theorem C (LinearInterp.lean)",
   "created_at": "2026-11-03T10:38:27.860617Z",
-  "status": "active",
+  "status": "completed",
   "question": "Does degree_bound_linear_short_weierstrass faithfully and non-vacuously state Theorem C?",
   "rationale": "Round-9 selection by PI (autonomous).",
   "assumptions": [],
@@ -13,12 +13,13 @@
     "PRF-35d1387a-9bd3-40b7-8985-4d589f1dd287"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-92871596-314e-4232-ab1a-61ecaaa36d88.evidence"
+    "research/ecdlp/events/EVT-92871596-314e-4232-ab1a-61ecaaa36d88.evidence",
+    "research/ecdlp/events/EVT-299cd23f-bdfa-483b-b35d-75b1fd3ff501.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "verified",
+  "next_action": "None",
   "notes": "Created by PI RUN-62dbda7c.",
   "success_criteria": [
     "Exact statements; reproducible evidence; no sorry; corrected variants separate."

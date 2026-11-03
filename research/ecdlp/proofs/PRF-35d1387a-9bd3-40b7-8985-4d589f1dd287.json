@@ -3,7 +3,7 @@
   "type": "PRF",
   "title": "Lean: x-only interpolation bound for the discrete log (Theorem C)",
   "created_at": "2026-11-03T10:34:27.981570Z",
-  "status": "active",
+  "status": "completed",
   "question": "Formal proof of Theorem C.",
   "rationale": "ECDLP-25.",
   "assumptions": [],
@@ -12,7 +12,8 @@
     "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
     "TSK-78a350cd-9590-487e-ac4f-b018215eb7c2",
     "RUN-9974dc45-0029-4615-bd81-9c9fbbda94f4",
-    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355"
+    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355",
+    "REV-6c9bfbc1-282f-486a-912d-4037682368cf"
   ],
   "evidence": [
     "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-71220053-4c4e-41ae-a7bb-01beffefdb6a.evidence",
@@ -26,8 +27,8 @@
   ],
   "proof_status": "formally-verified",
   "outcome": "verified",
-  "next_action": "Independent correspondence review.",
-  "notes": "Source commit 8191c0f69398b632fc2c7c7efbfdcdb9e2634b7b; lake build 3164 jobs, 0 warnings; standard axioms only.",
+  "next_action": "Accepted.",
+  "notes": "Source commit 8191c0f69398b632fc2c7c7efbfdcdb9e2634b7b; lake build 3164 jobs, 0 warnings; standard axioms only. | Independent review REV-6c9bfbc1-282f-486a-912d-4037682368cf: accept. Non-blocking wording: \"finite order r\" (r = 0 excluded by 2N < r); docstring \"odd\" unnecessary.",
   "formal": {
     "lean_file": "MathResearch/ECDLP/LinearInterp.lean",
     "declaration": "MathResearch.ECDLP.CurveX.degree_bound_linear_short_weierstrass",
