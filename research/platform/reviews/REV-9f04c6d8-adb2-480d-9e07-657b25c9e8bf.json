@@ -1,0 +1,38 @@
+{
+  "id": "REV-9f04c6d8-adb2-480d-9e07-657b25c9e8bf",
+  "type": "REV",
+  "title": "JS/Vue acceptance of project task board",
+  "created_at": "2026-11-03T07:33:43.588723Z",
+  "status": "completed",
+  "question": "Does the task board show persistent project IDs and evidence-backed steps without navigation or provenance regressions?",
+  "rationale": "Independent pre-publication review.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-4b23a091-2797-4b5f-b737-7d3ff26b75e2"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Publish reviewed board and verify live task flow.",
+  "notes": "Code/interface assessment only; not a mathematical proof.",
+  "review": {
+    "run": "RUN-c62e20cf-c2f8-4ea0-9fed-876c14a997ad",
+    "target_commit": "4d232b7a191d4fc500c6bfd63602ada6f2c774b4",
+    "targets": [
+      "TSK-4b23a091-2797-4b5f-b737-7d3ff26b75e2"
+    ],
+    "decision": "accept",
+    "rationale": "Reported defects corrected; independent bounded checks passed; no remaining actionable findings.",
+    "counterexamples": [
+      "Malformed argv/timestamp evidence",
+      "Review creation versus decision timestamp",
+      "Task-key stability under older imported records",
+      "Browser history state preservation"
+    ],
+    "complexity": "No mathematical complexity claim; static projection and interface only.",
+    "limitations": "Reviewer-specific tests only; parent separately owns browser/build/deployment checks.",
+    "initial_packet": "Exact candidate source, prior concrete findings and regression tests."
+  }
+}

@@ -21,7 +21,7 @@
   "proof_status": "not-applicable",
   "outcome": null,
   "next_action": "Build, test, review and publish the task board.",
-  "notes": "Initial alias module and registry setup preceded this RUN instrumentation; no mathematical work or fabricated task progress.",
+  "notes": "Initial alias module and registry setup preceded this RUN instrumentation; no mathematical work or fabricated task progress. Independent Python and JS/Vue reviews accepted exact candidate 4d232b7. Local browser confirmed deep-linked task dialog and Back/Forward across documentation.",
   "run": {
     "started_at": "2026-11-03T07:25:46.404521Z",
     "completed_at": null,
@@ -44,6 +44,9 @@
     "tests": [],
     "benchmark": "Not applicable: task presentation and metadata, not research performance.",
     "machine": "darwin-arm64; existing Python/Node environment",
-    "reviews": []
+    "reviews": [
+      "REV-693fc37e-a22f-4e0c-81c7-363f5cbab2d7",
+      "REV-9f04c6d8-adb2-480d-9e07-657b25c9e8bf"
+    ]
   }
 }
