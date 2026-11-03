@@ -53,7 +53,7 @@
   "proof_status": "not-applicable",
   "outcome": "refuted",
   "next_action": "Optional 10-minute follow-up of F-A1: explicit cocycle eta and p^3 digit structure; otherwise all three developed ideas are refuted at toy sizes. PI to review report.",
-  "notes": "Executed via the discovery adapter (claude-sonnet-5-5) following docs/roles/frontier-explorer.md, because this session's agent registry predates the new frontier-explorer adapter. Runtime identity not exposed to PI. Self-reported model identity: claude-sonnet-5-5 (Sonnet 5.5), role frontier-explorer. Commands run manually (not via research.py exec): t3_section_digit.py, t1_freiman.py, t2_landscape.py in experiments/round10-frontier-a. No-URL items: Smart/SAS anomalous attack, Jao-Miller-Venkatesan, Bourgain-Glibichuk-Konyagin are unverified recollection. Exact invocations: t3_section_digit.py {1009,4099,12007} {1,2}; t1_freiman.py 1 1000 and 2 1500; t2_landscape.py 1 and 2. | PI reproduced all three tests (with recorded args) via research.py exec.",
+  "notes": "Executed via the discovery adapter (claude-sonnet-5-5) following docs/roles/frontier-explorer.md, because this session's agent registry predates the new frontier-explorer adapter. Runtime identity not exposed to PI. Self-reported model identity: claude-sonnet-5-5 (Sonnet 5.5), role frontier-explorer. Commands run manually (not via research.py exec): t3_section_digit.py, t1_freiman.py, t2_landscape.py in experiments/round10-frontier-a. No-URL items: Smart/SAS anomalous attack, Jao-Miller-Venkatesan, Bourgain-Glibichuk-Konyagin are unverified recollection. Exact invocations: t3_section_digit.py {1009,4099,12007} {1,2}; t1_freiman.py 1 1000 and 2 1500; t2_landscape.py 1 and 2. | PI reproduced all three tests (with recorded args) via research.py exec. | PI fix: script paths were listed in run.commands (reserved for exec .evidence files) and broke the site build; moved to files_changed. Scripts were run manually by the agent; PI reproductions are exec evidence under RUN-62dbda7c.",
   "run": {
     "started_at": "2026-11-03T10:50:57.579959Z",
     "completed_at": "2026-11-03T11:02:34.499542Z",
@@ -67,13 +67,12 @@
     "starting_commit": "3d6849aa2d2739ac03464e94fc5a1fb3171d5e55",
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
-    "commands": [
-      "research/ecdlp/experiments/round10-frontier-a/t3_section_digit.py",
-      "research/ecdlp/experiments/round10-frontier-a/t1_freiman.py",
-      "research/ecdlp/experiments/round10-frontier-a/t2_landscape.py"
-    ],
+    "commands": [],
     "files_changed": [
-      "research/ecdlp/experiments/round10-frontier-a/"
+      "research/ecdlp/experiments/round10-frontier-a/",
+      "research/ecdlp/experiments/round10-frontier-a/t1_freiman.py",
+      "research/ecdlp/experiments/round10-frontier-a/t2_landscape.py",
+      "research/ecdlp/experiments/round10-frontier-a/t3_section_digit.py"
     ],
     "resulting_commit": "6220dd20ee2c38c2b681984decc5ee411523be01",
     "tests": [
