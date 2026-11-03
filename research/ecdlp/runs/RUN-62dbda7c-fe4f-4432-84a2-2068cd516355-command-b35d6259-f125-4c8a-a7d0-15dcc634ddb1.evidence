@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round10-frontier-a && python3 t1_freiman.py 1 1000"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:01:33.717140Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:02:05.042294Z",
+  "truncated": false,
+  "output": "p=1048583 M=1000 seed=1\nREAL  A:tot=118405,I+=85,I*=0 M:tot=118872,I+=87,I*=2\nA tot: real=118405 null_mean=118405.0 null_sd(floor Poisson)=344.1 z=0.00\nA I+: real=85 null_mean=77.4 null_sd(floor Poisson)=8.8 z=0.86\nA I*: real=0 null_mean=0.8 null_sd(floor Poisson)=0.9 z=-0.87\nM tot: real=118872 null_mean=118872.0 null_sd(floor Poisson)=344.8 z=0.00\nM I+: real=87 null_mean=76.1 null_sd(floor Poisson)=8.7 z=1.25\nM I*: real=2 null_mean=0.8 null_sd(floor Poisson)=0.9 z=1.28\nCTRL linear c*j A:tot=83208250,I+=83208250,I*=0 M:tot=738431,I+=0,I*=738431\nCTRL geometric 7^j A:tot=125164,I+=0,I*=0 M:tot=83208250,I+=83208250,I*=0\n"
+}

@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round10-frontier-a && python3 t2_landscape.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:01:21.706548Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T11:01:21.738515Z",
+  "truncated": false,
+  "output": "Traceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round10-frontier-a/t2_landscape.py\", line 34, in <module>\n    seed = int(sys.argv[1])\n               ~~~~~~~~^^^\nIndexError: list index out of range\n"
+}

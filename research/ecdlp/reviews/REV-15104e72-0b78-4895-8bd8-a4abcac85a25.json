@@ -1,31 +1,45 @@
 {
   "id": "REV-15104e72-0b78-4895-8bd8-a4abcac85a25",
   "type": "REV",
-  "title": "Draft \u2014 define before work",
+  "title": "Blind adversarial review of the mathematics of PAP-ef6e2010 (Lean degree lower bounds B, C, D)",
   "created_at": "2026-11-03T10:58:02.401861Z",
-  "status": "open",
-  "question": "Unassigned; define exact question",
+  "status": "completed",
+  "question": "Are Theorems B, C, D, the x-addition identities, the exact-degree 3*deg g claim, root counting/injectivity, the Hasse argument for D's side condition, and the stated consequences in main.tex mathematically correct as stated?",
   "rationale": "Unassigned; record why selected",
   "assumptions": [],
   "sources": [],
-  "refs": [],
+  "refs": [
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Sum and product x-addition identities (eq:sum, eq:prod) are correct; sum re-derived by hand, both checked 9207 times on toy curves over F_p (p<=43).",
+    "The cleared second-difference polynomial G_c has exact degree 3m and leading coefficient -2 lc(g) for every c (m>=1): constructed explicitly mod p via Newton-Girard recurrence, 1395 random (curve,g,c) cases, no failure; G_c(x(kP)) = d^(2m)[g(x((k+1)P))+g(x((k-1)P))-2g(x(kP))-c] verified 22365 times.",
+    "Root counting, injectivity on {1..N} for 2N<r, and the constant-g cases are valid; edge cases N<=2, r<=5 are trivially consistent.",
+    "Hasse argument for D's side condition over F_p is valid (N>=2j+1>=2p+1 gives r>4p+2>p+1+2sqrt p); the side condition is genuinely needed over extension fields (explicit F_27 example found).",
+    "Counterexample of Remark (y^2=x^3+5 over F_7, P=(3,2), g=5X) verified; the F_3 example (r=7,N=3) verified.",
+    "Brute-force minimal-degree tests found no violation of B (145 curves), C (2908 cases) or D (29958 (A,j) cases).",
+    "No blocking mathematical error found. Non-blocking: intro misstatement that evaluation cost is 'not controlled by d'; 3!=0 superfluous in B; abstract omits hypotheses of B; the dlog interpretation of k^2 in F vs k mod r."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Draft only; no execution or verification claimed.",
+  "outcome": "verified",
+  "next_action": "PI/author to apply non-blocking edits (see .md), then citation/overclaiming manuscript review and PI integration review; this review does not cover Lean-to-statement correspondence, bibliography, ledger citations or novelty.",
+  "notes": "Reviewer self-reported identity: Claude Sonnet 5.5 (claude-sonnet-5-5), adversarial-critic; identity not verifiable from runtime metadata. Same provider family as the manuscript worker, so independence is partial. Scratch scripts in the session scratchpad (paperreview/chk1.py, chk2.py, chk3.py), seeded, each <1 min. Outcome 'verified' means the mathematics reviewed here holds as stated (non-blocking edits recommended); it is not a formal-proof or novelty verdict.",
   "review": {
-    "run": null,
-    "target_commit": null,
-    "targets": [],
-    "decision": "revise",
-    "rationale": "Review not performed",
-    "counterexamples": [
-      "Not attempted"
+    "run": "RUN-4f8c29e7-d8f9-4306-88d4-992b827647a9",
+    "target_commit": "81b8a86",
+    "targets": [
+      "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
     ],
-    "complexity": "Not reviewed",
-    "limitations": "Draft review, not an assessment",
-    "initial_packet": "Not supplied"
+    "decision": "accept",
+    "rationale": "Every proof step re-derived or numerically verified; no mathematical error or overclaim that changes any theorem. Acceptance is of the mathematics only, conditional on the non-blocking wording fixes (N1-N6 in the .md); Lean statements were read as quoted but not rebuilt.",
+    "counterexamples": [
+      "Attempted: brute-force minimal-degree interpolation tests for B, C, D on random toy curves (p<=53): none found.",
+      "Attempted: remark counterexample y^2=x^3+5/F_7: confirmed (shows 2N<r necessary).",
+      "Constructed: char-3 field F_27, curve y^2=x^3+t^2 x, point of order 28, A={1,4,7}, N=7, g=1 constant, j=3: S_3=1>0=3 deg g; shows D's side condition is necessary over general fields (not in manuscript; recommended addition)."
+    ],
+    "complexity": "Separate analysis: results are degree bounds only. A straight-line program over F with s multiplications computes degree <= 2^s, so degree >= (r-5)/6 implies s >= log2((r-5)/6) = Omega(n) for r about 2^n; this is weak and compatible with any claimed bit complexity, so no bit-complexity consequence follows. The manuscript's phrase 'number of field operations not controlled by d' is inaccurate (Horner gives <= d mults); the stated conclusion remains correct.",
+    "limitations": "Lean proofs and build not re-run; Lean/informal correspondence, bibliography, novelty, ledger IDs and empirical counts in the paper not verified; only toy sizes (p<=53, GF(27)) tested; no human verification; reviewer same provider family as author.",
+    "initial_packet": "Blind packet: main.tex (and main.pdf) of PAP-ef6e2010 only, target commit 81b8a86; no runs or prior reviews read before initial findings; ledger HYP records consulted only afterwards."
   }
 }

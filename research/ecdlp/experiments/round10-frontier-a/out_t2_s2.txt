@@ -1,0 +1,16 @@
+seed=2 p=20021 N=20201 1/sqrt(N)=0.0070
+  cyclic|dx| delta=1: mean corr over 5 Q = -0.0113  max|c|=0.0207  (5/sqrtN=0.0352)
+  cyclic|dx| delta=2: mean corr over 5 Q = +0.0155  max|c|=0.0188  (5/sqrtN=0.0352)
+  cyclic|dx| delta=3: mean corr over 5 Q = +0.0024  max|c|=0.0077  (5/sqrtN=0.0352)
+  cyclic|dx| delta=4: mean corr over 5 Q = -0.0006  max|c|=0.0013  (5/sqrtN=0.0352)
+  cyclic|dx| delta=8: mean corr over 5 Q = -0.0135  max|c|=0.0165  (5/sqrtN=0.0352)
+  cyclic|dx| delta=64: mean corr over 5 Q = -0.0046  max|c|=0.0082  (5/sqrtN=0.0352)
+  hamming(x) delta=1: mean corr over 5 Q = +0.0128  max|c|=0.0216  (5/sqrtN=0.0352)
+  hamming(x) delta=2: mean corr over 5 Q = -0.0009  max|c|=0.0135  (5/sqrtN=0.0352)
+  hamming(x) delta=3: mean corr over 5 Q = -0.0087  max|c|=0.0172  (5/sqrtN=0.0352)
+  hamming(x) delta=4: mean corr over 5 Q = +0.0060  max|c|=0.0105  (5/sqrtN=0.0352)
+  hamming(x) delta=8: mean corr over 5 Q = +0.0056  max|c|=0.0177  (5/sqrtN=0.0352)
+  hamming(x) delta=64: mean corr over 5 Q = +0.0034  max|c|=0.0123  (5/sqrtN=0.0352)
+  random: success 57/400 at budget 1421 evals (= 10 sqrt(N); N=20201); random-sampling expectation ~56.3
+  anneal: success 24/400 at budget 1421 evals (= 10 sqrt(N); N=20201); random-sampling expectation ~56.3
+  rho reference ~ 1.25 sqrt(N) = 178 evals for success prob ~1/2
