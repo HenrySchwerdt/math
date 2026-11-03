@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 5 / ECDLP-15: cover-based transfers \u2014 genus/dimension trade-off (high-risk)",
   "created_at": "2026-11-03T09:47:33.825341Z",
-  "status": "active",
+  "status": "completed",
   "question": "For E/F_p (p prime) and covers pi: C -> E of genus g with efficiently computable pullback pi^*: E(F_p) -> J_C(F_p), is there any regime of g (as a function of log p) where known Jacobian index-calculus complexities (Gaudry, Gaudry\u2013Thom\u00e9\u2013Th\u00e9riault\u2013Diem, Enge\u2013Gaudry, Diem) applied to J_C beat sqrt(p)? Make the regime analysis rigorous from the published complexity statements (with exact hypotheses), and identify the precise missing ingredient; test the smallest case numerically if feasible.",
   "rationale": "Bounded subagent run for TSK-70af651a-696e-4564-8c53-85dd0320a211",
   "assumptions": [],
@@ -95,7 +95,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round5-cover/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "d8d43a8e59cf4347a2bac6e23bd9739fa941f488",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
