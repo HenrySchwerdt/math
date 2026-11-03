@@ -1,31 +1,48 @@
 {
   "id": "REV-08014e33-0955-4907-b909-19fe23f94c5a",
   "type": "REV",
-  "title": "Draft \u2014 define before work",
+  "title": "Independent correspondence review of conditional Theorem B (PRF-a6cf1e66)",
   "created_at": "2026-11-03T10:15:11.008865Z",
-  "status": "open",
-  "question": "Unassigned; define exact question",
-  "rationale": "Unassigned; record why selected",
+  "status": "completed",
+  "question": "Do degree_bound_of_x_relations and degree_bound_of_x_relations_order at 8f844f9 faithfully, non-vacuously and soundly formalize Theorem B (deg g >= (r-5)/6) under the stated conditional hypotheses?",
+  "rationale": "docs/REVIEW.md requires independent review before integrating a PRF claim.",
   "assumptions": [],
   "sources": [],
-  "refs": [],
+  "refs": [
+    "PRF-a6cf1e66-4d14-4e4d-8ced-617e4c0abf5f",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+  ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "lake build at 8f844f9 succeeds (3162 jobs); #print axioms gives only propext, Classical.choice, Quot.sound for the three declarations; no sorry/admit/axiom/unsafe/native_decide/implemented_by in Interpolation.lean.",
+    "hS is derived by hand from the chord law; hS and hT hold for xs k = x(kP), x0 = x(P) for 2<=k<=m-1 in 33181 odd-order point instances (p<140), 0 failures.",
+    "On a curve with P of odd order r, the hypothesis range 2<=k, k+1<=(r-1)/2 never contains kP = +-P (where hS fails, RHS = 4 y0^2 != 0), and k -> x(kP) is injective on [1,(r-1)/2].",
+    "Hypotheses are jointly satisfiable (non-vacuous); conclusion r <= 6 deg g + 5 is equivalent to deg g >= (r-5)/6.",
+    "Formal statement is more general than informal (any field with 2,3 != 0, any sequence); it does not cover characteristic 3, where the informal statement is true by direct check (r<=7).",
+    "The curve-to-hypothesis bridge is not formalized; the result is a formal CONDITIONAL theorem only."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Draft only; no execution or verification claimed.",
+  "outcome": "verified",
+  "next_action": "PI integration review; keep CONDITIONAL qualifier on PRF-a6cf1e66; optional follow-up: prove hS/hT/hinj for Mathlib WeierstrassCurve.Affine points of odd order to make Theorem B unconditional, and note char-3 exclusion.",
+  "notes": "Reviewer self-reported model identity: Claude Opus 5.5 (claude-opus-5-5), from session system metadata; not externally verified. Initial findings written before reading the PRF .md; no runs/*.md read. sympy unavailable, hT verified numerically and by appeal to the classical formula. No literature search performed.",
   "review": {
-    "run": null,
-    "target_commit": null,
-    "targets": [],
-    "decision": "revise",
-    "rationale": "Review not performed",
-    "counterexamples": [
-      "Not attempted"
+    "run": "RUN-9d307c6e-53d0-42db-be8e-1553e3cec7d4",
+    "target_commit": "8f844f9",
+    "targets": [
+      "PRF-a6cf1e66-4d14-4e4d-8ced-617e4c0abf5f",
+      "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
     ],
-    "complexity": "Not reviewed",
-    "limitations": "Draft review, not an assessment",
-    "initial_packet": "Not supplied"
+    "decision": "accept",
+    "rationale": "Build and axioms reproduced; hypotheses hS, hT, hinj are exactly the cleared x-addition relations and distinctness true on a short Weierstrass curve (char != 2,3) for xs k = x(kP), P of odd order r, in exactly the needed range, avoiding the Q = +-P edge case; hypotheses are jointly satisfiable; conclusion equals deg g >= (r-5)/6. Accepted as a conditional formal theorem only.",
+    "counterexamples": [
+      "Edge case Q = +-P: hS fails there (LHS 0, RHS 4 y0^2) but never occurs in range 2<=k<=m-1 on a curve; not a counterexample.",
+      "Vacuity: refuted by 33181 real-curve instances satisfying all hypotheses.",
+      "Informal premise without Lean hypotheses: only char 3 (3 = 0); informal theorem holds there by direct check (r<=7).",
+      "Bound violation search over minimal interpolants: 0 violations in 33181 instances.",
+      "Off-by-one in m and natural subtraction: checked, none."
+    ],
+    "complexity": "Not applicable: formal correctness only",
+    "limitations": "Curve bridge (hS, hT, hinj for actual curve points) not formalized; char 3 not covered; numeric evidence limited to p<140; hT not symbolically re-derived; same provider family as author, so independence is process-level only.",
+    "initial_packet": "Target commit 8f844f9; MathResearch/ECDLP/Interpolation.lean; research/ecdlp/proofs/checks/Round6Axioms.lean; informal Theorem B and claimed conditional formalization; no author confidence."
   }
 }

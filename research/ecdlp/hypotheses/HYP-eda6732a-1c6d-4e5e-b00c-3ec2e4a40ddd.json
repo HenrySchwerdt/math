@@ -13,7 +13,9 @@
     "TSK-2d4e5fc7-9e3b-4c7f-bdec-3e37eabcba98",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
     "RUN-4b283c25-b43d-4720-994d-3c285789a273",
-    "REV-83ec2fc9-e871-4434-a5da-49db92c61a55"
+    "REV-83ec2fc9-e871-4434-a5da-49db92c61a55",
+    "PRF-a6cf1e66-4d14-4e4d-8ced-617e4c0abf5f",
+    "REV-08014e33-0955-4907-b909-19fe23f94c5a"
   ],
   "evidence": [
     "research/ecdlp/experiments/round5-ct/out_check_theorem_b_identity.txt"
@@ -23,6 +25,6 @@
   ],
   "proof_status": "reviewed",
   "outcome": "unresolved",
-  "next_action": "Lean formalization (polynomial-level statement over a field) \u2014 round 7 candidate.",
-  "notes": "Agent proof via polynomial algebra and addition formulas (k^2 is the natural x-only invariant since x(kP)=x(-kP)); identity checked 2519 times, 0 failures. Possibly duplicates Lange\u2013Winterhof; novelty not claimed. Lean candidate. | ECDLP-17 blind review: correct as stated; proof via H(Q) = F(Q+P) + F(Q\u2212P) \u2212 2F(Q) \u2212 2 (F = g\u2218x), even, with r\u22125 distinct zeros \u00b1kP and pole degree exactly 6 deg g; \"r prime\" can be weakened to r odd. 208 toy cases, no violation. Novelty not found (Lange\u2013Winterhof statements not accessible)."
+  "next_action": "Discharge the addition-law hypotheses from Mathlib; settle novelty.",
+  "notes": "Agent proof via polynomial algebra and addition formulas (k^2 is the natural x-only invariant since x(kP)=x(-kP)); identity checked 2519 times, 0 failures. Possibly duplicates Lange\u2013Winterhof; novelty not claimed. Lean candidate. | ECDLP-17 blind review: correct as stated; proof via H(Q) = F(Q+P) + F(Q\u2212P) \u2212 2F(Q) \u2212 2 (F = g\u2218x), even, with r\u22125 distinct zeros \u00b1kP and pole degree exactly 6 deg g; \"r prime\" can be weakened to r odd. 208 toy cases, no violation. Novelty not found (Lange\u2013Winterhof statements not accessible). | CONDITIONAL formal proof PRF-a6cf1e66-4d14-4e4d-8ced-617e4c0abf5f (accepted by REV-08014e33-0955-4907-b909-19fe23f94c5a): polynomial core verified in Lean with the x-addition identities and injectivity as hypotheses. The unconditional curve statement is NOT yet formally verified."
 }
