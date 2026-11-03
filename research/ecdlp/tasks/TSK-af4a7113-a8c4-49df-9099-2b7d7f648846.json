@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 10 / ECDLP-32: Lean algebraic SLP lower bound for x-only DL computation",
   "created_at": "2026-11-03T10:56:39.937410Z",
-  "status": "active",
+  "status": "completed",
   "question": "Corollary of Theorem C (algebraic SLP barrier, x-only, division-free): Let W be short Weierstrass over a field F with 2 != 0, P of order r, 2N < r. Any straight-line program over F of length L using +, \u2212, \u00d7 and constants, with the single input u = x(Q), whose output equals k (in F) at u = x(kP) for all 1 <= k <= N, satisfies L >= log2((N \u2212 2)/3). Consequence (cost model): if each field operation costs >= c\u00b7log p bit operations, such programs need Omega(n^2) bit operations for N ~ r/2 ~ p/2, so the O(n log n) target is impossible in this restricted algebraic model.",
   "rationale": "PI follow-up derived from proven Theorems B/C (user asked to resume building on proven results).",
   "assumptions": [],
@@ -14,12 +14,13 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-5550045a-695d-438f-9fab-0a7f2943e8f2.evidence"
+    "research/ecdlp/events/EVT-5550045a-695d-438f-9fab-0a7f2943e8f2.evidence",
+    "research/ecdlp/events/EVT-f4e9c782-c4df-4d4a-a4d0-ee9ee628f094.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "verified",
+  "next_action": "Division model (ECDLP-34); batched review",
   "notes": "Created by PI RUN-62dbda7c.",
   "success_criteria": [
     "Exact statements; no sorry; reproducible evidence; corrected variants separate; honest negative results."

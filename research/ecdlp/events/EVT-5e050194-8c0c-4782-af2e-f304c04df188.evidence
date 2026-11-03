@@ -1,0 +1,26 @@
+{
+  "id": "EVT-5e050194-8c0c-4782-af2e-f304c04df188",
+  "kind": "task-status-change",
+  "task": "TSK-a482f006-a0c3-406f-8f1c-52c7bcb63fc0",
+  "task_key": "ECDLP-34",
+  "timestamp": "2026-11-03T11:00:44.955465Z",
+  "run": "RUN-ce6e9aee-1730-443f-86c6-48b9dd3ba467",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Division-model formalization launched",
+  "before_sha256": "9a1f1096e461cef01a444084771652ba6ce9435f3ade0cf40fce2870a100a199",
+  "after_sha256": "7e7b9c1cc113c22f6a9d9184b6eeff405a91bc4c112ffc22237cbd9871179bb8"
+}
