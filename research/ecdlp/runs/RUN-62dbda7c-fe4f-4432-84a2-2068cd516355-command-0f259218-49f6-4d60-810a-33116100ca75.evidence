@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round1/agentA/exp2b.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:12:40.265903Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:12:40.330365Z",
+  "truncated": false,
+  "output": "random x-lifts: 20 /20\n"
+}

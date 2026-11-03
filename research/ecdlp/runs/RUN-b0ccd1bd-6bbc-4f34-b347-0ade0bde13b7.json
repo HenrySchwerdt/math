@@ -7,17 +7,128 @@
   "question": "Do standard coordinate representations of points on E(F_q) expose efficiently computable mathematical information (invariants, relations, maps) that is not available to a generic-group algorithm, and could any such information plausibly reduce ECDLP cost? Identify precise candidate invariants/relations and classify each as known-and-exploited, known-and-useless, or conjectural.",
   "rationale": "Bounded independent subagent run for TSK-19085a69-6fc1-440f-b7a1-ac2182eea490",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Semaev, Summation polynomials and the discrete logarithm problem on elliptic curves, ePrint 2004/031, 2004, , retrieved 2026-11-03",
+      "url": "https://eprint.iacr.org/2004/031",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Semaev, New algorithm for the discrete logarithm problem on elliptic curves, arXiv:1504.01175, 2015, , retrieved 2026-11-03",
+      "url": "https://arxiv.org/abs/1504.01175",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Diem, On the discrete logarithm problem in elliptic curves, Compositio Math. 147, 2011, , retrieved 2026-11-03",
+      "url": "https://www.cambridge.org/core/journals/compositio-mathematica/article/on-the-discrete-logarithm-problem-in-elliptic-curves/59B877810708C90F6287972486A5BF0C",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Diem, On the discrete logarithm problem in elliptic curves II, Algebra & Number Theory 7(6), 2013, , retrieved 2026-11-03",
+      "url": "https://msp.org/ant/2013/7-6/ant-v7-n6-p.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Gaudry, Index calculus for abelian varieties and the elliptic curve discrete logarithm problem, ePrint 2004/073, , retrieved 2026-11-03",
+      "url": "https://eprint.iacr.org/2004/073",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Galbraith, Gaudry, Recent progress on the elliptic curve discrete logarithm problem, Des. Codes Cryptogr. 2016, ePrint 2015/1022, , retrieved 2026-11-03",
+      "url": "https://eprint.iacr.org/2015/1022",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Gallant, Lambert, Vanstone, Faster point multiplication on elliptic curves with efficient endomorphisms, CRYPTO 2001, , retrieved 2026-11-03",
+      "url": "https://www.iacr.org/archive/crypto2001/21390189.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Galbraith, Lin, Scott, Endomorphisms for faster elliptic curve cryptography on a large class of curves, EUROCRYPT 2009, ePrint 2008/194, , retrieved 2026-11-03",
+      "url": "https://eprint.iacr.org/2008/194",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Ruck, On the discrete logarithm in the divisor class group of curves, Math. Comp. 68, 1999, , retrieved 2026-11-03",
+      "url": "https://www.ams.org/mcom/1999-68-226/S0025-5718-99-01043-1/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "arXiv:1702.07107, The discrete logarithm problem over prime fields: the safe prime case. The Smart attack, non-canonical lifts and logarithmic derivatives,  (authors not checked), retrieved 2026-11-03",
+      "url": "https://arxiv.org/pdf/1702.07107",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Frey, Ruck, A remark concerning m-divisibility and the discrete logarithm in the divisor class group of curves, Math. Comp. 62, 1994, , retrieved 2026-11-03",
+      "url": "https://www.ams.org/journals/mcom/1994-62-206/S0025-5718-1994-1218343-6",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Shoup, Lower bounds for discrete logarithms and related problems, EUROCRYPT 1997, , retrieved 2026-11-03",
+      "url": "https://cs259c.stanford.edu/finalpapers/genericgroups.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Boneh, Shparlinski, On the unpredictability of bits of the elliptic curve Diffie-Hellman scheme, CRYPTO 2001, , retrieved 2026-11-03",
+      "url": "https://www.iacr.org/archive/crypto2001/21390200.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Jetchev, Venkatesan, Bits security of the elliptic curve Diffie-Hellman secret keys, CRYPTO 2008, , retrieved 2026-11-03",
+      "url": "https://iacr.org/archive/crypto2008/51570075/51570075.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Bernstein, Hamburg, Krasnova, Lange, Elligator: elliptic-curve points indistinguishable from uniform random strings, ePrint 2013/325, , retrieved 2026-11-03",
+      "url": "https://eprint.iacr.org/2013/325",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Jacobson, Koblitz, Silverman, Stein, Teske, Analysis of the xedni calculus attack, Des. Codes Cryptogr. 20, 2000, , retrieved 2026-11-03",
+      "url": "https://pages.cpsc.ucalgary.ca/~jacobs/PDF/xedni.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    }
+  ],
   "refs": [
     "TSK-19085a69-6fc1-440f-b7a1-ac2182eea490",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "A1: x(P)=x(P') iff P'=+-P; orbit-rho under <-1, Frobenius, Aut> gives only sqrt(|H|) constant-factor gains (known; classification i).",
+    "A2: for f with rational root e, P -> (x-e) mod squares is a homomorphism E(F_q)->F_q*/sq; it is trivial on any odd-order subgroup (L2), hence useless for odd prime n (ii); verified on ~9300 multiples, 0 violations.",
+    "A3: Weil/Tate pairing gives injective hom G->mu_n in F_{q^k}*, useful only for small embedding degree (i/ii).",
+    "A4: Smart/Semaev/Rueck lift: for #E=p psi is a lift-independent injective hom to (F_p,+) (i; 20/20 recovered at p=761); for p not dividing #E arbitrary-lift values are lift dependent and carry no DLP information (observed; control prediction of vanishing was falsified and reinterpreted).",
+    "A5: summation-polynomial index calculus is subexponential/q^{2-2/m} only for E(F_{q^m}) with small m>1 (i); no known factor-base analogue for prime fields (open, iii).",
+    "A6: Legendre symbols/parity of x,y of [k]P show no detectable dependence on k mod m<=8, DFT peaks or lag-1 autocorrelation on two curves p~10^4 (ii, empirical only).",
+    "A7: x-only/compressed encodings expose exactly k up to sign (L1); twist/invalid-curve issues are implementation attacks, not ECDLP speedups.",
+    "A8: division-polynomial relation has k in the degree, giving no algebraic handle (ii/iii).",
+    "A9: Weil descent/GHS applies to composite-degree extension fields (i).",
+    "A10: isogeny-class weaknesses via order/embedding degree are class invariants so cannot be created by walking; only endomorphism-ring-type properties vary (ii/iii).",
+    "A11: xedni calculus fails asymptotically due to height bounds (ii).",
+    "A12 (speculation): efficiently computable injective algebraic homomorphisms from E[n] to easy-DLP groups are exhausted by G_a, G_m and Weil-descent abelian varieties (iii, unsourced).",
+    "L2 (Lean): a monoid hom from a group to a finite group H sends an element g of order coprime to |H| to 1; L1: x(P)=x(Q) implies Q=+-P."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents is not exposed to the PI, so identity is configured+self-reported, not runtime-verified.",
+  "next_action": "PI collection and adversarial falsification: extend E1 to ~200 curves with multiple-testing correction; verify unverified citations; compile L1/L2 in Lean against pinned Mathlib; decide whether to pursue the A12 classification of injective computable homomorphisms.",
+  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents is not exposed to the PI, so identity is configured+self-reported, not runtime-verified. Self-reported model identity of the executing agent (from its system prompt): Sonnet 5.5, model ID claude-sonnet-5-5. Experiment scripts live in session scratchpad (not committed). | Sources without URL (not schema sources; verification status as stated by agent): Satoh, Araki, Fermat quotients and the polynomial time discrete log algorithm for anomalous elliptic curves, Comment. Math. Univ. St. Pauli 1998 (via secondary citation only), retrieved 2026-11-03 || Menezes, Okamoto, Vanstone, Reducing elliptic curve logarithms to logarithms in a finite field, STOC 1991 (via secondary citation only), retrieved 2026-11-03 || Silverman, The xedni calculus and the elliptic curve discrete logarithm problem, Des. Codes Cryptogr. 20, 2000 (via secondary citation), retrieved 2026-11-03 || UNVERIFIED RECOLLECTION (not retrieved): Wiener-Zuccherato SAC 1998; Duursma-Gaudry-Morain ASIACRYPT 1999; Jao-Miller-Venkatesan ASIACRYPT 2005; Gaudry-Hess-Smart J. Cryptology 2002; Balasubramanian-Koblitz J. Cryptology 1998; Kohel-Shparlinski ANTS 2000; Pohlig-Hellman 1978; Miller CRYPTO 1985; Biehl-Meyer-Mueller CRYPTO 2000",
   "run": {
     "started_at": "2026-11-03T09:06:21.721521Z",
     "completed_at": null,

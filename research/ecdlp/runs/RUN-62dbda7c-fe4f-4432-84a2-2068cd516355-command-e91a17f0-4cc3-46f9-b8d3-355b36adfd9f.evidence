@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "-I",
+    "research/ecdlp/experiments/round1/agentA/exp2b.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:12:33.546120Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T09:12:33.578237Z",
+  "truncated": false,
+  "output": "Traceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round1/agentA/exp2b.py\", line 3, in <module>\n    from exp2 import *\nModuleNotFoundError: No module named 'exp2'\n"
+}

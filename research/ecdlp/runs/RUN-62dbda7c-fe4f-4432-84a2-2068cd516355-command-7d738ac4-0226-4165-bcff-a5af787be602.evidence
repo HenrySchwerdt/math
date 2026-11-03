@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "-I",
+    "research/ecdlp/experiments/round1/agentA/exp1.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:12:32.542103Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:12:32.860418Z",
+  "truncated": false,
+  "output": "NONHOM seed 1 {'p': 10771, 'a': 3439, 'b': 1537, 'n': 10861, 'K': 5430, 'chi_x_vs_k_mod_2_chi2(df=1)': 0.29, 'chi_x_vs_k_mod_3_chi2(df=2)': 1.4, 'chi_x_vs_k_mod_4_chi2(df=3)': 1.89, 'chi_x_vs_k_mod_5_chi2(df=4)': 7.4, 'chi_x_vs_k_mod_8_chi2(df=7)': 5.51, 'chi_y_vs_k_mod_2_chi2(df=1)': 0.21, 'chi_y_vs_k_mod_3_chi2(df=2)': 3.49, 'chi_y_vs_k_mod_4_chi2(df=3)': 0.22, 'chi_y_vs_k_mod_5_chi2(df=4)': 2.72, 'chi_y_vs_k_mod_8_chi2(df=7)': 2.05, 'maxDFT_chi_x': 172.1, 'maxDFT_chi_y': 188.2, 'maxDFT_random_baseline_min/mean/max': [187.2, 210.3, 227.1], 'lag1_autocorr_chi_x': -0.0057, 'lag1_autocorr_expected_sd': 0.0136, 'mean_chi_x': 0.0042, 'mean_chi_y': -0.0015}\nNONHOM seed 2 {'p': 11923, 'a': 585, 'b': 9522, 'n': 12109, 'K': 6054, 'chi_x_vs_k_mod_2_chi2(df=1)': 0.35, 'chi_x_vs_k_mod_3_chi2(df=2)': 2.5, 'chi_x_vs_k_mod_4_chi2(df=3)': 0.54, 'chi_x_vs_k_mod_5_chi2(df=4)': 4.51, 'chi_x_vs_k_mod_8_chi2(df=7)': 8.69, 'chi_y_vs_k_mod_2_chi2(df=1)': 6.22, 'chi_y_vs_k_mod_3_chi2(df=2)': 1.97, 'chi_y_vs_k_mod_4_chi2(df=3)': 10.0, 'chi_y_vs_k_mod_5_chi2(df=4)': 1.97, 'chi_y_vs_k_mod_8_chi2(df=7)': 16.75, 'maxDFT_chi_x': 182.3, 'maxDFT_chi_y': 194.0, 'maxDFT_random_baseline_min/mean/max': [199.2, 227.1, 267.4], 'lag1_autocorr_chi_x': 0.0064, 'lag1_autocorr_expected_sd': 0.0129, 'mean_chi_x': -0.0007, 'mean_chi_y': -0.0178}\nDESCENT seed 1 {'p': 3307, 'A': 3128, 'B': 259, 'chi(x(P))': -1, 'checked': 3416, 'violations': 0}\nDESCENT seed 2 {'p': 4861, 'A': 695, 'B': 2958, 'chi(x(P))': -1, 'checked': 2436, 'violations': 0}\nDESCENT seed 3 {'p': 3517, 'A': 534, 'B': 1516, 'chi(x(P))': -1, 'checked': 3466, 'violations': 0}\n"
+}

@@ -15,7 +15,15 @@
     "TSK-30c839fa-0520-4fd6-a552-a243b2987d5e",
     "TSK-3323598e-fe3f-42c0-8336-507107420679"
   ],
-  "evidence": [],
+  "evidence": [
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-7d738ac4-0226-4165-bcff-a5af787be602.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-e18272aa-b03c-40c1-8b27-65b69595b32a.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-e91a17f0-4cc3-46f9-b8d3-355b36adfd9f.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-d673d2f2-4041-42ad-8223-cfcf396bce22.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-0328e8bd-b7be-4d7b-b9ed-87962e7d9cd3.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-0f5b9bb2-fd10-48fe-8348-03d03202675c.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-0f259218-49f6-4d60-810a-33116100ca75.evidence"
+  ],
   "claims": [],
   "proof_status": "not-applicable",
   "outcome": null,
@@ -34,7 +42,15 @@
     "starting_commit": "e562779d50e079ea380c598a2550021a13e26b89",
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout (primary)",
-    "commands": [],
+    "commands": [
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-7d738ac4-0226-4165-bcff-a5af787be602.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-e18272aa-b03c-40c1-8b27-65b69595b32a.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-e91a17f0-4cc3-46f9-b8d3-355b36adfd9f.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-d673d2f2-4041-42ad-8223-cfcf396bce22.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-0328e8bd-b7be-4d7b-b9ed-87962e7d9cd3.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-0f5b9bb2-fd10-48fe-8348-03d03202675c.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-0f259218-49f6-4d60-810a-33116100ca75.evidence"
+    ],
     "files_changed": [],
     "resulting_commit": null,
     "tests": [],

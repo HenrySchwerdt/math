@@ -7,17 +7,76 @@
   "question": "What are the precise theoretical barriers to a universal classical ECDLP algorithm in worst-case O(n log n) bit operations (n = total input length)? Examine the exact hypotheses of generic-group lower bounds, of known non-generic approaches, input-reading/arithmetic bit costs, and any conditional hardness implications; state precisely which assumptions a faster algorithm would have to escape.",
   "rationale": "Bounded independent subagent run for TSK-3323598e-fe3f-42c0-8336-507107420679",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Harvey, van der Hoeven, Integer multiplication in time O(n log n), Annals of Mathematics 193(2) 563-617, 2021,  (arXiv 1611.07144 is the earlier/related preprint listing), retrieved 2026-11-03",
+      "url": "https://annals.math.princeton.edu/2021/193-2/p04",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Corrigan-Gibbs, Kogan, The Discrete-Logarithm Problem with Preprocessing, Eurocrypt 2018, , retrieved 2026-11-03",
+      "url": "https://eprint.iacr.org/2017/1113",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Diem, On the discrete logarithm problem in elliptic curves, Compositio Math. 147 (2011) 75-104, , retrieved 2026-11-03 (abstract-level only)",
+      "url": "https://www.cambridge.org/core/journals/compositio-mathematica/article/on-the-discrete-logarithm-problem-in-elliptic-curves/59B877810708C90F6287972486A5BF0C",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Diem, On the discrete logarithm problem in elliptic curves II, Algebra & Number Theory 7(6) 2013, , retrieved 2026-11-03 (listing only)",
+      "url": "https://www.projecteuclid.org/journals/algebra-and-number-theory/volume-7/issue-6/On-the-discrete-logarithm-problem-in-elliptic-curves-II/10.2140/ant.2013.7.1281.full",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Huang, Kosters, Yeo, Last Fall Degree, HFE, and Weil Descent Attacks on ECDLP, CRYPTO 2015,  (arXiv 1505.02532), retrieved 2026-11-03",
+      "url": "https://eprint.iacr.org/2015/573",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Petit, Quisquater, On Polynomial Systems Arising from a Weil Descent, Asiacrypt 2012, , retrieved 2026-11-03",
+      "url": "https://eprint.iacr.org/2012/146",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Afshani, Freksen, Kamma, Larsen, Lower Bounds for Multiplication via Network Coding, ICALP 2019 (LIPIcs 132, 10), arXiv 1902.10935, , retrieved 2026-11-03 (conditional on Network Coding Conjecture)",
+      "url": "https://arxiv.org/abs/1902.10935",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    },
+    {
+      "title": "Nechaev, Complexity of a determinate algorithm for the discrete logarithm, Mathematical Notes 55(2) 165-172, 1994, , retrieved 2026-11-03 (bibliographic only)",
+      "url": "https://m.math-net.ru/eng/mzm2145",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Agent-supplied bibliographic string; retrieval date only (time not recorded)"
+    }
+  ],
   "refs": [
     "TSK-3323598e-fe3f-42c0-8336-507107420679",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "C1 (known upper bound): under multitape TM + affine Weierstrass encoding, [k]P is computable in O(n^2 log n) bit operations (O(b) group operations, each O(b log b)); no unconditional lower bound beyond Omega(n) is claimed; verification is NOT a proven barrier to solving.",
+    "C2 (proven on paper, elementary counting, not machine-checked, restricted model): straight-line group-operation programs of length L compute at most 4^L (L!)^2 points, so some Q in <P> needs L >= (1+o(1)) log2 r / (2 log2 log2 r) operations; computed table: r~2^256 -> L>=29.",
+    "C3 (known bound): Shoup/Maurer/Nechaev generic-group bounds give Omega(sqrt p) oracle calls (p largest prime factor of the group order); they do not apply to algorithms that use the coordinate encoding; escaping the generic model is necessary, not sufficient.",
+    "C4 (known bound, derived): Corrigan-Gibbs-Kogan S*T^2 = Omega~(eps*N) implies generic online time poly(n) needs exp(Omega(n)) advice.",
+    "C5 (known/heuristic): index calculus, Diem, Petit-Quisquater (heuristic, first fall degree doubted by Huang-Kosters-Yeo), MOV/FR, anomalous, GHS each apply to proper subclasses; best universal known is Theta(sqrt r) group operations.",
+    "C6: ECDLP solves CDH; converse partial (den Boer, Maurer-Wolf, Muzereau-Smart-Vercauteren; unverified); no known reduction between ECDLP and factoring; ECDLP decision version is in UP intersect coUP given group order (folklore).",
+    "C7 conjectures (mine, unproved): CJ-A scalar multiplication hardness; CJ-B no o(sqrt r) algorithm for prime-order prime-field curves with large embedding degree; CJ-C modular exponentiation not in NC.",
+    "L1 (Lean proposal, uncompiled): m*P = k*P iff m = k mod addOrderOf P; 172 finite sanity tests passed; L2 information bound r <= 2^L for injections Fin r -> bitstrings of length L.",
+    "No proof or algorithm for the target is claimed; proof_status unchanged."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents is not exposed to the PI, so identity is configured+self-reported, not runtime-verified.",
+  "next_action": "PI: adversarially check C2 counting and the exact Shoup/CGK statements against full texts; compile Lean lemmas L1-L2; then settle CJ-A (exact cost of [k]P) by literature check and decide whether to record C4 consequence as a DEC.",
+  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents is not exposed to the PI, so identity is configured+self-reported, not runtime-verified. Sealed Round-1 submission by agent self-reporting model: Sonnet 5.5 (model ID claude-sonnet-5-5), from its system prompt; not runtime-verified. No scripts/research.py capture used; one local sanity script at scratchpad agentC/check.py. | Sources without URL (not schema sources; verification status as stated by agent): Maurer, Abstract Models of Computation in Cryptography, Cryptography and Coding 2005 (LNCS 3796), DOI 10.1007/11586821_1, retrieved 2026-11-03 (abstract-level) || Shoup, Lower Bounds for Discrete Logarithms and Related Problems, Eurocrypt 1997 (LNCS 1233, 256-266), DOI 10.1007/3-540-69053-0_18, retrieved 2026-11-03 (abstract-level) || UNVERIFIED RECOLLECTION (not looked up): Semaev ePrint 2004/031; Gaudry-Hess-Smart J. Cryptology 2002; Menezes-Okamoto-Vanstone IEEE Trans IT 1993; Frey-Ruck Math. Comp. 1994; Smart 1999; Satoh-Araki 1998; Semaev 1998; Schonhage 1975 addition chains; Moller 2008 half-gcd; Pippenger-Fischer 1979; den Boer 1988; Maurer-Wolf; Muzereau-Smart-Vercauteren 2004; Bach 1984; Koblitz-Menezes 2007; Fuchsbauer-Kiltz-Loss 2018; Harvey-van der Hoeven-Lecerf 2017; Petit-Kosters-Messeng 2016; Boneh-Venkatesan 1996; Proos-Zalka 2003",
   "run": {
     "started_at": "2026-11-03T09:06:21.721521Z",
     "completed_at": null,

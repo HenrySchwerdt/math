@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "-I",
+    "research/ecdlp/experiments/round1/agentA/exp2.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:12:32.920832Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:12:33.486946Z",
+  "truncated": false,
+  "output": "anomalous curve y^2=x^3+622x+190 over F_761, #E=p\nSmart recovery: 20/20 correct (k recovered in O(p) field ops here; polynomial in log p with double-and-add)\ncontrol non-anomalous p=397 #E=419: values of psi([#E]P~)/p over 20 random P: {273, 281, 155, 291, 167, 44, 50, 52, 192, 77, 220, 358, 232, 361, 239, 113, 372, 378, 127}\n"
+}

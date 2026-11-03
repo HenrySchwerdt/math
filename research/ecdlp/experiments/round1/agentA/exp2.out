@@ -1,0 +1,7 @@
+anomalous curve y^2=x^3+622x+190 over F_761, #E=p
+Smart recovery: 20/20 correct (k recovered in O(p) field ops here; polynomial in log p with double-and-add)
+control non-anomalous p=397 #E=419: values of psi([#E]P~)/p over 20 random P: {273, 281, 155, 291, 167, 44, 50, 52, 192, 77, 220, 358, 232, 361, 239, 113, 372, 378, 127}
+
+real	0m0.509s
+user	0m0.481s
+sys	0m0.012s
