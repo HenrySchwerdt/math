@@ -1,0 +1,26 @@
+{
+  "id": "EVT-badf1884-7e00-43d6-afb1-e1c386caf577",
+  "kind": "task-status-change",
+  "task": "TSK-9fcffa94-ec93-4873-9b24-1cd78f09e562",
+  "task_key": "ECDLP-63",
+  "timestamp": "2026-11-03T16:34:09.356106Z",
+  "run": "RUN-809bfa01-7748-4e0d-a2a7-636fad6ef8b2",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "No MSB or closeness signal (< 0.0045) vs required ~C r^-1/4; pipeline works on planted leak",
+  "before_sha256": "151c15a707fd908460c10ba4c727874034352f83bc661300c4cc058e4e69296b",
+  "after_sha256": "29fdab5cd5bea0f4c6febf49ed8862fc40fc537b3908733532fe8b33c27f8f65"
+}

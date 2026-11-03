@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 20 / inventor J: estimate-then-search (MSB oracle + self-reduction + kangaroo)",
   "created_at": "2026-11-03T16:06:08.640726Z",
-  "status": "active",
+  "status": "completed",
   "question": "User idea 2026-11-03: estimate k very precisely, then binary-search. Build the strongest feasible estimator of the most significant bit (or an interval) of k from Q=kP (features from x(Q), x(Q+-jP), bits, comparisons, learned models trained across curves), measure its advantage over 1/2 with CI across sizes, and quantify what advantage the hard-core-bit self-reduction and an interval+kangaroo pipeline would need to beat rho. Does any estimator show non-vanishing advantage out of sample?",
   "rationale": "Bounded run for TSK-9fcffa94-ec93-4873-9b24-1cd78f09e562",
   "assumptions": [],
@@ -41,12 +41,12 @@
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "refuted",
   "next_action": "Fill draft metadata and report before execution",
   "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
   "run": {
     "started_at": "2026-11-03T16:06:08.694194Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T16:34:09.359388Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured)",
     "role": "algorithm-inventor",
@@ -83,8 +83,10 @@
       "research/ecdlp/runs/RUN-809bfa01-7748-4e0d-a2a7-636fad6ef8b2-command-104788a6-1840-446c-88b9-47ce94f48410.evidence",
       "research/ecdlp/runs/RUN-809bfa01-7748-4e0d-a2a7-636fad6ef8b2-command-3ecbd3b4-713e-446c-b3a8-6a5315ec3557.evidence"
     ],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round20-inventor-j/"
+    ],
+    "resulting_commit": "2372100e1a092850811e615908987947d2b42d90",
     "tests": [],
     "benchmark": "See report",
     "machine": "See report",
