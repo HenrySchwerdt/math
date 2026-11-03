@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Revision 1 of technical report PAP-ef6e2010",
   "created_at": "2026-11-03T11:05:19.815416Z",
-  "status": "active",
+  "status": "completed",
   "question": "Address blocking B1 and non-blocking findings of REV-15104e72 (adversarial) and REV-2b383b9b (manuscript).",
   "rationale": "Bounded subagent run for TSK-befee0fc-1eb0-4d11-8632-310df4112388",
   "assumptions": [],
@@ -37,7 +37,7 @@
     "files_changed": [
       "research/ecdlp/papers/PAP-ef6e2010-7950-47cf-bb75-05801891905b/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "7513fd2d36191a60b9dd38cd3bad17a52637a7a9",
     "tests": [],
     "benchmark": "Not applicable",
     "machine": "Claude Code remote Linux container; TeX Live",
