@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round4-ag/check_x_prym.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:42:57.281536Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:42:57.498026Z",
+  "truncated": false,
+  "output": "curves 120 S==-a(E'')-1 120 S==a(E'')-1 0 other 0\n"
+}

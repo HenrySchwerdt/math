@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round4-ag/even_order_control.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:43:01.890740Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:43:02.157968Z",
+  "truncated": false,
+  "output": "{\"chi_minusB\": 1, \"curves\": 26, \"max_abs_Y\": 2.824565, \"mean_m2\": 1.9968, \"mean_m4\": 7.9784}\n{\"chi_minusB\": -1, \"curves\": 22, \"max_abs_Y\": 0.0, \"mean_m2\": 0.0, \"mean_m4\": 0.0}\n"
+}

@@ -17,18 +17,25 @@
     "TSK-bd3c9a6f-baa4-4e7c-815e-7a6198a978f7",
     "HYP-e1959734-9325-4a54-9d99-d4535c58a11c",
     "RUN-60986daa-f9ba-459a-bb6a-fb38509188ec",
-    "TSK-e4099001-23bb-4242-b896-341c8af8919e"
+    "TSK-e4099001-23bb-4242-b896-341c8af8919e",
+    "RUN-314e5405-60ca-4be4-9ca8-1c2f239ff2f9",
+    "TSK-10348c5c-c9f0-44ca-b569-9ba3fa55debc"
   ],
   "evidence": [
     "research/ecdlp/experiments/round3/results_20261105.json",
     "research/ecdlp/experiments/round3/results_20261106.json",
-    "research/ecdlp/experiments/round3/analysis_20261106.txt"
+    "research/ecdlp/experiments/round3/analysis_20261106.txt",
+    "research/ecdlp/experiments/round4-ag/out_check_x_prym.txt",
+    "research/ecdlp/experiments/round4-ag/out_x_rank2_test.txt",
+    "research/ecdlp/experiments/round4-ag/out_ext_field_test.txt",
+    "research/ecdlp/experiments/round4-ag/out_det_phase.txt",
+    "research/ecdlp/experiments/round4-ag/out_even_order_control.txt"
   ],
   "claims": [
     "Conjecture (Sato\u2013Tate law for twisted Legendre sums along a prime-order EC group). Let E/F_p have #E(F_p)=r prime, P a generator, g in {x, x+a (a in F_p), y}. For c in 1..r-1 let Y_c = p^{-1/2} * sum_{k=0}^{r-1} chi(g([k]P)) e(ck/r). Then |Y_c| <= 2 (+o(1)) for all c, and as p -> infinity (over random such curves) the empirical distribution of Y_c^2 (Y_c real for g = x+a) over c converges to that of (2 cos t)^2 with t Sato\u2013Tate distributed ((2/pi) sin^2 t dt). For g of higher degree (x^2+x+1, xy, x^3+2) the normalized sums are instead approximately Gaussian at these sizes (second moment of |X_c|^2 \u2248 3 for real sums) with max growing within the Weil envelope."
   ],
   "proof_status": "experimental",
   "outcome": "unresolved",
-  "next_action": "(1) Prove or locate: for g = x, the twisted sums are Frobenius traces on a rank-2 object (PI heuristic: double cover w^2 = x of E ramified at the two points with x = 0, genus 2, Jacobian ~ E x E'; twisting by psi). (2) Explain the g = y anomaly (cover w^2 = y is ramified at the three 2-torsion points and O, genus 3?). Neither bears on recovering k.",
-  "notes": "Experimental finding on toy sizes; no proof; novelty unchecked (likely a known consequence of Deligne/Katz theory). Not a discrete-log leak: leak sanity test negative. | ECDLP-8 (number-theory): Weil-type bound |S| <= D sqrt(p) (+O(1)) with D = degree of the odd-valuation (ramified) support of div(g), derived by the agent from the Weil/Bombieri L-function (D=2 for x, x+1, 2x; D=4 for y, x^2+x+1); explicit constants from Perel'muter 1969 / Merai 2012 not checked in primary text. Parseval: mean of normalized periodogram exactly 1; 4th moment = (1/N^2) sum_R A(R)^2 with A the cyclic autocorrelation of chi(g(.)). Pooled measurement for g = x: moments of |Y|^2 = 1, 1.995, 4.981 vs semicircle 1, 2, 5; predicted half-range periodogram variance 2/3 matches the ECDLP-7 anomaly 0.66. No theorem on the law over psi was found (Katz-type monodromy statement remains conjectural). OPEN PUZZLE: g = y has D = 4 but behaves SU(2)-like; unexplained."
+  "next_action": "(1) Write a reviewed proof of |Y| <= 2 for g = x (Lang torsor + GOS + Prym identification). (2) Prove the E[2]-Heisenberg reduction for g = y. (3) Check whether Forey\u2013Fres\u00e1n\u2013Kowalski covers the equidistribution. No DLP relevance; keep as reusable character-sum lemma.",
+  "notes": "Experimental finding on toy sizes; no proof; novelty unchecked (likely a known consequence of Deligne/Katz theory). Not a discrete-log leak: leak sanity test negative. | ECDLP-8 (number-theory): Weil-type bound |S| <= D sqrt(p) (+O(1)) with D = degree of the odd-valuation (ramified) support of div(g), derived by the agent from the Weil/Bombieri L-function (D=2 for x, x+1, 2x; D=4 for y, x^2+x+1); explicit constants from Perel'muter 1969 / Merai 2012 not checked in primary text. Parseval: mean of normalized periodogram exactly 1; 4th moment = (1/N^2) sum_R A(R)^2 with A the cyclic autocorrelation of chi(g(.)). Pooled measurement for g = x: moments of |Y|^2 = 1, 1.995, 4.981 vs semicircle 1, 2, 5; predicted half-range periodogram variance 2/3 matches the ECDLP-7 anomaly 0.66. No theorem on the law over psi was found (Katz-type monodromy statement remains conjectural). OPEN PUZZLE: g = y has D = 4 but behaves SU(2)-like; unexplained. | ECDLP-11 (algebraic-geometry, PI-reproduced exact checks): MECHANISM for g = x: via the Lang torsor psi is the trace function of a rank-one sheaf; the sum is -tr(F | H^1) of rank D = 2; the genus-2 cover w^2 = x(Q) has Jac ~ E x E'', E'': Y^2 = X^3 + aX^2 + b^2; for trivial psi the affine sum equals exactly -a(E'') - 1 (120/120 curves); for nontrivial psi rank-2 relation over F_p, F_p^2, F_p^3 with det = p exactly (14 curves) -> Frobenius in sqrt(p)*SU(2), which proves |Y| <= 2 for g = x given the cohomological setup. g = y: dimension 4, reduced to an effective 2-dim trace by the Heisenberg action of E[2] (Frobenius 3-cycles the 2-torsion when #E is odd prime); derivation sketch, Weil-pairing non-degeneracy step unproved; prediction S3 = A^3 - 3AB holds exactly on 24 curves (control g=x fails it); max |Y| 1.9997. Control #E = 2r: sums vanish exactly when chi(-f'(e1)) = -1 (22/22), else max |Y| 2.82. Equidistribution over psi as p -> infinity: no theorem located (Forey-Fresan-Kowalski arXiv:2109.11961 possibly relevant, unchecked) -> remains conjecture."
 }
