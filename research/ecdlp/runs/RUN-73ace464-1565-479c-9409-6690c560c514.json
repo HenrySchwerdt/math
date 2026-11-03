@@ -7,22 +7,89 @@
   "question": "(a) Retrieve and compare Lange\u2013Winterhof / Kiltz\u2013Winterhof / Shparlinski results on interpolation of the EC discrete logarithm with Theorems A/B (exact statements). (b) Independently generate 3-5 new, testable, high-risk hypotheses toward faster ECDLP that do NOT reduce to: homomorphic transfer, summation-polynomial index calculus, cover-based Jacobians, coordinate-predicate bias, or algebraic interpolation (all already investigated), each with mechanism, obligations, invalidators and cheapest decisive test; run the cheapest test for the most promising one.",
   "rationale": "Bounded subagent run for TSK-90871360-32b5-46df-bd35-f6d2ce60a52b",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Lange-Winterhof COCOON 2002 (publication list entry, no PDF)",
+      "url": "https://www.hyperelliptic.org/tanja/publications.html",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "LNCS 2387 pp. 137-143; abstract only via search snippet"
+    },
+    {
+      "title": "Lange-Winterhof, Interpolation of the elliptic-curve Diffie-Hellman mapping (TU/e record)",
+      "url": "https://research.tue.nl/en/publications/interpolation-of-the-elliptic-curve-diffie-hellman-mapping/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "LNCS 2643 pp. 51-60; metadata only"
+    },
+    {
+      "title": "Kiltz-Winterhof, Polynomial interpolation of cryptographic functions related to DH and DL (CWI record)",
+      "url": "https://ir.cwi.nl/pub/15510/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Discrete Appl. Math. 154 (2006) 326-336; metadata only"
+    },
+    {
+      "title": "Satoh, On degrees of polynomial interpolations related to ECC",
+      "url": "https://link.springer.com/chapter/10.1007/11779360_13",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "WCC 2005 LNCS 3969; abstract via snippet"
+    },
+    {
+      "title": "Shparlinski, Cryptographic Applications of Analytic Number Theory (Springer record)",
+      "url": "https://link.springer.com/book/9783764366544",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "book overview only"
+    },
+    {
+      "title": "Jao-Miller-Venkatesan, Do all elliptic curves of the same order have the same difficulty of discrete log?",
+      "url": "https://arxiv.org/abs/math/0411378",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract; ASIACRYPT 2005 LNCS 3788 pp. 21-40"
+    },
+    {
+      "title": "Silverman xedni calculus / Jacobson et al. analysis",
+      "url": "https://pages.cpsc.ucalgary.ca/~jacobs/PDF/xedni.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "DCC 20 (2000) 41-64 (analysis); Silverman DOI 10.1023/A:1008312401197"
+    },
+    {
+      "title": "Bernstein-Lange, Non-uniform cracks in the concrete",
+      "url": "https://eprint.iacr.org/2012/318",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "record only; figures not read"
+    },
+    {
+      "title": "Lauter-Stange, ECDLP and equivalent hard problems for elliptic divisibility sequences",
+      "url": "https://eprint.iacr.org/2008/099",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract"
+    },
+    {
+      "title": "Kuhn-Struik, Random walks revisited (bib record)",
+      "url": "https://cr.yp.to/bib/2001/kuhn-rho.bibtex",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "SAC 2001 pp. 212-229; record only"
+    }
+  ],
   "refs": [
     "TSK-90871360-32b5-46df-bd35-f6d2ce60a52b",
     "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd",
     "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
-  "evidence": [],
-  "claims": [],
+  "evidence": [
+    "research/ecdlp/experiments/round7-disc/out_d1.txt"
+  ],
+  "claims": [
+    "Part (a): no exact statement of Lange-Winterhof, Kiltz-Winterhof or Shparlinski was accessible (abstract-level only). Theorem A is known in kind (published ECDL interpolation degree lower bounds; Satoh 2005 refines them); exact relation unsettled. Theorem B: not found in accessible material; overlap plausible; novelty unsettled.",
+    "Part (b): five speculative hypotheses D1-D5; none claims an ECDLP speed-up. D4 coincides with the xedni-calculus literature; D5 reduces to D1.",
+    "Experimental (toy, p<=211, seed 7, 50 curve/map rows): d*(phi_m)=M-c+1 in all rows, no violation of the bound d*>=M/m^2, same as random permutations of equal cycle type; D1 supported under the pre-registered rule. Evidence level: experimental, finite domain."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "outcome": "verified",
+  "next_action": "Obtain LNCS 2387/2643 full texts via library and compare Theorems A/B by hand; optionally extend D1 test to rational class functions.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. | Self-reported model identity: claude-sonnet-5-5 (Sonnet 5.5), not runtime-verified. Memory-only citations (UNVERIFIED): Wiener-Zuccherato SAC 1998, Gallant-Lambert-Vanstone CRYPTO 2000, Bos-Kleinjung-Lenstra, Lenstra JNT 1996, Husemoller, the sqrt(Mr) and r^{1/3} figures. 16 web lookups. Full report in the adjacent .md. | Executed (not via exec logger): python3 -I research/ecdlp/experiments/round7-disc/run_d1.py; evidence files research/ecdlp/experiments/round7-disc/{PROTOCOL.md,out_d1.txt,SHA256SUMS}; files changed: the RUN .md/.json and experiments/round7-disc/ (PI to register). | PI reproduced run_d1.py via research.py exec; output identical.",
   "run": {
     "started_at": "2026-11-03T10:21:19.301089Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T10:28:39.082464Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "discovery",
@@ -36,7 +103,9 @@
     "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #4)",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [],
-    "files_changed": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round7-disc/"
+    ],
     "resulting_commit": null,
     "tests": [],
     "benchmark": "See report",

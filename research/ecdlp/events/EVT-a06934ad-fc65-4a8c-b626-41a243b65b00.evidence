@@ -1,0 +1,26 @@
+{
+  "id": "EVT-a06934ad-fc65-4a8c-b626-41a243b65b00",
+  "kind": "task-status-change",
+  "task": "TSK-90871360-32b5-46df-bd35-f6d2ce60a52b",
+  "task_key": "ECDLP-22",
+  "timestamp": "2026-11-03T10:28:39.452423Z",
+  "run": "RUN-73ace464-1565-479c-9409-6690c560c514",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "discovery"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-7 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Library access to LNCS 2387/2643 to settle exact novelty"
+  },
+  "reason": "Theorem A known in kind (Lange\u2013Winterhof 2002, Satoh 2005); B unsettled; five new hypotheses, D1 tested (null, PI-reproduced)",
+  "before_sha256": "8c13e5ab44ed9ad476f686c5b5c11edd571383bf7c5507df880d96aace5e2427",
+  "after_sha256": "629b0239f23fe896913ed98a550d67fd48153c80fecf2d154e4fb6f84329501e"
+}
