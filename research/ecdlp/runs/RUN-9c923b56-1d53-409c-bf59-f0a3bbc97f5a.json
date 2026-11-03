@@ -1,0 +1,40 @@
+{
+  "id": "RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a",
+  "type": "RUN",
+  "title": "Re-review technical report v2",
+  "created_at": "2026-11-03T12:18:36.606491Z",
+  "status": "active",
+  "question": "Are the v2 changes to PAP-ef6e2010 (R1-R5, Sections on RationalSLP, Theorem DT scope, Theorem E, benchmark table) faithful to the ledger/Lean sources and correctly labelled by evidence level?",
+  "rationale": "Bounded run for TSK-a3be6c2b-3323-4d97-8cc9-e0dc01759361",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-a3be6c2b-3323-4d97-8cc9-e0dc01759361",
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T12:18:36.606799Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "independent-reviewer",
+    "task": "TSK-a3be6c2b-3323-4d97-8cc9-e0dc01759361",
+    "input_hypotheses": [],
+    "starting_commit": "25a9589e9f0d7aa3a5f8af54fddf6cd816f49054",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

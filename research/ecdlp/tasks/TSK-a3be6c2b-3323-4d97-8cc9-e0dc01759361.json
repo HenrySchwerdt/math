@@ -1,0 +1,31 @@
+{
+  "id": "TSK-a3be6c2b-3323-4d97-8cc9-e0dc01759361",
+  "type": "TSK",
+  "title": "Re-review technical report v2",
+  "created_at": "2026-11-03T12:18:36.604366Z",
+  "status": "active",
+  "question": "Are the v2 changes to PAP-ef6e2010 (R1-R5, Sections on RationalSLP, Theorem DT scope, Theorem E, benchmark table) faithful to the ledger/Lean sources and correctly labelled by evidence level?",
+  "rationale": "Selected by the PI.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-63928811-29f9-4281-8a2a-d22d02df7223.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute.",
+  "notes": "Created via research.py start.",
+  "success_criteria": [
+    "Exact statements; reproducible evidence; honest negatives."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a.md",
+    "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a.json",
+    "research/ecdlp/experiments/round14-review-pap-v2/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; no commits."
+}

@@ -1,0 +1,26 @@
+{
+  "id": "EVT-82bc908d-655a-42cd-92e5-882fbc5fa8e8",
+  "kind": "task-status-change",
+  "task": "TSK-ba0a414f-db1d-4e40-bfb4-a680e7d7e5d4",
+  "task_key": "ECDLP-50",
+  "timestamp": "2026-11-03T12:18:36.553067Z",
+  "run": "RUN-2a8442e2-9a37-4104-b9e8-95d3f7798297",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "research-worker"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Independent re-review of changed passages"
+  },
+  "reason": "v2 draft builds (14 pages, 0 undefined refs); re-review pending",
+  "before_sha256": "d13d77da8e20fee16df87af33d909e8076719cd90ace47794dcadeb051c75ab7",
+  "after_sha256": "38c39f19c0988d0cdd552f03fb3adc8bccfd27da07c03aff0a365ff84fe1219b"
+}
