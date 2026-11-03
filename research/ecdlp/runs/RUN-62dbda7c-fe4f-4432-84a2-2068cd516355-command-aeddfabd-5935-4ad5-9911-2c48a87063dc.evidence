@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/root/.elan/bin/lake",
+    "env",
+    "lean",
+    "research/ecdlp/proofs/checks/Round10Axioms.lean"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:00:08.588035Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:00:12.075206Z",
+  "truncated": false,
+  "output": "'MathResearch.ECDLP.SLPBound.length_bound_linear_short_weierstrass' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'MathResearch.ECDLP.SLPBound.length_bound_sq_short_weierstrass' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'MathResearch.ECDLP.SLPBound.natDegree_le_of_mem' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+}

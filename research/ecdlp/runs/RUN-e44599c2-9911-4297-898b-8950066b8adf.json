@@ -4,7 +4,7 @@
   "title": "Round 10 / ECDLP-32: Lean algebraic SLP lower bound for x-only DL computation",
   "created_at": "2026-11-03T10:56:39.976625Z",
   "status": "active",
-  "question": "Corollary of Theorem C (algebraic SLP barrier, x-only, division-free): Let W be short Weierstrass over a field F with 2 != 0, P of order r, 2N < r. Any straight-line program over F of length L using +, \u2212, \u00d7 and constants, with the single input u = x(Q), whose output equals k (in F) at u = x(kP) for all 1 <= k <= N, satisfies L >= log2((N \u2212 2)/3). Consequence (cost model): if each field operation costs >= c\u00b7log p bit operations, such programs need Omega(n^2) bit operations for N ~ r/2 ~ p/2, so the O(n log n) target is impossible in this restricted algebraic model.",
+  "question": "Corollary of Theorem C (algebraic SLP barrier, x-only, division-free): Let W be short Weierstrass over a field F with 2 != 0, P of order r, 2N < r. Any straight-line program over F of length L using +, −, × and constants, with the single input u = x(Q), whose output equals k (in F) at u = x(kP) for all 1 <= k <= N, satisfies L >= log2((N − 2)/3). Consequence (cost model): if each field operation costs >= c·log p bit operations, such programs need Omega(n^2) bit operations for N ~ r/2 ~ p/2, so the O(n log n) target is impossible in this restricted algebraic model.",
   "rationale": "Bounded subagent run for TSK-af4a7113-a8c4-49df-9099-2b7d7f648846",
   "assumptions": [],
   "sources": [],
@@ -14,11 +14,13 @@
     "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Formal (Lean, axioms propext/Classical.choice/Quot.sound only): division-free single-input SLP over a field F of length L computing k at x(kP) for 1<=k<=N, 2N<r, satisfies N <= 3*2^L+2 (MathResearch/ECDLP/SLPBound.lean, length_bound_linear_short_weierstrass); also r <= 6*2^L+5 variants (linear order form and k^2 via Theorem B). Bit-complexity consequence NOT formalized."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "next_action": "PI: add 'import MathResearch.ECDLP.SLPBound' to MathResearch.lean, run integration review, and decide how to record the unformalized cost-model remark.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Self-reported model identity: Claude Sonnet 5.5 (claude-sonnet-5-5), per runtime system prompt.",
   "run": {
     "started_at": "2026-11-03T10:57:01.925803Z",
     "completed_at": null,

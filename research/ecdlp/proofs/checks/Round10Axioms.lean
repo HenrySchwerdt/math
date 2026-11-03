@@ -1,0 +1,5 @@
+import MathResearch
+open MathResearch.ECDLP
+#print axioms SLPBound.length_bound_linear_short_weierstrass
+#print axioms SLPBound.length_bound_sq_short_weierstrass
+#print axioms SLPBound.natDegree_le_of_mem
