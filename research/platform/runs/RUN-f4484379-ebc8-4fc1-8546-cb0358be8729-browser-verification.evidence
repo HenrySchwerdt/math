@@ -1,0 +1,12 @@
+{
+  "kind": "observed-browser-checks",
+  "observed_at": "2026-11-03T07:23:58.976574Z",
+  "url": "https://henryschwerdt.github.io/math/",
+  "checks": [
+    "Local production preview: ECDLP project + Task filters returned the expected single research task.",
+    "Task detail navigation displayed exact question, criteria, status/outcome/proof labels and source links.",
+    "VitePress local full-text search for factorization returned cross-project documentation results.",
+    "Live deployed homepage displayed source commit 38af9fc, 15 records, 3 projects and zero formally verified research records."
+  ],
+  "limitations": "No claim of automated cross-browser or performance testing."
+}
