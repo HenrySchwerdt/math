@@ -16,8 +16,8 @@
   "claims": [
     "For a prime-order subgroup G of E(F_p) and functions f: G -> R/Z from a small explicit family of coordinate functions (e.g. x/p, y/p, fractional parts of low-degree polynomials in x,y over p), the defect max_{a,b in G} |f(a+b)-f(a)-f(b)| (distance in R/Z) is near its random-function value, i.e. no member is a near-character. (A near-character would give approximate bits of the discrete log and a lattice/HNP transfer.)"
   ],
-  "proof_status": "unproved",
+  "proof_status": "experimental",
   "outcome": "unresolved",
-  "next_action": "Independent counterexample attempt (ECDLP-5) and, where feasible, Lean obligation (ECDLP-6).",
-  "notes": "Origin: B9 (RUN-fec2442f), labeled conjecture; unconventional high-risk direction; cheap finite test proposed (T4)."
+  "next_action": "Re-run with a pre-registered symmetry-aware null on fresh seeds and larger function family.",
+  "notes": "Origin: B9 (RUN-fec2442f), labeled conjecture; unconventional high-risk direction; cheap finite test proposed (T4). | ECDLP-7 E-A (12 curves x 40 functions x 2 seeds): min defect ~0.499 (random level 0.5), positive controls detected; pre-registered Fourier threshold flagged 5 odd functions due to a mis-specified null (real coefficients); post-hoc symmetry-aware null gives 0 rejections (post-hoc, not a clean pass)."
 }

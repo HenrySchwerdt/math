@@ -18,9 +18,9 @@ def sym_class(c):
 
 def p_sym(F, r, cls):
     t = r * F * F
-    if cls == 'odd':     # real S, S^2/r ~ chi2_1, (r-1)/2 distinct frequencies
+    if cls == 'odd':     # real S, S^2/r ~ chi2_1, r-1 distinct frequencies
         q = math.erfc(math.sqrt(t / 2))
-        M = (r - 1) // 2
+        M = r - 1        # S_c real but S_c != S_{-c}: r-1 distinct real coefficients
     elif cls == 'even':  # |S|^2/r ~ Exp(1), (r-1)/2 distinct frequencies
         q = math.exp(-t)
         M = (r - 1) // 2
@@ -75,5 +75,5 @@ for tag, fn, seed in (('S1', 'ea_S1.json', 1), ('S2', 'ea_S2.json', 2)):
                     'frac_below_0.01': sum(p < 0.01 for p in ps) / len(ps)}
     res['empirical_symmetric_null_calibration'] = emp
     out[tag] = res
-    print(tag, json.dumps(res, indent=1))
+    pass
 json.dump(out, open(os.path.join(HERE, 'ea_posthoc.json'), 'w'), indent=1)

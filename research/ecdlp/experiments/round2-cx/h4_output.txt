@@ -1,0 +1,17 @@
+== T1 anomalous curves (#E = p): psi(Q~) = k psi(P~) for independent random lifts
+curves=42 informative trials=504 recovered k=504; degenerate-lift trials (psi==0)=0
+== T2 exhaustive lift pairs: bijection onto F_p^2 for non-anomalous E, r | #E, r != p
+curves tested=30 all bijective onto F_p^2: True
+== T3-T5 randomized sweeps (seed 20261103)
+trials(per category) ~ 1650; average chance rate 1/p = 0.0441
+  indep_lift                   74/1650 = 0.0448
+  indep_lift_and_curve_lift    73/1650 = 0.0442
+  teichmuller_x                75/1650 = 0.0455
+  consistent_[k]P              1650/1650 = 1.0000
+  consistent+eps_in_E1         64/1650 = 0.0388
+  torsion_lift_psi==0          1650/1650 = 1.0000
+  psi_hom_on_sums              1650/1650 = 1.0000
+== T6 p | #E, p >= 7 forces #E = p ? (exhaustive over all (a,b), primes 7..199)
+primes where multiples of p in Hasse interval differ from {p}: []
+== p=5 curves with #E = 10 (p | #E, r=2 != p): psi well-defined (lift independent) and hom?
+(a,b,#E,psi lift-independent on all y!=0 points, psi values): [(3, 0, 10, True, [0])]
