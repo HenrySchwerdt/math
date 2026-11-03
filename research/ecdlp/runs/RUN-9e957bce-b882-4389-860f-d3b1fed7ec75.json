@@ -1,0 +1,42 @@
+{
+  "id": "RUN-9e957bce-b882-4389-860f-d3b1fed7ec75",
+  "type": "RUN",
+  "title": "Round 6 / ECDLP-18: decisive genus-2 cover index-calculus test",
+  "created_at": "2026-11-03T10:01:26.523914Z",
+  "status": "active",
+  "question": "For E/F_p and a genus-2 cover C -> E (e.g. the double cover w^2 = x(Q) - c), does index calculus in J_C(F_p) with a degree-1 factor base solve DLPs in pi^*(E(F_p)) at a measured cost below sqrt(p) at toy sizes (p up to ~2^16), or does it cost >= q as predicted by HYP-ad5bc0e3?",
+  "rationale": "Bounded subagent run for TSK-e90f8650-8b93-4ea0-b9f1-82387f76e4c7",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-e90f8650-8b93-4ea0-b9f1-82387f76e4c7",
+    "HYP-ad5bc0e3-30cc-4eb8-b823-4df42edd44a6"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T10:01:45.541232Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "experimenter",
+    "task": "TSK-e90f8650-8b93-4ea0-b9f1-82387f76e4c7",
+    "input_hypotheses": [
+      "HYP-ad5bc0e3-30cc-4eb8-b823-4df42edd44a6"
+    ],
+    "starting_commit": "9c3c162c098c91379e03d440b0b5bac8dcf3e666",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

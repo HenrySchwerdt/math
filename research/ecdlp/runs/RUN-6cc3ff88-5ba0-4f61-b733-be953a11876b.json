@@ -1,0 +1,42 @@
+{
+  "id": "RUN-6cc3ff88-5ba0-4f61-b733-be953a11876b",
+  "type": "RUN",
+  "title": "Round 6 / ECDLP-16: relation-system solving cost at m = 3 for prime-field factor bases",
+  "created_at": "2026-11-03T10:01:26.368453Z",
+  "status": "active",
+  "question": "For E/F_p (toy p up to ~2^20) and factor bases V (small-x, and PKM-type multiplicative-coset), measure the cost of FINDING decompositions R = V1+V2+V3 by algebraic system solving (resultant elimination of Semaev S_4 or S_3-chained systems with structural constraints) versus scanning, and compare the total relation-collection cost against sqrt(p) and the threshold T < p^{1/2-1/m} = p^{1/6} per relation.",
+  "rationale": "Bounded subagent run for TSK-c3e4bd30-835c-4cf7-90f7-eb905fade4d5",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-c3e4bd30-835c-4cf7-90f7-eb905fade4d5",
+    "HYP-db508348-69da-451b-ba37-d4d4f472c121"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T10:01:45.541232Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "algorithm-engineering",
+    "task": "TSK-c3e4bd30-835c-4cf7-90f7-eb905fade4d5",
+    "input_hypotheses": [
+      "HYP-db508348-69da-451b-ba37-d4d4f472c121"
+    ],
+    "starting_commit": "9c3c162c098c91379e03d440b0b5bac8dcf3e666",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}
