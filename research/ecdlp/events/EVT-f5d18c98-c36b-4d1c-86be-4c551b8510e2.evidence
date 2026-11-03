@@ -1,0 +1,26 @@
+{
+  "id": "EVT-f5d18c98-c36b-4d1c-86be-4c551b8510e2",
+  "kind": "task-status-change",
+  "task": "TSK-afacfd9c-4a07-4b4f-b7ce-4ccd3341da0e",
+  "task_key": "ECDLP-10",
+  "timestamp": "2026-11-03T09:46:39.792324Z",
+  "run": "RUN-d0b4df5c-47cc-43e7-a7bb-449926187a0b",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-4 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "None"
+  },
+  "reason": "SLP coefficient bound and trace bound proved in Lean; PI verified build/axioms; independent review REV-0971d96d accept",
+  "before_sha256": "623a0d9870b28bafa4c66b3a64ab97974e3d4a7fa4d51c0e0af45e44d054d3f2",
+  "after_sha256": "d49643880747385932b10de6f2e452313341a223264966757d7ce890885ed2ee"
+}

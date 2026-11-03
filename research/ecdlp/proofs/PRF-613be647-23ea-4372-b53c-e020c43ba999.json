@@ -3,7 +3,7 @@
   "type": "PRF",
   "title": "Lean: SLP coefficient bound and embedding-degree trace bound",
   "created_at": "2026-11-03T09:40:39.242794Z",
-  "status": "active",
+  "status": "completed",
   "question": "Formal proofs of HYP-57d71f43 (SLP coefficient bound and unreachable element) and HYP-eff2cfbb (at most M(M+1) M-bad traces).",
   "rationale": "Surviving elementary barrier statements from ECDLP-5; cheap to formalize.",
   "assumptions": [],
@@ -13,7 +13,8 @@
     "HYP-eff2cfbb-053a-47e9-91de-a7210488b049",
     "TSK-afacfd9c-4a07-4b4f-b7ce-4ccd3341da0e",
     "RUN-d0b4df5c-47cc-43e7-a7bb-449926187a0b",
-    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355"
+    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355",
+    "REV-0971d96d-490d-4f4c-829d-3c7919d679d7"
   ],
   "evidence": [
     "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b96bd63a-3e7e-4d73-a679-9a6f3f7dfc88.evidence",
@@ -32,8 +33,8 @@
   ],
   "proof_status": "formally-verified",
   "outcome": "verified",
-  "next_action": "Independent correspondence review (REV-0971d96d).",
-  "notes": "Source commit d79b028ad9992db30440dc65d435f8a93b5a7008; lake build 3161 jobs exit 0, 0 warnings; Round4Axioms.lean: standard axioms only. Not formalized: link from t to an actual curve (Hasse bound, #E = q+1-t) and any bit-complexity statement. SLP model: List (\u2115\u00d7\u2115\u00d7Bool\u00d7Bool), out-of-range indices read 0. Elementary; B3 counting bound may be new in this exact form but novelty is unchecked.",
+  "next_action": "Accepted.",
+  "notes": "Source commit d79b028ad9992db30440dc65d435f8a93b5a7008; lake build 3161 jobs exit 0, 0 warnings; Round4Axioms.lean: standard axioms only. Not formalized: link from t to an actual curve (Hasse bound, #E = q+1-t) and any bit-complexity statement. SLP model: List (\u2115\u00d7\u2115\u00d7Bool\u00d7Bool), out-of-range indices read 0. Elementary; B3 counting bound may be new in this exact form but novelty is unchecked. Independent review accept (REV-0971d96d-490d-4f4c-829d-3c7919d679d7).",
   "formal": {
     "lean_file": "MathResearch/ECDLP/Barriers.lean",
     "declaration": "MathResearch.ECDLP.card_MBad_le",

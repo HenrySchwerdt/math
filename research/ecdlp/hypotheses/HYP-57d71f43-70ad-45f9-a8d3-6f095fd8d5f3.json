@@ -3,7 +3,7 @@
   "type": "HYP",
   "title": "Trivial coefficient bound for SLP certificates (N3)",
   "created_at": "2026-11-03T09:35:04.975734Z",
-  "status": "open",
+  "status": "completed",
   "question": "In any addition/subtraction straight-line program a_0 = P, a_i = \u00b1a_j \u00b1 a_l (j,l < i), every a_i equals n_i P for an integer n_i with |n_i| <= 2^i. Hence if the order r of P exceeds 2^{L+1}+1, some Q in <P> is not an output of any SLP of length <= L; this gives L >= log2(r-1) - 1, strictly stronger than the counting bound log2 r / (2 log2 log2 r) of HYP-650069e0.",
   "rationale": "Corrected variant produced by the ECDLP-5 counterexample run; recorded separately, original kept.",
   "assumptions": [],
@@ -11,7 +11,9 @@
   "refs": [
     "HYP-650069e0-5ad0-416b-980f-53064abdcccb",
     "RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402",
-    "TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131"
+    "TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131",
+    "PRF-613be647-23ea-4372-b53c-e020c43ba999",
+    "REV-0971d96d-490d-4f4c-829d-3c7919d679d7"
   ],
   "evidence": [
     "research/ecdlp/experiments/round2-cx/h3_output.txt"
@@ -19,8 +21,15 @@
   "claims": [
     "In any addition/subtraction straight-line program a_0 = P, a_i = \u00b1a_j \u00b1 a_l (j,l < i), every a_i equals n_i P for an integer n_i with |n_i| <= 2^i. Hence if the order r of P exceeds 2^{L+1}+1, some Q in <P> is not an output of any SLP of length <= L; this gives L >= log2(r-1) - 1, strictly stronger than the counting bound log2 r / (2 log2 log2 r) of HYP-650069e0."
   ],
-  "proof_status": "proof-attempt",
-  "outcome": "unresolved",
-  "next_action": "Independent proof write-up and review; Lean formalization where feasible.",
-  "notes": "Elementary; replaces the weaker counting barrier. Bit-cost consequences remain model-dependent (black-box group operations only). Lean candidate."
+  "proof_status": "formally-verified",
+  "outcome": "verified",
+  "next_action": "None (elementary; guardrail). Optional: per-step |n_i| <= 2^i form via prefixes.",
+  "notes": "Elementary; replaces the weaker counting barrier. Bit-cost consequences remain model-dependent (black-box group operations only). Lean candidate. | Formally verified (PRF-613be647-23ea-4372-b53c-e020c43ba999); independent review accept (REV-0971d96d-490d-4f4c-829d-3c7919d679d7; reviewer same provider as PI: partial independence). Lean statement generalizes to any q >= 2; SLP model allows out-of-range indices (reads 0), a superset of programs.",
+  "formal": {
+    "lean_file": "MathResearch/ECDLP/Barriers.lean",
+    "declaration": "MathResearch.ECDLP.exists_unreachable_of_addOrderOf (+ slpEval_mem_bound)",
+    "toolchain_file": "lean-toolchain",
+    "build_evidence": "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b96bd63a-3e7e-4d73-a679-9a6f3f7dfc88.evidence",
+    "source_commit": "d79b028ad9992db30440dc65d435f8a93b5a7008"
+  }
 }
