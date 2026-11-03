@@ -1,0 +1,46 @@
+{
+  "id": "REV-685408b5-10f0-47a1-a6d4-66da332f9be3",
+  "type": "REV",
+  "title": "Independent review of Lean partial-agreement degree bound (HYP-a1dd5501 part 2)",
+  "created_at": "2026-11-03T10:50:39.705855Z",
+  "status": "completed",
+  "question": "Does CurveX.partial_agreement_degree_bound at c273666 build with standard axioms only and faithfully, non-vacuously state HYP-a1dd5501 part (2)?",
+  "rationale": "Unassigned; record why selected",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "PRF-5357b698-39ee-4eee-b27c-b4f1345c06f6",
+    "HYP-a1dd5501-c137-492a-abc6-e9cda3765002",
+    "RUN-f3289796-b68f-4fba-ad0c-67d5c92e238a"
+  ],
+  "evidence": [],
+  "claims": [
+    "lake build at c273666 succeeds (3165 jobs); direct `lake env lean MathResearch/ECDLP/PartialAgreement.lean` succeeds; #print axioms for both declarations = [propext, Classical.choice, Quot.sound]; no sorry/admit/axiom/unsafe/native_decide/implemented_by in MathResearch/ECDLP.",
+    "The filter count equals S_j: since A ⊆ [1,N], k - j ∈ A (truncated subtraction) already forces k > j, so the j < k conjunct is redundant and Nat.cast_sub is valid.",
+    "2N < r is equivalent to N <= (r-1)/2 for every natural r (odd or even); primality/oddness of r is not used by the Lean proof, so the formal statement is more general on that axis.",
+    "The extra hypothesis (1 <= natDegree g or (j:F) != 0) excludes exactly the case deg g = 0 and p | j over F_p. In that case the informal conclusion still holds, but only via an unformalized Hasse-bound argument: S_j >= 1 forces 2j+1 <= N < r/2 <= (p+1+2 sqrt p)/2, so j < p. The author's justification 'j <= N < p' is incorrect as stated (j is unbounded; and N = p = 3 is possible: y^2 = x^3+2x+1 over F_3 has 7 points, r = 7, N = 3), though the conclusion is unaffected.",
+    "Non-vacuous: p = 13, y^2 = x^3+4x+1, P = (0,1) of order 19, N = 9, A = {2,3,4,5}, g = 8+12X (deg 1), j = 1: all hypotheses hold and S_1 = 2 <= 3."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "PI integration review may record PRF-5357b698 as formally verified for the stated Lean theorem; correct the PRF note's 'j <= N < p' justification; optionally formalize the Hasse-based removal of the extra hypothesis or keep it as a stated hypothesis.",
+  "notes": "Reviewer: independent-reviewer adapter, self-reported model claude-opus-5-5 (Claude Opus 5.5); runtime identity from system prompt only. Sequential subagent, no recursive agents. Formal correctness only; no complexity or novelty verification.",
+  "review": {
+    "run": "RUN-f3289796-b68f-4fba-ad0c-67d5c92e238a",
+    "target_commit": "c273666c1939b50c8df4ef9770811b3f3b5bbd84",
+    "targets": [
+      "PRF-5357b698-39ee-4eee-b27c-b4f1345c06f6",
+      "HYP-a1dd5501-c137-492a-abc6-e9cda3765002"
+    ],
+    "decision": "accept",
+    "rationale": "Proof builds with standard axioms only, no shortcuts found; statement matches HYP-a1dd5501 part (2) up to (i) a generalization (no primality of r, any field with 2 != 0) and (ii) an extra hypothesis that is only restrictive when deg g = 0 and char F | j, where the informal conclusion holds trivially (S_j = 0) by Hasse; non-vacuity exhibited. Minor revision requested to the PRF note's justification of (ii), not to the Lean artifact.",
+    "counterexamples": [
+      "Exhaustive search, all g in F_p[X] with deg <= 2, one curve of prime order per a-value, p in {11,13,17,19,23}, N = (r-1)/2, all j <= N: 5,489,316 (curve,g,j) triples, 0 violations of S_j <= 3 deg g; best ratio S_j/deg g = 2 (p=13).",
+      "Searched all nonsingular short Weierstrass curves over F_p, p in {5,...,23}, for a prime r > 2p (would allow N >= p) or r > 4p+2 (would allow S_j >= 1 with p | j): none. p = 3 (unsupported by toyec) handled by hand: #E(F_3) <= 7.",
+      "Hand check: gap case deg g = 0, p | j cannot have S_j >= 1 (needs r >= 4p+3 > p+1+2 sqrt p)."
+    ],
+    "complexity": "Not applicable: formal correctness only",
+    "limitations": "Correspondence analysis informal (Hasse step not formalized). Numerical search limited to deg g <= 2 and small p; it is a sanity check, not evidence for the formal claim. Build replayed cached traces; direct re-elaboration of PartialAgreement.lean was also run. delta > 2/3 corollary of part (2) not formalized and not reviewed. Novelty not literature-checked.",
+    "initial_packet": "PI blind packet: target commit, Lean file and axiom check paths, informal statement of HYP-a1dd5501 part (2), claimed Lean statement; PRF .md and runs/*.md withheld until initial findings were written."
+  }
+}

@@ -137,6 +137,11 @@ def validate():
             for field in ('starting_commit', 'resulting_commit'):
                 if r[field]:
                     git('cat-file', '-e', r[field] + '^{commit}')
+            for command in r['commands']:
+                # Only research.py exec evidence (JSON objects) may be listed as commands;
+                # the public site generator parses each entry.
+                if not command.endswith('.evidence') or not isinstance(json.loads((ROOT / command).read_text()), dict):
+                    raise ValueError(f'{d["id"]}: run.commands must list exec .evidence files only: {command}')
         if d['type'] == 'REV' and d['status'] == 'completed':
             git('cat-file', '-e', d['review']['target_commit'] + '^{commit}')
         if d['proof_status'] == 'formally-verified':

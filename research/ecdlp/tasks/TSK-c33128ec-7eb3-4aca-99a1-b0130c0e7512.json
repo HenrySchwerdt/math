@@ -1,0 +1,32 @@
+{
+  "id": "TSK-c33128ec-7eb3-4aca-99a1-b0130c0e7512",
+  "type": "TSK",
+  "title": "Round 11 / ECDLP-37: frontier exploration D \u2014 follow-ups of the best-ranked round-10 ideas",
+  "created_at": "2026-11-03T11:06:13.115775Z",
+  "status": "active",
+  "question": "Run the top-ranked cheap follow-ups from frontier A and B: (1) structure-aware SAT encodings (x-only Montgomery ladder, XOR-aware solving, cardinality constraints) and their scaling vs rho; (2) explicit cocycle / higher p-adic digit structure of the homomorphic Hensel section; plus at most one new idea that combines them.",
+  "rationale": "DEC allocation (frontier / strongest open math).",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "HYP-a913419f-f6d2-4829-a181-11ef8cbd57d4"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-6ef2b116-e7b1-48e7-b924-d6479242d7c6.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute.",
+  "notes": "Created by PI RUN-62dbda7c.",
+  "success_criteria": [
+    "Exact statements; pre-registered tests; reproducible evidence; honest negatives."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-29c93068-9ed2-4117-b500-cd135b674c07.md",
+    "research/ecdlp/runs/RUN-29c93068-9ed2-4117-b500-cd135b674c07.json",
+    "research/ecdlp/experiments/round11-frontier-d/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; \u2264 10 web lookups; computations < 5 min; no commits; ~75 min."
+}

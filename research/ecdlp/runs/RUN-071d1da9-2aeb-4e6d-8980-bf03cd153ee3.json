@@ -1,0 +1,82 @@
+{
+  "id": "RUN-071d1da9-2aeb-4e6d-8980-bf03cd153ee3",
+  "type": "RUN",
+  "title": "Round 10 / ECDLP-29: frontier exploration B (computation models, problem reformulations, learning)",
+  "created_at": "2026-11-03T10:50:39.600023Z",
+  "status": "completed",
+  "question": "Propose and cheaply test deliberately unconventional but sensible ideas toward faster ECDLP from computation models, reformulations of the problem statement, and data-driven/learning approaches not yet investigated by the lab.",
+  "rationale": "Bounded subagent run for TSK-1bb330e5-131f-4df3-8496-c3f2800911ad",
+  "assumptions": [],
+  "sources": [
+    {
+      "title": "The Discrete-Logarithm Problem with Preprocessing (Corrigan-Gibbs, Kogan, Eurocrypt 2018)",
+      "url": "https://www.iacr.org/archive/eurocrypt2018/10822110/10822110.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract and search snippet; S*T^2 ~ N generic bound, N^{1/3} advice/time attack (via follow-up descriptions); full text not read"
+    },
+    {
+      "title": "Non-uniform cracks in the concrete: the power of free precomputation (Bernstein, Lange, ASIACRYPT 2013)",
+      "url": "https://eprint.iacr.org/2012/318",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract-level only"
+    },
+    {
+      "title": "Bits Security of the Elliptic Curve Diffie-Hellman Secret Keys (Jetchev, Venkatesan, CRYPTO 2008)",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-540-85174-5_5",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract-level: LSB hardcore, conditional on GRH and on a family of curves"
+    },
+    {
+      "title": "A SAT-Based Approach for Index Calculus on Binary Elliptic Curves",
+      "url": "https://eprint.iacr.org/2019/313.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract-level; binary curves, point decomposition only"
+    }
+  ],
+  "refs": [
+    "TSK-1bb330e5-131f-4df3-8496-c3f2800911ad",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round10-frontier-b/PROTOCOL.md",
+    "research/ecdlp/experiments/round10-frontier-b/HASHES.txt",
+    "research/ecdlp/experiments/round10-frontier-b/sat_summary.txt",
+    "research/ecdlp/experiments/round10-frontier-b/learn_summary.txt",
+    "research/ecdlp/experiments/round10-frontier-b/sat_hint.jsonl",
+    "research/ecdlp/experiments/round10-frontier-b/learn_out.jsonl",
+    "research/ecdlp/experiments/round10-frontier-b/sat_ecdlp.py",
+    "research/ecdlp/experiments/round10-frontier-b/learn_k.py"
+  ],
+  "claims": [
+    "F-B1 (experimental; toy sizes, one encoding, one solver): Plain CDCL (Glucose4) on a bit-level circuit encoding of [k]P=Q for prime-order prime-field toy curves (n=5..10 bits) scales as conflicts ~ r^1.2 (18 solved runs, no censoring), and its cost is dominated by a key-entropy-independent floor (interval-DLP hint runs). No route below sqrt(r). Evidence: experiments/round10-frontier-b/sat_summary.txt, sat_*.jsonl.",
+    "F-B2 (experimental; toy sizes, two learner families): Logistic-regression and 1-hidden-layer MLP learners with coordinate bit and Fourier features show no better-than-majority prediction of any bit of k (or sign/mod labels) on held-out k, in 6 exhaustively enumerated toy groups (r=859..6607); controls (identity encoding, x-parity) are detected. Detection floor ~0.045-0.12. Evidence: experiments/round10-frontier-b/learn_summary.txt, learn_out.jsonl.",
+    "F-B3 (unproved; analytic sketch, no new claim): Speculative learn-then-decode (hidden-number/list-decoding) pipeline is information-theoretically polynomial in 1/eps given an eps-advantage bit oracle, but the oracle step is unsupported by F-B2. Evidence: analysis only."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "refuted",
+  "next_action": "PI: record F-B1/F-B2 as negative experimental results; optional low-cost follow-ups (structure-aware SAT encodings with x-only ladder/XOR-aware solver; larger-group learning with planted-leak calibration); write advice/amortization accounting as precise HYPs. No reviewed claim; independent review pending.",
+  "notes": "Executed via the discovery adapter (claude-sonnet-5-5) following docs/roles/frontier-explorer.md, because this session's agent registry predates the new frontier-explorer adapter. Runtime identity not exposed to PI. Self-reported model identity: Claude Sonnet 5.5 (claude-sonnet-5-5), role frontier-explorer; not runtime-verified. Unverified recollections (no source consulted): Kuhn-Struik multi-target DL cost, Pollard kangaroo sqrt(width), Akavia-Goldwasser-Safra list-decoding hard-core predicates, Boneh-Venkatesan hidden number problem. python-sat 1.9.dev17 pip-installed in sandbox for the run. Commands actually executed (manual, not via research.py exec, so no logger records): python3 sat_ecdlp.py {6,7,8|9|10} 3 11 1200000 (manual, not via research.py exec) | python3 sat_ecdlp.py 10 3 12 1200000 {4,6,8} | python3 learn_k.py {1,2,3} {10,13} ecdlp,control_identity,control_xparity | python3 analyze_sat.py; python3 analyze_learn.py. | PI reproduced learning test; SAT not reproduced (python-sat dependency).",
+  "run": {
+    "started_at": "2026-11-03T10:50:57.579959Z",
+    "completed_at": "2026-11-03T11:05:19.843644Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "frontier-explorer",
+    "task": "TSK-1bb330e5-131f-4df3-8496-c3f2800911ad",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    ],
+    "starting_commit": "3d6849aa2d2739ac03464e94fc5a1fb3171d5e55",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round10-frontier-b/"
+    ],
+    "resulting_commit": "24978eca51d6d3d883a670322d92ac011804375c",
+    "tests": [],
+    "benchmark": "Solver conflicts and wall time on a 4-core Linux container; see report section 4; seeds recorded; 1-4 instances per size; no repeats of same instance.",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}

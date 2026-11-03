@@ -1,0 +1,26 @@
+{
+  "id": "EVT-5550045a-695d-438f-9fab-0a7f2943e8f2",
+  "kind": "task-status-change",
+  "task": "TSK-af4a7113-a8c4-49df-9099-2b7d7f648846",
+  "task_key": "ECDLP-32",
+  "timestamp": "2026-11-03T10:57:02.568840Z",
+  "run": "RUN-e44599c2-9911-4297-898b-8950066b8adf",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Follow-up from proven theorems; bounded subagent launched",
+  "before_sha256": "27b969e75b34fc96d1089768b836b1d6f8b5d8b18a04aa15fb00917fc28f8b60",
+  "after_sha256": "04d948dd2ad579fbaffda4d918345757ac90f66fd4978327a1f2d0edc0a3cb8c"
+}

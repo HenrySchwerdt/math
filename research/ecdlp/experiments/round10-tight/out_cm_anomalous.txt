@@ -1,0 +1,2 @@
+anomalous j=0 cases 207 support-lemma holds 207
+(s, deficit N-1-mindeg) -> count [((1, 1), 207)]

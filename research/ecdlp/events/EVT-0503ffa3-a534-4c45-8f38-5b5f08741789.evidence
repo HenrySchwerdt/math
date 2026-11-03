@@ -1,0 +1,26 @@
+{
+  "id": "EVT-0503ffa3-a534-4c45-8f38-5b5f08741789",
+  "kind": "task-status-change",
+  "task": "TSK-6e4546c7-fd04-4a4b-a655-7a65af37802b",
+  "task_key": "ECDLP-35",
+  "timestamp": "2026-11-03T11:02:53.882580Z",
+  "run": "RUN-53c590b6-897b-438f-ae77-87309aa8d23a",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "frontier-explorer"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Frontier explorer C launched (native adapter)",
+  "before_sha256": "6368041dde8c49e1174dde9cee29a00e1914032e67c78539649627fd43f521af",
+  "after_sha256": "4e99a80c9ee164c72297ac6485a2a5fa60ba8e933287add5207329de186292de"
+}

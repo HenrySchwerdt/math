@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round10-frontier-a && python3 t2_landscape.py 1"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:02:05.102284Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:02:06.470771Z",
+  "truncated": false,
+  "output": "seed=1 p=20021 N=20219 1/sqrt(N)=0.0070\n  cyclic|dx| delta=1: mean corr over 5 Q = +0.0030  max|c|=0.0128  (5/sqrtN=0.0352)\n  cyclic|dx| delta=2: mean corr over 5 Q = +0.0068  max|c|=0.0088  (5/sqrtN=0.0352)\n  cyclic|dx| delta=3: mean corr over 5 Q = +0.0014  max|c|=0.0058  (5/sqrtN=0.0352)\n  cyclic|dx| delta=4: mean corr over 5 Q = +0.0134  max|c|=0.0176  (5/sqrtN=0.0352)\n  cyclic|dx| delta=8: mean corr over 5 Q = +0.0127  max|c|=0.0139  (5/sqrtN=0.0352)\n  cyclic|dx| delta=64: mean corr over 5 Q = +0.0004  max|c|=0.0077  (5/sqrtN=0.0352)\n  hamming(x) delta=1: mean corr over 5 Q = +0.0045  max|c|=0.0095  (5/sqrtN=0.0352)\n  hamming(x) delta=2: mean corr over 5 Q = +0.0007  max|c|=0.0157  (5/sqrtN=0.0352)\n  hamming(x) delta=3: mean corr over 5 Q = +0.0055  max|c|=0.0116  (5/sqrtN=0.0352)\n  hamming(x) delta=4: mean corr over 5 Q = -0.0012  max|c|=0.0118  (5/sqrtN=0.0352)\n  hamming(x) delta=8: mean corr over 5 Q = +0.0001  max|c|=0.0191  (5/sqrtN=0.0352)\n  hamming(x) delta=64: mean corr over 5 Q = +0.0018  max|c|=0.0128  (5/sqrtN=0.0352)\n  random: success 50/400 at budget 1421 evals (= 10 sqrt(N); N=20219); random-sampling expectation ~56.2\n  anneal: success 39/400 at budget 1421 evals (= 10 sqrt(N); N=20219); random-sampling expectation ~56.2\n  rho reference ~ 1.25 sqrt(N) = 178 evals for success prob ~1/2\n"
+}

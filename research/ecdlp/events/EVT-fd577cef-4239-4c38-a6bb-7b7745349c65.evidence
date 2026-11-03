@@ -1,0 +1,26 @@
+{
+  "id": "EVT-fd577cef-4239-4c38-a6bb-7b7745349c65",
+  "kind": "task-status-change",
+  "task": "TSK-f4cd6596-e37f-4552-a4d7-51acc1efe0c2",
+  "task_key": "ECDLP-31",
+  "timestamp": "2026-11-03T10:53:45.393924Z",
+  "run": "RUN-665c4a65-aaa9-49ce-bb97-93a0cbd20487",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "research-worker"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Write-up drafting subagent launched",
+  "before_sha256": "573c98c4eed119c687498cfda047d00a3d88c43809f5d9ef1884d7e9cdd258fe",
+  "after_sha256": "d59fdf1c5ad24bff240418c80eec0bf74a791b4eb17a9ed29f6ee8578f4adfe9"
+}

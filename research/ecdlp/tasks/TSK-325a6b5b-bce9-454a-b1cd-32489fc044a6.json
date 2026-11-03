@@ -1,0 +1,32 @@
+{
+  "id": "TSK-325a6b5b-bce9-454a-b1cd-32489fc044a6",
+  "type": "TSK",
+  "title": "Round 10 / ECDLP-28: frontier exploration A (mathematics and physics analogies)",
+  "created_at": "2026-11-03T10:50:39.486852Z",
+  "status": "completed",
+  "question": "Propose and cheaply test deliberately unconventional but sensible ideas toward faster ECDLP drawn from mathematics/physics analogies not yet investigated by the lab.",
+  "rationale": "Round-10 selection by PI; user requested a standing agent for unconventional research.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-3a7de9df-6087-42bd-a360-fc75f3517b97.evidence",
+    "research/ecdlp/events/EVT-f5a8b9b9-4d5d-496f-bf5f-46aed318764f.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "refuted",
+  "next_action": "Optional F-A1 follow-up; new frontier exploration",
+  "notes": "Created by PI RUN-62dbda7c. Executed via the discovery adapter (claude-sonnet-5-5) following docs/roles/frontier-explorer.md, because this session's agent registry predates the new frontier-explorer adapter.",
+  "success_criteria": [
+    "Every idea states property, escaped barrier assumption, obligations, killers, cheapest test, prior work; at least one cheapest test executed with pre-registered protocol; negative results reported."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-d97ea396-7973-41b4-83c1-53d4666de611.md",
+    "research/ecdlp/runs/RUN-d97ea396-7973-41b4-83c1-53d4666de611.json",
+    "research/ecdlp/experiments/round10-frontier-a/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; computations < 5 min; \u2264 15 web lookups; no commits; ~75 min."
+}

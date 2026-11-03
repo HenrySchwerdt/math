@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round10-frontier-a && python3 t3_section_digit.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:01:21.796514Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T11:01:21.863721Z",
+  "truncated": false,
+  "output": "Traceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round10-frontier-a/t3_section_digit.py\", line 157, in <module>\n    p0 = int(sys.argv[1]); seed = int(sys.argv[2])\n             ~~~~~~~~^^^\nIndexError: list index out of range\n"
+}

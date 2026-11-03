@@ -1,0 +1,26 @@
+{
+  "id": "EVT-f4e9c782-c4df-4d4a-a4d0-ee9ee628f094",
+  "kind": "task-status-change",
+  "task": "TSK-af4a7113-a8c4-49df-9099-2b7d7f648846",
+  "task_key": "ECDLP-32",
+  "timestamp": "2026-11-03T11:00:44.844786Z",
+  "run": "RUN-e44599c2-9911-4297-898b-8950066b8adf",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Division model (ECDLP-34); batched review"
+  },
+  "reason": "Division-free SLP length bound proved in Lean; PI verified build and axioms",
+  "before_sha256": "04d948dd2ad579fbaffda4d918345757ac90f66fd4978327a1f2d0edc0a3cb8c",
+  "after_sha256": "fbbc4e42cd90e689317c7a5f96d070108d09b3fccb09869da6a2b78c1df539f0"
+}

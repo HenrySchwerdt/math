@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round10-frontier-a && python3 t1_freiman.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:01:21.565579Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T11:01:21.631413Z",
+  "truncated": false,
+  "output": "Traceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round10-frontier-a/t1_freiman.py\", line 56, in <module>\n    seed = int(sys.argv[1]); M = int(sys.argv[2]); p = nextprime(1 << 20)\n               ~~~~~~~~^^^\nIndexError: list index out of range\n"
+}

@@ -1,0 +1,20 @@
+p=1048583 M=1000 seed=1
+REAL  A:tot=118405,I+=85,I*=0 M:tot=118872,I+=87,I*=2
+A tot: real=118405 null_mean=118405.0 null_sd(floor Poisson)=344.1 z=0.00
+A I+: real=85 null_mean=77.4 null_sd(floor Poisson)=8.8 z=0.86
+A I*: real=0 null_mean=0.8 null_sd(floor Poisson)=0.9 z=-0.87
+M tot: real=118872 null_mean=118872.0 null_sd(floor Poisson)=344.8 z=0.00
+M I+: real=87 null_mean=76.1 null_sd(floor Poisson)=8.7 z=1.25
+M I*: real=2 null_mean=0.8 null_sd(floor Poisson)=0.9 z=1.28
+CTRL linear c*j A:tot=83208250,I+=83208250,I*=0 M:tot=738431,I+=0,I*=738431
+CTRL geometric 7^j A:tot=125164,I+=0,I*=0 M:tot=83208250,I+=83208250,I*=0
+p=1048583 M=1500 seed=2
+REAL  A:tot=604545,I+=247,I*=2 M:tot=603337,I+=248,I*=2
+A tot: real=604545 null_mean=604545.0 null_sd(floor Poisson)=777.5 z=0.00
+A I+: real=247 null_mean=263.7 null_sd(floor Poisson)=16.2 z=-1.03
+A I*: real=2 null_mean=1.6 null_sd(floor Poisson)=1.4 z=0.30
+M tot: real=603337 null_mean=603337.0 null_sd(floor Poisson)=776.7 z=0.00
+M I+: real=248 null_mean=262.3 null_sd(floor Poisson)=16.2 z=-0.88
+M I*: real=2 null_mean=2.0 null_sd(floor Poisson)=1.7 z=0.00
+CTRL linear c*j A:tot=280968625,I+=280968625,I*=0 M:tot=1940492,I+=0,I*=1800039
+CTRL geometric 7^j A:tot=612124,I+=0,I*=2 M:tot=280968625,I+=280968625,I*=0

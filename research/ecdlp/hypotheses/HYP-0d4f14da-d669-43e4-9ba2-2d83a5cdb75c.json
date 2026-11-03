@@ -1,0 +1,28 @@
+{
+  "id": "HYP-0d4f14da-d669-43e4-9ba2-2d83a5cdb75c",
+  "type": "HYP",
+  "title": "Method barrier for translation-annihilator interpolation bounds (L2) and CM deficit family (L3)",
+  "created_at": "2026-11-03T11:04:19.952630Z",
+  "status": "open",
+  "question": "L2 (method barrier): for any translation annihilator D = \u03a3_{i\u2208S} c_i G(Q+iP) with \u03a3c_i = \u03a3 i c_i = 0 (|S| = s, width w), G = g\u2218x, deg g = d >= 1, 2N < r: D \u2262 0 has pole degree exactly 2ds and >= 2(N \u2212 w) zeros, so N <= ds + w, minimized at s = 3, w = 2 (Theorem C). Hence zero-counting with translates cannot beat N/3; a tighter bound requires information beyond pole structure and values G(kP) = f(k). L3: on anomalous j = 0 curves (p \u2261 1 mod 3, #E = p), the interpolant of k^2 at N = (p\u22121)/2 satisfies g(\u03b6X) = \u03bb^2 g(X), so g = X^s h(X^3) and deg g <= N \u2212 3 + s.",
+  "rationale": "From ECDLP-33; answers whether Theorem C's 1/3 can be improved by the same technique (no).",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-43398e3b-6162-4e45-bd6d-0873519b7062",
+    "TSK-15871df8-8e14-4958-a868-0a09a9e90d3f",
+    "HYP-4c2d330a-de1e-43e2-8e21-7ba3e8ec6219",
+    "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round10-tight/out_cm_anomalous.txt",
+    "research/ecdlp/experiments/round10-tight/out_validate_newton.txt"
+  ],
+  "claims": [
+    "L2 (method barrier): for any translation annihilator D = \u03a3_{i\u2208S} c_i G(Q+iP) with \u03a3c_i = \u03a3 i c_i = 0 (|S| = s, width w), G = g\u2218x, deg g = d >= 1, 2N < r: D \u2262 0 has pole degree exactly 2ds and >= 2(N \u2212 w) zeros, so N <= ds + w, minimized at s = 3, w = 2 (Theorem C). Hence zero-counting with translates cannot beat N/3; a tighter bound requires information beyond pole structure and values G(kP) = f(k). L3: on anomalous j = 0 curves (p \u2261 1 mod 3, #E = p), the interpolant of k^2 at N = (p\u22121)/2 satisfies g(\u03b6X) = \u03bb^2 g(X), so g = X^s h(X^3) and deg g <= N \u2212 3 + s."
+  ],
+  "proof_status": "proof-attempt",
+  "outcome": "unresolved",
+  "next_action": "Blind review; L2 is a short proof and Lean-formalizable in the function-field-free form only partially.",
+  "notes": "PI checked L2 proof steps (s >= 3, distinct poles, zero count) and reproduced cm_anomalous.py (207/207) and validate_newton.py (400/400) via exec. Not formalized; not independently reviewed."
+}

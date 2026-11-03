@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/experiments/round10-tight && python3 validate_newton.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:03:54.344947Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:03:55.161639Z",
+  "truncated": false,
+  "output": "cases 400 mismatches 0 with deficit 4\n"
+}

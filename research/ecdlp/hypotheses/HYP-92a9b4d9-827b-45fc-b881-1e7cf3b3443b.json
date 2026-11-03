@@ -1,0 +1,33 @@
+{
+  "id": "HYP-92a9b4d9-827b-45fc-b881-1e7cf3b3443b",
+  "type": "HYP",
+  "title": "Algebraic SLP lower bound for x-only DL computation (corollary of Theorem C)",
+  "created_at": "2026-11-03T10:56:40.093269Z",
+  "status": "open",
+  "question": "Corollary of Theorem C (algebraic SLP barrier, x-only, division-free): Let W be short Weierstrass over a field F with 2 != 0, P of order r, 2N < r. Any straight-line program over F of length L using +, \u2212, \u00d7 and constants, with the single input u = x(Q), whose output equals k (in F) at u = x(kP) for all 1 <= k <= N, satisfies L >= log2((N \u2212 2)/3). Consequence (cost model): if each field operation costs >= c\u00b7log p bit operations, such programs need Omega(n^2) bit operations for N ~ r/2 ~ p/2, so the O(n log n) target is impossible in this restricted algebraic model.",
+  "rationale": "Derived by PI from the formally verified Theorem C; target: Lean proof.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "PRF-58cf340e-e9ff-4f06-980b-09cec3d52ee7",
+    "RUN-e44599c2-9911-4297-898b-8950066b8adf"
+  ],
+  "evidence": [],
+  "claims": [
+    "Corollary of Theorem C (algebraic SLP barrier, x-only, division-free): Let W be short Weierstrass over a field F with 2 != 0, P of order r, 2N < r. Any straight-line program over F of length L using +, \u2212, \u00d7 and constants, with the single input u = x(Q), whose output equals k (in F) at u = x(kP) for all 1 <= k <= N, satisfies L >= log2((N \u2212 2)/3). Consequence (cost model): if each field operation costs >= c\u00b7log p bit operations, such programs need Omega(n^2) bit operations for N ~ r/2 ~ p/2, so the O(n log n) target is impossible in this restricted algebraic model."
+  ],
+  "proof_status": "formally-verified",
+  "outcome": "verified",
+  "next_action": "Extend to SLPs with division (ECDLP-34).",
+  "notes": "PI-derived follow-up from proven theorems. | Program-length part formally verified (division-free model). Cost-model consequence (Omega(n^2) bits) is a remark, not formalized. Independent review pending (batched).",
+  "formal": {
+    "lean_file": "MathResearch/ECDLP/SLPBound.lean",
+    "declaration": "MathResearch.ECDLP.SLPBound.length_bound_linear_short_weierstrass",
+    "toolchain_file": "lean-toolchain",
+    "build_evidence": "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-94bd6bd6-9c44-47e7-9743-cd567e803d9f.evidence",
+    "source_commit": "bff5e14c0f187719fb79c07f7768a2856f20604a"
+  }
+}

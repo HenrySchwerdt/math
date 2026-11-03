@@ -20,3 +20,12 @@ algorithm-engineering, counterexample, independent-reviewer and formalization.
 All routine roles use Luna/Sonnet; independent-reviewer uses Sol/Opus.
 Adapters contain references, not duplicated scientific policy. Actual live
 spawning/independence remains to be demonstrated in the first vertical slice.
+
+## Frontier exploration
+
+`frontier-explorer` (Luna/Sonnet) is a standing role for deliberately unconventional but testable
+ideas outside the directions already investigated. It must name the barrier assumption each idea
+escapes, run the cheapest decisive test for its best ideas, and report negative results with equal
+weight. Its outputs enter the normal falsification and review pipeline like any other hypothesis.
+
+Scientific write-ups follow docs/PAPERS.md (draft by a worker, blind adversarial and independent manuscript review, PI integration; no external submission without human approval).

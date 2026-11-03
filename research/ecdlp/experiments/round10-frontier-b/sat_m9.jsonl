@@ -1,0 +1,3 @@
+{"t_unknown": 9, "m": 9, "p": 353, "r": 337, "n": 9, "vars": 21828, "clauses": 71351, "res": true, "secs": 73.983, "conflicts": 571844, "correct": true, "rho_ops": 23.0}
+{"t_unknown": 9, "m": 9, "p": 349, "r": 347, "n": 9, "vars": 25103, "clauses": 82281, "res": true, "secs": 49.673, "conflicts": 502395, "correct": true, "rho_ops": 23.3}
+{"t_unknown": 9, "m": 9, "p": 347, "r": 373, "n": 9, "vars": 25088, "clauses": 82230, "res": true, "secs": 72.287, "conflicts": 511289, "correct": true, "rho_ops": 24.2}

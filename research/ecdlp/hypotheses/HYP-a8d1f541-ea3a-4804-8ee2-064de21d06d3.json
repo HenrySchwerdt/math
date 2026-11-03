@@ -1,0 +1,27 @@
+{
+  "id": "HYP-a8d1f541-ea3a-4804-8ee2-064de21d06d3",
+  "type": "HYP",
+  "title": "Conjecture C*: x-only interpolation degree is N \u2212 1 \u2212 O(1) generically",
+  "created_at": "2026-11-03T11:04:19.998310Z",
+  "status": "open",
+  "question": "Conjecture C*: outside structured families (e.g. CM j = 0 anomalous), the minimal degree of g with g(x(kP)) = k (or k^2) on 1 <= k <= N is N \u2212 1 \u2212 O(1); deficits occur with frequency ~1/p (independent-vanishing model). Observed: 154,288 cases (p <= 997), max deficit 3.",
+  "rationale": "From ECDLP-33 experiments.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-43398e3b-6162-4e45-bd6d-0873519b7062",
+    "TSK-15871df8-8e14-4958-a868-0a09a9e90d3f",
+    "HYP-4c2d330a-de1e-43e2-8e21-7ba3e8ec6219",
+    "HYP-0d4f14da-d669-43e4-9ba2-2d83a5cdb75c"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round10-tight/out_summary.txt"
+  ],
+  "claims": [
+    "Conjecture C*: outside structured families (e.g. CM j = 0 anomalous), the minimal degree of g with g(x(kP)) = k (or k^2) on 1 <= k <= N is N \u2212 1 \u2212 O(1); deficits occur with frequency ~1/p (independent-vanishing model). Observed: 154,288 cases (p <= 997), max deficit 3."
+  ],
+  "proof_status": "experimental",
+  "outcome": "unresolved",
+  "next_action": "Deficit histogram for p in [1000, 5000] (isomorphism-deduplicated) vs 1/p model; analyze unexplained excess primes 19, 79, 109, 167, 269, 383 (anomalous, large End).",
+  "notes": "Toy sizes, prime fields only."
+}

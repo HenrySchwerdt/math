@@ -1,0 +1,53 @@
+{
+  "id": "RUN-43398e3b-6162-4e45-bd6d-0873519b7062",
+  "type": "RUN",
+  "title": "Round 10 / ECDLP-33: tightness of x-only interpolation degree bounds",
+  "created_at": "2026-11-03T10:56:40.050027Z",
+  "status": "completed",
+  "question": "Tightness conjecture for x-only interpolation: for E/F_p, P of prime order r and 2N < r, every g in F_p[X] with g(x(kP)) = k (resp. k^2) for 1 <= k <= N has deg g >= N \u2212 c for an absolute constant c (generic curves), improving the proven bound (N \u2212 2)/3; or else there exist families with substantially lower-degree interpolants.",
+  "rationale": "Bounded subagent run for TSK-15871df8-8e14-4958-a868-0a09a9e90d3f",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-15871df8-8e14-4958-a868-0a09a9e90d3f",
+    "HYP-4c2d330a-de1e-43e2-8e21-7ba3e8ec6219",
+    "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+  ],
+  "evidence": [],
+  "claims": [
+    "L1 (proved, elementary): the minimal degree of g with g(x_k)=f(k), k<=N, equals max{j<N: c_j != 0} for the Newton divided differences c_j of f on the nodes x(kP); deficit N-1-mindeg is the length of the trailing zero run of c_j.",
+    "L2 (proved, elementary, not formalized): among translation-difference annihilators sum c_i G(Q+iP) (sum c_i=0, sum i c_i=0), support size s, width w, one gets N <= d*s + w, optimal at s=3,w=2, i.e. exactly Theorem C; the pole/zero-count method cannot beat alpha=1/3.",
+    "L3 (proved, not formalized): for anomalous j=0 curves over F_p, target k^2, N=(p-1)/2, the interpolant satisfies g(zeta X)=lambda^2 g(X), so g=X^s h(X^3) and deg g <= N-3+s; observed s=1 in 207/207 cases (deficit exactly 1; s=1 not proved). Hence mindeg=N-1 is not universal, but the deficit is O(1).",
+    "Experimental (finite, p<=997, 154288 cases, 162 primes): mindeg(N)<N-1 occurs for a fraction ~1/p of (curve,N), D>=2 ~1/p^2, max deficit 3, matching an independent-vanishing model outside small r, anomalous j=0 (L3) and some CM primes (p=19,79,109,167,269,383 for k^2 top level, unexplained). No lower bound deg g >= N-c or alpha>1/3 proved; conjecture C*: mindeg>=N-1-O(1) outside structured families is unproved."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "inconclusive",
+  "next_action": "Run the isomorphism-deduplicated histogram of deficits for p in [1000,5000] vs the 1/p model (minutes, tight.py); prove s=1 in L3; analyse small-degree CM endomorphism relations g\u2218R=mu^2 g at the top level (p=19,79,109,167,269,383) to see whether a deficit growing with N exists; have L1-L3 independently reviewed and (if kept) formalized in Lean.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. | Self-reported model identity (agent): claude-sonnet-5-5 (Sonnet 5.5) running the algebraic-geometry role; not verified from runtime metadata beyond the system prompt. Experiments in experiments/round10-tight (raw per-case JSON deleted for size; regenerate from seeds 1,2,3). Reviews: none yet. | PI reproduced cm_anomalous.py and validate_newton.py via exec (identical).",
+  "run": {
+    "started_at": "2026-11-03T10:57:01.925803Z",
+    "completed_at": "2026-11-03T11:04:20.021892Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "algebraic-geometry",
+    "task": "TSK-15871df8-8e14-4958-a868-0a09a9e90d3f",
+    "input_hypotheses": [
+      "HYP-4c2d330a-de1e-43e2-8e21-7ba3e8ec6219",
+      "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
+      "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+    ],
+    "starting_commit": "ecc9384eea857fc620270e8c8295c9661f727028",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round10-tight/"
+    ],
+    "resulting_commit": "959293d05fdce61dac56df1c3778d8f7e5ff3181",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}

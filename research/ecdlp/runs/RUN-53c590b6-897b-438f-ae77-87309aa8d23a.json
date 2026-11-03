@@ -1,0 +1,42 @@
+{
+  "id": "RUN-53c590b6-897b-438f-ae77-87309aa8d23a",
+  "type": "RUN",
+  "title": "Round 10 / ECDLP-35: frontier exploration C \u2014 barrier inversion",
+  "created_at": "2026-11-03T11:02:53.368632Z",
+  "status": "active",
+  "question": "Barrier inversion: enumerate every barrier the lab has proven or cataloged (generic-group, SLP/algebraic degree, transfer homomorphism, factor-base/index-calculus, cover, equidistribution), state each one's exact assumptions, characterize algorithm classes that violate ALL of them simultaneously, and propose + cheaply test the most concrete such class.",
+  "rationale": "Bounded subagent run for TSK-6e4546c7-fd04-4a4b-a655-7a65af37802b",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-6e4546c7-fd04-4a4b-a655-7a65af37802b",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Native frontier-explorer adapter (claude-sonnet-5-5 configured); runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T11:02:53.395149Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "frontier-explorer",
+    "task": "TSK-6e4546c7-fd04-4a4b-a655-7a65af37802b",
+    "input_hypotheses": [
+      "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    ],
+    "starting_commit": "98d94e93325294156a4f9edc2226c991d955d082",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; owns round10-frontier-c/",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}

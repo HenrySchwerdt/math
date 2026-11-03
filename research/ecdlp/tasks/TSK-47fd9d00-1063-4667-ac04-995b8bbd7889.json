@@ -1,0 +1,33 @@
+{
+  "id": "TSK-47fd9d00-1063-4667-ac04-995b8bbd7889",
+  "type": "TSK",
+  "title": "Round 10 / ECDLP-30: independent review of PartialAgreement.lean",
+  "created_at": "2026-11-03T10:50:39.634464Z",
+  "status": "completed",
+  "question": "Does CurveX.partial_agreement_degree_bound faithfully and non-vacuously state HYP-a1dd5501 part (2)?",
+  "rationale": "Round-10 selection by PI; user requested a standing agent for unconventional research.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-a1dd5501-c137-492a-abc6-e9cda3765002",
+    "PRF-5357b698-39ee-4eee-b27c-b4f1345c06f6"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-b4bf1631-b25e-4158-b633-a25ab505c925.evidence",
+    "research/ecdlp/events/EVT-b185e853-ea06-44b4-a3b2-449c812f45de.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "None",
+  "notes": "Created by PI RUN-62dbda7c. Adapter independent-reviewer (claude-opus-5-5 configured).",
+  "success_criteria": [
+    "Correspondence verdict with reproducible checks."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-f3289796-b68f-4fba-ad0c-67d5c92e238a.md",
+    "research/ecdlp/runs/RUN-f3289796-b68f-4fba-ad0c-67d5c92e238a.json",
+    "research/ecdlp/reviews/REV-685408b5-10f0-47a1-a6d4-66da332f9be3.json/.md"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; computations < 5 min; \u2264 15 web lookups; no commits; ~75 min."
+}
