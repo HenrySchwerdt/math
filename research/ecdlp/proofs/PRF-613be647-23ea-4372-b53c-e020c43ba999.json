@@ -1,0 +1,44 @@
+{
+  "id": "PRF-613be647-23ea-4372-b53c-e020c43ba999",
+  "type": "PRF",
+  "title": "Lean: SLP coefficient bound and embedding-degree trace bound",
+  "created_at": "2026-11-03T09:40:39.242794Z",
+  "status": "active",
+  "question": "Formal proofs of HYP-57d71f43 (SLP coefficient bound and unreachable element) and HYP-eff2cfbb (at most M(M+1) M-bad traces).",
+  "rationale": "Surviving elementary barrier statements from ECDLP-5; cheap to formalize.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-57d71f43-70ad-45f9-a8d3-6f095fd8d5f3",
+    "HYP-eff2cfbb-053a-47e9-91de-a7210488b049",
+    "TSK-afacfd9c-4a07-4b4f-b7ce-4ccd3341da0e",
+    "RUN-d0b4df5c-47cc-43e7-a7bb-449926187a0b",
+    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b96bd63a-3e7e-4d73-a679-9a6f3f7dfc88.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-09396ae9-5f71-4534-91dc-1d7b3abca3d2.evidence",
+    "MathResearch/ECDLP/Barriers.lean",
+    "research/ecdlp/proofs/checks/Round4Axioms.lean",
+    "lean-toolchain"
+  ],
+  "claims": [
+    "MathResearch.ECDLP.slpEval_mem_bound",
+    "MathResearch.ECDLP.exists_unreachable_of_addOrderOf",
+    "MathResearch.ECDLP.trace_unique_of_dvd",
+    "MathResearch.ECDLP.card_primes_lt",
+    "MathResearch.ECDLP.MBad_finite",
+    "MathResearch.ECDLP.card_MBad_le"
+  ],
+  "proof_status": "formally-verified",
+  "outcome": "verified",
+  "next_action": "Independent correspondence review (REV-0971d96d).",
+  "notes": "Source commit d79b028ad9992db30440dc65d435f8a93b5a7008; lake build 3161 jobs exit 0, 0 warnings; Round4Axioms.lean: standard axioms only. Not formalized: link from t to an actual curve (Hasse bound, #E = q+1-t) and any bit-complexity statement. SLP model: List (\u2115\u00d7\u2115\u00d7Bool\u00d7Bool), out-of-range indices read 0. Elementary; B3 counting bound may be new in this exact form but novelty is unchecked.",
+  "formal": {
+    "lean_file": "MathResearch/ECDLP/Barriers.lean",
+    "declaration": "MathResearch.ECDLP.card_MBad_le",
+    "toolchain_file": "lean-toolchain",
+    "build_evidence": "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b96bd63a-3e7e-4d73-a679-9a6f3f7dfc88.evidence",
+    "source_commit": "d79b028ad9992db30440dc65d435f8a93b5a7008"
+  }
+}
