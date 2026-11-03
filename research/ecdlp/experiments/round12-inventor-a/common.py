@@ -72,8 +72,10 @@ class CC:
 
 def load_instances():
     out = []
-    with open(os.path.join(HERE, 'instances.jsonl')) as f:
-        for l in f:
+    for b in SIZES:
+        fn = os.path.join(HERE, f'instances_{b}.jsonl')
+        if not os.path.exists(fn): continue
+        for l in open(fn):
             d = json.loads(l)
             d['P'] = tuple(d['P']); d['Q'] = tuple(d['Q'])
             out.append(d)

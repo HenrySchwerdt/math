@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 12 / algorithm inventor B",
   "created_at": "2026-11-03T11:34:46.103661Z",
-  "status": "active",
+  "status": "completed",
   "question": "Representation-change algorithms: invent ECDLP algorithms that move the instance to a different representation or object (alternative curve models, x-only/Kummer arithmetic, isogeny walks, covers, structured maps to other groups or to algebraic systems) where the scalar becomes cheaper to recover, escaping the lab's transfer and isogeny-invariance barriers; prototype and benchmark against Pollard rho.",
   "rationale": "Bounded run for TSK-84f6d4c2-dcaa-4541-9d41-d6f21e61b2f6",
   "assumptions": [],
@@ -32,12 +32,12 @@
     "Pre-registered rule output 'asymptotic improvement' for B2 with W=10 is judged a false positive (additive polylog overhead plus heavy-tailed rho baseline); no speedup over sqrt(r) is claimed for any candidate. Empirical evidence only; no proof."
   ],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "refuted",
   "next_action": "Do not pursue B1/B2 for sub-sqrt(r); optionally measure distance-to-structure (class size H(t^2-4p)) to confirm the sqrt(p) obstacle; amend the slope-based decision rule (additive overheads, heavy-tailed rho) before reuse.",
   "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI. Self-reported model identity: claude-sonnet-5-5 (not runtime-verified). Executed via algorithm-engineering adapter following algorithm-inventor role.",
   "run": {
     "started_at": "2026-11-03T11:34:46.104009Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T11:54:40.712984Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured)",
     "role": "algorithm-inventor",
@@ -49,8 +49,10 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round12-inventor-b/"
+    ],
+    "resulting_commit": "c7c68451aaf0ed72850af04adc8a1b631120f43b",
     "tests": [],
     "benchmark": "See report",
     "machine": "See report",
