@@ -17,7 +17,7 @@
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\lc}{\operatorname{lc}}
 \title{Machine-checked degree lower bounds for interpolating the elliptic curve discrete logarithm from $x$-coordinates}
-\author{ECDLP research laboratory (AI-generated internal technical report,\\ tasks ECDLP-31, ECDLP-36 (revision~1) and revision~2 (run RUN-2a8442e2-9a37-4104-b9e8-95d3f7798297), paper record\\ PAP-ef6e2010-7950-47cf-bb75-05801891905b)}
+\author{ECDLP research laboratory (AI-generated internal technical report,\\ tasks ECDLP-31, ECDLP-36 (revision~1) and revision~2,\\ run RUN-2a8442e2-9a37-4104-b9e8-95d3f7798297, paper record\\ PAP-ef6e2010-7950-47cf-bb75-05801891905b)}
 \date{3 November 2026 --- version 2 (draft, not human-verified; internal, not submitted)}
 \emergencystretch=4em
 \Urlmuskip=0mu plus 2mu
@@ -372,7 +372,7 @@ Every row is an \emph{experiment} at toy sizes (prime-field curves of at most ab
 All numbers below are copied from the ledger records named in the first column; we have not recomputed them. ``rho'' is Pollard rho on the same toy instances unless noted. \textbf{No improvement over Pollard rho is claimed, and none was found.}
 
 {\small
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{4.2cm}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{4.1cm}@{}}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{3.7cm}@{}}
 \toprule
 Record & Mechanism & Measured scaling / cost ratio vs rho & Exact obstacle \\
 \midrule\endfirsthead
@@ -429,12 +429,15 @@ This table is the laboratory's measurement record, not a survey of the literatur
 \item Existence and tightness: interpolating polynomials of degree $\le N-1$ exist by Lagrange interpolation, so the bounds are tight up to a constant factor; we prove no exact value of the minimal degree (see the conjectural remark in Section~\ref{sec:addendum}).
 \item The ledger's rational-function versions (Theorem~A, part~(1) of the partial-agreement hypothesis) and the density corollary are not formalized.
 \item Theorem~D's extra hypothesis is removed over $\F_p$ only by an informal Hasse-bound argument.
-\item The straight-line-program bound of Section~\ref{sec:addendum} is for a restricted, division-free, single-input model; its bit-cost corollary is not formalized, and the method-barrier and conjecture items there are unreviewed and unproved respectively.
+\item The straight-line-program bounds of Section~\ref{sec:addendum}(i),(ii) are for restricted, branch-free, single-input models (with and without division); the bit-cost corollary is not formalized. Theorem~DT covers equality branching only, charges constants, and is vacuous for arithmetic length once order comparisons are allowed. None of these models contains rho, baby-step giant-step or index calculus.
+\item The method barrier (iv) is an unreviewed proof attempt, the conjecture C$^*$ (v) is unproved, and Theorem~E (vi) is a reviewed paper proof that is \emph{not} formalized and was tested only at $N=3,4$.
+\item The benchmark table of Section~\ref{sec:bench} consists of toy-size experiments without independent review; its numbers are copied from the ledger and were not recomputed for this report.
+\item No improvement over Pollard rho is claimed.
 \item The universal $O(n\log n)$ ECDLP target remains open; nothing here improves on any known ECDLP complexity.
 \item Novelty is unsettled (Section~\ref{sec:prior}); no human has verified the mathematics, the Lean-to-statement correspondence, or the bibliography.
 \end{itemize}
 
-\paragraph{Provenance note.} This report was produced by an AI research laboratory (this draft and its revision~1 by worker agents reporting model identity Sonnet~5.5, \texttt{claude-sonnet-5-5}, not verifiable from runtime metadata) and reviewed by AI agents; no human verification has yet taken place.
+\paragraph{Provenance note.} This report was produced by an AI research laboratory (this draft and its revisions~1 and~2 by worker agents reporting model identity Sonnet~5.5, \texttt{claude-sonnet-5-5}, not verifiable from runtime metadata) and reviewed by AI agents; no human verification has yet taken place.
 It is an internal technical report and not a submission.
 
 \bibliographystyle{plain}

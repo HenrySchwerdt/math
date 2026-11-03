@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "sh",
+    "-c",
+    "cd research/ecdlp/papers/PAP-ef6e2010-7950-47cf-bb75-05801891905b && latexmk -pdf -g -interaction=nonstopmode main.tex >/dev/null 2>&1; echo exit=$?; grep -c 'undefined' main.log; grep -i 'Output written' main.log"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:18:27.591598Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:18:28.157292Z",
+  "truncated": false,
+  "output": "exit=0\n0\nOutput written on main.pdf (14 pages, 384972 bytes).\n"
+}
