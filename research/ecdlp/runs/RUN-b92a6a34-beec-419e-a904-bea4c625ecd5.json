@@ -1,0 +1,44 @@
+{
+  "id": "RUN-b92a6a34-beec-419e-a904-bea4c625ecd5",
+  "type": "RUN",
+  "title": "Independent correspondence review of PRF-af19eaae",
+  "created_at": "2026-11-03T09:17:47.513051Z",
+  "status": "active",
+  "question": "Do the Lean declarations in PRF-af19eaae correctly and fully express the stated HYP claims they are linked to?",
+  "rationale": "REVIEW.md: independent review before acceptance.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-899c645b-3ccf-4fcc-99a0-df147d16ee0f",
+    "PRF-af19eaae-71e0-4dd7-b76b-e23c4b98ee65",
+    "REV-16b2db9b-7ec3-44be-a4af-bce61bd09baf"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter independent-reviewer selects claude-opus-5-5; runtime identity of subagent not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T09:17:56.160642Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-opus-5-5 (configured; see notes)",
+    "role": "independent-reviewer",
+    "task": "TSK-899c645b-3ccf-4fcc-99a0-df147d16ee0f",
+    "input_hypotheses": [
+      "HYP-caa15771-f28a-4226-b2be-22fa3ba0e901",
+      "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e"
+    ],
+    "starting_commit": "39ba7c8",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; owns REV-16b2db9b json/md and this RUN json/md",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}
