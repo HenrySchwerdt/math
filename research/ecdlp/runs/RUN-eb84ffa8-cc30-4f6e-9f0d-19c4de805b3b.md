@@ -1,14 +1,63 @@
-# RUN-eb84ffa8-cc30-4f6e-9f0d-19c4de805b3b — draft
+# RUN-eb84ffa8: partial-agreement lower bounds for the EC discrete-log map (ECDLP-21)
 
-## Question, selection rationale and inputs
-Exact question; task ID; sources and assumptions; owned files and resource limit.
+Agent: number-theory; self-reported model claude-sonnet-5-5 (runtime metadata states "Sonnet 5.5"). No recursive agents, no commits. Run reports under research/ecdlp/runs/ of other runs were not read.
 
-## Approach and observed execution
-Commands/evidence paths, actual observations, failures and negative results.
+## Inputs
+HYP-adb581ff (Theorem A, corrected), HYP-eda6732a (Theorem B), AGENTS.md, METHODOLOGY.md, roles/number-theory.md. Code: `research/ecdlp/experiments/round7-approx/approx_checks.py` (seed 20261103), output `out_approx_checks.txt`.
 
-## Claims and verification
-Separate experiment from proof; complexity cost model; tests and review links.
-For formal proof: exact Lean declaration, pinned toolchain, commit and build log.
+Setting. E/F_p short Weierstrass, P in E(F_p) of prime order r >= 5, O infinity. For a rational function f on E over F_p-bar, deg f = degree of its pole divisor. A subset A of [1,N] is the agreement set, m = |A| = delta*N. Notation T_j(A) = #{k : k, k+j in A}; S_j(A) = #{k : k-j, k, k+j in A} (3-APs with difference j >= 1). Points kP, 1 <= k <= N < r, are distinct.
 
-## Outcome, limitations and next action
-What is established, rejected, unresolved or blocked; actionable handoff.
+## Theorems (all PROOF ATTEMPTS, not reviewed, not formal)
+
+**Theorem 1 (translate lemma, rational f).** Let N < min(r, p), f a rational function, regular at kP and f(kP) = k mod p for every k in A, and let 1 <= j <= N-1 (so j < p, j not 0 mod p). Then deg f >= T_j(A)/2.
+Proof attempt. h_j = f o tau_{jP} - f - j (tau = translation). (i) deg of poles(h_j) <= deg(f o tau_{jP}) + deg f = 2 deg f (translation is an automorphism, preserves pole degree). (ii) If k, k+j in A then f o tau_{jP} is regular at kP (f regular at (k+j)P), f regular at kP, and h_j(kP) = (k+j) - k - j = 0 in F_p. The T_j points kP are distinct, so h_j has >= T_j distinct zeros, hence if h_j is not identically 0, 2 deg f >= T_j. (iii) Suppose h_j = 0. Let S be the pole set of f. Poles of f o tau_{jP} are S - jP, those of f + j are S; so S - jP = S. As r is prime and 1 <= j < r, jP generates <P>, so S is a union of <P>-orbits (size r) or empty. If S is empty f is constant c and h_j = -j != 0 in F_p, contradiction. Otherwise deg f >= |S| >= r > T_j/2 (T_j < N < r), so the claim holds anyway. QED. (Composite r: replace r by r/gcd(j,r).)
+
+**Corollary 1a (pigeonhole, delta > 1/2).** T_1 >= 2m - N - 1, so deg f >= ((2 delta - 1)N - 1)/2. (Each of the N-m missing integers kills <= 2 of the N-1 pairs (k,k+1).) For delta = 1 this is the Theorem A bound (N-1)/2.
+
+**Corollary 1b (all delta; averaging over j).** sum_{j=1}^{N-1} T_j = C(m,2) exactly (each pair of A has a unique difference in [1,N-1]). Hence some j has T_j >= m(m-1)/(2(N-1)) and
+ deg f >= m(m-1)/(4(N-1)) ~ delta^2 N/4 (c = 1/4).
+Nontrivial for every delta with delta N >= 2. Together: deg f >= max(((2delta-1)N-1)/2, m(m-1)/(4(N-1)), max_j T_j/2).
+
+**Corollary 1c (random subset).** Let S be a Bernoulli(delta) random subset of [1,N], independent of f, and suppose f interpolates k on all of S. T_1(S) has mean mu = delta^2 (N-1) and variance <= 3 delta^2 (N-1) (only adjacent summands correlate), so by Chebyshev, with probability >= 1 - 12/(delta^2 (N-1)), T_1 >= mu/2 and deg f >= delta^2 (N-1)/4; for the expectation-level typical value T_1 ~ mu, deg f >~ delta^2 N/2. (Chebyshev arithmetic done by hand, not machine checked.) The "agreement set of a fixed f" model is covered by Theorem 1 itself, since A is arbitrary there.
+
+**Corollary 1d (polynomials in X,Y).** If f is a polynomial of total degree d in X,Y, then f is regular away from O with pole order <= 3d at O (monomial Y^d), so deg f <= 3d and d >= deg f/3: d >= m(m-1)/(12(N-1)) and d >= ((2delta-1)N-1)/6.
+
+**Theorem 2 (x-only, g(x(kP)) = k^2).** Let r be an odd prime, N <= (r-1)/2 (so kP, k in [-N,N]\{0} are distinct), g in F_p[X] of degree d >= 1, and g(x(kP)) = k^2 mod p for k in A. Then d >= S_j(A)/3 for every 1 <= j <= N (S_j with the 3-AP k-j,k,k+j, all in A, k-j >= 1).
+Proof attempt. F = g o x, even, pole divisor 2d(O). H_j(Q) = F(Q+jP) + F(Q-jP) - 2F(Q) - 2j^2. Poles lie in {O, jP, -jP}, order <= 2d each: deg H_j <= 6d. For k with k-j,k,k+j in A, H_j(+-kP) = (k+j)^2+(k-j)^2-2k^2-2j^2 = 0 (F(-Q)=F(Q) gives the -kP zeros; the points are regular since k-j >= 1). That is 2 S_j distinct zeros. H_j != 0: jP != -jP, jP != O (r odd prime, 1 <= j < r), so at jP only the term F(Q-jP) has a pole, of order 2d > 0. Hence 2 S_j <= 6d. QED. For A = [1,(r-1)/2], j = 1: d >= (r-5)/6 = Theorem B. (Here r need only be odd and j not 0 mod r.)
+
+**Corollary 2a.** S_1 >= (3 delta - 2)N - 2 for delta > 2/3 (each missing integer kills <= 3 triples), so d >= ((3delta-2)N-2)/3. Random Bernoulli(delta) S: S_1 ~ delta^3 N, d >~ delta^3 N/3.
+
+**Corollary 2b (any delta, needs external theorem).** sum_j S_j = number of nontrivial 3-APs in A. By Roth's theorem in Varnavides' counting form (and, quantitatively, Kelley–Meka / Bloom–Sisask) for each delta > 0 there are c(delta) > 0 and N_0(delta) with #3APs(A) >= c(delta) N^2 for |A| >= delta N, N >= N_0; hence max_j S_j >= c(delta) N and d >= c(delta) N/3. Here c(delta) is very small (quasi-polynomially small in delta with Kelley–Meka); I did not re-derive or verify the Varnavides step; treated as cited. No Roth-type input is avoidable for general delta <= 2/3 in this method, because sets without 3-APs of positive-density-ish size (Behrend, density N^{-o(1)}) make every S_j = 0.
+
+**Remark 3 (multiplicative variant, no primality of r needed).** For integer c >= 2, p not dividing c, H = f o [c] - c f vanishes at kP when k, ck in A; pole degree <= (c^2+1) deg f; H != 0 since f o [c] has c^2|S| poles (as [c] is separable of degree c^2) versus |S|. So deg f >= #{k: k, ck in A}/(c^2+1). Weaker than Theorem 1 and fails for worst-case A at delta <= 2/3 (A = {k: v_2(k) even} has no pair k,2k), but needs no ordering of A.
+
+**Remark 4 (hypothesis j not 0 mod p is necessary).** If r > p (possible, r <= p+1+2 sqrt p) and N >= p+1, a constant f = c agrees with k mod p on {k <= N: k = c mod p} with deg f = 0, and the translate by p gives h_p = f o tau - f - p = -p = 0 identically. Toy E4: p=5, r=7, f=1 agrees on {1,6}. This is why N < p is assumed.
+
+**Upper bound (what is achievable; proof sketch, not checked in full).** u, v in L(D*O) (dim D for D >= 2) with u(kP) = k v(kP) on A is a homogeneous linear system with 2D unknowns, m equations; solutions exist when 2D > m, and u/v then has degree <= D (provided v does not vanish at the kP; checked numerically). So there are rational interpolants of degree ~ (m+1)/2 and polynomial interpolants of pole degree ~ m on any A of size m. Hence the best possible general lower bound is <= (delta N+1)/2; the proved lower bounds are delta^2 N/4 (any A), ~ delta^2 N/2 (random A), (2delta-1)N/2 (delta > 1/2). Closing the gap (is it ~delta N/2 or smaller, e.g. ~delta^2 N?) is OPEN here; sharpness of Corollary 1b's extremal combinatorics (min over A of max_j T_j) is also not settled.
+
+## Literature (searched with <= 15 lookups; only bibliographic data verified, no theorem statements read)
+- Coppersmith, Shparlinski, "On polynomial approximation of the discrete logarithm and the Diffie-Hellman mapping", J. Cryptology 13(3) (2000) 339-360. Bibliographic data verified via search results (Springer professional listing, IBM report RC20724 abstract): lower bounds on degree of polynomials matching DL mod p on a (large) set of points, via character sums. Full text NOT accessed. Finite-field F_p^* setting (x -> log x), approximation on a subset is exactly their theme.
+- Lange, Winterhof, "Polynomial interpolation of the elliptic curve and XTR discrete logarithm", COCOON 2002, LNCS 2387, pp. 137-143. Existence and citation verified (Lange's publication page); abstract/theorems NOT accessed.
+- Lange, Winterhof, "Interpolation of the elliptic-curve Diffie-Hellman mapping", AAECC-15 (Toulouse 2003), LNCS 2643, pp. 51-60. Citation verified (TU/e repository), no abstract available; content NOT accessed.
+- Kiltz, Winterhof, "Polynomial interpolation of cryptographic functions related to the Diffie-Hellman and discrete logarithm problem", Discrete Applied Mathematics 154 (2006) 326-336 (verified via CWI repository record; the "Designs Codes Cryptography" venue suggested in the task could not be confirmed and appears to be wrong). Content NOT accessed.
+- Shparlinski, "Cryptographic Applications of Analytic Number Theory: Complexity Lower Bounds and Pseudorandomness", Birkhäuser, 2003 (PCS 41); existence verified; I could not check whether/where it treats EC interpolation.
+- Kelley, Meka, "Strong bounds for 3-progressions", FOCS 2023 (arXiv:2302.05537), verified exists; Bloom–Sisask improvement not checked. Varnavides, "On certain sets of positive density", J. London Math. Soc. 34 (1959): only title/year seen, content not verified.
+
+Novelty assessment (honest). The Coppersmith–Shparlinski and Lange–Winterhof/Kiltz–Winterhof papers are the natural comparators and, from their abstracts, they use character-sum/Weil-type methods which for partial agreement typically give bounds of the form deg >= c * (agreement size)^something/ p^epsilon-ish, valid for sets of size >> sqrt(p) loss terms and often for general (not only consecutive) sets. I could not access any theorem statements, so I cannot say whether Theorems 1/2 are known, stronger or weaker. The translation/second-difference argument is elementary and probably folklore for the full-agreement case; I make NO novelty claim. The linear-in-N dependence for agreement on a delta-fraction of an interval of consecutive multiples, without error terms in p, is plausible to be a different regime than the character-sum bounds, but that is unverified.
+
+## Toy checks (code: approx_checks.py, seed 20261103, runtime ~1 s total; output out_approx_checks.txt)
+E1: 6 random prime-order curves p in [23,60), delta in {0.3,0.5,0.8,1.0}, N = min(r-1,p-1); exact minimum pole order D of a polynomial in x,y (basis x^a y^b, b<=1, 2a+3b<=D) and of a two-section rational function (u,v in L(D*O), v nonvanishing on A) agreeing with k on random A; compared with m(m-1)/(4(N-1)) and max_j T_j/2. Result: 0 violations in 24 cases. Polynomial min D = m (or m+1 at delta=1), rational min D ~ (m+1)/2 (e.g. p=59, N=58, m=58: 30; bound 28.5), so the bound is within a factor ~1-2 of the truth at delta=1 and at random A the true degree is ~ m/2 versus proved ~max_j T_j/2 (e.g. m=17: 9 vs 4.0), consistent with Theorem 1 not being sharp for sparse random A.
+E2: x-only, 24 cases, N=(r-1)/2, deg of the unique Newton interpolant of k^2 vs max_j S_j/3: 0 violations; true degree m-1 or m-2 for random A, far above the bound for delta <= 0.7 (S_j tiny).
+E3: structured A (interval [1,N/2], APs of step 3, 5): rational min D = ceil((m+1)/2)+small, max T_j/2 = (m-1)/2 for the interval: bound nearly sharp (e.g. m=20: 9.5 vs 11; m=33: 16 vs 17). For APs of step s, T_s plays the role of T_1 and also nearly sharp. No structured set found with agreement degree below max_j T_j/2 (the theorem forbids it) nor far above (the generic interpolation ceiling).
+E4: the p | j counterexample of Remark 4 (p=5, r=7). Weak numerically (N-p small) but the identity is exact.
+Finite toy checks support only tested instances (p < 100) and prove nothing asymptotic.
+
+## Interpretation
+These results say: no function in the stated classes (rational function of bounded pole degree on E; polynomial in X,Y of bounded total degree; polynomial in x for k^2) of degree below about c*delta^2*N can reproduce the discrete log (resp. its square) on a delta-fraction of N consecutive multiples, in particular no sub-linear-in-N-degree formula gets a constant fraction right on an interval. They do NOT say: anything about bit complexity or about algorithms that use branching, comparisons, tables, loops, non-algebraic operations, or division by values vanishing at points; any algorithm needing deg ~ N formulas still may compute DL in sqrt(N) group operations (BSGS), which is not an evaluation of a low-degree formula at Q. Degree is a measure of a formula's algebraic complexity (e.g. straight-line length >= log2(deg/c) in an algebraic SLP with all divisions defined), not of ECDLP hardness. Agreement on a random subset is a weaker requirement than computing DL for a fraction of inputs by an algorithm that may output wrong values elsewhere unpredictably; here f is a single fixed function. Also nothing about subsets not consisting of consecutive multiples with unrelated k (e.g. restricting to kP in a "structured" non-interval set where the algebraic structure of j-translates is not available).
+
+## Limitations
+- All theorems are proof attempts by one agent; no independent review, no Lean. Chebyshev constants in Cor. 1c and the Varnavides step in Cor. 2b are not machine-checked; Cor. 2b is conditional on cited results.
+- Hypotheses: r prime (1b/Theorem 2: odd prime), N < min(p,r) (N <= (r-1)/2 for Theorem 2), f regular on A (i.e. defined at those kP).
+- Literature: no theorem statements accessed; novelty undetermined.
+- The gap between delta^2 N/4 and (delta N+1)/2 is open; toy range p < 100 is tiny.
+- Upper-bound construction is a dimension count, nondegeneracy only verified numerically.

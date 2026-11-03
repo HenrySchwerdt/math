@@ -7,21 +7,63 @@
   "question": "If a polynomial or low-degree rational function f on E agrees with the discrete-log map k (mod p) on a delta-fraction of {kP : 1 <= k <= N}, what lower bound on deg f follows (curve analogue of Coppersmith\u2013Shparlinski / Lange\u2013Winterhof partial-agreement results)? Give exact statements, proofs or proof attempts, literature status, and toy-curve checks.",
   "rationale": "Bounded subagent run for TSK-a826d13f-73ab-462d-8e03-d6094b6d08d7",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Coppersmith, Shparlinski, On polynomial approximation of the discrete logarithm and the Diffie-Hellman mapping, J. Cryptology 13 (2000) 339-360 (bibliographic data only; full text not accessed)",
+      "url": "https://www.springerprofessional.de/en/on-polynomial-approximation-of-the-discrete-logarithm-and-the-di/11643678",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "listing/abstract"
+    },
+    {
+      "title": "Lange, Winterhof, Interpolation of the elliptic-curve Diffie-Hellman mapping, AAECC-15, LNCS 2643 (2003) 51-60 (citation only)",
+      "url": "https://research.tue.nl/en/publications/interpolation-of-the-elliptic-curve-diffie-hellman-mapping/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "repository record"
+    },
+    {
+      "title": "Lange, Winterhof, Polynomial interpolation of the elliptic curve and XTR discrete logarithm, COCOON 2002, LNCS 2387, 137-143 (citation only; Lange publication list)",
+      "url": "https://www.hyperelliptic.org/tanja/publications.html",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "publication list"
+    },
+    {
+      "title": "Kiltz, Winterhof, Polynomial interpolation of cryptographic functions related to the Diffie-Hellman and discrete logarithm problem, Discrete Appl. Math. 154 (2006) 326-336 (citation only)",
+      "url": "https://ir.cwi.nl/pub/15510/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "repository record"
+    },
+    {
+      "title": "Kelley, Meka, Strong bounds for 3-progressions, FOCS 2023",
+      "url": "https://arxiv.org/abs/2302.05537",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract"
+    },
+    {
+      "title": "Shparlinski, Cryptographic Applications of Analytic Number Theory, Birkhauser 2003",
+      "url": "https://link.springer.com/book/9783764366544",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "book page (contents not checked)"
+    }
+  ],
   "refs": [
     "TSK-a826d13f-73ab-462d-8e03-d6094b6d08d7",
     "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd",
     "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Proof attempt (Theorem 1): for r prime, N<min(p,r), f regular at kP and f(kP)=k mod p on A subset [1,N], deg f >= T_j(A)/2 for every 1<=j<=N-1 where T_j=#{k:k,k+j in A}; hence deg f >= m(m-1)/(4(N-1)) ~ delta^2 N/4 for any A of size m=delta N, and deg f >= ((2delta-1)N-1)/2 for delta>1/2; polynomial f in X,Y of total degree d has d >= deg f/3.",
+    "Proof attempt (Theorem 2): for r odd prime, N<=(r-1)/2, g in F_p[X] of degree d with g(x(kP))=k^2 on A: d >= S_j(A)/3 for every j (S_j = # 3-APs with difference j in A); recovers Theorem B for A=[1,(r-1)/2]; d >= ((3delta-2)N-2)/3 for delta>2/3; for any fixed delta>0, d >= c(delta)N for N>=N_0(delta) conditional on cited Varnavides/Kelley-Meka counting results.",
+    "Experimental (toy, p<100): 48 random-subset cases and structured subsets show no violation; true minimal degrees ~ m (polynomial) and ~ (m+1)/2 (rational, two-section construction) so the proved delta^2 N/4 is not tight for sparse subsets, nearly tight for intervals.",
+    "Remark: hypothesis j not 0 mod p (N<p) is necessary: constant f agrees with k mod p on a residue class when N>p."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "outcome": "verified",
+  "next_action": "Independent review of Theorems 1-2 and Cor. 1c/2b; obtain full texts of Coppersmith-Shparlinski and Lange-Winterhof to settle novelty; attempt to close gap between delta^2 N/4 and (delta N+1)/2; Lean formalization of the translate lemma (Theorem 1) if prioritized.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. | Self-reported identity: claude-sonnet-5-5 (Sonnet 5.5) per runtime system prompt; unverified beyond that. Not accessed (no URL): Varnavides 1959 (J. London Math. Soc. 34) content; theorem statements of all Coppersmith-Shparlinski / Lange-Winterhof / Kiltz-Winterhof papers; Bloom-Sisask. Task-suggested venue 'Designs Codes Cryptography 2006' for Kiltz-Winterhof not confirmed; found DAM 154 (2006). Commands executed: python3 approx_checks.py (seed 20261103), ~1 s; not run via research.py exec. | Evidence files (not listed in evidence field per task rule): research/ecdlp/experiments/round7-approx/approx_checks.py, out_approx_checks.txt. Proposed proof_status: proof-attempt; outcome: partial results (PI to set). | PI reproduced approx_checks.py via research.py exec; output identical.",
   "run": {
     "started_at": "2026-11-03T10:21:19.301089Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T10:26:52.500590Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "number-theory",
@@ -34,7 +76,9 @@
     "branch": "claude/exciting-mccarthy-yljzor (local, ahead of PR #4)",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [],
-    "files_changed": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round7-approx/"
+    ],
     "resulting_commit": null,
     "tests": [],
     "benchmark": "See report",
