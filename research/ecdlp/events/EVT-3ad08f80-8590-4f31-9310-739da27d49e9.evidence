@@ -1,0 +1,26 @@
+{
+  "id": "EVT-3ad08f80-8590-4f31-9310-739da27d49e9",
+  "kind": "task-status-change",
+  "task": "TSK-e5cd23ce-c89d-41bd-b03c-9fe4eb9fd7b0",
+  "task_key": "ECDLP-54",
+  "timestamp": "2026-11-03T12:59:51.137595Z",
+  "run": "RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "frontier-explorer"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Bounded frontier-explorer run started",
+  "before_sha256": "520248b2df018305d76443a5e9bce61bae2dc99d16559080a15721c6aabbb029",
+  "after_sha256": "d0b922dba7f82048ecc9d33456d22ae0cf4005bd5b1307bb97c007823e8c49c0"
+}

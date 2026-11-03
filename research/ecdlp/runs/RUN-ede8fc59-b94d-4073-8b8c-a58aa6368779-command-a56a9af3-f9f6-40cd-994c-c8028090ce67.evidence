@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "timeout",
+    "270",
+    "python3",
+    "research/ecdlp/experiments/round16-frontier-g/supp.py",
+    "random_s1"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:18:24.131780Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T13:18:24.202487Z",
+  "truncated": false,
+  "output": "Traceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round16-frontier-g/supp.py\", line 7, in <module>\n    ch = json.load(open(f'out_evolve_{tag}.json'))['champions'][0]['prog']\n                   ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'out_evolve_random_s1.json'\n"
+}

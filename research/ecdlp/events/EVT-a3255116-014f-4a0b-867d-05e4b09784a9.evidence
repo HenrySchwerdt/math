@@ -1,0 +1,26 @@
+{
+  "id": "EVT-a3255116-014f-4a0b-867d-05e4b09784a9",
+  "kind": "task-status-change",
+  "task": "TSK-4d881215-6e2d-4d8e-a3be-97d8467208b1",
+  "task_key": "ECDLP-56",
+  "timestamp": "2026-11-03T13:18:55.894915Z",
+  "run": "RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "Sorted tables, comparison trees, tuned walks: S T^2/r constant; no leak in comparison features",
+  "before_sha256": "c9300e98ac20cc1114a20b77c3e545871fb3e59628a9ed62e394059bb9eb5a6f",
+  "after_sha256": "ab481f8b493d5b99f4f7c3916d6d360dd04b2f860865964728a12625cb86dbf7"
+}

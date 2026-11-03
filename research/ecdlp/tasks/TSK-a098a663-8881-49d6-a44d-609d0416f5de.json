@@ -1,0 +1,29 @@
+{
+  "id": "TSK-a098a663-8881-49d6-a44d-609d0416f5de",
+  "type": "TSK",
+  "title": "Round 17 / frontier H: automated discovery with field arithmetic and corrected fitness",
+  "created_at": "2026-11-03T13:30:52.871659Z",
+  "status": "active",
+  "question": "Re-run automated algorithm discovery with (i) fitness based on a fitted alpha*sqrt(r)+gamma model and a same-DSL rho control, (ii) primitives for field arithmetic on coordinates (x, y as F_p elements: add, mul, inverse, Legendre symbol, square root, S_3 evaluation), so index-calculus- or descent-like procedures are expressible, (iii) sizes up to 2^20. Does anything beat alpha*sqrt(r) asymptotically out of sample?",
+  "rationale": "User directive: give everything; frontier G lesson and unused literature allocation.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [],
+  "evidence": [
+    "research/ecdlp/events/EVT-f9ce9304-7e65-464c-86ec-a5774cb92ef2.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute.",
+  "notes": "Created via research.py start.",
+  "success_criteria": [
+    "Exact statements; reproducible evidence; honest negatives."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2.md",
+    "research/ecdlp/runs/RUN-885e31b9-573a-4763-a71c-f0d533ac14c2.json",
+    "research/ecdlp/experiments/round17-frontier-h/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; no commits."
+}

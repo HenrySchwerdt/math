@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "research/ecdlp/experiments/round16-inventor-g/run_e2.sh",
+    "16",
+    "2",
+    "1.0",
+    "40",
+    "1"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:09:08.438598Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T13:09:20.692853Z",
+  "truncated": false,
+  "output": ""
+}

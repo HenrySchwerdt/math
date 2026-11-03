@@ -1,0 +1,61 @@
+{
+  "id": "RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779",
+  "type": "RUN",
+  "title": "Round 16 / frontier G: automated algorithm discovery on tiny curves",
+  "created_at": "2026-11-03T12:59:51.124403Z",
+  "status": "completed",
+  "question": "Can an automated search (program synthesis / evolutionary search over small instruction sets with group ops, comparisons and integer bit access) find DLP procedures on tiny prime-order curves whose measured cost scales with exponent below 1/2, and does any discovered procedure generalise across curves and sizes?",
+  "rationale": "Bounded run for TSK-e5cd23ce-c89d-41bd-b03c-9fe4eb9fd7b0",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-e5cd23ce-c89d-41bd-b03c-9fe4eb9fd7b0"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-0872c384-bd69-4658-b1b8-51e9ca64b165.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-694c1aef-ed57-4382-b284-5ab0dc1a9bdd.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-5097d6a0-a678-4e5d-8108-fc2308dcee65.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-76518510-8b13-45a3-a10b-e9ee814c277f.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-a56a9af3-f9f6-40cd-994c-c8028090ce67.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-b0f0b50a-81cb-4605-a34b-146adf266f70.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-b5acd5de-36fb-4735-ba74-14b8986ab45a.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-a4bc627c-de4c-4743-81e7-38cc73b1e730.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-3e854e71-fbb8-4c7c-a182-b55ebf80f669.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "refuted",
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T12:59:51.125226Z",
+    "completed_at": "2026-11-03T13:29:48.879560Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "frontier-explorer",
+    "task": "TSK-e5cd23ce-c89d-41bd-b03c-9fe4eb9fd7b0",
+    "input_hypotheses": [],
+    "starting_commit": "2bd5fef7dc9d6b305387bbc9758ced868e324dec",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-0872c384-bd69-4658-b1b8-51e9ca64b165.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-694c1aef-ed57-4382-b284-5ab0dc1a9bdd.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-5097d6a0-a678-4e5d-8108-fc2308dcee65.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-76518510-8b13-45a3-a10b-e9ee814c277f.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-a56a9af3-f9f6-40cd-994c-c8028090ce67.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-b0f0b50a-81cb-4605-a34b-146adf266f70.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-b5acd5de-36fb-4735-ba74-14b8986ab45a.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-a4bc627c-de4c-4743-81e7-38cc73b1e730.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-3e854e71-fbb8-4c7c-a182-b55ebf80f669.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/experiments/round16-frontier-g/"
+    ],
+    "resulting_commit": "2e4638238f725c9e0ddb00c1d5a8f1c02fe3553e",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

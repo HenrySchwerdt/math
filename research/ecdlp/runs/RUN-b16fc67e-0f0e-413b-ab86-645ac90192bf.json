@@ -1,0 +1,71 @@
+{
+  "id": "RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf",
+  "type": "RUN",
+  "title": "Round 16 / inventor H: fixed-curve precomputation with comparisons and bits",
+  "created_at": "2026-11-03T12:59:51.265362Z",
+  "status": "completed",
+  "question": "For one fixed curve, can precomputed advice of size S that uses integer order or bits of x-coordinates (not covered by generic S*T^2 >= N lower bounds or by our algebraic theorems) give online time T with S*T^2 << r? Design, prototype and measure against the generic S*T^2 ~ r curve on toy curves.",
+  "rationale": "Bounded run for TSK-4d881215-6e2d-4d8e-a3be-97d8467208b1",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-4d881215-6e2d-4d8e-a3be-97d8467208b1"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-00cd99d3-0e6d-4418-8fb4-6c1b4bbf1f07.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-6aff3db7-0c9b-4313-abec-6a1016ca2f04.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-d6b2afe9-7129-4442-887f-bb128989585d.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-0ebf2258-48e0-4095-87e7-45c39c85057b.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-726d588f-f09f-4eb3-9603-2722166e1288.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-545adb3d-2f1c-4fb7-87ba-97e14fa342af.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8e5bca93-1f82-425f-a56b-a93efc451c24.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-23761ee7-e5fc-45ac-94a1-cb8b327dda09.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8ad7a806-f625-491c-afa0-030c044af27e.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-4d46f25a-d86f-4886-9c64-b5cf4fdfcd4e.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-999b83f7-bd41-4a1e-9b80-9375ab7a7206.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-28db619c-4893-4082-a320-8595f2be7f4c.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-e881d301-2f7c-4165-97d7-0ccc5e905e9b.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-7ab27015-696c-4202-9f53-f2aefd54ba71.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "refuted",
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T12:59:51.265760Z",
+    "completed_at": "2026-11-03T13:18:55.905318Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor",
+    "task": "TSK-4d881215-6e2d-4d8e-a3be-97d8467208b1",
+    "input_hypotheses": [],
+    "starting_commit": "2bd5fef7dc9d6b305387bbc9758ced868e324dec",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-00cd99d3-0e6d-4418-8fb4-6c1b4bbf1f07.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-6aff3db7-0c9b-4313-abec-6a1016ca2f04.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-d6b2afe9-7129-4442-887f-bb128989585d.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-0ebf2258-48e0-4095-87e7-45c39c85057b.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-726d588f-f09f-4eb3-9603-2722166e1288.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-545adb3d-2f1c-4fb7-87ba-97e14fa342af.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8e5bca93-1f82-425f-a56b-a93efc451c24.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-23761ee7-e5fc-45ac-94a1-cb8b327dda09.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8ad7a806-f625-491c-afa0-030c044af27e.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-4d46f25a-d86f-4886-9c64-b5cf4fdfcd4e.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-999b83f7-bd41-4a1e-9b80-9375ab7a7206.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-28db619c-4893-4082-a320-8595f2be7f4c.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-e881d301-2f7c-4165-97d7-0ccc5e905e9b.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-7ab27015-696c-4202-9f53-f2aefd54ba71.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/experiments/round16-inventor-h/"
+    ],
+    "resulting_commit": "3a05456212bd207a2ac88ae6c7ebf5f57f1a7e5a",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

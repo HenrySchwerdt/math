@@ -1,0 +1,33 @@
+# HYP-a73b4fdb-e1d0-44cd-8a63-fd47b94bd42c — Frontier G: automated discovery rediscovers rho; apparent sub-1/2 exponent is setup amortisation
+
+Status: completed; proof status: experimental; outcome: refuted.
+
+## Question, selection rationale and inputs
+Frontier G (ECDLP-54, automated algorithm discovery): evolutionary search over a 19-op DSL (group ops, x comparisons and bits, bounded hash table, counters) on 10-12-bit training curves, tested on held-out sizes 13-16 and fresh curves: nothing beats exponent 1/2 once fixed setup cost is modelled. Evolved champion s1 (rho-like: table-stepped walk keyed by low bits of x plus hash collision detection, success 1.00) literally passed the pre-registered rule (test-A beta 0.375 [0.326,0.426] < BSGS lower99 0.434), but hand DP-rho in the same DSL scores 0.334 [0.295,0.372]; on a fresh curve per size both fit cost ~ 1.77 sqrt(r) + 136 (PI refit), so the low naive exponent is setup amortisation. s3 beta 0.456 [0.391,0.519]; s0, s2 not solvers. No program rediscovered BSGS.
+
+User directive 2026-11-03 (give everything): replace human-designed candidates by automated search.
+
+Assumptions:
+- none
+
+References:
+- RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779
+
+Sources:
+- none
+
+## Claims and verification
+- Frontier G (ECDLP-54, automated algorithm discovery): evolutionary search over a 19-op DSL (group ops, x comparisons and bits, bounded hash table, counters) on 10-12-bit training curves, tested on held-out sizes 13-16 and fresh curves: nothing beats exponent 1/2 once fixed setup cost is modelled. Evolved champion s1 (rho-like: table-stepped walk keyed by low bits of x plus hash collision detection, success 1.00) literally passed the pre-registered rule (test-A beta 0.375 [0.326,0.426] < BSGS lower99 0.434), but hand DP-rho in the same DSL scores 0.334 [0.295,0.372]; on a fresh curve per size both fit cost ~ 1.77 sqrt(r) + 136 (PI refit), so the low naive exponent is setup amortisation. s3 beta 0.456 [0.391,0.519]; s0, s2 not solvers. No program rediscovered BSGS.
+- Methodological lesson (PI): naive log-log exponent fits at r <= 2^16 are biased low by additive setup cost (hand rho 0.327, BSGS 0.438 though both are Theta(sqrt r)); any future speedup claim must fit alpha sqrt(r) + gamma (or compare against a same-implementation rho control) before reporting an exponent.
+
+Evidence:
+- research/ecdlp/experiments/round16-frontier-g/PROTOCOL.md
+- research/ecdlp/experiments/round16-frontier-g/out_eval_random_s1.json
+- research/ecdlp/experiments/round16-frontier-g/out_eval_baselines.json
+
+## Outcome, limitations and next action
+Next action: Closed for this DSL and size range. If resumed: larger sizes (2^17-2^20, faster curve generation), alpha sqrt(r)+gamma fitness, and richer primitives.
+
+Notes: PI re-ran supp.py random_s1 via exec: identical output through 16 bits (both runs stopped by the 270 s timeout, exit 124); PI fitted alpha sqrt(r)+gamma: rho_dp 1.77 sqrt(r)+136, s1 1.77 sqrt(r)+136, BSGS 1.51 sqrt(r)+33. Protocol sha256 961b523b... verifies. Only random seeds 0-3 completed (4-7 not run); seeded runs 10, 11 killed at ~gen 80; supplement stops at 2^16. No independent review.
+
+_Generated from the JSON record by `research.py render-md`; the JSON is authoritative._
