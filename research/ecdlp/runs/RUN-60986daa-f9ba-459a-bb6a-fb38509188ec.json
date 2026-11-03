@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 3 / ECDLP-8: literature and exact bound for mixed character sums along EC subgroups",
   "created_at": "2026-11-03T09:27:03.850263Z",
-  "status": "active",
+  "status": "completed",
   "question": "What is the exact, sourced statement of the best Weil-type bound for sums sum_{Q in E(F_p)} psi(Q) chi(g(Q)) (psi a group character of E(F_p), chi a multiplicative character, g a rational function), including constants and degree dependence, and what is known about the limiting distribution (Katz/Deligne equidistribution) of the normalized sums? Does it explain a periodogram variance below 1 for chi(x([k]P))?",
   "rationale": "Bounded subagent run for TSK-e4099001-23bb-4242-b896-341c8af8919e",
   "assumptions": [],
@@ -77,7 +77,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round3-nt/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "4ca0d7ec11bf24cffafbc4e81ed72f28e189e44e",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
