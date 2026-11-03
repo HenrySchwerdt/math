@@ -18,3 +18,9 @@ r1 {'gen': 80, 'best': 99.0, 'best_succ': 0.0, 'median': 99.003, 't': 68.0}
 r1 {'gen': 85, 'best': 99.0, 'best_succ': 0.0, 'median': 99.003, 't': 72.3}
 r1 {'gen': 90, 'best': 99.0, 'best_succ': 0.0, 'median': 99.003, 't': 76.1}
 r1 {'gen': 95, 'best': 99.0, 'best_succ': 0.0, 'median': 99.003, 't': 80.0}
+r1 {'gen': 100, 'best': 99.0, 'best_succ': 0.0, 'median': 99.003, 't': 84.5}
+r1 {'gen': 105, 'best': 99.0, 'best_succ': 0.0, 'median': 99.003, 't': 88.5}
+r1 {'gen': 110, 'best': 99.0, 'best_succ': 0.0, 'median': 99.003, 't': 92.3}
+r1 {'gen': 115, 'best': 99.0, 'best_succ': 0.0, 'median': 99.003, 't': 96.1}
+r1 {'gen': 119, 'best': 99.0, 'best_succ': 0.0, 'median': 99.006, 't': 98.9}
+champion r1 3.7142245331463686 0.0
