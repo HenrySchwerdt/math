@@ -13,14 +13,19 @@ self-reported, not runtime-verified). PI log: `runs/RUN-62dbda7c-…`. Remote cl
 not pushed (session push scope) — see `decisions/DEC-b38432b9-…`.
 
 Lean: `lake build` passes (pinned Lean 4.35.0 / Mathlib 56a00585, no warnings).
-`MathResearch/ECDLP/Basic.lean` (exact DLP relation) and `Transfer.lean` (transfer-barrier
-lemmas) — PRF-af19eaae, independently reviewed (REV-16b2db9b: accept). Elementary, not novel.
+`MathResearch/ECDLP/Basic.lean` (exact DLP relation), `Transfer.lean` (transfer barriers;
+PRF-af19eaae, REV-16b2db9b accept), `Barriers.lean` (SLP and trace bounds; PRF-613be647,
+REV-0971d96d accept). Reviewers are same-provider (Opus): independence is partial.
 
 ## Findings by evidence level
 
-Formally verified (Lean + independent correspondence review):
+Formally verified (Lean + independent correspondence review; all elementary, not novel):
 - HYP-caa15771 — homomorphic transfer of a prime-order subgroup is all-or-nothing; nonzero
   image forces r | |target|; coprime target gives zero. Guardrail for all transfer ideas.
+- HYP-57d71f43 — addition/subtraction SLP values are n•P with |n| ≤ 2^length; some Q needs
+  length ≳ log₂ r (Barriers.lean; PRF-613be647, REV-0971d96d). Black-box model only.
+- HYP-eff2cfbb — at most M(M+1) traces t have a prime r > 4√q | q+1−t with embedding degree
+  ≤ M (any q ≥ 2; trace-level only, no curve-count weighting).
 
 Refuted / flawed (kept permanently, with corrected variants recorded separately):
 - HYP-49fb2746 — "Frobenius-equivariance unifies MOV and anomalous attacks": abstract lemma
@@ -31,9 +36,9 @@ Refuted / flawed (kept permanently, with corrected variants recorded separately)
 - HYP-333ce3c5 — "arbitrary lifts carry no information": ill-posed quantifier; exact variant
   HYP-f85d20a1 (uniform on F_p^2 for independent lifts).
 
-Survived falsification (proof checked informally, not yet formal/reviewed):
-- HYP-eff2cfbb — at most M(M+1) traces with a prime r > 4√q of embedding degree ≤ M
-  (all prime powers q ≤ 150000, M ≤ 12). Sharper variant HYP-4bd8d89a unproved.
+Survived falsification (unproved): sharper trace bound HYP-4bd8d89a; prime-field small-x
+factor bases do not beat √p at toy sizes 2^12..2^18 (HYP-db508348, ECDLP-12; best 15.7·√p;
+end-to-end toy index calculus correct but 40–52·√p).
 
 Reproducible experimental findings (toy sizes, two seeds + PI bit-identical reruns):
 - No near-character among 40 low-complexity coordinate functions (HYP-130de9b1; Fourier
@@ -42,7 +47,11 @@ Reproducible experimental findings (toy sizes, two seeds + PI bit-identical reru
   non-random spectral law (HYP-e1959734 not supported as stated). Explained: twisted sums
   over E(F_p) are Weil-bounded with Sato–Tate-like moments (1, 2, 5) for g = x, x+1, y and
   Gaussian-like for higher-degree g (HYP-242da418 → sharpened HYP-80158648). Equidistribution
-  behaviour, **not** a discrete-log leak. Open puzzle: g = y (ramified support 4) is SU(2)-like.
+  behaviour, **not** a discrete-log leak. Mechanism (ECDLP-11, exact
+  toy checks): for g = x the sums are Frobenius traces on the rank-2 Prym piece
+  E'': Y² = X³ + aX² + b² of the genus-2 cover w² = x (det = p exactly ⇒ |Y| ≤ 2); for g = y an
+  E[2]-Heisenberg reduction gives an effective rank 2 (derivation sketch, unproved step).
+  Equidistribution as p → ∞ remains conjectural.
 
 Barrier context (literature-level, agents' reports RUN-9eae1ad9, RUN-fec2442f, RUN-b0ccd1bd):
 O(n log n) is below the best-known cost O(n² log n) of verifying a candidate by scalar
@@ -50,8 +59,6 @@ multiplication (not a lower bound). Generic bounds (Shoup/Maurer/Nechaev) constr
 encoding-blind algorithms; every known non-generic transfer needs a family-specific arithmetic
 coincidence (embedding degree, #E = p, extension-field descent).
 
-## In progress / next
+## Next
 
-Round 4: ECDLP-10 (Lean: SLP coefficient bound, trace bound), ECDLP-11 (geometry of the
-Sato–Tate law), ECDLP-12 (prime-field small-x factor-base relation yield, HYP-db508348).
 See BACKLOG.md. Factorization remains a separate preserved project.
