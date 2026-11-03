@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 6 / ECDLP-19: Lean formalization of Theorem B (x-only polynomial for k^2)",
   "created_at": "2026-11-03T10:09:22.181548Z",
-  "status": "active",
+  "status": "completed",
   "question": "Formalize in Lean 4/Mathlib the reviewed Theorem B (HYP-eda6732a) or the strongest faithful sub-statement reachable within budget, via polynomial algebra (classical x-addition formulas and root counting).",
   "rationale": "Bounded subagent run for TSK-fe72aad1-aa67-4d7d-a0c9-3c8bc14a05ef",
   "assumptions": [],
@@ -17,12 +17,12 @@
     "Lean (axioms: propext, Classical.choice, Quot.sound only) proves, in MathResearch/ECDLP/Interpolation.lean, the conditional polynomial form of HYP-eda6732a: for a field with 2,3 != 0 and a sequence xs satisfying injectivity on 1..(r-1)/2 and the cleared x-addition relations, any g with g(xs k)=k^2 has r <= 6*deg g + 5. The link xs k = x(kP) on an actual curve is a hypothesis, not proved. Addition formulas checked numerically (36177212 cases, 0 mismatches)."
   ],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "verified",
   "next_action": "PI: add root import of MathResearch.ECDLP.Interpolation; assign follow-up to discharge hS/hT/hinj from Mathlib WeierstrassCurve.Affine (addX, slope, neg) for ZMod p; independent review of correspondence.",
   "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Self-reported model identity by the executing agent: Sonnet 5.5, model ID claude-sonnet-5-5.",
   "run": {
     "started_at": "2026-11-03T10:09:32.835579Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T10:15:32.979836Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "formalization",
@@ -34,8 +34,10 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; owns Interpolation.lean",
     "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "MathResearch/ECDLP/Interpolation.lean"
+    ],
+    "resulting_commit": "382a8897d2c98d5bdfdac04ee7c6c1918702abfc",
     "tests": [],
     "benchmark": "Not applicable",
     "machine": "Claude Code remote Linux container",
