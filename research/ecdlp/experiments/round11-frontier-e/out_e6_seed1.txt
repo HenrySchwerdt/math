@@ -1,0 +1,5 @@
+seed=1 p=524309 r=523949  N=261973
+REAL carry: mean=0.49980 z_mean=-0.21  T=28.86 at h=38589  null mean=22.40 max=29.72  p_T=0.0249
+EXTRA [x_k < (x_{k+1}+x_{k-1}) mod p]: mean=0.49991 z_mean=-0.09  T=19.31 at h=54685  null mean=22.55 max=31.72  p_T=0.9353
+POSITIVE CONTROL h0=777, 10% overwritten: mean=0.50005 z_mean=0.05  T=2048.77 at h=777  null mean=22.59 max=34.66  p_T=0.0050
+NEGATIVE CONTROL iid bits: mean=0.50244 z_mean=2.49  T=20.73 at h=234128  null mean=22.68 max=34.77  p_T=0.7612

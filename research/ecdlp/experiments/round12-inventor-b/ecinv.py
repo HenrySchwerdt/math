@@ -95,7 +95,7 @@ def canon(R, G, p, r):
     return best
 
 # ---------------- rho (distinguished points, r-adding walk, orbit-quotient, cycle escape)
-def rho(E, P, Q, r, G, rng, kind_cap=60, m=32, ring=8, ntab=64, theta_c=0.25):
+def rho(E, P, Q, r, G, rng, kind_cap=60, m=256, ring=8, ntab=200, theta_c=0.25):
     """Returns (k, ops, info). Counted group operations: EVERY add/double incl. table construction,
     trail starts and cycle-escape (no hidden precomputation)."""
     p, a = E.p, E.a
@@ -106,25 +106,28 @@ def rho(E, P, Q, r, G, rng, kind_cap=60, m=32, ring=8, ntab=64, theta_c=0.25):
     capsteps = 20 * (1 << d)
     # table: random sums of earlier entries (1 op each), (point, u, v) with point = uP + vQ
     L = [(P, 1, 0), (Q, 0, 1)]
-    while len(L) < 2 + m + ntab:
+    for _ in range(3):   # full-size random seeds (counted): u P + v Q
+        u0, v0 = rng.randrange(1, r), rng.randrange(1, r)
+        L.append((eadd(emul(u0, P, a, p, C), emul(v0, Q, a, p, C), a, p, C), u0, v0))
+    while len(L) < 5 + m + ntab:
         i, j = rng.sample(range(len(L)), 2)
         pt = eadd(L[i][0], L[j][0], a, p, C)
         if pt is None: continue
         L.append((pt, (L[i][1]+L[j][1]) % r, (L[i][2]+L[j][2]) % r))
-    steps = L[-m:]; tbl = L[2:2+ntab]
+    steps = L[-m:]; tbl = L[5:5+ntab]
     table = {}
     budget = kind_cap * isqrt(r) + 5000
     cyc = restarts = 0
     while C.add < budget:
-        (T1, u1, v1), (T2, u2, v2) = rng.sample(tbl, 2)
-        R = eadd(T1, T2, a, p, C)
+        (T1, u1, v1), (T2, u2, v2), (T3, u3, v3) = rng.sample(tbl, 3)
+        R = eadd(eadd(T1, T2, a, p, C), T3, a, p, C)
         if R is None: continue
-        a0, b0 = (u1+u2) % r, (v1+v2) % r
+        a0, b0 = (u1+u2+u3) % r, (v1+v2+v3) % r
         R, mu = canon(R, G, p, r); a0 = a0*mu % r; b0 = b0*mu % r
         hist = []
         for it in range(capsteps):
             x = R[0]
-            if (x & mask) == 0 and x != 0:
+            if it > 0 and (x & mask) == 0 and x != 0:
                 if R in table:
                     a1, b1 = table[R]
                     if b1 != b0:

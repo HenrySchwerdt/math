@@ -79,7 +79,6 @@ def main():
         for b in sorted(g):
             n = g[b][0]['n']; pi = [r['per_instance'] for r in g[b]]
             refv = [r['ops'] for r in gr[b]] if b in gr else None
-            rr = boot_ratio(refv*((len(pi)//len(refv))+1) if False else refv, pi[:len(refv)] if len(pi) >= len(refv) else pi + [st.mean(pi)]*(len(refv)-len(pi))) if refv and False else None
             ratio = st.mean(refv)/st.mean(pi) if refv else float('nan')
             # unpaired bootstrap CI for ratio of means
             rng = random.Random(99); rs = []
