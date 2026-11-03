@@ -14,7 +14,9 @@
     "TSK-ac839694-d262-4a77-b4b6-20aae8662514",
     "REV-ac47cc67-f99e-42e0-884c-aad15cc429e3",
     "RUN-eb84ffa8-cc30-4f6e-9f0d-19c4de805b3b",
-    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "PRF-5357b698-39ee-4eee-b27c-b4f1345c06f6",
+    "RUN-ac3107bf-b5bd-44a0-ae47-8413aed2f895"
   ],
   "evidence": [
     "research/ecdlp/experiments/round8-review/crit_check.py",
@@ -27,5 +29,5 @@
   "proof_status": "reviewed",
   "outcome": "verified",
   "next_action": "Lean formalization of (2) is feasible by extending Interpolation/CurveX (subset version of the root count); (1) needs function-field degree theory.",
-  "notes": "Reviewed by adversarial-critic (blind): (1),(1a),(1b),(1d) correct (1 with the dichotomy wording); (2) correct only with N <= (r-1)/2 (or r != p). 0 violations in toy tests for the corrected statements. \"N < p is necessary\" in the original overstated: N <= min(p,r) suffices. Novelty unsettled."
+  "notes": "Reviewed by adversarial-critic (blind): (1),(1a),(1b),(1d) correct (1 with the dichotomy wording); (2) correct only with N <= (r-1)/2 (or r != p). 0 violations in toy tests for the corrected statements. \"N < p is necessary\" in the original overstated: N <= min(p,r) suffices. Novelty unsettled. | Part (2) main inequality formally verified (PRF-5357b698-39ee-4eee-b27c-b4f1345c06f6) over general fields with the extra hypothesis (deg g >= 1 or (j:F) != 0), which is automatic over F_p in this range. Part (1) not formalized."
 }

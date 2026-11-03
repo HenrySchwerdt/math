@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 9 / ECDLP-27: Lean formalization of corrected partial-agreement part (2)",
   "created_at": "2026-11-03T10:38:27.946905Z",
-  "status": "active",
+  "status": "completed",
   "question": "Formalize: short Weierstrass W, P of odd order r, A \u2286 [1,N], N <= (r-1)/2, g with g(x(kP)) = k^2 on A => 3 natDegree g >= S_j(A) for each j (and the \u03b4 > 2/3 corollary), reusing CurveX/Interpolation.",
   "rationale": "Round-9 selection by PI (autonomous).",
   "assumptions": [],
@@ -12,12 +12,13 @@
     "HYP-a1dd5501-c137-492a-abc6-e9cda3765002"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-47e9b8cb-41cf-4006-bbc5-dbd2b792c42a.evidence"
+    "research/ecdlp/events/EVT-47e9b8cb-41cf-4006-bbc5-dbd2b792c42a.evidence",
+    "research/ecdlp/events/EVT-c6c17a32-f3c0-4244-b202-9a3aed73426e.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "verified",
+  "next_action": "Independent review",
   "notes": "Created by PI RUN-62dbda7c.",
   "success_criteria": [
     "Exact statements; reproducible evidence; no sorry; corrected variants separate."
