@@ -7,7 +7,7 @@ for tag in sys.argv[1:]:
     ch = json.load(open(f'out_evolve_{tag}.json'))['champions'][0]['prog']
     progs[tag] = ([tuple(x) for x in ch[0]], [tuple(x) for x in ch[1]])
 res = {n: [] for n in progs}
-for tb in (13, 14, 15, 16, 17, 18, 19, 20):
+for tb in (13, 14, 15, 16, 17, 18):
     c = make_curve(tb, 300)
     for n, p in progs.items():
         ks = instances(c, 80 if tb < 18 else 50, 7); tot = 0; ok = 0
@@ -25,5 +25,5 @@ for n, rows in res.items():
     pts = [(math.sqrt(r), c) for tb, r, c, _ in rows]
     sx = sum(a for a, _ in pts); sy = sum(b for _, b in pts); sxx = sum(a * a for a, _ in pts); sxy = sum(a * b for a, b in pts); m = len(pts)
     al = (m * sxy - sx * sy) / (m * sxx - sx * sx); ga = (sy - al * sx) / m
-    print(n, 'slope13-16 %.3f slope17-20 %.3f slope13-20 %.3f' % (fit(rows, 13, 16), fit(rows, 17, 20), fit(rows, 13, 20)), '| cost=%.2f*sqrt(r)+%.1f' % (al, ga))
+    print(n, 'slope13-16 %.3f slope17-18 %.3f slope13-18 %.3f' % (fit(rows, 13, 16), fit(rows, 17, 18), fit(rows, 13, 18)), '| cost=%.2f*sqrt(r)+%.1f' % (al, ga))
 json.dump(res, open('out_supp_extrap.json', 'w'))
