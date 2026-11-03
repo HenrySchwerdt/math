@@ -36,3 +36,5 @@ Scientific write-ups follow docs/PAPERS.md (draft by a worker, blind adversarial
 correctness argument, explicit complexity model, a measured scaling comparison against Pollard rho,
 and — if unsuccessful — the exact obstacle. It is the lab's primary role; lower-bound work is only
 pursued when it unblocks a concrete candidate.
+
+Orchestrators follow docs/WORKFLOW.md for packages, pull requests and merges.
