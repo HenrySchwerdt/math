@@ -1,0 +1,26 @@
+{
+  "id": "EVT-d658284a-f47a-483c-88b1-8c6208564c8e",
+  "kind": "task-status-change",
+  "task": "TSK-30c839fa-0520-4fd6-a552-a243b2987d5e",
+  "task_key": "ECDLP-3",
+  "timestamp": "2026-11-03T09:06:26.582264Z",
+  "run": "RUN-fec2442f-7d58-41e5-a4d0-ee0dbd2a8d88",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "algebraic-geometry"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute sealed round-1 investigation, then PI collection and adversarial falsification."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute sealed round-1 investigation, then PI collection and adversarial falsification."
+  },
+  "reason": "Bounded sealed round-1 subagent launched by PI",
+  "before_sha256": "27577cd362fdbe2743452a8e5ed65c883e10e409c987d3a72a4600aba8e46a27",
+  "after_sha256": "669ad5e0ca4a4b7abf9da993a614492402f1ff7f2093b7920e7ab27574a94bf8"
+}

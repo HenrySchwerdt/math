@@ -1,0 +1,37 @@
+{
+  "id": "TSK-19085a69-6fc1-440f-b7a1-ac2182eea490",
+  "type": "TSK",
+  "title": "Round 1 / A: non-generic algebraic information in EC coordinate representations",
+  "created_at": "2026-11-03T09:05:52.163888Z",
+  "status": "active",
+  "question": "Do standard coordinate representations of points on E(F_q) expose efficiently computable mathematical information (invariants, relations, maps) that is not available to a generic-group algorithm, and could any such information plausibly reduce ECDLP cost? Identify precise candidate invariants/relations and classify each as known-and-exploited, known-and-useless, or conjectural.",
+  "rationale": "Generic lower bounds (Shoup/Nechaev) only bind algorithms that do not use the encoding. Any universal speedup must exploit representation-specific structure; mapping what that structure actually is, and why known uses fail, narrows the search space.",
+  "assumptions": [
+    "Classical uniform computation; n = total encoded input length.",
+    "No existence of a near-linear algorithm is assumed.",
+    "Round-1 submissions are independent: agents must not read sibling round-1 RUN reports."
+  ],
+  "sources": [],
+  "refs": [
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-9d4a5640-543c-474d-907b-95214de02cd8.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute sealed round-1 investigation, then PI collection and adversarial falsification.",
+  "notes": "Created by PI RUN-62dbda7c-fe4f-4432-84a2-2068cd516355.",
+  "success_criteria": [
+    "Write a sealed independent submission into the owned RUN report before reading any sibling round-1 submission.",
+    "Every candidate states: exact statement, mathematical property relied on, why it could help, what must be proved, what could invalidate it, cheapest decisive test, relevant existing results.",
+    "Clearly separate known facts (with verifiable sources: title, authors, venue/arXiv id, year) from new conjectures; no invented citations; unverifiable sources are marked as such.",
+    "Identify at least one precise, small lemma suitable for Lean 4/Mathlib formalization or a cheap computational falsification test."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-b0ccd1bd-6bbc-4f34-b347-0ade0bde13b7.md (sealed submission)",
+    "research/ecdlp/runs/RUN-b0ccd1bd-6bbc-4f34-b347-0ade0bde13b7.json (fields claims/sources/notes/outcome/next_action only)"
+  ],
+  "resource_limit": "One bounded subagent; no recursive spawning; at most ~25 web lookups; no computation over 5 minutes; no commits or pushes; ~60 minutes wall clock."
+}

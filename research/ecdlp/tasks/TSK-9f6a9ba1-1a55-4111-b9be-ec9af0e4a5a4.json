@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "First vertical slice: auditable ECDLP toy research lifecycle",
   "created_at": "2026-11-03T07:05:33.403572Z",
-  "status": "open",
+  "status": "active",
   "question": "Can the shared laboratory execute and persist a small honest research lifecycle from independent candidate generation through falsification, blind review and an exact Lean proof obligation?",
   "rationale": "Immediate first vertical slice required by the full laboratory mission; implementation precedes broad research.",
   "assumptions": [],
@@ -11,7 +11,9 @@
   "refs": [
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
-  "evidence": [],
+  "evidence": [
+    "research/ecdlp/events/EVT-56f525df-6bbd-434d-addb-e11e2e7b62df.evidence"
+  ],
   "claims": [],
   "proof_status": "not-applicable",
   "outcome": "unresolved",

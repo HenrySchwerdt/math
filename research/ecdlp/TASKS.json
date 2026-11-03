@@ -1,6 +1,9 @@
 {
   "prefix": "ECDLP",
   "tasks": {
-    "TSK-9f6a9ba1-1a55-4111-b9be-ec9af0e4a5a4": "ECDLP-1"
+    "TSK-9f6a9ba1-1a55-4111-b9be-ec9af0e4a5a4": "ECDLP-1",
+    "TSK-19085a69-6fc1-440f-b7a1-ac2182eea490": "ECDLP-2",
+    "TSK-30c839fa-0520-4fd6-a552-a243b2987d5e": "ECDLP-3",
+    "TSK-3323598e-fe3f-42c0-8336-507107420679": "ECDLP-4"
   }
 }
