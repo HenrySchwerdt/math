@@ -7,17 +7,34 @@
   "question": "Representation-change algorithms: invent ECDLP algorithms that move the instance to a different representation or object (alternative curve models, x-only/Kummer arithmetic, isogeny walks, covers, structured maps to other groups or to algebraic systems) where the scalar becomes cheaper to recover, escaping the lab's transfer and isogeny-invariance barriers; prototype and benchmark against Pollard rho.",
   "rationale": "Bounded run for TSK-84f6d4c2-dcaa-4541-9d41-d6f21e61b2f6",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Jao, Miller, Venkatesan - Do all elliptic curves of the same order have the same difficulty of discrete log?",
+      "url": "https://arxiv.org/abs/math/0411378",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract; isogeny/endomorphism-ring levels"
+    },
+    {
+      "title": "Galbraith - Climbing and Descending Tall Volcanos (ePrint 2024/924), as listed in search result",
+      "url": "https://eprint.iacr.org/2024/924.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "search-result snippet only; paper not read"
+    }
+  ],
   "refs": [
     "TSK-84f6d4c2-dcaa-4541-9d41-d6f21e61b2f6",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "B1 (Aut-orbit rho) recovers k on j=0 and j=1728 toy curves (r up to 2^36); measured exponents 0.44-0.49 (CIs contain 0.5); pooled ratio vs plain rho 1.45 [1.14,1.88] (j=0, rule: NO ADVANTAGE) and 2.62 [2.15,3.17] (j=1728, rule: CONSTANT-FACTOR); known technique, no asymptotic claim.",
+    "B2 (2-isogeny volcano ascent to j=0 then B1) recovers k on 150/150 instances; ascent cost O(log^2 p) isogeny evaluations (slope vs a 1.86); applies to ~p^-0.47 [-0.58,-0.38] of curves (T3); constant-factor only; known in kind (JMV 2005, Galbraith 2024).",
+    "Pre-registered rule output 'asymptotic improvement' for B2 with W=10 is judged a false positive (additive polylog overhead plus heavy-tailed rho baseline); no speedup over sqrt(r) is claimed for any candidate. Empirical evidence only; no proof."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "next_action": "Do not pursue B1/B2 for sub-sqrt(r); optionally measure distance-to-structure (class size H(t^2-4p)) to confirm the sqrt(p) obstacle; amend the slope-based decision rule (additive overheads, heavy-tailed rho) before reuse.",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI. Self-reported model identity: claude-sonnet-5-5 (not runtime-verified). Executed via algorithm-engineering adapter following algorithm-inventor role.",
   "run": {
     "started_at": "2026-11-03T11:34:46.104009Z",
     "completed_at": null,

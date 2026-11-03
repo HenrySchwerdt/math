@@ -77,3 +77,12 @@ sl = fit(xs, ys)[0]; bs = []
 for _ in range(2000):
     yb = [log2(max(rng.binomial(r['tot'], r['frac']), 1)/r['tot']) for r in t3]; bs.append(fit(xs, yb)[0])
 print(' fraction exponent', round(sl, 3), np.percentile(bs, [2.5, 97.5]).round(3), [(r['p'], r['frac']) for r in t3])
+print('== POST-HOC (not pre-registered; diagnostics for the T2 W=10 verdict)')
+rowsB = load('out_t2_*.jsonl'); xs = [np.mean([r['rbits'] for r in rowsB if r['a'] == a]) for a in As]
+for W in (0, 10):
+    b2 = [ra + 2*s + W*i for ra, s, i in zip(rho_a, stp, iso)]
+    ov = [W*np.mean(i)/np.mean(b) for i, b in zip(iso, b2)]
+    print(f' W={W}: mean ops/sqrt(r) B2', [round(np.mean(b)/2**(x/2), 2) for b, x in zip(b2, xs)], 'overhead share', [round(o, 2) for o in ov])
+print(' none mean ops/sqrt(r)', [round(np.mean(b)/2**(x/2), 2) for b, x in zip(none, xs)])
+print(' none median ops/sqrt(r)', [round(np.median(b)/2**(x/2), 2) for b, x in zip(none, xs)], 'orbit-only median', [round(np.median(b)/2**(x/2), 2) for b, x in zip(rho_a, xs)])
+print(' none sd/mean', [round(np.std(b)/np.mean(b), 2) for b in none])
