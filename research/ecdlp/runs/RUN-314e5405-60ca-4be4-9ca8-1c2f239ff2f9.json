@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 4 / ECDLP-11: geometric mechanism of the Sato\u2013Tate law for twisted Legendre sums",
   "created_at": "2026-11-03T09:36:23.441038Z",
-  "status": "active",
+  "status": "completed",
   "question": "Identify the geometric object whose Frobenius traces are the psi-twisted sums sum_Q psi(Q) chi(g(Q)) for g = x and g = y on E/F_p, explain the observed SU(2)-like law for both (including the D=4 case g = y), and give the cheapest decisive numerical check.",
   "rationale": "Bounded subagent run for TSK-10348c5c-c9f0-44ca-b569-9ba3fa55debc",
   "assumptions": [],
@@ -72,7 +72,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round4-ag/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "b0df784c3429f1e4ca118ee3b5db4ef15209a68f",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
