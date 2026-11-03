@@ -22,14 +22,20 @@ Task keys via `research/ecdlp/TASKS.json`; status via `scripts/research.py task`
 - ECDLP-20 — unconditional Lean Theorem B.  ECDLP-21 — partial-agreement bounds (proof attempt).
 - ECDLP-22 — novelty (A known in kind) and hypotheses D1–D5.
 
+- ECDLP-23 — blind review of partial-agreement bounds (part (2) transcription refuted, corrected).
+- ECDLP-24 — weak-family classification + D3 lemma.  ECDLP-25 — Lean Theorem C.
+
 ## Active
 - ECDLP-1 — umbrella vertical slice (lifecycle executed; SQLite/event memory, blind-packet
   tooling, C17 harness not implemented — deferred per user priority on research).
 
 ## Next candidates (prioritized by significance × falsifiability ÷ cost)
-1. Blind review + Lean formalization of partial-agreement bounds (HYP-5da6025e); human/library
-   access needed to settle novelty vs Lange–Winterhof (LNCS 2387 pp. 137–143, LNCS 2643 pp. 51–60).
-2. D3 (endomorphism-class speedups via Z[π]) and D2 (diamond operators on X₁(r)) — cheapest tests.
+1. Independent review of Theorem C (PRF for LinearInterp.lean); Lean formalization of corrected
+   partial-agreement part (2) (subset root count). Human/library access needed for novelty
+   (Lange–Winterhof LNCS 2387 pp. 137–143, LNCS 2643 pp. 51–60).
+2. Research frontier assessment: all investigated routes to sub-√p universal ECDLP are closed or
+   negative at toy sizes; consider a reviewed barrier-map write-up (PAP draft, no publication
+   without human approval).
 3. Unconventional: non-elimination decomposition (lattice / small-root) for structured factor
    bases; quantum-free "representation change" ideas — require a cheap decisive test first.
 (Done/negative: prime-field summation polynomials m ≤ 3; genus-2 covers.)
