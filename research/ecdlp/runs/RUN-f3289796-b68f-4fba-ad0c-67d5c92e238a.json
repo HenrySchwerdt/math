@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 10 / ECDLP-30: independent review of PartialAgreement.lean",
   "created_at": "2026-11-03T10:50:39.670705Z",
-  "status": "active",
+  "status": "completed",
   "question": "Does CurveX.partial_agreement_degree_bound faithfully and non-vacuously state HYP-a1dd5501 part (2)?",
   "rationale": "Bounded subagent run for TSK-47fd9d00-1063-4667-ac04-995b8bbd7889",
   "assumptions": [],
@@ -39,7 +39,7 @@
       "research/ecdlp/reviews/REV-685408b5-10f0-47a1-a6d4-66da332f9be3.json",
       "research/ecdlp/reviews/REV-685408b5-10f0-47a1-a6d4-66da332f9be3.md"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "30574376d741245dfc929db26ff7a1211d6d98cb",
     "tests": [],
     "benchmark": "See report",
     "machine": "Claude Code remote Linux container",
