@@ -116,7 +116,10 @@
     "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-32692484-1e42-470b-aa6a-4fc21d014acd.evidence",
     "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-2cfd54b1-97a2-4f4d-aadb-2338dfe2fe95.evidence",
     "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-c97a4382-5cf5-425a-9ed8-684d0abd39fa.evidence",
-    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b66c44c9-9924-42cd-b56a-6bf3f422e662.evidence"
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b66c44c9-9924-42cd-b56a-6bf3f422e662.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-ee06f84c-0ebb-4426-8874-e527da340e6a.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-c4327799-55e3-4cab-bec8-fe70e3523dd7.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5fac32ec-c1d5-4e9c-81b7-e7fec1a97c9d.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
@@ -237,7 +240,10 @@
       "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-32692484-1e42-470b-aa6a-4fc21d014acd.evidence",
       "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-2cfd54b1-97a2-4f4d-aadb-2338dfe2fe95.evidence",
       "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-c97a4382-5cf5-425a-9ed8-684d0abd39fa.evidence",
-      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b66c44c9-9924-42cd-b56a-6bf3f422e662.evidence"
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b66c44c9-9924-42cd-b56a-6bf3f422e662.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-ee06f84c-0ebb-4426-8874-e527da340e6a.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-c4327799-55e3-4cab-bec8-fe70e3523dd7.evidence",
+      "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5fac32ec-c1d5-4e9c-81b7-e7fec1a97c9d.evidence"
     ],
     "files_changed": [],
     "resulting_commit": null,

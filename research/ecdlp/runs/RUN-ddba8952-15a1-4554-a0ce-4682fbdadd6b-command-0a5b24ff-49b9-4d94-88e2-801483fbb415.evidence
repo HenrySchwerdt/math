@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round21-tournament-b && timeout 275 python3 expB3_line_reduction.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:21:37.998093Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T18:21:42.783672Z",
+  "truncated": false,
+  "output": "{'r': 4567, 'tested': 4564, 'frac_plus': 1.0}\n{'r': 5557, 'tested': 5554, 'frac_plus': 1.0}\n{'r': 6317, 'tested': 6314, 'frac_plus': 1.0}\n{'r': 8017, 'tested': 8014, 'frac_plus': 1.0}\n"
+}
