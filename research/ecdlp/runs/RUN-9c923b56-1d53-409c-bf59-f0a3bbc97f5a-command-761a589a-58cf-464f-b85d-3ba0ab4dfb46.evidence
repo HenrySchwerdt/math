@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round14-review-pap-v2/cmp_lean.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:21:45.416588Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:21:45.530989Z",
+  "truncated": false,
+  "output": "theorem degree_bound_short_weierstrass {W : Affine F} (h1 :  -> ['MathResearch/ECDLP/CurveX.lean']\ntheorem degree_bound_linear_short_weierstrass {W : Affine F} -> ['MathResearch/ECDLP/LinearInterp.lean']\ntheorem partial_agreement_degree_bound {W : Affine F} (h1 :  -> ['MathResearch/ECDLP/PartialAgreement.lean']\ntheorem length_bound_linear_short_weierstrass {W : Affine F} -> ['MathResearch/ECDLP/SLPBound.lean']\ntheorem length_bound_rational_slp {W : Affine F} (h1 : W.a\u2081  -> ['MathResearch/ECDLP/RationalSLP.lean']\ntheorem Tree.length_bound {W : Affine F} (h1 : W.a\u2081 = 0) (h2 -> ['MathResearch/ECDLP/DecisionTree.lean']\n"
+}

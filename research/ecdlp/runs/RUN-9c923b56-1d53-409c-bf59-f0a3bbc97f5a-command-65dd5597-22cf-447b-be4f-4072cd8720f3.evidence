@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "python3",
+    "-I",
+    "research/ecdlp/experiments/round12-review-thmE/exhaust2.py",
+    "3",
+    "11",
+    "23"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:21:08.133878Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T12:21:08.550686Z",
+  "truncated": false,
+  "output": "Traceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round12-review-thmE/exhaust2.py\", line 5, in <module>\n    from symnum import divpolys, build, wN, x,y,A,B\nModuleNotFoundError: No module named 'symnum'\n"
+}

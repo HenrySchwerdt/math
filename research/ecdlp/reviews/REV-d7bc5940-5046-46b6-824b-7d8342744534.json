@@ -24,7 +24,7 @@
   "proof_status": "proof-attempt",
   "outcome": "unresolved",
   "next_action": "Revise HYP-dbe79a50: add hypothesis char F > N (or 0) to Corollary P1, state the model explicitly, define A/R/j in Theorem P, repair Lemma A proof with backward propagation. Then formalize in Lean (tree datatype, generic path, bidirectional-propagation Lemma A, Theorem P) and obtain re-review of the revised statement.",
-  "notes": "Reviewer model (self-reported, not verified by runtime metadata): Claude Sonnet 5.5 (claude-sonnet-5-5). Author report read only after initial findings were written. No Lean build run; no files outside owned outputs edited. Scratch code in the session scratchpad dtreview/ directory.",
+  "notes": "Reviewer model (self-reported, not verified by runtime metadata): Claude Sonnet 5.5 (claude-sonnet-5-5). Author report read only after initial findings were written. No Lean build run; no files outside owned outputs edited. Scratch code in the session scratchpad dtreview/ directory. | PI clarification 2026-11-03 (REV-17a30fd8-4773-4857-ab37-3f3bbe3a2e81): \"free constants\" here means any field constant may be chosen; in the Lean model (DecisionTree.lean) each Op.const is an arithmetic node counted by arithDepth.",
   "review": {
     "run": "RUN-89fccbd4-7e75-4871-8b10-ddb4d34174f6",
     "target_commit": "2a8fbd7",

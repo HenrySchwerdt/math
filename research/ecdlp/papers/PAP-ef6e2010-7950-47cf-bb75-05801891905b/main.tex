@@ -312,7 +312,7 @@ records that the bound $3d+2$ is attained at $d=1$ ($p=11$, $y^2=x^3+1$, $P=(9,2
 \emph{Scope.} The model has no branching or comparison, no bit access, and does not take $P$ as input; it counts field operations only and makes no bit-complexity claim. It does not apply to rho, baby-step giant-step or index calculus.
 The ledger's earlier remark that the true constant might be nearer~$2$ is refuted as a uniform claim by the attained instance above.
 
-\paragraph{(iii) Theorem DT: algebraic computation trees with equality tests; formally verified, proof reviewed.}
+\paragraph{(iii) Theorem DT: algebraic computation trees with equality tests; formally verified, paper proof reviewed (the correspondence of the Lean statement to the paper statement has not been independently reviewed).}
 Ledger record \mbox{HYP-dbe79a50} (status \emph{open}, proof status \emph{formally verified}, outcome \emph{verified}), Lean record \mbox{PRF-ab954d65}; the blind adversarial review \mbox{REV-d7bc5940}
 confirmed the paper proof of Theorem~DT and independently found the gap in the paper proof of its Lemma~A that the Lean proof repairs (propagation from one adjacent pair in both directions). Source commit \path{b699c3e8ac3ba3d96b1f6b6bc0fcf7b3eea34cbd}, \texttt{lake build} 3168 jobs, 0 warnings
 (build evidence \path{research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-9ccbf89a-509f-496d-b41f-a352be9c57c5.evidence});
@@ -366,10 +366,10 @@ the review lists, e.g., $\mathrm{Bad}_3=\{11\}$ and $\mathrm{Bad}_4=\{151\}$); $
 Conjecture~C$^*$ beyond the regime $N<p^{1/4}$, that it is not an algorithm, and that it gives no complexity claim.
 
 \section{Benchmarked algorithm candidates}\label{sec:bench}
-This section is \emph{not} a theorem section. It summarizes the ledger records of rounds~11--13 of the laboratory whose recorded outcome is \emph{refuted} (here: the candidate was tested and found not to beat Pollard rho, or the tested signal was null).
-Every row is an \emph{experiment} at toy sizes (prime-field curves of at most about 44 bits, one case of $p=524309$), with a toy Python implementation; the ledger notes for each of these records that no independent review was done
-(\mbox{HYP-6da71353} additionally contains two unreviewed derivations, discussed in Section~\ref{sec:addendum}(iii)). Each record is proof status \emph{experimental}. None of these is a proof that no better algorithm exists, and none establishes any property for large parameters.
-All numbers below are copied from the ledger records named in the first column; we have not recomputed them. ``rho'' is Pollard rho on the same toy instances unless noted. \textbf{No improvement over Pollard rho is claimed, and none was found.}
+This section is \emph{not} a theorem section. It summarizes the ledger records of rounds~11--13 of the laboratory whose recorded outcome is \emph{refuted} (here: the candidate was tested and gave no asymptotic improvement over Pollard rho, at most constant-factor or amortized gains of known techniques, or the tested signal was null).
+Every row is an \emph{experiment} at toy sizes (prime-field curves of at most about 44 bits, one case of $p=524309$), with a toy Python implementation. No independent review record exists for any of the seven rows (the notes of HYP-23351e75, HYP-d6cc9bce, HYP-d913fa61 and HYP-720e359e say so explicitly).
+(\mbox{HYP-6da71353} additionally contains two derivations, E0 and E3, which were reviewed in REV-6c73a098 with decision \emph{revise}; see Section~\ref{sec:addendum}(iii).) Each record is proof status \emph{experimental}. None of these is a proof that no better algorithm exists, and none establishes any property for large parameters.
+All numbers below are copied from the ledger records named in the first column; we have not recomputed them. ``rho'' is Pollard rho on the same toy instances unless noted. \textbf{No asymptotic improvement over Pollard rho is claimed, and none was found}; the constant-factor gains in rows B and C (e.g.\ $2.62\times$, $2$--$2.5\times$, $1.7$--$3.1\times$) and the precomputation trade-off in row C are known techniques.
 
 {\small
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{3.7cm}@{}}
@@ -382,12 +382,12 @@ Record & Mechanism & Measured scaling / cost ratio vs rho & Exact obstacle \\
 \bottomrule\endfoot
 \mbox{HYP-23351e75} Inventor A (ECDLP-42, lifted relations) &
 A1: Farey-height factor-base index calculus with meet-in-the-middle relation search; A2: LLL (Coppersmith-style) decomposition into two Farey points; A3: lift to $E(\mathbb Q)$ on $y^2=x^3-2$. &
-A1: 66/66 correct (12--24 bits); cost vs rho at 24 bits $42.7\times$ (4-term), $28.9\times$ (6-term); 3-term control $\sim260\times$ at 20 bits; measured exponents $0.82$/$0.71$ vs model $0.667$/$0.60$ (rough); pre-registered verdict NO-ADVANTAGE. A2: 0 of 124/77/61 existing decompositions found at 16/20/24 bits. A3: planted 50/50, random 0/300 (coverage $10^{-3}$ to $4\times10^{-7}$). &
+A1: 66/66 correct (12--24 bits); cost vs rho at 24 bits $42.7\times$ (4-term), $28.9\times$ (6-term); 3-term control $\sim260\times$ at 20 bits; measured exponents $0.82$/$0.71$ (post hoc local fits on sizes $\ge18$ bits) vs model $0.667$/$0.60$ (rough); pre-registered verdict NO-ADVANTAGE. A2: 0 of 124/77/61 existing decompositions found at 16/20/24 bits. A3: planted 50/50, random 0/300 (coverage $10^{-3}$ to $4\times10^{-7}$). &
 A1: with $s$ unknown logs, hashing needs $\sim\sqrt{ps}$ additions $>\sqrt p$. A2: rank-one structure is not a lattice condition. A3: random coverage $10^{-3}$ to $4\times10^{-7}$. \\
 \addlinespace
 \mbox{HYP-d6cc9bce} Inventor B (ECDLP-43, representation change) &
 B1: automorphism-orbit rho ($j=0$, $|\mathrm{Aut}|=6$; $j=1728$, $|\mathrm{Aut}|=4$); B2: $2$-isogeny volcano ascent to $j=0$ then B1. &
-B1: $450/450$ runs, $r\le2^{36}$; fitted exponents $0.44$--$0.49$ (CIs contain or nearly contain $0.5$); pooled rho/orbit ratio $1.45$ [$1.14,1.88$] ($j=0$, below the pre-registered $1.15$ threshold as recorded) and $2.62$ [$2.15,3.17$] ($j=1728$, inflated by a heavy-tailed rho baseline $2$--$3\times$ above textbook). B2: $150/150$; isogeny evaluations $\sim a^{1.86}$ (polylog); the pre-registered rule printed ``asymptotic improvement'' but this is a false positive from additive overhead shrinking $60\%\to3\%$; medians indicate exponent $1/2$, constant $\sim2$--$2.5$. &
+B1: $450/450$ runs, $r\le2^{36}$; fitted exponents $0.44$--$0.49$ (CIs contain or nearly contain $0.5$); pooled rho/orbit ratio $1.45$ [$1.14,1.88$] ($j=0$; the pre-registered rule requires the lower CI bound to exceed $1.15$, and it is $1.14$) and $2.62$ [$2.15,3.17$] ($j=1728$, inflated by a heavy-tailed rho baseline $2$--$3\times$ above textbook). B2: $150/150$; isogeny evaluations $\sim a^{1.86}$ (polylog); the pre-registered rule printed ``asymptotic improvement'' but this is a false positive from additive overhead shrinking $60\%\to3\%$; medians indicate exponent $1/2$, constant $\sim2$--$2.5$. &
 Known technique (constant $\sqrt{|\mathrm{Aut}|}$). B2 applies only to curves isogenous to $j=0$ (fraction $\sim p^{-0.47}$ [$-0.58,-0.38$]); equivalent in kind to Jao--Miller--Venkatesan / Galbraith volcano climbing. Isogeny-pooled, twist-pooled and other curve models rejected on paper (they preserve $r$ and group structure). \\
 \addlinespace
 \mbox{HYP-d913fa61} Inventor C (ECDLP-44, beyond-rho search) &
