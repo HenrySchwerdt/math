@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 21 / idea tournament C: unconventional computation models and representations",
   "created_at": "2026-11-03T18:11:52.505857Z",
-  "status": "active",
+  "status": "completed",
   "question": "Invent at least 5 mechanisms for ECDLP on generic prime-order prime-field curves that are NOT in the ledger; gate each on paper against the obstruction map (relation supply, finder cost, leakage bar eps ~ r^-1/4, isogeny invariance, generic-model bound); prototype and benchmark any survivor against a same-implementation rho control.",
   "rationale": "Bounded run for TSK-8b6c1982-df73-45f1-bd1a-823d976c7536",
   "assumptions": [],
@@ -22,12 +22,12 @@
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "refuted",
   "next_action": "Fill draft metadata and report before execution",
   "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
   "run": {
     "started_at": "2026-11-03T18:11:52.506219Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T18:28:16.514819Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured)",
     "role": "frontier-explorer",
@@ -45,8 +45,10 @@
       "research/ecdlp/runs/RUN-79eebc14-c6da-4878-92ec-d407755cee65-command-e32198db-7754-40ff-baf4-3f29d83343ac.evidence",
       "research/ecdlp/runs/RUN-79eebc14-c6da-4878-92ec-d407755cee65-command-34cc7a1e-6784-4254-a411-48b74995bd60.evidence"
     ],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round21-tournament-c/"
+    ],
+    "resulting_commit": "6c92323b99cc0baddc48d0659b6c5d2834502539",
     "tests": [],
     "benchmark": "See report",
     "machine": "See report",

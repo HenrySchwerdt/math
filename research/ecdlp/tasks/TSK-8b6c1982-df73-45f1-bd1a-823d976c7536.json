@@ -3,19 +3,20 @@
   "type": "TSK",
   "title": "Round 21 / idea tournament C: unconventional computation models and representations",
   "created_at": "2026-11-03T18:11:52.503518Z",
-  "status": "active",
+  "status": "completed",
   "question": "Invent at least 5 mechanisms for ECDLP on generic prime-order prime-field curves that are NOT in the ledger; gate each on paper against the obstruction map (relation supply, finder cost, leakage bar eps ~ r^-1/4, isogeny invariance, generic-model bound); prototype and benchmark any survivor against a same-implementation rho control.",
   "rationale": "User directive 2026-11-03: be innovative, do original research rather than re-test literature.",
   "assumptions": [],
   "sources": [],
   "refs": [],
   "evidence": [
-    "research/ecdlp/events/EVT-0e898205-a87c-443e-847f-aa399d225244.evidence"
+    "research/ecdlp/events/EVT-0e898205-a87c-443e-847f-aa399d225244.evidence",
+    "research/ecdlp/events/EVT-9546fc07-aec0-4962-9d0f-5eda97721593.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "refuted",
+  "next_action": "Closed",
   "notes": "Created via research.py start.",
   "success_criteria": [
     "Exact statements; reproducible evidence; honest negatives."
