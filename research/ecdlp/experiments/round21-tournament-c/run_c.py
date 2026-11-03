@@ -263,7 +263,8 @@ def e4(bits_list, ncur=2):
             leg = np.zeros(p, dtype=np.int8)
             sq = (np.arange(p, dtype=np.int64) ** 2) % p
             leg[:] = -1; leg[sq] = 1; leg[0] = 0
-            arrays = {'x': X, 'y': Y}
+            XH, YH = X[:h], Y[:h]
+            arrays = {'x': XH, 'y': YH}
             for j in (1, -1, 2, -2):
                 xs, ys = shift(j); arrays[f'x{j:+d}P'] = xs; arrays[f'y{j:+d}P'] = ys
             for m in (2, 3, 5):
@@ -277,12 +278,12 @@ def e4(bits_list, ncur=2):
                 feats[f'{nm}:half'] = (v < p // 2).astype(np.int64)
             for j in (1, -1):
                 xs, ys = shift(j)
-                d = (xs - X) % p
+                d = (xs - XH) % p
                 feats[f'dx{j:+d}:par'] = d & 1; feats[f'dx{j:+d}:mod3'] = d % 3; feats[f'dx{j:+d}:leg'] = leg[d].astype(np.int64) + 1
-                feats[f'carry{j:+d}'] = ((xs + X) >= p).astype(np.int64)
-            feats['leg(x-Px)'] = leg[(X - P[0]) % p].astype(np.int64) + 1
-            feats['leg(y-Py)'] = leg[(Y - P[1]) % p].astype(np.int64) + 1
-            feats['leg(xy)'] = leg[(X * Y) % p].astype(np.int64) + 1
+                feats[f'carry{j:+d}'] = ((xs + XH) >= p).astype(np.int64)
+            feats['leg(x-Px)'] = leg[(XH - P[0]) % p].astype(np.int64) + 1
+            feats['leg(y-Py)'] = leg[(YH - P[1]) % p].astype(np.int64) + 1
+            feats['leg(xy)'] = leg[(XH * YH) % p].astype(np.int64) + 1
             rng = np.random.default_rng(bits * 7 + which)
             planted = np.where(rng.random(h) < 0.55, lab[2], 1 - lab[2])
             feats['PLANTED_c2_eps0.05'] = planted

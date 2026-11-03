@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round21-tournament-c/run_c.py",
+    "e6",
+    "22,24",
+    "10"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:23:42.703139Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T18:23:43.178867Z",
+  "truncated": false,
+  "output": "22 2826.6\n24 3794.4\n"
+}
