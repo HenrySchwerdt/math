@@ -114,6 +114,24 @@ multiplication (not a lower bound). Generic bounds (Shoup/Maurer/Nechaev) constr
 encoding-blind algorithms; every known non-generic transfer needs a family-specific arithmetic
 coincidence (embedding degree, #E = p, extension-field descent).
 
+Rounds 11–12 (package 8, algorithms-first allocation per strategic-correction DEC):
+- Algorithm inventors, all benchmarked against rho with pre-registered protocols, all NEGATIVE
+  (no exponent below 1/2; PI reproduced every analysis via exec):
+  A (ECDLP-42) Farey-height index calculus 29–43× slower than rho at 24 bits; LLL decomposition
+  0 hits; Mordell lift coverage ≤ 1e-3. B (ECDLP-43) automorphism-orbit rho and 2-isogeny volcano
+  ascent: constant factors only (known). C (ECDLP-44) negation rho, precomputation tables
+  (S·T² ≈ N) and multi-instance batching (√M): known generic tradeoffs reproduced.
+- ETH-refutation technique (external openai/math family 378, ECDLP-46): cannot beat rho via CNF
+  (n ≥ ~ℓ^2.4 variables) or sparse-polynomial routes (x(kP) bits have ANF density ~0.5).
+- Frontier E (ECDLP-41): integer-structure distinguishers (carries, bits, sorted neighbours) null;
+  unreviewed remarks that order/bit access is free in Shoup's model and that decision-tree
+  arithmetic length is vacuous without size accounting (bears on HYP-dbe79a50 interpretation).
+- Theorem E (ECDLP-38): cusp degeneration + Schwartz–Zippel gives mindeg(N) = N−1 off |Z| ≤ w_N p²
+  valid triples (w_N ~ N⁴/3); blind review REV-3b9427bd: bound holds, statement corrected
+  (HYP-a4caa1de, reviewed, not formalized).
+
 ## Next
 
-See BACKLOG.md. Factorization remains a separate preserved project.
+Every generic-model route tested reproduces √r. Remaining levers are non-generic structure
+(CM/automorphism families, isogeny distance to structured curves) and reviewing the E0/E3
+remarks. See BACKLOG.md. Factorization remains a separate preserved project.
