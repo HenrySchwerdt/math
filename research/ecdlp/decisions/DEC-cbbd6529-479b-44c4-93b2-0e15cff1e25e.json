@@ -1,0 +1,24 @@
+{
+  "id": "DEC-cbbd6529-479b-44c4-93b2-0e15cff1e25e",
+  "type": "DEC",
+  "title": "Resource allocation after round 10: shift toward high-risk exploration and potentially new barriers",
+  "created_at": "2026-11-03T10:59:12.564852Z",
+  "status": "completed",
+  "question": "How should bounded agent capacity be allocated to maximize the chance of a genuine advance on HYP-2de84d42?",
+  "rationale": "All investigated routes to sub-sqrt(p) universal ECDLP on the residual hard class are closed or negative at toy sizes; recent rounds spent much capacity reviewing/formalizing elementary, likely known results. Expected value is highest for (a) broad, cheap-test high-risk exploration (only channel for a breakthrough) and (b) open mathematical questions with a realistic chance of a genuinely new, publishable barrier.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355"
+  ],
+  "evidence": [],
+  "claims": [
+    "Target allocation per round: ~40% frontier exploration (2-3 frontier-explorer agents, cheapest decisive tests), ~30% strongest open mathematics (tightness N-c of interpolation bounds; lower bounds in richer algebraic models with division/rational functions/branching), ~15% formalization only for new or barrier-central statements, ~15% review (mandatory before integration/write-up, batched).",
+    "Concurrency: up to 6 parallel bounded agents observed stable in round 10; keep <= 6."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Apply from the next free capacity; revisit after each package.",
+  "notes": "User reminder (2026-11-03) to optimize for the best possible result; PI decision."
+}
