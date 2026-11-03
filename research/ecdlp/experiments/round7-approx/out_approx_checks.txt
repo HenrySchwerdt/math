@@ -1,0 +1,66 @@
+== E1: f(kP)=k on random delta-subset A of [1,N]; polynomial & two-section rational minima vs bounds
+p r N delta m maxT_j  bound_avg=m(m-1)/(4(N-1)) bound_maxT/2  minD_poly minD_rat  viol
+31 31 30 0.3 9 4 0.62 2.0 9 6 ok
+31 31 30 0.5 15 9 1.81 4.5 15 8 ok
+31 31 30 0.8 24 19 4.76 9.5 24 13 ok
+31 31 30 1.0 30 29 7.5 14.5 31 16 ok
+37 43 36 0.3 11 4 0.79 2.0 11 7 ok
+37 43 36 0.5 18 10 2.19 5.0 18 10 ok
+37 43 36 0.8 29 23 5.8 11.5 29 16 ok
+37 43 36 1.0 36 35 9.0 17.5 36 19 ok
+29 37 28 0.3 8 4 0.52 2.0 8 5 ok
+29 37 28 0.5 14 9 1.69 4.5 14 8 ok
+29 37 28 0.8 22 17 4.28 8.5 22 12 ok
+29 37 28 1.0 28 27 7.0 13.5 28 15 ok
+43 43 42 0.3 13 6 0.95 3.0 13 8 ok
+43 43 42 0.5 21 14 2.56 7.0 21 12 ok
+43 43 42 0.8 34 26 6.84 13.0 34 18 ok
+43 43 42 1.0 42 41 10.5 20.5 43 22 ok
+59 61 58 0.3 17 8 1.19 4.0 17 9 ok
+59 61 58 0.5 29 17 3.56 8.5 29 15 ok
+59 61 58 0.8 46 35 9.08 17.5 46 24 ok
+59 61 58 1.0 58 57 14.5 28.5 58 30 ok
+43 53 42 0.3 13 7 0.95 3.5 13 8 ok
+43 53 42 0.5 21 13 2.56 6.5 21 12 ok
+43 53 42 0.8 34 27 6.84 13.5 34 18 ok
+43 53 42 1.0 42 41 10.5 20.5 42 22 ok
+violations: 0
+== E2: x-only g(x(kP))=k^2 on random delta-subset A of [1,N], N=(r-1)/2; deg g vs max_j S3_j/3
+p r N delta m max_j S_j  bound  deg_g viol
+23 31 15 0.4 6 1 0.33 5 ok
+23 31 15 0.7 10 3 1.0 9 ok
+23 31 15 0.9 14 12 4.0 13 ok
+23 31 15 1.0 15 13 4.33 14 ok
+43 41 20 0.4 8 1 0.33 7 ok
+43 41 20 0.7 14 5 1.67 13 ok
+43 41 20 0.9 18 12 4.0 17 ok
+43 41 20 1.0 20 18 6.0 19 ok
+29 29 14 0.4 6 2 0.67 5 ok
+29 29 14 0.7 10 5 1.67 9 ok
+29 29 14 0.9 13 9 3.0 12 ok
+29 29 14 1.0 14 12 4.0 13 ok
+67 61 30 0.4 12 3 1.0 11 ok
+67 61 30 0.7 21 10 3.33 20 ok
+67 61 30 0.9 27 19 6.33 26 ok
+67 61 30 1.0 30 28 9.33 29 ok
+37 43 21 0.4 8 2 0.67 7 ok
+37 43 21 0.7 15 7 2.33 14 ok
+37 43 21 0.9 19 15 5.0 18 ok
+37 43 21 1.0 21 19 6.33 20 ok
+73 67 33 0.4 13 3 1.0 12 ok
+73 67 33 0.7 23 10 3.33 22 ok
+73 67 33 0.9 30 23 7.67 29 ok
+73 67 33 1.0 33 31 10.33 32 ok
+violations: 0
+== E3: structured A: interval [1,m] and AP {s,2s..}: tightness of T_j/2 bound (polynomial, rational minima)
+47 41 40 interval m=N/2 m 20 maxT/2 9.5 minD_poly 20 minD_rat 11
+47 41 40 AP step3 m 13 maxT/2 6.0 minD_poly 13 minD_rat 8
+47 41 40 AP step5 m 8 maxT/2 3.5 minD_poly 8 minD_rat 5
+67 83 66 interval m=N/2 m 33 maxT/2 16.0 minD_poly 33 minD_rat 17
+67 83 66 AP step3 m 22 maxT/2 10.5 minD_poly 22 minD_rat 12
+67 83 66 AP step5 m 13 maxT/2 6.0 minD_poly 13 minD_rat 7
+43 53 42 interval m=N/2 m 21 maxT/2 10.0 minD_poly 21 minD_rat 12
+43 53 42 AP step3 m 14 maxT/2 6.5 minD_poly 14 minD_rat 8
+43 53 42 AP step5 m 8 maxT/2 3.5 minD_poly 8 minD_rat 5
+== E4: N>=p example: constant f=a agrees with k mod p on k=a (mod p); h_j for j=p is identically 0 (j=0 mod p excluded)
+p 5 r 7 N 6 f=const 1 agreement size 2 delta 0.333 T_j (1<=j<p) = 0  T_p = 1  deg f = 0
