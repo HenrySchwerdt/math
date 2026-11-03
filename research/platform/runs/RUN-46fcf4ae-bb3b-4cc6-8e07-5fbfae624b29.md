@@ -12,3 +12,5 @@ import build prompted adding the documented `module`/`public import` header.
 The app automation was created and updated for a one-time 23:50 local wakeup
 on 2026-11-03, to attempt the documented Claude start only if credentials/models/
 quota permit; otherwise report the blocker. No live Claude inference is claimed.
+
+Implementation/evidence commit: `fbfa0186e6f40c33126393dc222087ce191463d7`. Recorded validation commands succeeded. The delivery is the Claude-ready handoff, not completion of the full laboratory. Independent review remains pending.
