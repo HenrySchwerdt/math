@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "ECDLP-40 formalization: decision-tree barrier",
   "created_at": "2026-11-03T11:20:37.309565Z",
-  "status": "active",
+  "status": "completed",
   "question": "Is Theorem DT correct, and can it be formalized on top of RationalSLP.lean?",
   "rationale": "Bounded subagent run for TSK-8d699b9a-e05b-4eac-9970-37a0857cb6ce",
   "assumptions": [],
@@ -17,12 +17,12 @@
     "Lean (MathResearch/ECDLP/DecisionTree.lean, compiled warning-free, full lake build ok, axioms propext/Classical.choice/Quot.sound only): Lemma A for arbitrary G (<= 3d centres; repair: propagation must go both up and down from one adjacent pair), tree model, generic-path lemmas and Theorem DT N <= 9*2^L - 1 for trees with equality tests (L = max arithmetic nodes on a path, register 0 = input free). Theorem P and Corollaries P1/P2 not formalized. Not independently reviewed."
   ],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "verified",
   "next_action": "Independent review of the exact Lean statements (cost accounting of const nodes, exec semantics); PI adds root import and registers the result; Theorem P formalization remains open.",
   "notes": "Adapter formalization (claude-sonnet-5-5 configured); runtime identity not exposed to PI. Self-reported model identity: claude-sonnet-5-5 (Sonnet 5.5), formalization agent.",
   "run": {
     "started_at": "2026-11-03T11:20:37.383556Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T11:27:44.273689Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "formalization",
@@ -34,8 +34,10 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "MathResearch/ECDLP/DecisionTree.lean"
+    ],
+    "resulting_commit": "b699c3e8ac3ba3d96b1f6b6bc0fcf7b3eea34cbd",
     "tests": [],
     "benchmark": "Not applicable",
     "machine": "Claude Code remote Linux container",

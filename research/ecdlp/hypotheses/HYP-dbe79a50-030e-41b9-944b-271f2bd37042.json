@@ -13,7 +13,9 @@
     "TSK-8e2e3b22-2d89-45b1-babc-4bdedc1cc138",
     "HYP-0c93c4e2-19f2-4fd9-aedd-7dd2b45a163f",
     "HYP-6aef8c30-2942-4079-8d0a-fc2ae8b6c200",
-    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "PRF-ab954d65-029b-4779-a9f8-51a745d1bd21",
+    "RUN-038b1cc8-f156-456a-ab1c-736446d72183"
   ],
   "evidence": [
     "research/ecdlp/experiments/round11-dtree/out_dtree_check.txt"
@@ -21,8 +23,15 @@
   "claims": [
     "Theorem DT (algebraic decision trees with equality tests): over a field F with 2 != 0, W short Weierstrass, P of order r, 2N < r. Any algebraic computation tree with single input u = x(Q), arithmetic nodes +,\u2212,\u00d7,\u00f7 (divisions defined where executed) and branching only on \"register = 0?\", in which every root-to-leaf path has at most L arithmetic nodes, and which outputs k at u = x(kP) for all 1 <= k <= N, satisfies N <= 9\u00b72^L \u2212 1 regardless of depth. Proof: along the generic path every register has degree <= 2^t; nodes deviating from it lie in the root sets of tested numerators (<= 2^{L+1} \u2212 1 nodes); the generic leaf function agrees with k on a co-small set, which has many consecutive triples; Lemma A (a rational function agreeing with k on G has <= 3d centres k with k\u22121, k, k+1 in G) via the RationalSLP orbit-propagation argument. Theorem P: norm over conjugates x(Q \u00b1 jP) gives degree <= 4d polynomials vanishing at x_k when k, k+j in A (needs 2j != 0): first differences are usable; Corollary P1: any partition into 2^D classes with length-L programs gives N <= 40\u00b72^{2D+L}."
   ],
-  "proof_status": "proof-attempt",
+  "proof_status": "formally-verified",
   "outcome": "unresolved",
   "next_action": "Blind adversarial review and Lean formalization (ECDLP-40).",
-  "notes": "PI checked the generic-path argument; PI reproduced dtree_check.py (identical). Comparisons, bit extraction and Legendre tests remain outside the model. Novelty unchecked (Ben-Or/Strassen-type degree arguments, Lange\u2013Winterhof)."
+  "notes": "PI checked the generic-path argument; PI reproduced dtree_check.py (identical). Comparisons, bit extraction and Legendre tests remain outside the model. Novelty unchecked (Ben-Or/Strassen-type degree arguments, Lange\u2013Winterhof). | Theorem DT formally verified (PRF-ab954d65-029b-4779-a9f8-51a745d1bd21); the paper proof of Lemma A had a gap (upward-only propagation) repaired in Lean. Constants counted as arithmetic nodes in the formal model. Theorem P / P1 remain paper proofs. Adversarial review pending.",
+  "formal": {
+    "lean_file": "MathResearch/ECDLP/DecisionTree.lean",
+    "declaration": "MathResearch.ECDLP.DecisionTree.Tree.length_bound",
+    "toolchain_file": "lean-toolchain",
+    "build_evidence": "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-9ccbf89a-509f-496d-b41f-a352be9c57c5.evidence",
+    "source_commit": "b699c3e8ac3ba3d96b1f6b6bc0fcf7b3eea34cbd"
+  }
 }
