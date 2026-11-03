@@ -1,87 +1,100 @@
 l2 12 1 True 3876 14 0.0
 l2 12 2 True 3924 15 0.0
-l2 12 3 False 45673 78 0
+l2 12 3 True 3956 15 0.0
 l2 12 4 True 3901 15 0.0
-l2 12 5 False 43500 74 0
-l2 12 6 False 43572 74 0
-l2 12 7 False 45465 78 0
-l2 12 8 False 43654 74 0
-l2 12 9 False 43605 74 0
+l2 12 5 True 3888 14 0.0
+l2 12 6 True 3872 14 0.0
+l2 12 7 True 3902 15 0.0
+l2 12 8 True 3888 14 0.0
+l2 12 9 True 3894 14 0.0
 l2 12 10 True 3938 15 0.0
 l3 12 1 True 3974 8 0.0
 l3 12 2 True 3994 8 0.0
-l3 12 3 False 158727 47 0
+l3 12 3 True 4026 8 0.0
 l3 12 4 True 3971 8 0.0
-l3 12 5 False 158086 47 0
-l3 12 6 False 158158 47 0
-l3 12 7 False 158519 47 0
-l3 12 8 False 158240 47 0
-l3 12 9 False 158191 47 0
+l3 12 5 True 3986 8 0.0
+l3 12 6 True 3970 8 0.0
+l3 12 7 True 3972 8 0.0
+l3 12 8 True 3986 8 0.0
+l3 12 9 True 3992 8 0.0
 l3 12 10 True 4008 8 0.0
 l2 14 1 True 4479 23 0.0
-l2 14 2 True 4640 25 0.0
-l2 14 3 False 71543 123 0
-Traceback (most recent call last):
-  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 198, in <module>
-    res = run(inst, mode); res.update(bits=b, seed=inst['seed'], r=inst['r'], true_k=inst['k'], mode=mode)
-  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 165, in run
-    if u[0][0] == v[0][0]: continue
-                  ~~~~^^^
-TypeError: 'NoneType' object is not subscriptable
+l2 14 2 True 4640 25 0.1
+l2 14 3 True 4572 24 0.0
+l2 14 4 True 4512 24 0.0
+l2 14 5 True 4566 24 0.0
+l2 14 6 True 4551 24 0.0
+l2 14 7 True 4491 23 0.0
+l2 14 8 True 4508 23 0.0
+l2 14 9 True 4491 23 0.0
+l2 14 10 True 4479 23 0.0
 l3 14 1 True 4253 8 0.0
 l3 14 2 True 4320 8 0.0
-l3 14 3 False 160637 47 0
-Traceback (most recent call last):
-  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 198, in <module>
-    res = run(inst, mode); res.update(bits=b, seed=inst['seed'], r=inst['r'], true_k=inst['k'], mode=mode)
-  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 165, in run
-    if u[0][0] == v[0][0]: continue
-                  ~~~~^^^
-TypeError: 'NoneType' object is not subscriptable
-l2 16 1 False 123776 184 0
-l2 16 2 False 123630 184 0
-l2 16 3 False 131489 192 0
-Traceback (most recent call last):
-  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 198, in <module>
-    res = run(inst, mode); res.update(bits=b, seed=inst['seed'], r=inst['r'], true_k=inst['k'], mode=mode)
-  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 165, in run
-    if u[0][0] == v[0][0]: continue
-                  ~~~~^^^
-TypeError: 'NoneType' object is not subscriptable
-l3 16 1 False 162906 47 0
-l3 16 2 False 162760 47 0
-l3 16 3 False 163023 47 0
-Traceback (most recent call last):
-  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 198, in <module>
-    res = run(inst, mode); res.update(bits=b, seed=inst['seed'], r=inst['r'], true_k=inst['k'], mode=mode)
-  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 165, in run
-    if u[0][0] == v[0][0]: continue
-                  ~~~~^^^
-TypeError: 'NoneType' object is not subscriptable
-l2 18 1 False 274581 299 0
-l2 18 2 False 281356 303 0
-l2 18 3 False 278920 302 0
-l2 18 4 False 258954 289 0
-l2 18 5 False 289131 308 0
-l2 18 6 False 278867 302 0
-l2 18 7 True 8462 63 0.0
-l2 18 8 False 278945 302 0
-l2 18 9 False 274615 299 0
-l2 18 10 False 278829 302 0
-l3 18 1 False 298363 59 0
-l3 18 2 False 298498 59 0
-l3 18 3 False 298552 59 0
-l3 18 4 False 298394 59 0
-l3 18 5 False 441843 68 0
-l3 18 6 False 298499 59 0
+l3 14 3 True 4300 8 0.0
+l3 14 4 True 4240 8 0.0
+l3 14 5 True 4294 8 0.0
+l3 14 6 True 4279 8 0.1
+l3 14 7 True 4265 8 0.0
+l3 14 8 True 4282 8 0.0
+l3 14 9 True 4265 8 0.0
+l3 14 10 True 4253 8 0.0
+l2 16 1 True 5586 37 0.1
+l2 16 2 True 5595 37 0.0
+l2 16 3 True 5708 38 0.0
+l2 16 4 True 5611 37 0.0
+l2 16 5 True 5703 38 0.0
+l2 16 6 True 5813 39 0.1
+l2 16 7 True 5599 37 0.1
+l2 16 8 True 5595 37 0.0
+l2 16 9 True 5809 39 0.0
+l2 16 10 True 5600 37 0.0
+l3 16 1 True 4534 8 0.0
+l3 16 2 True 4543 8 0.0
+l3 16 3 True 4582 8 0.0
+l3 16 4 True 9625 11 0.1
+l3 16 5 True 4577 8 0.0
+l3 16 6 True 4739 9 0.0
+l3 16 7 True 4547 8 0.0
+l3 16 8 True 4543 8 0.0
+l3 16 9 True 4735 9 0.1
+l3 16 10 True 4548 8 0.1
+l2 18 1 True 8077 60 0.1
+l2 18 2 True 8375 62 0.1
+l2 18 3 True 18721 77 0.1
+l2 18 4 True 7976 59 0.0
+l2 18 5 True 19296 79 0.1
+l2 18 6 True 8243 61 0.0
+l2 18 7 True 8462 63 0.1
+l2 18 8 True 8232 61 0.1
+l2 18 9 True 8135 60 0.1
+l2 18 10 True 18650 77 0.1
+l3 18 1 True 11494 14 0.1
+l3 18 2 True 11565 14 0.1
+l3 18 3 True 11617 14 0.1
+l3 18 4 True 5324 11 0.0
+l3 18 5 True 12720 16 0.1
+l3 18 6 True 19673 18 0.2
 l3 18 7 True 12649 16 0.1
-l3 18 8 False 298577 59 0
-l3 18 9 False 298397 59 0
-l3 18 10 False 298461 59 0
-l2 20 1 True 14990 101 0.1
-l2 20 2 True 65137 158 0.4
-l2 20 3 False 587720 453 0
-l2 20 4 False 587739 453 0
+l3 18 8 True 12253 11 0.1
+l3 18 9 True 11567 14 0.1
+l3 18 10 True 19651 18 0.2
+l2 20 1 True 14990 101 0.2
+l2 20 2 True 65137 158 0.5
+l2 20 3 True 63809 156 0.5
+l2 20 4 True 58119 147 0.5
 l2 20 5 True 58130 147 0.4
-l2 20 6 True 61861 153 0.3
-l2 20 7 False 662539 483 0
+l2 20 6 True 61861 153 1.0
+l2 20 7 True 34680 124 0.3
+l2 20 8 True 15002 101 0.1
+l2 20 9 True 63794 156 0.5
+l2 20 10 True 58060 147 0.4
+l3 20 1 True 53411 31 1.5
+l3 20 2 True 29577 24 0.4
+l3 20 3 True 29571 24 0.3
+l3 20 4 True 53172 31 0.5
+l3 20 5 True 29436 24 0.5
+l3 20 6 True 29427 24 0.4
+l3 20 7 True 6871 15 0.3
+l3 20 8 True 29633 24 0.5
+l3 20 9 True 29556 24 0.4
+l3 20 10 True 29366 24 0.7

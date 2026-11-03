@@ -156,7 +156,8 @@ def run(inst, mode, c0=1.0):
             new = []
             for _ in range(48):
                 aa, bb = rng.randrange(1, r), rng.randrange(1, r)
-                Rm = C.add(C.mul(aa, P), C.mul(bb, Q)); new.append((Rm, aa, bb))
+                Rm = C.add(C.mul(aa, P), C.mul(bb, Q))
+                if Rm is not None: new.append((Rm, aa, bb))
             allm = Mpts + new
             cand = []
             for u in new:

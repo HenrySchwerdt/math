@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round12-review-thmE/symnum.py",
+    "5"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:46:50.412851Z",
+  "exit_code": null,
+  "error": "Timed out after 300 seconds",
+  "completed_at": "2026-11-03T11:51:50.435529Z",
+  "truncated": false,
+  "output": ""
+}

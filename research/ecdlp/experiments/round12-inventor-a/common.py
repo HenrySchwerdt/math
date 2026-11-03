@@ -19,9 +19,8 @@ def count_points(a, b, p):
     for s in range(0, p, ch):
         x = xs[s:s + ch]
         v = (x * x % p * x + a * x + b) % p
-        tot += int((2 * sq[v].astype(np.int64)).sum()) + int((v == 0).sum())
-        # v==0: one point; sq[0]=1 would give 2, correct by subtracting
-        tot -= int((v == 0).sum()) * 2 - int((v == 0).sum())
+        z = int((v == 0).sum())
+        tot += int((2 * sq[v].astype(np.int64)).sum()) - z  # v==0 gives one point, sq[0]=1 would give 2
     return tot
 
 def rand_prime34(rng, b):

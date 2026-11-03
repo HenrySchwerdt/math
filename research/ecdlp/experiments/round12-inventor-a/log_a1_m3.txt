@@ -1,21 +1,50 @@
 m3 12 1 True 6886 57 0.1
 m3 12 2 True 7020 58 0.1
-m3 12 3 False 282265 308 0
+m3 12 3 True 7652 63 0.1
 m3 12 4 True 6997 58 0.1
-m3 12 5 False 239552 281 0
-m3 12 6 False 239624 281 0
-m3 12 7 False 282057 308 0
-m3 12 8 False 239706 281 0
-m3 12 9 False 239657 281 0
+m3 12 5 True 6898 57 0.2
+m3 12 6 True 6882 57 0.1
+m3 12 7 True 7598 63 0.1
+m3 12 8 True 6898 57 0.1
+m3 12 9 True 6904 57 0.1
 m3 12 10 True 7388 61 0.1
-m3 14 1 True 16855 114 0.2
-m3 14 2 True 20042 127 0.2
-m3 14 3 False 911579 573 0
-Traceback (most recent call last):
-  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 198, in <module>
-    res = run(inst, mode); res.update(bits=b, seed=inst['seed'], r=inst['r'], true_k=inst['k'], mode=mode)
-  File "/home/user/math/research/ecdlp/experiments/round12-inventor-a/a1_farey_ic.py", line 165, in run
-    if u[0][0] == v[0][0]: continue
-                  ~~~~^^^
-TypeError: 'NoneType' object is not subscriptable
-m3 16 1 False 3428038 1123 0
+m3 14 1 True 16855 114 0.3
+m3 14 2 True 20042 127 0.3
+m3 14 3 True 17826 118 0.3
+m3 14 4 True 17766 118 0.2
+m3 14 5 True 18534 121 0.3
+m3 14 6 True 17805 118 0.2
+m3 14 7 True 17095 115 0.2
+m3 14 8 True 17342 116 0.2
+m3 14 9 True 16867 114 0.2
+m3 14 10 True 16855 114 0.3
+m3 16 1 True 58776 234 0.8
+m3 16 2 True 56019 228 0.5
+m3 16 3 True 62142 241 0.6
+m3 16 4 True 57871 232 0.5
+m3 16 5 True 62619 242 0.6
+m3 16 6 True 67583 252 0.8
+m3 16 7 True 56937 230 0.6
+m3 16 8 True 57393 231 0.6
+m3 16 9 True 66577 250 0.5
+m3 16 10 True 57398 231 0.7
+m3 18 1 True 220297 465 2.5
+m3 18 2 True 248135 494 2.6
+m3 18 3 True 238386 484 2.6
+m3 18 4 True 210216 454 2.4
+m3 18 5 True 262181 508 2.0
+m3 18 6 True 230683 476 1.9
+m3 18 7 True 260086 506 1.8
+m3 18 8 True 234492 480 1.6
+m3 18 9 True 226907 472 1.5
+m3 18 10 True 231642 477 1.4
+m3 20 1 True 1040196 1018 8.4
+m3 20 2 True 1030072 1013 7.8
+m3 20 3 True 982029 989 7.4
+m3 20 4 True 815732 901 7.0
+m3 20 5 True 828426 908 3.0
+m3 20 6 True 921651 958 2.4
+m3 20 7 True 997853 997 2.3
+m3 20 8 True 1050408 1023 2.9
+m3 20 9 True 997906 997 2.5
+m3 20 10 True 808549 897 1.8
