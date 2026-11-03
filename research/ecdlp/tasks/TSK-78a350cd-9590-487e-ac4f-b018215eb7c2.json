@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 8 / ECDLP-25: Lean x-only interpolation bound for k (linear) on short Weierstrass curves",
   "created_at": "2026-11-03T10:29:51.257493Z",
-  "status": "active",
+  "status": "completed",
   "question": "Using the CurveX/Interpolation infrastructure, determine and formally prove the best degree lower bound for g in F[X] with g(x(kP)) = k for 1 <= k <= N < r/2 (x-only interpolation of the discrete log itself), or record why the second-difference argument degenerates.",
   "rationale": "Round-8 selection by PI (autonomous); D2/D3 from ECDLP-22 judged weak as stated, D3 absorbed into ECDLP-24.",
   "assumptions": [],
@@ -14,12 +14,13 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-5d4a2abc-42df-4d1f-b7ba-7ca64fac1835.evidence"
+    "research/ecdlp/events/EVT-5d4a2abc-42df-4d1f-b7ba-7ca64fac1835.evidence",
+    "research/ecdlp/events/EVT-e1b83d62-8eab-4b80-8c53-79bed6658b8c.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute bounded round-8 run.",
+  "outcome": "verified",
+  "next_action": "Independent review; tightness open",
   "notes": "Created by PI RUN-62dbda7c (autonomous).",
   "success_criteria": [
     "Exact statements; verified sources or explicit unverified marks; reproducible evidence; no sorry; corrected variants separate."

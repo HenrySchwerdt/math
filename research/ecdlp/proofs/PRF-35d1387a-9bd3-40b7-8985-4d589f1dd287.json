@@ -1,0 +1,38 @@
+{
+  "id": "PRF-35d1387a-9bd3-40b7-8985-4d589f1dd287",
+  "type": "PRF",
+  "title": "Lean: x-only interpolation bound for the discrete log (Theorem C)",
+  "created_at": "2026-11-03T10:34:27.981570Z",
+  "status": "active",
+  "question": "Formal proof of Theorem C.",
+  "rationale": "ECDLP-25.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
+    "TSK-78a350cd-9590-487e-ac4f-b018215eb7c2",
+    "RUN-9974dc45-0029-4615-bd81-9c9fbbda94f4",
+    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-71220053-4c4e-41ae-a7bb-01beffefdb6a.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5da55f17-bbac-4f82-9271-da5f30d66b80.evidence",
+    "MathResearch/ECDLP/LinearInterp.lean",
+    "lean-toolchain"
+  ],
+  "claims": [
+    "MathResearch.ECDLP.LinearInterp.degree_bound_of_x_relations_linear",
+    "MathResearch.ECDLP.CurveX.degree_bound_linear_short_weierstrass"
+  ],
+  "proof_status": "formally-verified",
+  "outcome": "verified",
+  "next_action": "Independent correspondence review.",
+  "notes": "Source commit 8191c0f69398b632fc2c7c7efbfdcdb9e2634b7b; lake build 3164 jobs, 0 warnings; standard axioms only.",
+  "formal": {
+    "lean_file": "MathResearch/ECDLP/LinearInterp.lean",
+    "declaration": "MathResearch.ECDLP.CurveX.degree_bound_linear_short_weierstrass",
+    "toolchain_file": "lean-toolchain",
+    "build_evidence": "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-71220053-4c4e-41ae-a7bb-01beffefdb6a.evidence",
+    "source_commit": "8191c0f69398b632fc2c7c7efbfdcdb9e2634b7b"
+  }
+}

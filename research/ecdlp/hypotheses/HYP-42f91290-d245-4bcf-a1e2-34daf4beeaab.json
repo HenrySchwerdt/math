@@ -1,0 +1,35 @@
+{
+  "id": "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
+  "type": "HYP",
+  "title": "Theorem C: x-only interpolation degree bound for the discrete log",
+  "created_at": "2026-11-03T10:34:27.939006Z",
+  "status": "open",
+  "question": "Theorem C (x-only interpolation of k): Let W be short Weierstrass over a field F with 2 != 0, P a point with addOrderOf P = r, and 2N < r. If g in F[X] satisfies g(x(kP)) = k for 1 <= k <= N, then N <= 3 deg g + 2 (so r <= 6 deg g + 5 for N = (r-1)/2). Proof: the cleared second-difference polynomial N0(u) has degree exactly 3 deg g (leading coefficient -2 lc(g)), vanishes at x(kP) for 2 <= k <= N-1.",
+  "rationale": "From ECDLP-25; linear analogue of Theorem B.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-9974dc45-0029-4615-bd81-9c9fbbda94f4",
+    "TSK-78a350cd-9590-487e-ac4f-b018215eb7c2",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "PRF-35d1387a-9bd3-40b7-8985-4d589f1dd287"
+  ],
+  "evidence": [
+    "research/ecdlp/proofs/checks/Round8Axioms.lean"
+  ],
+  "claims": [
+    "Theorem C (x-only interpolation of k): Let W be short Weierstrass over a field F with 2 != 0, P a point with addOrderOf P = r, and 2N < r. If g in F[X] satisfies g(x(kP)) = k for 1 <= k <= N, then N <= 3 deg g + 2 (so r <= 6 deg g + 5 for N = (r-1)/2). Proof: the cleared second-difference polynomial N0(u) has degree exactly 3 deg g (leading coefficient -2 lc(g)), vanishes at x(kP) for 2 <= k <= N-1."
+  ],
+  "proof_status": "formally-verified",
+  "outcome": "verified",
+  "next_action": "Independent correspondence review; tightness (Lagrange interpolants have degree N-1 in all toy tests) is open.",
+  "notes": "Agent numerical check: 533 toy curves (p <= 211): bound, deg N0 = 3d, lc N0 = -2 lc g all held. Bound far from tight in tests. Likely implied by / weaker than Lange\u2013Winterhof-type results (Theorem A is known in kind): NOT claimed novel. Elementary.",
+  "formal": {
+    "lean_file": "MathResearch/ECDLP/LinearInterp.lean",
+    "declaration": "MathResearch.ECDLP.CurveX.degree_bound_linear_short_weierstrass",
+    "toolchain_file": "lean-toolchain",
+    "build_evidence": "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-71220053-4c4e-41ae-a7bb-01beffefdb6a.evidence",
+    "source_commit": "8191c0f69398b632fc2c7c7efbfdcdb9e2634b7b"
+  }
+}

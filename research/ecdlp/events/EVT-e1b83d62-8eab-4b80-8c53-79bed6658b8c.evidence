@@ -1,0 +1,26 @@
+{
+  "id": "EVT-e1b83d62-8eab-4b80-8c53-79bed6658b8c",
+  "kind": "task-status-change",
+  "task": "TSK-78a350cd-9590-487e-ac4f-b018215eb7c2",
+  "task_key": "ECDLP-25",
+  "timestamp": "2026-11-03T10:34:28.377655Z",
+  "run": "RUN-9974dc45-0029-4615-bd81-9c9fbbda94f4",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-8 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Independent review; tightness open"
+  },
+  "reason": "Theorem C (x-only interpolation of k) proved in Lean; PI verified build and axioms",
+  "before_sha256": "361c4f5fcf1830db271e90ec8eca0000342a2e51dd4c4285bba5faca1cf940c4",
+  "after_sha256": "580effa710a02c5d0c8e9d4ff4116d6b3a65f27c88204220523d8f3dcf4c1d41"
+}
