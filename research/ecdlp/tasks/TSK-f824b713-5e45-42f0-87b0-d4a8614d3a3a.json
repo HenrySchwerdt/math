@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 7 / ECDLP-20: unconditional Lean Theorem B \u2014 derive x-addition identities from Mathlib",
   "created_at": "2026-11-03T10:20:57.390091Z",
-  "status": "active",
+  "status": "completed",
   "question": "Prove in Lean from Mathlib WeierstrassCurve.Affine (short Weierstrass a1=a2=a3=0) that for affine points Q, P with x(Q) != x(P): x(Q+P)+x(Q-P) and x(Q+P)x(Q-P) satisfy the cleared identities used by degree_bound_of_x_relations, and derive injectivity of k -> x(kP) on 1..(r-1)/2 from addOrderOf P = r odd; then state the unconditional Theorem B for points of W.Point.",
   "rationale": "Round-7 selection by PI from updated BACKLOG (autonomous).",
   "assumptions": [],
@@ -14,12 +14,13 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-5f7ea7c7-af71-469c-aec8-5ce8e9046674.evidence"
+    "research/ecdlp/events/EVT-5f7ea7c7-af71-469c-aec8-5ce8e9046674.evidence",
+    "research/ecdlp/events/EVT-71465364-640f-46e7-be91-07f491c3cc57.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute bounded round-7 run.",
+  "outcome": "verified",
+  "next_action": "Independent review; extend to general Weierstrass / char 3",
   "notes": "Created by PI RUN-62dbda7c (autonomous).",
   "success_criteria": [
     "Exact statements; verified sources or explicit unverified marks; reproducible evidence; no sorry; corrected variants separate."
