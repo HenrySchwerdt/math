@@ -1,0 +1,1 @@
+{'mode': 'neg', 'bits': 40, 'p': 701298883751, 'n': 701298629047, 'trial': 9, 'ops': 15001444, 'setup': 3519, 'ok': True, 'dps': 31, 'sec': 149.07, 'stats': {'cycle2': 19401, 'cycle4': 354, 'capped': 22}}
