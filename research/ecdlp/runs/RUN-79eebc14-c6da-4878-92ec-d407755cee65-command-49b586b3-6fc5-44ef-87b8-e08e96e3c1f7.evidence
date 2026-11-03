@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round21-tournament-c/run_c.py",
+    "e2"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:20:56.993425Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T18:20:58.666165Z",
+  "truncated": false,
+  "output": "{\"seq\": \"factorial\", \"control\": true, \"nullities\": {\"1,1\": 1, \"1,2\": 2, \"2,1\": 2, \"2,2\": 4}}\n{\"seq\": \"catalan\", \"control\": true, \"nullities\": {\"1,1\": 1, \"1,2\": 2, \"2,1\": 2, \"2,2\": 4}}\n{\"bits\": 14, \"seed\": 1, \"p\": 11321, \"r\": 11273, \"seq\": \"x\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n{\"bits\": 14, \"seed\": 1, \"p\": 11321, \"r\": 11273, \"seq\": \"y\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n{\"bits\": 14, \"seed\": 1, \"p\": 11321, \"r\": 11273, \"seq\": \"prod\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n{\"bits\": 14, \"seed\": 2, \"p\": 16267, \"r\": 16339, \"seq\": \"x\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n{\"bits\": 14, \"seed\": 2, \"p\": 16267, \"r\": 16339, \"seq\": \"y\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n{\"bits\": 14, \"seed\": 2, \"p\": 16267, \"r\": 16339, \"seq\": \"prod\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n{\"bits\": 18, \"seed\": 1, \"p\": 252037, \"r\": 252283, \"seq\": \"x\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n{\"bits\": 18, \"seed\": 1, \"p\": 252037, \"r\": 252283, \"seq\": \"y\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n{\"bits\": 18, \"seed\": 1, \"p\": 252037, \"r\": 252283, \"seq\": \"prod\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n{\"bits\": 18, \"seed\": 2, \"p\": 145501, \"r\": 145807, \"seq\": \"x\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n{\"bits\": 18, \"seed\": 2, \"p\": 145501, \"r\": 145807, \"seq\": \"y\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n{\"bits\": 18, \"seed\": 2, \"p\": 145501, \"r\": 145807, \"seq\": \"prod\", \"control\": false, \"found\": [], \"grid\": \"d1-6,e0-6\"}\n"
+}

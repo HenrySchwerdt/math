@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round21-tournament-c/run_c.py",
+    "e1"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:21:06.666214Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T18:21:36.555350Z",
+  "truncated": false,
+  "output": "{\"bits\": 10, \"seed\": 1, \"p\": 953, \"r\": 911, \"LC_x\": 911, \"LC_y\": 911, \"LC_random_periodic\": 911, \"LC_planted\": 227, \"planted_L\": 227, \"sec\": 0.1, \"LC_x_over_r\": 1.0}\n{\"bits\": 10, \"seed\": 2, \"p\": 659, \"r\": 653, \"LC_x\": 653, \"LC_y\": 653, \"LC_random_periodic\": 653, \"LC_planted\": 163, \"planted_L\": 163, \"sec\": 0.1, \"LC_x_over_r\": 1.0}\n{\"bits\": 10, \"seed\": 3, \"p\": 811, \"r\": 823, \"LC_x\": 823, \"LC_y\": 823, \"LC_random_periodic\": 823, \"LC_planted\": 205, \"planted_L\": 205, \"sec\": 0.1, \"LC_x_over_r\": 1.0}\n{\"bits\": 12, \"seed\": 1, \"p\": 2731, \"r\": 2713, \"LC_x\": 2713, \"LC_y\": 2713, \"LC_random_periodic\": 2713, \"LC_planted\": 678, \"planted_L\": 678, \"sec\": 0.5, \"LC_x_over_r\": 1.0}\n{\"bits\": 12, \"seed\": 2, \"p\": 3499, \"r\": 3491, \"LC_x\": 3491, \"LC_y\": 3491, \"LC_random_periodic\": 3491, \"LC_planted\": 872, \"planted_L\": 872, \"sec\": 0.9, \"LC_x_over_r\": 1.0}\n{\"bits\": 12, \"seed\": 3, \"p\": 2659, \"r\": 2729, \"LC_x\": 2729, \"LC_y\": 2729, \"LC_random_periodic\": 2729, \"LC_planted\": 682, \"planted_L\": 682, \"sec\": 0.5, \"LC_x_over_r\": 1.0}\n{\"bits\": 14, \"seed\": 1, \"p\": 9817, \"r\": 9941, \"LC_x\": 9941, \"LC_y\": 9941, \"LC_random_periodic\": 9941, \"LC_planted\": 2485, \"planted_L\": 2485, \"sec\": 7.0, \"LC_x_over_r\": 1.0}\n{\"bits\": 14, \"seed\": 2, \"p\": 10753, \"r\": 10789, \"LC_x\": 10789, \"LC_y\": 10789, \"LC_random_periodic\": 10789, \"LC_planted\": 2697, \"planted_L\": 2697, \"sec\": 5.6, \"LC_x_over_r\": 1.0}\n{\"bits\": 14, \"seed\": 3, \"p\": 12601, \"r\": 12433, \"LC_x\": 12433, \"LC_y\": 12433, \"LC_random_periodic\": 12433, \"LC_planted\": 3108, \"planted_L\": 3108, \"sec\": 11.4, \"LC_x_over_r\": 1.0}\n"
+}
