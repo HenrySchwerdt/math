@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Re-review of PAP-ef6e2010 revision 1",
   "created_at": "2026-11-03T11:09:10.211689Z",
-  "status": "active",
+  "status": "completed",
   "question": "Are all blocking findings resolved and the response table accurate?",
   "rationale": "docs/PAPERS.md: revisions affecting findings require re-review.",
   "assumptions": [],
@@ -37,7 +37,7 @@
       "research/ecdlp/reviews/REV-c81801d2-2ba6-49cd-b792-6c6ac2d18cf0.json",
       "research/ecdlp/reviews/REV-c81801d2-2ba6-49cd-b792-6c6ac2d18cf0.md"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "221ab5985465f13088644f8a6d683b6e31a87953",
     "tests": [],
     "benchmark": "Not applicable",
     "machine": "Claude Code remote Linux container",
