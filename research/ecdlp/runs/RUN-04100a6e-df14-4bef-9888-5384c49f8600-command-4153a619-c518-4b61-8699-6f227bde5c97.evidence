@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round19-review-pap-v3/check_numbers.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T14:17:08.676573Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T14:17:08.740772Z",
+  "truncated": false,
+  "output": "numbers checked 437 unmatched 16\n\n## \\section{Obstruction map for algorithm candidates (rounds 11 ['7c98bfbd']\n19  2.1  3.2  4.1  4.6  5  9  \n## \\paragraph{Methodological note: naive log-log exponents at s ['a73b4fdb']\n6  \n## \\subsection{Family 2: index calculus for $m=2,3,4$ (inventor ['3c665e7b']\n2053  457  \n## \\subsection{Family 5: lifted relations (inventor A)} \\textbf ['23351e75']\n5  10  10  \n## \\subsection{Family 8: Problem L (frontier I part 1)} \\textbf ['8b156dfd']\n0.6  \n## \\subsection{Family 9: transfer of an ETH-refutation techniqu ['32e353ac']\n9  10  \n"
+}
