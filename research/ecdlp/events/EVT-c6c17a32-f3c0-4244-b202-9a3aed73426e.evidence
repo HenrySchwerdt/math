@@ -1,0 +1,26 @@
+{
+  "id": "EVT-c6c17a32-f3c0-4244-b202-9a3aed73426e",
+  "kind": "task-status-change",
+  "task": "TSK-1e2b2bbf-772e-4d0e-932b-91009cb1282e",
+  "task_key": "ECDLP-27",
+  "timestamp": "2026-11-03T10:42:05.571954Z",
+  "run": "RUN-ac3107bf-b5bd-44a0-ae47-8413aed2f895",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Independent review"
+  },
+  "reason": "Partial-agreement x-only bound proved in Lean (extra char hypothesis, automatic over F_p); PI verified build and axioms",
+  "before_sha256": "970fdddb2c3855acd7d47f218a8c87c6816fca79b069678a4b4db228cd9d92ae",
+  "after_sha256": "b05771a73b59e48a0e6ad6d7a07a4ae5b898234f7e046121e50eb4f58cd6ef6c"
+}

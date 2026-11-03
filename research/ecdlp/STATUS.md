@@ -98,6 +98,16 @@ Round 8 (package 5):
   non-anomalous, large-embedding-degree curves over prime fields (no known o(√p) algorithm).
   D3 lemma: non-scalar elements of Z[π] have norm ≥ |t²−4p|/4.
 
+Round 9 (package 6):
+- Theorem C independently reviewed (REV-6c9bfbc1 accept); probably not novel.
+- Partial-agreement part (2) formally verified (PartialAgreement.lean): S_j ≤ 3·deg g for g with
+  g(x(kP)) = k² on A ⊆ [1, N], 2N < r (extra hypothesis deg g ≥ 1 or char ∤ j over general
+  fields; automatic over F_p). Independent review pending.
+
+Formal layer summary (MathResearch/ECDLP, lake build 3165 jobs, standard axioms only):
+Basic (DLP relation), Transfer (transfer barriers), Barriers (SLP, trace bounds),
+Interpolation + CurveX (Theorem B), LinearInterp (Theorem C), PartialAgreement.
+
 Barrier context (literature-level, agents' reports RUN-9eae1ad9, RUN-fec2442f, RUN-b0ccd1bd):
 O(n log n) is below the best-known cost O(n² log n) of verifying a candidate by scalar
 multiplication (not a lower bound). Generic bounds (Shoup/Maurer/Nechaev) constrain only

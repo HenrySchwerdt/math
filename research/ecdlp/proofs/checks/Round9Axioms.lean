@@ -1,0 +1,4 @@
+import MathResearch
+open MathResearch.ECDLP
+#print axioms CurveX.partial_agreement_degree_bound
+#print axioms PartialAgreement.card_le_three_natDegree

@@ -25,14 +25,15 @@ Task keys via `research/ecdlp/TASKS.json`; status via `scripts/research.py task`
 - ECDLP-23 — blind review of partial-agreement bounds (part (2) transcription refuted, corrected).
 - ECDLP-24 — weak-family classification + D3 lemma.  ECDLP-25 — Lean Theorem C.
 
+- ECDLP-26 — review of Theorem C (accept).  ECDLP-27 — Lean partial-agreement part (2).
+
 ## Active
 - ECDLP-1 — umbrella vertical slice (lifecycle executed; SQLite/event memory, blind-packet
   tooling, C17 harness not implemented — deferred per user priority on research).
 
 ## Next candidates (prioritized by significance × falsifiability ÷ cost)
-1. Independent review of Theorem C (PRF for LinearInterp.lean); Lean formalization of corrected
-   partial-agreement part (2) (subset root count). Human/library access needed for novelty
-   (Lange–Winterhof LNCS 2387 pp. 137–143, LNCS 2643 pp. 51–60).
+1. Independent review of PartialAgreement.lean (PRF for ECDLP-27). Human/library access needed
+   for novelty (Lange–Winterhof LNCS 2387 pp. 137–143, LNCS 2643 pp. 51–60).
 2. Research frontier assessment: all investigated routes to sub-√p universal ECDLP are closed or
    negative at toy sizes; consider a reviewed barrier-map write-up (PAP draft, no publication
    without human approval).
