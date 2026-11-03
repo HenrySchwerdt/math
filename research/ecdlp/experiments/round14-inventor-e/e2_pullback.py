@@ -37,14 +37,14 @@ def charts(F):
             vs = [t1 if s1 == t1 else u, t2 if s2 == t2 else v]
             out.append(tjurina(G, vs))
     return out
+rng = random.Random(5)
 print("(a) total Tjurina number (= sum of delta-type local invariants; 0 = smooth) per chart of P1xP1: [t1,t2], [t1,1/t2], [1/t1,t2], [1/t1,1/t2]")
 print("    genus(normalization) = (2e-1)^2 - sum delta, delta = floor(e/2) at each of 2e cusp/node points (checked via Tjurina: nodes tau=1, cusp tau=2)")
 a, b, x3v = 2, 3, 5
 cases = [(1, 'phi=t', lambda t: t),
          (2, 'phi=t^2 (poly, pole order e at inf)', lambda t: t**2),
          (3, 'phi=t^3', lambda t: t**3),
-         (2, 'phi=(t^2+1)/(t^2+2t+3) generic rational, inf unramified', None),
-         (3, 'phi=(t^3+t+1)/(t^3+2t^2+5) generic rational', None)]
+         (2, 'phi=(t^2+1)/(t^2+2t+3) generic rational, inf unramified', None)]
 for e, name, phi in cases:
     t0 = time.time()
     if phi is None:
@@ -52,6 +52,10 @@ for e, name, phi in cases:
         ph = lambda t, N=N, Dn=Dn: N.subs(t1, t)/Dn.subs(t1, t)
     else: ph = phi
     F = S3(ph(t1), ph(t2), x3v, a, b)
+    if phi is None:   # clear denominators explicitly: bidegree (2e,2e)
+        Dn2 = Dn.subs(t1, t2)
+        F = sp.expand(sp.cancel(sp.together(F * Dn**2 * Dn2**2)))
+        assert sp.degree(F, t1) == 2*e and sp.degree(F, t2) == 2*e, (sp.degree(F, t1), sp.degree(F, t2))
     r = charts(F)
     print(f"e={e} {name:62s} arith.genus={(2*e-1)**2:3d} Tjurina per chart={r}  ({time.time()-t0:.1f}s)")
 print()

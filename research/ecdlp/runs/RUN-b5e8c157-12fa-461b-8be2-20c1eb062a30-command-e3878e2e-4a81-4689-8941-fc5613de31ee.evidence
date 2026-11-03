@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round14-inventor-e/e4_cm.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:25:09.597107Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:25:16.389981Z",
+  "truncated": false,
+  "output": "(a) S_3(x, zeta x, z) over Q(zeta), a=0 (j=0), as a quadratic in z:\n    z^2-coefficient A = -3*I*x**2*(sqrt(3) + I)/2\n    S_3(x,zeta x, zeta^2 x) = 0    (identity 1+w+w^2=0: P + wP = -w^2 P)\n    other root z2 = x((1-w)P) = C/(A*z1) = I*(sqrt(3) - I)*(4*b + x**3)/(6*x**2)\n    degree of z2 as rational function of x: 3 2\n\n(b) p, b, r, mu, lambda1(L)/sqrt(r) ; per B: |V|, relations_obs, relations_trivial(Z[w]-identities), obs-triv, random-set expectation (same |V|)\np=6229 b=2 r=6277 mu=2308 lambda1=70.6 sqrt(r)=79.2\n   NOTE rel_obs/rel_random count every unordered triple ~3x (once per pair); rel_triv counts distinct triples. Compare rel_obs/3 with rel_triv.\n   B   |V|   rel_obs  rel_triv  rel_obs/3-rel_triv  random_same_size(mean of 5)\n    2    12        70        22       1.3              0.2\n    4    40       864       284       4.0             21.8\n    8   144     11536      3832      13.3            847.0\n   16   544    165984     55280      48.0          39123.6\n   32  2112   3206765       n/a       n/a        1150299.8\n   48  3138   9843906       n/a       n/a        2460526.0\n   64  3138   9843906       n/a       n/a        2462337.2\np=28729 b=22 r=28759 mu=12978 lambda1=139.6 sqrt(r)=169.6\n   NOTE rel_obs/rel_random count every unordered triple ~3x (once per pair); rel_triv counts distinct triples. Compare rel_obs/3 with rel_triv.\n   B   |V|   rel_obs  rel_triv  rel_obs/3-rel_triv  random_same_size(mean of 5)\n    2    12        70        22       1.3              0.0\n    4    40       864       284       4.0              3.6\n    8   144     11536      3832      13.3            186.6\n   16   544    165984     55280      48.0          10649.6\n   32  2112   2507200       n/a       n/a         520451.0\n   48  4704  12974624       n/a       n/a        4487416.6\n   64  7944  42227440       n/a       n/a        15731810.8\n"
+}

@@ -9,11 +9,14 @@ A, Bb = 0, sp.Symbol('b')
 S3 = lambda X1, X2, X3: sp.expand((X1-X2)**2*X3**2 - 2*((X1+X2)*(X1*X2+0)+2*Bb)*X3 + ((X1*X2-0)**2 - 4*Bb*(X1+X2)))
 zeta = sp.Rational(-1, 2) + sp.sqrt(-3)/2
 F = sp.expand(S3(x, zeta*x, z))
-print("(a) S_3(x, zeta x, z) over Q(zeta), a=0, factored in z:")
-print("   ", sp.factor(F, z, extension=sp.sqrt(-3)))
-print("   check root z=zeta^2 x (P+wP = -w^2 P):", sp.simplify(F.subs(z, zeta**2*x)))
-Fq = sp.simplify(sp.cancel(F / (z - zeta**2*x)))
-print("   cofactor (x((1-w)P), norm-3 endomorphism, rational function of degree 3 in x):", sp.factor(sp.solve(Fq, z)[0] if True else 0))
+print("(a) S_3(x, zeta x, z) over Q(zeta), a=0 (j=0), as a quadratic in z:")
+Pz = sp.Poly(F, z); Aq, Bq, Cq = Pz.all_coeffs()
+print("    z^2-coefficient A =", sp.factor(sp.simplify(Aq)))
+root1 = zeta**2*x
+print("    S_3(x,zeta x, zeta^2 x) =", sp.simplify(sp.expand(F.subs(z, root1))), "   (identity 1+w+w^2=0: P + wP = -w^2 P)")
+root2 = sp.simplify(sp.radsimp(sp.simplify(Cq/Aq)/root1))
+print("    other root z2 = x((1-w)P) = C/(A*z1) =", sp.factor(root2))
+print("    degree of z2 as rational function of x:", sp.degree(sp.numer(sp.together(root2)), x), sp.degree(sp.denom(sp.together(root2)), x))
 # (b)
 def is_prime(n): return n > 1 and all(n % q for q in range(2, int(n**.5)+1))
 def order(b, p):
@@ -53,7 +56,8 @@ for (pmin, pmax) in ((2**12, 2**13), (2**14, 2**15)):
     mu = next(m for m in range(2, r) if (m*m + m + 1) % r == 0)
     lam = gauss_lambda1(r, mu)
     print(f"p={p} b={b} r={r} mu={mu} lambda1={lam:.1f} sqrt(r)={r**.5:.1f}")
-    print("   B   |V|   rel_obs  rel_triv  rel_obs-rel_triv  random_same_size(mean of 5)")
+    print("   NOTE rel_obs/rel_random count every unordered triple ~3x (once per pair); rel_triv counts distinct triples. Compare rel_obs/3 with rel_triv.")
+    print("   B   |V|   rel_obs  rel_triv  rel_obs/3-rel_triv  random_same_size(mean of 5)")
     for B in (2, 4, 8, 16, 32, 48, 64):
         els = [(a, bb) for a in range(-B, B+1) for bb in range(-B, B+1) if (a, bb) != (0, 0)]
         vals = [a + bb*mu for a, bb in els]; cls = classes(vals, r)
@@ -61,14 +65,14 @@ for (pmin, pmax) in ((2**12, 2**13), (2**14, 2**15)):
         obs = count_rel(cls, r)
         # trivial: pairs of box elements (as classes) whose +-sum/difference in Z^2 (not mod r) is again in the box -> identity in Z[omega]
         elset = set(els); triv = set()
+        do_triv = len(els) <= 1200
         cl_of = lambda ab: min((ab[0] + ab[1]*mu) % r, (-(ab[0] + ab[1]*mu)) % r)
-        for (a1, b1) in els:
+        for (a1, b1) in (els if do_triv else []):
             for (a2, b2) in els:
                 for s in (1, -1):
                     t = (a1 + s*a2, b1 + s*b2)
                     if t in elset:
                         c = tuple(sorted({cl_of((a1, b1)), cl_of((a2, b2)), cl_of(t)}))
                         if len(c) == 3: triv.add(c)
-            if len(els) > 3000: break
         rs = [count_rel(classes([rng.randrange(1, r) for _ in range(len(cls))], r), r) for _ in range(5)]
-        print(f"  {B:3d} {len(cls):5d} {obs:9d} {len(triv):9d} {obs-len(triv):9d}        {sum(rs)/5:9.1f}")
+        print(f"  {B:3d} {len(cls):5d} {obs:9d} {(len(triv)) if do_triv else 'n/a':>9} {(round(obs/3-len(triv),1)) if do_triv else 'n/a':>9}        {sum(rs)/5:9.1f}")
