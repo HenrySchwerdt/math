@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 12 / algorithm inventor A",
   "created_at": "2026-11-03T11:34:46.019613Z",
-  "status": "active",
+  "status": "completed",
   "question": "Lifted-relation algorithms: invent ECDLP algorithms that use the integer structure of coordinates in [0,p) (small lifts to Z, integer smoothness, lattice reduction / LLL on relations among lifted multiples, carries) to find relations a*P + b*Q = O faster than collisions; prototype and benchmark against Pollard rho.",
   "rationale": "Bounded run for TSK-ac21ba6a-1187-4aa2-8992-8a9d53ba966c",
   "assumptions": [],
@@ -40,12 +40,12 @@
     "No speedup over Pollard rho is claimed or observed; HYP-2de84d42 status unchanged."
   ],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "refuted",
   "next_action": "PI review of round-12 inventor A: all three candidates negative. Only remaining lever in this territory is a non-generic relation finder cheaper than a sqrt(p*s) birthday search on a lifted/structured factor base; test per-relation solver exponent at m>=3 (Groebner/resultant) on Farey/PKM bases, or CM-orbit structure. No commits made.",
   "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI. Self-reported model identity (inventor run): Sonnet 5.5 (claude-sonnet-5-5), not runtime-verified. Executed via algorithm-engineering adapter following algorithm-inventor role. Protocol sha256 0b0b85672fae6c05e9ed9619032980765289189cff2de3cce147bf30c66723af. A bug in count_points was found and fixed before the valid benchmark; invalid first-launch outputs discarded.",
   "run": {
     "started_at": "2026-11-03T11:34:46.020000Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T12:00:07.775283Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured)",
     "role": "algorithm-inventor",
@@ -57,8 +57,10 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round12-inventor-a/"
+    ],
+    "resulting_commit": "ccdaa1a7269cd2b3d60dd5995b2ce5e8fedeb949",
     "tests": [],
     "benchmark": "See report",
     "machine": "See report",

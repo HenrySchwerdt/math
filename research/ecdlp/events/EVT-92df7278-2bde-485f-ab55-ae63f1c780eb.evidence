@@ -1,0 +1,26 @@
+{
+  "id": "EVT-92df7278-2bde-485f-ab55-ae63f1c780eb",
+  "kind": "task-status-change",
+  "task": "TSK-2c09a4bf-55b4-473e-9972-7a7802fea776",
+  "task_key": "ECDLP-46",
+  "timestamp": "2026-11-03T12:00:07.819691Z",
+  "run": "RUN-956c1a00-8b4a-434e-8ab2-14dcb8c0289c",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "Subexponential #SAT technique cannot beat rho via CNF or sparse polynomial routes",
+  "before_sha256": "eb5e84cdab7fddf13a3c8c28525d7434ae65f1a84ea288e0caf231bf6e5bd0de",
+  "after_sha256": "cb20150a6ec443c317f808a7ffcbd9928929b7b6f785ea98f44bd9ccfba5dd3e"
+}

@@ -3,19 +3,20 @@
   "type": "TSK",
   "title": "Transfer test: subexponential #k-SAT technique (openai/math family 378) to ECDLP",
   "created_at": "2026-11-03T11:51:38.605654Z",
-  "status": "active",
+  "status": "completed",
   "question": "Does the sparse-polynomial common-zero counting / shared-linear-summary technique of 'The Exponential Time Hypothesis is False' (openai/math family 378) give any ECDLP algorithm beating Pollard rho, directly via CNF encoding or via the summation-polynomial decomposition step?",
   "rationale": "External, Lean-formalized (per its own catalogue) subexponential counting algorithm; our SAT and index-calculus routes failed at the polynomial-system step. PI note: direct CNF encoding has n >= circuit size >> log r variables, so the headline theorem cannot beat rho; only the technique might.",
   "assumptions": [],
   "sources": [],
   "refs": [],
   "evidence": [
-    "research/ecdlp/events/EVT-da788e9d-00cf-4be1-bfc8-7fcb36b0b15d.evidence"
+    "research/ecdlp/events/EVT-da788e9d-00cf-4be1-bfc8-7fcb36b0b15d.evidence",
+    "research/ecdlp/events/EVT-92df7278-2bde-485f-ab55-ae63f1c780eb.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "refuted",
+  "next_action": "Closed",
   "notes": "Created via research.py start.",
   "success_criteria": [
     "Exact statements; reproducible evidence; honest negatives."

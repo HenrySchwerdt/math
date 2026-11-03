@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Transfer test: subexponential #k-SAT technique (openai/math family 378) to ECDLP",
   "created_at": "2026-11-03T11:51:38.615495Z",
-  "status": "active",
+  "status": "completed",
   "question": "Does the sparse-polynomial common-zero counting / shared-linear-summary technique of 'The Exponential Time Hypothesis is False' (openai/math family 378) give any ECDLP algorithm beating Pollard rho, directly via CNF encoding or via the summation-polynomial decomposition step?",
   "rationale": "Bounded run for TSK-2c09a4bf-55b4-473e-9972-7a7802fea776",
   "assumptions": [],
@@ -20,12 +20,12 @@
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "refuted",
   "next_action": "Fill draft metadata and report before execution",
   "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
   "run": {
     "started_at": "2026-11-03T11:51:38.615816Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T12:00:07.822320Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured)",
     "role": "algorithm-inventor",
@@ -41,8 +41,10 @@
       "research/ecdlp/runs/RUN-956c1a00-8b4a-434e-8ab2-14dcb8c0289c-command-a1a83c92-18d2-44f2-afa8-7f958b5a7f18.evidence",
       "research/ecdlp/runs/RUN-956c1a00-8b4a-434e-8ab2-14dcb8c0289c-command-97e6cf62-f872-4db5-9075-a185b32e5cb3.evidence"
     ],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round12-eth-transfer/"
+    ],
+    "resulting_commit": "ccdaa1a7269cd2b3d60dd5995b2ce5e8fedeb949",
     "tests": [],
     "benchmark": "See report",
     "machine": "See report",
