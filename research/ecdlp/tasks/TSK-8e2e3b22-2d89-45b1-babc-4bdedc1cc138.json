@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 11 / ECDLP-39: algebraic decision-tree barrier (branching) and batched SLP review",
   "created_at": "2026-11-03T11:12:01.451799Z",
-  "status": "open",
+  "status": "active",
   "question": "Algebraic decision-tree barrier (conjecture): any algebraic decision tree over F_p with equality branching (tests f(u) = 0 on intermediate values), single input u = x(Q), depth D and leaf programs of length L (with division defined on their leaf sets), that outputs k at u = x(kP) for 1 <= k <= N, 2N < r, satisfies L + c\u00b7D >= log2 N \u2212 O(1) for an absolute constant c; obstacle: leaves partition the nodes arbitrarily, and partial-agreement bounds need additive structure (progressions) in each leaf set (Behrend-type sets may avoid it).",
   "rationale": "DEC allocation: strongest open math; plus mandatory review of PRF-58cf340e and the division-SLP PRF.",
   "assumptions": [],
@@ -14,7 +14,9 @@
     "HYP-92a9b4d9-827b-45fc-b881-1e7cf3b3443b",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
-  "evidence": [],
+  "evidence": [
+    "research/ecdlp/events/EVT-179ff07a-7d03-4d31-b49b-1d413f1f44a8.evidence"
+  ],
   "claims": [],
   "proof_status": "not-applicable",
   "outcome": null,
