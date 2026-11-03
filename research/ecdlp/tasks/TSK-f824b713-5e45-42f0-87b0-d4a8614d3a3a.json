@@ -1,0 +1,33 @@
+{
+  "id": "TSK-f824b713-5e45-42f0-87b0-d4a8614d3a3a",
+  "type": "TSK",
+  "title": "Round 7 / ECDLP-20: unconditional Lean Theorem B \u2014 derive x-addition identities from Mathlib",
+  "created_at": "2026-11-03T10:20:57.390091Z",
+  "status": "active",
+  "question": "Prove in Lean from Mathlib WeierstrassCurve.Affine (short Weierstrass a1=a2=a3=0) that for affine points Q, P with x(Q) != x(P): x(Q+P)+x(Q-P) and x(Q+P)x(Q-P) satisfy the cleared identities used by degree_bound_of_x_relations, and derive injectivity of k -> x(kP) on 1..(r-1)/2 from addOrderOf P = r odd; then state the unconditional Theorem B for points of W.Point.",
+  "rationale": "Round-7 selection by PI from updated BACKLOG (autonomous).",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+    "PRF-a6cf1e66-4d14-4e4d-8ced-617e4c0abf5f",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-5f7ea7c7-af71-469c-aec8-5ce8e9046674.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute bounded round-7 run.",
+  "notes": "Created by PI RUN-62dbda7c (autonomous).",
+  "success_criteria": [
+    "Exact statements; verified sources or explicit unverified marks; reproducible evidence; no sorry; corrected variants separate."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-55019cbd-64f8-4e22-ad27-61316ef59d20.md",
+    "research/ecdlp/runs/RUN-55019cbd-64f8-4e22-ad27-61316ef59d20.json (claims/sources/notes/next_action)",
+    "MathResearch/ECDLP/CurveX.lean"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; computations < 5 min; no commits; ~75 min."
+}
