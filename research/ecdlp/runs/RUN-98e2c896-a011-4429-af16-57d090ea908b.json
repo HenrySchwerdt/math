@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 13 / review of Frontier E remarks E0 and E3",
   "created_at": "2026-11-03T12:03:22.039995Z",
-  "status": "active",
+  "status": "completed",
   "question": "Are E0 (order/bit access is already free in Shoup's generic model; sub-sqrt algorithms need a distinguisher of k->x(kP) from a random injection that leaks k) and E3 (decision-tree arithmetic length is vacuous with comparisons unless size is charged) correct, and what exactly do they imply for HYP-dbe79a50?",
   "rationale": "Bounded run for TSK-b814669a-5f7b-4010-b2ba-bdad90f35923",
   "assumptions": [],
@@ -18,12 +18,12 @@
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "verified",
   "next_action": "Fill draft metadata and report before execution",
   "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
   "run": {
     "started_at": "2026-11-03T12:03:22.040360Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T12:07:13.534474Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured)",
     "role": "complexity-theory",
@@ -38,8 +38,10 @@
     "commands": [
       "research/ecdlp/runs/RUN-98e2c896-a011-4429-af16-57d090ea908b-command-11abbe7c-5309-41fc-806e-35319cd832a8.evidence"
     ],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round13-review-e0e3/"
+    ],
+    "resulting_commit": "eb96bb8f3defb12a077be0afeb8a6991656d1367",
     "tests": [],
     "benchmark": "See report",
     "machine": "See report",
