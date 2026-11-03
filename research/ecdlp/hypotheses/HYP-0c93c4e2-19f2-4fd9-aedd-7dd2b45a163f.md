@@ -1,0 +1,3 @@
+# HYP-0c93c4e2-19f2-4fd9-aedd-7dd2b45a163f — Decision-tree barrier
+
+Algebraic decision-tree barrier (conjecture): any algebraic decision tree over F_p with equality branching (tests f(u) = 0 on intermediate values), single input u = x(Q), depth D and leaf programs of length L (with division defined on their leaf sets), that outputs k at u = x(kP) for 1 <= k <= N, 2N < r, satisfies L + c·D >= log2 N − O(1) for an absolute constant c; obstacle: leaves partition the nodes arbitrarily, and partial-agreement bounds need additive structure (progressions) in each leaf set (Behrend-type sets may avoid it).

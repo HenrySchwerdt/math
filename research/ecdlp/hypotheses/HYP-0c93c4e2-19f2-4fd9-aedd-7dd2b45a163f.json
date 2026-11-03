@@ -1,0 +1,25 @@
+{
+  "id": "HYP-0c93c4e2-19f2-4fd9-aedd-7dd2b45a163f",
+  "type": "HYP",
+  "title": "Algebraic decision-tree (branching) barrier for x-only DL computation",
+  "created_at": "2026-11-03T11:12:01.671216Z",
+  "status": "open",
+  "question": "Algebraic decision-tree barrier (conjecture): any algebraic decision tree over F_p with equality branching (tests f(u) = 0 on intermediate values), single input u = x(Q), depth D and leaf programs of length L (with division defined on their leaf sets), that outputs k at u = x(kP) for 1 <= k <= N, 2N < r, satisfies L + c\u00b7D >= log2 N \u2212 O(1) for an absolute constant c; obstacle: leaves partition the nodes arbitrarily, and partial-agreement bounds need additive structure (progressions) in each leaf set (Behrend-type sets may avoid it).",
+  "rationale": "Next model after division-free and division SLP barriers (formally verified).",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-6aef8c30-2942-4079-8d0a-fc2ae8b6c200",
+    "HYP-92a9b4d9-827b-45fc-b881-1e7cf3b3443b",
+    "HYP-a1dd5501-c137-492a-abc6-e9cda3765002",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [
+    "Algebraic decision-tree barrier (conjecture): any algebraic decision tree over F_p with equality branching (tests f(u) = 0 on intermediate values), single input u = x(Q), depth D and leaf programs of length L (with division defined on their leaf sets), that outputs k at u = x(kP) for 1 <= k <= N, 2N < r, satisfies L + c\u00b7D >= log2 N \u2212 O(1) for an absolute constant c; obstacle: leaves partition the nodes arbitrarily, and partial-agreement bounds need additive structure (progressions) in each leaf set (Behrend-type sets may avoid it)."
+  ],
+  "proof_status": "unproved",
+  "outcome": "unresolved",
+  "next_action": "ECDLP-39 analysis.",
+  "notes": "PI-derived."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "RUN-3386b45f-b989-447d-b212-6e1f3fab5527",
+  "type": "RUN",
+  "title": "Decision-tree barrier analysis",
+  "created_at": "2026-11-03T11:12:01.510142Z",
+  "status": "active",
+  "question": "Decision-tree barrier analysis",
+  "rationale": "Bounded subagent run for TSK-8e2e3b22-2d89-45b1-babc-4bdedc1cc138",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-8e2e3b22-2d89-45b1-babc-4bdedc1cc138",
+    "HYP-0c93c4e2-19f2-4fd9-aedd-7dd2b45a163f"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter complexity-theory (claude-sonnet-5-5 configured); runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T11:12:01.721159Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "complexity-theory",
+    "task": "TSK-8e2e3b22-2d89-45b1-babc-4bdedc1cc138",
+    "input_hypotheses": [
+      "HYP-0c93c4e2-19f2-4fd9-aedd-7dd2b45a163f"
+    ],
+    "starting_commit": "9395faa4d99c65e1c46ed07f33cd578ede5b8c3d",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}
