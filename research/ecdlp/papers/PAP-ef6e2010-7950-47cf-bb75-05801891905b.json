@@ -1,0 +1,28 @@
+{
+  "id": "PAP-ef6e2010-7950-47cf-bb75-05801891905b",
+  "type": "PAP",
+  "title": "Machine-checked x-coordinate interpolation lower bounds for the elliptic curve discrete logarithm (internal technical report)",
+  "created_at": "2026-11-03T10:53:26.713485Z",
+  "status": "active",
+  "question": "Write up Theorems B, C and the partial-agreement bound with their Lean formalizations, honestly scoped (novelty unsettled vs Lange\u2013Winterhof).",
+  "rationale": "User request: scientific LaTeX/PDF write-ups for possibly new results, reviewed by agents.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+    "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
+    "HYP-a1dd5501-c137-492a-abc6-e9cda3765002",
+    "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd",
+    "PRF-34538f75-12fb-451c-aaa1-314450e49e87",
+    "PRF-35d1387a-9bd3-40b7-8985-4d589f1dd287",
+    "PRF-5357b698-39ee-4eee-b27c-b4f1345c06f6",
+    "TSK-f4cd6596-e37f-4552-a4d7-51acc1efe0c2",
+    "RUN-665c4a65-aaa9-49ce-bb97-93a0cbd20487"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "unresolved",
+  "next_action": "Draft (ECDLP-31), then blind adversarial + independent manuscript review.",
+  "notes": "Internal technical report; no external submission without human approval."
+}

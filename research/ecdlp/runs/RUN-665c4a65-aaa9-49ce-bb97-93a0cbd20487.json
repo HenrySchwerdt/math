@@ -1,0 +1,45 @@
+{
+  "id": "RUN-665c4a65-aaa9-49ce-bb97-93a0cbd20487",
+  "type": "RUN",
+  "title": "Write-up: LaTeX technical report on machine-checked interpolation bounds",
+  "created_at": "2026-11-03T10:53:26.810957Z",
+  "status": "active",
+  "question": "Write up Theorems B, C and the partial-agreement bound with their Lean formalizations, honestly scoped (novelty unsettled vs Lange\u2013Winterhof).",
+  "rationale": "Bounded subagent run for TSK-f4cd6596-e37f-4552-a4d7-51acc1efe0c2",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-f4cd6596-e37f-4552-a4d7-51acc1efe0c2",
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter research-worker (claude-sonnet-5-5 configured); runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T10:53:44.994791Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "research-worker",
+    "task": "TSK-f4cd6596-e37f-4552-a4d7-51acc1efe0c2",
+    "input_hypotheses": [
+      "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+      "HYP-42f91290-d245-4bcf-a1e2-34daf4beeaab",
+      "HYP-a1dd5501-c137-492a-abc6-e9cda3765002",
+      "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd"
+    ],
+    "starting_commit": "c273666c1939b50c8df4ef9770811b3f3b5bbd84",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; owns research/ecdlp/papers/PAP-ef6e2010-7950-47cf-bb75-05801891905b/",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable",
+    "machine": "Claude Code remote Linux container; TeX Live (apt)",
+    "reviews": []
+  }
+}
