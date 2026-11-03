@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 15 / frontier F: relation-supply calculus across ambient groups",
   "created_at": "2026-11-03T12:36:43.847855Z",
-  "status": "active",
+  "status": "completed",
   "question": "Using the supply criterion (relations available vs unknowns), can embedding E(F_p) into a larger group G (E(F_{p^n}) by base change, Weil restriction, Jacobians J(C) of covers C->E, products E x E' glued along torsion) raise relation supply faster than the number of unknown logs, so that index calculus in G pushes down to a sub-sqrt algorithm on E(F_p)? Derive the supply/unknowns ratio for each ambient group and find the exact obstruction or a candidate.",
   "rationale": "New framing derived from inventor E's supply bound; tests whether any ambient-group transfer can escape it.",
   "assumptions": [],
@@ -12,12 +12,13 @@
     "HYP-3c665e7b-e7e5-41d2-9c9d-b687c750700c"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-c5917208-d93d-4ad0-853a-838a9870c63d.evidence"
+    "research/ecdlp/events/EVT-c5917208-d93d-4ad0-853a-838a9870c63d.evidence",
+    "research/ecdlp/events/EVT-86ec0f39-d0b2-4304-99fe-4c3308d87c49.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "refuted",
+  "next_action": "Closed",
   "notes": "Created via research.py start.",
   "success_criteria": [
     "Exact statements; reproducible evidence; honest negatives."
