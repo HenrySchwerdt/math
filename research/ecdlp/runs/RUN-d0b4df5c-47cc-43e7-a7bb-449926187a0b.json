@@ -14,11 +14,14 @@
     "HYP-eff2cfbb-053a-47e9-91de-a7210488b049"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Formal (Lean 4 + Mathlib, axioms propext/Classical.choice/Quot.sound only): addition/subtraction straight-line program values are n*P with |n| <= 2^length (slpEval_mem_bound); if 2^(L+1)+1 < addOrderOf P some element of zmultiples P is unreachable by programs of length <= L (exists_unreachable_of_addOrderOf), in MathResearch/ECDLP/Barriers.lean.",
+    "Formal: #{t : t^2<=4q, M-bad} <= M(M+1) for q>=2, M>=1 (card_MBad_le), with sub-lemmas trace_unique_of_dvd and card_primes_lt; abstract arithmetic only, no curve connection or complexity claim."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "next_action": "PI: add `import MathResearch.ECDLP.Barriers` to MathResearch.lean, run full lake build, commit, independent review of definitions MBad/slpEval vs HYP statements.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Self-reported model identity: claude-sonnet-5-5 (Sonnet 5.5), runtime-stated; unverified externally. Barriers.lean uncommitted at time of run; HEAD 7c5d67114c1ebfe43ef8ee2bbce59c103ee67330.",
   "run": {
     "started_at": "2026-11-03T09:36:50.564261Z",
     "completed_at": null,

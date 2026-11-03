@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/root/.elan/bin/lake",
+    "env",
+    "lean",
+    "research/ecdlp/proofs/checks/Axioms.lean"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:40:07.890804Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:40:11.214427Z",
+  "truncated": false,
+  "output": "'MathResearch.ECDLP.isSolution_iff_modEq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.existsUnique_canonical_solution' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.modEq_of_map_solution' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.map_eq_zero_or_addOrderOf_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.prime_dvd_natCard_of_map_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.map_eq_zero_of_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.modEq_prime_of_map_solution' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.isSolution_map_of_base_eq_zero' depends on axioms: [propext]\n'MathResearch.ECDLP.one_sub_smul_map_fixed' depends on axioms: [propext, Quot.sound]\n'MathResearch.ECDLP.map_fixed_eq_zero_of_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.prime_dvd_card_sub_one_of_map_ne_one' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.slpEval_mem_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.exists_unreachable_of_addOrderOf' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.trace_unique_of_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.card_primes_lt' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.MBad_finite' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.card_MBad_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.IsSolution.neg' depends on axioms: [propext]\n'MathResearch.ECDLP.addOrderOf_map_base_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+}
