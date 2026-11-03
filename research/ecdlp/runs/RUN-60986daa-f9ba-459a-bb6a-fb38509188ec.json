@@ -55,12 +55,12 @@
     "No information about the discrete log follows; Weil bound limits every Fourier correlation to about D/sqrt(p). A leak would require a non-negligible computable distinguisher of k-classes from Q=[k]P (stated in report)."
   ],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "verified",
   "next_action": "Reviewer: (1) check claim (C) conductor count against Perel'muter/Perret theorem texts; (2) test p up to ~1e5 with FFT for g=x vs y vs x^2+x+1 (E u^4 = 2, 2, 3) and resolve why g=y is SU(2)-like; (3) try a decisive test of the 1+kappa/3 half-range law with other D (e.g. cubic g, order-4 chi); (4) set HYP-242da418 to reflect that the claimed 'non-Exp(1) bounded law' is supported but that C(d) must be the conductor degree D, not 2deg g, and that the mechanism needs a source or proof.",
   "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Self-reported model identity of this agent: Sonnet 5.5 (claude-sonnet-5-5); not verifiable from runtime metadata. Unverified recollection kept out of sources: Katz Sato-Tate/monodromy theorems (no theorem on the law over characters of E(F_p) found), Lange-Shparlinski statements, Bombieri 1966 (cited via Kohel-Shparlinski, not read), Perel'muter 1963 Uspehi Mat. Nauk 18, 145-149 (cited via Merai), Perret 1991 Acta Arith. 59. DOI of Merai differs between PDF (2011.5057) and publisher listing (2012.5057). Experiments in research/ecdlp/experiments/round3-nt/ (weil_check.py was run by direct invocation, other scripts via research.py exec). Web lookups used: 8.",
   "run": {
     "started_at": "2026-11-03T09:27:21.297919Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T09:36:14.153932Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "number-theory",
@@ -74,7 +74,9 @@
     "commands": [
       "research/ecdlp/runs/RUN-60986daa-f9ba-459a-bb6a-fb38509188ec-command-13397cb2-28bd-45a6-85d0-8bf547d06bbc.evidence"
     ],
-    "files_changed": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round3-nt/"
+    ],
     "resulting_commit": null,
     "tests": [],
     "benchmark": "See report",

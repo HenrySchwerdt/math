@@ -15,7 +15,9 @@
     "HYP-242da418-4c1a-45b1-8132-8a2f00574272",
     "RUN-df8d0e71-aefa-4f53-8230-78b564b5c043",
     "TSK-bd3c9a6f-baa4-4e7c-815e-7a6198a978f7",
-    "HYP-e1959734-9325-4a54-9d99-d4535c58a11c"
+    "HYP-e1959734-9325-4a54-9d99-d4535c58a11c",
+    "RUN-60986daa-f9ba-459a-bb6a-fb38509188ec",
+    "TSK-e4099001-23bb-4242-b896-341c8af8919e"
   ],
   "evidence": [
     "research/ecdlp/experiments/round3/results_20261105.json",
@@ -27,6 +29,6 @@
   ],
   "proof_status": "experimental",
   "outcome": "unresolved",
-  "next_action": "Literature: is this a known instance of Katz/Deligne equidistribution (e.g. traces of Frobenius on a rank-2 piece, possibly the Prym of the double cover w^2 = g on E)? PI heuristic: for g = x the cover w^2 = x(Q) of E is ramified at the two points with x = 0, so has genus 2 and its Jacobian is isogenous to E x E'; the psi-twisted sums would then be Frobenius traces on a rank-2 object, giving an SU(2) law. Verify or refute this heuristic before any claim. Not relevant to recovering k unless a non-equidistributed statistic is found.",
-  "notes": "Experimental finding on toy sizes; no proof; novelty unchecked (likely a known consequence of Deligne/Katz theory). Not a discrete-log leak: leak sanity test negative."
+  "next_action": "(1) Prove or locate: for g = x, the twisted sums are Frobenius traces on a rank-2 object (PI heuristic: double cover w^2 = x of E ramified at the two points with x = 0, genus 2, Jacobian ~ E x E'; twisting by psi). (2) Explain the g = y anomaly (cover w^2 = y is ramified at the three 2-torsion points and O, genus 3?). Neither bears on recovering k.",
+  "notes": "Experimental finding on toy sizes; no proof; novelty unchecked (likely a known consequence of Deligne/Katz theory). Not a discrete-log leak: leak sanity test negative. | ECDLP-8 (number-theory): Weil-type bound |S| <= D sqrt(p) (+O(1)) with D = degree of the odd-valuation (ramified) support of div(g), derived by the agent from the Weil/Bombieri L-function (D=2 for x, x+1, 2x; D=4 for y, x^2+x+1); explicit constants from Perel'muter 1969 / Merai 2012 not checked in primary text. Parseval: mean of normalized periodogram exactly 1; 4th moment = (1/N^2) sum_R A(R)^2 with A the cyclic autocorrelation of chi(g(.)). Pooled measurement for g = x: moments of |Y|^2 = 1, 1.995, 4.981 vs semicircle 1, 2, 5; predicted half-range periodogram variance 2/3 matches the ECDLP-7 anomaly 0.66. No theorem on the law over psi was found (Katz-type monodromy statement remains conjectural). OPEN PUZZLE: g = y has D = 4 but behaves SU(2)-like; unexplained."
 }
