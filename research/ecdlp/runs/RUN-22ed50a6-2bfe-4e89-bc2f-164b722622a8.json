@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 13 / inventor D: algebraic relation finder vs birthday search",
   "created_at": "2026-11-03T12:03:21.987597Z",
-  "status": "active",
+  "status": "completed",
   "question": "Can a Groebner/resultant (or other algebraic) relation finder over a structured factor base produce index-calculus relations on prime-field curves at lower cost per relation than birthday search, giving total cost below sqrt(r)? Measure cost per relation and total vs rho.",
   "rationale": "Bounded run for TSK-6788709a-c9b4-4253-9413-ee61ab0dfd94",
   "assumptions": [],
@@ -12,15 +12,23 @@
     "TSK-6788709a-c9b4-4253-9413-ee61ab0dfd94",
     "HYP-23351e75-1cf5-4f17-8a78-2ff0f89b51ff"
   ],
-  "evidence": [],
+  "evidence": [
+    "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-1ce5111c-5109-4226-8d1f-61f25b6637f8.evidence",
+    "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-03a1d1a9-84e4-4c82-a965-1b821fdf546c.evidence",
+    "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-424d1479-80d9-4e80-9353-16aa2d8cb197.evidence",
+    "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-8a230174-692e-41e6-aec2-d983049085c2.evidence",
+    "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-0ee1fa18-c994-41de-9ebf-969a589cdeec.evidence",
+    "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-85239ef6-3a2e-4067-953f-f881392eab3b.evidence",
+    "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-3ca5ad8a-8874-4e5e-99c8-8da64c1aeb59.evidence"
+  ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "refuted",
   "next_action": "Fill draft metadata and report before execution",
   "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
   "run": {
     "started_at": "2026-11-03T12:03:21.987965Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T12:12:52.744217Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured)",
     "role": "algorithm-inventor",
@@ -31,9 +39,19 @@
     "starting_commit": "19f017b94649f0ff332cbd3a75dcefa043e6a472",
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
-    "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "commands": [
+      "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-1ce5111c-5109-4226-8d1f-61f25b6637f8.evidence",
+      "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-03a1d1a9-84e4-4c82-a965-1b821fdf546c.evidence",
+      "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-424d1479-80d9-4e80-9353-16aa2d8cb197.evidence",
+      "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-8a230174-692e-41e6-aec2-d983049085c2.evidence",
+      "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-0ee1fa18-c994-41de-9ebf-969a589cdeec.evidence",
+      "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-85239ef6-3a2e-4067-953f-f881392eab3b.evidence",
+      "research/ecdlp/runs/RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8-command-3ca5ad8a-8874-4e5e-99c8-8da64c1aeb59.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/experiments/round13-inventor-d/"
+    ],
+    "resulting_commit": "63a3ecb3a82454b6a17646eb796c7ce3ea93dc07",
     "tests": [],
     "benchmark": "See report",
     "machine": "See report",

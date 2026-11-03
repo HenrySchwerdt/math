@@ -1,0 +1,26 @@
+{
+  "id": "EVT-f1268e2e-3164-42fa-ad24-30f72c8f5830",
+  "kind": "task-status-change",
+  "task": "TSK-b814669a-5f7b-4010-b2ba-bdad90f35923",
+  "task_key": "ECDLP-48",
+  "timestamp": "2026-11-03T12:07:13.531625Z",
+  "run": "RUN-98e2c896-a011-4429-af16-57d090ea908b",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "complexity-theory"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Closed"
+  },
+  "reason": "E0/E3 accepted in narrower corrected form; DT unaffected (equality-only model)",
+  "before_sha256": "84c312f84690cd29774dd37fb9e2006fae32b9d4d049e3f8adb86ec6027cdeee",
+  "after_sha256": "d0710eff162c60bd4b6626422eb2283634dd07731efcec1c9344de03944a9167"
+}

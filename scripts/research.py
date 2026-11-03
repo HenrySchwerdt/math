@@ -291,6 +291,8 @@ def main():
     finish_parser.add_argument('--commit')
     fix_parser = sub.add_parser('fix-sources', help='Normalize string sources in a record to schema objects')
     fix_parser.add_argument('paths', nargs='+')
+    rm = sub.add_parser('render-md', help='Fill untouched template .md reports from their JSON records')
+    rm.add_argument('project')
     pc = sub.add_parser('package-check', help='Validate the committed HEAD in a clean worktree (ignores uncommitted agent files)')
     pc.add_argument('--base', default='origin/main')
     pc.add_argument('--lean', action='store_true', help='also run lake build')
@@ -346,6 +348,10 @@ def main():
         from package_ops import sync
         print(sync(a.base_branch))
         validate()
+    elif a.command == 'render-md':
+        from lab_ops import render_untouched
+        for p in render_untouched(a.project):
+            print(p)
     elif a.command == 'fix-sources':
         from lab_ops import fix_sources
         for p in a.paths:

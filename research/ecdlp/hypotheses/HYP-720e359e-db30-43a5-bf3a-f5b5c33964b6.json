@@ -1,0 +1,26 @@
+{
+  "id": "HYP-720e359e-db30-43a5-bf3a-f5b5c33964b6",
+  "type": "HYP",
+  "title": "Inventor D: algebraic (S_3/Groebner) relation finding on prime-field curves costs ~p, worse than rho",
+  "created_at": "2026-11-03T12:12:52.054405Z",
+  "status": "completed",
+  "question": "Inventor D (ECDLP-47, algebraic relation finder): negative. Index calculus with S_3 decomposition over a PKM multiplicative-coset factor base (x in g mu_d, d=2^n | p-1; small-x control) recovers k in 65/65 runs (1581 sampled relations verified; sympy Groebner matches exhaustive search for p up to 17921), but total cost exponent ~1 (0.99 [0.92,1.06]) vs rho ~0.5: D2a/rho = 11 (16 bits), 94 (20), 633 (24), 2533 (28, post hoc). Per-target finder cost ~|V|, relation ~2p/d additions, total ~p independent of d (D2b d~p^{1/3} exponent 1.075); linear algebra <0.1%. Obstacle: hash/enumeration finders cost >= p^{1/2-1/(2m)} per relation while the PKM accounting needs T < p^{1/2-1/m}; Groebner/resultant collapses to a degree-|V| univariate problem (time ~d^2.1-d^3); no subfield over F_p for Weil restriction.",
+  "rationale": "Only constructive thread left open by inventor A (60% algorithm allocation).",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8",
+    "HYP-23351e75-1cf5-4f17-8a78-2ff0f89b51ff"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round13-inventor-d/analysis.txt",
+    "research/ecdlp/experiments/round13-inventor-d/PROTOCOL.md"
+  ],
+  "claims": [
+    "Inventor D (ECDLP-47, algebraic relation finder): negative. Index calculus with S_3 decomposition over a PKM multiplicative-coset factor base (x in g mu_d, d=2^n | p-1; small-x control) recovers k in 65/65 runs (1581 sampled relations verified; sympy Groebner matches exhaustive search for p up to 17921), but total cost exponent ~1 (0.99 [0.92,1.06]) vs rho ~0.5: D2a/rho = 11 (16 bits), 94 (20), 633 (24), 2533 (28, post hoc). Per-target finder cost ~|V|, relation ~2p/d additions, total ~p independent of d (D2b d~p^{1/3} exponent 1.075); linear algebra <0.1%. Obstacle: hash/enumeration finders cost >= p^{1/2-1/(2m)} per relation while the PKM accounting needs T < p^{1/2-1/m}; Groebner/resultant collapses to a degree-|V| univariate problem (time ~d^2.1-d^3); no subfield over F_p for Weil restriction."
+  ],
+  "proof_status": "experimental",
+  "outcome": "refuted",
+  "next_action": "Closed for generic prime-order prime-field curves. Remaining lever (low prior): finder below sqrt of search space (rational parametrisation of S_3, or CM/isogeny-orbit base where S_3 factors).",
+  "notes": "PI re-ran analyze.py via exec: identical; PROTOCOL.md hash verifies. Resultant+NTT finder analysed, not coded; Groebner only sympy up to d=128; m=3,4 not re-run (relies on ECDLP-12/13/16). Sources: Petit-Kosters-Messeng PKC 2016 read in full; others abstract/search level. 26/28-bit runs post hoc. No independent review."
+}

@@ -21,6 +21,6 @@
   ],
   "proof_status": "experimental",
   "outcome": "refuted",
-  "next_action": "Independent review of E0 and E3 remarks; add to barrier-map write-up. Closed for E1/E2/E4/E5/E6.",
+  "next_action": "E0/E3 reviewed in REV-6c73a098-6bec-4241-9b91-b7ee5bfa4fcf (revise: narrower statements); experiments closed.",
   "notes": "PI reproduced e6_carry.py seed 2 bit-identically via exec. E1 null draws reduced (60/20) after timeout, recorded in amendment. Toy size only; absence of signal is not absence of structure."
 }

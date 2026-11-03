@@ -1,0 +1,26 @@
+{
+  "id": "EVT-eee746f3-36af-4a28-be01-dd1f6a42d6d0",
+  "kind": "task-status-change",
+  "task": "TSK-6788709a-c9b4-4253-9413-ee61ab0dfd94",
+  "task_key": "ECDLP-47",
+  "timestamp": "2026-11-03T12:12:52.741683Z",
+  "run": "RUN-22ed50a6-2bfe-4e89-bc2f-164b722622a8",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "S_3/Groebner relation finding: total cost ~p, 633x rho at 24 bits",
+  "before_sha256": "9d30a7943de5bbc55605749c41cd799469a7548ef9f4ab4e74098c3ed6ab070c",
+  "after_sha256": "261290403219e3fcd9b637d2a4fc0c6328a7cf7f800eaf5aeab723049893eb0a"
+}

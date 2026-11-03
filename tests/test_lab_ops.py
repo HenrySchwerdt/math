@@ -63,6 +63,15 @@ class LabOpsTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'active run'):
             lab_ops.finish('example', run, 'verified', 'Again')
 
+    def test_render_md_fills_templates_but_skips_active(self):
+        h = r.new('example', 'HYP')
+        d = json.loads(h.read_text()); d.update(title='Rendered title', status='completed'); r.write_json(h, d)
+        _, tsk, run = lab_ops.start('example', 'T', 'Q', 'r', 'm')
+        done = lab_ops.render_untouched('example')
+        self.assertIn(h.with_suffix('.md'), done)
+        self.assertIn('Rendered title', h.with_suffix('.md').read_text())
+        self.assertIn(lab_ops.TEMPLATE_MARKER, (self.root / f'research/example/runs/{run}.md').read_text())
+
     def test_fix_sources_normalizes_strings(self):
         p = r.new('example', 'RUN')
         d = json.loads(p.read_text())

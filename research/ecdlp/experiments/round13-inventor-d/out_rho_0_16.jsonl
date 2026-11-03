@@ -1,0 +1,4 @@
+{"bits": 16, "seed": 1, "gidx": 0, "p": 51713, "r": 51473, "U1": 2591, "ok": true, "rho_walk_model": 284.3476733316341}
+{"bits": 16, "seed": 2, "gidx": 0, "p": 51713, "r": 52057, "U1": 2679, "ok": true, "rho_walk_model": 285.9561931204882}
+{"bits": 16, "seed": 3, "gidx": 0, "p": 60161, "r": 60257, "U1": 1774, "ok": true, "rho_walk_model": 307.65479723820346}
+{"bits": 16, "seed": 4, "gidx": 0, "p": 64513, "r": 64019, "U1": 3118, "ok": true, "rho_walk_model": 317.11324482758914}

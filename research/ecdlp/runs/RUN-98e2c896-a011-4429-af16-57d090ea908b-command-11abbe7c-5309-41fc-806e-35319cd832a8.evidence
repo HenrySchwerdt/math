@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round13-review-e0e3/e3_e0_toy.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:05:11.456551Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:05:11.488587Z",
+  "truncated": false,
+  "output": "r=4923 N=300 bst_correct=True max_depth=9 ceil_log2N=9 leaves=300 arithmetic_nodes=0\nequality chain (Lean model, const+sub per test): max arithmetic nodes on a path = 600 ; Theorem DT needs only L >= 5.06\ncurve-membership (Legendre) test pass rate: real=1.000 random_injection_into_Fp=0.463; test output independent of k-labelling\n"
+}

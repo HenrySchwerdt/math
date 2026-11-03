@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round13-inventor-d && python3 t_smoke.py && python3 analyze.py > /dev/null && echo analysis-ok"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:11:23.878251Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:11:24.948280Z",
+  "truncated": false,
+  "output": "12 1 relations 184 bad 0\n  coset True 34 29 45\n  smallx True 34 32 38\n12 2 relations 202 bad 0\n  coset True 35 41 54\n  smallx True 35 27 50\n12 3 relations 386 bad 0\n  coset True 33 38 51\n  smallx True 33 38 50\n14 1 relations 245 bad 0\n  coset True 55 88 58\n  smallx True 55 101 82\n14 2 relations 302 bad 0\n  coset True 70 56 102\n  smallx True 70 46 67\n14 3 relations 262 bad 0\n  coset True 60 78 72\n  smallx True 60 67 94\nanalysis-ok\n"
+}

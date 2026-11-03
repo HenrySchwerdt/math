@@ -1,0 +1,1 @@
+{"bits": 28, "seed": 1, "kind": "coset", "p": 215891969, "r": 215877947, "d": 16384, "s": 8219, "targets": 2750, "hit_targets": 1300, "relations": 3517, "ok": true, "adds_finder": 45204500, "adds_target": 5521, "fb_mults": 917504, "la_mults": 16659, "pi_hat": 0.4727272727272727, "wall": 9.743598699569702}
