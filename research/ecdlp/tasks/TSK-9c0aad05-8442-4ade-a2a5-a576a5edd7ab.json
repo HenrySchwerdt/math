@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 11 / ECDLP-38: new technique toward conjecture C* (tight x-only interpolation degree)",
   "created_at": "2026-11-03T11:06:13.208946Z",
-  "status": "active",
+  "status": "completed",
   "question": "Find a proof technique beyond translation-annihilator zero counting (method barrier L2) to show that the minimal degree of g with g(x(kP)) = k on 1 <= k <= N is >= alpha*N with alpha > 1/3, e.g. via Newton divided differences on the nodes x(kP), resultants with division polynomials, or a dimension count of Riemann\u2013Roch spaces with prescribed values; or prove that no such improvement holds in general.",
   "rationale": "DEC allocation (frontier / strongest open math).",
   "assumptions": [],
@@ -13,12 +13,13 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-4b2418c7-d1c8-498a-a1ef-e5f9fc3fd905.evidence"
+    "research/ecdlp/events/EVT-4b2418c7-d1c8-498a-a1ef-e5f9fc3fd905.evidence",
+    "research/ecdlp/events/EVT-87c8b9df-6765-4687-b4d3-72d98e33cb78.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "unresolved",
+  "next_action": "Blind adversarial review of HYP-38005bec",
   "notes": "Created by PI RUN-62dbda7c.",
   "success_criteria": [
     "Exact statements; pre-registered tests; reproducible evidence; honest negatives."
