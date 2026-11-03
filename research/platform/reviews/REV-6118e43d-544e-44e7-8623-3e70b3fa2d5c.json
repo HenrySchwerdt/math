@@ -1,0 +1,38 @@
+{
+  "id": "REV-6118e43d-544e-44e7-8623-3e70b3fa2d5c",
+  "type": "REV",
+  "title": "Independent integration acceptance of research website",
+  "created_at": "2026-11-03T07:22:04.480690Z",
+  "status": "completed",
+  "question": "Does the candidate faithfully expose research state without misrepresenting proof status?",
+  "rationale": "Independent pre-publication code and integration review.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-3b0320e8-17b1-447f-80e5-d9f0f2770613"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Deploy via main-only workflow; verify live result.",
+  "notes": "Code assessment only, not a mathematical proof certificate. Runtime reviewer model ID is unavailable.",
+  "review": {
+    "run": "RUN-2a5d9f50-05d1-4854-80aa-07e3177fc08c",
+    "target_commit": "d116b7c6890d9dd7b00d941882c6cc5951d13a30",
+    "targets": [
+      "TSK-3b0320e8-17b1-447f-80e5-d9f0f2770613"
+    ],
+    "decision": "accept",
+    "rationale": "Previously reported issues corrected and regression tests pass; no remaining concrete blockers within bounded review.",
+    "counterexamples": [
+      "Untrusted HTML/Vue content regression",
+      "Code-example character preservation",
+      "Unresolved outcome projection",
+      "Primary-source citation and source-commit constraints"
+    ],
+    "complexity": "Static file generation and browser filtering only; no algorithmic research or asymptotic improvement claim.",
+    "limitations": "Production build/browser/deployment not independently rerun; separately checked by integrator.",
+    "initial_packet": "Exact candidate commit, source files, prior concrete defects and regression tests; no mathematical persuasion or author confidence."
+  }
+}

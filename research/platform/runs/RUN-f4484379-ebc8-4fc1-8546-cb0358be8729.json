@@ -22,7 +22,7 @@
   "proof_status": "not-applicable",
   "outcome": null,
   "next_action": "Implement generator, validate and publish on authorized GitHub Pages deployment branch.",
-  "notes": "Initial request, framework lookup, Pages API inspection and package installation start preceded RUN instrumentation. VitePress chosen after inspecting Mini, per user preference. Runtime model ID is not exposed.",
+  "notes": "Initial request, framework lookup, Pages API inspection and package installation start preceded RUN instrumentation. VitePress chosen after inspecting Mini, per user preference. Runtime model ID is not exposed. Remote task claim ca5f6ead5e18718d9e5fc3b6313d8c24cb0425e0 acquired before exclusive website implementation. Independent exact-commit Python and integration reviews accepted d116b7c; records linked.",
   "run": {
     "started_at": "2026-11-03T07:16:40.586846Z",
     "completed_at": null,
@@ -46,6 +46,9 @@
     "tests": [],
     "benchmark": "Not applicable: static website; no mathematical performance claims.",
     "machine": "darwin-arm64; Python virtual environment; Node v26.5.0, npm 11.17.0",
-    "reviews": []
+    "reviews": [
+      "REV-4ee62a49-cab2-48b1-b0bc-ba3da62758b0",
+      "REV-6118e43d-544e-44e7-8623-3e70b3fa2d5c"
+    ]
   }
 }

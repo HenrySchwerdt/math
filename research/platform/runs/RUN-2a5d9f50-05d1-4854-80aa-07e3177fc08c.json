@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "website-integration-reviewer final candidate check",
   "created_at": "2026-11-03T07:21:18.663452Z",
-  "status": "active",
+  "status": "completed",
   "question": "Do the VitePress site generator, evidence projection and Pages workflow meet the requested public research-tracker behavior?",
   "rationale": "Independent bounded review before authorized public GitHub Pages publication.",
   "assumptions": [],
@@ -14,12 +14,12 @@
   "evidence": [],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Review the exact candidate commit read-only; report actual findings and checks.",
+  "outcome": "verified",
+  "next_action": "Publish the reviewed site via main-only GitHub Pages workflow.",
   "notes": "This run timestamps the final follow-up review. Earlier review findings and checks are retrospective and summarized in the website implementation report. Runtime model ID is not exposed.",
   "run": {
     "started_at": "2026-11-03T07:21:18.663803Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T07:22:04.480555Z",
     "provider": "openai",
     "model": "unknown-runtime-id-not-exposed",
     "role": "website-integration-reviewer",
@@ -30,8 +30,11 @@
     "worktree": "shared checkout, read-only review only",
     "commands": [],
     "files_changed": [],
-    "resulting_commit": null,
-    "tests": [],
+    "resulting_commit": "d116b7c6890d9dd7b00d941882c6cc5951d13a30",
+    "tests": [
+      "Reviewer independently ran 16 unittest tests successfully on exact d116b7c.",
+      "Integration reviewer additionally validated 13 ledger records."
+    ],
     "benchmark": "Not applicable: code review, no mathematical benchmarks.",
     "machine": "Shared darwin-arm64 checkout; no performance claims",
     "reviews": []
