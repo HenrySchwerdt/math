@@ -1,0 +1,6 @@
+seed 1 p 526499 a,b 66172 267459 r 527819
+S1 x smooth                dens/mean=0.080 T=28.27 at h=151687  null mean=22.32 max=32.12  rank_p=0.0398  ln(r/2)=12.48
+S2 x prime                 dens/mean=0.083 T=22.11 at h=185931  null mean=22.36 max=32.04  rank_p=0.4776  ln(r/2)=12.48
+S3 x squarefree            dens/mean=0.608 T=23.93 at h=222759  null mean=22.38 max=29.99  rank_p=0.2488  ln(r/2)=12.48
+S4 y smooth                dens/mean=0.080 T=13.63 at h=9495  null mean=22.38 max=31.42  rank_p=1.0000  ln(r/2)=12.48
+S5 Liouville(x)            dens/mean=-0.000 T=25.04 at h=230366  null mean=22.54 max=32.47  rank_p=0.1343  ln(r/2)=12.48

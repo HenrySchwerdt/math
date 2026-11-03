@@ -1,0 +1,20 @@
+elapsed 1.5
+
+real	0m1.764s
+user	0m1.420s
+sys	0m0.024s
+elapsed 1.5
+
+real	0m1.646s
+user	0m1.527s
+sys	0m0.020s
+elapsed 4.7
+
+real	0m4.845s
+user	0m4.566s
+sys	0m0.049s
+elapsed 5.0
+
+real	0m5.154s
+user	0m4.828s
+sys	0m0.043s
