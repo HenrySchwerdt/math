@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 14 / inventor E: sub-square-root relation finder (S_3 parametrisation, CM/isogeny-orbit factor base)",
   "created_at": "2026-11-03T12:13:32.859868Z",
-  "status": "active",
+  "status": "completed",
   "question": "Is there a relation finder whose cost per relation is below the square root of its search space on prime-field curves, via a rational/low-genus parametrisation of the S_3 decomposition variety or a CM/isogeny-orbit factor base on which S_3 factors? Benchmark any candidate against rho.",
   "rationale": "Bounded run for TSK-342265eb-acfe-4ba1-a31b-dabe538ef874",
   "assumptions": [],
@@ -24,12 +24,12 @@
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "refuted",
   "next_action": "Fill draft metadata and report before execution",
   "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
   "run": {
     "started_at": "2026-11-03T12:13:32.862229Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T12:33:11.949145Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured)",
     "role": "algorithm-inventor",
@@ -50,8 +50,10 @@
       "research/ecdlp/runs/RUN-b5e8c157-12fa-461b-8be2-20c1eb062a30-command-c444ba24-9767-4aa6-a425-f2f0ab6d2e8d.evidence",
       "research/ecdlp/runs/RUN-b5e8c157-12fa-461b-8be2-20c1eb062a30-command-be05d359-921f-4f60-b295-7a440a60170d.evidence"
     ],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round14-inventor-e/"
+    ],
+    "resulting_commit": "fbb2305bfd905096f8fd6d117e318e3bbc5d22fc",
     "tests": [],
     "benchmark": "See report",
     "machine": "See report",
