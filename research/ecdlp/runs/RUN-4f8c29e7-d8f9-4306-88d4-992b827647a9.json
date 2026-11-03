@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Blind adversarial review of PAP-ef6e2010 mathematics",
   "created_at": "2026-11-03T10:58:02.471178Z",
-  "status": "active",
+  "status": "completed",
   "question": "Blind adversarial review of PAP-ef6e2010 mathematics",
   "rationale": "docs/PAPERS.md review step.",
   "assumptions": [],
@@ -36,7 +36,7 @@
       "research/ecdlp/reviews/REV-15104e72-0b78-4895-8bd8-a4abcac85a25.json",
       "research/ecdlp/reviews/REV-15104e72-0b78-4895-8bd8-a4abcac85a25.md"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "6220dd20ee2c38c2b681984decc5ee411523be01",
     "tests": [],
     "benchmark": "Not applicable",
     "machine": "Claude Code remote Linux container",
