@@ -1,0 +1,26 @@
+{
+  "id": "EVT-570708d3-e472-4b6f-ac0d-7a77907f9caf",
+  "kind": "task-status-change",
+  "task": "TSK-bf135795-9b3f-4fb4-9128-65482cabdd65",
+  "task_key": "ECDLP-55",
+  "timestamp": "2026-11-03T13:15:06.515408Z",
+  "run": "RUN-a4b19f9f-a083-4fc6-8134-a325a2660537",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "Excess closure only from line unions (rank ~s/6) or log-space progressions (need logs)",
+  "before_sha256": "4b84f55074e4be01d29c3884699d9cc9d7141575678d4787a9d69646f57db39a",
+  "after_sha256": "cfaf62cc6c22771e67b4563f7ce77c5cbf6f6f6ea7a390397a6460d1e6e3aeb0"
+}

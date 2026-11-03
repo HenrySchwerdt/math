@@ -3,19 +3,20 @@
   "type": "TSK",
   "title": "Round 16 / inventor G: factor bases with excess group closure",
   "created_at": "2026-11-03T12:59:51.211239Z",
-  "status": "active",
+  "status": "completed",
   "question": "Is there an efficiently describable subset B of E(F_p) (beyond x-coordinate conditions) whose closure under S_3/S_4 relations exceeds the random prediction s^{m+1}/p by a growing factor, e.g. sets defined by bit patterns, sorted-order windows, images of low-height lattice points, or subsets found by search? Measure closure excess vs size; only an excess that grows with p can break the supply bound.",
   "rationale": "User directive 2026-11-03: give everything; open questions from checkpoint DEC plus automated discovery.",
   "assumptions": [],
   "sources": [],
   "refs": [],
   "evidence": [
-    "research/ecdlp/events/EVT-79cf784f-3521-4f6e-8980-eaef65618111.evidence"
+    "research/ecdlp/events/EVT-79cf784f-3521-4f6e-8980-eaef65618111.evidence",
+    "research/ecdlp/events/EVT-570708d3-e472-4b6f-ac0d-7a77907f9caf.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "refuted",
+  "next_action": "Closed",
   "notes": "Created via research.py start.",
   "success_criteria": [
     "Exact statements; reproducible evidence; honest negatives."

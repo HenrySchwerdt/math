@@ -21,7 +21,9 @@
     "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8e5bca93-1f82-425f-a56b-a93efc451c24.evidence",
     "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-23761ee7-e5fc-45ac-94a1-cb8b327dda09.evidence",
     "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8ad7a806-f625-491c-afa0-030c044af27e.evidence",
-    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-4d46f25a-d86f-4886-9c64-b5cf4fdfcd4e.evidence"
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-4d46f25a-d86f-4886-9c64-b5cf4fdfcd4e.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-999b83f7-bd41-4a1e-9b80-9375ab7a7206.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-28db619c-4893-4082-a320-8595f2be7f4c.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
@@ -49,7 +51,9 @@
       "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8e5bca93-1f82-425f-a56b-a93efc451c24.evidence",
       "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-23761ee7-e5fc-45ac-94a1-cb8b327dda09.evidence",
       "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8ad7a806-f625-491c-afa0-030c044af27e.evidence",
-      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-4d46f25a-d86f-4886-9c64-b5cf4fdfcd4e.evidence"
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-4d46f25a-d86f-4886-9c64-b5cf4fdfcd4e.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-999b83f7-bd41-4a1e-9b80-9375ab7a7206.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-28db619c-4893-4082-a320-8595f2be7f4c.evidence"
     ],
     "files_changed": [],
     "resulting_commit": null,
