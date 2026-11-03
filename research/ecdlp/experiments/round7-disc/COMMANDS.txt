@@ -1,0 +1,1 @@
+python3 -I run_d1.py > out_d1.txt  (seed 7, run once after PROTOCOL.md sha256 recorded; elapsed 1.9 s)

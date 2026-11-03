@@ -1,0 +1,26 @@
+{
+  "id": "EVT-71465364-640f-46e7-be91-07f491c3cc57",
+  "kind": "task-status-change",
+  "task": "TSK-f824b713-5e45-42f0-87b0-d4a8614d3a3a",
+  "task_key": "ECDLP-20",
+  "timestamp": "2026-11-03T10:25:44.396607Z",
+  "run": "RUN-55019cbd-64f8-4e22-ad27-61316ef59d20",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-7 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Independent review; extend to general Weierstrass / char 3"
+  },
+  "reason": "Unconditional Theorem B proved in Lean on Mathlib short Weierstrass points; PI verified build and axioms; independent review launched",
+  "before_sha256": "a78b63f2f65e0d228e1ae8bdaa074f4c64213130a03c3731378783b1cf1c58ad",
+  "after_sha256": "cd3fb77cec7b3740e9415e2e987718fed662018f9e733c6a32fbec55ae4be5a7"
+}

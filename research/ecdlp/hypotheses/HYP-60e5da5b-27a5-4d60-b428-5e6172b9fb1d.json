@@ -1,0 +1,27 @@
+{
+  "id": "HYP-60e5da5b-27a5-4d60-b428-5e6172b9fb1d",
+  "type": "HYP",
+  "title": "No low-degree invariants of x-line scalar-multiplication orbits (D1)",
+  "created_at": "2026-11-03T10:28:15.371341Z",
+  "status": "open",
+  "question": "D1 (speculative, from ECDLP-22): the action of scalar multiplication on x-coordinates (x \u21a6 x([m]Q), a degree-m\u00b2 rational map on P\u00b9 restricted to the x-values of a cyclic subgroup) admits no low-degree invariant: the least degree of a nonconstant polynomial invariant under the induced permutation of the M x-values equals M \u2212 c + 1 (c = number of cycles), as for a random permutation of the same cycle type; in particular no hidden low-degree structure is available to shortcut orbit computations.",
+  "rationale": "Most promising of five new high-risk hypotheses from ECDLP-22; cheapest decisive test executed.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-73ace464-1565-479c-9409-6690c560c514",
+    "TSK-90871360-32b5-46df-bd35-f6d2ce60a52b",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round7-disc/out_d1.txt",
+    "research/ecdlp/experiments/round7-disc/PROTOCOL.md"
+  ],
+  "claims": [
+    "D1 (speculative, from ECDLP-22): the action of scalar multiplication on x-coordinates (x \u21a6 x([m]Q), a degree-m\u00b2 rational map on P\u00b9 restricted to the x-values of a cyclic subgroup) admits no low-degree invariant: the least degree of a nonconstant polynomial invariant under the induced permutation of the M x-values equals M \u2212 c + 1 (c = number of cycles), as for a random permutation of the same cycle type; in particular no hidden low-degree structure is available to shortcut orbit computations."
+  ],
+  "proof_status": "experimental",
+  "outcome": "unresolved",
+  "next_action": "Low priority: close to a theorem (any permutation-invariant polynomial has degree >= M \u2212 c + 1 when values are distinct); test has low evidential value. Other ECDLP-22 hypotheses (D2 diamond operators on X_1(r), D3 endomorphism-class speedups via Z[pi], D4 lifting/xedni (known obstruction), D5 multi-instance amortization) recorded in RUN-73ace464 as speculative backlog.",
+  "notes": "Pre-registered; 50 curve/map rows, p <= 211, seed 7; PI reproduced bit-identically. Null result: matched random permutations of the same cycle type (1/150 null draws differed by 1); proved bound >= M/m^2 held."
+}

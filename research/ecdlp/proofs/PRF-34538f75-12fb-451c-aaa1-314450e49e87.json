@@ -1,0 +1,45 @@
+{
+  "id": "PRF-34538f75-12fb-451c-aaa1-314450e49e87",
+  "type": "PRF",
+  "title": "Lean: unconditional Theorem B for short Weierstrass curves",
+  "created_at": "2026-11-03T10:25:23.644505Z",
+  "status": "completed",
+  "question": "Unconditional formal proof of HYP-eda6732a on Mathlib W.Point (a1=a2=a3=0).",
+  "rationale": "Discharges the hypotheses of PRF-a6cf1e66 from Mathlib addition formulas.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+    "TSK-f824b713-5e45-42f0-87b0-d4a8614d3a3a",
+    "RUN-55019cbd-64f8-4e22-ad27-61316ef59d20",
+    "PRF-a6cf1e66-4d14-4e4d-8ced-617e4c0abf5f",
+    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355",
+    "REV-1f44f52b-09e8-4dad-84f5-3fe181342de4"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5187015a-890d-416a-a8ad-2bcce7672ff8.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b585f279-fd16-4cca-b3a1-c2484d545078.evidence",
+    "MathResearch/ECDLP/CurveX.lean",
+    "research/ecdlp/proofs/checks/Round7Axioms.lean",
+    "lean-toolchain"
+  ],
+  "claims": [
+    "MathResearch.ECDLP.CurveX.degree_bound_short_weierstrass",
+    "MathResearch.ECDLP.CurveX.sum_prod_identity",
+    "MathResearch.ECDLP.CurveX.xCoord_add_sub",
+    "MathResearch.ECDLP.CurveX.xCoord_relations",
+    "MathResearch.ECDLP.CurveX.xCoord_smul_injOn",
+    "MathResearch.ECDLP.CurveX.smul_relations"
+  ],
+  "proof_status": "formally-verified",
+  "outcome": "verified",
+  "next_action": "Accepted. Optional: general Weierstrass form; characteristic 3.",
+  "notes": "Source commit cc8dc791a0bd74f89b6cd614898a5773abdc500a; lake build 3163 jobs, 0 warnings; standard axioms only. Statement: short Weierstrass W over a field with 2,3 != 0, P : W.Point, addOrderOf P = r odd, g(xCoord(k\u2022P)) = k^2 for 1 <= k <= (r-1)/2 => r <= 6 natDegree g + 5. Uses Mathlib xRep_add_of_X_ne / xRep_sub_of_X_ne / X_eq_iff. Degree bound only; no existence or bit-complexity statement. | Independent review REV-1f44f52b-09e8-4dad-84f5-3fe181342de4: accept (statement faithful; more general: covers nonsingular points of singular cubics; non-vacuous via Lagrange interpolant; 1242 toy points checked).",
+  "formal": {
+    "lean_file": "MathResearch/ECDLP/CurveX.lean",
+    "declaration": "MathResearch.ECDLP.CurveX.degree_bound_short_weierstrass",
+    "toolchain_file": "lean-toolchain",
+    "build_evidence": "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5187015a-890d-416a-a8ad-2bcce7672ff8.evidence",
+    "source_commit": "cc8dc791a0bd74f89b6cd614898a5773abdc500a"
+  }
+}

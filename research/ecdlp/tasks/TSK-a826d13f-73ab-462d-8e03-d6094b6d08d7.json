@@ -1,0 +1,34 @@
+{
+  "id": "TSK-a826d13f-73ab-462d-8e03-d6094b6d08d7",
+  "type": "TSK",
+  "title": "Round 7 / ECDLP-21: partial-agreement lower bounds for the EC discrete-log map",
+  "created_at": "2026-11-03T10:20:57.470508Z",
+  "status": "completed",
+  "question": "If a polynomial or low-degree rational function f on E agrees with the discrete-log map k (mod p) on a delta-fraction of {kP : 1 <= k <= N}, what lower bound on deg f follows (curve analogue of Coppersmith\u2013Shparlinski / Lange\u2013Winterhof partial-agreement results)? Give exact statements, proofs or proof attempts, literature status, and toy-curve checks.",
+  "rationale": "Round-7 selection by PI from updated BACKLOG (autonomous).",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-8563c12f-6a97-463a-8e36-02e63377881d.evidence",
+    "research/ecdlp/events/EVT-2ecc11af-73df-4631-ad75-33eeab0b73fc.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Blind review and Lean formalization",
+  "notes": "Created by PI RUN-62dbda7c (autonomous).",
+  "success_criteria": [
+    "Exact statements; verified sources or explicit unverified marks; reproducible evidence; no sorry; corrected variants separate."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-eb84ffa8-cc30-4f6e-9f0d-19c4de805b3b.md",
+    "research/ecdlp/runs/RUN-eb84ffa8-cc30-4f6e-9f0d-19c4de805b3b.json (claims/sources/notes/next_action)",
+    "research/ecdlp/experiments/round7-approx/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; computations < 5 min; no commits; ~75 min."
+}

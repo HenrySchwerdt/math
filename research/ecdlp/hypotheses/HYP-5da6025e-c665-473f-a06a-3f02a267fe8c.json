@@ -1,0 +1,28 @@
+{
+  "id": "HYP-5da6025e-c665-473f-a06a-3f02a267fe8c",
+  "type": "HYP",
+  "title": "Partial-agreement lower bounds for EC discrete-log interpolation",
+  "created_at": "2026-11-03T10:26:29.154603Z",
+  "status": "open",
+  "question": "Partial-agreement lower bounds (proof attempt). Let E/F_p, P of prime order r, N < min(p, r), A \u2286 {1..N} with |A| = m, and f a rational function on E regular at kP (k \u2208 A) with f(kP) = k mod p for k \u2208 A. (1) For every 1 <= j <= N-1: deg f >= T_j/2 where T_j = #{k : k, k+j \u2208 A} (h_j = f\u2218\u03c4_{jP} \u2212 f \u2212 j vanishes at those kP; h_j \u2262 0 since otherwise the pole set is jP-invariant, orbits of size r). (1b) Since \u03a3_j T_j = C(m,2): deg f >= m(m\u22121)/(4(N\u22121)) \u2248 \u03b4\u00b2N/4 for every \u03b4 = m/N. (1a) deg f >= ((2\u03b4\u22121)N \u2212 1)/2 for \u03b4 > 1/2. (1d) polynomial total degree >= deg f / 3. (2) x-only g with g(x(kP)) = k\u00b2 on A: deg g >= S_j/3 with S_j = # 3-term progressions in A of difference j; gives deg g >= ((3\u03b4\u22122)N \u2212 2)/3 for \u03b4 > 2/3. N < p is necessary (counterexample p=5, r=7, f \u2261 1 on {1,6}).",
+  "rationale": "From ECDLP-21; curve analogue of Coppersmith\u2013Shparlinski-type approximation bounds.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-eb84ffa8-cc30-4f6e-9f0d-19c4de805b3b",
+    "TSK-a826d13f-73ab-462d-8e03-d6094b6d08d7",
+    "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd",
+    "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round7-approx/out_approx_checks.txt"
+  ],
+  "claims": [
+    "Partial-agreement lower bounds (proof attempt). Let E/F_p, P of prime order r, N < min(p, r), A \u2286 {1..N} with |A| = m, and f a rational function on E regular at kP (k \u2208 A) with f(kP) = k mod p for k \u2208 A. (1) For every 1 <= j <= N-1: deg f >= T_j/2 where T_j = #{k : k, k+j \u2208 A} (h_j = f\u2218\u03c4_{jP} \u2212 f \u2212 j vanishes at those kP; h_j \u2262 0 since otherwise the pole set is jP-invariant, orbits of size r). (1b) Since \u03a3_j T_j = C(m,2): deg f >= m(m\u22121)/(4(N\u22121)) \u2248 \u03b4\u00b2N/4 for every \u03b4 = m/N. (1a) deg f >= ((2\u03b4\u22121)N \u2212 1)/2 for \u03b4 > 1/2. (1d) polynomial total degree >= deg f / 3. (2) x-only g with g(x(kP)) = k\u00b2 on A: deg g >= S_j/3 with S_j = # 3-term progressions in A of difference j; gives deg g >= ((3\u03b4\u22122)N \u2212 2)/3 for \u03b4 > 2/3. N < p is necessary (counterexample p=5, r=7, f \u2261 1 on {1,6})."
+  ],
+  "proof_status": "proof-attempt",
+  "outcome": "unresolved",
+  "next_action": "Blind adversarial review; Lean formalization of (1b) is feasible by extending CurveX/Interpolation (pole-degree argument may be replaced by an x-only polynomial variant). Settle novelty vs Lange\u2013Winterhof (theorem statements not yet accessed).",
+  "notes": "PI checked the core counting (\u03a3_j T_j = C(m,2)) and the h_j \u2262 0 argument. Toy checks (p < 100) reproduced by PI: no violations; bound loose for sparse random A (true min ~ m polynomial, ~ (m+1)/2 rational), nearly sharp for intervals. Gap \u03b4\u00b2N/4 vs (\u03b4N+1)/2 open. Only constrains low-degree algebraic formulas; no bit-complexity consequence."
+}

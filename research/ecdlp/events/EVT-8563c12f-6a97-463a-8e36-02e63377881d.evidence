@@ -1,0 +1,26 @@
+{
+  "id": "EVT-8563c12f-6a97-463a-8e36-02e63377881d",
+  "kind": "task-status-change",
+  "task": "TSK-a826d13f-73ab-462d-8e03-d6094b6d08d7",
+  "task_key": "ECDLP-21",
+  "timestamp": "2026-11-03T10:21:19.701146Z",
+  "run": "RUN-eb84ffa8-cc30-4f6e-9f0d-19c4de805b3b",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "number-theory"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute bounded round-7 run."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-7 run."
+  },
+  "reason": "Round-7 bounded subagent launched",
+  "before_sha256": "c0e4774621f7a7456a0404549bcc9e5d74f6a7433517cdf784223080b2274294",
+  "after_sha256": "13c03102833129abc3039d37c8c25483bfc3393a8e12c1bce292b7c1f48f2df9"
+}

@@ -14,7 +14,8 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
     "RUN-4b283c25-b43d-4720-994d-3c285789a273",
     "REV-83ec2fc9-e871-4434-a5da-49db92c61a55",
-    "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd"
+    "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd",
+    "RUN-73ace464-1565-479c-9409-6690c560c514"
   ],
   "evidence": [
     "research/ecdlp/experiments/round5-ct/out_ec_dl_interp_degree.txt"
@@ -25,5 +26,5 @@
   "proof_status": "refuted",
   "outcome": "refuted",
   "next_action": "Superseded by HYP-adb581ff.",
-  "notes": "Agent proof attempt; PI checked the core of A (translation argument). Likely overlaps Lange\u2013Winterhof / Satoh (statements not retrieved): novelty NOT claimed. Toy check: minimal pole order exactly r on 40 curves. A' is a restricted-model statement only. | ECDLP-17 blind review: the stated bounds are TRUE, but the stated PROOF has a gap: \"h \u2261 0 \u21d2 r = 0 in F_p\" fails when p | r with r != p (example p=5, r=10, verified by PI). A' constant log2((N-1)/12) is valid but not sharp ((N-1)/6), and its model (defined divisions, no comparisons) must be explicit; \u03a9(n^2) only under a per-operation charge. Status \"refuted\" refers to the proof as stated; the corrected statement and proof are HYP-adb581ff."
+  "notes": "Agent proof attempt; PI checked the core of A (translation argument). Likely overlaps Lange\u2013Winterhof / Satoh (statements not retrieved): novelty NOT claimed. Toy check: minimal pole order exactly r on 40 curves. A' is a restricted-model statement only. | ECDLP-17 blind review: the stated bounds are TRUE, but the stated PROOF has a gap: \"h \u2261 0 \u21d2 r = 0 in F_p\" fails when p | r with r != p (example p=5, r=10, verified by PI). A' constant log2((N-1)/12) is valid but not sharp ((N-1)/6), and its model (defined divisions, no comparisons) must be explicit; \u03a9(n^2) only under a per-operation charge. Status \"refuted\" refers to the proof as stated; the corrected statement and proof are HYP-adb581ff. | ECDLP-22 novelty: Lange\u2013Winterhof (COCOON 2002, LNCS 2387, pp. 137\u2013143) prove degree lower bounds for interpolating the EC discrete logarithm, refined by Satoh (WCC 2005, LNCS 3969): Theorem A is KNOWN IN KIND; exact comparison of constants not possible (full texts not accessed). Do not claim novelty."
 }

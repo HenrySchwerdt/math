@@ -13,7 +13,8 @@
     "RUN-4b283c25-b43d-4720-994d-3c285789a273",
     "TSK-868a3543-c6d2-4607-8540-72b78e2969be",
     "REV-83ec2fc9-e871-4434-a5da-49db92c61a55",
-    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "RUN-73ace464-1565-479c-9409-6690c560c514"
   ],
   "evidence": [
     "research/ecdlp/experiments/round6-review/out_review_checks.txt"
@@ -24,5 +25,5 @@
   "proof_status": "reviewed",
   "outcome": "unresolved",
   "next_action": "Lean formalization is hard (rational functions on Weierstrass curves); prioritize Theorem B. Retrieve Lange\u2013Winterhof full text to settle novelty.",
-  "notes": "Reviewer: adversarial-critic (Sonnet, configured); PI checked the p|r example (p=5, E: y^2=x^3+3x, P=(2,2) of order 10) with the toy oracle. Rational interpolants with deg ~ (N+1)/2 exist, so the constant 1/2 is nearly sharp for rational f. Novelty not found / not settled."
+  "notes": "Reviewer: adversarial-critic (Sonnet, configured); PI checked the p|r example (p=5, E: y^2=x^3+3x, P=(2,2) of order 10) with the toy oracle. Rational interpolants with deg ~ (N+1)/2 exist, so the constant 1/2 is nearly sharp for rational f. Novelty not found / not settled. | ECDLP-22 novelty: Lange\u2013Winterhof (COCOON 2002, LNCS 2387, pp. 137\u2013143) prove degree lower bounds for interpolating the EC discrete logarithm, refined by Satoh (WCC 2005, LNCS 3969): Theorem A is KNOWN IN KIND; exact comparison of constants not possible (full texts not accessed). Do not claim novelty."
 }

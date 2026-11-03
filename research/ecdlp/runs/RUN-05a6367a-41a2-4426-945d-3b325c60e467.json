@@ -1,0 +1,48 @@
+{
+  "id": "RUN-05a6367a-41a2-4426-945d-3b325c60e467",
+  "type": "RUN",
+  "title": "Independent correspondence review of PRF-34538f75",
+  "created_at": "2026-11-03T10:25:23.720584Z",
+  "status": "completed",
+  "question": "Does degree_bound_short_weierstrass faithfully state Theorem B for actual curve points?",
+  "rationale": "REVIEW.md",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-f824b713-5e45-42f0-87b0-d4a8614d3a3a",
+    "PRF-34538f75-12fb-451c-aaa1-314450e49e87",
+    "REV-1f44f52b-09e8-4dad-84f5-3fe181342de4"
+  ],
+  "evidence": [],
+  "claims": [
+    "Independent review REV-1f44f52b completed with decision accept for PRF-34538f75 at commit 805860147282fd91518542fdf53565082c719ea5 (formal correctness/correspondence only)."
+  ],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "PI integration review of PRF-34538f75 citing REV-1f44f52b; novelty versus Lange-Winterhof remains unsettled.",
+  "notes": "Reviewer self-reported model identity: Claude Opus 5.5 (claude-opus-5-5) per session system prompt; runtime metadata not independently verified. Commands: lake build (exit 0, cached), lake env lean on Interpolation.lean and CurveX.lean (exit 0), lake env lean research/ecdlp/proofs/checks/Round7Axioms.lean (standard axioms only), grep for forbidden constructs (none), python3 -I scratchpad check_thmB.py toy-curve check (0 violations; script kept in session scratchpad, not committed).",
+  "run": {
+    "started_at": "2026-11-03T10:25:44.011708Z",
+    "completed_at": "2026-11-03T10:29:27.717935Z",
+    "provider": "anthropic",
+    "model": "claude-opus-5-5 (configured; see notes)",
+    "role": "independent-reviewer",
+    "task": "TSK-f824b713-5e45-42f0-87b0-d4a8614d3a3a",
+    "input_hypotheses": [
+      "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd"
+    ],
+    "starting_commit": "cc8dc791a0bd74f89b6cd614898a5773abdc500a",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; owns REV-1f44f52b and this RUN",
+    "commands": [],
+    "files_changed": [
+      "research/ecdlp/reviews/REV-1f44f52b-09e8-4dad-84f5-3fe181342de4.json",
+      "research/ecdlp/reviews/REV-1f44f52b-09e8-4dad-84f5-3fe181342de4.md"
+    ],
+    "resulting_commit": "e5a3524d9a06ae0632b2cd2447282a430e3ac12a",
+    "tests": [],
+    "benchmark": "Not applicable",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}
