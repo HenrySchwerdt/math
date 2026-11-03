@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 6 / ECDLP-18: decisive genus-2 cover index-calculus test",
   "created_at": "2026-11-03T10:01:26.523914Z",
-  "status": "active",
+  "status": "completed",
   "question": "For E/F_p and a genus-2 cover C -> E (e.g. the double cover w^2 = x(Q) - c), does index calculus in J_C(F_p) with a degree-1 factor base solve DLPs in pi^*(E(F_p)) at a measured cost below sqrt(p) at toy sizes (p up to ~2^16), or does it cost >= q as predicted by HYP-ad5bc0e3?",
   "rationale": "Bounded subagent run for TSK-e90f8650-8b93-4ea0-b9f1-82387f76e4c7",
   "assumptions": [],
@@ -54,7 +54,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round6-cover/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "30b10563dc8306b721a04134e6069dbddee3be6b",
     "tests": [],
     "benchmark": "Counted-operation benchmark (Cantor adds, EC adds, elimination coefficient mults) plus wall time; seeds 20261109/<bits>/<idx>; medians over 3 curves at 2^8,2^10,2^12,2^14 (variant Bhalf at 2^10,2^12); Python 3.13.18, numpy 2.5.3, 4 vCPU Xeon 2.3GHz; baseline measured toyec.dlog_bsgs EC adds and sqrt(p); one execution per curve for official counts (deterministic, 2^14 reproduced twice, timings single-measure). Results in research/ecdlp/experiments/round6-cover/results.json.",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
