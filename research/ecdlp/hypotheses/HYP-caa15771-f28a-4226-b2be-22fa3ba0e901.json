@@ -3,7 +3,7 @@
   "type": "HYP",
   "title": "Homomorphic transfer is all-or-nothing on prime-order subgroups",
   "created_at": "2026-11-03T09:13:30.933949Z",
-  "status": "open",
+  "status": "completed",
   "question": "Let G be an additive group, P in G with addOrderOf P = r prime, and phi: G -> H an additive group homomorphism. Then phi(P) = 0 or addOrderOf(phi P) = r. If H is finite and phi(P) != 0 then r | |H|. If gcd(addOrderOf P, |H|) = 1 then phi(P) = 0.",
   "rationale": "Registered by PI from sealed round-1 submissions before cross-agent synthesis or review.",
   "assumptions": [],
@@ -11,14 +11,23 @@
   "refs": [
     "RUN-fec2442f-7d58-41e5-a4d0-ee0dbd2a8d88",
     "RUN-b0ccd1bd-6bbc-4f34-b347-0ade0bde13b7",
-    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "PRF-af19eaae-71e0-4dd7-b76b-e23c4b98ee65",
+    "REV-16b2db9b-7ec3-44be-a4af-bce61bd09baf"
   ],
   "evidence": [],
   "claims": [
     "Let G be an additive group, P in G with addOrderOf P = r prime, and phi: G -> H an additive group homomorphism. Then phi(P) = 0 or addOrderOf(phi P) = r. If H is finite and phi(P) != 0 then r | |H|. If gcd(addOrderOf P, |H|) = 1 then phi(P) = 0."
   ],
-  "proof_status": "unproved",
-  "outcome": "unresolved",
-  "next_action": "Independent counterexample attempt (ECDLP-5) and, where feasible, Lean obligation (ECDLP-6).",
-  "notes": "Origin: B1/B2 (RUN-fec2442f) and A2/L2 (RUN-b0ccd1bd), proposed independently. Elementary; not claimed novel."
+  "proof_status": "formally-verified",
+  "outcome": "verified",
+  "next_action": "Use as guardrail: any proposed transfer of a prime-order subgroup must be injective with r | |target|. No further work.",
+  "notes": "Origin: B1/B2 (RUN-fec2442f) and A2/L2 (RUN-b0ccd1bd), proposed independently. Elementary; not claimed novel. Formally verified (PRF-af19eaae); independent correspondence review accepted (REV-16b2db9b, Opus adapter). Elementary, not novel.",
+  "formal": {
+    "lean_file": "MathResearch/ECDLP/Transfer.lean",
+    "declaration": "MathResearch.ECDLP.map_eq_zero_or_addOrderOf_eq (+ prime_dvd_natCard_of_map_ne_zero, map_eq_zero_of_coprime)",
+    "toolchain_file": "lean-toolchain",
+    "build_evidence": "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-fabeefac-fd6b-42da-972e-97281b4f93dd.evidence",
+    "source_commit": "b43063bbfc2368022c3841d569629a055e2ca792"
+  }
 }

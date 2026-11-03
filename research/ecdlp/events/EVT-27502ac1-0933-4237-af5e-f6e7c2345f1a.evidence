@@ -1,0 +1,26 @@
+{
+  "id": "EVT-27502ac1-0933-4237-af5e-f6e7c2345f1a",
+  "kind": "task-status-change",
+  "task": "TSK-899c645b-3ccf-4fcc-99a0-df147d16ee0f",
+  "task_key": "ECDLP-6",
+  "timestamp": "2026-11-03T09:21:25.196922Z",
+  "run": "RUN-3e3276e3-3fe6-4071-b325-38d810a3f633",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-2 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "None; geometric application of HYP-49fb2746 is a separate open obligation"
+  },
+  "reason": "T1-T6 proved in Lean without sorry; PI re-verified build/axioms; independent review REV-16b2db9b accepted",
+  "before_sha256": "022cce8bea5cd0aa2c04bfbc0c674b6217b5f4356a3e877cd2382c6cf25401a6",
+  "after_sha256": "dc25c79624070b05567b12d627ddf8996aa5708f739df833345f4b2380c03552"
+}

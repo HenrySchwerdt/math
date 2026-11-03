@@ -1,31 +1,51 @@
 {
   "id": "REV-16b2db9b-7ec3-44be-a4af-bce61bd09baf",
   "type": "REV",
-  "title": "Draft \u2014 define before work",
+  "title": "Independent statement-correspondence review of PRF-af19eaae (DLP relation and transfer-barrier lemmas)",
   "created_at": "2026-11-03T09:17:47.550198Z",
-  "status": "open",
-  "question": "Unassigned; define exact question",
-  "rationale": "Unassigned; record why selected",
+  "status": "completed",
+  "question": "At commit 39ba7c8, do the Lean declarations in MathResearch/ECDLP/Basic.lean and Transfer.lean build cleanly with standard axioms only and correctly express informal statements S1 (HYP-caa15771), S2 (HYP-49fb2746 abstract part) and S3 (DLP relation)?",
+  "rationale": "docs/REVIEW.md requires independent review before a PRF is accepted.",
   "assumptions": [],
   "sources": [],
-  "refs": [],
+  "refs": [
+    "PRF-af19eaae-71e0-4dd7-b76b-e23c4b98ee65",
+    "HYP-caa15771-f28a-4226-b2be-22fa3ba0e901",
+    "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e"
+  ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "lake build at 39ba7c8 (toolchain v4.35.0, Mathlib 56a00585) exits 0 with no warnings (reviewer re-run, cached oleans).",
+    "Round2Axioms.lean exits 0; all 11 listed declarations use only a subset of propext, Classical.choice, Quot.sound.",
+    "No sorry/admit/axiom/unsafe/opaque/implemented_by/native_decide in MathResearch/ECDLP or the check file.",
+    "Each declaration matches or generalizes S1-S3 with satisfiable, non-vacuous hypotheses; no divergence found within stated hypotheses.",
+    "Minor non-blocking gaps: Promise uses N exponents (stronger than Q in <P> for infinite-order P); [Finite H] superfluous in T3; S3 'only modulo' converse not a standalone lemma; T5 does not use additivity of F or f; IsSolution.neg and addOrderOf_map_base_dvd absent from axiom check.",
+    "The results are elementary, known facts; no new mathematics and no complexity content."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Draft only; no execution or verification claimed.",
+  "outcome": "verified",
+  "next_action": "PI integration review may accept PRF-af19eaae for formal correctness; optionally add isSolution_map_of_modEq, drop [Finite H] from T3, and extend the axiom check to the remaining Basic.lean declarations.",
+  "notes": "Reviewer self-reported model: Claude Opus 5.5 (claude-opus-5-5) from this subagent's system context; not independently verified. Same provider family as author; independence is role-based. Probe Lean file kept only in the session scratchpad.",
   "review": {
-    "run": null,
-    "target_commit": null,
-    "targets": [],
-    "decision": "revise",
-    "rationale": "Review not performed",
-    "counterexamples": [
-      "Not attempted"
+    "run": "RUN-b92a6a34-beec-419e-a904-bea4c625ecd5",
+    "target_commit": "39ba7c8",
+    "targets": [
+      "PRF-af19eaae-71e0-4dd7-b76b-e23c4b98ee65"
     ],
-    "complexity": "Not reviewed",
-    "limitations": "Draft review, not an assessment",
-    "initial_packet": "Not supplied"
+    "decision": "accept",
+    "rationale": "Build and axiom evidence reproduced; no forbidden tokens; every declaration states S1-S3 faithfully or more generally, with non-vacuous hypotheses checked by concrete instantiation on ZMod 5. Gaps found are documentation/coverage issues, not correctness errors.",
+    "counterexamples": [
+      "D1: Promise in Z with (P,Q)=(1,-1) has integer log -1 but no N solution; harmless for finite groups, docstring says cyclic monoid (proved in probe).",
+      "D1b: in finite groups N- and Z-solvability coincide (proved).",
+      "D2: T3 still holds without [Finite H] (proved); hypothesis superfluous, not trivializing.",
+      "D2': Nat.card = 0 for infinite H would make T2 trivially true; avoided by [Finite H].",
+      "D3: converse 'every l = k mod ord(phi P) solves the mapped instance' holds from existing lemmas (proved), not stated as a lemma.",
+      "D4: T1, T2, T5b instantiated on ZMod 5; c = 1 with f = F = id shows T5b's c != 1 hypothesis is necessary.",
+      "D5: infinite-order base: isSolution_iff_modEq with MOD 0 gives uniqueness; consistent.",
+      "Module (ZMod r) M on an AddCommGroup cannot be contradictory; no impossible-instance vacuity."
+    ],
+    "complexity": "Not applicable: formal correctness only",
+    "limitations": "Statement correspondence and build/axiom evidence only; geometric applications (Frobenius on E[r], pairings, MOV/FR, anomalous) not formalized or reviewed; build used cached oleans; probe file not committed; same provider family as author. Reviewed files at 39ba7c8: MathResearch/ECDLP/Basic.lean, MathResearch/ECDLP/Transfer.lean, research/ecdlp/proofs/checks/Round2Axioms.lean.",
+    "initial_packet": "Target commit 39ba7c8; Lean files Basic.lean and Transfer.lean; toolchain and Mathlib pin; informal statements S1 (HYP-caa15771), S2 (HYP-49fb2746 abstract), S3 (DLP relation); claimed clean build and standard-axiom evidence via Round2Axioms.lean. No author confidence or RUN reports; PRF .md read only after initial findings."
   }
 }

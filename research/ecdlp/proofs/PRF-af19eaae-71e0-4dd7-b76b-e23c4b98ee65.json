@@ -3,7 +3,7 @@
   "type": "PRF",
   "title": "Lean: exact DLP relation and homomorphic-transfer barrier lemmas",
   "created_at": "2026-11-03T09:17:04.883552Z",
-  "status": "active",
+  "status": "completed",
   "question": "Formal proofs of the abstract algebra in HYP-caa15771 (all parts) and HYP-49fb2746 (abstract part only), plus the exact DLP solution relation.",
   "rationale": "Smallest useful formal layer: exact problem statement and transfer-correctness/barrier lemmas reused by later candidates.",
   "assumptions": [],
@@ -14,7 +14,8 @@
     "TSK-899c645b-3ccf-4fcc-99a0-df147d16ee0f",
     "TSK-9f6a9ba1-1a55-4111-b9be-ec9af0e4a5a4",
     "RUN-3e3276e3-3fe6-4071-b325-38d810a3f633",
-    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355"
+    "RUN-62dbda7c-fe4f-4432-84a2-2068cd516355",
+    "REV-16b2db9b-7ec3-44be-a4af-bce61bd09baf"
   ],
   "evidence": [
     "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-fabeefac-fd6b-42da-972e-97281b4f93dd.evidence",
@@ -39,8 +40,8 @@
   ],
   "proof_status": "formally-verified",
   "outcome": "verified",
-  "next_action": "Independent correspondence review (independent-reviewer) of Lean statements vs HYP statements; then HYP-caa15771 may be marked formally verified. Geometric application of HYP-49fb2746 remains unformalized.",
-  "notes": "Source commit b43063bbfc2368022c3841d569629a055e2ca792; toolchain leanprover/lean4:v4.35.0; Mathlib 56a00585. Command: lake build (2073 jobs, exit 0, no warnings) and lake env lean research/ecdlp/proofs/checks/Round2Axioms.lean (only propext, Classical.choice, Quot.sound). These are elementary known facts, not new research results. Formal correctness only; no complexity claim. Independent correspondence review pending. Schema formal block names one primary declaration; all 11 verified declarations are listed in claims and covered by the same build/axiom evidence.",
+  "next_action": "Accepted by independent review. Optional cleanups from REV: drop [Finite H] in T3; add explicit \"only modulo\" lemma; include IsSolution.neg in axiom file.",
+  "notes": "Source commit b43063bbfc2368022c3841d569629a055e2ca792; toolchain leanprover/lean4:v4.35.0; Mathlib 56a00585. Command: lake build (2073 jobs, exit 0, no warnings) and lake env lean research/ecdlp/proofs/checks/Round2Axioms.lean (only propext, Classical.choice, Quot.sound). These are elementary known facts, not new research results. Formal correctness only; no complexity claim. Independent correspondence review: accept (REV-16b2db9b). Schema formal block names one primary declaration; all 11 verified declarations are listed in claims and covered by the same build/axiom evidence.",
   "formal": {
     "lean_file": "MathResearch/ECDLP/Transfer.lean",
     "declaration": "MathResearch.ECDLP.map_eq_zero_or_addOrderOf_eq",
