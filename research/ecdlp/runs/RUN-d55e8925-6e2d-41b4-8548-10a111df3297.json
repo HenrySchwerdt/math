@@ -1,0 +1,42 @@
+{
+  "id": "RUN-d55e8925-6e2d-41b4-8548-10a111df3297",
+  "type": "RUN",
+  "title": "Blind review: Theorem E (cusp degeneration)",
+  "created_at": "2026-11-03T11:43:34.490144Z",
+  "status": "active",
+  "question": "Is HYP-38005bec (verbatim statement and proof in RUN-04709f64 report) correct?",
+  "rationale": "Bounded run for TSK-eb730068-d7bc-4281-9544-df7ffdf6efe4",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-eb730068-d7bc-4281-9544-df7ffdf6efe4",
+    "HYP-38005bec-a3ca-415d-96fc-52e5a0212bd4"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T11:43:34.490467Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "adversarial-critic",
+    "task": "TSK-eb730068-d7bc-4281-9544-df7ffdf6efe4",
+    "input_hypotheses": [
+      "HYP-38005bec-a3ca-415d-96fc-52e5a0212bd4"
+    ],
+    "starting_commit": "877a496f09c0fff28058f88fcbce146416f269bd",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

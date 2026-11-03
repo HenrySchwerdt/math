@@ -1,0 +1,26 @@
+{
+  "id": "EVT-4d24b46c-d117-4e23-9ae0-d7b5c67ff1a3",
+  "kind": "task-status-change",
+  "task": "TSK-eb730068-d7bc-4281-9544-df7ffdf6efe4",
+  "task_key": "ECDLP-45",
+  "timestamp": "2026-11-03T11:43:34.497624Z",
+  "run": "RUN-d55e8925-6e2d-41b4-8548-10a111df3297",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "adversarial-critic"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Bounded adversarial-critic run started",
+  "before_sha256": "57efdddfcbbb2c1f883390b75cc264caf8330f00a0e18f612f94b9725d136b0f",
+  "after_sha256": "f1709984bf0b9a6588900e63831de299f2cdaa133d3c54c30532a31b2c0bd010"
+}
