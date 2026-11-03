@@ -1,5 +1,7 @@
-import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
-import Mathlib.GroupTheory.OrderOfElement
+module
+
+public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+public import Mathlib.GroupTheory.OrderOfElement
 
 /-!
 # ECDLP: exact problem statement and elementary structural lemmas
@@ -14,6 +16,8 @@ encodings, algorithms or bit complexity; those are separate obligations.
 None of the lemmas below is a new research result. They are reusable
 foundations and correctness statements for transformations.
 -/
+
+@[expose] public section
 
 namespace MathResearch.ECDLP
 
@@ -82,3 +86,5 @@ infinity) of a Weierstrass curve over a field. -/
 abbrev ECInstance {F : Type*} [Field F] [DecidableEq F] (W : WeierstrassCurve.Affine F) := Instance W.Point
 
 end MathResearch.ECDLP
+
+end

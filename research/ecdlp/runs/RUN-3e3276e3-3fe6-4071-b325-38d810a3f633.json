@@ -14,11 +14,13 @@
     "HYP-49fb2746-152e-4907-b54b-9ba124cfd75e"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Lean (no sorry/axioms beyond propext, Classical.choice, Quot.sound): MathResearch.ECDLP.map_eq_zero_or_addOrderOf_eq, prime_dvd_natCard_of_map_ne_zero, map_eq_zero_of_coprime (HYP-caa15771); modEq_prime_of_map_solution, isSolution_map_of_base_eq_zero (connection to Basic.lean); one_sub_smul_map_fixed, map_fixed_eq_zero_of_ne_one (abstract part of HYP-49fb2746; Frobenius application not formalized); prime_dvd_card_sub_one_of_map_ne_one (finite-field corollary). Build succeeded locally."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents not exposed to PI.",
+  "next_action": "PI: add `import MathResearch.ECDLP.Transfer` to MathResearch.lean, run lake build in CI, independent review of correspondence, then update HYP statuses (abstract parts only).",
+  "notes": "Model from .claude/agents adapter frontmatter (claude-sonnet-5-5); runtime metadata for subagents not exposed to PI. Self-reported model identity of formalization agent: Sonnet 5.5, model ID claude-sonnet-5-5.",
   "run": {
     "started_at": "2026-11-03T09:14:19.099168Z",
     "completed_at": null,

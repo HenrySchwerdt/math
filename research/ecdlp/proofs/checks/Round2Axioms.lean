@@ -1,0 +1,13 @@
+import MathResearch
+open MathResearch.ECDLP
+#print axioms isSolution_iff_modEq
+#print axioms existsUnique_canonical_solution
+#print axioms modEq_of_map_solution
+#print axioms map_eq_zero_or_addOrderOf_eq
+#print axioms prime_dvd_natCard_of_map_ne_zero
+#print axioms map_eq_zero_of_coprime
+#print axioms modEq_prime_of_map_solution
+#print axioms isSolution_map_of_base_eq_zero
+#print axioms one_sub_smul_map_fixed
+#print axioms map_fixed_eq_zero_of_ne_one
+#print axioms prime_dvd_card_sub_one_of_map_ne_one
