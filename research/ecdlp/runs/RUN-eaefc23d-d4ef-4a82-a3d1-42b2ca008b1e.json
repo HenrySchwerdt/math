@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 19 / frontier I: last literature long shots (Mahalanobis-Mallick Problem L, isogeny distance to structured curves)",
   "created_at": "2026-11-03T13:56:29.990139Z",
-  "status": "active",
+  "status": "completed",
   "question": "(1) Does the Mahalanobis-Mallick linear-algebra formulation of ECDLP ('Problem L', and their 2026 zero-minor follow-up) admit any solver below sqrt(p), or does it reduce to known exponential costs? (2) For a generic prime-order curve, what is the cost of walking an isogeny path to a curve with exploitable structure (j=0/1728, small embedding degree, anomalous), and is any such target reachable in less than sqrt(p)?",
   "rationale": "Bounded run for TSK-9a54da92-9afe-4d8a-b907-20336f7adb0a",
   "assumptions": [],
@@ -20,12 +20,12 @@
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
+  "outcome": "refuted",
   "next_action": "Fill draft metadata and report before execution",
   "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
   "run": {
     "started_at": "2026-11-03T13:56:29.990477Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T14:08:15.779154Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured)",
     "role": "frontier-explorer",
@@ -41,8 +41,10 @@
       "research/ecdlp/runs/RUN-eaefc23d-d4ef-4a82-a3d1-42b2ca008b1e-command-9f95c294-acbf-417e-8d09-85e6a5678b99.evidence",
       "research/ecdlp/runs/RUN-eaefc23d-d4ef-4a82-a3d1-42b2ca008b1e-command-805b05f7-c5d5-414f-94e5-a54b78230de2.evidence"
     ],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round19-frontier-i/"
+    ],
+    "resulting_commit": "609f4cff8dfb48df56e4f1f100cc0a5c88317667",
     "tests": [],
     "benchmark": "See report",
     "machine": "See report",

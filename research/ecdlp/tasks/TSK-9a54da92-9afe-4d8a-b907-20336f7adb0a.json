@@ -3,19 +3,20 @@
   "type": "TSK",
   "title": "Round 19 / frontier I: last literature long shots (Mahalanobis-Mallick Problem L, isogeny distance to structured curves)",
   "created_at": "2026-11-03T13:56:29.987270Z",
-  "status": "active",
+  "status": "completed",
   "question": "(1) Does the Mahalanobis-Mallick linear-algebra formulation of ECDLP ('Problem L', and their 2026 zero-minor follow-up) admit any solver below sqrt(p), or does it reduce to known exponential costs? (2) For a generic prime-order curve, what is the cost of walking an isogeny path to a curve with exploitable structure (j=0/1728, small embedding degree, anomalous), and is any such target reachable in less than sqrt(p)?",
   "rationale": "Remaining untested routes named by the round-17 literature survey (priors ~1%).",
   "assumptions": [],
   "sources": [],
   "refs": [],
   "evidence": [
-    "research/ecdlp/events/EVT-f00327de-7f3c-4ddf-a9fd-dec7577fe329.evidence"
+    "research/ecdlp/events/EVT-f00327de-7f3c-4ddf-a9fd-dec7577fe329.evidence",
+    "research/ecdlp/events/EVT-5a04813a-20eb-4683-8063-08e2c94bedf0.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "refuted",
+  "next_action": "Closed",
   "notes": "Created via research.py start.",
   "success_criteria": [
     "Exact statements; reproducible evidence; honest negatives."
