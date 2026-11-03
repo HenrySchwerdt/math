@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 6 / ECDLP-16: relation-system solving cost at m = 3 for prime-field factor bases",
   "created_at": "2026-11-03T10:01:26.368453Z",
-  "status": "active",
+  "status": "completed",
   "question": "For E/F_p (toy p up to ~2^20) and factor bases V (small-x, and PKM-type multiplicative-coset), measure the cost of FINDING decompositions R = V1+V2+V3 by algebraic system solving (resultant elimination of Semaev S_4 or S_3-chained systems with structural constraints) versus scanning, and compare the total relation-collection cost against sqrt(p) and the threshold T < p^{1/2-1/m} = p^{1/6} per relation.",
   "rationale": "Bounded subagent run for TSK-c3e4bd30-835c-4cf7-90f7-eb905fade4d5",
   "assumptions": [],
@@ -43,7 +43,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round6-rel/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "95ab2c39dea3ff4cc6b368661e1a1371b360f5cf",
     "tests": [],
     "benchmark": "Operation-count benchmark (field mults, w_I=1 headline, w_I=10 stored): exact pi by full enumeration; M1 on 200 random R per set; M2 on 40 R x 2 curves at k=12,14; 4 curves per p (2 at 2^20), p=4129..1061413; master seed 20261108; equal treatment of PKM/small-x/random sets; rho baseline analytic. Python 3.13.18, Xeon 2.3GHz, 4 vCPU. No wall-clock benchmark claimed. See research/ecdlp/experiments/round6-rel/ (SHA256SUMS).",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
