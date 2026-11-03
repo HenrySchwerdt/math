@@ -148,6 +148,15 @@ Round 14 (package 10):
 - Technical report v2 (PAP-ef6e2010, internal, NOT submitted): 14 pages; re-review decision revise
   (wording only), all fixes applied; stale Theorem E N=3 evidence regenerated (0 violations).
 
+Round 15 (package 11):
+- Inventor F (ECDLP-52): m=3 index calculus: supply floor s ≥ (3r)^{1/3} (observed/predicted
+  closure 0.99–1.01 on six structured and random base families: x-structure gives no excess closure);
+  best finder total ≈ 1.5 r^{2/3} (exponent 0.651), 36× rho at 30 bits.
+- Frontier F (ECDLP-53): ambient groups (base change, cover Jacobians, Frey–Kani gluing, generalized
+  Jacobians) only lose relations on push-down; they can at most make finding cheaper.
+- Checkpoint DEC: index calculus closed on generic prime-order prime-field curves at toy scale;
+  further constructive rounds only for mechanisms passing the supply/finder accounting on paper.
+
 ## Next
 
 Every generic-model route tested reproduces √r. Remaining levers are non-generic structure
