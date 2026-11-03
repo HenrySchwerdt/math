@@ -73,6 +73,9 @@ def new(name, kind):
     write_json(path, d)
     path.with_suffix('.md').write_text((ROOT / 'research/_templates/report.md').read_text()
                                       .replace('ID — title', ident + ' — draft'))
+    if kind == 'TSK':
+        from task_keys import register
+        register(base)
     return path
 
 
@@ -140,6 +143,13 @@ def validate():
             for field in ('lean_file', 'toolchain_file', 'build_evidence'):
                 local(d['formal'][field])
             git('cat-file', '-e', d['formal']['source_commit'] + '^{commit}')
+    from task_keys import load
+    for base in (ROOT / 'research').iterdir():
+        if (base / 'TASKS.json').exists():
+            index = load(base)
+            project_ids = {d['id'] for p, d in rows if p.parent.parent == base and d['type'] == 'TSK'}
+            if set(index['tasks']) != project_ids:
+                raise ValueError(f'{base.name}: task-key registry must cover exactly the project tasks')
     print(f'Validated {len(rows)} research records')
 
 
@@ -245,6 +255,9 @@ def main():
     sub = parser.add_subparsers(dest='command', required=True)
     sub.add_parser('check')
     sub.add_parser('site', help='Generate the public VitePress notebook from the ledger')
+    key_parser = sub.add_parser('task-keys', help='Assign missing readable task keys (PI/integration only)')
+    key_parser.add_argument('project')
+    key_parser.add_argument('--prefix')
     for cmd in ('init', 'new', 'audit', 'claim', 'release', 'exec'):
         p = sub.add_parser(cmd)
         p.add_argument('project')
@@ -263,6 +276,9 @@ def main():
     a = parser.parse_args()
     if a.command == 'check':
         validate()
+    elif a.command == 'task-keys':
+        from task_keys import register
+        print(json.dumps(register(project(a.project), a.prefix), indent=2))
     elif a.command == 'site':
         from research_site import generate
         validate()

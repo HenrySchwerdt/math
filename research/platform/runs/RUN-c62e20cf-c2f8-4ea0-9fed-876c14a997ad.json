@@ -1,0 +1,39 @@
+{
+  "id": "RUN-c62e20cf-c2f8-4ea0-9fed-876c14a997ad",
+  "type": "RUN",
+  "title": "board-js-reviewer final check",
+  "created_at": "2026-11-03T07:32:19.404367Z",
+  "status": "active",
+  "question": "Does the task board show persistent project IDs and evidence-backed steps without navigation or provenance regressions?",
+  "rationale": "Independent review of the user-requested board changes before publication.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-4b23a091-2797-4b5f-b737-7d3ff26b75e2"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Read-only exact-commit review; report actual checks.",
+  "notes": "Final follow-up instrumentation; initial findings were retrospective and summarized in the implementation RUN. Runtime model ID is unavailable.",
+  "run": {
+    "started_at": "2026-11-03T07:32:19.404716Z",
+    "completed_at": null,
+    "provider": "openai",
+    "model": "unknown-runtime-id-not-exposed",
+    "role": "board-js-reviewer",
+    "task": "TSK-4b23a091-2797-4b5f-b737-7d3ff26b75e2",
+    "input_hypotheses": [],
+    "starting_commit": "d7af0b6de59186603e0c133e57c9c3810bb40adc",
+    "branch": "codex/ecdlp-research-laboratory",
+    "worktree": "shared checkout; read-only reviewer",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable: interface/data review.",
+    "machine": "Existing local checkout; no benchmark",
+    "reviews": []
+  }
+}

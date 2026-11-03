@@ -1,5 +1,6 @@
 """Generate VitePress Markdown from the provider-independent research ledger."""
 import html
+from datetime import datetime
 import json
 from pathlib import Path
 import re
@@ -7,6 +8,7 @@ import shutil
 from urllib.parse import quote, urlsplit
 
 from markdown_it import MarkdownIt
+from task_keys import load as load_task_keys
 
 KINDS = {'TSK': 'Task', 'HYP': 'Hypothesis', 'RUN': 'Run', 'EXP': 'Experiment',
          'ALG': 'Algorithm', 'PRF': 'Proof attempt', 'REV': 'Review',
@@ -60,6 +62,51 @@ def timestamp(d):
     return d.get('run', {}).get('completed_at') or d['created_at']
 
 
+def task_activity(root, task, rows, repo, commit):
+    """Only timestamped observations; no inferred research milestones."""
+    events = [dict(kind='created', time=task['created_at'], title='Task created',
+                   detail=task['rationale'], record=task['id'])]
+    for d in rows:
+        run = d.get('run', {})
+        if d['type'] == 'RUN' and run.get('task') == task['id']:
+            if run.get('started_at'):
+                events.append(dict(kind='run', time=run['started_at'], title=d['title'],
+                                   detail=f"{run['role']} · {run['provider']} · {run['model']}",
+                                   record=d['id']))
+            for evidence in run.get('commands', []):
+                if 'private' in Path(evidence).parts:
+                    continue
+                path = (root / evidence).resolve()
+                if not path.is_relative_to(root.resolve()) or not path.is_file():
+                    raise ValueError('Missing or nonportable command evidence')
+                entry = json.loads(path.read_text())
+                if not isinstance(entry, dict):
+                    raise ValueError(f'{evidence}: command evidence must be an object')
+                if 'argv' not in entry:
+                    continue
+                if not isinstance(entry['argv'], list) or not entry['argv'] or any(not isinstance(arg, str) for arg in entry['argv']):
+                    raise ValueError(f'{evidence}: argv must be a nonempty list of strings')
+                try:
+                    started = datetime.fromisoformat(entry['started_at'])
+                    if started.tzinfo is None or started.utcoffset().total_seconds() != 0:
+                        raise ValueError('expected UTC')
+                except (KeyError, TypeError, ValueError) as error:
+                    raise ValueError(f'{evidence}: expected a valid UTC started_at') from error
+                events.append(dict(kind='command', time=entry['started_at'],
+                                   title='Recorded command', argv=entry['argv'],
+                                   detail=entry.get('error') or f"Exit code: {entry.get('exit_code')}",
+                                   record=d['id'], evidence=f"{repo}/blob/{commit}/{quote(evidence, safe='/')}"))
+            if run.get('completed_at'):
+                events.append(dict(kind='outcome', time=run['completed_at'],
+                                   title='Run completed', detail=f"{d['title']} · outcome: {d['outcome'] or 'pending'}",
+                                   checks=run.get('tests', []), record=d['id']))
+        review = d.get('review', {})
+        if d['type'] == 'REV' and task['id'] in review.get('targets', []):
+            events.append(dict(kind='review', time=d['created_at'], title='Review artifact created',
+                               detail=f"Current review status: {d['status']}; current decision: {review['decision']}. {review['rationale']}", record=d['id']))
+    return sorted(events, key=lambda e: (e['time'], e['kind']))
+
+
 def generate(root, repo, commit, dirty=False):
     root = Path(root).resolve()
     repo = repository_url(repo)
@@ -81,13 +128,14 @@ def generate(root, repo, commit, dirty=False):
             continue
         if not re.fullmatch(r'[a-z][a-z0-9-]*', base.name) or base.is_symlink():
             raise ValueError('Invalid project directory')
+        task_keys = load_task_keys(base)['tasks']
         for path in sorted(base.glob('*/*.json')):
             if path.is_symlink():
                 raise ValueError('Ledger records must not be symlinks')
             d = json.loads(path.read_text())
             if not re.fullmatch(r'(TSK|HYP|RUN|EXP|ALG|PRF|REV|DEC|PAP)-[0-9a-f-]{36}', d['id']):
                 raise ValueError('Invalid artifact identifier')
-            d = dict(d, project=base.name, source=str(path.relative_to(root)))
+            d = dict(d, project=base.name, source=str(path.relative_to(root)), task_key=task_keys.get(d['id']))
             rows.append(d)
         projects.append({'slug': base.name, 'title': 'ECDLP' if base.name == 'ecdlp' else base.name.replace('-', ' ').title()})
     rows.sort(key=lambda d: (timestamp(d), d['id']), reverse=True)
@@ -101,7 +149,7 @@ def generate(root, repo, commit, dirty=False):
                         '\n\n</div>\n')
 
     def link(d, prefix=''):
-        return f'[{text(d["title"])}]({prefix}records/{d["id"]}.md)'
+        return f'[{text((d.get("task_key") + " · " if d.get("task_key") else "") + d["title"])}]({prefix}records/{d["id"]}.md)'
 
     def table(items, prefix=''):
         if not items:
@@ -127,7 +175,7 @@ def generate(root, repo, commit, dirty=False):
         page(f'projects/{p["slug"]}.md', p['title'], body)
 
     for d in rows:
-        body = (f'**{KINDS[d["type"]]}** · `{d["id"]}` · '
+        body = (f'**{d.get("task_key") or KINDS[d["type"]]}** · `{d["id"]}` · '
                 f'[Project](../projects/{d["project"]}.md)\n\n'
                 '| Task / artifact status | Reported outcome | Mathematical proof status |\n'
                 '| --- | --- | --- |\n'
@@ -158,6 +206,8 @@ def generate(root, repo, commit, dirty=False):
         report_path = Path(d['source']).with_suffix('.md')
         body += '- ' + source_link(repo, commit, report_path, 'Original Markdown report') + '\n'
         for ev in evidence:
+            if 'private' in Path(ev).parts:
+                continue
             if Path(ev).is_absolute() or '..' in Path(ev).parts:
                 raise ValueError('Nonportable evidence path')
             body += '- ' + source_link(repo, commit, ev, Path(ev).name) + '\n'
@@ -189,7 +239,7 @@ def generate(root, repo, commit, dirty=False):
                        f'{text(KINDS[d["type"]])} · {text(d["project"])} · '
                        f'{text(d["status"])} / {text(d["outcome"] or "pending")}' for d in rows))
     page('records/index.md', 'All research records', table(rows, '../'))
-    page('index.md', 'Follow the research',
+    page('index.md', 'Research overview',
          'This public notebook is generated from the same Git-versioned state used by '
          'Codex and Claude. Both primary research targets are open and unproved.\n\n'
          '## Projects\n\n' + '\n'.join(f'- [{p["title"]}](projects/{p["slug"]}.md)' for p in projects) +
@@ -203,9 +253,19 @@ def generate(root, repo, commit, dirty=False):
                  source_link(repo, commit, relative, 'Canonical source document'))
     # Publish an allowlist, never command output, raw transcripts or private directories.
     public_records = [{k: d[k] for k in ('id', 'type', 'title', 'project', 'status',
-                      'outcome', 'proof_status', 'question', 'next_action')} |
+                      'outcome', 'proof_status', 'question', 'next_action', 'task_key')} |
                       {'updated_at': timestamp(d)} for d in rows]
-    manifest = dict(repository=repo, commit=commit, dirty=dirty, projects=projects, records=public_records)
+    tasks = []
+    for d in rows:
+        if d['type'] != 'TSK':
+            continue
+        related = [x for x in public_records if x['id'] in reference_ids(d) or
+                   d['id'] in reference_ids(by_id[x['id']])]
+        tasks.append({k: d[k] for k in ('id', 'title', 'task_key', 'project', 'status',
+                     'outcome', 'proof_status', 'question', 'rationale', 'next_action',
+                     'created_at', 'success_criteria', 'notes')} |
+                     {'activity': task_activity(root, d, rows, repo, commit), 'related': related})
+    manifest = dict(repository=repo, commit=commit, dirty=dirty, projects=projects, records=public_records, tasks=tasks)
     config_dir = web / '.vitepress'
     if config_dir.is_symlink():
         raise ValueError('Website config directory must not be a symlink')

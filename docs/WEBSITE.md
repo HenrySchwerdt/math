@@ -45,3 +45,28 @@ ledger updates are committed and the Pages workflow succeeds.
 The site keeps artifact status, run outcome and mathematical proof status
 separate. A successful test or a completed task is not a theorem. The public
 results page explicitly shows when no formally verified research exists.
+
+## Project task board and task IDs
+
+The home page is a read-only task board with Open, In progress, Blocked and
+Completed columns. Select a project, search for a task ID or title, then open a
+card to inspect its criteria, next action, linked results/reviews and recorded
+execution steps. Share the URL with `?project=ecdlp&task=ECDLP-1` to open that task.
+No steps are invented for tasks with no execution records. Recorded commands show
+argv, time and exit status, with links to the full evidence; raw output is not
+bundled in the board. A successful run does not complete its parent task.
+
+Each project's `TASKS.json` maps immutable canonical TSK UUIDs to readable display
+keys such as ECDLP-1, FACTOR-1 and LAB-1. Existing keys are never renumbered, even
+when an older record is imported. The UUID remains the cross-provider identity.
+`new PROJECT TSK` assigns a missing key automatically. To initialize/import keys:
+
+```sh
+.venv/bin/python scripts/research.py task-keys example --prefix EXAMPLE
+```
+
+Task creation/key allocation is a PI/integration operation under exclusive file
+ownership. Workers use their assigned task; they must not concurrently allocate
+numbers in separate worktrees. If two task-index edits conflict, reconcile before
+integration; validation rejects duplicate aliases. Site generation is read-only
+and never changes IDs or research status.

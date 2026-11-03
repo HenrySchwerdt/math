@@ -1,0 +1,49 @@
+{
+  "id": "RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0",
+  "type": "RUN",
+  "title": "Implement project task board and recorded steps",
+  "created_at": "2026-11-03T07:25:46.404301Z",
+  "status": "active",
+  "question": "Can visitors follow project-scoped task IDs, status and recorded research steps in a Jira-style board?",
+  "rationale": "User asked for per-project task IDs and a task-centric progress/history view; explicitly rejected promotional copy.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-4b23a091-2797-4b5f-b737-7d3ff26b75e2"
+  ],
+  "evidence": [
+    "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-75be3813-c8f6-4789-b4e6-fa0ffb6db0c1.evidence",
+    "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-84ed942a-2efd-4cfd-ba99-e6d68dc14cc3.evidence",
+    "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-1fbed1db-c756-45ee-b5d3-04e6973f73fe.evidence",
+    "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-1a4acbb8-f8eb-4f01-b2ff-3f12bc891c4b.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Build, test, review and publish the task board.",
+  "notes": "Initial alias module and registry setup preceded this RUN instrumentation; no mathematical work or fabricated task progress.",
+  "run": {
+    "started_at": "2026-11-03T07:25:46.404521Z",
+    "completed_at": null,
+    "provider": "openai",
+    "model": "unknown-runtime-id-not-exposed",
+    "role": "task-board-implementer",
+    "task": "TSK-4b23a091-2797-4b5f-b737-7d3ff26b75e2",
+    "input_hypotheses": [],
+    "starting_commit": "d7af0b6de59186603e0c133e57c9c3810bb40adc",
+    "branch": "codex/ecdlp-research-laboratory",
+    "worktree": "shared checkout; one integration writer",
+    "commands": [
+      "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-75be3813-c8f6-4789-b4e6-fa0ffb6db0c1.evidence",
+      "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-84ed942a-2efd-4cfd-ba99-e6d68dc14cc3.evidence",
+      "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-1fbed1db-c756-45ee-b5d3-04e6973f73fe.evidence",
+      "research/platform/runs/RUN-f1479ac5-053f-484b-ad23-1bb9f049bea0-command-1a4acbb8-f8eb-4f01-b2ff-3f12bc891c4b.evidence"
+    ],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable: task presentation and metadata, not research performance.",
+    "machine": "darwin-arm64; existing Python/Node environment",
+    "reviews": []
+  }
+}

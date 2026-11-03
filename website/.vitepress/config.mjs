@@ -13,7 +13,7 @@ export default defineConfig({
     siteTitle: 'Math Research',
     nav: [
       { text: 'Research', link: '/research/' },
-      { text: 'Tasks', link: '/research/tasks' },
+      { text: 'Task board', link: '/' },
       { text: 'Results', link: '/research/results' },
       { text: 'Activity', link: '/research/activity' },
     ],
@@ -39,7 +39,7 @@ export default defineConfig({
     ],
     outline: [2, 3],
     footer: {
-      message: 'Open questions. Reproducible evidence. No consensus-based proof.',
+      message: 'Research state generated from the shared Git ledger.',
       copyright: `Snapshot ${ledger.commit.slice(0, 7)} · Built from the shared Git ledger`,
     },
   },
