@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "research/ecdlp/experiments/round16-frontier-g/run_batch.sh",
+    "200",
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:10:14.516556Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T13:13:36.137663Z",
+  "truncated": false,
+  "output": "==> log_evolve_0.txt <==\nslice-saved random_s0 186\n\n==> log_evolve_1.txt <==\nslice-saved random_s1 181\n\n==> log_evolve_2.txt <==\nslice-saved random_s2 85\n\n==> log_evolve_3.txt <==\nslice-saved random_s3 120\n"
+}

@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round16-inventor-h && python3 e2tree.py 24"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T13:12:00.606331Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T13:12:47.964534Z",
+  "truncated": false,
+  "output": "24 0 False {'L1_top4/15': (0.0623, False), 'L1_top4/255': (0.0633, False), 'L1_top4/4095': (0.0638, False), 'L2_mod16/15': (0.0627, False), 'L2_mod16/255': (0.0627, False), 'L2_mod16/4095': (0.0623, False)}\n24 0 True {'L1_top4/15': (0.2498, True), 'L1_top4/255': (0.25, True), 'L1_top4/4095': (0.2499, True), 'L2_mod16/15': (0.0627, False), 'L2_mod16/255': (0.0627, False), 'L2_mod16/4095': (0.0625, False)}\n24 1 False {'L1_top4/15': (0.0623, False), 'L1_top4/255': (0.0613, False), 'L1_top4/4095': (0.0625, False), 'L2_mod16/15': (0.0615, False), 'L2_mod16/255': (0.0615, False), 'L2_mod16/4095': (0.0611, False)}\n24 2 False {'L1_top4/15': (0.0621, False), 'L1_top4/255': (0.062, False), 'L1_top4/4095': (0.0623, False), 'L2_mod16/15': (0.0625, False), 'L2_mod16/255': (0.063, False), 'L2_mod16/4095': (0.0625, False)}\n"
+}

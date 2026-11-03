@@ -11,7 +11,18 @@
   "refs": [
     "TSK-4d881215-6e2d-4d8e-a3be-97d8467208b1"
   ],
-  "evidence": [],
+  "evidence": [
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-00cd99d3-0e6d-4418-8fb4-6c1b4bbf1f07.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-6aff3db7-0c9b-4313-abec-6a1016ca2f04.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-d6b2afe9-7129-4442-887f-bb128989585d.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-0ebf2258-48e0-4095-87e7-45c39c85057b.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-726d588f-f09f-4eb3-9603-2722166e1288.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-545adb3d-2f1c-4fb7-87ba-97e14fa342af.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8e5bca93-1f82-425f-a56b-a93efc451c24.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-23761ee7-e5fc-45ac-94a1-cb8b327dda09.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8ad7a806-f625-491c-afa0-030c044af27e.evidence",
+    "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-4d46f25a-d86f-4886-9c64-b5cf4fdfcd4e.evidence"
+  ],
   "claims": [],
   "proof_status": "not-applicable",
   "outcome": null,
@@ -28,7 +39,18 @@
     "starting_commit": "2bd5fef7dc9d6b305387bbc9758ced868e324dec",
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
-    "commands": [],
+    "commands": [
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-00cd99d3-0e6d-4418-8fb4-6c1b4bbf1f07.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-6aff3db7-0c9b-4313-abec-6a1016ca2f04.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-d6b2afe9-7129-4442-887f-bb128989585d.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-0ebf2258-48e0-4095-87e7-45c39c85057b.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-726d588f-f09f-4eb3-9603-2722166e1288.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-545adb3d-2f1c-4fb7-87ba-97e14fa342af.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8e5bca93-1f82-425f-a56b-a93efc451c24.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-23761ee7-e5fc-45ac-94a1-cb8b327dda09.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-8ad7a806-f625-491c-afa0-030c044af27e.evidence",
+      "research/ecdlp/runs/RUN-b16fc67e-0f0e-413b-ab86-645ac90192bf-command-4d46f25a-d86f-4886-9c64-b5cf4fdfcd4e.evidence"
+    ],
     "files_changed": [],
     "resulting_commit": null,
     "tests": [],
