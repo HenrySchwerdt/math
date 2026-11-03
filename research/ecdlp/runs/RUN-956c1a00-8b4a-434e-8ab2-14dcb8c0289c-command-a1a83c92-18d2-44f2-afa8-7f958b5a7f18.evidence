@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round12-eth-transfer/q2_decomp_size.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:57:46.712249Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:57:47.529261Z",
+  "truncated": false,
+  "output": "{\"log2p\": 8, \"N_dec\": 2703, \"clauses\": 8832}\n{\"log2p\": 12, \"N_dec\": 7190, \"clauses\": 23787}\n{\"log2p\": 16, \"N_dec\": 12420, \"clauses\": 41250}\n{\"log2p\": 20, \"N_dec\": 18558, \"clauses\": 61785}\n{\"log2p\": 24, \"N_dec\": 28194, \"clauses\": 94110}\n{\"log2p\": 32, \"N_dec\": 45706, \"clauses\": 152793}\n{\"log2p\": 40, \"N_dec\": 75360, \"clauses\": 252466}\n{\"log2p\": 48, \"N_dec\": 102942, \"clauses\": 345036}\n{\"log2p\": 64, \"N_dec\": 186588, \"clauses\": 626409}\nfit N_dec ~ (log2 p)^1.996 ; N_dec/(log2 p)^2 at 64 bits = 45.55\n"
+}

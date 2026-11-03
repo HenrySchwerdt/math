@@ -1,0 +1,4 @@
+{"bits": 12, "p": 3511, "r": 3433, "nmax": 2, "table": 4, "coverage": 0.0011651616661811825, "planted": "50/50", "random_success": "0/300"}
+{"bits": 16, "p": 34039, "r": 34033, "nmax": 2, "table": 4, "coverage": 0.0001175329826932683, "planted": "50/50", "random_success": "0/300"}
+{"bits": 20, "p": 868423, "r": 867007, "nmax": 3, "table": 6, "coverage": 6.920359351193243e-06, "planted": "50/50", "random_success": "0/300"}
+{"bits": 24, "p": 15484783, "r": 15481009, "nmax": 3, "table": 6, "coverage": 3.875716369650066e-07, "planted": "50/50", "random_success": "0/300"}
