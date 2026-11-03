@@ -1,0 +1,55 @@
+{
+  "id": "RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b",
+  "type": "RUN",
+  "title": "Round 21 / idea tournament B: new algebraic-geometric structures (beyond index calculus)",
+  "created_at": "2026-11-03T18:11:52.451586Z",
+  "status": "completed",
+  "question": "Invent at least 5 mechanisms for ECDLP on generic prime-order prime-field curves that are NOT in the ledger; gate each on paper against the obstruction map (relation supply, finder cost, leakage bar eps ~ r^-1/4, isogeny invariance, generic-model bound); prototype and benchmark any survivor against a same-implementation rho control.",
+  "rationale": "Bounded run for TSK-6832bf3c-b596-4cec-9c05-98d106d7a50b",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-6832bf3c-b596-4cec-9c05-98d106d7a50b"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-8fee1178-2027-46f2-bd4a-358fad626e89.evidence",
+    "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-4bb4f34b-1815-4ed3-bee0-e81aea31b808.evidence",
+    "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-efb387f2-6446-4c23-9f0a-c4b79157af5a.evidence",
+    "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-1b0f62dc-7306-4a38-a307-122247470268.evidence",
+    "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-2393285d-01bb-49b3-a256-dbee0d1ceaf0.evidence",
+    "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-0a5b24ff-49b9-4d94-88e2-801483fbb415.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "refuted",
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T18:11:52.452176Z",
+    "completed_at": "2026-11-03T18:23:29.342503Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "frontier-explorer",
+    "task": "TSK-6832bf3c-b596-4cec-9c05-98d106d7a50b",
+    "input_hypotheses": [],
+    "starting_commit": "a02b391bd4077bf5f0150c00f0d8577c2cc7b7cb",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [
+      "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-8fee1178-2027-46f2-bd4a-358fad626e89.evidence",
+      "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-4bb4f34b-1815-4ed3-bee0-e81aea31b808.evidence",
+      "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-efb387f2-6446-4c23-9f0a-c4b79157af5a.evidence",
+      "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-1b0f62dc-7306-4a38-a307-122247470268.evidence",
+      "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-2393285d-01bb-49b3-a256-dbee0d1ceaf0.evidence",
+      "research/ecdlp/runs/RUN-ddba8952-15a1-4554-a0ce-4682fbdadd6b-command-0a5b24ff-49b9-4d94-88e2-801483fbb415.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/experiments/round21-tournament-b/"
+    ],
+    "resulting_commit": "9a978afd95d268ab8a9720ae538c1f31e37f94ba",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

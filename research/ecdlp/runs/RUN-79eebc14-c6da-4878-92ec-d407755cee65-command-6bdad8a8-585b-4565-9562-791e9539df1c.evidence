@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round21-tournament-c/run_c.py",
+    "e3"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:20:56.283537Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T18:20:56.951754Z",
+  "truncated": false,
+  "output": "{\"p\": 211, \"a\": 144, \"b\": 91, \"shape\": [57, 57], \"identity_ok\": true, \"rank_scaled\": 3, \"rank_unscaled\": 57}\n{\"p\": 1009, \"a\": 184, \"b\": 12, \"shape\": [120, 120], \"identity_ok\": true, \"rank_scaled\": 3, \"rank_unscaled\": 120}\n{\"r\": 137, \"n\": 7, \"injective\": true, \"cuts\": [{\"cut\": 1, \"rank\": 2, \"sv_min\": 8.000000000000002, \"sv_max\": 8.000000000000002, \"flat\": true}, {\"cut\": 2, \"rank\": 4, \"sv_min\": 5.65685424949238, \"sv_max\": 5.65685424949238, \"flat\": true}, {\"cut\": 3, \"rank\": 8, \"sv_min\": 3.9999999999999996, \"sv_max\": 3.9999999999999996, \"flat\": true}, {\"cut\": 4, \"rank\": 16, \"sv_min\": 2.8284271247461903, \"sv_max\": 2.8284271247461903, \"flat\": true}, {\"cut\": 5, \"rank\": 32, \"sv_min\": 2.0, \"sv_max\": 2.0, \"flat\": true}, {\"cut\": 6, \"rank\": 64, \"sv_min\": 1.4142135623730951, \"sv_max\": 1.4142135623730951, \"flat\": true}, {\"cut\": 7, \"rank\": 128, \"sv_min\": 1.0, \"sv_max\": 1.0, \"flat\": true}], \"a_vs_target_rank\": 128, \"a_vs_target_flat\": true}\n{\"r\": 1013, \"n\": 9, \"injective\": true, \"cuts\": [{\"cut\": 1, \"rank\": 2, \"sv_min\": 16.0, \"sv_max\": 16.0, \"flat\": true}, {\"cut\": 2, \"rank\": 4, \"sv_min\": 11.313708498984761, \"sv_max\": 11.313708498984761, \"flat\": true}, {\"cut\": 3, \"rank\": 8, \"sv_min\": 8.000000000000002, \"sv_max\": 8.000000000000002, \"flat\": true}, {\"cut\": 4, \"rank\": 16, \"sv_min\": 5.65685424949238, \"sv_max\": 5.65685424949238, \"flat\": true}, {\"cut\": 5, \"rank\": 32, \"sv_min\": 3.9999999999999996, \"sv_max\": 3.9999999999999996, \"flat\": true}, {\"cut\": 6, \"rank\": 64, \"sv_min\": 2.8284271247461903, \"sv_max\": 2.8284271247461903, \"flat\": true}, {\"cut\": 7, \"rank\": 128, \"sv_min\": 2.0, \"sv_max\": 2.0, \"flat\": true}, {\"cut\": 8, \"rank\": 256, \"sv_min\": 1.4142135623730951, \"sv_max\": 1.4142135623730951, \"flat\": true}, {\"cut\": 9, \"rank\": 512, \"sv_min\": 1.0, \"sv_max\": 1.0, \"flat\": true}], \"a_vs_target_rank\": 512, \"a_vs_target_flat\": true}\n"
+}

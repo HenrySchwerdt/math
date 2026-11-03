@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round21-tournament-c/run_c.py",
+    "e4",
+    "16",
+    "2"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:23:26.840111Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T18:23:27.614009Z",
+  "truncated": false,
+  "output": "Traceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round21-tournament-c/run_c.py\", line 440, in <module>\n    elif cmd == 'e4': e4([int(b) for b in sys.argv[2].split(',')], int(sys.argv[3]) if len(sys.argv) > 3 else 2)\n                      ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<repo>/research/ecdlp/experiments/round21-tournament-c/run_c.py\", line 280, in e4\n    d = (xs - X) % p\n         ~~~^~~\nValueError: operands could not be broadcast together with shapes (16590,) (33180,) \n"
+}

@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round21-tournament-b && timeout 250 python3 check_miller.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:18:54.797204Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T18:18:54.964558Z",
+  "truncated": false,
+  "output": "11 1 5 11 tested 8 mismatch 0\n13 1 6 13 tested 10 mismatch 0\n17 1 3 17 tested 14 mismatch 0\n19 1 4 19 tested 16 mismatch 0\n23 1 4 29 tested 26 mismatch 0\n29 1 11 29 tested 26 mismatch 0\n31 1 3 41 tested 38 mismatch 0\n37 1 12 29 tested 26 mismatch 0\n41 1 5 47 tested 44 mismatch 0\n43 1 3 47 tested 44 mismatch 0\nALL OK\n"
+}

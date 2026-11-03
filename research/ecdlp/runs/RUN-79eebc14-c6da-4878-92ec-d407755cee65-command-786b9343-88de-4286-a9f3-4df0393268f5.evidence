@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round21-tournament-c/run_c.py",
+    "e5"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:21:06.679398Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T18:21:16.653285Z",
+  "truncated": false,
+  "output": "{\"bits\": 16, \"seed\": 1, \"p\": 58687, \"r\": 58741, \"target\": \"j\", \"obs\": 3, \"null_max\": 4, \"null_mean\": 3.1, \"planted\": 356, \"planted_expected\": 356, \"exceeds_null\": false}\n{\"bits\": 16, \"seed\": 1, \"p\": 58687, \"r\": 58741, \"target\": \"j^2\", \"obs\": 3, \"null_max\": 4, \"null_mean\": 3.1, \"planted\": 379, \"planted_expected\": 379, \"exceeds_null\": false}\n{\"bits\": 16, \"seed\": 2, \"p\": 61603, \"r\": 61673, \"target\": \"j\", \"obs\": 3, \"null_max\": 4, \"null_mean\": 3.15, \"planted\": 375, \"planted_expected\": 375, \"exceeds_null\": false}\n{\"bits\": 16, \"seed\": 2, \"p\": 61603, \"r\": 61673, \"target\": \"j^2\", \"obs\": 4, \"null_max\": 4, \"null_mean\": 3.05, \"planted\": 368, \"planted_expected\": 368, \"exceeds_null\": false}\n{\"bits\": 16, \"seed\": 3, \"p\": 55381, \"r\": 55219, \"target\": \"j\", \"obs\": 4, \"null_max\": 3, \"null_mean\": 3.0, \"planted\": 337, \"planted_expected\": 337, \"exceeds_null\": true}\n{\"bits\": 16, \"seed\": 3, \"p\": 55381, \"r\": 55219, \"target\": \"j^2\", \"obs\": 3, \"null_max\": 4, \"null_mean\": 3.1, \"planted\": 360, \"planted_expected\": 360, \"exceeds_null\": false}\n{\"bits\": 18, \"seed\": 1, \"p\": 217733, \"r\": 216859, \"target\": \"j\", \"obs\": 3, \"null_max\": 3, \"null_mean\": 2.7, \"planted\": 337, \"planted_expected\": 337, \"exceeds_null\": false}\n{\"bits\": 18, \"seed\": 1, \"p\": 217733, \"r\": 216859, \"target\": \"j^2\", \"obs\": 3, \"null_max\": 3, \"null_mean\": 2.95, \"planted\": 360, \"planted_expected\": 360, \"exceeds_null\": false}\n{\"bits\": 18, \"seed\": 2, \"p\": 174959, \"r\": 174347, \"target\": \"j\", \"obs\": 3, \"null_max\": 3, \"null_mean\": 2.9, \"planted\": 352, \"planted_expected\": 352, \"exceeds_null\": false}\n{\"bits\": 18, \"seed\": 2, \"p\": 174959, \"r\": 174347, \"target\": \"j^2\", \"obs\": 3, \"null_max\": 3, \"null_mean\": 2.95, \"planted\": 368, \"planted_expected\": 368, \"exceeds_null\": false}\n{\"bits\": 18, \"seed\": 3, \"p\": 179689, \"r\": 179161, \"target\": \"j\", \"obs\": 3, \"null_max\": 3, \"null_mean\": 3.0, \"planted\": 325, \"planted_expected\": 325, \"exceeds_null\": false}\n{\"bits\": 18, \"seed\": 3, \"p\": 179689, \"r\": 179161, \"target\": \"j^2\", \"obs\": 3, \"null_max\": 3, \"null_mean\": 3.0, \"planted\": 368, \"planted_expected\": 368, \"exceeds_null\": false}\n"
+}

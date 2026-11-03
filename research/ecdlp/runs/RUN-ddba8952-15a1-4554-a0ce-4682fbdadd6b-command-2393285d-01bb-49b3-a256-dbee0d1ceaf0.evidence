@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round21-tournament-b && timeout 275 python3 rho_control.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:20:28.234146Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T18:20:28.753661Z",
+  "truncated": false,
+  "output": "(911, 97.65)\n(1511, 121.275)\n(2179, 138.275)\n(4513, 201.35)\n(6121, 266.35)\n(12893, 345.675)\n{\"alpha\": 3.094026406707192, \"gamma\": 1.8753524954574439, \"R2\": 0.984775809111251, \"n_curves\": 6, \"instances_per_curve\": 120}\n"
+}

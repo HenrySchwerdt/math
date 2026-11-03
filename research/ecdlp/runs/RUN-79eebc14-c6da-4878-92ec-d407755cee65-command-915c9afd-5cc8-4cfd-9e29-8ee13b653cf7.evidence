@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round21-tournament-c/run_c.py",
+    "e6",
+    "12,14,16,18,20"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:21:06.678479Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T18:21:07.062636Z",
+  "truncated": false,
+  "output": "12 126.1\n14 249.6\n16 374.5\n18 617.0\n20 1058.3\n"
+}

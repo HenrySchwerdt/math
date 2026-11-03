@@ -1,0 +1,142 @@
+[
+ {
+  "seq": "factorial",
+  "control": true,
+  "nullities": {
+   "1,1": 1,
+   "1,2": 2,
+   "2,1": 2,
+   "2,2": 4
+  }
+ },
+ {
+  "seq": "catalan",
+  "control": true,
+  "nullities": {
+   "1,1": 1,
+   "1,2": 2,
+   "2,1": 2,
+   "2,2": 4
+  }
+ },
+ {
+  "bits": 14,
+  "seed": 1,
+  "p": 11321,
+  "r": 11273,
+  "seq": "x",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ },
+ {
+  "bits": 14,
+  "seed": 1,
+  "p": 11321,
+  "r": 11273,
+  "seq": "y",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ },
+ {
+  "bits": 14,
+  "seed": 1,
+  "p": 11321,
+  "r": 11273,
+  "seq": "prod",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ },
+ {
+  "bits": 14,
+  "seed": 2,
+  "p": 16267,
+  "r": 16339,
+  "seq": "x",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ },
+ {
+  "bits": 14,
+  "seed": 2,
+  "p": 16267,
+  "r": 16339,
+  "seq": "y",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ },
+ {
+  "bits": 14,
+  "seed": 2,
+  "p": 16267,
+  "r": 16339,
+  "seq": "prod",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ },
+ {
+  "bits": 18,
+  "seed": 1,
+  "p": 252037,
+  "r": 252283,
+  "seq": "x",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ },
+ {
+  "bits": 18,
+  "seed": 1,
+  "p": 252037,
+  "r": 252283,
+  "seq": "y",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ },
+ {
+  "bits": 18,
+  "seed": 1,
+  "p": 252037,
+  "r": 252283,
+  "seq": "prod",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ },
+ {
+  "bits": 18,
+  "seed": 2,
+  "p": 145501,
+  "r": 145807,
+  "seq": "x",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ },
+ {
+  "bits": 18,
+  "seed": 2,
+  "p": 145501,
+  "r": 145807,
+  "seq": "y",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ },
+ {
+  "bits": 18,
+  "seed": 2,
+  "p": 145501,
+  "r": 145807,
+  "seq": "prod",
+  "control": false,
+  "found": [],
+  "grid": "d1-6,e0-6"
+ }
+]

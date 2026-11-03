@@ -1,0 +1,26 @@
+{
+  "id": "EVT-9546fc07-aec0-4962-9d0f-5eda97721593",
+  "kind": "task-status-change",
+  "task": "TSK-8b6c1982-df73-45f1-bd1a-823d976c7536",
+  "task_key": "ECDLP-66",
+  "timestamp": "2026-11-03T18:28:16.512374Z",
+  "run": "RUN-79eebc14-c6da-4878-92ec-d407755cee65",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "frontier-explorer"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "8 mechanisms closed; RS list decoding d>=2 formally open, low prior",
+  "before_sha256": "15cfe9e2e3f904a1be5aaf0a91dd1782ef85474438a776b4358fc3e95ad6d152",
+  "after_sha256": "9b07558071f3040d2b8ee3adbe3ee4dc74131d1a23c7cb9991a8d9c44704bc26"
+}

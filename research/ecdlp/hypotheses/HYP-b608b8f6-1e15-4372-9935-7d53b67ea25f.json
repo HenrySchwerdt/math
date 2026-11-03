@@ -1,0 +1,26 @@
+{
+  "id": "HYP-b608b8f6-1e15-4372-9935-7d53b67ea25f",
+  "type": "HYP",
+  "title": "Tournament A: 8 dynamics/physics mechanisms all hit walls; Koopman orbit spectrum null",
+  "created_at": "2026-11-03T18:18:52.037431Z",
+  "status": "completed",
+  "question": "Idea tournament A (ECDLP-64, dynamics/physics-inspired mechanisms): 8 new mechanisms, none survives. A1 Koopman/Prony/DMD on the translation orbit f(jP) (sparse spectrum would compare P and Q orbits by phase): passed the paper gate conditionally, killed by pre-registered test (9 prime-order curves at 16/20/24 bits, 3 seeds, N=400, 6 observables): Hankel participation-ratio z in [-2.6,+2.2] (threshold -3 never met), AR(30) one-step NMSE 1.03-1.61 (threshold 0.9), Berlekamp-Massey linear complexity exactly 200 on all 18 raw x/y sequences (= random), planted 5-frequency control detected on all 9 curves (PR <= 5.04, NMSE ~0.005). Killed on paper: A2 Metropolis-biased walk (generic bound, = DP rho), A3 commuting maps / Lattes dynamics of [m] (orbits depend on k only via ord_r(m)), A4 belief propagation on bit-decomposition graph (exact BP = BSGS/MITM), A5 renormalisation of k (Z/r has no filtration; MSB block-spin closed by round 20), A6 p-adic canonical-lift energy landscape (linear coordinate lives on the p-part, Q component 0), A7 diffusion-map embedding of Hecke chain (needs distance oracle = leak), A8 cat-map dynamics on E x E (bijective, no birthday). Common obstruction: group operations are bijections with known coefficients (no birthday) and any non-injective ingredient is an equidistributed x-hash; a new dynamical idea needs a computable non-injective map on points with non-uniform collisions.",
+  "rationale": "User directive 2026-11-03: original research, not re-testing literature.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-9fe2318a-a1ca-40bb-a683-8b39d8521d6d"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round21-tournament-a/PROTOCOL.md",
+    "research/ecdlp/experiments/round21-tournament-a/koopman_results.json",
+    "research/ecdlp/experiments/round21-tournament-a/koopman.py"
+  ],
+  "claims": [
+    "Idea tournament A (ECDLP-64, dynamics/physics-inspired mechanisms): 8 new mechanisms, none survives. A1 Koopman/Prony/DMD on the translation orbit f(jP) (sparse spectrum would compare P and Q orbits by phase): passed the paper gate conditionally, killed by pre-registered test (9 prime-order curves at 16/20/24 bits, 3 seeds, N=400, 6 observables): Hankel participation-ratio z in [-2.6,+2.2] (threshold -3 never met), AR(30) one-step NMSE 1.03-1.61 (threshold 0.9), Berlekamp-Massey linear complexity exactly 200 on all 18 raw x/y sequences (= random), planted 5-frequency control detected on all 9 curves (PR <= 5.04, NMSE ~0.005). Killed on paper: A2 Metropolis-biased walk (generic bound, = DP rho), A3 commuting maps / Lattes dynamics of [m] (orbits depend on k only via ord_r(m)), A4 belief propagation on bit-decomposition graph (exact BP = BSGS/MITM), A5 renormalisation of k (Z/r has no filtration; MSB block-spin closed by round 20), A6 p-adic canonical-lift energy landscape (linear coordinate lives on the p-part, Q component 0), A7 diffusion-map embedding of Hecke chain (needs distance oracle = leak), A8 cat-map dynamics on E x E (bijective, no birthday). Common obstruction: group operations are bijections with known coefficients (no birthday) and any non-injective ingredient is an equidistributed x-hash; a new dynamical idea needs a computable non-injective map on points with non-uniform collisions."
+  ],
+  "proof_status": "experimental",
+  "outcome": "refuted",
+  "next_action": "Closed. Open design target recorded: a computable non-injective map on E(F_p) whose collisions are not uniform.",
+  "notes": "PI re-ran koopman.py via exec: stdout and koopman_results.json identical. Protocol sha256 a54511ee... verifies. One unregistered periodogram z=3.7 among 54 sequences, non-replicating. A1 is the dynamical form of Lange-Winterhof-type results (not new in principle). A2-A8 are unreviewed paper sketches; Ritt, Smart, Lange-Winterhof cited from memory."
+}

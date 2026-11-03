@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round21-tournament-a/koopman.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T18:18:19.394037Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T18:18:36.410127Z",
+  "truncated": false,
+  "output": "16 1 BM 200 200 [200, 200, 200] planted PR=5.01 NMSE=0.006 O1 z=0.3 nmse=1.104 | O2 z=-0.5 nmse=1.268 | O3 z=0.3 nmse=1.195 | O4 z=-0.1 nmse=1.144 | O5 z=-0.7 nmse=1.260 | O6 z=0.8 nmse=1.101\n16 2 BM 200 200 [200, 200, 200] planted PR=5.03 NMSE=0.005 O1 z=1.8 nmse=1.172 | O2 z=-0.3 nmse=1.201 | O3 z=-1.8 nmse=1.048 | O4 z=0.2 nmse=1.052 | O5 z=0.2 nmse=1.223 | O6 z=-0.6 nmse=1.129\n16 3 BM 200 200 [200, 200, 200] planted PR=4.80 NMSE=0.006 O1 z=1.4 nmse=1.107 | O2 z=2.2 nmse=1.242 | O3 z=0.0 nmse=1.170 | O4 z=-1.1 nmse=1.449 | O5 z=0.5 nmse=1.302 | O6 z=-2.1 nmse=1.160\n20 1 BM 200 200 [200, 200, 200] planted PR=5.04 NMSE=0.006 O1 z=2.0 nmse=1.075 | O2 z=0.3 nmse=1.228 | O3 z=0.2 nmse=1.206 | O4 z=0.5 nmse=1.083 | O5 z=-0.2 nmse=1.321 | O6 z=-2.6 nmse=1.177\n20 2 BM 200 200 [200, 200, 200] planted PR=5.04 NMSE=0.006 O1 z=-0.9 nmse=1.233 | O2 z=-1.6 nmse=1.094 | O3 z=0.4 nmse=1.026 | O4 z=0.7 nmse=1.230 | O5 z=-2.6 nmse=1.524 | O6 z=-0.1 nmse=1.266\n20 3 BM 200 200 [200, 200, 200] planted PR=3.21 NMSE=0.005 O1 z=1.1 nmse=1.223 | O2 z=-0.2 nmse=1.105 | O3 z=-0.8 nmse=1.143 | O4 z=-1.6 nmse=1.160 | O5 z=0.4 nmse=1.243 | O6 z=0.7 nmse=1.092\n24 1 BM 200 200 [200, 200, 200] planted PR=5.00 NMSE=0.006 O1 z=0.3 nmse=1.238 | O2 z=0.9 nmse=1.146 | O3 z=0.9 nmse=1.062 | O4 z=1.7 nmse=1.250 | O5 z=0.3 nmse=1.305 | O6 z=-0.6 nmse=1.344\n24 2 BM 200 200 [200, 200, 200] planted PR=5.04 NMSE=0.005 O1 z=0.6 nmse=1.133 | O2 z=-0.3 nmse=1.230 | O3 z=1.0 nmse=1.163 | O4 z=-1.8 nmse=1.136 | O5 z=-0.5 nmse=1.155 | O6 z=-2.2 nmse=1.249\n24 3 BM 200 200 [200, 200, 200] planted PR=5.03 NMSE=0.005 O1 z=1.7 nmse=1.263 | O2 z=1.9 nmse=1.213 | O3 z=0.1 nmse=1.307 | O4 z=-0.4 nmse=1.607 | O5 z=0.1 nmse=1.307 | O6 z=0.1 nmse=1.120\n"
+}
