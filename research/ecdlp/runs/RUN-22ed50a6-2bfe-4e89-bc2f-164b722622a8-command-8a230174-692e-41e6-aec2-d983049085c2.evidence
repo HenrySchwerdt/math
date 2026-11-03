@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round13-inventor-d && timeout 250 python3 groebner_check.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:10:01.107523Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:10:06.592465Z",
+  "truncated": false,
+  "output": "{\"p\": 257, \"d\": 16, \"groebner_seconds\": 0.019069194793701172, \"n_basis\": 2, \"deg_univariate\": 4, \"brute\": 4, \"gb_solutions\": 4, \"equal\": true}\n{\"p\": 1153, \"d\": 32, \"groebner_seconds\": 0.08067584037780762, \"n_basis\": 2, \"deg_univariate\": 2, \"brute\": 2, \"gb_solutions\": 2, \"equal\": true}\n{\"p\": 4289, \"d\": 64, \"groebner_seconds\": 0.5504944324493408, \"n_basis\": 2, \"deg_univariate\": 1, \"brute\": 1, \"gb_solutions\": 1, \"equal\": true}\n{\"p\": 17921, \"d\": 128, \"groebner_seconds\": 4.3547587394714355, \"n_basis\": 2, \"deg_univariate\": 2, \"brute\": 2, \"gb_solutions\": 2, \"equal\": true}\n"
+}

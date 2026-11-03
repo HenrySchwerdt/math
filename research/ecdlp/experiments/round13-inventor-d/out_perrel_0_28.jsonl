@@ -1,0 +1,3 @@
+{"bits": 28, "seed": 1, "kind": "coset", "p": 215891969, "r": 215877947, "d": 16384, "s": 8136, "targets": 40, "hit_targets": 19, "relations": 52, "adds_finder": 650880, "wall": 0.12926578521728516}
+{"bits": 28, "seed": 2, "kind": "coset", "p": 232980481, "r": 232977907, "d": 16384, "s": 8275, "targets": 40, "hit_targets": 20, "relations": 48, "adds_finder": 662000, "wall": 0.14049911499023438}
+{"bits": 28, "seed": 3, "kind": "coset", "p": 215482369, "r": 215508803, "d": 16384, "s": 8264, "targets": 40, "hit_targets": 16, "relations": 40, "adds_finder": 661120, "wall": 0.1383955478668213}

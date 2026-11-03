@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round13-inventor-d && python3 run_d2.py perrel 0 26 1,2,3 coset,smallx && python3 run_d2.py perrel 0 28 1,2,3 coset"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:10:06.657266Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:10:08.732179Z",
+  "truncated": false,
+  "output": "{\"bits\": 26, \"seed\": 1, \"kind\": \"coset\", \"p\": 51191809, \"r\": 51196511, \"d\": 8192, \"s\": 4067, \"targets\": 40, \"hit_targets\": 22, \"relations\": 60, \"adds_finder\": 325360, \"wall\": 0.060408592224121094}\n{\"bits\": 26, \"seed\": 1, \"kind\": \"smallx\", \"p\": 51191809, \"r\": 51196511, \"d\": 8192, \"s\": 4067, \"targets\": 40, \"hit_targets\": 22, \"relations\": 58, \"adds_finder\": 325360, \"wall\": 0.055652618408203125}\n{\"bits\": 26, \"seed\": 2, \"kind\": \"coset\", \"p\": 62545921, \"r\": 62536373, \"d\": 8192, \"s\": 4184, \"targets\": 40, \"hit_targets\": 15, \"relations\": 38, \"adds_finder\": 334720, \"wall\": 0.06614923477172852}\n{\"bits\": 26, \"seed\": 2, \"kind\": \"smallx\", \"p\": 62545921, \"r\": 62536373, \"d\": 8192, \"s\": 4184, \"targets\": 40, \"hit_targets\": 17, \"relations\": 40, \"adds_finder\": 334720, \"wall\": 0.06490445137023926}\n{\"bits\": 26, \"seed\": 3, \"kind\": \"coset\", \"p\": 52174849, \"r\": 52165297, \"d\": 8192, \"s\": 4081, \"targets\": 40, \"hit_targets\": 20, \"relations\": 56, \"adds_finder\": 326480, \"wall\": 0.056365966796875}\n{\"bits\": 26, \"seed\": 3, \"kind\": \"smallx\", \"p\": 52174849, \"r\": 52165297, \"d\": 8192, \"s\": 4081, \"targets\": 40, \"hit_targets\": 19, \"relations\": 58, \"adds_finder\": 326480, \"wall\": 0.05704927444458008}\n{\"bits\": 28, \"seed\": 1, \"kind\": \"coset\", \"p\": 215891969, \"r\": 215877947, \"d\": 16384, \"s\": 8136, \"targets\": 40, \"hit_targets\": 19, \"relations\": 52, \"adds_finder\": 650880, \"wall\": 0.12926578521728516}\n{\"bits\": 28, \"seed\": 2, \"kind\": \"coset\", \"p\": 232980481, \"r\": 232977907, \"d\": 16384, \"s\": 8275, \"targets\": 40, \"hit_targets\": 20, \"relations\": 48, \"adds_finder\": 662000, \"wall\": 0.14049911499023438}\n{\"bits\": 28, \"seed\": 3, \"kind\": \"coset\", \"p\": 215482369, \"r\": 215508803, \"d\": 16384, \"s\": 8264, \"targets\": 40, \"hit_targets\": 16, \"relations\": 40, \"adds_finder\": 661120, \"wall\": 0.1383955478668213}\n"
+}

@@ -1,0 +1,6 @@
+{"bits": 26, "seed": 1, "kind": "coset", "p": 51191809, "r": 51196511, "d": 8192, "s": 4067, "targets": 40, "hit_targets": 22, "relations": 60, "adds_finder": 325360, "wall": 0.060408592224121094}
+{"bits": 26, "seed": 1, "kind": "smallx", "p": 51191809, "r": 51196511, "d": 8192, "s": 4067, "targets": 40, "hit_targets": 22, "relations": 58, "adds_finder": 325360, "wall": 0.055652618408203125}
+{"bits": 26, "seed": 2, "kind": "coset", "p": 62545921, "r": 62536373, "d": 8192, "s": 4184, "targets": 40, "hit_targets": 15, "relations": 38, "adds_finder": 334720, "wall": 0.06614923477172852}
+{"bits": 26, "seed": 2, "kind": "smallx", "p": 62545921, "r": 62536373, "d": 8192, "s": 4184, "targets": 40, "hit_targets": 17, "relations": 40, "adds_finder": 334720, "wall": 0.06490445137023926}
+{"bits": 26, "seed": 3, "kind": "coset", "p": 52174849, "r": 52165297, "d": 8192, "s": 4081, "targets": 40, "hit_targets": 20, "relations": 56, "adds_finder": 326480, "wall": 0.056365966796875}
+{"bits": 26, "seed": 3, "kind": "smallx", "p": 52174849, "r": 52165297, "d": 8192, "s": 4081, "targets": 40, "hit_targets": 19, "relations": 58, "adds_finder": 326480, "wall": 0.05704927444458008}
