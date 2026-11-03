@@ -4,3 +4,9 @@ S2 x prime                 dens/mean=0.083 T=22.11 at h=185931  null mean=22.36 
 S3 x squarefree            dens/mean=0.608 T=23.93 at h=222759  null mean=22.38 max=29.99  rank_p=0.2488  ln(r/2)=12.48
 S4 y smooth                dens/mean=0.080 T=13.63 at h=9495  null mean=22.38 max=31.42  rank_p=1.0000  ln(r/2)=12.48
 S5 Liouville(x)            dens/mean=-0.000 T=25.04 at h=230366  null mean=22.54 max=32.47  rank_p=0.1343  ln(r/2)=12.48
+S6 Jacobi(x/p) control     dens/mean=0.499 T=4.00 at h=65471  null mean=22.60 max=48.44  rank_p=1.0000  ln(r/2)=12.48
+S7 x+1 smooth              dens/mean=0.080 T=26.49 at h=22342  null mean=22.11 max=32.43  rank_p=0.0398  ln(r/2)=12.48
+S8 gcd(x,6)==1             dens/mean=0.333 T=19.79 at h=19392  null mean=22.34 max=32.33  rank_p=0.8706  ln(r/2)=12.48
+C+ interval-in-k           dens/mean=0.500 T=213916.98 at h=1  null mean=22.59 max=31.43  rank_p=0.0050  ln(r/2)=12.48
+C- random even             dens/mean=0.500 T=24.80 at h=200012  null mean=22.22 max=40.83  rank_p=0.1294  ln(r/2)=12.48
+seed 2 p 525221 a,b 379465 467422 r 524827

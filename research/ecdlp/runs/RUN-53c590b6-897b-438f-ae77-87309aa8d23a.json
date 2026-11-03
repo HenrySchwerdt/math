@@ -7,20 +7,52 @@
   "question": "Barrier inversion: enumerate every barrier the lab has proven or cataloged (generic-group, SLP/algebraic degree, transfer homomorphism, factor-base/index-calculus, cover, equidistribution), state each one's exact assumptions, characterize algorithm classes that violate ALL of them simultaneously, and propose + cheaply test the most concrete such class.",
   "rationale": "Bounded subagent run for TSK-6e4546c7-fd04-4a4b-a655-7a65af37802b",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Kohel, Shparlinski: On Exponential Sums and Group Generators for Elliptic Curves over Finite Fields (ANTS-IV, LNCS 1838, 2000)",
+      "url": "https://www.i2m.univ-amu.fr/perso/david.kohel/pub/character.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "search-result abstract only; exact bound statement not read (unverified recollection)"
+    },
+    {
+      "title": "Jacobson, Koblitz, Silverman, Stein, Teske: Analysis of the Xedni Calculus Attack (Des. Codes Cryptogr. 20, 2000)",
+      "url": "https://pages.cpsc.ucalgary.ca/~jacobs/PDF/xedni.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "search-result snippet only: odds of suitable lifting prohibitive; full text not read"
+    },
+    {
+      "title": "Silverman: The Xedni Calculus and the Elliptic Curve Discrete Logarithm Problem (preprint CORR 99-05)",
+      "url": "https://uwaterloo.ca/combinatorics-and-optimization/sites/default/files/uploads/documents/1999_05.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "search-result description only"
+    },
+    {
+      "title": "Semaev: Summation polynomials and the discrete logarithm problem on elliptic curves (ePrint 2004/031)",
+      "url": "https://eprint.iacr.org/2004/031",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract page via search; also a search found no paper combining Coppersmith with summation polynomials over prime fields (absence not proof)"
+    }
+  ],
   "refs": [
     "TSK-6e4546c7-fd04-4a4b-a655-7a65af37802b",
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "T1 (experimental, toy, seed 1): lattice (Howgrave-Graham) decomposition of Semaev S_3 into interval-factor-base points reaches only box exponent alpha ~0.05-0.10 empirically (D<=5) and <=0.1585 analytically (D<=40, limit 1/6) for the tested lattice family; alpha>=0.45 succeeded 0/5 in every cell. Pre-registered kill met. Elementary cost law: boxes alpha<1/2 give total relation cost >= p^(1-alpha) > sqrt p.",
+    "T2 (experimental, p~2^19, 2 seeds): no Fourier line against group characters for smoothness/primality/squarefree/Liouville predicates of x (and amended symmetric y-smooth); positive control detected, negative control clean; nominal seed-1 hits (S1,S7 rank_p 0.04) did not replicate in seed 2. Pre-registered S4 had an invalid even-pair null and was amended post hoc (recorded).",
+    "Barrier map B1-B11 with exact assumptions (literature + lab HYPs); the common unconstrained resource is integer structure of coordinate representatives plus non-homomorphic maps.",
+    "B5 (proof sketch, UNREVIEWED, conditional on rational analogue HYP-6aef8c30): equality-branching algebraic decision trees satisfy N <= c*4^L, i.e. L >= (1/2)log2(N/c); order comparisons/bit tests not covered.",
+    "C2 (unreduced Miller/orbit-product cocycle) killed by derivation, not executed: pairing target F_p^*/(F_p^*)^r is trivial when gcd(r,p-1)=1. C4 (xedni) killed by literature, not re-run. C5 open.",
+    "Nothing here changes the status of the open target HYP-2de84d42 (unproved, no evidence for or against)."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Native frontier-explorer adapter (claude-sonnet-5-5 configured); runtime identity not exposed to PI.",
+  "outcome": "refuted",
+  "next_action": "Prove the rational-function analogue (HYP-6aef8c30) to make B5 unconditional and study a comparison/bit-augmented decision-tree model; independently review the barrier tables before any write-up; drop lattice-decomposition and smoothness-spectrum routes unless a new lattice family beats alpha=1/2.",
+  "notes": "Native frontier-explorer adapter (claude-sonnet-5-5 configured); runtime identity not exposed to PI. Self-reported model identity: claude-sonnet-5-5 (Sonnet 5.5), role frontier-explorer; not runtime-verified. Source for Silverman 1999 preprint is only a search-result description. Sibling run RUN-071d1da9 and its runs file were not read. 3 web lookups used. Report: runs/RUN-53c590b6-897b-438f-ae77-87309aa8d23a.md; experiments: experiments/round10-frontier-c/ (PROTOCOL sha256 be1af554...). Commands were run manually, not via research.py exec; no commits. | PI reproduced seed-2 amended spectrum test.",
   "run": {
     "started_at": "2026-11-03T11:02:53.395149Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T11:26:00.156285Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "frontier-explorer",
@@ -32,7 +64,9 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; owns round10-frontier-c/",
     "commands": [],
-    "files_changed": [],
+    "files_changed": [
+      "research/ecdlp/experiments/round10-frontier-c/"
+    ],
     "resulting_commit": null,
     "tests": [],
     "benchmark": "See report",
