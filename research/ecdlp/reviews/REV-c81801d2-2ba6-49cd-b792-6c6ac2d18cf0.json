@@ -1,31 +1,80 @@
 {
   "id": "REV-c81801d2-2ba6-49cd-b792-6c6ac2d18cf0",
   "type": "REV",
-  "title": "Draft \u2014 define before work",
+  "title": "Re-review of PAP-ef6e2010 revision 1 (B1, response table, addendum, citations, build)",
   "created_at": "2026-11-03T11:09:10.162741Z",
-  "status": "open",
-  "question": "Unassigned; define exact question",
-  "rationale": "Unassigned; record why selected",
+  "status": "completed",
+  "question": "At commit 39a3b8c, does revision 1 of PAP-ef6e2010 resolve blocking item B1? Does the author response table (RUN-2da5ef89) match main.tex? Do the statuses in the new addendum (SLP bound PRF-58cf340e, method barrier L2 HYP-0d4f14da, conjecture C* HYP-a8d1f541) match the ledger, and is the quoted Lean statement exact? Are the new DOIs and first names correct, and does the paper build cleanly?",
+  "rationale": "docs/PAPERS.md requires re-review of revisions that affect review findings. The assignment came from the PI under RUN-a22093cd.",
   "assumptions": [],
-  "sources": [],
-  "refs": [],
-  "evidence": [],
-  "claims": [],
+  "sources": [
+    {
+      "title": "Lange, Winterhof, COCOON 2002 (Crossref record)",
+      "url": "https://api.crossref.org/works/10.1007/3-540-45655-4_16",
+      "retrieved_at": "2026-11-03T11:12:53Z",
+      "locator": "Crossref JSON fields title/author/page/issued; retrieved_at is ledger-write time, actual lookup a few minutes earlier in this RUN"
+    },
+    {
+      "title": "Lange, Winterhof, AAECC-15 2003 (Crossref record)",
+      "url": "https://api.crossref.org/works/10.1007/3-540-44828-4_7",
+      "retrieved_at": "2026-11-03T11:12:53Z",
+      "locator": "Crossref JSON fields title/author/page/issued; retrieved_at is ledger-write time, actual lookup a few minutes earlier in this RUN"
+    },
+    {
+      "title": "Satoh, WCC 2005 / LNCS 3969 2006 (Crossref record)",
+      "url": "https://api.crossref.org/works/10.1007/11779360_13",
+      "retrieved_at": "2026-11-03T11:12:53Z",
+      "locator": "Crossref JSON fields title/author/page/issued; retrieved_at is ledger-write time, actual lookup a few minutes earlier in this RUN"
+    },
+    {
+      "title": "Coppersmith, Shparlinski, J. Cryptology 13 (2000) (Crossref record)",
+      "url": "https://api.crossref.org/works/10.1007/s001450010002",
+      "retrieved_at": "2026-11-03T11:12:53Z",
+      "locator": "Crossref JSON fields title/author/page/issued; retrieved_at is ledger-write time, actual lookup a few minutes earlier in this RUN"
+    }
+  ],
+  "refs": [
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b",
+    "REV-15104e72-0b78-4895-8bd8-a4abcac85a25",
+    "REV-2b383b9b-7029-4706-95fe-ae74ee44a7ce"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-b585f279-fd16-4cca-b3a1-c2484d545078.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-5da55f17-bbac-4f82-9271-da5f30d66b80.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-ca0a1a26-2ee3-4da0-be6c-96a56ffa6cc6.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-94bd6bd6-9c44-47e7-9743-cd567e803d9f.evidence",
+    "research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-aeddfabd-5935-4ad5-9911-2c48a87063dc.evidence",
+    "research/ecdlp/reviews/REV-c81801d2-2ba6-49cd-b792-6c6ac2d18cf0.md"
+  ],
+  "claims": [
+    "B1 is resolved. Section 5 (l.219-226) cites one evidence file per theorem: b585f279, 5da55f17 and ca0a1a26. Each file exists, has exit code 0 and contains '#print axioms' output for the matching declaration with exactly [propext, Classical.choice, Quot.sound].",
+    "Of the 19 entries in the response table, 16 are resolved and 3 are resolved with minor residual wording issues (2b383b9b N2, N3, N5). One is partially resolved and acceptably declined in part (2b383b9b N6: Kiltz-Winterhof not added). One is declined acceptably (15104e72 N4). No entry misreports the text.",
+    "The addendum statuses match the ledger. PRF-58cf340e is formally-verified, with independent review pending. HYP-0d4f14da (L2) is open, proof-attempt, PI-checked and not reviewed. HYP-a8d1f541 (C*) is open and experimental, with 154,288 cases, p<=997 and maximum deficit 3. The cost-model corollary is marked as not formalized.",
+    "The quoted Lean statement of SLPBound.length_bound_linear_short_weierstrass (main.tex l.265-269) is character-identical to MathResearch/ECDLP/SLPBound.lean l.183-187, minus ':= by'. SLPBound.lean is unchanged between source commit bff5e14 and 39a3b8c.",
+    "Crossref confirms all four DOIs, the first names, the venues, the pages and the years.",
+    "The build is clean: latexmk exit 0, 8 pages, no LaTeX/BibTeX warnings, no over- or underfull boxes, no undefined references. The pdftotext output is identical to the committed main.pdf.",
+    "Recomputed: the F_27 instance (y^2=x^3+t^2x, t^3=t-1) has #E=28 with points of order 28, and x(kP), k=1..7, are distinct."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Draft only; no execution or verification claimed.",
+  "outcome": "verified",
+  "next_action": "PI: optionally apply the non-blocking residuals R1-R5 from the .md before final integration. PI integration review (Opus) of PAP-ef6e2010 rev 1. Batched independent review of PRF-58cf340e Lean-statement correspondence remains pending as the paper states.",
+  "notes": "Reviewer: independent-reviewer, self-reported Claude Opus 5.5 (claude-opus-5-5), Claude Code remote session; not verifiable from runtime metadata. Same provider as authors and earlier reviewers; independence partial. The packet was not blind: the response table was part of the assignment. Used 4 web lookups (Crossref API).",
   "review": {
-    "run": null,
-    "target_commit": null,
-    "targets": [],
-    "decision": "revise",
-    "rationale": "Review not performed",
-    "counterexamples": [
-      "Not attempted"
+    "run": "RUN-a22093cd-b84f-450e-b627-7f9febd610d0",
+    "target_commit": "39a3b8c",
+    "targets": [
+      "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
     ],
-    "complexity": "Not reviewed",
-    "limitations": "Draft review, not an assessment",
-    "initial_packet": "Not supplied"
+    "decision": "accept",
+    "rationale": "The only blocking item, B1, is fixed and I verified it against the evidence files and by rerunning the axiom checks. The response table is accurate. The addendum states the ledger statuses exactly and does not overclaim. The new Lean quote is verbatim, the citations verify, and the build is clean. The remaining items are wording and presentation only (R1-R5 in the .md).",
+    "counterexamples": [
+      "Looked for a mismatch between the axiom output and the declaration in each cited evidence file: none found.",
+      "Looked for a status inflation of L2 or C* relative to the ledger: none found.",
+      "Looked for a mismatch between the quoted Lean statement and the source of SLPBound: none found.",
+      "Recomputed the F_27 side-condition instance: confirmed."
+    ],
+    "complexity": "Not applicable",
+    "limitations": "I did not do a full Lean rebuild. I reran '#print axioms' via 'lake env lean' for Round10Axioms and Round8Axioms in a shared tree that was later than 39a3b8c (it adds RationalSLP.lean and an import), so the environment was not pristine. I did not independently review the correspondence of PRF-58cf340e beyond reading the Op/evalAt semantics. I did not re-derive L2 or C* (the paper states them only as recorded). I accessed no cited full texts, so novelty remains unsettled. The build was not run through research.py exec. AI reviewer from the same provider; no human verification.",
+    "initial_packet": "Assignment from PI with target commit 39a3b8c, paper path, prior reviews REV-15104e72 and REV-2b383b9b, author response table RUN-2da5ef89, ledger records PRF-58cf340e, HYP-0d4f14da and HYP-a8d1f541, and SLPBound.lean. The packet was not blind: it included the author response table."
   }
 }
