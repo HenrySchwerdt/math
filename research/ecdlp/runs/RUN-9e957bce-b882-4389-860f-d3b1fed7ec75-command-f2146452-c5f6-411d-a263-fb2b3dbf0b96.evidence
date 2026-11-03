@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round6-cover/icj.py",
+    "--bits",
+    "14",
+    "--curves",
+    "1",
+    "--first",
+    "0",
+    "--variants",
+    "A,B",
+    "--out",
+    "research/ecdlp/experiments/round6-cover/results_bits14_c0.json"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T10:12:41.189771Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T10:14:28.424516Z",
+  "truncated": false,
+  "output": "14 0 A {\"relations\": 24822, \"cantor\": 0, \"ec\": 50622, \"la\": 30453698, \"total\": 30504320, \"rank\": 4129, \"unknowns_active\": 8256, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 9.1}\n14 0 B {\"relations\": 8294, \"cantor\": 16685, \"ec\": 18047, \"la\": 3853247392, \"total\": 3853282124, \"rank\": 8099, \"unknowns_active\": 8118, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 62.87}\n"
+}

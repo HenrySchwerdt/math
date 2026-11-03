@@ -12,15 +12,27 @@
     "TSK-e90f8650-8b93-4ea0-b9f1-82387f76e4c7",
     "HYP-ad5bc0e3-30cc-4eb8-b823-4df42edd44a6"
   ],
-  "evidence": [],
-  "claims": [],
+  "evidence": [
+    "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-72521795-c9ac-45b8-a141-258b71cd17bd.evidence",
+    "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-9abf94c3-5365-4c65-a4e2-bc90df57d7ac.evidence",
+    "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-fcd874e6-c979-4d4b-bfff-a25a80db2274.evidence",
+    "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-5897861a-b9b8-4df9-b88a-d652f9a8a9fd.evidence",
+    "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-3d441314-64e1-45a1-9472-abf2fef1089f.evidence",
+    "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-9aa9a349-b6ca-4b09-b48b-30d8e7ea9c13.evidence"
+  ],
+  "claims": [
+    "Experimental (toy domain, p<=2^14): Gaudry-style degree-1 factor-base index calculus on J_C(F_p) for the genus-2 double cover y^2=f(w^2+c) of prime-order E recovered the DL (equal to BSGS and the secret) on 12/12 curves; median counted cost 99,866 / 3.78e6 / 1.17e8 / 3.85e9 at p=251/1021/4093/16381 (Cantor-only 292/1,024/4,162/16,410, ~p; log-log slope 0.97, total slope 2.52), versus sqrt(p)=15.8..128. HYP-ad5bc0e3 prediction (cost >= ~p) SURVIVES the pre-registered falsification rule; not falsified.",
+    "No imaginary (degree-5) model exists for any double cover of E with #E odd prime: Weierstrass points lie over E[2]\\{O}; the degree-6 model with infty+/infty- was used. Group law verified (associativity, hom pi^*, [#J]D=0, L-poly #J=r*#E' on all curves run).",
+    "Pullback-only relations (Variant A) have disjoint supports (confirmed: dedup relations never determine k, rank ~ half the unknowns); raw A recovers k only by a birthday collision in E (first collision ~0.9 sqrt(r) trials), not by the cover.",
+    "Reduced-factor-base variant (half base) doubled Cantor cost (p/f model); large-prime/GTTD variants not implemented (analytic only). Experiments do not establish asymptotics."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "outcome": "verified",
+  "next_action": "Independent review of hyper2.py and Variant A collision analysis; optionally 2^16 with Wiedemann LA and a GTTD large-prime variant; PI to decide whether to update HYP-ad5bc0e3 evidence/notes (not edited by this run).",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Self-reported model identity at execution time: claude-sonnet-5-5 (Sonnet 5.5), unverified by runtime metadata. Dev runs preceded the frozen code hash; 2^14 runs executed twice (identical counts); 2^16 not run; see report Deviations. | PI reproduced icj.py --bits 10 --curves 3 via research.py exec; identical except timing fields and output path.",
   "run": {
     "started_at": "2026-11-03T10:01:45.541232Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T10:20:16.341023Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "experimenter",
@@ -31,11 +43,20 @@
     "starting_commit": "9c3c162c098c91379e03d440b0b5bac8dcf3e666",
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
-    "commands": [],
-    "files_changed": [],
+    "commands": [
+      "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-72521795-c9ac-45b8-a141-258b71cd17bd.evidence",
+      "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-9abf94c3-5365-4c65-a4e2-bc90df57d7ac.evidence",
+      "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-fcd874e6-c979-4d4b-bfff-a25a80db2274.evidence",
+      "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-5897861a-b9b8-4df9-b88a-d652f9a8a9fd.evidence",
+      "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-3d441314-64e1-45a1-9472-abf2fef1089f.evidence",
+      "research/ecdlp/runs/RUN-9e957bce-b882-4389-860f-d3b1fed7ec75-command-9aa9a349-b6ca-4b09-b48b-30d8e7ea9c13.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/experiments/round6-cover/"
+    ],
     "resulting_commit": null,
     "tests": [],
-    "benchmark": "See report",
+    "benchmark": "Counted-operation benchmark (Cantor adds, EC adds, elimination coefficient mults) plus wall time; seeds 20261109/<bits>/<idx>; medians over 3 curves at 2^8,2^10,2^12,2^14 (variant Bhalf at 2^10,2^12); Python 3.13.18, numpy 2.5.3, 4 vCPU Xeon 2.3GHz; baseline measured toyec.dlog_bsgs EC adds and sqrt(p); one execution per curve for official counts (deterministic, 2^14 reproduced twice, timings single-measure). Results in research/ecdlp/experiments/round6-cover/results.json.",
     "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
     "reviews": []
   }

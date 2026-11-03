@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round6-cover/icj.py",
+    "--bits",
+    "12",
+    "--curves",
+    "3",
+    "--out",
+    "research/ecdlp/experiments/round6-cover/results_bits12.json"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T10:12:21.707600Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T10:12:41.147819Z",
+  "truncated": false,
+  "output": "12 0 A {\"relations\": 6279, \"cantor\": 0, \"ec\": 13535, \"la\": 2278505, \"total\": 2292040, \"rank\": 1047, \"unknowns_active\": 2091, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 0.53}\n12 0 B {\"relations\": 2113, \"cantor\": 4162, \"ec\": 5306, \"la\": 116807229, \"total\": 116816697, \"rank\": 2047, \"unknowns_active\": 2051, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 2.92}\n12 0 Bhalf {\"relations\": 1066, \"cantor\": 8442, \"ec\": 9632, \"la\": 27245293, \"total\": 27263367, \"rank\": 1026, \"unknowns_active\": 1028, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 1.03}\n12 1 A {\"relations\": 6354, \"cantor\": 0, \"ec\": 13488, \"la\": 2183982, \"total\": 2197470, \"rank\": 1059, \"unknowns_active\": 2116, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 0.34}\n12 1 B {\"relations\": 2138, \"cantor\": 4113, \"ec\": 5284, \"la\": 114600105, \"total\": 114609502, \"rank\": 2073, \"unknowns_active\": 2077, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 2.51}\n12 1 Bhalf {\"relations\": 1079, \"cantor\": 8173, \"ec\": 9300, \"la\": 26805390, \"total\": 26822863, \"rank\": 1042, \"unknowns_active\": 1045, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 0.94}\n12 2 A {\"relations\": 5958, \"cantor\": 0, \"ec\": 13263, \"la\": 2694989, \"total\": 2708252, \"rank\": 993, \"unknowns_active\": 1984, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 0.57}\n12 2 B {\"relations\": 2006, \"cantor\": 4187, \"ec\": 5339, \"la\": 120470086, \"total\": 120479612, \"rank\": 1949, \"unknowns_active\": 1954, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 2.52}\n12 2 Bhalf {\"relations\": 1013, \"cantor\": 8194, \"ec\": 9363, \"la\": 22175170, \"total\": 22192727, \"rank\": 977, \"unknowns_active\": 981, \"k_determined\": true, \"k_correct\": true, \"status\": null, \"time_s\": 0.84}\n"
+}
