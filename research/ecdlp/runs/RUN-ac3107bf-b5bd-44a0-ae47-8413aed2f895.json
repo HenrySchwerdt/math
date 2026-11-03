@@ -4,7 +4,7 @@
   "title": "Round 9 / ECDLP-27: Lean formalization of corrected partial-agreement part (2)",
   "created_at": "2026-11-03T10:38:27.986257Z",
   "status": "active",
-  "question": "Formalize: short Weierstrass W, P of odd order r, A \u2286 [1,N], N <= (r-1)/2, g with g(x(kP)) = k^2 on A => 3 natDegree g >= S_j(A) for each j (and the \u03b4 > 2/3 corollary), reusing CurveX/Interpolation.",
+  "question": "Formalize: short Weierstrass W, P of odd order r, A ⊆ [1,N], N <= (r-1)/2, g with g(x(kP)) = k^2 on A => 3 natDegree g >= S_j(A) for each j (and the δ > 2/3 corollary), reusing CurveX/Interpolation.",
   "rationale": "Bounded subagent run for TSK-1e2b2bbf-772e-4d0e-932b-91009cb1282e",
   "assumptions": [],
   "sources": [],
@@ -13,11 +13,13 @@
     "HYP-a1dd5501-c137-492a-abc6-e9cda3765002"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Formal: MathResearch/ECDLP/PartialAgreement.lean (uncommitted, not yet imported by root) proves CurveX.partial_agreement_degree_bound: S_j(A) <= 3 natDegree g under 2!=0, 2N<r, and (1<=deg g or (j:F)!=0); axioms propext/Classical.choice/Quot.sound only; lake build succeeded with temporary root import. 3!=0 and r odd not needed. The (j:F)!=0-or-deg>=1 hypothesis is needed for the d=0 case (argument-level, no explicit counterexample constructed). delta>2/3 corollary not formalized. Numerical sanity check on toy curves: 739847 (A,j) cases, 0 violations (weak check)."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "next_action": "PI: add root import of MathResearch.ECDLP.PartialAgreement, amend HYP-a1dd5501 (2) with hypothesis (deg g>=1 or j!=0 in F), independent review of exact statement, then formalize the delta>2/3 corollary.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Self-reported identity of the formalization agent: Sonnet 5.5 (claude-sonnet-5-5), unverified by runtime metadata.",
   "run": {
     "started_at": "2026-11-03T10:38:42.657532Z",
     "completed_at": null,

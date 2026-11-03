@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/root/.elan/bin/lake",
+    "env",
+    "lean",
+    "research/ecdlp/proofs/checks/Round9Axioms.lean"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T10:41:42.830680Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T10:41:46.212283Z",
+  "truncated": false,
+  "output": "'MathResearch.ECDLP.CurveX.partial_agreement_degree_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.PartialAgreement.card_le_three_natDegree' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+}
