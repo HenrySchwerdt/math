@@ -13,14 +13,18 @@
     "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Revision 1 of PAP-ef6e2010 addresses blocking B1 (per-theorem axiom evidence, verified present) and the recorded non-blocking items of REV-15104e72 and REV-2b383b9b; response table in RUN .md.",
+    "Revision adds a marked addendum citing PRF-58cf340e (formally verified, review pending), HYP-0d4f14da (proof attempt, not reviewed) and HYP-a8d1f541 (conjecture); no new mathematical claims beyond ledger records.",
+    "main.tex builds with latexmk: exit 0, 8 pages, no warnings in log."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter research-worker (claude-sonnet-5-5 configured); runtime identity not exposed to PI.",
+  "outcome": "verified",
+  "next_action": "Re-review changed passages of PAP-ef6e2010 (Section 7, trust base, bibliography); PI may rebuild via scripts/research.py exec to record the build log; unresolved: Kiltz-Winterhof and Shparlinski book citations.",
+  "notes": "Adapter research-worker. Self-reported model identity: Claude Sonnet 5.5 (claude-sonnet-5-5); not verifiable from runtime metadata. Used 5 web lookups (Crossref). See RUN .md for response table, build summary and limitations. | PI rebuilt PDF via exec (research/ecdlp/runs/RUN-62dbda7c-fe4f-4432-84a2-2068cd516355-command-7e2f0538-34d9-4765-9fcd-c216b8af6c0d.evidence).",
   "run": {
     "started_at": "2026-11-03T11:05:19.843644Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T11:09:00.383787Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured; see notes)",
     "role": "research-worker",
@@ -30,7 +34,9 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; owns research/ecdlp/papers/PAP-ef6e2010-7950-47cf-bb75-05801891905b/",
     "commands": [],
-    "files_changed": [],
+    "files_changed": [
+      "research/ecdlp/papers/PAP-ef6e2010-7950-47cf-bb75-05801891905b/"
+    ],
     "resulting_commit": null,
     "tests": [],
     "benchmark": "Not applicable",
