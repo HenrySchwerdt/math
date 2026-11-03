@@ -31,6 +31,12 @@ Task keys via `research/ecdlp/TASKS.json`; status via `scripts/research.py task`
 - ECDLP-1 — umbrella vertical slice (lifecycle executed; SQLite/event memory, blind-packet
   tooling, C17 harness not implemented — deferred per user priority on research).
 
+## Strategic correction (user directive, see latest DEC)
+Primary objective: a working algorithm beating generic √r. Allocation 60% algorithm invention and
+implementation (algorithm-inventor), 20% falsification/scaling benchmarks vs Pollard rho, 10% directly
+relevant proofs, 10% literature/publication. No new interpolation lower-bound variants unless they
+unblock an active candidate. The barrier map is used to aim inventions (escape every listed assumption).
+
 ## Next candidates (prioritized by significance × falsifiability ÷ cost)
 1. Independent review of PartialAgreement.lean (PRF for ECDLP-27). Human/library access needed
    for novelty (Lange–Winterhof LNCS 2387 pp. 137–143, LNCS 2643 pp. 51–60).

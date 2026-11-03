@@ -271,6 +271,26 @@ def main():
     task_parser.add_argument('--reason', required=True)
     task_parser.add_argument('--outcome', choices=['verified', 'refuted', 'unresolved', 'blocked', 'inconclusive'])
     task_parser.add_argument('--next-action')
+    start_parser = sub.add_parser('start', help='Create, fill and activate a TSK with its RUN (PI helper)')
+    start_parser.add_argument('project')
+    start_parser.add_argument('--title', required=True)
+    start_parser.add_argument('--question', required=True)
+    start_parser.add_argument('--role', required=True)
+    start_parser.add_argument('--model', required=True)
+    start_parser.add_argument('--refs', nargs='*', default=[])
+    start_parser.add_argument('--owned', nargs='*', default=[])
+    start_parser.add_argument('--resource')
+    start_parser.add_argument('--rationale')
+    finish_parser = sub.add_parser('finish', help='Complete a RUN and its task after the work is committed')
+    finish_parser.add_argument('project')
+    finish_parser.add_argument('run')
+    finish_parser.add_argument('--outcome', required=True, choices=['verified', 'refuted', 'unresolved', 'blocked', 'inconclusive'])
+    finish_parser.add_argument('--reason', required=True)
+    finish_parser.add_argument('--next-action')
+    finish_parser.add_argument('--files', nargs='*', default=[])
+    finish_parser.add_argument('--commit')
+    fix_parser = sub.add_parser('fix-sources', help='Normalize string sources in a record to schema objects')
+    fix_parser.add_argument('paths', nargs='+')
     for cmd in ('init', 'new', 'audit', 'claim', 'release', 'exec'):
         p = sub.add_parser(cmd)
         p.add_argument('project')
@@ -292,6 +312,17 @@ def main():
     elif a.command == 'task':
         from task_state import update
         print(json.dumps(update(project(a.project), a.task, a.run, a.status, a.reason, a.outcome, a.next_action), indent=2))
+    elif a.command == 'start':
+        from lab_ops import start
+        key, tsk, run = start(a.project, a.title, a.question, a.role, a.model, a.refs, a.owned, a.resource, a.rationale)
+        print(json.dumps(dict(task_key=key, task=tsk, run=run), indent=2))
+    elif a.command == 'finish':
+        from lab_ops import finish
+        print(json.dumps(finish(a.project, a.run, a.outcome, a.reason, a.next_action, a.files, a.commit), indent=2))
+    elif a.command == 'fix-sources':
+        from lab_ops import fix_sources
+        for p in a.paths:
+            print(p, *fix_sources(p))
     elif a.command == 'task-keys':
         from task_keys import register
         print(json.dumps(register(project(a.project), a.prefix), indent=2))
