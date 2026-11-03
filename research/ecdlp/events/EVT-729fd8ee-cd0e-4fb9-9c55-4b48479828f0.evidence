@@ -1,0 +1,26 @@
+{
+  "id": "EVT-729fd8ee-cd0e-4fb9-9c55-4b48479828f0",
+  "kind": "task-status-change",
+  "task": "TSK-8d699b9a-e05b-4eac-9970-37a0857cb6ce",
+  "task_key": "ECDLP-40",
+  "timestamp": "2026-11-03T11:20:49.941711Z",
+  "run": "RUN-89fccbd4-7e75-4871-8b10-ddb4d34174f6",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "adversarial-critic"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Review and formalization of decision-tree barrier launched",
+  "before_sha256": "94e26937d8579a52719eba14848987f694ad32319920a9a63f3c039358d0781b",
+  "after_sha256": "f8637c9f229fd3708a8204d6e368db46adb88147fb4fbb5f03b8723a94950a8c"
+}

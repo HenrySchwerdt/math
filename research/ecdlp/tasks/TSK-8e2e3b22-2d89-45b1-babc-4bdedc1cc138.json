@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 11 / ECDLP-39: algebraic decision-tree barrier (branching) and batched SLP review",
   "created_at": "2026-11-03T11:12:01.451799Z",
-  "status": "active",
+  "status": "completed",
   "question": "Algebraic decision-tree barrier (conjecture): any algebraic decision tree over F_p with equality branching (tests f(u) = 0 on intermediate values), single input u = x(Q), depth D and leaf programs of length L (with division defined on their leaf sets), that outputs k at u = x(kP) for 1 <= k <= N, 2N < r, satisfies L + c\u00b7D >= log2 N \u2212 O(1) for an absolute constant c; obstacle: leaves partition the nodes arbitrarily, and partial-agreement bounds need additive structure (progressions) in each leaf set (Behrend-type sets may avoid it).",
   "rationale": "DEC allocation: strongest open math; plus mandatory review of PRF-58cf340e and the division-SLP PRF.",
   "assumptions": [],
@@ -15,12 +15,13 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-179ff07a-7d03-4d31-b49b-1d413f1f44a8.evidence"
+    "research/ecdlp/events/EVT-179ff07a-7d03-4d31-b49b-1d413f1f44a8.evidence",
+    "research/ecdlp/events/EVT-f0e4be6b-08bb-40cb-bf4e-8e72a00b6f6c.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "verified",
+  "next_action": "ECDLP-40 review and formalization",
   "notes": "Created by PI RUN-62dbda7c.",
   "success_criteria": [
     "Exact statements; proofs or precise obstructions; reproducible checks."

@@ -1,0 +1,42 @@
+{
+  "id": "RUN-038b1cc8-f156-456a-ab1c-736446d72183",
+  "type": "RUN",
+  "title": "ECDLP-40 formalization: decision-tree barrier",
+  "created_at": "2026-11-03T11:20:37.309565Z",
+  "status": "active",
+  "question": "Is Theorem DT correct, and can it be formalized on top of RationalSLP.lean?",
+  "rationale": "Bounded subagent run for TSK-8d699b9a-e05b-4eac-9970-37a0857cb6ce",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-8d699b9a-e05b-4eac-9970-37a0857cb6ce",
+    "HYP-dbe79a50-030e-41b9-944b-271f2bd37042"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter formalization (claude-sonnet-5-5 configured); runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T11:20:37.383556Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization",
+    "task": "TSK-8d699b9a-e05b-4eac-9970-37a0857cb6ce",
+    "input_hypotheses": [
+      "HYP-dbe79a50-030e-41b9-944b-271f2bd37042"
+    ],
+    "starting_commit": "d9e5b41cd27caac6a7aa468d98d26bdb4049f843",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable",
+    "machine": "Claude Code remote Linux container",
+    "reviews": []
+  }
+}

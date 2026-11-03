@@ -1,0 +1,33 @@
+{
+  "id": "TSK-8d699b9a-e05b-4eac-9970-37a0857cb6ce",
+  "type": "TSK",
+  "title": "Round 11 / ECDLP-40: review and Lean formalization of the decision-tree barrier",
+  "created_at": "2026-11-03T11:20:37.220985Z",
+  "status": "active",
+  "question": "Is Theorem DT correct, and can it be formalized on top of RationalSLP.lean?",
+  "rationale": "Mandatory review + formal verification of a barrier-central, possibly new result.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-dbe79a50-030e-41b9-944b-271f2bd37042",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-729fd8ee-cd0e-4fb9-9c55-4b48479828f0.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute.",
+  "notes": "Created by PI RUN-62dbda7c.",
+  "success_criteria": [
+    "Blind adversarial verdict; Lean proof without sorry or exact obstruction."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-89fccbd4-7e75-4871-8b10-ddb4d34174f6.json",
+    "research/ecdlp/reviews/REV-d7bc5940-5046-46b6-824b-7d8342744534.json",
+    "MathResearch/ECDLP/DecisionTree.lean",
+    "research/ecdlp/runs/RUN-038b1cc8-f156-456a-ab1c-736446d72183.json"
+  ],
+  "resource_limit": "Two bounded subagents; no recursion; no commits; ~90 min."
+}
