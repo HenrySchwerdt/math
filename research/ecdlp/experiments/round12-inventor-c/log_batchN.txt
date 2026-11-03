@@ -48,3 +48,4 @@
 {'mode': 'batchN', 'bits': 36, 'n': 51831578413, 'M': 16, 'trial': 11, 'ops': 1914433, 'per_instance': 119652.0625, 'ok': True, 'dps': 439, 'sec': 2.969}
 {'mode': 'batchN', 'bits': 40, 'n': 701298629047, 'M': 16, 'trial': 0, 'ops': 5338241, 'per_instance': 333640.0625, 'ok': True, 'dps': 318, 'sec': 8.807}
 {'mode': 'batchN', 'bits': 40, 'n': 701298629047, 'M': 16, 'trial': 1, 'ops': 5803903, 'per_instance': 362743.9375, 'ok': True, 'dps': 325, 'sec': 9.983}
+{'mode': 'batchN', 'bits': 40, 'n': 701298629047, 'M': 16, 'trial': 2, 'ops': 5688352, 'per_instance': 355522.0, 'ok': True, 'dps': 300, 'sec': 11.862}
