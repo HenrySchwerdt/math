@@ -1,0 +1,32 @@
+{
+  "id": "TSK-e4099001-23bb-4242-b896-341c8af8919e",
+  "type": "TSK",
+  "title": "Round 3 / ECDLP-8: literature and exact bound for mixed character sums along EC subgroups",
+  "created_at": "2026-11-03T09:27:03.809191Z",
+  "status": "active",
+  "question": "What is the exact, sourced statement of the best Weil-type bound for sums sum_{Q in E(F_p)} psi(Q) chi(g(Q)) (psi a group character of E(F_p), chi a multiplicative character, g a rational function), including constants and degree dependence, and what is known about the limiting distribution (Katz/Deligne equidistribution) of the normalized sums? Does it explain a periodogram variance below 1 for chi(x([k]P))?",
+  "rationale": "Resolve reproduced anomaly from ECDLP-7 (HYP-242da418) before drawing conclusions.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-242da418-4c1a-45b1-8132-8a2f00574272",
+    "HYP-e1959734-9325-4a54-9d99-d4535c58a11c"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-f6549649-f9b1-4b9d-8625-aea446ccba86.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute bounded round-3 run.",
+  "notes": "Created by PI RUN-62dbda7c.",
+  "success_criteria": [
+    "Exact statements with verified sources or explicit unverified marks; reproducible code/seeds/outputs; never claim a DL leak without replication and controls."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-60986daa-f9ba-459a-bb6a-fb38509188ec.md",
+    "research/ecdlp/runs/RUN-60986daa-f9ba-459a-bb6a-fb38509188ec.json (claims/sources/notes/next_action)",
+    "research/ecdlp/experiments/round3-nt/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; computations < 5 min each; no commits; ~60 min."
+}

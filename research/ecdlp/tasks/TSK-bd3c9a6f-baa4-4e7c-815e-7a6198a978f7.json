@@ -1,0 +1,32 @@
+{
+  "id": "TSK-bd3c9a6f-baa4-4e7c-815e-7a6198a978f7",
+  "type": "TSK",
+  "title": "Round 3 / ECDLP-9: decisive scaling test of the flat-spectrum explanation",
+  "created_at": "2026-11-03T09:27:03.888408Z",
+  "status": "active",
+  "question": "Do full-range normalized twisted sums X_c for chi(g([k]P)) stay bounded relative to sqrt(p/r) as p grows (Weil-type), with a non-Exp(1) periodogram law, for low-degree g, and approach random-like behaviour for higher-degree g or non-algebraic predicates?",
+  "rationale": "Resolve reproduced anomaly from ECDLP-7 (HYP-242da418) before drawing conclusions.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-242da418-4c1a-45b1-8132-8a2f00574272",
+    "HYP-e1959734-9325-4a54-9d99-d4535c58a11c"
+  ],
+  "evidence": [
+    "research/ecdlp/events/EVT-a22b2f68-501c-4378-bb25-5b71061a9e83.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Execute bounded round-3 run.",
+  "notes": "Created by PI RUN-62dbda7c.",
+  "success_criteria": [
+    "Exact statements with verified sources or explicit unverified marks; reproducible code/seeds/outputs; never claim a DL leak without replication and controls."
+  ],
+  "owned_files": [
+    "research/ecdlp/runs/RUN-df8d0e71-aefa-4f53-8230-78b564b5c043.md",
+    "research/ecdlp/runs/RUN-df8d0e71-aefa-4f53-8230-78b564b5c043.json (claims/sources/notes/next_action)",
+    "research/ecdlp/experiments/round3/"
+  ],
+  "resource_limit": "One bounded subagent; no recursion; computations < 5 min each; no commits; ~60 min."
+}
