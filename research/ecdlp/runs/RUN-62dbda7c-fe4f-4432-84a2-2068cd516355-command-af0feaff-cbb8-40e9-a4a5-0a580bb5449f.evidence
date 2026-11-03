@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round2-cx/h4_smart.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:34:39.846420Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:34:40.362061Z",
+  "truncated": false,
+  "output": "== T1 anomalous curves (#E = p): psi(Q~) = k psi(P~) for independent random lifts\ncurves=42 informative trials=504 recovered k=504; degenerate-lift trials (psi==0)=0\n== T2 exhaustive lift pairs: bijection onto F_p^2 for non-anomalous E, r | #E, r != p\ncurves tested=30 all bijective onto F_p^2: True\n== T3-T5 randomized sweeps (seed 20261103)\ntrials(per category) ~ 1650; average chance rate 1/p = 0.0441\n  indep_lift                   74/1650 = 0.0448\n  indep_lift_and_curve_lift    73/1650 = 0.0442\n  teichmuller_x                75/1650 = 0.0455\n  consistent_[k]P              1650/1650 = 1.0000\n  consistent+eps_in_E1         64/1650 = 0.0388\n  torsion_lift_psi==0          1650/1650 = 1.0000\n  psi_hom_on_sums              1650/1650 = 1.0000\n== T6 p | #E, p >= 7 forces #E = p ? (exhaustive over all (a,b), primes 7..199)\nprimes where multiples of p in Hasse interval differ from {p}: []\n== p=5 curves with #E = 10 (p | #E, r=2 != p): psi well-defined (lift independent) and hom?\n(a,b,#E,psi lift-independent on all y!=0 points, psi values): [(3, 0, 10, True, [0])]\n"
+}

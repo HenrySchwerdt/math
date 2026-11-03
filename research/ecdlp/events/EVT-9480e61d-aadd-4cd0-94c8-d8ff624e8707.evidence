@@ -1,0 +1,26 @@
+{
+  "id": "EVT-9480e61d-aadd-4cd0-94c8-d8ff624e8707",
+  "kind": "task-status-change",
+  "task": "TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131",
+  "task_key": "ECDLP-5",
+  "timestamp": "2026-11-03T09:35:39.417329Z",
+  "run": "RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "counterexample"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute bounded round-2 run."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Formalize N3 (HYP-57d71f43) and B3/N2 trace bounds in Lean"
+  },
+  "reason": "Counterexample attempts executed and PI-reproduced: H1 application refuted, H2 survived, H3 flawed (superseded by trivial bound), H4 ill-posed (exact variant recorded)",
+  "before_sha256": "3f8fd45e155ac7283cf0e08207d3c1209f7e7fbb1e3b04a287ea187b73f43aa7",
+  "after_sha256": "946c2613ae78a0d54d38ba0cf652868f39007cd4abecd35bf8bf703a2b306f27"
+}

@@ -3,21 +3,22 @@
   "type": "HYP",
   "title": "Frobenius-equivariance obstruction for transfers",
   "created_at": "2026-11-03T09:13:30.971914Z",
-  "status": "open",
+  "status": "completed",
   "question": "Let r be prime, V an F_r-vector space with additive map F: V -> V, x0 in V with F(x0)=x0, M an F_r-module, c in F_r, and f: V -> M additive with f(F v) = c f(v) for all v. Then (1-c) f(x0) = 0, so f(x0) = 0 unless c = 1. Proposed application: F = q^j-power Frobenius on E[r], target mu_r with scalar c = q^j mod r, so nonzero equivariant transfers of a rational point require r | q^j - 1; for additive target c=1 but F_r-linear maps to F_p need r=p. Claimed to unify MOV/FR and the anomalous attack.",
   "rationale": "Registered by PI from sealed round-1 submissions before cross-agent synthesis or review.",
   "assumptions": [],
   "sources": [],
   "refs": [
     "RUN-fec2442f-7d58-41e5-a4d0-ee0dbd2a8d88",
-    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402"
   ],
   "evidence": [],
   "claims": [
     "Let r be prime, V an F_r-vector space with additive map F: V -> V, x0 in V with F(x0)=x0, M an F_r-module, c in F_r, and f: V -> M additive with f(F v) = c f(v) for all v. Then (1-c) f(x0) = 0, so f(x0) = 0 unless c = 1. Proposed application: F = q^j-power Frobenius on E[r], target mu_r with scalar c = q^j mod r, so nonzero equivariant transfers of a rational point require r | q^j - 1; for additive target c=1 but F_r-linear maps to F_p need r=p. Claimed to unify MOV/FR and the anomalous attack."
   ],
-  "proof_status": "unproved",
-  "outcome": "unresolved",
-  "next_action": "Independent counterexample attempt (ECDLP-5) and, where feasible, Lean obligation (ECDLP-6).",
-  "notes": "Origin: B6 (RUN-fec2442f). The abstract algebra statement and the claimed application/unification are distinct claims; the application (which Frobenius, which maps count as equivariant, pairings with auxiliary point R) is unverified."
+  "proof_status": "refuted",
+  "outcome": "refuted",
+  "next_action": "No further work; guardrail only.",
+  "notes": "Origin: B6 (RUN-fec2442f). The abstract algebra statement and the claimed application/unification are distinct claims; the application (which Frobenius, which maps count as equivariant, pairings with auxiliary point R) is unverified. | ECDLP-5: abstract lemma correct (and Lean-verified, PRF-af19eaae) but trivial. The APPLICATION/\"unification\" claim is refuted as stated: the pairing x->e(x,R) with non-rational R is not Galois-equivariant for c=q (toy computations on embedding-degree-2 curves, p=103,131: f(piX)=f(X) but f(X)^p != f(X), Weil and reduced Tate); r | q^j-1 is just the definition of embedding degree; the anomalous map lives where Frobenius acts trivially so the lemma is silent. Correct trivial variant N1: an F_q-defined f: E[r]->mu_r has f(x0)=1 for rational x0 unless r | q-1. Status refuted refers to the application; the abstract part remains formally verified."
 }

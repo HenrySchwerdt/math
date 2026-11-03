@@ -7,17 +7,57 @@
   "question": "What is the exact, sourced statement of the best Weil-type bound for sums sum_{Q in E(F_p)} psi(Q) chi(g(Q)) (psi a group character of E(F_p), chi a multiplicative character, g a rational function), including constants and degree dependence, and what is known about the limiting distribution (Katz/Deligne equidistribution) of the normalized sums? Does it explain a periodogram variance below 1 for chi(x([k]P))?",
   "rationale": "Bounded subagent run for TSK-e4099001-23bb-4242-b896-341c8af8919e",
   "assumptions": [],
-  "sources": [],
+  "sources": [
+    {
+      "title": "Kohel, Shparlinski - On Exponential Sums and Group Generators for Elliptic Curves over Finite Fields (ANTS 2000, LNCS 1838, 395-404; authors' preprint; additive-character sums S(omega,psi,f))",
+      "url": "https://www.i2m.univ-amu.fr/perso/david.kohel/pub/character.pdf",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Thm 1, Cor 1, eq. (3), Props 1-2, Lemma 2"
+    },
+    {
+      "title": "Perel'muter - Estimation of a sum along an algebraic curve, Mat. Zametki 5 (1969) 373-380 (index record, abstract only)",
+      "url": "https://mathnet.ru/eng/mzm6857",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "abstract"
+    },
+    {
+      "title": "Merai - Construction of pseudorandom binary sequences over elliptic curves using multiplicative characters, Publ. Math. Debrecen 80 (2012) 199-213",
+      "url": "https://publi.math.unideb.hu/paper/1655",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "Section 2 Lemma 1; Theorems 1-2"
+    },
+    {
+      "title": "Beelen, Doumen - Pseudorandom sequences from elliptic curves (Oaxaca 2001, Springer 2002, 37-52), bibliographic record only",
+      "url": "https://research.utwente.nl/en/publications/pseudorandom-sequences-from-elliptic-curves/",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "record"
+    },
+    {
+      "title": "Ahmadi, Shparlinski - Bilinear character sums and sum-product problems on elliptic curves (arXiv 1302.4210), bibliography only",
+      "url": "https://arxiv.org/pdf/1302.4210",
+      "retrieved_at": "2026-11-03T00:00:00Z",
+      "locator": "references; Section 2"
+    }
+  ],
   "refs": [
     "TSK-e4099001-23bb-4242-b896-341c8af8919e",
     "HYP-242da418-4c1a-45b1-8132-8a2f00574272"
   ],
-  "evidence": [],
-  "claims": [],
+  "evidence": [
+    "research/ecdlp/runs/RUN-60986daa-f9ba-459a-bb6a-fb38509188ec-command-13397cb2-28bd-45a6-85d0-8bf547d06bbc.evidence"
+  ],
+  "claims": [
+    "Verified literature: Kohel-Shparlinski (ANTS 2000) bound |S(omega,psi,f)| <= 2 deg(f) sqrt(q) concerns ADDITIVE psi(f(P)); the multiplicative mixed sum S(omega,chi,f) is treated by Perel'muter 1969, Perret 1991, Beelen-Doumen 2002, Merai 2012 (Lemma 1, incomplete sums, factor 1+log N, f not a d-th power). Explicit constants for the multiplicative case were not read in primary sources.",
+    "Derived (from Weil/Bombieri L-functions as quoted in Kohel-Shparlinski): |S(omega,chi,g)+eps| <= D sqrt(p), D = degree of the ramified support of div(g) (D=2 for g=x,x+1,2x; 4 for x^2+x+1,y; 6 for xy); checked numerically, no violation, D=2 bound essentially sharp.",
+    "Proved identities: sum_c |F(c)|^2 = rN (mean of periodogram is exactly ~1) and sum_c |F(c)|^4 = r sum_R |A(R)|^2 with A the cyclic autocorrelation of chi(g(.)); full-range sums are exact group-character sums for r prime.",
+    "Half-range DFT: completion gives only O(D sqrt(p) log p), i.e. normalized O(D^2 log^2 p); vacuous for the variance anomaly.",
+    "Heuristic (not proved, no source found): F(c)/sqrt(N) for g=x is Sato-Tate/semicircle (SU(2)): E u^4 = 2, var(full-range periodogram) = 1, and half-range periodogram variance = 1 + kappa/3 = 2/3, matching the observed 0.66; for symmetric D=4 g it behaves as USp(4): E u^4 = 3, half-range var 1. Pooled 115k values: moments 1, 1.995, 4.981 vs 1, 2, 5; KS 0.004. g=y is empirically SU(2)-like although D=4 (unexplained).",
+    "No information about the discrete log follows; Weil bound limits every Fourier correlation to about D/sqrt(p). A leak would require a non-negligible computable distinguisher of k-classes from Q=[k]P (stated in report)."
+  ],
   "proof_status": "not-applicable",
   "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "next_action": "Reviewer: (1) check claim (C) conductor count against Perel'muter/Perret theorem texts; (2) test p up to ~1e5 with FFT for g=x vs y vs x^2+x+1 (E u^4 = 2, 2, 3) and resolve why g=y is SU(2)-like; (3) try a decisive test of the 1+kappa/3 half-range law with other D (e.g. cubic g, order-4 chi); (4) set HYP-242da418 to reflect that the claimed 'non-Exp(1) bounded law' is supported but that C(d) must be the conductor degree D, not 2deg g, and that the mechanism needs a source or proof.",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI. Self-reported model identity of this agent: Sonnet 5.5 (claude-sonnet-5-5); not verifiable from runtime metadata. Unverified recollection kept out of sources: Katz Sato-Tate/monodromy theorems (no theorem on the law over characters of E(F_p) found), Lange-Shparlinski statements, Bombieri 1966 (cited via Kohel-Shparlinski, not read), Perel'muter 1963 Uspehi Mat. Nauk 18, 145-149 (cited via Merai), Perret 1991 Acta Arith. 59. DOI of Merai differs between PDF (2011.5057) and publisher listing (2012.5057). Experiments in research/ecdlp/experiments/round3-nt/ (weil_check.py was run by direct invocation, other scripts via research.py exec). Web lookups used: 8.",
   "run": {
     "started_at": "2026-11-03T09:27:21.297919Z",
     "completed_at": null,
@@ -31,7 +71,9 @@
     "starting_commit": "9194a8aecca3e112fead04ced3a6d55af347109a",
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
-    "commands": [],
+    "commands": [
+      "research/ecdlp/runs/RUN-60986daa-f9ba-459a-bb6a-fb38509188ec-command-13397cb2-28bd-45a6-85d0-8bf547d06bbc.evidence"
+    ],
     "files_changed": [],
     "resulting_commit": null,
     "tests": [],

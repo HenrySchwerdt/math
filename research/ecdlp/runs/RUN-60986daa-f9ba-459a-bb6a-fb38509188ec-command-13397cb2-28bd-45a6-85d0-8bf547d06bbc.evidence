@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "bash",
+    "-c",
+    "cd research/ecdlp/experiments/round3-nt && python3 mixed_sums.py 1 > out_seed1.txt && python3 mixed_sums.py 2 > out_seed2.txt && python3 extra.py 2 > out_extra_seed2.txt && python3 extra.py 1 > out_extra_seed1.txt && python3 moments.py 3 > out_moments_seed3.txt && echo done"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:32:46.902067Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:32:51.337513Z",
+  "truncated": false,
+  "output": "done\n"
+}

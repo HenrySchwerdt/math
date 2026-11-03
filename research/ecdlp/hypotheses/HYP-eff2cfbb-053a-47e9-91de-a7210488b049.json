@@ -10,14 +10,15 @@
   "sources": [],
   "refs": [
     "RUN-fec2442f-7d58-41e5-a4d0-ee0dbd2a8d88",
-    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402"
   ],
   "evidence": [],
   "claims": [
     "Fix a prime power q and M >= 1. Call an integer t with |t| <= 2 sqrt(q) M-bad if q+1-t has a prime factor r > 4 sqrt(q) with r not dividing q and multiplicative order of q mod r at most M. Then the number of M-bad t is at most M(M+1)."
   ],
-  "proof_status": "unproved",
+  "proof_status": "proof-attempt",
   "outcome": "unresolved",
-  "next_action": "Independent counterexample attempt (ECDLP-5) and, where feasible, Lean obligation (ECDLP-6).",
-  "notes": "Origin: B3 (RUN-fec2442f). Statement about traces only; curve-count weighting by Hurwitz class numbers is a separate unproved claim. Finite check p <= 80021 reported 1..3 bad traces vs 42."
+  "next_action": "Formalize in Lean (medium cost) or write reviewed proof; then accept.",
+  "notes": "Origin: B3 (RUN-fec2442f). Statement about traces only; curve-count weighting by Hurwitz class numbers is a separate unproved claim. Finite check p <= 80021 reported 1..3 bad traces vs 42. | ECDLP-5: survived. No violation for all 13972 prime powers q <= 150000 and 400 sampled q <= 1e6, M <= 12; proof logic checked, no gap found; far from sharp (max observed 9 at M=12 vs 156). Sharper variant HYP-4bd8d89a."
 }

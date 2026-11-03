@@ -1,0 +1,26 @@
+{
+  "id": "HYP-57d71f43-70ad-45f9-a8d3-6f095fd8d5f3",
+  "type": "HYP",
+  "title": "Trivial coefficient bound for SLP certificates (N3)",
+  "created_at": "2026-11-03T09:35:04.975734Z",
+  "status": "open",
+  "question": "In any addition/subtraction straight-line program a_0 = P, a_i = \u00b1a_j \u00b1 a_l (j,l < i), every a_i equals n_i P for an integer n_i with |n_i| <= 2^i. Hence if the order r of P exceeds 2^{L+1}+1, some Q in <P> is not an output of any SLP of length <= L; this gives L >= log2(r-1) - 1, strictly stronger than the counting bound log2 r / (2 log2 log2 r) of HYP-650069e0.",
+  "rationale": "Corrected variant produced by the ECDLP-5 counterexample run; recorded separately, original kept.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-650069e0-5ad0-416b-980f-53064abdcccb",
+    "RUN-84ddecf7-bdbe-4e63-aa48-60e59ca26402",
+    "TSK-c6b29e4f-f09f-485d-9df4-fa79ccd81131"
+  ],
+  "evidence": [
+    "research/ecdlp/experiments/round2-cx/h3_output.txt"
+  ],
+  "claims": [
+    "In any addition/subtraction straight-line program a_0 = P, a_i = \u00b1a_j \u00b1 a_l (j,l < i), every a_i equals n_i P for an integer n_i with |n_i| <= 2^i. Hence if the order r of P exceeds 2^{L+1}+1, some Q in <P> is not an output of any SLP of length <= L; this gives L >= log2(r-1) - 1, strictly stronger than the counting bound log2 r / (2 log2 log2 r) of HYP-650069e0."
+  ],
+  "proof_status": "proof-attempt",
+  "outcome": "unresolved",
+  "next_action": "Independent proof write-up and review; Lean formalization where feasible.",
+  "notes": "Elementary; replaces the weaker counting barrier. Bit-cost consequences remain model-dependent (black-box group operations only). Lean candidate."
+}

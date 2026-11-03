@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round2-cx/h2_sparsity.py",
+    "20000"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T09:34:45.162567Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T09:34:48.538629Z",
+  "truncated": false,
+  "output": "prime powers tested: 2328 q range 2.. 20000\nviolations of M(M+1): []\nM= 1 bound M(M+1)=  2 max #bad t=1 at q=32 t=[2]\nM= 2 bound M(M+1)=  6 max #bad t=2 at q=653 t=[0, 2]\nM= 3 bound M(M+1)= 12 max #bad t=3 at q=587 t=[-43, 2, 41]\nM= 4 bound M(M+1)= 20 max #bad t=4 at q=787 t=[0, 2, 17, 33]\nM= 5 bound M(M+1)= 30 max #bad t=5 at q=6353 t=[0, 2, 44, 65, 68]\nM= 6 bound M(M+1)= 42 max #bad t=5 at q=773 t=[-28, -11, 2, 21, 50]\nM= 7 bound M(M+1)= 56 max #bad t=6 at q=13043 t=[-89, -73, 0, 2, 82, 161]\nM= 8 bound M(M+1)= 72 max #bad t=7 at q=13043 t=[-89, -73, 0, 2, 82, 161, 189]\nM= 9 bound M(M+1)= 90 max #bad t=7 at q=3083 t=[-92, -54, -42, -38, 0, 40, 52]\nM=10 bound M(M+1)=110 max #bad t=7 at q=421 t=[-31, 0, 11, 18, 21, 34, 40]\nM=11 bound M(M+1)=132 max #bad t=7 at q=421 t=[-31, 0, 11, 18, 21, 34, 40]\nM=12 bound M(M+1)=156 max #bad t=8 at q=4259 t=[-94, 2, 8, 34, 70, 111, 117, 125]\n"
+}
