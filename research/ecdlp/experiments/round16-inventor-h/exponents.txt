@@ -1,0 +1,9 @@
+B0 online T exponent in r 0.295 CI95 0.232 0.343
+B0 S exponent in r 0.344 CI95 0.237 0.468
+B0 prep exponent in r 0.659 CI95 0.59 0.726
+H online T exponent in r 0.301 CI95 0.246 0.345
+H S exponent in r 0.364 CI95 0.268 0.478
+H prep exponent in r 0.624 CI95 0.538 0.715
+24 H online T 629 C ref rho ops 5788 speed-up 9.2 break-even queries 25
+28 H online T 1360 C ref rho ops 20015 speed-up 14.7 break-even queries 17
+32 H online T 3954 C ref rho ops 42078 speed-up 10.6 break-even queries 94
