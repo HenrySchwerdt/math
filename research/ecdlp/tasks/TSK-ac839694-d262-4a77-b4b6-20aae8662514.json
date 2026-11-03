@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 8 / ECDLP-23: blind adversarial review of partial-agreement bounds",
   "created_at": "2026-11-03T10:29:51.100138Z",
-  "status": "active",
+  "status": "completed",
   "question": "Are the partial-agreement lower bounds in HYP-5da6025e correct as stated (hypotheses, constants, the h_j nonvanishing argument, the progression bound for x-only k^2)?",
   "rationale": "Round-8 selection by PI (autonomous); D2/D3 from ECDLP-22 judged weak as stated, D3 absorbed into ECDLP-24.",
   "assumptions": [],
@@ -13,12 +13,13 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-705d1884-d040-490d-9720-2a54876ad4a6.evidence"
+    "research/ecdlp/events/EVT-705d1884-d040-490d-9720-2a54876ad4a6.evidence",
+    "research/ecdlp/events/EVT-83746eeb-3723-4efd-9d1b-cae0edee342e.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute bounded round-8 run.",
+  "outcome": "verified",
+  "next_action": "Formalize corrected (2)",
   "notes": "Created by PI RUN-62dbda7c (autonomous).",
   "success_criteria": [
     "Exact statements; verified sources or explicit unverified marks; reproducible evidence; no sorry; corrected variants separate."

@@ -3,7 +3,7 @@
   "type": "HYP",
   "title": "Partial-agreement lower bounds for EC discrete-log interpolation",
   "created_at": "2026-11-03T10:26:29.154603Z",
-  "status": "open",
+  "status": "completed",
   "question": "Partial-agreement lower bounds (proof attempt). Let E/F_p, P of prime order r, N < min(p, r), A \u2286 {1..N} with |A| = m, and f a rational function on E regular at kP (k \u2208 A) with f(kP) = k mod p for k \u2208 A. (1) For every 1 <= j <= N-1: deg f >= T_j/2 where T_j = #{k : k, k+j \u2208 A} (h_j = f\u2218\u03c4_{jP} \u2212 f \u2212 j vanishes at those kP; h_j \u2262 0 since otherwise the pole set is jP-invariant, orbits of size r). (1b) Since \u03a3_j T_j = C(m,2): deg f >= m(m\u22121)/(4(N\u22121)) \u2248 \u03b4\u00b2N/4 for every \u03b4 = m/N. (1a) deg f >= ((2\u03b4\u22121)N \u2212 1)/2 for \u03b4 > 1/2. (1d) polynomial total degree >= deg f / 3. (2) x-only g with g(x(kP)) = k\u00b2 on A: deg g >= S_j/3 with S_j = # 3-term progressions in A of difference j; gives deg g >= ((3\u03b4\u22122)N \u2212 2)/3 for \u03b4 > 2/3. N < p is necessary (counterexample p=5, r=7, f \u2261 1 on {1,6}).",
   "rationale": "From ECDLP-21; curve analogue of Coppersmith\u2013Shparlinski-type approximation bounds.",
   "assumptions": [],
@@ -13,7 +13,10 @@
     "TSK-a826d13f-73ab-462d-8e03-d6094b6d08d7",
     "HYP-adb581ff-5c5a-43f1-bc18-e5fa83ddeadd",
     "HYP-eda6732a-1c6d-4e5e-b00c-3ec2e4a40ddd",
-    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61",
+    "RUN-48ba5570-86dd-4069-83c7-6c613f689ffd",
+    "REV-ac47cc67-f99e-42e0-884c-aad15cc429e3",
+    "HYP-a1dd5501-c137-492a-abc6-e9cda3765002"
   ],
   "evidence": [
     "research/ecdlp/experiments/round7-approx/out_approx_checks.txt"
@@ -21,8 +24,8 @@
   "claims": [
     "Partial-agreement lower bounds (proof attempt). Let E/F_p, P of prime order r, N < min(p, r), A \u2286 {1..N} with |A| = m, and f a rational function on E regular at kP (k \u2208 A) with f(kP) = k mod p for k \u2208 A. (1) For every 1 <= j <= N-1: deg f >= T_j/2 where T_j = #{k : k, k+j \u2208 A} (h_j = f\u2218\u03c4_{jP} \u2212 f \u2212 j vanishes at those kP; h_j \u2262 0 since otherwise the pole set is jP-invariant, orbits of size r). (1b) Since \u03a3_j T_j = C(m,2): deg f >= m(m\u22121)/(4(N\u22121)) \u2248 \u03b4\u00b2N/4 for every \u03b4 = m/N. (1a) deg f >= ((2\u03b4\u22121)N \u2212 1)/2 for \u03b4 > 1/2. (1d) polynomial total degree >= deg f / 3. (2) x-only g with g(x(kP)) = k\u00b2 on A: deg g >= S_j/3 with S_j = # 3-term progressions in A of difference j; gives deg g >= ((3\u03b4\u22122)N \u2212 2)/3 for \u03b4 > 2/3. N < p is necessary (counterexample p=5, r=7, f \u2261 1 on {1,6})."
   ],
-  "proof_status": "proof-attempt",
-  "outcome": "unresolved",
-  "next_action": "Blind adversarial review; Lean formalization of (1b) is feasible by extending CurveX/Interpolation (pole-degree argument may be replaced by an x-only polynomial variant). Settle novelty vs Lange\u2013Winterhof (theorem statements not yet accessed).",
-  "notes": "PI checked the core counting (\u03a3_j T_j = C(m,2)) and the h_j \u2262 0 argument. Toy checks (p < 100) reproduced by PI: no violations; bound loose for sparse random A (true min ~ m polynomial, ~ (m+1)/2 rational), nearly sharp for intervals. Gap \u03b4\u00b2N/4 vs (\u03b4N+1)/2 open. Only constrains low-degree algebraic formulas; no bit-complexity consequence."
+  "proof_status": "refuted",
+  "outcome": "refuted",
+  "next_action": "Superseded by HYP-a1dd5501-c137-492a-abc6-e9cda3765002.",
+  "notes": "PI checked the core counting (\u03a3_j T_j = C(m,2)) and the h_j \u2262 0 argument. Toy checks (p < 100) reproduced by PI: no violations; bound loose for sparse random A (true min ~ m polynomial, ~ (m+1)/2 rational), nearly sharp for intervals. Gap \u03b4\u00b2N/4 vs (\u03b4N+1)/2 open. Only constrains low-degree algebraic formulas; no bit-complexity consequence. | ECDLP-23 blind review: part (2) as TRANSCRIBED BY THE PI is FALSE \u2014 counterexample y^2 = x^3 + 5 over F_7, P = (3,2) of order 7 = p, A = {1..6}: g = 5X satisfies g(x(kP)) = k^2 mod 7 for k = 1..6 (PI-verified), deg g = 1 < S_1/3 = 4/3. The agent report (RUN-eb84ffa8) had the hypothesis N <= (r-1)/2; the PI dropped it in this HYP. PI process error recorded. Parts (1),(1a),(1b),(1d) correct; corrected statement in HYP-a1dd5501-c137-492a-abc6-e9cda3765002."
 }
