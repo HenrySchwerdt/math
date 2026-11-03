@@ -1,0 +1,44 @@
+{
+  "id": "RUN-d0b4df5c-47cc-43e7-a7bb-449926187a0b",
+  "type": "RUN",
+  "title": "Round 4 / ECDLP-10: Lean proofs of SLP coefficient bound (N3) and embedding-degree trace bound (B3)",
+  "created_at": "2026-11-03T09:36:23.367137Z",
+  "status": "active",
+  "question": "Prove in Lean 4/Mathlib: (a) HYP-57d71f43 coefficient bound for addition/subtraction straight-line programs and its corollary; (b) HYP-eff2cfbb trace bound (or the strongest provable sub-statement), with exact statements and correspondence notes.",
+  "rationale": "Bounded subagent run for TSK-afacfd9c-4a07-4b4f-b7ce-4ccd3341da0e",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-afacfd9c-4a07-4b4f-b7ce-4ccd3341da0e",
+    "HYP-57d71f43-70ad-45f9-a8d3-6f095fd8d5f3",
+    "HYP-eff2cfbb-053a-47e9-91de-a7210488b049"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T09:36:50.564261Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "formalization",
+    "task": "TSK-afacfd9c-4a07-4b4f-b7ce-4ccd3341da0e",
+    "input_hypotheses": [
+      "HYP-57d71f43-70ad-45f9-a8d3-6f095fd8d5f3",
+      "HYP-eff2cfbb-053a-47e9-91de-a7210488b049"
+    ],
+    "starting_commit": "d860d3fb0961237c7d9be2735484049a8da7ed39",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}

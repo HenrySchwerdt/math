@@ -1,0 +1,24 @@
+{
+  "id": "HYP-db508348-69da-451b-ba37-d4d4f472c121",
+  "type": "HYP",
+  "title": "Prime-field small-x factor bases: relation yield and cost (B11/A5)",
+  "created_at": "2026-11-03T09:36:50.534877Z",
+  "status": "open",
+  "question": "Prime-field factor-base question (B11/A5 open requirement): for E/F_p (p prime) and the factor base V_B = {Q in E(F_p): x(Q) < B} with B = p^{1/m}, the probability that a uniformly random R in E(F_p) is a sum of m points of V_B is about |V_B|^m/(m! p) (heuristic), and finding such decompositions via Semaev summation polynomials (S_3 for m=2) costs at least as much as rho at toy sizes; no choice of (m, B) yields a relation-collection cost below sqrt(p) group operations on prime fields at toy sizes.",
+  "rationale": "Highest-significance open direction for universal ECDLP identified independently by agents A (A5) and B (B11); cheap falsification at toy sizes.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "RUN-b0ccd1bd-6bbc-4f34-b347-0ade0bde13b7",
+    "RUN-fec2442f-7d58-41e5-a4d0-ee0dbd2a8d88",
+    "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
+  ],
+  "evidence": [],
+  "claims": [
+    "Prime-field factor-base question (B11/A5 open requirement): for E/F_p (p prime) and the factor base V_B = {Q in E(F_p): x(Q) < B} with B = p^{1/m}, the probability that a uniformly random R in E(F_p) is a sum of m points of V_B is about |V_B|^m/(m! p) (heuristic), and finding such decompositions via Semaev summation polynomials (S_3 for m=2) costs at least as much as rho at toy sizes; no choice of (m, B) yields a relation-collection cost below sqrt(p) group operations on prime fields at toy sizes."
+  ],
+  "proof_status": "unproved",
+  "outcome": "unresolved",
+  "next_action": "ECDLP-12 experiment.",
+  "notes": "Registered by PI. Known context (unverified recollection by agents): Semaev 2004; Petit-Kosters-Messeng PKC 2016; Diem; prime-field variants remain exponential."
+}

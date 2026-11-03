@@ -1,0 +1,42 @@
+{
+  "id": "RUN-597fcdfe-7b4f-4a9a-a0be-a9ee84390a34",
+  "type": "RUN",
+  "title": "Round 4 / ECDLP-12: relation yield of small-x factor bases on prime-field curves",
+  "created_at": "2026-11-03T09:36:23.519598Z",
+  "status": "active",
+  "question": "Measure, at toy sizes, decomposition probabilities and relation-collection cost for small-x factor bases on E(F_p) (m = 2, 3), compared with sqrt(p) and heuristic predictions.",
+  "rationale": "Bounded subagent run for TSK-db0e4159-ba4a-4577-821b-b29f8e46ed2c",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-db0e4159-ba4a-4577-821b-b29f8e46ed2c",
+    "HYP-db508348-69da-451b-ba37-d4d4f472c121"
+  ],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Adapter frontmatter model claude-sonnet-5-5; runtime identity not exposed to PI.",
+  "run": {
+    "started_at": "2026-11-03T09:36:50.564261Z",
+    "completed_at": null,
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured; see notes)",
+    "role": "experimenter",
+    "task": "TSK-db0e4159-ba4a-4577-821b-b29f8e46ed2c",
+    "input_hypotheses": [
+      "HYP-db508348-69da-451b-ba37-d4d4f472c121"
+    ],
+    "starting_commit": "d860d3fb0961237c7d9be2735484049a8da7ed39",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "Claude Code remote Linux container, 4 vCPU, 15 GiB RAM",
+    "reviews": []
+  }
+}
