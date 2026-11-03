@@ -12,7 +12,11 @@
     "TSK-e5cd23ce-c89d-41bd-b03c-9fe4eb9fd7b0"
   ],
   "evidence": [
-    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-0872c384-bd69-4658-b1b8-51e9ca64b165.evidence"
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-0872c384-bd69-4658-b1b8-51e9ca64b165.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-694c1aef-ed57-4382-b284-5ab0dc1a9bdd.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-5097d6a0-a678-4e5d-8108-fc2308dcee65.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-76518510-8b13-45a3-a10b-e9ee814c277f.evidence",
+    "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-a56a9af3-f9f6-40cd-994c-c8028090ce67.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
@@ -31,7 +35,11 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [
-      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-0872c384-bd69-4658-b1b8-51e9ca64b165.evidence"
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-0872c384-bd69-4658-b1b8-51e9ca64b165.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-694c1aef-ed57-4382-b284-5ab0dc1a9bdd.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-5097d6a0-a678-4e5d-8108-fc2308dcee65.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-76518510-8b13-45a3-a10b-e9ee814c277f.evidence",
+      "research/ecdlp/runs/RUN-ede8fc59-b94d-4073-8b8c-a58aa6368779-command-a56a9af3-f9f6-40cd-994c-c8028090ce67.evidence"
     ],
     "files_changed": [],
     "resulting_commit": null,
