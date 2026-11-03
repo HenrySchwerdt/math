@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round14-inventor-e/e2_pullback.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:30:52.352782Z",
+  "exit_code": 1,
+  "completed_at": "2026-11-03T12:31:04.010877Z",
+  "truncated": false,
+  "output": "(a) total Tjurina number (= sum of delta-type local invariants; 0 = smooth) per chart of P1xP1: [t1,t2], [t1,1/t2], [1/t1,t2], [1/t1,1/t2]\n    genus(normalization) = (2e-1)^2 - sum delta, delta = floor(e/2) at each of 2e cusp/node points (checked via Tjurina: nodes tau=1, cusp tau=2)\ne=1 phi=t                                                          arith.genus=  1 Tjurina per chart=[0, 0, 0, 0]  (0.1s)\ne=2 phi=t^2 (poly, pole order e at inf)                            arith.genus=  9 Tjurina per chart=[0, 2, 2, 4]  (0.1s)\ne=3 phi=t^3                                                        arith.genus= 25 Tjurina per chart=[0, 6, 6, 12]  (0.1s)\ne=2 phi=(t^2+1)/(t^2+2t+3) generic rational, inf unramified        arith.genus=  9 Tjurina per chart=[0, 0, 0, 0]  (11.0s)\n\n(c) F_p point counts of Y (phi = t^e, p = 1 mod e); N = #{(t1,t2) in F_p^2 : F=0} affine;  Weil window half-width 2g sqrt p with g=g_mono(e) (even e: (3e-1)(e-1); odd e: 3e^2-3e+1; derived in report)\n p     e   g_mono(e)  2g*sqrt(p)  N_affine(Y)   N-p      |N-p|/sqrt(p)   |phi(F_p)|\nTraceback (most recent call last):\n  File \"<repo>/research/ecdlp/experiments/round14-inventor-e/e2_pullback.py\", line 72, in <module>\n    a_, b_ = rng.randrange(1, p), rng.randrange(1, p)\n             ^^^\nNameError: name 'rng' is not defined\n"
+}

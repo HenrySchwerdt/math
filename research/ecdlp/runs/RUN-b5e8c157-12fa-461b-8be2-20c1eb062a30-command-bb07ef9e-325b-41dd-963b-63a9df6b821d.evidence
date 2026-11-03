@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round14-inventor-e/e1_genus.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:17:00.160778Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:17:03.691824Z",
+  "truncated": false,
+  "output": "S3 bidegree in (x1,x2): 2 2 total deg 4\ndisc_x2(S3) = 16*(a*x1 + b + x1**3)*(a*x3 + b + x3**3)\nquartic in x1 (after removing f(x3) factor): a*x1 + b + x1**3  degree 3\nj(quartic) - j(E) simplifies to: 0\np, #E, r-type, xR, #C_R affine (x1,x2) in F_p^2, #E-2, #E(F_p)-pairs-by-group-law\n101 95  67 93 93 93 MATCH\n101 101  94 99 99 99 MATCH\n101 92  93 90 90 90 MATCH\n257 270  155 268 268 268 MATCH\n257 261  60 259 259 259 MATCH\n257 284  161 282 282 282 MATCH\n509 525  133 523 523 523 MATCH\n509 525  264 523 523 523 MATCH\n509 468  282 466 466 466 MATCH\n1021 1010  667 1008 1008 1008 MATCH\n1021 980  609 978 978 978 MATCH\n1021 1001  85 999 999 999 MATCH\n2053 2018  456 2016 2016 2016 MATCH\n2053 2044  387 2042 2042 2042 MATCH\n2053 2029  2049 2027 2027 2027 MATCH\n"
+}

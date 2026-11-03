@@ -140,6 +140,14 @@ Round 13 (package 9):
 - Framework: `research.py render-md` fills template reports from JSON (also run by `finish`);
   `start` expands short IDs.
 
+Round 14 (package 10):
+- Inventor E (ECDLP-49): for m=2 index calculus the relation supply alone forces cost ≥ 1.22√p even
+  with a free finder (closed S_3 triples in a base of size s ≈ 2s³/(3p), measured within 2%); the
+  decomposition curve is genus 1 (the group law itself); parametrised bases of size √p have genus
+  ~3p–4p; isogeny/CM orbits give no useful relations. Only m ≥ 3 (S_4) remains in this family.
+- Technical report v2 (PAP-ef6e2010, internal, NOT submitted): 14 pages; re-review decision revise
+  (wording only), all fixes applied; stale Theorem E N=3 evidence regenerated (0 violations).
+
 ## Next
 
 Every generic-model route tested reproduces √r. Remaining levers are non-generic structure

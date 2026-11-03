@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "lean",
+    "research/ecdlp/experiments/round14-review-pap-v2/Axioms14.lean"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:19:58.056850Z",
+  "exit_code": null,
+  "error": "[Errno 2] No such file or directory: 'lake'",
+  "completed_at": "2026-11-03T12:19:58.057381Z",
+  "truncated": false,
+  "output": ""
+}

@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "lake",
+    "env",
+    "lean",
+    "research/ecdlp/experiments/round14-review-pap-v2/Axioms14.lean"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:20:04.268512Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:20:08.117524Z",
+  "truncated": false,
+  "output": "'MathResearch.ECDLP.RationalSLP.length_bound_rational_slp_order' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'MathResearch.ECDLP.RationalSLP.length_bound_rational_slp' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MathResearch.ECDLP.DecisionTree.Tree.length_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+}

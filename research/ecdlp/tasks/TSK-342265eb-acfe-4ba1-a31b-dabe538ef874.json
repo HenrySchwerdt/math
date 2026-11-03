@@ -3,7 +3,7 @@
   "type": "TSK",
   "title": "Round 14 / inventor E: sub-square-root relation finder (S_3 parametrisation, CM/isogeny-orbit factor base)",
   "created_at": "2026-11-03T12:13:32.857491Z",
-  "status": "active",
+  "status": "completed",
   "question": "Is there a relation finder whose cost per relation is below the square root of its search space on prime-field curves, via a rational/low-genus parametrisation of the S_3 decomposition variety or a CM/isogeny-orbit factor base on which S_3 factors? Benchmark any candidate against rho.",
   "rationale": "Last lever named by inventor D (60% algorithm allocation).",
   "assumptions": [],
@@ -12,12 +12,13 @@
     "HYP-23351e75-1cf5-4f17-8a78-2ff0f89b51ff"
   ],
   "evidence": [
-    "research/ecdlp/events/EVT-788dd524-88eb-4dd0-b5ee-089ae266585a.evidence"
+    "research/ecdlp/events/EVT-788dd524-88eb-4dd0-b5ee-089ae266585a.evidence",
+    "research/ecdlp/events/EVT-590a15dc-05b3-48fe-8060-2babfeda7191.evidence"
   ],
   "claims": [],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Execute.",
+  "outcome": "refuted",
+  "next_action": "Closed",
   "notes": "Created via research.py start.",
   "success_criteria": [
     "Exact statements; reproducible evidence; honest negatives."

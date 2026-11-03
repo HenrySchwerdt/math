@@ -1,0 +1,54 @@
+{
+  "id": "RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a",
+  "type": "RUN",
+  "title": "Re-review technical report v2",
+  "created_at": "2026-11-03T12:18:36.606491Z",
+  "status": "completed",
+  "question": "Are the v2 changes to PAP-ef6e2010 (R1-R5, Sections on RationalSLP, Theorem DT scope, Theorem E, benchmark table) faithful to the ledger/Lean sources and correctly labelled by evidence level?",
+  "rationale": "Bounded run for TSK-a3be6c2b-3323-4d97-8cc9-e0dc01759361",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-a3be6c2b-3323-4d97-8cc9-e0dc01759361",
+    "PAP-ef6e2010-7950-47cf-bb75-05801891905b"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a-command-27b88260-9d26-4e7e-a8ff-2de7731bd6b6.evidence",
+    "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a-command-2516248c-8588-44b2-8697-9b92e7ff16dd.evidence",
+    "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a-command-65dd5597-22cf-447b-be4f-4072cd8720f3.evidence",
+    "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a-command-5a992d19-2f0d-4f48-b504-04a00db8933d.evidence",
+    "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a-command-761a589a-58cf-464f-b85d-3ba0ab4dfb46.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T12:18:36.606799Z",
+    "completed_at": "2026-11-03T12:23:46.468959Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "independent-reviewer",
+    "task": "TSK-a3be6c2b-3323-4d97-8cc9-e0dc01759361",
+    "input_hypotheses": [],
+    "starting_commit": "25a9589e9f0d7aa3a5f8af54fddf6cd816f49054",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [
+      "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a-command-27b88260-9d26-4e7e-a8ff-2de7731bd6b6.evidence",
+      "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a-command-2516248c-8588-44b2-8697-9b92e7ff16dd.evidence",
+      "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a-command-65dd5597-22cf-447b-be4f-4072cd8720f3.evidence",
+      "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a-command-5a992d19-2f0d-4f48-b504-04a00db8933d.evidence",
+      "research/ecdlp/runs/RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a-command-761a589a-58cf-464f-b85d-3ba0ab4dfb46.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/experiments/round14-review-pap-v2/"
+    ],
+    "resulting_commit": "cfe48efcb96ee3227769f51d41c21f872a421856",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

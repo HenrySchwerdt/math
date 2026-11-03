@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round14-review-pap-v2/exhaust2.py",
+    "3",
+    "11",
+    "23"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T12:21:12.031110Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T12:21:12.949878Z",
+  "truncated": false,
+  "output": "N=3 target=k2 p=11: valid triples=840/1331  |Z|=90  |Z|/p^2=0.744  w_N=23  zeros(Num) in F_p^3=331 (=2.74 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=3 target=k2 p=23: valid triples=9724/12167  |Z|=484  |Z|/p^2=0.915  w_N=23  zeros(Num) in F_p^3=1519 (=2.87 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=3 target=k p=11: valid triples=840/1331  |Z|=80  |Z|/p^2=0.661  w_N=23  zeros(Num) in F_p^3=331 (=2.74 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=3 target=k p=23: valid triples=9724/12167  |Z|=484  |Z|/p^2=0.915  w_N=23  zeros(Num) in F_p^3=1519 (=2.87 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\n"
+}

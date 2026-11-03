@@ -1,0 +1,26 @@
+{
+  "id": "EVT-2091990e-6d42-45f8-9701-2f4501de9fbc",
+  "kind": "task-status-change",
+  "task": "TSK-a3be6c2b-3323-4d97-8cc9-e0dc01759361",
+  "task_key": "ECDLP-51",
+  "timestamp": "2026-11-03T12:23:46.466290Z",
+  "run": "RUN-9c923b56-1d53-409c-bf59-f0a3bbc97f5a",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "independent-reviewer"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "verified",
+    "next_action": "Closed"
+  },
+  "reason": "v2 re-review: revise (wording only); fixes applied by PI",
+  "before_sha256": "4e3522c6ae629e5fb348ed71b7951305475f1116e207702e8033c211b223a0f6",
+  "after_sha256": "721899a57c0d3784b5ec49b50bad7a37f5d04552ba47a852e979f88bedcabbe7"
+}
