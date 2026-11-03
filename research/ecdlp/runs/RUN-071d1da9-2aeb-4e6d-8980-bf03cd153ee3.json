@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 10 / ECDLP-29: frontier exploration B (computation models, problem reformulations, learning)",
   "created_at": "2026-11-03T10:50:39.600023Z",
-  "status": "active",
+  "status": "completed",
   "question": "Propose and cheaply test deliberately unconventional but sensible ideas toward faster ECDLP from computation models, reformulations of the problem statement, and data-driven/learning approaches not yet investigated by the lab.",
   "rationale": "Bounded subagent run for TSK-1bb330e5-131f-4df3-8496-c3f2800911ad",
   "assumptions": [],
@@ -73,7 +73,7 @@
     "files_changed": [
       "research/ecdlp/experiments/round10-frontier-b/"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "24978eca51d6d3d883a670322d92ac011804375c",
     "tests": [],
     "benchmark": "Solver conflicts and wall time on a 4-core Linux container; see report section 4; seeds recorded; 1-4 instances per size; no repeats of same instance.",
     "machine": "Claude Code remote Linux container",

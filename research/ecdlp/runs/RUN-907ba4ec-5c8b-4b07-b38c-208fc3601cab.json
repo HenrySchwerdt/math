@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Independent manuscript review of PAP-ef6e2010",
   "created_at": "2026-11-03T10:58:02.506586Z",
-  "status": "active",
+  "status": "completed",
   "question": "Independent manuscript review of PAP-ef6e2010",
   "rationale": "docs/PAPERS.md review step.",
   "assumptions": [],
@@ -37,7 +37,7 @@
       "research/ecdlp/reviews/REV-2b383b9b-7029-4706-95fe-ae74ee44a7ce.json",
       "research/ecdlp/reviews/REV-2b383b9b-7029-4706-95fe-ae74ee44a7ce.md"
     ],
-    "resulting_commit": null,
+    "resulting_commit": "24978eca51d6d3d883a670322d92ac011804375c",
     "tests": [],
     "benchmark": "Not applicable",
     "machine": "Claude Code remote Linux container",
