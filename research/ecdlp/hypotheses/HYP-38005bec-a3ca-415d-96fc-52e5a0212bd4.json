@@ -3,7 +3,7 @@
   "type": "HYP",
   "title": "Theorem E (cusp degeneration + Schwartz-Zippel): mindeg(N)=N-1 off a fraction w_N/p, w_N ~ N^4/3",
   "created_at": "2026-11-03T11:43:02.737613Z",
-  "status": "active",
+  "status": "completed",
   "question": "Is the cusp-degeneration bound (agent label \"Theorem D\" in RUN-04709f64; renamed Theorem E to avoid collision with the Hasse side-condition Theorem D) correct as stated verbatim below?",
   "rationale": "Proof attempt from ECDLP-38 giving deficit 0 generically for N < p^{1/4}; partial progress on conjecture C*.",
   "assumptions": [
@@ -27,7 +27,7 @@
     "D0 (cusp divided differences): target k^2 gives f[y_1..y_{j+1}] = (-1)^j (j+1)!^2 x0^{-j} != 0."
   ],
   "proof_status": "proof-attempt",
-  "outcome": null,
-  "next_action": "Blind adversarial review (weight count, Schwartz-Zippel on U vs F_p^3, Bad_N definition). Per strategic correction DEC no further interpolation follow-up unless it unblocks an algorithm candidate.",
+  "outcome": "verified",
+  "next_action": "Superseded by corrected HYP-a4caa1de-c6b3-4f04-892a-9685bb2e46a7 (review REV-3b9427bd-4cd4-40c1-8ab9-681ccbd44c5b).",
   "notes": "cusp_modp.py and divpoly_check.py reproduced bit-identically by PI via exec (RUN-62dbda7c evidence). Not formalized. Does not prove C* for N comparable to p."
 }

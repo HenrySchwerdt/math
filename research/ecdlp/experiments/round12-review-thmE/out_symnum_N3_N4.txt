@@ -1,0 +1,16 @@
+N=3 target=k2: summand weights [[46], [46], [46]] Num weights [46] expected 46
+   w_N=23 total degree of Num (after B-subst) = 22  (claimed bound 23); #terms 43
+   Num(tau0)=4320, W(tau0)=120, ratio=36
+   Num == W*c_(N-1) mod 1000003 at 5 random points: OK
+N=3 target=k: summand weights [[46], [46], [46]] Num weights [46] expected 46
+   w_N=23 total degree of Num (after B-subst) = 22  (claimed bound 23); #terms 43
+   Num(tau0)=792, W(tau0)=120, ratio=33/5
+   Num == W*c_(N-1) mod 1000003 at 5 random points: OK
+N=4 target=k2: summand weights [[162], [162], [162], [162]] Num weights [162] expected 162
+   w_N=81 total degree of Num (after B-subst) = 78  (claimed bound 81); #terms 466
+   Num(tau0)=-87091200, W(tau0)=151200, ratio=-576
+   Num == W*c_(N-1) mod 1000003 at 5 random points: OK
+N=4 target=k: summand weights [[162], [162], [162], [162]] Num weights [162] expected 162
+   w_N=81 total degree of Num (after B-subst) = 78  (claimed bound 81); #terms 466
+   Num(tau0)=-10437120, W(tau0)=151200, ratio=-2416/35
+   Num == W*c_(N-1) mod 1000003 at 5 random points: OK
