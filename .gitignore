@@ -6,3 +6,8 @@ __pycache__/
 .env.*
 research/**/private/
 .lake/
+website/node_modules/
+website/.vitepress/cache/
+website/.vitepress/dist/
+website/.vitepress/ledger.json
+website/research/

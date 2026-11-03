@@ -21,3 +21,11 @@ Validation: `.venv/bin/python scripts/research.py check` and
 large orchestration service are needed for bootstrap.
 
 Lean 4 is the formal proof environment; see [Lean setup and proof policy](docs/LEAN.md).
+
+## Public research notebook
+
+The [GitHub Pages research website](https://henryschwerdt.github.io/math/) uses
+VitePress, with Markdown documentation, local search, open tasks, results and
+evidence. Generate it from the shared ledger with
+`.venv/bin/python scripts/research.py site`. See [website instructions](docs/WEBSITE.md).
+GitHub Actions publishes updates committed to main.

@@ -1,0 +1,51 @@
+{
+  "id": "RUN-f4484379-ebc8-4fc1-8546-cb0358be8729",
+  "type": "RUN",
+  "title": "Build and publish VitePress research notebook",
+  "created_at": "2026-11-03T07:16:40.586619Z",
+  "status": "active",
+  "question": "Can visitors follow projects, open tasks, results and evidence through a Markdown documentation site generated from the shared Python ledger?",
+  "rationale": "User requested GitHub Pages via Actions and asked to use the documentation style from Mini, which uses VitePress.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-3b0320e8-17b1-447f-80e5-d9f0f2770613"
+  ],
+  "evidence": [
+    "research/platform/runs/RUN-f4484379-ebc8-4fc1-8546-cb0358be8729-command-60603b89-d5d8-4f87-8c54-21799d73fad4.evidence",
+    "research/platform/runs/RUN-f4484379-ebc8-4fc1-8546-cb0358be8729-command-b21c9913-14ae-472d-b9c4-03b27cf644ae.evidence",
+    "research/platform/runs/RUN-f4484379-ebc8-4fc1-8546-cb0358be8729-command-02223a40-4016-4403-9838-f58d1ffe51c6.evidence",
+    "research/platform/runs/RUN-f4484379-ebc8-4fc1-8546-cb0358be8729-command-77b212ad-0dd8-4101-903d-17fe12579572.evidence",
+    "research/platform/runs/RUN-f4484379-ebc8-4fc1-8546-cb0358be8729-command-c364387c-b57e-4846-8e7b-6ac68d5c54e1.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Implement generator, validate and publish on authorized GitHub Pages deployment branch.",
+  "notes": "Initial request, framework lookup, Pages API inspection and package installation start preceded RUN instrumentation. VitePress chosen after inspecting Mini, per user preference. Runtime model ID is not exposed.",
+  "run": {
+    "started_at": "2026-11-03T07:16:40.586846Z",
+    "completed_at": null,
+    "provider": "openai",
+    "model": "unknown-runtime-id-not-exposed",
+    "role": "website-implementer",
+    "task": "TSK-3b0320e8-17b1-447f-80e5-d9f0f2770613",
+    "input_hypotheses": [],
+    "starting_commit": "21fe9e4b9ec302d47b02569d1bbef13ee39dadc4",
+    "branch": "codex/ecdlp-research-laboratory",
+    "worktree": "main checkout; exclusive website integration writer",
+    "commands": [
+      "research/platform/runs/RUN-f4484379-ebc8-4fc1-8546-cb0358be8729-command-60603b89-d5d8-4f87-8c54-21799d73fad4.evidence",
+      "research/platform/runs/RUN-f4484379-ebc8-4fc1-8546-cb0358be8729-command-b21c9913-14ae-472d-b9c4-03b27cf644ae.evidence",
+      "research/platform/runs/RUN-f4484379-ebc8-4fc1-8546-cb0358be8729-command-02223a40-4016-4403-9838-f58d1ffe51c6.evidence",
+      "research/platform/runs/RUN-f4484379-ebc8-4fc1-8546-cb0358be8729-command-77b212ad-0dd8-4101-903d-17fe12579572.evidence",
+      "research/platform/runs/RUN-f4484379-ebc8-4fc1-8546-cb0358be8729-command-c364387c-b57e-4846-8e7b-6ac68d5c54e1.evidence"
+    ],
+    "files_changed": [],
+    "resulting_commit": null,
+    "tests": [],
+    "benchmark": "Not applicable: static website; no mathematical performance claims.",
+    "machine": "darwin-arm64; Python virtual environment; Node v26.5.0, npm 11.17.0",
+    "reviews": []
+  }
+}

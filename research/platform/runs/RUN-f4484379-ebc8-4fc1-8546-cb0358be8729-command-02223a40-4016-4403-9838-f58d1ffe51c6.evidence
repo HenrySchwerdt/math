@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "npm",
+    "run",
+    "docs:build",
+    "--prefix",
+    "website"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T07:19:27.634428Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T07:19:29.128219Z",
+  "truncated": false,
+  "output": "\n> math-research-notebook@0.1.0 docs:build\n> vitepress build\n\n\n  vitepress v1.6.4\n\n- building client + server bundles...\n\u001b[32m\u2713\u001b[0m building client + server bundles...\n- rendering pages...\n\u001b[32m\u2713\u001b[0m rendering pages...\nbuild complete in 1.18s.\n"
+}

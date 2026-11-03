@@ -1,0 +1,34 @@
+{
+  "id": "TSK-3b0320e8-17b1-447f-80e5-d9f0f2770613",
+  "type": "TSK",
+  "title": "Publish the shared research ledger as a VitePress website",
+  "created_at": "2026-11-03T07:16:40.585798Z",
+  "status": "active",
+  "question": "Can visitors follow projects, open tasks, results and evidence through a Markdown documentation site generated from the shared Python ledger?",
+  "rationale": "User requested GitHub Pages via Actions and asked to use the documentation style from Mini, which uses VitePress.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [],
+  "evidence": [],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": null,
+  "next_action": "Implement and verify generated docs and GitHub Pages workflow.",
+  "notes": "Draft only; no execution or verification claimed.",
+  "success_criteria": [
+    "Generate task/project/result/activity/detail Markdown from ledger via Python CLI.",
+    "Use VitePress with local search, sidebar, responsive styling and light/dark modes matching Mini.",
+    "Keep task completion, run outcomes and mathematical proof status distinct; link source reports/evidence.",
+    "Test generator and site build; deploy through GitHub Actions on main and verify live URL."
+  ],
+  "owned_files": [
+    "scripts/research_site.py",
+    "scripts/research.py (site subcommand)",
+    "tests/test_research_site.py",
+    "website/",
+    ".github/workflows/pages.yml",
+    "docs/WEBSITE.md",
+    "research/platform/"
+  ],
+  "resource_limit": "Bounded website implementation and review only; no mathematical research."
+}

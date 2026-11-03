@@ -1,0 +1,17 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T07:19:26.618532Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T07:19:27.457730Z",
+  "truncated": false,
+  "output": "test_provider_role_parity (test_research.ConfigurationTests.test_provider_role_parity) ... ok\ntest_all_generated_drafts_validate (test_research.LedgerTests.test_all_generated_drafts_validate) ... ok\ntest_launch_failure_and_nonzero_exit_have_evidence (test_research.LedgerTests.test_launch_failure_and_nonzero_exit_have_evidence) ... ok\ntest_local_path_redaction (test_research.LedgerTests.test_local_path_redaction) ... ok\ntest_missing_reference_and_external_evidence_rejected (test_research.LedgerTests.test_missing_reference_and_external_evidence_rejected) ... ok\ntest_remote_claim_exclusion_and_completed_owner_release (test_research.LedgerTests.test_remote_claim_exclusion_and_completed_owner_release) ... To <temp>/tmp79u3h6yr/origin.git\n * [new branch]      d6b171963ebb97d8b1dba77b5d40ca9f8095b723 -> claims/TSK-d9f1f7c2-2de9-49f5-a6df-26c27dd10e8b\nTo <temp>/tmp79u3h6yr/origin.git\n ! [rejected]        348fc88835756defc339c304848b328092501cf8 -> claims/TSK-d9f1f7c2-2de9-49f5-a6df-26c27dd10e8b (stale info)\nerror: failed to push some refs to '<temp>/tmp79u3h6yr/origin.git'\nFrom <temp>/tmp79u3h6yr/origin\n * branch            claims/TSK-d9f1f7c2-2de9-49f5-a6df-26c27dd10e8b -> FETCH_HEAD\nFrom <temp>/tmp79u3h6yr/origin\n * branch            claims/TSK-d9f1f7c2-2de9-49f5-a6df-26c27dd10e8b -> FETCH_HEAD\nTo <temp>/tmp79u3h6yr/origin.git\n - [deleted]         claims/TSK-d9f1f7c2-2de9-49f5-a6df-26c27dd10e8b\nok\ntest_timeout_is_preserved (test_research.LedgerTests.test_timeout_is_preserved) ... ok\ntest_code_examples_keep_exact_display_characters (test_research_site.NotebookTests.test_code_examples_keep_exact_display_characters) ... ok\ntest_only_safe_github_repository_urls_and_commits (test_research_site.NotebookTests.test_only_safe_github_repository_urls_and_commits) ... ok\ntest_projection_has_tasks_results_and_commit_specific_sources (test_research_site.NotebookTests.test_projection_has_tasks_results_and_commit_specific_sources) ... ok\ntest_refuses_to_replace_authored_content (test_research_site.NotebookTests.test_refuses_to_replace_authored_content) ... ok\ntest_regeneration_removes_stale_generated_pages (test_research_site.NotebookTests.test_regeneration_removes_stale_generated_pages) ... ok\ntest_research_content_is_inert_inside_vue_pre_wrapper (test_research_site.NotebookTests.test_research_content_is_inert_inside_vue_pre_wrapper) ... ok\ntest_summary_never_bundles_raw_commands_or_private_fields (test_research_site.NotebookTests.test_summary_never_bundles_raw_commands_or_private_fields) ... ok\ntest_unresolved_results_and_dirty_previews_are_explicit (test_research_site.NotebookTests.test_unresolved_results_and_dirty_previews_are_explicit) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.749s\n\nOK\n"
+}

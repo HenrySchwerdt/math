@@ -244,6 +244,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
     sub.add_parser('check')
+    sub.add_parser('site', help='Generate the public VitePress notebook from the ledger')
     for cmd in ('init', 'new', 'audit', 'claim', 'release', 'exec'):
         p = sub.add_parser(cmd)
         p.add_argument('project')
@@ -262,6 +263,11 @@ def main():
     a = parser.parse_args()
     if a.command == 'check':
         validate()
+    elif a.command == 'site':
+        from research_site import generate
+        validate()
+        manifest = generate(ROOT, git('remote', 'get-url', 'origin'), git('rev-parse', 'HEAD'), dirty=bool(git('status', '--porcelain')))
+        print(f'Generated website/research: {len(manifest["records"])} records, {len(manifest["projects"])} projects')
     elif a.command == 'init':
         init(a.project)
     elif a.command == 'new':
