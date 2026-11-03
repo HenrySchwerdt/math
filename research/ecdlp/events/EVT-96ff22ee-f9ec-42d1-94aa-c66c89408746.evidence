@@ -1,0 +1,26 @@
+{
+  "id": "EVT-96ff22ee-f9ec-42d1-94aa-c66c89408746",
+  "kind": "task-status-change",
+  "task": "TSK-b814669a-5f7b-4010-b2ba-bdad90f35923",
+  "task_key": "ECDLP-48",
+  "timestamp": "2026-11-03T12:03:22.045803Z",
+  "run": "RUN-98e2c896-a011-4429-af16-57d090ea908b",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "complexity-theory"
+  },
+  "before": {
+    "status": "open",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "reason": "Bounded complexity-theory run started",
+  "before_sha256": "4bc5cd3aaa06e2fcab8b9133cfcf90bef215ef6ab34bc8a2528aa8e6d8929bcf",
+  "after_sha256": "85baa314070bc1a522a4907c165d4239151b1cb50ebd307a212a016850408c95"
+}

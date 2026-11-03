@@ -1,0 +1,26 @@
+{
+  "id": "EVT-be4ceba2-9d68-4f4e-ae11-f3e603115619",
+  "kind": "task-status-change",
+  "task": "TSK-ac21ba6a-1187-4aa2-8992-8a9d53ba966c",
+  "task_key": "ECDLP-42",
+  "timestamp": "2026-11-03T12:00:07.772581Z",
+  "run": "RUN-ff67c875-4a95-4924-8722-a8402394bf8e",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "Farey index calculus, LLL decomposition, Mordell lift: none beats rho",
+  "before_sha256": "fdae31097f4584629f15b653f888e321620a50eccebde0f9a03180cc7582ace1",
+  "after_sha256": "e887ea5bfb28eed0d93de00b084d8cfe94f92e790e8228c762f3bcebf6410147"
+}

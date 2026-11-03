@@ -1,0 +1,58 @@
+{
+  "id": "RUN-d55e8925-6e2d-41b4-8548-10a111df3297",
+  "type": "RUN",
+  "title": "Blind review: Theorem E (cusp degeneration)",
+  "created_at": "2026-11-03T11:43:34.490144Z",
+  "status": "completed",
+  "question": "Is HYP-38005bec (verbatim statement and proof in RUN-04709f64 report) correct?",
+  "rationale": "Bounded run for TSK-eb730068-d7bc-4281-9544-df7ffdf6efe4",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "TSK-eb730068-d7bc-4281-9544-df7ffdf6efe4",
+    "HYP-38005bec-a3ca-415d-96fc-52e5a0212bd4"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-08ec4b55-9abb-44ac-b424-c87bb28d6e3a.evidence",
+    "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-50de1d16-c1d4-4204-80ba-25be309f4881.evidence",
+    "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-f4d41690-6155-43c2-8542-3387826530ba.evidence",
+    "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-bea734c1-9aca-4a13-a294-93d4215cade2.evidence",
+    "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-507ef4d5-c0f2-4246-9ff6-c1acbc4cf41d.evidence",
+    "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-cf4df623-497a-487c-9a49-05abbd37ddc0.evidence"
+  ],
+  "claims": [],
+  "proof_status": "not-applicable",
+  "outcome": "verified",
+  "next_action": "Fill draft metadata and report before execution",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "run": {
+    "started_at": "2026-11-03T11:43:34.490467Z",
+    "completed_at": "2026-11-03T11:58:15.541464Z",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "adversarial-critic",
+    "task": "TSK-eb730068-d7bc-4281-9544-df7ffdf6efe4",
+    "input_hypotheses": [
+      "HYP-38005bec-a3ca-415d-96fc-52e5a0212bd4"
+    ],
+    "starting_commit": "877a496f09c0fff28058f88fcbce146416f269bd",
+    "branch": "claude/exciting-mccarthy-yljzor",
+    "worktree": "shared checkout; exclusive ownership of listed files",
+    "commands": [
+      "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-08ec4b55-9abb-44ac-b424-c87bb28d6e3a.evidence",
+      "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-50de1d16-c1d4-4204-80ba-25be309f4881.evidence",
+      "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-f4d41690-6155-43c2-8542-3387826530ba.evidence",
+      "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-bea734c1-9aca-4a13-a294-93d4215cade2.evidence",
+      "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-507ef4d5-c0f2-4246-9ff6-c1acbc4cf41d.evidence",
+      "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297-command-cf4df623-497a-487c-9a49-05abbd37ddc0.evidence"
+    ],
+    "files_changed": [
+      "research/ecdlp/experiments/round12-review-thmE/"
+    ],
+    "resulting_commit": "15f0668e2624204e4cf3abb9f0698c28cc90e4e4",
+    "tests": [],
+    "benchmark": "See report",
+    "machine": "See report",
+    "reviews": []
+  }
+}

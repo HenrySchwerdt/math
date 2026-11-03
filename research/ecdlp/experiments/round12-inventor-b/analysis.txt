@@ -1,0 +1,38 @@
+== T1
+j0 rbits [20.0, 23.0, 29.0, 31.0, 36.0] N/size [30, 30, 30, 30, 30] fails {'none': 0, 'neg': 0, 'aut': 0}
+ ratio r values [956881, 5891521, 331322011, 2106888109, 59061762217]
+  none  slope 0.465 CI [0.421,0.509]  mean ops/sqrt(r): [5.66, 2.48, 1.54, 2.11, 3.85]
+  neg   slope 0.480 CI [0.438,0.521]  mean ops/sqrt(r): [2.95, 2.77, 4.1, 1.9, 2.43]
+  aut   slope 0.437 CI [0.373,0.497]  mean ops/sqrt(r): [3.36, 2.16, 1.59, 1.4, 1.72]
+  neg vs none: dslope +0.015 CI [-0.048,+0.077] pooled ratio none/neg 1.02 CI [0.81,1.30] -> NO ADVANTAGE
+   per-size ratio [1.92, 0.89, 0.38, 1.11, 1.58]
+  aut vs none: dslope -0.028 CI [-0.105,+0.047] pooled ratio none/aut 1.45 CI [1.14,1.88] -> NO ADVANTAGE
+   per-size ratio [1.68, 1.15, 0.97, 1.51, 2.24]
+j1728 rbits [19.0, 25.0, 29.0, 32.0, 35.0] N/size [30, 30, 30, 30, 30] fails {'none': 0, 'neg': 0, 'aut': 0}
+ ratio r values [410413, 26389417, 456965057, 2403348797, 32611077001]
+  none  slope 0.492 CI [0.457,0.525]  mean ops/sqrt(r): [3.26, 3.71, 1.94, 6.68, 2.17]
+  neg   slope 0.457 CI [0.406,0.513]  mean ops/sqrt(r): [4.35, 3.27, 4.28, 1.68, 3.44]
+  aut   slope 0.451 CI [0.415,0.483]  mean ops/sqrt(r): [2.05, 1.09, 1.18, 0.73, 1.44]
+  neg vs none: dslope -0.034 CI [-0.098,+0.032] pooled ratio none/neg 0.99 CI [0.77,1.34] -> NO ADVANTAGE
+   per-size ratio [0.75, 1.14, 0.45, 3.99, 0.63]
+  aut vs none: dslope -0.040 CI [-0.085,+0.004] pooled ratio none/aut 2.62 CI [2.15,3.17] -> CONSTANT-FACTOR ADVANTAGE
+   per-size ratio [1.59, 3.41, 1.65, 9.16, 1.5]
+== T2
+ B2 total W=0: slope 0.454 CI [0.408,0.494] vs none dslope -0.065 CI [-0.127,-0.002] pooled ratio none/B2 1.56 CI [1.20,2.06] -> CONSTANT-FACTOR ADVANTAGE
+   per-size none/B2 [1.3, 1.36, 1.02, 1.83, 2.78] mean B2 [1693, 4959, 28642, 66988, 247992]
+ B2 total W=10: slope 0.373 CI [0.335,0.407] vs none dslope -0.146 CI [-0.204,-0.090] pooled ratio none/B2 1.10 CI [0.87,1.38] -> ASYMPTOTIC-IMPROVEMENT evidence
+   per-size none/B2 [0.52, 0.79, 0.87, 1.67, 2.7] mean B2 [4243, 8529, 33366, 73141, 255592]
+ none slope 0.519 [0.475 0.56 ] mean [2207, 6766, 29131, 122454, 690247]
+ neg slope 0.478 [0.424 0.524]
+ B2 orbit-rho-only slope 0.455 [0.407 0.495] ratio none/orbit [1.32, 1.37, 1.02, 1.83, 2.78]
+ iso evals vs r: slope 0.098 [0.097 0.1  ] mean iso [255.0, 357.0, 472.3, 615.3, 760.1] steps [10.0, 12.0, 14.0, 16.0, 18.0]
+ iso evals vs a (=~log r/2): slope 1.864
+ B2 fails 0 none fails 0 N 150
+== T3
+ fraction exponent -0.467 [-0.576 -0.382] [(1033, 0.0355), (2053, 0.025), (4099, 0.016), (8209, 0.01575), (16411, 0.0105), (32779, 0.00975), (65539, 0.00375)]
+== POST-HOC (not pre-registered; diagnostics for the T2 W=10 verdict)
+ W=0: mean ops/sqrt(r) B2 [2.34, 1.71, 2.47, 1.45, 1.34] overhead share [0.0, 0.0, 0.0, 0.0, 0.0]
+ W=10: mean ops/sqrt(r) B2 [5.86, 2.94, 2.88, 1.58, 1.38] overhead share [0.6, 0.42, 0.14, 0.08, 0.03]
+ none mean ops/sqrt(r) [3.05, 2.34, 2.51, 2.64, 3.72]
+ none median ops/sqrt(r) [2.21, 1.67, 1.32, 1.73, 1.67] orbit-only median [1.44, 0.86, 0.7, 0.82, 0.67]
+ none sd/mean [0.93, 1.0, 1.1, 0.99, 1.15]

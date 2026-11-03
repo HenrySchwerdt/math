@@ -1,0 +1,43 @@
+{
+  "id": "REV-3b9427bd-4cd4-40c1-8ab9-681ccbd44c5b",
+  "type": "REV",
+  "title": "Blind adversarial review: Theorem E (cusp degeneration, agent label Theorem D)",
+  "created_at": "2026-11-03T11:58:06.707620Z",
+  "status": "completed",
+  "question": "Is HYP-38005bec (verbatim Theorem D/D0/D1/Corollary D' from RUN-04709f64) correct?",
+  "rationale": "Required independent review before accepting a proof attempt.",
+  "assumptions": [],
+  "sources": [],
+  "refs": [
+    "HYP-38005bec-a3ca-415d-96fc-52e5a0212bd4",
+    "RUN-d55e8925-6e2d-41b4-8548-10a111df3297"
+  ],
+  "evidence": [
+    "research/ecdlp/runs/RUN-d55e8925-6e2d-41b4-8548-10a111df3297.md",
+    "research/ecdlp/experiments/round12-review-thmE/out_symnum_N3_N4.txt",
+    "research/ecdlp/experiments/round12-review-thmE/out_exhaust_N3.txt",
+    "research/ecdlp/experiments/round12-review-thmE/out_exhaust_N4.txt"
+  ],
+  "claims": [
+    "Bound |Z| <= w_N p^2 accepted: weight count confirmed symbolically (46 for N=3, 162 for N=4); total degree after B-substitution 22<=23, 78<=81; Num = W c_{N-1} verified; Schwartz-Zippel on F_p^3 legitimate since Z is in V(Num); psi_m(cusp)=m proved by induction. Corrections: (1) Bad_N defined via Num(tau0); (2) conclusion only on valid triples V; (3) Corollary D' per fixed N. No counterexample in exhaustive tests N=3 (p 11..47), N=4 (p 11..53)."
+  ],
+  "proof_status": "reviewed",
+  "outcome": "verified",
+  "next_action": "Corrected statement recorded in HYP-a4caa1de-c6b3-4f04-892a-9685bb2e46a7.",
+  "notes": "Reviewer model self-reported Claude Sonnet 5.5 (configured), not runtime-verified. Paper-level plus symbolic/exhaustive evidence; not Lean-checked. PI reproduced symnum.py bit-identically via exec. Bound only genuinely tested at N=3, p=29..47 (vacuous elsewhere).",
+  "review": {
+    "run": "RUN-d55e8925-6e2d-41b4-8548-10a111df3297",
+    "target_commit": "bb4a922",
+    "targets": [
+      "HYP-38005bec-a3ca-415d-96fc-52e5a0212bd4"
+    ],
+    "decision": "revise",
+    "rationale": "Main bound survives; three statement corrections (Bad_N notation, restriction to valid triples V, Corollary D' per fixed N).",
+    "counterexamples": [
+      "None found. Exhaustive: N=3 p in {11,23,...,47}, N=4 p 11..53, both targets; Z always inside zero set of Num."
+    ],
+    "complexity": "Not an algorithmic claim; interpolation degree statement only.",
+    "limitations": "Symbolic N=5 timed out; bound vacuous for small p except N=3, p=29..47; p=151 (Bad_4) not enumerated; first N=4 run evidence has exit_code null (rerun identical).",
+    "initial_packet": "HYP-38005bec, RUN-04709f64 report, round11-cstar scripts; PI conclusion withheld."
+  }
+}

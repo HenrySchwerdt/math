@@ -28,12 +28,23 @@ def _git(*args):
         return None
 
 
+def _resolve_ref(project, ref):
+    """Expand a unique short ID prefix (e.g. HYP-23351e75) to the full record ID."""
+    if len(ref) >= 40:
+        return ref
+    matches = sorted({p.stem for p in r.project(project).rglob(f'{ref}*.json')
+                      if re.fullmatch(r'[A-Z]+-[0-9a-f-]{36}', p.stem)})
+    if len(matches) != 1:
+        raise ValueError(f'Reference {ref!r} matches {len(matches)} records; give the full ID')
+    return matches[0]
+
+
 def start(project, title, question, role, model, refs=(), owned=(), resource=None,
           rationale=None, success=(), notes=None):
     """Create a TSK and its RUN, fill both, and mark the task active. Returns (key, tsk, run)."""
     tsk = r.new(project, 'TSK')
     run = r.new(project, 'RUN')
-    refs = list(refs)
+    refs = [_resolve_ref(project, x) for x in refs]
     hyps = [x for x in refs if x.startswith('HYP-')]
     run_id = run.stem
     t = json.loads(tsk.read_text())
@@ -89,7 +100,10 @@ def fix_sources(path):
     kept, moved = [], []
     for s in d.get('sources', []):
         if isinstance(s, dict):
-            kept.append(s)
+            if s.get('url'):
+                kept.append(s)
+            else:
+                moved.append(f"{s.get('title', '')} ({s.get('locator') or 'no locator'})")
             continue
         m = URL.search(s)
         if m:

@@ -53,7 +53,7 @@ def mc(vals, r, p, nnull, rng, label):
     return det
 
 if __name__ == '__main__':
-    seed = int(sys.argv[1]); nnull = int(sys.argv[2]) if len(sys.argv) > 2 else 150
+    seed = int(sys.argv[1]); nnull = int(sys.argv[2]) if len(sys.argv) > 2 else 150; nctl = int(sys.argv[3]) if len(sys.argv) > 3 else nnull
     t0 = time.time()
     rng = random.Random(seed); E, r = prime_order_curve(rng)
     print(f'seed={seed} p={E.p} a={E.a} b={E.b} r={r} prime-order, r!=p')
@@ -65,6 +65,6 @@ if __name__ == '__main__':
     ks = nr.choice(np.arange(0, M - 1), size=int(0.02 * M), replace=False)
     pl[ks + 1] = (pl[ks] + nr.integers(0, E.p // 1024, size=len(ks))) % E.p
     # planted values may no longer be distinct; harmless for E1
-    pos = mc(pl, r, E.p, nnull, nr, 'POSITIVE CONTROL (planted)')
-    neg = mc(nr.integers(0, E.p, size=M), r, E.p, nnull, nr, 'NEGATIVE CONTROL (iid)')
+    pos = mc(pl, r, E.p, nctl, nr, 'POSITIVE CONTROL (planted)')
+    neg = mc(nr.integers(0, E.p, size=M), r, E.p, nctl, nr, 'NEGATIVE CONTROL (iid)')
     print(f'total {time.time()-t0:.1f}s')

@@ -1,0 +1,18 @@
+seed=2 p=524309 a=37470 b=166076 r=524099
+orbit built 1.3s distinct=262049==262049
+--- REAL (min attainable p=0.0099)
+ w=1 C: obs=1571504 null=1572126+-1473.7 z=  0.42 p=0.7228 | X: obs=10 null=11+-0.6 z=  2.04 p=0.0891
+ w=2 C: obs=1572444 null=1572469+-1355.9 z=  0.02 p=0.9901 | X: obs=10 null=11+-0.8 z=  1.69 p=0.1782
+ w=4 C: obs=1570838 null=1572199+-1372.4 z=  0.99 p=0.3465 | X: obs=11 null=11+-0.8 z=  0.25 p=1.0000
+ DETECTED cells (REAL): []
+--- POSITIVE CONTROL (planted D0=12345) (min attainable p=0.0099)
+ w=1 C: obs=1572812 null=1572260+-1592.5 z=  0.35 p=0.7624 | X: obs=42 null=11+-0.8 z= 38.92 p=0.0099
+ w=2 C: obs=1577564 null=1572018+-1407.5 z=  3.94 p=0.0099 | X: obs=75 null=11+-0.8 z= 79.30 p=0.0099
+ w=4 C: obs=1575350 null=1572359+-1411.5 z=  2.12 p=0.0396 | X: obs=71 null=11+-0.7 z= 86.26 p=0.0099
+ DETECTED cells (POSITIVE CONTROL (planted D0=12345)): ['X1', 'C2', 'X2', 'X4']
+--- NEGATIVE CONTROL (iid distinct) (min attainable p=0.0099)
+ w=1 C: obs=1572146 null=1572423+-1651.1 z=  0.17 p=0.9010 | X: obs=10 null=11+-0.8 z=  1.60 p=0.2277
+ w=2 C: obs=1575580 null=1572097+-1418.6 z=  2.46 p=0.0297 | X: obs=11 null=11+-0.8 z=  0.30 p=1.0000
+ w=4 C: obs=1571536 null=1572133+-1400.7 z=  0.43 p=0.7228 | X: obs=10 null=11+-0.7 z=  2.14 p=0.0891
+ DETECTED cells (NEGATIVE CONTROL (iid distinct)): []
+total 31.0s

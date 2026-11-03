@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round12-eth-transfer/eth_params.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:56:05.785194Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:56:05.949961Z",
+  "truncated": false,
+  "output": "{\n \"first_log2n_numerical_hypotheses_hold\": 10911058723.479097,\n \"first_log2n_with_hyp_and_f_below_1.0\": 68498895069.75915,\n \"first_log2n_with_hyp_and_f_below_0.5\": 534752440088.1688,\n \"first_log2n_with_hyp_and_f_below_0.25\": 3629409332000.979,\n \"first_log2n_with_hyp_and_f_below_0.1\": 40385371076982.164,\n \"table\": [\n  {\n   \"log2n\": 50,\n   \"nu\": 6,\n   \"r\": 0,\n   \"Q\": 0,\n   \"R\": 32,\n   \"hypotheses_ok\": false,\n   \"f\": Infinity\n  },\n  {\n   \"log2n\": 1000.0,\n   \"nu\": 10,\n   \"r\": 0,\n   \"Q\": 0,\n   \"R\": 128,\n   \"hypotheses_ok\": false,\n   \"f\": Infinity\n  },\n  {\n   \"log2n\": 100000.0,\n   \"nu\": 17,\n   \"r\": 1,\n   \"Q\": 45,\n   \"R\": 1268,\n   \"hypotheses_ok\": false,\n   \"f\": Infinity\n  },\n  {\n   \"log2n\": 1000000.0,\n   \"nu\": 20,\n   \"r\": 2,\n   \"Q\": 390,\n   \"R\": 4000,\n   \"hypotheses_ok\": false,\n   \"f\": Infinity\n  },\n  {\n   \"log2n\": 100000000.0,\n   \"nu\": 27,\n   \"r\": 13,\n   \"Q\": 28935,\n   \"R\": 40000,\n   \"hypotheses_ok\": false,\n   \"f\": 1.77386740423605\n  },\n  {\n   \"log2n\": 10000000000.0,\n   \"nu\": 34,\n   \"r\": 86,\n   \"Q\": 2297794,\n   \"R\": 400000,\n   \"hypotheses_ok\": false,\n   \"f\": 1.788448834838554\n  },\n  {\n   \"log2n\": 1000000000000.0,\n   \"nu\": 40,\n   \"r\": 625,\n   \"Q\": 195312500,\n   \"R\": 4000000,\n   \"hypotheses_ok\": true,\n   \"f\": 0.4005670076577854\n  },\n  {\n   \"log2n\": 1000000000000000.0,\n   \"nu\": 50,\n   \"r\": 12649,\n   \"Q\": 156250000000,\n   \"R\": 126491108,\n   \"hypotheses_ok\": true,\n   \"f\": 0.027185393688193716\n  },\n  {\n   \"log2n\": 1e+20,\n   \"nu\": 67,\n   \"r\": 2227667,\n   \"Q\": 11660447761194030,\n   \"R\": 40000000000,\n   \"hypotheses_ok\": true,\n   \"f\": 0.0001965474395095571\n  },\n  {\n   \"log2n\": 1e+30,\n   \"nu\": 100,\n   \"r\": 100000000000,\n   \"Q\": 78124999999999996743122944,\n   \"R\": 4000000000000000,\n   \"hypotheses_ok\": true,\n   \"f\": 5.4026879293191226e-09\n  }\n ]\n}\n"
+}

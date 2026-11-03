@@ -1,0 +1,26 @@
+{
+  "id": "EVT-5263bc88-52af-4c6d-814b-4f330e1464e5",
+  "kind": "task-status-change",
+  "task": "TSK-34d8b79f-89be-4448-9330-141909e9f729",
+  "task_key": "ECDLP-44",
+  "timestamp": "2026-11-03T12:02:07.448075Z",
+  "run": "RUN-aabd43b1-96bd-4e16-a970-54985f8d3a09",
+  "actor": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-5-5 (configured)",
+    "role": "algorithm-inventor"
+  },
+  "before": {
+    "status": "active",
+    "outcome": null,
+    "next_action": "Execute."
+  },
+  "after": {
+    "status": "completed",
+    "outcome": "refuted",
+    "next_action": "Closed"
+  },
+  "reason": "Negation rho, precomputation and batching reproduce known generic bounds; no exponent below 1/2",
+  "before_sha256": "1a5f0126604e05df5bce633600fec24c042fcff396c38e2e660561abc73c5f31",
+  "after_sha256": "677d1b5b8c9021c57e0024f861d2734ba8ffb97c8a8adf821ac00526bd14bec4"
+}

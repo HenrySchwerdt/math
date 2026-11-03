@@ -39,7 +39,7 @@ def one(inst, solver, tlimit, xor, q):
             for l in lits:
                 if l < 0: par = not par
             Sv.add_xor_clause([abs(l) for l in lits], par)
-        sat, model = Sv.solve(); conf = None; model = list(model) if sat else None
+        sat, model = Sv.solve(); conf = None; model = list(model)[1:] if sat else None
     else:
         from pysat.solvers import Solver
         import threading

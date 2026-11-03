@@ -1,0 +1,16 @@
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 0, "ops": 127903, "setup": 2770, "ok": true, "dps": 38, "stats": {"cycle2": 1795, "cycle4": 61, "capped": 1}, "sec": 0.303}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 1, "ops": 23363, "setup": 2793, "ok": true, "dps": 9, "stats": {"cycle2": 339, "cycle4": 5, "capped": 0}, "sec": 0.058}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 2, "ops": 50055, "setup": 2793, "ok": true, "dps": 23, "stats": {"cycle2": 722, "cycle4": 7, "capped": 0}, "sec": 0.129}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 3, "ops": 47036, "setup": 2771, "ok": true, "dps": 24, "stats": {"cycle2": 707, "cycle4": 9, "capped": 0}, "sec": 0.11}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 4, "ops": 79823, "setup": 2785, "ok": true, "dps": 32, "stats": {"cycle2": 1169, "cycle4": 13, "capped": 0}, "sec": 0.183}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 5, "ops": 17179, "setup": 2768, "ok": true, "dps": 5, "stats": {"cycle2": 260, "cycle4": 9, "capped": 0}, "sec": 0.054}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 6, "ops": 40882, "setup": 2805, "ok": true, "dps": 21, "stats": {"cycle2": 592, "cycle4": 13, "capped": 0}, "sec": 0.129}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 7, "ops": 22914, "setup": 2765, "ok": true, "dps": 12, "stats": {"cycle2": 325, "cycle4": 7, "capped": 0}, "sec": 0.051}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 8, "ops": 85112, "setup": 2817, "ok": true, "dps": 27, "stats": {"cycle2": 1421, "cycle4": 43, "capped": 1}, "sec": 0.181}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 9, "ops": 43333, "setup": 2787, "ok": true, "dps": 17, "stats": {"cycle2": 659, "cycle4": 7, "capped": 0}, "sec": 0.095}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 10, "ops": 105270, "setup": 2757, "ok": true, "dps": 56, "stats": {"cycle2": 1525, "cycle4": 34, "capped": 0}, "sec": 0.285}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 11, "ops": 72769, "setup": 2800, "ok": true, "dps": 36, "stats": {"cycle2": 1043, "cycle4": 18, "capped": 0}, "sec": 0.171}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 12, "ops": 59572, "setup": 2811, "ok": true, "dps": 30, "stats": {"cycle2": 858, "cycle4": 8, "capped": 0}, "sec": 0.13}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 13, "ops": 60935, "setup": 2813, "ok": true, "dps": 22, "stats": {"cycle2": 925, "cycle4": 16, "capped": 0}, "sec": 0.132}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 14, "ops": 79768, "setup": 2762, "ok": true, "dps": 38, "stats": {"cycle2": 1204, "cycle4": 25, "capped": 0}, "sec": 0.173}
+{"mode": "negw", "bits": 32, "p": 2266869791, "n": 2266878331, "trial": 15, "ops": 56470, "setup": 2835, "ok": true, "dps": 28, "stats": {"cycle2": 837, "cycle4": 11, "capped": 0}, "sec": 0.124}

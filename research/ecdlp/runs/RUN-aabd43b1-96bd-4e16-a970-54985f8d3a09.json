@@ -3,7 +3,7 @@
   "type": "RUN",
   "title": "Round 12 / algorithm inventor C",
   "created_at": "2026-11-03T11:34:46.251707Z",
-  "status": "active",
+  "status": "completed",
   "question": "Collision and search algorithms beyond plain rho: invent algorithms that change the search space or the collision structure (equivalence classes, multi-dimensional walks, structured iteration functions using integer properties of coordinates, batch/preprocessing tradeoffs, adaptive restarts) aiming at a better exponent or constant than Pollard rho on prime-order curves; prototype and benchmark with counted operations.",
   "rationale": "Bounded run for TSK-34d8b79f-89be-4448-9330-141909e9f729",
   "assumptions": [],
@@ -13,14 +13,21 @@
     "HYP-2de84d42-f26b-45c1-ae82-7ffb4a404b61"
   ],
   "evidence": [],
-  "claims": [],
+  "claims": [
+    "Experimental (toy prime-order curves, 20-44 bits, counted group ops; pre-registered PROTOCOL.md sha256 d6daf4f1...): reference Pollard rho (DP, r=31) fitted exponent 0.486 (0.467,0.506) in n.",
+    "Experimental, NEGATIVE: C1 (negation-class rho with period-2/4 cycle escape, frozen) is not scale-robust: ops/sqrt(n) rises 1.2-1.9 (24-32 bits) to ~11.8 (40 bits), fitted exponent 0.687 (0.652,0.719) on 24-40 bits; 44-bit runs did not finish (censored). Cause: walks trapped in unrecognised fruitless cycles of period >=6.",
+    "Experimental, post-hoc amendment C1b (detect any repeat within 16 classes): exponent 0.482 (0.458,0.504); constant-factor gain over ref pooled ~1.13 (95% CI ~0.95-1.33), below the textbook sqrt2; pre-registered constant-factor rule NOT met; no speedup claimed.",
+    "Experimental, C2 (preprocessed fixed-walk table, known technique, not novel): online exponent 0.344 (0.317,0.371) with preprocessing exponent 0.62 and memory exponent 0.34; S*T^2/n ~ 4 (slope 0.027), i.e. it sits on the generic S*T^2 ~ N curve; single-query total exponent 0.62 > 1/2; 160/160 queries correct; CI optimistic (one table per size).",
+    "Experimental, C3 (multi-instance shared-DP batch, known technique): per-instance cost exponent in n 0.465 (0.455,0.477) at M=16 (unchanged ~1/2); per-instance cost vs M exponent -0.57 (-0.63,-0.50): sqrt(M) law; ref/per-instance 1.7-3.1 at M=16 (strict pre-registered CI rule missed at 32 bits); 138/138 batches correct.",
+    "No candidate improved the exponent of the single-instance cost in N below 1/2; all are generic collision algorithms bounded by known generic lower bounds (Shoup; Corrigan-Gibbs-Kogan). Toy-size results are not asymptotic claims."
+  ],
   "proof_status": "not-applicable",
-  "outcome": null,
-  "next_action": "Fill draft metadata and report before execution",
-  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI.",
+  "outcome": "refuted",
+  "next_action": "PI review of report; if continuing: (1) test non-generic equivalence classes (CM curves j=0/1728, |Aut|=4/6) for realised group-size reduction vs sqrt|Aut|, (2) re-run C1b with larger r to approach sqrt2, (3) any adaptive-restart/new walk candidate must report capped-walk rates vs L. No exponent improvement was found in this territory.",
+  "notes": "Configured model claude-sonnet-5-5; runtime identity of subagents is not exposed to the PI. Appended 2026-11-03: executed by Claude Sonnet 5.5 (self-reported model identity claude-sonnet-5-5; not runtime-verified) via the algorithm-engineering adapter following the algorithm-inventor role file (role override for Python prototypes). Literature sources are cited from model knowledge: retrieved_at is null because no web lookup was made in this run. Pre-registration: PROTOCOL.md sha256 d6daf4f17f8df9521577f808a6a95dd075d47dbd18af4337e0cccc1f57109129; post-hoc addendum A1 (C1b) sha256 d564afa62184f95a65b7da386164dc27f287e57e9be25d05f4906feef473f748. Ref/C1 per-mode timeouts and resumes are disclosed in the report. | Literature cited from memory, not retrieved (not schema sources): Wiener, Zuccherato, Faster attacks on elliptic curve cryptosystems (SAC 1998) [cited from memory; not retrieved this run] (negation map / equivalence classes in rho) || Bos, Kleinjung, Lenstra, On the use of the negation map in the Pollard rho method (ANTS 2010) [cited from memory; not retrieved] (fruitless cycles, need for large r) || Kuhn, Struik, Random walks revisited: extensions of Pollard's rho algorithm for computing multiple discrete logarithms (SAC 2001) [from memory; not retrieved] (sqrt(M n) multi-target cost) || Bernstein, Lange, Non-uniform cracks in the concrete: the power of free precomputation (ASIACRYPT 2013) [from memory; not retrieved] (precomputation, N^(1/3) online) || Corrigan-Gibbs, Kogan, The discrete-logarithm problem with preprocessing (EUROCRYPT 2018) [from memory; not retrieved] (generic-group S*T^2 lower bound) || Shoup, Lower bounds for discrete logarithms and related problems (EUROCRYPT 1997) [from memory; not retrieved] (generic sqrt(n) lower bound)",
   "run": {
     "started_at": "2026-11-03T11:34:46.252105Z",
-    "completed_at": null,
+    "completed_at": "2026-11-03T12:02:07.450838Z",
     "provider": "anthropic",
     "model": "claude-sonnet-5-5 (configured)",
     "role": "algorithm-inventor",
@@ -32,8 +39,10 @@
     "branch": "claude/exciting-mccarthy-yljzor",
     "worktree": "shared checkout; exclusive ownership of listed files",
     "commands": [],
-    "files_changed": [],
-    "resulting_commit": null,
+    "files_changed": [
+      "research/ecdlp/experiments/round12-inventor-c/"
+    ],
+    "resulting_commit": "bfe859593378ae2ee814f18cdc22b1c1b95755f9",
     "tests": [],
     "benchmark": "See report",
     "machine": "See report",

@@ -1,0 +1,3 @@
+{"n": 5, "p": 89, "r": 19, "solver": "cms", "xor": true, "vars": 22941, "clauses": 46062, "xors": 7304, "enc_s": 0.13, "rho_ops": 5.5, "sat": true, "secs": 82.31, "conflicts": null, "key_ok": true}
+{"n": 5, "p": 109, "r": 31, "solver": "cms", "xor": true, "vars": 24907, "clauses": 49979, "xors": 7965, "enc_s": 0.12, "rho_ops": 7.0, "sat": true, "secs": 89.32, "conflicts": null, "key_ok": true}
+{"n": 5, "p": 127, "r": 31, "solver": "cms", "xor": true, "vars": 28759, "clauses": 57661, "xors": 9257, "enc_s": 0.14, "rho_ops": 7.0, "sat": true, "secs": 94.19, "conflicts": null, "key_ok": true}

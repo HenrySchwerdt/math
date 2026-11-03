@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "python3",
+    "research/ecdlp/experiments/round12-review-thmE/exhaust2.py",
+    "4",
+    "11",
+    "13",
+    "17",
+    "19",
+    "23",
+    "29",
+    "31",
+    "37",
+    "41",
+    "43",
+    "47",
+    "53"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-03T11:52:02.858049Z",
+  "exit_code": 0,
+  "completed_at": "2026-11-03T11:54:31.863771Z",
+  "truncated": false,
+  "output": "N=4 target=k2 p=11: valid triples=670/1331  |Z|=70  |Z|/p^2=0.579  w_N=81  zeros(Num) in F_p^3=521 (=4.31 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k2 p=13: valid triples=1248/2197  |Z|=144  |Z|/p^2=0.852  w_N=81  zeros(Num) in F_p^3=769 (=4.55 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k2 p=17: valid triples=3152/4913  |Z|=208  |Z|/p^2=0.720  w_N=81  zeros(Num) in F_p^3=1281 (=4.43 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k2 p=19: valid triples=4662/6859  |Z|=234  |Z|/p^2=0.648  w_N=81  zeros(Num) in F_p^3=1585 (=4.39 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k2 p=23: valid triples=8822/12167  |Z|=352  |Z|/p^2=0.665  w_N=81  zeros(Num) in F_p^3=2377 (=4.49 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k2 p=29: valid triples=19096/24389  |Z|=756  |Z|/p^2=0.899  w_N=81  zeros(Num) in F_p^3=4033 (=4.80 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k2 p=31: valid triples=23610/29791  |Z|=480  |Z|/p^2=0.499  w_N=81  zeros(Num) in F_p^3=4201 (=4.37 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k2 p=37: valid triples=41652/50653  |Z|=1404  |Z|/p^2=1.026  w_N=81  zeros(Num) in F_p^3=6769 (=4.94 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k2 p=41: valid triples=58000/68921  |Z|=1400  |Z|/p^2=0.833  w_N=81  zeros(Num) in F_p^3=8001 (=4.76 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k2 p=43: valid triples=67368/79507  |Z|=1302  |Z|/p^2=0.704  w_N=81  zeros(Num) in F_p^3=8569 (=4.63 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k2 p=47: valid triples=89102/103823  |Z|=2162  |Z|/p^2=0.979  w_N=81  zeros(Num) in F_p^3=10857 (=4.91 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k2 p=53: valid triples=130052/148877  |Z|=2340  |Z|/p^2=0.833  w_N=81  zeros(Num) in F_p^3=13313 (=4.74 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=11: valid triples=670/1331  |Z|=10  |Z|/p^2=0.083  w_N=81  zeros(Num) in F_p^3=441 (=3.64 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=13: valid triples=1248/2197  |Z|=72  |Z|/p^2=0.426  w_N=81  zeros(Num) in F_p^3=721 (=4.27 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=17: valid triples=3152/4913  |Z|=144  |Z|/p^2=0.498  w_N=81  zeros(Num) in F_p^3=1217 (=4.21 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=19: valid triples=4662/6859  |Z|=288  |Z|/p^2=0.798  w_N=81  zeros(Num) in F_p^3=1657 (=4.59 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=23: valid triples=8822/12167  |Z|=550  |Z|/p^2=1.040  w_N=81  zeros(Num) in F_p^3=2553 (=4.83 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=29: valid triples=19096/24389  |Z|=476  |Z|/p^2=0.566  w_N=81  zeros(Num) in F_p^3=3697 (=4.40 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=31: valid triples=23610/29791  |Z|=510  |Z|/p^2=0.531  w_N=81  zeros(Num) in F_p^3=4201 (=4.37 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=37: valid triples=41652/50653  |Z|=864  |Z|/p^2=0.631  w_N=81  zeros(Num) in F_p^3=6193 (=4.52 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=41: valid triples=58000/68921  |Z|=1600  |Z|/p^2=0.952  w_N=81  zeros(Num) in F_p^3=8161 (=4.85 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=43: valid triples=67368/79507  |Z|=1344  |Z|/p^2=0.727  w_N=81  zeros(Num) in F_p^3=8569 (=4.63 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=47: valid triples=89102/103823  |Z|=1840  |Z|/p^2=0.833  w_N=81  zeros(Num) in F_p^3=10489 (=4.75 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\nN=4 target=k p=53: valid triples=130052/148877  |Z|=2496  |Z|/p^2=0.889  w_N=81  zeros(Num) in F_p^3=13521 (=4.81 p^2)  Z-not-in-zeros(Num)=0  valid&W=0:0  Num==0 identically: False\n"
+}

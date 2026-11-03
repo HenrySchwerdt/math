@@ -43,6 +43,14 @@ class LabOpsTests(unittest.TestCase):
         self.assertEqual(d['run']['role'], 'experimenter')
         self.assertEqual(d['run']['input_hypotheses'], ['HYP-00000000-0000-0000-0000-000000000000'])
 
+    def test_start_expands_short_refs(self):
+        hyp = r.new('example', 'HYP').stem
+        _, _, run = lab_ops.start('example', 'T', 'Q', 'r', 'm', refs=[hyp[:12]])
+        d = json.loads((self.root / f'research/example/runs/{run}.json').read_text())
+        self.assertEqual(d['run']['input_hypotheses'], [hyp])
+        with self.assertRaisesRegex(ValueError, 'matches 0'):
+            lab_ops.start('example', 'T', 'Q', 'r', 'm', refs=['HYP-ffffffff'])
+
     def test_finish_completes_task_and_closes_run(self):
         key, tsk, run = lab_ops.start('example', 'T', 'Q', 'r', 'm')
         lab_ops.finish('example', run, 'verified', 'Done', 'Next', files=['f.txt'])
@@ -58,12 +66,14 @@ class LabOpsTests(unittest.TestCase):
     def test_fix_sources_normalizes_strings(self):
         p = r.new('example', 'RUN')
         d = json.loads(p.read_text())
-        d['sources'] = ['A. Author, Title, Venue 2000, https://doi.org/10.1/x.', 'Unverified recollection']
+        d['sources'] = ['A. Author, Title, Venue 2000, https://doi.org/10.1/x.', 'Unverified recollection',
+                        {'title': 'Memory cite', 'url': None, 'retrieved_at': None, 'locator': 'sec 2'}]
         r.write_json(p, d)
-        self.assertEqual(lab_ops.fix_sources(p), (1, 1))
+        self.assertEqual(lab_ops.fix_sources(p), (1, 2))
         d = json.loads(p.read_text())
         self.assertEqual(d['sources'][0]['url'], 'https://doi.org/10.1/x')
         self.assertIn('Unverified recollection', d['notes'])
+        self.assertIn('Memory cite (sec 2)', d['notes'])
 
 
 if __name__ == '__main__':
